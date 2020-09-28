@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationExtension</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__ContinuousIntegrationExtensionTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
