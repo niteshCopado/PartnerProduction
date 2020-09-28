@@ -6626,10 +6626,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__CopadoLicensesWizard</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__CopadoSetup</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
