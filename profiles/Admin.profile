@@ -4479,9 +4479,6 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Address-Address Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>AssessmentIndicatorDefinition-Assessment Indicator Definition Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
