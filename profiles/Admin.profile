@@ -6442,10 +6442,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__DeployCommits</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__Deployment</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
