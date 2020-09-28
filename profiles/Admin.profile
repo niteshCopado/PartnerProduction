@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__CliSfDataWrapper</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__CloneSeleniumTestCaseExtension</apexClass>
         <enabled>true</enabled>
     </classAccesses>
