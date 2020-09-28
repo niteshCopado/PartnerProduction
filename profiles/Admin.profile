@@ -4479,9 +4479,6 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>AssessmentTaskContentDocument-Assessment Task Content Document Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>AssessmentTaskOrder-Assessment Task Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
