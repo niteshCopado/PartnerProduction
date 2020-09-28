@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__DXPackageAsyncJobHandler</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__DXPackageVersionHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
