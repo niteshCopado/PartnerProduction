@@ -6290,10 +6290,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__LicenseManager</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__ManageEnvVars</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
