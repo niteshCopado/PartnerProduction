@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__ArtifactManageMetadataController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__ArtifactMetadataService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
