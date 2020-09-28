@@ -6,11 +6,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
-        <application>New_App</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
-    <applicationVisibilities>
         <application>copado__Copado</application>
         <default>false</default>
         <visible>true</visible>
@@ -2466,11 +2461,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Account.External_Id__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Fax</field>
         <readable>true</readable>
@@ -3021,11 +3011,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.New_Fields__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Origin</field>
         <readable>true</readable>
@@ -3213,11 +3198,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Email</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Contact.External_Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4622,9 +4602,6 @@
         <layout>CommunityMemberLayout-Community Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Computer__c-Computer Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>ConsumptionRate-Consumption Rate Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -4689,9 +4666,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Event-Event Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>FeedItem-Feed Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Global-Global Layout</layout>
@@ -5206,15 +5180,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>CommSubscriptionTiming</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Computer__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -7614,10 +7579,6 @@
         <recordType>copado__User_Story__c.copado__User_Story</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
-    <tabVisibilities>
-        <tab>Computer__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <tabVisibilities>
         <tab>copado__Account_Summary</tab>
         <visibility>DefaultOn</visibility>
