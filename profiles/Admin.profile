@@ -4479,9 +4479,6 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>ActionPlan-Action Plan Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>ActionPlanTemplate-Action Plan Template Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
