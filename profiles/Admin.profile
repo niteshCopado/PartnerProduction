@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__AbstractTestData</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__AddCCHRuleCriteriaExt</apexClass>
         <enabled>true</enabled>
     </classAccesses>
