@@ -6394,10 +6394,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__DeploymentWizard</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__EditDeploymentTask</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
