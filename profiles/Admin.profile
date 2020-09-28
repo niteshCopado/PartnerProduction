@@ -6566,10 +6566,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__DW_OverrideFilters</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__DW_Overview</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
