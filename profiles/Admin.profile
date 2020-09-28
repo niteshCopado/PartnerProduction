@@ -6682,10 +6682,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__BranchManagementDialog</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__CCD_CreateMetadataGroupItem</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
