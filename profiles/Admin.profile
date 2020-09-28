@@ -7485,10 +7485,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>copado__Kanban_Board__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>copado__Metadata_Group__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
