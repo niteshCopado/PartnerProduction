@@ -7485,10 +7485,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>copado__Burndown_Item__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>copado__Compliance_Finding__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
