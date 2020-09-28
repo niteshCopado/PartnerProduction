@@ -4479,9 +4479,6 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>ActionPlanTemplateItem-Action Plan Template Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>ActionPlanTemplateItemValue-Action Plan Template Item Value Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
