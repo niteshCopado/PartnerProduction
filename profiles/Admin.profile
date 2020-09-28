@@ -6606,10 +6606,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__CreateTestScriptSteps</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__CreateUserStoryScratchOrg</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
