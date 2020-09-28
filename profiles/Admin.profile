@@ -7485,10 +7485,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>copado__Git_Backup__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>copado__Git_Repository__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
