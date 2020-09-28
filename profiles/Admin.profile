@@ -7486,11 +7486,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>copado__Artifact__c.copado__Package_Artifact</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>copado__Compliance_Finding__c.copado__Copado</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
