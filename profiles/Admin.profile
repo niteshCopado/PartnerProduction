@@ -6238,10 +6238,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__MergeVersion</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__MetadataSelector</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
