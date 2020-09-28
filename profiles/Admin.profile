@@ -6618,10 +6618,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__CopadoSetup</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__CreatePackageDefinition</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
