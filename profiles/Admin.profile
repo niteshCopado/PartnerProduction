@@ -6254,10 +6254,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__ManageSeleniumTesting</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__MassAddDestOrgs</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
