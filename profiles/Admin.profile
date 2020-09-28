@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__EditExternalCISetting</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__EditGit</apexClass>
         <enabled>true</enabled>
     </classAccesses>
