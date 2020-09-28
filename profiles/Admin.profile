@@ -7486,11 +7486,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>copado__Compliance_Scan_Result__c.copado__Copado</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
         <recordType>copado__Compliance_Scan_Result__c.copado__Other</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
