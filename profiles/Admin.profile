@@ -101,10 +101,6 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>copado__CopadoNotificationHelper</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>copado__CopadoPipelineWizardTestDefaults</apexClass>
         <enabled>true</enabled>
     </classAccesses>
