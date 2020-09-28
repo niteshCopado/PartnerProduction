@@ -6698,10 +6698,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__ArtifactPackage</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__BranchManagement</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
