@@ -4488,9 +4488,6 @@
         <layout>AssignedResource-Assigned Resource Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>AssociatedLocation-Associated Location Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>AuthorizationForm-Authorization Form Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
