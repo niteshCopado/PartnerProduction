@@ -6482,10 +6482,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>copado__DXTestOrgIntermediary</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>copado__DataTemplateImport</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
