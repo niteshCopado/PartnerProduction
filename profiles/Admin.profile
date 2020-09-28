@@ -7485,10 +7485,6 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
-        <tab>copado__Compliance_Rule__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>copado__Compliance_Scan_Result__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
