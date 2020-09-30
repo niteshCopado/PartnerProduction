@@ -4215,10 +4215,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>false</enabled>
-        <name>ManageTranslation</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>false</enabled>
         <name>ManageTwoFactor</name>
     </userPermissions>
     <userPermissions>
