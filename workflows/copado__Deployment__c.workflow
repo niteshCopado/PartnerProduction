@@ -8,7 +8,7 @@
             <type>owner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/copado__NewDeploymentResultSummary</template>
+        <template>copado__Copado_Deployer/copado__Deployment_Result_Summary</template>
     </alerts>
     <fieldUpdates>
         <fullName>copado__Send_deployment_command</fullName>

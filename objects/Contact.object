@@ -344,6 +344,10 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>CleanStatus</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Department</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -358,6 +362,13 @@
     <fields>
         <fullName>Email</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>External_Contact__c</fullName>
+        <displayFormat>C-{0000}</displayFormat>
+        <externalId>true</externalId>
+        <label>External Contact</label>
+        <type>AutoNumber</type>
     </fields>
     <fields>
         <fullName>Fax</fullName>

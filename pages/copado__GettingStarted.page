@@ -16,6 +16,7 @@
                  margin-left: 0;
             }
         </style>
+
         <c:IncludeStaticsResourceComponent addJQuery="true" />
         <c:IncludeConnectionJsComponent />
     </head>
@@ -370,7 +371,7 @@
                                                 </div>
                                             </div>
                                             <div class="slds-no-flex">
-                                                <a onclick="navigateTo('/apex/{!JSINHTMLENCODE(namespace)}LicenseManager');"
+                                                <a onclick="navigateTo('/apex/{!namespace}LicenseManager');"
                                                                  Class="slds-button slds-button--neutral slds-col--bump-left"> {!$Label.ASSIGN_LICENSES}
                                                 </a>
                                             </div>
@@ -673,13 +674,17 @@
                                             </div>
                                             <div class="slds-no-flex">
                                                 <apex:outputPanel layout="none" rendered="{!AND(selectedDeploymentFlow != 'none',selectedDeploymentFlow != '')}">
-                                                    <apex:commandLink action="{!manageReleases}" onClick="lockScreen();" onComplete="unlockScreen();" styleClass="slds-button slds-button--neutral slds-col--bump-left">{!$Label.copado__manage_branches}</apex:commandLink>
-                                                </apex:outputPanel>                                               
-                                                <apex:outputPanel layout="none" rendered="{!!enableDeploymentFlowForm}">
+                                                    <apex:outputPanel layout="none" rendered="{!AND(selectedDeploymentFlow != 'none',selectedDeploymentFlow != '')}">
+                                                        <apex:commandLink action="{!manageReleases}" onClick="lockScreen();" onComplete="unlockScreen();" styleClass="slds-button slds-button--neutral slds-col--bump-left">{!$Label.copado__manage_branches}</apex:commandLink>
+                                                    </apex:outputPanel>  
+                                                </apex:outputPanel>
+                                                <apex:outputPanel layout="none"
+                                                                  rendered="{!!enableDeploymentFlowForm}">
                                                     <apex:commandLink action="{!openDeploymentFlowForm}" onClick="lockScreen();" onComplete="unlockScreen();" styleClass="slds-button slds-button--neutral slds-col--bump-left" reRender="deploymentFlowForm">{!$Label.copado__new_deployment_flow}</apex:commandLink>
                                                 </apex:outputPanel>
                                             </div>
                                         </header>
+
                                         <div class="slds-card__body slds-card__body_inner">
                                             <div class="slds-form slds-form_horizontal">
                                                 <apex:outputPanel layout="none"

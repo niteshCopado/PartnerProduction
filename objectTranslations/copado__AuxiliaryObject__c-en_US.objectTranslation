@@ -62,11 +62,6 @@
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Package Version --></label>
-        <name>copado__Package_Version__c</name>
-        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
-    </fields>
-    <fields>
         <label><!-- Promotion --></label>
         <name>copado__Promotion__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>

@@ -348,7 +348,7 @@
                                             gitCommitOrgId = '{!JSENCODE(gitCommit.copado__Org__c)}';
                                         }
                                         //If gridMetadataTypes defined, then we filter
-                                        var filter = '{!JSENCODE(selectedOperation.gridMetadataTypes)}';
+                                        var filter = '{!selectedOperation.gridMetadataTypes}';
                                         if(filter && filter.length>0){
                                             metadataGrid2.setGridFiltersByCSV(filter);
                                         }

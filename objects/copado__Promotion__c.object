@@ -704,16 +704,6 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
-        <fullName>copado__Merge_Conflict__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Indicates that this promotion includes a manual conflict resolution.</inlineHelpText>
-        <label>Merge Conflict</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>copado__Order_by__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -870,12 +860,9 @@
         <columns>copado__Project__c</columns>
         <columns>copado__Release__c</columns>
         <columns>copado__Source_Environment__c</columns>
-        <columns>copado__Back_Promotion__c</columns>
         <columns>copado__Status__c</columns>
-        <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <displayFormat>P{00000}</displayFormat>

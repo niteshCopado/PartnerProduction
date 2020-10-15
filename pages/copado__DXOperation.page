@@ -684,9 +684,9 @@
                         function createNewArtifact(){
                             if( (typeof sforce != 'undefined') && sforce && (!!sforce.one) ) {
                                 if(selectedRecordTypeId != null && selectedRecordTypeId != undefined){
-                                    sforce.one.createRecord("{!JSENCODE(namespace)}Artifact__c", selectedRecordTypeId, null);
+                                    sforce.one.createRecord("{!namespace}Artifact__c", selectedRecordTypeId, null);
                                 }else{
-                                    sforce.one.createRecord("{!JSENCODE(namespace)}Artifact__c", '{!newArtifact.RecordTypeId}', null);
+                                    sforce.one.createRecord("{!namespace}Artifact__c", '{!newArtifact.RecordTypeId}', null);
                                 }
 
                             } else {

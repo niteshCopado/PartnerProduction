@@ -562,7 +562,6 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
             templateBatchSize: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Batch_Size__c'],
             templateFilterLogic: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Filter_Logic__c'],
             templateAttachmentOption: attachmentBodyData.templateDetails[attachmentBodyData.namespace + 'Attachment_Options__c'],
-            templateSelectedAttachmentType: attachmentBodyData.importedObj.dataTemplate.templateAttachmentType
         };
 
         var resultData = {

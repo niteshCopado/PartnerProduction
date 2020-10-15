@@ -3,11 +3,10 @@
     <applyLoginPageTypeToEmbeddedLogin>false</applyLoginPageTypeToEmbeddedLogin>
     <enableCspContactVisibilityPref>false</enableCspContactVisibilityPref>
     <enableEnablePRM>false</enableEnablePRM>
-    <enableExternalAccHierPref>false</enableExternalAccHierPref>
     <enableGuestPermDisOptOutCruc>false</enableGuestPermDisOptOutCruc>
-    <enableGuestRecordReassignOrgPref>true</enableGuestRecordReassignOrgPref>
+    <enableGuestRecordReassignOrgPref>false</enableGuestRecordReassignOrgPref>
     <enableGuestSecurityOptOutCruc>false</enableGuestSecurityOptOutCruc>
-    <enableInviteChatterGuestEnabled>false</enableInviteChatterGuestEnabled>
+    <enableInviteChatterGuestEnabled>true</enableInviteChatterGuestEnabled>
     <enableNetworksEnabled>false</enableNetworksEnabled>
     <enableOotbProfExtUserOpsEnable>false</enableOotbProfExtUserOpsEnable>
     <enablePRMAccRelPref>false</enablePRMAccRelPref>

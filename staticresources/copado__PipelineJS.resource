@@ -1080,9 +1080,7 @@ var staticResourcesPath = staticResourcesPath ? staticResourcesPath : '';
     };
 
 
-    $copado(document).ready(() => {
+    $(document).ready(() => {
         definePipelineConnector();
-
     });
-
 })(ccd);

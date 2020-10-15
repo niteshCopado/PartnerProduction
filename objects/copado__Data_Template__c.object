@@ -167,7 +167,7 @@
         <fullName>copado__Attachment_Options__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Attachment Actions</label>
+        <label>Attachment Options</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -178,7 +178,7 @@
                 <value>
                     <fullName>No Attachments</fullName>
                     <default>true</default>
-                    <label>No Actions</label>
+                    <label>No Attachments</label>
                 </value>
                 <value>
                     <fullName>Insert Attachments</fullName>
