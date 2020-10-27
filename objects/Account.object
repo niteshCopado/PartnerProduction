@@ -496,6 +496,16 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Website</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
