@@ -8,6 +8,7 @@ private class TemperatureConverterTest {
     @isTest static void testFreezingPoint() {
         Decimal celsius = TemperatureConverter.fhToCels123(32);
         System.assertEquals(0,celsius);
+        //Adding Second comment
     }
     @isTest static void testBoilingPoint() {
         Decimal celsius = TemperatureConverter.fhToCels123(212);        
