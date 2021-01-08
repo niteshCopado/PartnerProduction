@@ -3,6 +3,7 @@ private class TemperatureConverterTest {
     @isTest static void testWarmTemp() {
         Decimal celsius = TemperatureConverter.fhToCels123(70);
         System.assertEquals(21.11,celsius);
+        //Adding a comment
     }
     
     @isTest static void testFreezingPoint() {
