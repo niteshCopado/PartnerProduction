@@ -4,12 +4,65 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>actionNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>Edit</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Commit_Files</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Ready_for_Promotion</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Perform_Validation</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Submit</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Add_Metadata</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Apex_Test</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Run_Static_Code_Analysis</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Manage_Selenium_Tests</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Run_Compliance_Scan</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Pull_Request</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Create_Scratch_Org</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Copado_DX</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.copado__User_Story__c.Select_Base_Branch</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Clone</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Delete</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsConfiguration</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsInNative</name>
@@ -119,6 +172,15 @@
                     <value>TestDeployment</value>
                 </componentInstanceProperties>
                 <componentName>lbpm:actionList</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>hideHeader</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>force:relatedListQuickLinksContainer</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
