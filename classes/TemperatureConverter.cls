@@ -6,7 +6,12 @@ public class TemperatureConverter {
         system.debug('More Conflict');
         System.debug('Additional Line - updated - v2 version!!');
         return cels.setScale(2);
+        
+        //This is US-2 Commit-3
+        
         //This is US-1 commit-1
+        
+        //This is US-2 Commit-2
     }
 
 }
