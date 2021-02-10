@@ -378,6 +378,12 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>LocationId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ManufactureDate</fullName>
         <inlineHelpText>Date when the asset was manufactured.</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>

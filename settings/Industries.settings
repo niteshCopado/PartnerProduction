@@ -4,6 +4,7 @@
     <enableBlockResourceAvailabilityOrgPref>false</enableBlockResourceAvailabilityOrgPref>
     <enableCalcserviceEnabled>false</enableCalcserviceEnabled>
     <enableEventManagementOrgPref>false</enableEventManagementOrgPref>
+    <enableEventWriteOrgPref>false</enableEventWriteOrgPref>
     <enableIndLoyaltyEnabled>false</enableIndLoyaltyEnabled>
     <enableMultiResourceOrgPref>false</enableMultiResourceOrgPref>
     <enableOverbookingOrgPref>false</enableOverbookingOrgPref>

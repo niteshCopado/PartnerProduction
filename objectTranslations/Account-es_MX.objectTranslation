@@ -203,6 +203,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Validation --></label>
+        <name>Validation__c</name>
+    </fields>
+    <fields>
         <label><!-- Bill To Contact --></label>
         <name>blng__BillToContact__c</name>
         <relationshipLabel><!-- Accounts --></relationshipLabel>

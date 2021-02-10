@@ -156,4 +156,12 @@
         <name>blng__SalesforceBillingConfiguration</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>standard__QueueManagement</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Test Community</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>

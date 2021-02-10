@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- CSM --></label>
+        <name>CSM__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Current Generator(s) --></label>
         <name>CurrentGenerators__c</name>
     </fields>
@@ -79,6 +84,14 @@
         <label><!-- Tracking Number --></label>
         <name>TrackingNumber__c</name>
     </fields>
+    <recordTypes>
+        <label><!-- New Business --></label>
+        <name>New_Business</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Select it --></errorMessage>
+        <name>Test</name>
+    </validationRules>
     <webLinks>
         <label><!-- DeliveryStatus --></label>
         <name>DeliveryStatus</name>

@@ -89,30 +89,38 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>BillToContactId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>BillingAccountId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>CreditDate</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CreditMemoNumber</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>TotalAdjustmentAmount</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>TotalAdjustmentAmountWithTax</fullName>
@@ -128,6 +136,7 @@
     </fields>
     <fields>
         <fullName>TotalChargeAmount</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>TotalChargeAmountWithTax</fullName>
@@ -137,6 +146,7 @@
     </fields>
     <fields>
         <fullName>TotalTaxAmount</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <listViews>
         <fullName>mine</fullName>
