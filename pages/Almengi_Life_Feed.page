@@ -1,0 +1,5 @@
+<apex:page >
+
+  <chatter:feed entityid="0F95Y000000E8XCCA0"/>
+
+</apex:page>
