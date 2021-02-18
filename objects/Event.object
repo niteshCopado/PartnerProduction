@@ -157,7 +157,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <fieldSets>
-        <fullName>vlocity_ins__StoryFieldSet</fullName>
+        <fullName>vlocity_cmt__StoryFieldSet</fullName>
         <description>Story board</description>
         <displayedFields>
             <field>Subject</field>
@@ -170,7 +170,12 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>vlocity_ins__EventStatus__c</field>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__EventStatus__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -181,11 +186,6 @@
         </displayedFields>
         <displayedFields>
             <field>StartDateTime</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>Type</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -228,6 +228,9 @@
         <fullName>IsReminderSet</fullName>
     </fields>
     <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
         <fullName>Location</fullName>
     </fields>
     <fields>
@@ -260,7 +263,7 @@
         <type>Lookup</type>
     </fields>
     <recordTypes>
-        <fullName>vlocity_ins__MobilePhoneEvent</fullName>
+        <fullName>vlocity_cmt__MobilePhoneEvent</fullName>
         <active>true</active>
         <description>Mobile Phone Event</description>
         <label>MobilePhoneEvent</label>
@@ -307,7 +310,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__EventStatus__c</picklist>
+            <picklist>vlocity_cmt__EventStatus__c</picklist>
             <values>
                 <fullName>In Progress</fullName>
                 <default>false</default>
@@ -318,21 +321,6 @@
             </values>
             <values>
                 <fullName>Shared</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__ProviderSiteVisitReason__c</picklist>
-            <values>
-                <fullName>Medical Record Review</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Site Review - Provider Facility</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Site Review - Provider Practitioner</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

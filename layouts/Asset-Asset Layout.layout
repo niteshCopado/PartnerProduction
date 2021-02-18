@@ -105,54 +105,20 @@
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
-        <label>Custom Links</label>
         <layoutColumns/>
         <layoutColumns/>
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
+        <fields>CASES.CASE_NUMBER</fields>
         <fields>NAME</fields>
-        <fields>vlocity_ins__PartyRelationshipTypeId__c</fields>
-        <fields>vlocity_ins__CommissionPercentage__c</fields>
-        <fields>vlocity_ins__PartyLink__c</fields>
-        <fields>vlocity_ins__ProductionCodeId__c</fields>
-        <fields>vlocity_ins__InsuredPartySpecId__c</fields>
-        <relatedList>vlocity_ins__AssetPartyRelationship__c.vlocity_ins__AssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__PremiumAmount__c</fields>
-        <fields>vlocity_ins__Product2Id__c</fields>
-        <fields>vlocity_ins__Type__c</fields>
-        <relatedList>vlocity_ins__AssetCoverage__c.vlocity_ins__PolicyAssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__PrimaryInsuredPartyRelationshipId__c</fields>
-        <fields>vlocity_ins__MarketValue__c</fields>
-        <fields>vlocity_ins__PremiumAmount__c</fields>
-        <fields>vlocity_ins__Product2Id__c</fields>
-        <fields>vlocity_ins__InsuredItemNumber__c</fields>
-        <relatedList>vlocity_ins__AssetInsuredItem__c.vlocity_ins__PolicyAssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__TransactionId__c</fields>
-        <fields>vlocity_ins__Type__c</fields>
-        <fields>vlocity_ins__Amount__c</fields>
-        <fields>vlocity_ins__TransactionDate__c</fields>
-        <fields>vlocity_ins__PostDate__c</fields>
-        <fields>vlocity_ins__TransactionNumber__c</fields>
-        <relatedList>vlocity_ins__AssetTransaction__c.vlocity_ins__AssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__Date__c</fields>
-        <fields>vlocity_ins__PeriodEarnedRevenue__c</fields>
-        <fields>vlocity_ins__TotalEarnedRevenue__c</fields>
-        <fields>vlocity_ins__TotalUnearnedRevenue__c</fields>
-        <relatedList>vlocity_ins__AssetRevenueScheduleEntry__c.vlocity_ins__AssetId__c</relatedList>
+        <fields>CASES.SUBJECT</fields>
+        <fields>CASES.PRIORITY</fields>
+        <fields>CASES.CREATED_DATE</fields>
+        <fields>CASES.STATUS</fields>
+        <fields>OWNER_NAME</fields>
+        <relatedList>RelatedCaseList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -174,42 +140,6 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__ClaimStatus__c</fields>
-        <fields>vlocity_ins__PrimaryPolicyId__c</fields>
-        <fields>vlocity_ins__PrimaryOwnerPartyId__c</fields>
-        <relatedList>vlocity_ins__InsuranceClaim__c.vlocity_ins__PrimaryPolicyAssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>CASES.CASE_NUMBER</fields>
-        <fields>NAME</fields>
-        <fields>CASES.SUBJECT</fields>
-        <fields>CASES.PRIORITY</fields>
-        <fields>CASES.CREATED_DATE</fields>
-        <fields>CASES.STATUS</fields>
-        <fields>OWNER_NAME</fields>
-        <relatedList>RelatedCaseList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>vlocity_ins__AccountId__c</fields>
-        <fields>vlocity_ins__BalanceDue__c</fields>
-        <fields>vlocity_ins__DueDate__c</fields>
-        <fields>vlocity_ins__StatementDate__c</fields>
-        <fields>vlocity_ins__StatementImageURL__c</fields>
-        <fields>vlocity_ins__StatementPeriodEndDate__c</fields>
-        <fields>vlocity_ins__StatementPeriodStartDate__c</fields>
-        <relatedList>vlocity_ins__Statement__c.vlocity_ins__AssetId__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Name</fields>
-        <fields>RelatedAsset</fields>
-        <fields>RelationshipType</fields>
-        <fields>FromDate</fields>
-        <fields>ToDate</fields>
-        <relatedList>Related Assets</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
@@ -218,10 +148,4 @@
     <showHighlightsPanel>false</showHighlightsPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
-    <summaryLayout>
-        <masterLabel>00h6A000002Lm8m</masterLabel>
-        <sizeX>4</sizeX>
-        <sizeY>0</sizeY>
-        <summaryLayoutStyle>Default</summaryLayoutStyle>
-    </summaryLayout>
 </Layout>

@@ -115,7 +115,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <fieldSets>
-        <fullName>vlocity_ins__StoryFieldSet</fullName>
+        <fullName>vlocity_cmt__StoryFieldSet</fullName>
         <description>Display in story list</description>
         <displayedFields>
             <field>Subject</field>
@@ -177,6 +177,9 @@
         <fullName>IsReminderSet</fullName>
     </fields>
     <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <type>Lookup</type>
     </fields>
@@ -216,19 +219,6 @@
         <fullName>WhoId</fullName>
         <type>Lookup</type>
     </fields>
-    <listViews>
-        <fullName>Almengi_Tasks</fullName>
-        <columns>STATUS</columns>
-        <columns>SUBJECT</columns>
-        <columns>PRIORITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>WHAT_NAME</field>
-            <operation>contains</operation>
-            <value>Almengi</value>
-        </filters>
-        <label>Almengi Tasks</label>
-    </listViews>
     <listViews>
         <fullName>CompletedTasks</fullName>
         <columns>SUBJECT</columns>
@@ -271,45 +261,6 @@
         <columns>UPDATEDBY_USER.ALIAS</columns>
         <filterScope>Delegated</filterScope>
         <label>ENCODED:{!FilterNames.Task_DelegatedTasks}</label>
-    </listViews>
-    <listViews>
-        <fullName>Gebrenius_Tasks</fullName>
-        <columns>STATUS</columns>
-        <columns>SUBJECT</columns>
-        <columns>PRIORITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>WHAT_NAME</field>
-            <operation>contains</operation>
-            <value>Gebrenius</value>
-        </filters>
-        <label>Gebrenius Tasks</label>
-    </listViews>
-    <listViews>
-        <fullName>Home_Haven_Tasks</fullName>
-        <columns>STATUS</columns>
-        <columns>SUBJECT</columns>
-        <columns>PRIORITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>WHAT_NAME</field>
-            <operation>contains</operation>
-            <value>Home Haven</value>
-        </filters>
-        <label>Home Haven Tasks</label>
-    </listViews>
-    <listViews>
-        <fullName>Issa_Tasks</fullName>
-        <columns>STATUS</columns>
-        <columns>SUBJECT</columns>
-        <columns>PRIORITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>WHAT_NAME</field>
-            <operation>contains</operation>
-            <value>Issa</value>
-        </filters>
-        <label>Issa Tasks</label>
     </listViews>
     <listViews>
         <fullName>OpenTasks</fullName>
@@ -445,21 +396,8 @@
         </filters>
         <label>ENCODED:{!FilterNames.Task_UnscheduledTasks}</label>
     </listViews>
-    <listViews>
-        <fullName>WaveRider_Tasks</fullName>
-        <columns>STATUS</columns>
-        <columns>SUBJECT</columns>
-        <columns>PRIORITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>WHAT_NAME</field>
-            <operation>contains</operation>
-            <value>WaveRider</value>
-        </filters>
-        <label>WaveRider Tasks</label>
-    </listViews>
     <recordTypes>
-        <fullName>vlocity_ins__MobilePhoneTask</fullName>
+        <fullName>vlocity_cmt__MobilePhoneTask</fullName>
         <active>true</active>
         <description>Mobile Phone Task</description>
         <label>MobilePhoneTask</label>
@@ -536,7 +474,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__EventStatus__c</picklist>
+            <picklist>vlocity_cmt__EventStatus__c</picklist>
             <values>
                 <fullName>In Progress</fullName>
                 <default>false</default>
@@ -547,21 +485,6 @@
             </values>
             <values>
                 <fullName>Shared</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__ProviderSiteVisitReason__c</picklist>
-            <values>
-                <fullName>Medical Record Review</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Site Review - Provider Facility</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Site Review - Provider Practitioner</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

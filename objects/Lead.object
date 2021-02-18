@@ -257,7 +257,7 @@
     <enableHistory>false</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
-        <fullName>vlocity_ins__ListMember</fullName>
+        <fullName>vlocity_cmt__ListMember</fullName>
         <availableFields>
             <field>Description</field>
             <isFieldManaged>false</isFieldManaged>
@@ -416,6 +416,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>PartnerAccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Phone</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -438,19 +443,47 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>vlocity_ins__BirthDate__c</fullName>
+        <fullName>vlocity_cmt__NumberofLocations__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Date of Birth</label>
+        <label>Number of Locations</label>
+        <precision>3</precision>
         <required>false</required>
+        <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Date</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Primary__c</fullName>
+        <fullName>vlocity_cmt__PremisesId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Primary</label>
+        <label>Premises</label>
+        <referenceTo>vlocity_cmt__Premises__c</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductInterestData__c</fullName>
+        <deprecated>false</deprecated>
+        <description>JSON (or similar) structured data describing the set of, or types of, products in which this lead is interested.</description>
+        <externalId>false</externalId>
+        <label>Product Interest Data</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductInterest__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Picklist outlining the category of this lead&apos;s primary product interest. Customize as desired.</description>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -458,31 +491,22 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>No</fullName>
+                    <fullName>GC1000 series</fullName>
                     <default>false</default>
-                    <label>No</label>
+                    <label>GC1000 series</label>
                 </value>
                 <value>
-                    <fullName>Yes</fullName>
+                    <fullName>GC5000 series</fullName>
                     <default>false</default>
-                    <label>Yes</label>
+                    <label>GC5000 series</label>
+                </value>
+                <value>
+                    <fullName>GC3000 series</fullName>
+                    <default>false</default>
+                    <label>GC3000 series</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__ReferredByContactId__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>ID of the contact who referred this lead.</description>
-        <externalId>false</externalId>
-        <label>Referred By</label>
-        <referenceTo>Contact</referenceTo>
-        <relationshipLabel>Leads (Referred By)</relationshipLabel>
-        <relationshipName>ReferredLeads</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Lookup</type>
     </fields>
     <listViews>
         <fullName>AllOpenLeads</fullName>

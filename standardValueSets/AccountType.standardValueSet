@@ -12,9 +12,9 @@
         <label>Competitor</label>
     </standardValue>
     <standardValue>
-        <fullName>Prospect</fullName>
+        <fullName>Customer</fullName>
         <default>false</default>
-        <label>Prospect</label>
+        <label>Customer</label>
     </standardValue>
     <standardValue>
         <fullName>Integrator</fullName>
@@ -37,9 +37,9 @@
         <label>Press</label>
     </standardValue>
     <standardValue>
-        <fullName>Customer</fullName>
+        <fullName>Prospect</fullName>
         <default>false</default>
-        <label>Customer</label>
+        <label>Prospect</label>
     </standardValue>
     <standardValue>
         <fullName>Reseller</fullName>

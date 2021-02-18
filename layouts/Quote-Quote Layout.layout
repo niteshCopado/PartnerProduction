@@ -143,19 +143,14 @@
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
             </layoutItems>
-            <layoutItems>
-                <height>200</height>
-                <page>QuoteStories</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>false</showScrollbars>
-                <width>100%</width>
-            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>LastModifiedById</field>
             </layoutItems>
         </layoutColumns>
-        <style>OneColumn</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -198,13 +193,11 @@
     <relatedLists>
         <fields>QUOTE_LI.PRODUCT2</fields>
         <fields>QUOTE_LI.UNIT_PRICE</fields>
+        <fields>QUOTE_LI.QUANTITY</fields>
+        <fields>QUOTE_LI.SUBTOTAL</fields>
+        <fields>QUOTE_LI.DISCOUNT</fields>
         <fields>QUOTE_LI.TOTAL_PRICE</fields>
         <fields>QUOTE_LI.LIST_PRICE</fields>
-        <fields>QUOTE_LI.NAME</fields>
-        <fields>vlocity_ins__LineNumber__c</fields>
-        <fields>vlocity_ins__ParentItemId2__c</fields>
-        <fields>vlocity_ins__SubParentItemId__c</fields>
-        <fields>vlocity_ins__ItemName__c</fields>
         <relatedList>RelatedQuoteLineItemList</relatedList>
     </relatedLists>
     <relatedLists>
@@ -239,10 +232,4 @@
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
-    <summaryLayout>
-        <masterLabel>00h6A000002Lm9A</masterLabel>
-        <sizeX>4</sizeX>
-        <sizeY>0</sizeY>
-        <summaryLayoutStyle>Default</summaryLayoutStyle>
-    </summaryLayout>
 </Layout>

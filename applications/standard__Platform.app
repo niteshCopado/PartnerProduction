@@ -11,5 +11,5 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>vlocity_ins__GroupCensus__c</tabs>
+    <uiType>Aloha</uiType>
 </CustomApplication>

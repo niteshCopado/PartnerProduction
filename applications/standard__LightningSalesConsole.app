@@ -16,7 +16,10 @@
     <tabs>standard-Event</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>vlocity_cmt__ObjectClass__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -27,6 +30,9 @@
             <tab>standard-Campaign</tab>
         </mappings>
         <mappings>
+            <tab>standard-CollaborationGroup</tab>
+        </mappings>
+        <mappings>
             <tab>standard-Contact</tab>
         </mappings>
         <mappings>
@@ -34,6 +40,9 @@
         </mappings>
         <mappings>
             <tab>standard-Event</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Feed</tab>
         </mappings>
         <mappings>
             <tab>standard-File</tab>
@@ -52,6 +61,9 @@
         </mappings>
         <mappings>
             <tab>standard-report</tab>
+        </mappings>
+        <mappings>
+            <tab>vlocity_cmt__ObjectClass__c</tab>
         </mappings>
     </workspaceConfig>
 </CustomApplication>

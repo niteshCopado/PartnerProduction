@@ -16,7 +16,8 @@
     <enableJPGPreviews>false</enableJPGPreviews>
     <enableLibraryManagedFiles>false</enableLibraryManagedFiles>
     <enableSiteGuestUserToUploadFiles>false</enableSiteGuestUserToUploadFiles>
-    <enableUploadFilesOnAttachments>false</enableUploadFilesOnAttachments>
+    <enableUploadFilesOnAttachments>true</enableUploadFilesOnAttachments>
     <setValidContentTypeForAtchDocDownload>false</setValidContentTypeForAtchDocDownload>
     <skipContentAssetTriggers>false</skipContentAssetTriggers>
+    <skipContentAssetTriggersOnDeploy>true</skipContentAssetTriggersOnDeploy>
 </ContentSettings>

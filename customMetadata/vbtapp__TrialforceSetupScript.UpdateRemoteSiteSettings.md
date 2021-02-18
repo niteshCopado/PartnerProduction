@@ -8,11 +8,11 @@
     </values>
     <values>
         <field>vbtapp__Order__c</field>
-        <value xsi:type="xsd:double">10.0</value>
+        <value xsi:type="xsd:double">1.0</value>
     </values>
     <values>
         <field>vbtapp__Path__c</field>
-        <value xsi:type="xsd:string">vlocity_ins/updateRemoteSiteSettings.js</value>
+        <value xsi:type="xsd:string">vlocity_cmt/updateRemoteSiteSettings.js</value>
     </values>
     <values>
         <field>vbtapp__Type__c</field>

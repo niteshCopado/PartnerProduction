@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>vbtapp__Order__c</field>
-        <value xsi:type="xsd:double">20.0</value>
+        <value xsi:type="xsd:double">5.0</value>
     </values>
     <values>
         <field>vbtapp__Path__c</field>

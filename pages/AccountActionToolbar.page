@@ -1,9 +1,5 @@
-<apex:page standardController="Account" extensions="vlocity_ins.VFPageControllerBase" showHeader="false" sidebar="false" docType="html-5.0">
-
-<apex:stylesheet value="{!URLFOR($Resource.vlocity_icons, '/css/vlocity-icons.css')}"/>
-
-        <vlocity_ins:ActionComponent standardController="{!stdController}"  
-                            objType="Account"
-                            style="Horizontal"/>      
-             
+<apex:page standardController="Account" extensions="vlocity_cmt.VFPageControllerBase" showHeader="false" sidebar="false" docType="html-5.0"> 
+<vlocity_cmt:ActionComponent standardController="{!stdController}" 
+                   objType="Account" style="Horizontal" 
+                   linkTypes="OmniScript,Other"/> 
 </apex:page>

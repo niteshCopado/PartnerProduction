@@ -6,5 +6,5 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <tabs>standard-AppLauncher</tabs>
     <tabs>standard-Quote</tabs>
-    <tabs>vlocity_ins__GroupCensus__c</tabs>
+    <tabs>vlocity_cmt__ObjectClass__c</tabs>
 </CustomApplication>

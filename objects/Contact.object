@@ -327,57 +327,7 @@
     <enableHistory>false</enableHistory>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
-        <fullName>vlocity_ins__DuplicateMatchFields</fullName>
-        <description>Gets all contact details used to match contacts.</description>
-        <displayedFields>
-            <field>Id</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>Email</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>Birthdate</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>FirstName</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__Gender__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__MiddleName__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__TaxId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__SocialSecurityNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>LastName</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <label>GetContactDetailsField</label>
-    </fieldSets>
-    <fieldSets>
-        <fullName>vlocity_ins__HouseholdMember</fullName>
+        <fullName>vlocity_cmt__HouseholdMember</fullName>
         <availableFields>
             <field>Email</field>
             <isFieldManaged>false</isFieldManaged>
@@ -425,7 +375,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>vlocity_ins__Age__c</field>
+            <field>vlocity_cmt__Age__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -437,22 +387,7 @@
         <label>Household Member</label>
     </fieldSets>
     <fieldSets>
-        <fullName>vlocity_ins__InteractionFieldList</fullName>
-        <availableFields>
-            <field>Fax</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__NPNNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__ProducerNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
+        <fullName>vlocity_cmt__InteractionFieldList</fullName>
         <description>Define list of fields shown in interaction console page.</description>
         <displayedFields>
             <field>MailingStreet</field>
@@ -480,7 +415,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>vlocity_ins__CustomerSentiment__c</field>
+            <field>vlocity_cmt__CustomerSentiment__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -505,7 +440,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>vlocity_ins__Type__c</field>
+            <field>vlocity_cmt__Type__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -530,7 +465,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>vlocity_ins__WebSite__c</field>
+            <field>vlocity_cmt__WebSite__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -539,15 +474,10 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
-        <displayedFields>
-            <field>RecordTypeId</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
         <label>InteractionFieldList</label>
     </fieldSets>
     <fieldSets>
-        <fullName>vlocity_ins__ListMember</fullName>
+        <fullName>vlocity_cmt__ListMember</fullName>
         <availableFields>
             <field>Description</field>
             <isFieldManaged>false</isFieldManaged>
@@ -622,227 +552,7 @@
         <label>ListMember</label>
     </fieldSets>
     <fieldSets>
-        <fullName>vlocity_ins__ProducerList</fullName>
-        <availableFields>
-            <field>vlocity_ins__Type__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <description>It is used to configure the producer list under agency/brokerage</description>
-        <displayedFields>
-            <field>vlocity_ins__ProducerNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__PartnerTier__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <label>Producer List</label>
-    </fieldSets>
-    <fieldSets>
-        <fullName>vlocity_ins__ProviderNetworkSearch</fullName>
-        <availableFields>
-            <field>vlocity_ins__AnnualCommission__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__AnnualIncome__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__AnnualPremium__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__CustomerSentiment__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__DaysSinceLastContact__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__DriversLicenseNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__EmploymentStatus__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__Gender__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__Image__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__IsActive__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__IsEmployee__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__IsPartner__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__IsPersonAccount__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__LastContactbyRecordOwner__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__MiddleName__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__NPNNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__NetWorth__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__Occupation__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PartnerTier__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PartyId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PremiumYear__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PrimaryAgencyBrokeragePartyId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PrimaryAgencyBrokerageRecordTypeId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__PrimaryEmployerId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__ProducerNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__SocialSecurityNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__StateOfIssuance__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__Status__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__TaxId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__TobaccoUse__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__Type__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__UserEmployeeNumber__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__UserId__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>vlocity_ins__WebSite__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <description>search provider network</description>
-        <displayedFields>
-            <field>AccountId</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>vlocity_ins__Age__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>Email</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>LastName</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>FirstName</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <label>ProviderNetworkSearch</label>
-    </fieldSets>
-    <fieldSets>
-        <fullName>vlocity_ins__SegmentListExport</fullName>
+        <fullName>vlocity_cmt__SegmentListExport</fullName>
         <description>List of contact fields to export.</description>
         <displayedFields>
             <field>FirstName</field>
@@ -930,46 +640,8 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>Authorized__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>Added for the TRNG OmniScript exercises</description>
-        <externalId>false</externalId>
-        <label>Authorized</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Birthdate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>CommunicationPreference__c</fullName>
-        <externalId>false</externalId>
-        <label>CommunicationPreference</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>MultiselectPicklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Phone</fullName>
-                    <default>true</default>
-                    <label>Phone</label>
-                </value>
-                <value>
-                    <fullName>Email</fullName>
-                    <default>false</default>
-                    <label>Email</label>
-                </value>
-                <value>
-                    <fullName>SMS</fullName>
-                    <default>false</default>
-                    <label>SMS</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-        <visibleLines>4</visibleLines>
     </fields>
     <fields>
         <fullName>Department</fullName>
@@ -1062,18 +734,7 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Account__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>Account.Name</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Account</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__Age__c</fullName>
+        <fullName>vlocity_cmt__Age__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>IF(MONTH(TODAY())&gt;MONTH(Birthdate),YEAR(TODAY())-YEAR(Birthdate),IF(AND(MONTH(TODAY())=MONTH(Birthdate),DAY(TODAY())&gt;=DAY(Birthdate)),YEAR(TODAY())-YEAR(Birthdate),(YEAR(TODAY())-YEAR(Birthdate))-1))</formula>
@@ -1086,18 +747,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__AnnualCommission__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Annual Commission</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__AnnualIncome__c</fullName>
+        <fullName>vlocity_cmt__AnnualIncome__c</fullName>
         <deprecated>false</deprecated>
         <description>Contact&apos;s Annual Income</description>
         <externalId>false</externalId>
@@ -1109,21 +759,22 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__AnnualPremium__c</fullName>
+        <fullName>vlocity_cmt__Authorized__c</fullName>
+        <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Specify if the contact is authorized to initiate any change on Account.</description>
         <externalId>false</externalId>
-        <label>Annual Premium</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
+        <inlineHelpText>Specify if the contact is authorized to initiate any change on Account.</inlineHelpText>
+        <label>Authorized</label>
         <trackFeedHistory>false</trackFeedHistory>
-        <type>Currency</type>
+        <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__CAQHIdentifier__c</fullName>
+        <fullName>vlocity_cmt__ContactNumber__c</fullName>
         <deprecated>false</deprecated>
+        <description>External identifier of the contact or person.</description>
         <externalId>true</externalId>
-        <label>CAQHIdentifier</label>
+        <label>Contact Number</label>
         <length>80</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -1131,18 +782,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__ContactName__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>LastName &amp; &quot;, &quot; &amp; FirstName</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Name</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__CustomerSentiment__c</fullName>
+        <fullName>vlocity_cmt__CustomerSentiment__c</fullName>
         <deprecated>false</deprecated>
         <description>Latest guess at this person&apos;s sentiment towards the deploying company with values such as Promoter, Satisfied, Neutral, Dissastisfied, Disgruntled.</description>
         <externalId>false</externalId>
@@ -1182,10 +822,10 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>vlocity_ins__DaysSinceLastContact__c</fullName>
+        <fullName>vlocity_cmt__DaysSinceLastContact__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF( (TODAY() - vlocity_ins__LastContactbyRecordOwner__c)&gt;0, (TODAY() - vlocity_ins__LastContactbyRecordOwner__c), 0)</formula>
+        <formula>IF( (TODAY() - vlocity_cmt__LastContactbyRecordOwner__c)&gt;0, (TODAY() - vlocity_cmt__LastContactbyRecordOwner__c), 0)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Days Since Last Contact</label>
         <precision>18</precision>
@@ -1195,7 +835,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__DriversLicenseNumber__c</fullName>
+        <fullName>vlocity_cmt__DriversLicenseNumber__c</fullName>
         <deprecated>false</deprecated>
         <description>The individual&apos;s driver&apos;s license number useful for credit checks.</description>
         <externalId>false</externalId>
@@ -1207,7 +847,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__EmploymentStatus__c</fullName>
+        <fullName>vlocity_cmt__EmploymentStatus__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Employment Status</label>
@@ -1251,41 +891,7 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Gender__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Gender</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Male</fullName>
-                    <default>false</default>
-                    <label>Male</label>
-                </value>
-                <value>
-                    <fullName>Female</fullName>
-                    <default>false</default>
-                    <label>Female</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__Has24x7Service__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Boolean indicating whether an individual Provider offers 24x7 support</description>
-        <externalId>false</externalId>
-        <label>24x7 Support</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__Image__c</fullName>
+        <fullName>vlocity_cmt__Image__c</fullName>
         <deprecated>false</deprecated>
         <description>A rich text area field that stores an image of this person. The image must be a .gif, .jpg or .png file and is limited to 1 MB in size. For more information about images stored in rich text area fields, see Editing Rich Text Are Fields in Records (https://help.salesforce.com/articleView?id=fields_using_rich_text_area.htm&amp;type=5).</description>
         <externalId>false</externalId>
@@ -1296,7 +902,7 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
-        <fullName>vlocity_ins__IsActive__c</fullName>
+        <fullName>vlocity_cmt__IsActive__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>Boolean indicating whether the Contact is active or inactive without depending on the specific contact status. Vlocity logic determines whether this Contact should be considered active or inactive using this field. Typically inactive means the Contact will be filtered out of views and lists.</description>
@@ -1306,7 +912,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__IsEmployee__c</fullName>
+        <fullName>vlocity_cmt__IsEmployee__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1315,7 +921,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__IsPartner__c</fullName>
+        <fullName>vlocity_cmt__IsPartner__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>This flag indicates if the contact is a partner</description>
@@ -1325,7 +931,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__IsPersonAccount__c</fullName>
+        <fullName>vlocity_cmt__IsPersonAccount__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1334,102 +940,7 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__LanguagesSpoken__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Languages Spoken</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>MultiselectPicklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>English</fullName>
-                    <default>false</default>
-                    <label>English</label>
-                </value>
-                <value>
-                    <fullName>Cantonese</fullName>
-                    <default>false</default>
-                    <label>Cantonese</label>
-                </value>
-                <value>
-                    <fullName>French</fullName>
-                    <default>false</default>
-                    <label>French</label>
-                </value>
-                <value>
-                    <fullName>German</fullName>
-                    <default>false</default>
-                    <label>German</label>
-                </value>
-                <value>
-                    <fullName>Hawaiian</fullName>
-                    <default>false</default>
-                    <label>Hawaiian</label>
-                </value>
-                <value>
-                    <fullName>Ilocano</fullName>
-                    <default>false</default>
-                    <label>Ilocano</label>
-                </value>
-                <value>
-                    <fullName>Japanese</fullName>
-                    <default>false</default>
-                    <label>Japanese</label>
-                </value>
-                <value>
-                    <fullName>Mandarin</fullName>
-                    <default>false</default>
-                    <label>Mandarin</label>
-                </value>
-                <value>
-                    <fullName>Samoan</fullName>
-                    <default>false</default>
-                    <label>Samoan</label>
-                </value>
-                <value>
-                    <fullName>Spanish</fullName>
-                    <default>false</default>
-                    <label>Spanish</label>
-                </value>
-                <value>
-                    <fullName>Tagalog</fullName>
-                    <default>false</default>
-                    <label>Tagalog</label>
-                </value>
-                <value>
-                    <fullName>Thai</fullName>
-                    <default>false</default>
-                    <label>Thai</label>
-                </value>
-                <value>
-                    <fullName>Tongan</fullName>
-                    <default>false</default>
-                    <label>Tongan</label>
-                </value>
-                <value>
-                    <fullName>Vietnamese</fullName>
-                    <default>false</default>
-                    <label>Vietnamese</label>
-                </value>
-                <value>
-                    <fullName>Sign Language</fullName>
-                    <default>false</default>
-                    <label>Sign Language</label>
-                </value>
-                <value>
-                    <fullName>Other Language</fullName>
-                    <default>false</default>
-                    <label>Other Language</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-        <visibleLines>4</visibleLines>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__LastContactbyRecordOwner__c</fullName>
+        <fullName>vlocity_cmt__LastContactbyRecordOwner__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Contact by Record Owner</label>
@@ -1438,7 +949,7 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Location__c</fullName>
+        <fullName>vlocity_cmt__Location__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Region</label>
@@ -1449,7 +960,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__MiddleName__c</fullName>
+        <fullName>vlocity_cmt__MiddleName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Middle Name</label>
@@ -1460,18 +971,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__NPNNumber__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>National Producer Number</label>
-        <length>80</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__NetWorth__c</fullName>
+        <fullName>vlocity_cmt__NetWorth__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Net Worth</label>
@@ -1482,7 +982,7 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Occupation__c</fullName>
+        <fullName>vlocity_cmt__Occupation__c</fullName>
         <deprecated>false</deprecated>
         <description>A description of the occupation of this individual--potentially helpful in determining the credit-worthiness of the individual.</description>
         <externalId>false</externalId>
@@ -1494,47 +994,13 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__PartnerTier__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Partner Tier</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Bronze</fullName>
-                    <default>false</default>
-                    <label>Bronze</label>
-                </value>
-                <value>
-                    <fullName>Silver</fullName>
-                    <default>false</default>
-                    <label>Silver</label>
-                </value>
-                <value>
-                    <fullName>Gold</fullName>
-                    <default>false</default>
-                    <label>Gold</label>
-                </value>
-                <value>
-                    <fullName>Platinum</fullName>
-                    <default>false</default>
-                    <label>Platinum</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__PartyId__c</fullName>
+        <fullName>vlocity_cmt__PartyId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>One-to-One relationship to Party Object</description>
         <externalId>false</externalId>
         <label>Party</label>
-        <referenceTo>vlocity_ins__Party__c</referenceTo>
+        <referenceTo>vlocity_cmt__Party__c</referenceTo>
         <relationshipLabel>Contacts</relationshipLabel>
         <relationshipName>Contacts</relationshipName>
         <required>false</required>
@@ -1542,40 +1008,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__PremiumYear__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Premium Year</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__PrimaryAgencyBrokeragePartyId__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>Account.vlocity_ins__PartyId__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Primary Agency/Brokerage Party</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__PrimaryAgencyBrokerageRecordTypeId__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>Account.RecordType.Id</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>PrimaryAgency/Brokerage Record Type</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__PrimaryEmployerId__c</fullName>
+        <fullName>vlocity_cmt__PrimaryEmployerId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <description>Employer</description>
@@ -1589,66 +1022,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__PrimaryLocationAccountId__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>vlocity_cmt__SSN__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Primary Provider Account</label>
-        <lookupFilter>
-            <active>true</active>
-            <booleanFilter>1 OR 2</booleanFilter>
-            <filterItems>
-                <field>Account.RecordType.DeveloperName</field>
-                <operation>equals</operation>
-                <value>ProviderLocation</value>
-            </filterItems>
-            <filterItems>
-                <field>Account.RecordType.DeveloperName</field>
-                <operation>equals</operation>
-                <value>Provider</value>
-            </filterItems>
-            <isOptional>true</isOptional>
-        </lookupFilter>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>Contacts (Primary Provider Account)</relationshipLabel>
-        <relationshipName>ProviderLocationContacts</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__ProducerNumber__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Producer Number</label>
-        <length>30</length>
+        <label>SSN</label>
+        <length>9</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__ProviderIdentifier__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>true</externalId>
-        <label>Provider Identifier</label>
-        <length>80</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__ProviderIsAcceptingNewPatients__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Accepts new patients</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__SocialSecurityNumber__c</fullName>
+        <fullName>vlocity_cmt__SocialSecurityNumber__c</fullName>
         <deprecated>false</deprecated>
         <description>An 11-character encrypted text field useful for storing the tax identifier of this individual.</description>
         <externalId>false</externalId>
@@ -1660,7 +1045,7 @@
         <type>EncryptedText</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__StateOfIssuance__c</fullName>
+        <fullName>vlocity_cmt__StateOfIssuance__c</fullName>
         <deprecated>false</deprecated>
         <description>Used with Driver&apos;s License Number. Identifies the state or country that issued the specified driver&apos;s license number.</description>
         <externalId>false</externalId>
@@ -1915,7 +1300,7 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>vlocity_ins__Status__c</fullName>
+        <fullName>vlocity_cmt__Status__c</fullName>
         <deprecated>false</deprecated>
         <description>Status of this Contact such as active, inactive, expired or pending. Values can be customized by the deploying company. Custom logic should also set the IsActive__c field correspondingly; e.g. inactive, expired and pending may all translate to IsActive__c = False.</description>
         <externalId>false</externalId>
@@ -1950,7 +1335,7 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>vlocity_ins__TaxId__c</fullName>
+        <fullName>vlocity_cmt__TaxId__c</fullName>
         <deprecated>false</deprecated>
         <description>A 10-character identifier useful for storing a tax id separate from the social security number of this individual.</description>
         <externalId>false</externalId>
@@ -1962,16 +1347,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__TobaccoUse__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Tobacco Use</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>vlocity_ins__Type__c</fullName>
+        <fullName>vlocity_cmt__Type__c</fullName>
         <deprecated>false</deprecated>
         <description>The type of individual. Most useful for partner employees tracked as contacts.</description>
         <externalId>false</externalId>
@@ -2006,10 +1382,10 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>vlocity_ins__UserEmployeeNumber__c</fullName>
+        <fullName>vlocity_cmt__UserEmployeeNumber__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>vlocity_ins__UserId__r.EmployeeNumber</formula>
+        <formula>vlocity_cmt__UserId__r.EmployeeNumber</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Employee Number</label>
         <required>false</required>
@@ -2017,7 +1393,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>vlocity_ins__UserId__c</fullName>
+        <fullName>vlocity_cmt__UserId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -2029,7 +1405,7 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>vlocity_ins__WebSite__c</fullName>
+        <fullName>vlocity_cmt__WebSite__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Web Site</label>
@@ -2084,425 +1460,10 @@
     </listViews>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
-        <fullName>vlocity_ins__Contact</fullName>
-        <active>true</active>
-        <label>Standard Contact</label>
-        <picklistValues>
-            <picklist>CommunicationPreference__c</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>SMS</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__EmploymentStatus__c</picklist>
-            <values>
-                <fullName>Employed Full-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employed Part-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Self-Employed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Student</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unemployed</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__LanguagesSpoken__c</picklist>
-            <values>
-                <fullName>Cantonese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hawaiian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ilocano</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Japanese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Samoan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sign Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tagalog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Thai</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tongan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Vietnamese</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__PartnerTier__c</picklist>
-            <values>
-                <fullName>Bronze</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Gold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Platinum</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Silver</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__StateOfIssuance__c</picklist>
-            <values>
-                <fullName>AK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AZ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>DE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ID</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ND</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NJ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>UT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WY</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Expired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pending</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Type__c</picklist>
-            <values>
-                <fullName>Associate Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Broker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Licensed Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managing Agent</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>vlocity_ins__MobilePhoneContact</fullName>
+        <fullName>vlocity_cmt__MobilePhoneContact</fullName>
         <active>true</active>
         <label>MobilePhoneContact</label>
         <picklistValues>
-            <picklist>CommunicationPreference__c</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>SMS</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>LeadSource</picklist>
             <values>
                 <fullName>Other</fullName>
@@ -2537,807 +1498,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__EmploymentStatus__c</picklist>
-            <values>
-                <fullName>Employed Full-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employed Part-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Self-Employed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Student</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unemployed</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__LanguagesSpoken__c</picklist>
-            <values>
-                <fullName>Cantonese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hawaiian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ilocano</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Japanese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Samoan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sign Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tagalog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Thai</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tongan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Vietnamese</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__PartnerTier__c</picklist>
-            <values>
-                <fullName>Bronze</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Gold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Platinum</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Silver</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__StateOfIssuance__c</picklist>
-            <values>
-                <fullName>AK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AZ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>DE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ID</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ND</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NJ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>UT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WY</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Expired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pending</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Type__c</picklist>
-            <values>
-                <fullName>Associate Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Broker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Licensed Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managing Agent</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>vlocity_ins__Producer</fullName>
-        <active>true</active>
-        <label>Producer</label>
-        <picklistValues>
-            <picklist>CommunicationPreference__c</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>SMS</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__EmploymentStatus__c</picklist>
-            <values>
-                <fullName>Employed Full-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employed Part-Time</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Self-Employed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Student</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unemployed</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__LanguagesSpoken__c</picklist>
-            <values>
-                <fullName>Cantonese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hawaiian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ilocano</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Japanese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Samoan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sign Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tagalog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Thai</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tongan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Vietnamese</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__PartnerTier__c</picklist>
-            <values>
-                <fullName>Bronze</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Gold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Platinum</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Silver</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__StateOfIssuance__c</picklist>
-            <values>
-                <fullName>AK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>AZ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>CT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>DE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>FL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ID</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IL</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>KY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>LA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MO</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MS</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ND</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NE</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NJ</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NM</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NY</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OK</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>OR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>RI</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SC</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SD</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TN</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>TX</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>UT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>VT</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WV</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>WY</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Expired</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pending</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__Type__c</picklist>
-            <values>
-                <fullName>Associate Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Broker</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Licensed Agent</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Managing Agent</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>vlocity_ins__Provider</fullName>
-        <active>true</active>
-        <label>Provider</label>
-        <picklistValues>
-            <picklist>CommunicationPreference__c</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>SMS</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Name</picklist>
-            <values>
-                <fullName>Dr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mr%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mrs%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ms%2E</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prof%2E</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__CustomerSentiment__c</picklist>
+            <picklist>vlocity_cmt__CustomerSentiment__c</picklist>
             <values>
                 <fullName>Disgruntled</fullName>
                 <default>false</default>
@@ -3360,7 +1521,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__EmploymentStatus__c</picklist>
+            <picklist>vlocity_cmt__EmploymentStatus__c</picklist>
             <values>
                 <fullName>Employed Full-Time</fullName>
                 <default>false</default>
@@ -3387,104 +1548,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__Gender__c</picklist>
-            <values>
-                <fullName>Female</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Male</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__LanguagesSpoken__c</picklist>
-            <values>
-                <fullName>Cantonese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>English</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>French</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>German</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hawaiian</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Ilocano</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Japanese</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mandarin</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Samoan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sign Language</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tagalog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Thai</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tongan</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Vietnamese</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__PartnerTier__c</picklist>
-            <values>
-                <fullName>Bronze</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Gold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Platinum</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Silver</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>vlocity_ins__StateOfIssuance__c</picklist>
+            <picklist>vlocity_cmt__StateOfIssuance__c</picklist>
             <values>
                 <fullName>AK</fullName>
                 <default>false</default>
@@ -3679,7 +1743,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__Status__c</picklist>
+            <picklist>vlocity_cmt__Status__c</picklist>
             <values>
                 <fullName>Active</fullName>
                 <default>false</default>
@@ -3698,7 +1762,7 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>vlocity_ins__Type__c</picklist>
+            <picklist>vlocity_cmt__Type__c</picklist>
             <values>
                 <fullName>Associate Agent</fullName>
                 <default>false</default>
@@ -3742,10 +1806,10 @@
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>vlocity_ins__EnforceSocialSecurityNumberlength</fullName>
+        <fullName>vlocity_cmt__EnforceSocialSecurityNumberlength</fullName>
         <active>true</active>
-        <errorConditionFormula>vlocity_ins__SocialSecurityNumber__c !=null &amp;&amp; LEN(vlocity_ins__SocialSecurityNumber__c) != 9</errorConditionFormula>
-        <errorDisplayField>vlocity_ins__SocialSecurityNumber__c</errorDisplayField>
+        <errorConditionFormula>vlocity_cmt__SocialSecurityNumber__c !=null &amp;&amp; LEN(vlocity_cmt__SocialSecurityNumber__c) != 9</errorConditionFormula>
+        <errorDisplayField>vlocity_cmt__SocialSecurityNumber__c</errorDisplayField>
         <errorMessage>Social Security Number is 9-digit number</errorMessage>
     </validationRules>
     <webLinks>
@@ -3844,25 +1908,37 @@
         <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
     </webLinks>
     <webLinks>
-        <fullName>vlocity_ins__CreateGroup</fullName>
+        <fullName>vlocity_cmt__CreateGroup</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Create Group</masterLabel>
         <openType>sidebar</openType>
-        <page>vlocity_ins__CreateGroupHouseholdFromContact</page>
+        <page>vlocity_cmt__CreateGroupHouseholdFromContact</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>vlocity_ins__CreateHousehold</fullName>
+        <fullName>vlocity_cmt__CreateHousehold</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
         <height>600</height>
         <linkType>page</linkType>
         <masterLabel>Create Household</masterLabel>
         <openType>sidebar</openType>
-        <page>vlocity_ins__CreateHousehold</page>
+        <page>vlocity_cmt__CreateHousehold</page>
         <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>vlocity_cmt__New_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Order</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/OrderWizard?conId={!Contact.Id}</url>
     </webLinks>
 </CustomObject>

@@ -84,12 +84,13 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <multilineLayoutFields>OpportunityId</multilineLayoutFields>
     <multilineLayoutFields>Product2Id</multilineLayoutFields>
-    <multilineLayoutFields>UnitPrice</multilineLayoutFields>
+    <multilineLayoutFields>ListPrice</multilineLayoutFields>
     <multilineLayoutFields>Quantity</multilineLayoutFields>
     <multilineLayoutFields>ServiceDate</multilineLayoutFields>
+    <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>Description</multilineLayoutFields>
-    <multilineLayoutFields>OpportunityId</multilineLayoutFields>
     <relatedLists>
         <fields>ScheduleDate</fields>
         <fields>Revenue</fields>

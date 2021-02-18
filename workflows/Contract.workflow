@@ -1,124 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <alerts>
-        <fullName>Approval_Email</fullName>
-        <description>Approval Email</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>cgregory.ins.tso.dyh066vrhliu.o5ycwmscazri@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>jgrimalda.ins.tso.kod84mazvngh.zykccs4aoahc@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>keverett.ins.tso.p5qeejx59rqx.xeu6isze2dmr@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>kslattery.ins.tso.fqatnkpb72ke.g7od7b8mp4xv@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>nnatha-9834189688@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>pthorson.ins.tso.7xhyahaxejuu.xh7yutfykfn1@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>sbhalla.ins.tso.cjvrp1nnginx.kgwmwffnbcha@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>tflaherty.ins.tso.iyale1jvpro2.8t5pvzyvt0mz@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>traininginscpq.vgqomofu3h0l.ajip4z3zomy6@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>whassan.ins.tso.u0m8yswc7asb.ngjs24ebbt6f@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/CLM_Email_Template</template>
-    </alerts>
-    <alerts>
-        <fullName>Reject_Email</fullName>
-        <description>Reject Email</description>
-        <protected>false</protected>
-        <recipients>
-            <recipient>cgregory.ins.tso.dyh066vrhliu.o5ycwmscazri@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>jgrimalda.ins.tso.kod84mazvngh.zykccs4aoahc@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>keverett.ins.tso.p5qeejx59rqx.xeu6isze2dmr@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>kslattery.ins.tso.fqatnkpb72ke.g7od7b8mp4xv@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>nnatha-9834189688@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>pthorson.ins.tso.7xhyahaxejuu.xh7yutfykfn1@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>sbhalla.ins.tso.cjvrp1nnginx.kgwmwffnbcha@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>tflaherty.ins.tso.iyale1jvpro2.8t5pvzyvt0mz@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>traininginscpq.vgqomofu3h0l.ajip4z3zomy6@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>whassan.ins.tso.u0m8yswc7asb.ngjs24ebbt6f@vlocityapps.com</recipient>
-            <type>user</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/CLM_Email_Template</template>
-    </alerts>
     <fieldUpdates>
-        <fullName>Approved</fullName>
-        <field>Status</field>
-        <literalValue>Negotiating</literalValue>
-        <name>Approved</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Await_Action</fullName>
+        <fullName>Change_to_Awaiting_Approval</fullName>
         <field>Status</field>
         <literalValue>Awaiting Approval</literalValue>
-        <name>Await Action</name>
+        <name>Change to Awaiting Approval</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>Rejected</fullName>
+        <fullName>UpdateApprovalStatus</fullName>
         <field>Status</field>
-        <literalValue>Rejected Internally</literalValue>
-        <name>Rejected</name>
+        <literalValue>Negotiating</literalValue>
+        <name>UpdateApprovalStatus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateRejectStatus</fullName>
+        <field>Status</field>
+        <literalValue>Rejected internally</literalValue>
+        <name>UpdateRejectStatus</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>

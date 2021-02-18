@@ -11,9 +11,4 @@
         <default>false</default>
         <label>New Business</label>
     </standardValue>
-    <standardValue>
-        <fullName>Endorsement</fullName>
-        <default>false</default>
-        <label>Endorsement</label>
-    </standardValue>
 </StandardValueSet>
