@@ -54,6 +54,7 @@
                 <legendPosition>Bottom</legendPosition>
                 <report>copado__Copado_Change_Management/copado__CCM_Release_User_Stories</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelDescending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -169,6 +170,7 @@
                 <legendPosition>Bottom</legendPosition>
                 <report>copado__Copado_Change_Management/copado__CCM_Release_USs_by_Project</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowValueDescending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -181,7 +183,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>nnatha@copado.com.support</runningUser>
+    <runningUser>nnatha@copado.com.uat</runningUser>
     <textColor>#000000</textColor>
     <title>CCM - Release Dashboard</title>
     <titleColor>#000000</titleColor>

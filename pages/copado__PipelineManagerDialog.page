@@ -222,9 +222,9 @@
             border-top: 4px solid #3593c6 !important;
           }
           .tabButton {
-	          width:34%;
-	          min-width: 250px;
-	      }
+              width:34%;
+              min-width: 250px;
+          }
 
     </style>
 

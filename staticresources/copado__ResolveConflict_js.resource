@@ -382,7 +382,9 @@ var conversionFunc = conversionFunc || {},
                 firstRow = val.slice(0, firstRowEndsAt);
 
                 // to make it work for yaml we are removing all blank lines
-                val = val.replace(/(^[ \t]*\n)/gm, '');
+                if(format == 'json') {
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             usName = val.slice(val.indexOf('>>>>>>>'), val.indexOf(usName) + usName.length); //'>>>>>>> feature/'+usName;
             while (val.indexOf(usName) > -1 && usName && usName.length > 0) {
@@ -395,7 +397,9 @@ var conversionFunc = conversionFunc || {},
         prepareOrig = function(val, format) {
             if (pMode == 'application/xml') {
                 // to make it work for yaml we are removing all blank lines
-                val = val.replace(/(^[ \t]*\n)/gm, '');
+                if(format == 'json') {
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             while (val.indexOf(usName) > -1 && val.indexOf('<<<<<<< HEAD') > -1) {
                 val = (val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + '======='.length, val.length)).replace(

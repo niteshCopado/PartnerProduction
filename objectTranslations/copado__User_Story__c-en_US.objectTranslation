@@ -187,6 +187,11 @@
         <name>copado__Failing_Methods__c</name>
     </fields>
     <fields>
+        <label><!-- Feature --></label>
+        <name>copado__Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
@@ -723,11 +728,11 @@
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points Other --></label>
+        <label><!-- Planned Points --></label>
         <name>copado__Story_Points_Other__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points SFDC --></label>
+        <label><!-- Actual Points --></label>
         <name>copado__Story_Points_SFDC__c</name>
     </fields>
     <fields>
@@ -759,6 +764,11 @@
         <help><!-- Number of triggers without the minimum required coverage. --></help>
         <label><!-- Triggers Without Coverage --></label>
         <name>copado__Triggers_Without_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature --></label>
+        <name>copado__US_Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Short description of the User Story or requirement. Technical and non-technical team members should be able to understand the description. --></help>

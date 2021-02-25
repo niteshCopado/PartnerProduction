@@ -5077,6 +5077,21 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Feature__c</fullName>
+        <businessStatus>Hidden</businessStatus>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <referenceTo>copado__Copado_Feature__c</referenceTo>
+        <relationshipLabel>User Stories</relationshipLabel>
+        <relationshipName>User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Functional_Specifications__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -6000,7 +6015,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <fullName>copado__Story_Points_Other__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Story Points Other</label>
+        <label>Planned Points</label>
         <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
@@ -6013,7 +6028,7 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <fullName>copado__Story_Points_SFDC__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Story Points SFDC</label>
+        <label>Actual Points</label>
         <precision>3</precision>
         <required>false</required>
         <scale>0</scale>
@@ -6108,6 +6123,20 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__US_Feature__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <referenceTo>copado__Application_Feature__c</referenceTo>
+        <relationshipLabel>User Stories</relationshipLabel>
+        <relationshipName>User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__User_Story_Title__c</fullName>

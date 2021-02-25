@@ -6,7 +6,7 @@
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <help><!-- If checked, committing changes on user stories linked to this deployment flow will not be allowed. --></help>
+        <help><!-- If checked, committing changes on user stories linked to this Pipeline will not be allowed --></help>
         <label><!-- Block Commits --></label>
         <name>copado__Block_Commits__c</name>
     </fields>
@@ -56,6 +56,11 @@
     <fields>
         <label><!-- Enable Copado DX --></label>
         <name>copado__Enable_Copado_DX__c</name>
+    </fields>
+    <fields>
+        <help><!-- If unchecked, Copado will stop applying Smart Conflict resolution during the promotion process and users will have to manually resolve conflicts again in every subsequent promotion. --></help>
+        <label><!-- Enable Smart Conflict Resolution --></label>
+        <name>copado__Enable_Smart_Conflict_Resolution__c</name>
     </fields>
     <fields>
         <help><!-- If checked, Environment names must equal their corresponding Branches in the Deployment Flow Steps. --></help>

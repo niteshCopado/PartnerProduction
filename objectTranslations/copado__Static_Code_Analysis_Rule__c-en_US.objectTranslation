@@ -210,6 +210,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Rule Reference --></label>
+        <name>copado__Rule_Reference__c</name>
+    </fields>
+    <fields>
         <label><!-- Static Code Analysis Settings --></label>
         <name>copado__Static_Code_Analysis_Settings__c</name>
         <relationshipLabel><!-- Static Code Analysis Rules --></relationshipLabel>

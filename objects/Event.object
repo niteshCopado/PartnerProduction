@@ -193,6 +193,9 @@
         <fullName>IsReminderSet</fullName>
     </fields>
     <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
         <fullName>Location</fullName>
     </fields>
     <fields>
@@ -201,6 +204,10 @@
     </fields>
     <fields>
         <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>ServiceAppointmentId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ShowAs</fullName>
