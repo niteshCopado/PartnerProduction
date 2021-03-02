@@ -188,4 +188,8 @@
         <name>customerservice</name>
         <type>Network</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Build your own</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>
