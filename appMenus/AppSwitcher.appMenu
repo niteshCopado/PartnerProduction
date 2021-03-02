@@ -184,4 +184,8 @@
         <name>Community master</name>
         <type>Network</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>customerservice</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>
