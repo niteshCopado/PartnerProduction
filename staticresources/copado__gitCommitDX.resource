@@ -71,7 +71,7 @@ var gitCommitDX = gitCommitDX || {};
         DXArtifact_itemsWithoutArtifact = itemsWithoutArtifact;
         DXArtifact_artifactsSelectable = artifactsSelectable;
 
-        return itemsWithoutArtifact.length>0;
+        return itemsWithoutArtifact.length>0 && (continueWithoutAllArtifacts === false);
     };
 
     // hide the metadata selection and show this grid so the user can select artifacts per metadata item
@@ -112,18 +112,14 @@ var gitCommitDX = gitCommitDX || {};
         $copado('select.DXArtifact_choice').each(function(idx, elt) {
             var val = $copado(elt).val();
             allElementsAreSelected = allElementsAreSelected && val;
-            //console.log(DXArtifact_itemsWithoutArtifact[idx].ai);
-            //console.log(val);
             //DXArtifact_selectedObjectsList[idx].ai = val;
             DXArtifact_itemsWithoutArtifact[idx].ai = val;
-            //console.debug(allElementsAreSelected, idx, elt, val);
+
         });
         if(allElementsAreSelected || (!allElementsAreSelected && confirm("Do you want to continue without selecting artifacts for all the metadata items?"))) {
+            continueWithoutAllArtifacts = true;
             gitCommitDX.DXArtifact_closeModal();
-            //console.log(DXArtifact_selectedObjectsList);
-            //console.log(gitCommitCommons.conf.data);
             gitCommitCommons.startCommit(DXArtifact_selectedObjectsList);
-
         }
         return false;
     };
@@ -185,6 +181,8 @@ var gitCommitDX = gitCommitDX || {};
             label: "Select Artifact"
         }
     ];
+
+    var continueWithoutAllArtifacts = false;
 
     var DXArtifact_showModal = function() {
         setTimeout(function() {

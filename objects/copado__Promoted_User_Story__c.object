@@ -169,6 +169,32 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>copado__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The status Outdated invalidates that this user story got promoted. The user story will be available again for automated promotions and back promotions if applicable.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>true</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Outdated</fullName>
+                    <default>false</default>
+                    <label>Outdated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>copado__User_Story__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

@@ -30,14 +30,10 @@
                 <behavior>Required</behavior>
                 <field>CaptureDate</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>EngagementChannelTypeId</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>ContactPointType</field>
             </layoutItems>
             <layoutItems>

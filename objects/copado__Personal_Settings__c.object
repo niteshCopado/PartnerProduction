@@ -66,6 +66,17 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>copado__Disable_Auto_Resolve__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disables Auto-Resolve from Online Conflict Resolution</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disables Auto-Resolve from Online Conflict Resolution</inlineHelpText>
+        <label>Disable Auto-Resolve</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Personal Settings</label>
     <visibility>Public</visibility>
 </CustomObject>

@@ -20,6 +20,7 @@
     <tabs>copado__Deployment_Flow__c</tabs>
     <tabs>copado__Promotion__c</tabs>
     <tabs>copado__Environment__c</tabs>
+    <tabs>copado__Result__c</tabs>
     <tabs>copado__Scheduled_Job__c</tabs>
     <tabs>copado__External_CI_Setting__c</tabs>
     <tabs>copado__External_CI_Job__c</tabs>
@@ -28,4 +29,6 @@
     <tabs>copado__Kanban_Board__c</tabs>
     <tabs>copado__Copado_DX_Panel</tabs>
     <tabs>copado__Burndown_Item__c</tabs>
+    <tabs>copado__Application__c</tabs>
+    <tabs>copado__Application_Feature__c</tabs>
 </CustomApplication>

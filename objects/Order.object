@@ -320,6 +320,7 @@
     </fields>
     <fields>
         <fullName>TotalAmount</fullName>
+        <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Type</fullName>

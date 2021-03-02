@@ -442,6 +442,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Rule_Reference__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rule Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Static_Code_Analysis_Settings__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
