@@ -5,15 +5,15 @@
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Attachment Actions --></label>
+        <label><!-- Attachment Options --></label>
         <name>copado__Attachment_Options__c</name>
         <picklistValues>
             <masterLabel>Insert Attachments</masterLabel>
             <translation><!-- Insert Attachments --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>No Actions</masterLabel>
-            <translation><!-- No Actions --></translation>
+            <masterLabel>No Attachments</masterLabel>
+            <translation><!-- No Attachments --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Remove Attachments</masterLabel>

@@ -1,4 +1,4 @@
-<apex:page id="thePage" standardController="copado__User_Story_Metadata__c" extensions="copado.UserStoryMetadataExt" doctype="html-5.0" applyBodyTag="false" sideBar="false">
+<apex:page id="thePage" standardController="copado__User_Story_Metadata__c" extensions="copado.UserStoryMetadataExt" doctype="html-5.0" applyBodyTag="false">
     <apex:slds />
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en" style="height:100%;">
     <head>
@@ -102,7 +102,7 @@
                                     <ul class="slds-dropdown__list" role="menu">
                                         <apex:repeat value="{!statuses}" var="s">
                                             <li class="slds-dropdown__item" role="presentation">
-                                                <a href="#" role="menuitem" tabindex="0" onclick="markAllAs('{!JSINHTMLENCODE(s.value)}');">
+                                                <a href="#" role="menuitem" tabindex="0" onclick="markAllAs('{!s.value}');">
                                                     <span class="slds-truncate" title="Status" value="{!s.value}">{!s.label}</span>
                                                 </a>
                                             </li>
@@ -237,9 +237,6 @@
                     <li class="slds-page-header__detail-block slds-truncate">
                         <c:LightningReadyOutputFields dividerBottom="false" SObject="{!usMetadata}" Field="LastModifiedDate" />
                     </li>
-                    <li class="slds-page-header__detail-block slds-truncate">
-                        <c:LightningReadyOutputFields dividerBottom="false" SObject="{!usMetadata}" Field="Last_Commit_Date__c" />
-                    </li>
                     <li>
                         <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last" id="statusDropdown{!usMetadata.Id}">
                             <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small actionButton" aria-haspopup="true" title="Mark As" onclick="ToggleDropDown(this,event); return false;">
@@ -252,8 +249,8 @@
                                 <ul class="slds-dropdown__list" role="menu">
                                     <apex:repeat value="{!statuses}" var="sts">
                                         <li class="slds-dropdown__item" role="presentation">
-                                            <a href="#" role="menuitem" tabindex="0" onclick="markAs('{!usMetadata.Id}','{!JSINHTMLENCODE(sts.value)}');">
-                                                <span class="slds-truncate" title="Status" value="{!HTMLENCODE(sts.value)}">{!sts.label}</span>
+                                            <a href="#" role="menuitem" tabindex="0" onclick="markAs('{!usMetadata.Id}','{!sts.value}');">
+                                                <span class="slds-truncate" title="Status" value="{!sts.value}">{!sts.label}</span>
                                             </a>
                                         </li>
                                     </apex:repeat>
@@ -270,7 +267,7 @@
                 <div style="padding:12px;background: #fdfdfd;border-collapse: collapse; background: #fdfdfd;border-radius: 4px;">
                     <!-- User Story Table -->
                     <div class="slds-text-heading_small slds-p-around_medium">{!$Label.RelatedUserStoryMetadata}</div>
-                    <apex:actionFunction id="pull_ac" name="preparePullRequest" action="{!preparePullRequest}" reRender="pageMessages" oncomplete="setTimeout(function(){callPullRequest('{!JSINHTMLENCODE(latestPull.gitType)}','{!JSINHTMLENCODE(latestPull.pullURL)}','{!JSINHTMLENCODE(latestPull.base)}','{!JSINHTMLENCODE(latestPull.compare)}');},250)">
+                    <apex:actionFunction id="pull_ac" name="preparePullRequest" action="{!preparePullRequest}" reRender="pageMessages" oncomplete="setTimeout(function(){callPullRequest('{!latestPull.gitType}','{!latestPull.pullURL}','{!latestPull.base}','{!latestPull.compare}');},250)">
                         <apex:param name="compareUS" value="" />
                     </apex:actionFunction>
                     <div class="slds-align_absolute-center">
@@ -322,7 +319,7 @@
                                 </td>
                                 <apex:repeat value="{!$ObjectType.copado__User_Story_Metadata__c.FieldSets.copado__Copado_User_Story_Metadata_Columns}" var="cusmc">
                                     <td data-label="{!cusmc.Label}" class="slds-cell-buffer_right">
-                                        <div class="slds-truncate" title="{!usm[cusmc]}">
+                                        <div class="slds-truncate" title="{!cusmc.Label}">
                                             <apex:outputField value="{!usm[cusmc]}" />
                                         </div>
                                     </td>
@@ -346,8 +343,8 @@
                                             <ul class="slds-dropdown__list" role="menu">
                                                 <apex:repeat value="{!statuses}" var="sts">
                                                     <li class="slds-dropdown__item" role="presentation">
-                                                        <a href="#" role="menuitem" tabindex="0" onclick="markAs('{!usm.Id}','{!JSINHTMLENCODE(sts.value)}');">
-                                                            <span class="slds-truncate" title="Status" value="{!HTMLENCODE(sts.value)}">{!sts.label}</span>
+                                                        <a href="#" role="menuitem" tabindex="0" onclick="markAs('{!usm.Id}','{!sts.value}');">
+                                                            <span class="slds-truncate" title="Status" value="{!sts.value}">{!sts.label}</span>
                                                         </a>
                                                     </li>
                                                 </apex:repeat>

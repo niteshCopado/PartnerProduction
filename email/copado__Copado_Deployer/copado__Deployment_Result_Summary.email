@@ -6,8 +6,8 @@
         <img height="25px" width="25px" src="{!URLFOR($Resource.Statics,'img/icons/logo-icon.png')}"/>
         <br/>
         Deployment: {!relatedTo.Name}<br />
-        Status: {!relatedTo.Status__c}<br />
-
+        Status: {!relatedTo.Status__c}<br /> 
+        
         <c:DeploymentEmail dpId="{!relatedTo.Id}"/>
     </messaging:htmlEmailBody>
 </messaging:emailTemplate>

@@ -156,7 +156,7 @@
     </fields>
     
     <nameFieldLabel><!-- Deployment Name --></nameFieldLabel>
-    <startsWith><!-- Consonant --></startsWith>
+    
     <webLinks>
         <label><!-- Cancel_Deployment --></label>
         <name>copado__Cancel_Deployment</name>

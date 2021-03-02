@@ -120,6 +120,7 @@ var conversionFunc = conversionFunc || {},
             config.hasError = true;
             config.errorLines.push(lineNo);
             var line = editor.edit.doc.getLineHandle(lineNo);
+            console.log('addLineError :: adding error message ', line);
             if (line) {
                 editor.edit.doc.addLineClass(line, 'background', 'line-error');
             }
@@ -128,6 +129,7 @@ var conversionFunc = conversionFunc || {},
             config.hasError = false;
             for (var i = 0; i < config.errorLines; i++) {
                 var line = editor.edit.doc.getLineHandle(config.errorLines[i]);
+                console.log('removeLineErrors :: removing error message ', line);
                 if (line) editor.edit.doc.removeLineClass(line, 'background', 'line-error');
             }
             config.errorLines = [];
@@ -144,7 +146,9 @@ var conversionFunc = conversionFunc || {},
         } catch (e) {
             removeLineErrors('line-error');
             var lineNo = e.mark.line;
+            // console.log('lineNo===> ',lineNo);
             e.message = e.message.replace('line ' + lineNo, 'line ' + (lineNo + 1));
+            console.warn('code exception: ', e.message);
             setGlobalErrorMessage('ERROR: ' + e.message, lineNo);
             addLineError(lineNo);
             return true;
@@ -155,6 +159,8 @@ var conversionFunc = conversionFunc || {},
 (function(self) {
     self.setPreValue = function(sPane, format) {
         att2Res = $copado('[id$=attHiddenInp]').val();
+        console.log('directly inp hidden ===> ', $copado('[id$=attHiddenInp]').val());
+        console.log('directly att2Res ===> ', att2Res);
 
         $copado('#xmlJson>button').removeClass('slds-button_brand');
         if (format) {
@@ -221,6 +227,9 @@ var conversionFunc = conversionFunc || {},
                     returnFlag = true;
                 }
 
+                console.log('preSource ==> ', preSource);
+                console.log('preTarget ==> ', preTarget);
+                console.log('returnFlag==> ', returnFlag);
                 preFlag = true;
             }
             if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
@@ -269,7 +278,6 @@ var conversionFunc = conversionFunc || {},
                     $copado('.CodeMirror-simplescroll').css('display', 'none');
                     var value = attach ? prapareValue(Base64.decode(attach.Body), format) : prapareValue(preSource[0], format);
                     var orig1 = attach ? prepareOrig(Base64.decode(attach.Body), format) : prapareValue(preTarget[0], format);
-
                     editor = CodeMirror.MergeView(document.getElementById('view'), {
                         value: value,
                         origLeft: panes == 3 ? value : null,
@@ -278,18 +286,9 @@ var conversionFunc = conversionFunc || {},
                         mode: format == 'json' ? 'application/json' : pMode,
                         highlightDifferences: true,
                         connect: 'align',
-                        collapseIdentical: true,
-                        readOnly: attach ? false : true,
-                        lineWrapping: true,
-                        extraKeys: {
-                            'Ctrl-Q': function(cm) {
-                                cm.foldCode(cm.getCursor());
-                            }
-                        },
-                        foldGutter: true,
-                        gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter']
+                        collapseIdentical: false,
+                        readOnly: attach ? false : true
                     });
-
                     $copado('.CodeMirror-merge-editor').prepend(
                         '<div class="panel top" style="background-color:white;"><center><span>' +
                             (attach ? resolution : source + jqxdatatable_config.data.orgName) +
@@ -319,7 +318,6 @@ var conversionFunc = conversionFunc || {},
                     $copado('.CodeMirror-merge-gap').css('height', gapSize);
                 } else {
                     $copado('#xmlJson').css('display', 'none');
-
                     CodeMirror.defineMode('highlightSearch', function(config, parserConfig) {
                         var searchOverlay = {
                             token: function(stream, state) {
@@ -432,6 +430,7 @@ var conversionFunc = conversionFunc || {},
         return false;
     };
     self.renderBundleSelection = function(optionName) {
+        // console.log('optionName ',optionName);
         preSource[0] = bundleSource[0].file(optionName).asText();
         preTarget[1] = preSource[1] = optionName;
         preTarget[0] = bundleTarget[0].file(optionName).asText();
@@ -532,6 +531,7 @@ var conversionFunc = conversionFunc || {},
                     var item = xml.childNodes.item(i);
                     var nodeName = item.nodeName;
                     if (typeof obj[nodeName] == 'undefined') {
+                        // console.log('nodeName==1=> ',nodeName);
                         if (nodeName != '#text') obj[nodeName] = xmlToJson(item);
                     } else {
                         if (typeof obj[nodeName].push == 'undefined') {
@@ -539,6 +539,8 @@ var conversionFunc = conversionFunc || {},
                             obj[nodeName] = [];
                             obj[nodeName].push(old);
                         }
+                        // console.log('nodeName==2=> ',nodeName);
+                        // console.log('obj[nodeName]===> ',obj[nodeName]);
                         obj[nodeName].push(xmlToJson(item));
                     }
                 }
@@ -575,7 +577,9 @@ var conversionFunc = conversionFunc || {},
                         // elements
                         if (json[x] instanceof Array) {
                             // handle arrays
+                            // console.log('json[x]==in if==> ',json[x]);
                             for (var i = 0; i < json[x].length; i++) {
+                                // console.log('x==array= in for==> ',x);
                                 var str = x;
                                 var uppercaseLetters = str.replace(/[a-z]/g, '');
                                 let exX = x;

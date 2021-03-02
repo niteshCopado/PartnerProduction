@@ -26,9 +26,11 @@
 			<script>
 				var unlock = function() {
 			        $copado('#screenLockerLightning').hide();
+			        console.log('un-lock');
 			    };
 			    var lock = function() {
 			        $copado('#screenLockerLightning').show();
+			        console.log('lock')
 			    };
 				$copado(document).ready(function(){
 					overridePageMessages(); 
@@ -36,8 +38,12 @@
 				});
 				var parseJson = function(){
 					var dataJson = "{!JSENCODE(dataJson)}";
+					
 					var data = dataJson ? dataJson : false;
+					console.log('data',data);
+					
 					datasetup.setPreviousData(data);
+					
 				}
 				var datasetup = datasetup || {};
                 datasetup.config = {
@@ -94,8 +100,11 @@
                 	prev_meta_missing: '{!SUBSTITUTE($Label.ERROR_MSG_PREV_META_MISSING,"'","\'")} ',
                 };
 
+
 				function overridePageMessages(){    
+
 					textureEffect = 'slds-theme--alert-texture';
+
 					$copado('.warningM3').addClass('slds-notify slds-notify--toast slds-theme--warning customMessage '+textureEffect);          
 					$copado('.confirmM3').addClass('slds-notify slds-notify--alert slds-theme--success  customMessage '+textureEffect);    
 					$copado('.errorM3').addClass('slds-notify slds-notify--alert slds-theme--error customMessage '+textureEffect);                  
@@ -105,58 +114,7 @@
 					$copado('.confirmM3').removeClass('confirmM3'); 
 					$copado('.infoM3').removeClass('infoM3');   
 					$copado('.warningM3').removeClass('warningM3');  
-                }
-                
-                function dataTemplateTotalObjects(dataJson, cbOnEnd) {
-                    var objectsCount = 0;
-                    var filterLogic = '';
-                    var editIconText = '';
-                    var templateDetails = {};
-                    sforce.connection.query('SELECT Id, Name, Body FROM Attachment WHERE ParentId=\'' + dataJson.dataTemplateId + '\' AND Name = \'Template Detail\' LIMIT 1', {
-                        onSuccess: (response) => {
-                            if (response.records) {
-                                var contents = JSON.parse(sforce.Base64Binary.prototype.decode(response.records.Body));
-                                objectsCount += contents.childrenObjectsReferenceList.length;
-                                objectsCount += contents.parentObjectsReferenceList.length;
-                                templateDetails['count'] = objectsCount;
-
-                                var queryFilters = contents.queryFilterList;
-                                filterLogic = contents.dataTemplate.templateFilterLogic;
-
-                                // checking if step datajson is already have filter overriden
-                                if(dataJson.queryFilterList && dataJson.queryFilterList.length > 0) {
-                                    queryFilters = dataJson.queryFilterList
-                                    filterLogic = dataJson.filterLogic;
-                                } 
-
-                                // first we will replace the number with specific key, to prevent id issue while replacing, becuase id can contain numbers and it will cause a replace problem
-                                queryFilters.forEach(function(filterItem) {
-                                    filterLogic = filterLogic.replace(filterItem.order, filterItem.order + filterItem.fieldaName);
-                                });
-
-                                // now we can replace with the correct values, we have specific key for each filterlogic
-                                queryFilters.forEach(function(filterItem) {
-                                    filterLogic = filterLogic.replace(filterItem.order + filterItem.fieldaName, filterItem.finalValue);
-                                });
-
-                                if (!dataJson.queryFilterList && filterLogic === '1') {
-                                    filterLogic = '';
-                                }
-
-                                if(filterLogic == '') {
-                                    editIconText = 'No Filter';
-                                }
-
-                                templateDetails['filterLogic'] = filterLogic;
-                                templateDetails['editIconText'] = editIconText;
-                            }
-                            cbOnEnd && cbOnEnd(templateDetails);
-                        },
-                        onFailure: (error) => {
-                            console.error("An error has occurred " + error);
-                        }
-                    });
-                }
+				}
 			</script>
 	    </head>
 	    <body class="slds-scope" style="{!IF($User.UIThemeDisplayed == 'Theme4d','margin: 0 12px 0 12px; background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));','')}">
@@ -306,75 +264,11 @@
 											<c:DataTemplateTaskComponent isEdit="false"/>
 											<script type="text/javascript">
 												datasetup.setPreviousData = function(data){
-                                                    console.log('**f**data : ',data);
 													if(data) {
-                                                        data = JSON.parse(data);
-                                                        var deferredArray = [];
-                                                        var deferred = new $copado.Deferred();
-                                                        deferredArray.push(deferred);
-                                                        dataTemplateTotalObjects(data, deferred.resolve);
-                                                        $copado.when.apply(this, deferredArray).then((deferredData) => {
-                                                            console.log('ns : ',_config.ns);
-                                                            sforce.connection.query('SELECT Id, Name, ' + _config.ns + 'Template_Source_Org__r.Name, ' + _config.ns + 'Batch_Size__c, ' + _config.ns + 'Max_Record_Limit__c, ' + _config.ns + 'Main_Object__c FROM ' + _config.ns + 'Data_Template__c WHERE Id = \'' + data.dataTemplateId + '\' LIMIT 1', {
-                                                                onSuccess: function(result) {
-                                                                    var records = result.getArray("records");
-                                                                    if (records.length == 1) {
-                                                                        var recordData = records[0];
-                                                                        var name = recordData.Name;
-                                                                        var header = name + ' | ' + recordData[_config.ns + 'Main_Object__c'];
-                                                                        var btchrec = recordData[_config.ns + 'Batch_Size__c'] ? recordData[_config.ns + 'Batch_Size__c'] : 0;
-                                                                        $copado('[id$=headerDataTemplate]').text(header);
-                                                                        $copado('[id$=sourceOrg]').text(recordData[_config.ns + 'Template_Source_Org__r'].Name);
-                                                                        $copado('[id$=totalObjects]').text(deferredData.count);
-                                                                        $copado('[id$=objectFilter]').text(deferredData.filterLogic);
-                                                                        $copado('[id$=editFilterIconText]').text(deferredData.editIconText);
-                                                                        $copado('[id$=batchSize]').text(btchrec);
-                                                                        $copado('[id$=maxRecordLimit]').text(recordData[_config.ns + 'Max_Record_Limit__c']);
-                                                                        $copado('[id$=opentemplate]').show();
-                                                                        $copado('[id$=openRelationshipDiagram]').show();
-                                                                    }
-                                                                },
-                                                                onFailure: function(error) {
-                                                                    console.error("An error has occurred " + error);
-                                                                }
-                                                            });
-                                                        });
-                                                        
-                                                        $copado('[id$=relationship-diagram-link]').on( 'click', function (event) {
-                                                            event.preventDefault();
-                                                            var templateId = data.dataTemplateId;
-
-                                                            // for dev orgs it need to have c: but for namespace context in managed package it should be copado
-                                                            var namespace = _config.ns == '' ? 'c' : 'copado';
-
-                                                            var compDefinition = { 
-                                                                componentDef : `${namespace}:addRelationalDiagramContainer`, 
-                                                                attributes :{ 
-                                                                    recordId : templateId
-                                                                } 
-                                                            };
-                                                            // Base64 encode the compDefinition JS object
-                                                            var encodedCompDef = btoa(JSON.stringify(compDefinition));
-                                                            window.open(`/one/one.app#${encodedCompDef}`,'_blank');
-                                                        });
-
-                                                        $copado('[id$=open-template-link]').on( 'click', function (event) {
-                                                            event.preventDefault();
-                                                            var _namespace = (_config.ns != '') ? _config.ns + '__' : '';
-                                                            var templateId = data.dataTemplateId;
-                                                            if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)) {
-                                                                return window.open('/lightning/r/' + templateId + '/view', '_blank');
-                                                            } else {
-                                                                return window.open('/apex/' + _namespace + 'DataTemplateSetup?id=' + templateId, '_blank');
-                                                            }
-                                                        });
-
-                                                        $copado('[id$=open-override-filter-link]').on( 'click', function (event) {
-                                                            var _namespace = (_config.ns != '') ? _config.ns + '__' : '';
-                                                            return window.open('/one/one.app#/alohaRedirect/apex/' + _namespace + 'OverrideTemplateFilters?taskId=' + '{!Deployment_Task__c.Id}', '_parent');
-                                                        });
+														data = JSON.parse(data);
+														$copado('[id$=jsDataTemplate_View]').val(data.dataTemplateName);
 													}
-                                                }
+												}
 											</script>
 										</apex:outputPanel>
 										<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Bulk Data'}">

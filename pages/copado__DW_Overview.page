@@ -9,8 +9,7 @@
     
     <script>
         var globalSldsResourcePath = '{!URLFOR($Asset.SLDS)}';
-        var currentStepValue = '{!currentStepValue}'; // currentStepValue is integer that's why no jsencode used 
-        var namespace = '{!JSENCODE(namespace)}';
+        var currentStepValue = '{!currentStepValue}';
         var Copado_Licenses = {!CurrentUserLicenses};
         //***IMPORTANT***  use exactly the same name(jqxdatatable_config) for the configuration for future uses on new pages
         var jqxdatatable_config = {
@@ -158,12 +157,6 @@
                                         <apex:image value="{!URLFOR($Resource.copado__DTS_images,'lookup.png')}" />
                                         <apex:param name="relTemplateId" value="{!dataTemplate.Id}" />
                                     </apex:commandLink>
-                                    
-                                    <apex:outputPanel layout="none" rendered="{!$User.UiThemeDisplayed == 'Theme4d'}">
-                                        <div class="slds-float_right">
-                                            <button type="button" onClick="dw.redirectToRelationalDiagramLWC('{!dataTemplate.Id}');" class="slds-button strategy-icon">&nbsp;&nbsp;{!$Label.Relationship_Diagram}</button>
-                                        </div>
-                                    </apex:outputPanel>
                                 </div>
                             </div>
                             <div class="summary-info">
@@ -190,15 +183,6 @@
                                             <div class="line-item">
                                                 <span>{!$ObjectType.copado__Data_Template__c.fields.copado__Batch_Size__c.Label}:</span><span class="value"> {!dataTemplate.copado__Batch_Size__c}</span>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="slds-form__row">
-                                        <div class="slds-form__item" role="listitem">
-                                            <div class="line-item">
-                                                <span>{!$Label.copado__filter_override}:</span><span class="value"> {!OverrideFilterText}</span>
-                                            </div>
-                                        </div>
-                                        <div class="slds-form__item" role="listitem">
                                         </div>
                                     </div>
                                 </div>

@@ -765,56 +765,56 @@
                                 <div class="slds-form-element">
                                     <label class="slds-form-element__label">{!$Label.copado__sprintwall_header_type}</label>
                                     <div class="slds-form-element__control">
-                                        <div class="slds-form-element">
+                                    	<div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control">
                                                 <apex:inputField value="{!us.RecordTypeId}" styleclass="slds-input" />
                                             </div>
-                                        </div>
+                                        </div>    
                                     </div>
                                 </div>
                                 <div class="slds-form-element">
                                     <label class="slds-form-element__label">{!$Label.SprintWall_Header_Title}</label>
                                     <div class="slds-form-element__control">
-                                        <div class="slds-form-element">
+                                    	<div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control">
                                                 <apex:inputField value="{!us.copado__User_Story_Title__c}" styleclass="slds-input" />
                                             </div>
-                                        </div>
+                                        </div>    
                                     </div>
                                 </div>
                                 <div class="slds-form-element">
                                     <label class="slds-form-element__label">{!$Label.SprintWall_Header_Status}</label>
                                     <div class="slds-form-element__control">
-                                        <div class="slds-form-element">
+                                    	<div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control">
                                                 <apex:inputField value="{!us.copado__Status__c}" styleclass="slds-input" />
                                             </div>
-                                        </div>
+                                        </div>    
                                     </div>
                                 </div>
                                 <div class="slds-form-element">
                                     <label class="slds-form-element__label">{!$Label.SprintWall_Header_Assignee}</label>
                                     <div class="slds-form-element__control">
-                                        <div class="slds-form-element">
+                                    	<div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control input-lookup">
                                                 <apex:inputField value="{!us.copado__Developer__c}" styleclass="slds-input" />
                                             </div>
-                                        </div>
+                                        </div>    
                                     </div>
                                 </div>
                                 <div class="slds-form-element">
                                     <label class="slds-form-element__label">{!$Label.SprintWall_Header_Points}</label>
                                     <div class="slds-form-element__control">
-                                        <div class="slds-form-element">
+                                    	<div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control">
                                                 <apex:inputField value="{!us.copado__Story_Points_SFDC__c}" styleclass="slds-input" />
                                             </div>
-                                        </div>
+                                        </div>   
                                     </div>
                                 </div>
                                 <apex:repeat value="{!$ObjectType.copado__User_Story__c.FieldSets.copado__Sprint_Wall_Columns}" var="field">
@@ -822,12 +822,12 @@
                                         <label class="slds-form-element__label">{!field.label}</label>
                                         <div class="slds-form-element__control">
                                             <apex:outputPanel layout="none" rendered="{!NOT(CONTAINS(field.fieldPath,'.'))}">
-                                                <div class="slds-form-element">
+                                            	<div class="slds-form-element">
                                                     <label class="slds-form-element__label"></label>
                                                     <div class="slds-form-element__control input-lookup">
                                                         <apex:inputField value="{!us[field.fieldPath]}" styleclass="{!IF(field.type == 'boolean','slds-inputcheckbox',IF(field.type == 'textarea','slds-textarea','slds-input'))}" />
                                                     </div>
-                                                </div>
+                                                </div>   
                                             </apex:outputPanel>
                                         </div>
                                     </div>

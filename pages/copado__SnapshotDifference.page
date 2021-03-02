@@ -239,7 +239,6 @@
                     }
                     return me.data.selectedNames;
                 },
-                
                 prepareAtt:function(){
                     const endUrl = '/apex/'+copadoApp.ns+'GitCommitMain?userStoryId=';
                     const mdataParam = '&MetadataPreselectionId=';
@@ -283,7 +282,7 @@
                         }
                     }else alert(copadoLabels.execfirst);
                 },
-
+                
                 navigateTo: function(pageName){
                     var redirectUrl = encodeURI(pageName);
                     if( (typeof sforce != 'undefined') && sforce && (!!sforce.one) ) {
@@ -450,8 +449,8 @@
                     try{
                         lockScreen();
                         console.time('Retrieve');
-                        var herokuServer = '{!JSENCODE(settings.herokuServer)}';
-                        var uri = herokuServer+'/json/v1/snapshotDiff/'+copadoApp.data.Id+'{!JSENCODE(settings.urlParameters)}&isPartialDiff='+_config.data.isPartialDiff;
+                        var herokuServer = '{!settings.herokuServer}';
+                        var uri = herokuServer+'/json/v1/snapshotDiff/'+copadoApp.data.Id+'{!settings.urlParameters}&isPartialDiff='+_config.data.isPartialDiff;
                         console.log(herokuServer+' calling... '+uri);
                         utilsV2.onSuccessCB = function(res) {
                             var obj = $copado.parseJSON(res);

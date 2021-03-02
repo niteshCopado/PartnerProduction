@@ -218,8 +218,8 @@
         <name>copado__Last_Promotion_Date__c</name>
     </fields>
     <fields>
-        <help><!-- Status of the latest validation Promotion for the User Story. --></help>
-        <label><!-- Last Validation Status --></label>
+        <help><!-- Status of the latest validation Deployment for the User Story. --></help>
+        <label><!-- Last Validation Deployment Status --></label>
         <name>copado__Last_Validation_Deployment_Status__c</name>
     </fields>
     <fields>

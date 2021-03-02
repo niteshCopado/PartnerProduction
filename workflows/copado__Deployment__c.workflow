@@ -8,7 +8,7 @@
             <type>owner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>copado__Copado_Deployer/copado__NewDeploymentResultSummary</template>
+        <template>copado__Copado_Deployer/copado__Deployment_Result_Summary</template>
     </alerts>
     <fieldUpdates>
         <fullName>copado__Send_deployment_command</fullName>
@@ -18,6 +18,7 @@
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <rules>
         <fullName>copado__Deployment Completed</fullName>

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Git Operation Restriction --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Git Operation Restriction --></value>
-    </caseValues>
     <fields>
         <help><!-- Restriction will be active if this checkbox is checked. --></help>
         <label><!-- Active --></label>
@@ -18,5 +10,4 @@
         <label><!-- Git Operation Name --></label>
         <name>copado__Git_Operation_Name__c</name>
     </fields>
-    <startsWith><!-- Consonant --></startsWith>
 </CustomObjectTranslation>

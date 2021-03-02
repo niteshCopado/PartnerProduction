@@ -141,7 +141,7 @@
                     </apex:pageBlock>
                 </apex:form>
                 <script language="javascript" type="text/javascript">
-                
+
                         function showHideCustomDomain()
                         {
                             if (document.getElementById('{!$Component.theForm.pb_createOrg.pbs1.if_orgType}').value == "Custom Domain" )
@@ -165,9 +165,9 @@
                             if(tdrow){
                                 tdrow.css( "text-align", "center" );
                             }
-                          }                     
+                          }
                         }
-                        });                
+                        });
 
 
                 </script>
