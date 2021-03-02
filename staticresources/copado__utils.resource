@@ -259,8 +259,58 @@ function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-dw.u.getAttach = function(parentId, name) {
+dw.u.getFile = function(parentId, fileName) {
+    var documents = getContentDocuments(parentId);
+    if(documents.length == 0) {
+        return null;
+    }
+    var documentIds = new Set();
+    for(var i = 0; i < documents.length; i++) {
+        documentIds.add(documents[i].ContentDocumentId);
+    }
+    var versions = getContentVersion([...documentIds].join("','"), fileName);
+    return versions;
+};
 
+function getContentDocuments(parentId) {
+    var query = "SELECT ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId = '" + htmlEntities(parentId).replace(/'/g, "\\'") + "'";
+    var documents = sforce.connection.query(query);
+    return documents.getArray("records");
+}
+
+function getContentVersion(documentIds, fileName) {
+    var query = "SELECT VersionData FROM ContentVersion WHERE PathOnClient = '" + htmlEntities(fileName).replace(/'/g, "\\'") + "' AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true LIMIT 1";
+    var versions = sforce.connection.query(query);
+    return versions.getArray("records");
+}
+
+dw.u.getDecodedFileContent = function(parentId, name) {
+    var file = dw.u.getFile(parentId, name);
+    if (!file || !file.length) {
+        return null;
+    }
+    var content = Base64.decode(file[0].VersionData);
+    //below replaces opening and closing tags based on xss concerns
+    while(content.indexOf('<') > -1 || content.indexOf('>') > -1) {
+        content = content.replace('<','').replace('>','');
+    }
+    return content;
+};
+
+dw.u.getFileContent = function(parentId, name) {
+    var file = dw.u.getFile(parentId, name);
+    if (!file || !file.length) {
+        return null;
+    }
+    var content = file[0].VersionData;
+    //below replaces opening and closing tags based on xss concerns
+    while(content.indexOf('<') > -1 || content.indexOf('>') > -1) {
+        content = content.replace('<','').replace('>','');
+    }
+    return content;
+};
+
+dw.u.getAttach = function(parentId, name) {
     var q = "Select Id, Body, LastModifiedDate, Name, ParentId From Attachment where Name='" + name + "' and parentId = '" + parentId + "' order by LastModifiedDate DESC limit 1",
         result = sforce.connection.query(q),
         records = result.getArray("records");

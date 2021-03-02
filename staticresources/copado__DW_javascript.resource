@@ -11,7 +11,7 @@ var sourceDomain = '';
 var targetDomain = '';
 
 (app => {
-    'use strict';
+    ('use strict');
 
     var iconsList = [
         {
@@ -396,6 +396,10 @@ var targetDomain = '';
             {
                 name: 'attachmentSize',
                 type: 'integer'
+            },
+            {
+                name: 'generatedIds',
+                type: 'integer'
             }
         ],
         datatype: 'array'
@@ -427,7 +431,8 @@ var targetDomain = '';
                                         objectName: element.m.objectName,
                                         templateId: element.m.templateId,
                                         templateName: element.m.templateName,
-                                        attachmentSize: element.m.attachmentSize
+                                        attachmentSize: element.m.attachmentSize,
+                                        generatedIds: element.m.generatedIds
                                     };
                                     newResultArray.push(newResult);
                                 });
@@ -572,16 +577,88 @@ var targetDomain = '';
                 width: '10%'
             },
             {
-                text: 'Actions',
-                datafield: 'viewResult',
+                text: 'Generated IDs',
+                datafield: 'generatedIds',
+                filtertype: 'input',
                 columntype: 'textbox',
                 width: '10%',
-                cellsrenderer: viewResultLink
+                cellsrenderer: generatedIdsCount
             }
         ];
     };
 
-    var viewResultLink = (row, column, value, defaultHtml) => {
+    app.downloadRecordMatchingCSV = elem => {
+        var templateName = elem.split(',')[0];
+        var deploymentId = elem.split(',')[1];
+        templateName = templateName + '.csv';
+        var contentDocumentId = '';
+
+        sforce.connection.query("SELECT ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId IN ('" + deploymentId + "')", {
+            onSuccess: response => {
+                var records = response.getArray('records');
+                if (records) {
+                    records.forEach(contentDocumentLink => {
+                        contentDocumentId = contentDocumentLink.ContentDocumentId;
+
+                        sforce.connection.query("SELECT VersionData,Title FROM Contentversion WHERE ContentDocumentId ='" + contentDocumentId + "'", {
+                            onSuccess: response => {
+                                var records = response.getArray('records');
+                                if (records) {
+                                    var versionData;
+                                    records.forEach(contentVersionItem => {
+                                        if (contentVersionItem.Title === templateName) {
+                                            versionData = contentVersionItem.VersionData;
+                                        }
+                                    });
+
+                                    versionData = Base64.decode(versionData);
+                                    let csvContent = 'data:text/csv;charset=utf-8,' + versionData;
+                                    var encodedUri = encodeURI(csvContent);
+                                    var link = document.createElement('a');
+                                    link.setAttribute('href', encodedUri);
+                                    link.setAttribute('download', templateName);
+                                    document.body.appendChild(link); // Required for FF
+
+                                    link.click();
+                                }
+                            },
+                            onFailure: error => {}
+                        });
+                    });
+                }
+            },
+            onFailure: error => {}
+        });
+    };
+
+    var generatedIdsCount = (row, column, value, defaultHtml) => {
+        var element = $copado(defaultHtml);
+
+        //download="test.csv"
+        var templateId = $copado('.jqx-grid').jqxGrid('getCell', row, 'templateId').value;
+        var templateName = $copado('.jqx-grid').jqxGrid('getCell', row, 'templateName').value;
+
+        element.html(
+            '<a href="javascript:void();" onClick="dw.downloadRecordMatchingCSV(\'' +
+                stepId +
+                '_' +
+                templateName +
+                '_' +
+                templateId +
+                ',' +
+                dId +
+                '\');" >' +
+                value +
+                '</a>'
+        );
+        return element[0].outerHTML;
+    };
+
+    var sumSuccessAndFailRecords = (row, column, value, defaultHtml) => {
+        value =
+            $copado('.jqx-grid').jqxGrid('getCell', row, 'deployedRecords').value +
+            $copado('.jqx-grid').jqxGrid('getCell', row, 'failedRecords').value;
+
         var templateId = $copado('.jqx-grid').jqxGrid('getCell', row, 'templateId').value;
         var templateName = $copado('.jqx-grid').jqxGrid('getCell', row, 'templateName').value;
         var element = $copado(defaultHtml);
@@ -600,16 +677,7 @@ var targetDomain = '';
             sourceDomain +
             '&targetDomain=' +
             targetDomain;
-        element.html('<a href="#" onClick="window.open(\'' + resultPageUrl + '\');">View Results</a>');
-        return element[0].outerHTML;
-    };
-
-    var sumSuccessAndFailRecords = (row, column, value, defaultHtml) => {
-        value =
-            $copado('.jqx-grid').jqxGrid('getCell', row, 'deployedRecords').value +
-            $copado('.jqx-grid').jqxGrid('getCell', row, 'failedRecords').value;
-        var element = $copado(defaultHtml);
-        element.html(value);
+        element.html('<a href="javascript:void()" onClick="window.open(\'' + resultPageUrl + '\');">' + value + '</a>');
         return element[0].outerHTML;
     };
 
