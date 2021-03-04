@@ -4,7 +4,7 @@
         <processMetadataValues>
             <name>textJson</name>
             <value>
-                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;{![Case].CaseNumber} has been closed&quot;}</stringValue>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;{![Case].CaseNumber} has been closed. You can enjoy now. &quot;}</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -16,7 +16,7 @@
         <inputParameters>
             <name>text</name>
             <value>
-                <stringValue>{!myVariable_current.CaseNumber} has been closed</stringValue>
+                <stringValue>{!myVariable_current.CaseNumber} has been closed. You can enjoy now. </stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -29,7 +29,7 @@
             </value>
         </inputParameters>
     </actionCalls>
-    <apiVersion>51.0</apiVersion>
+    <apiVersion>50.0</apiVersion>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -82,7 +82,8 @@
             <label>Status - Closed</label>
         </rules>
     </decisions>
-    <interviewLabel>Case_status_change_flow-1_InterviewLabel</interviewLabel>
+    <description>A new version</description>
+    <interviewLabel>Case_status_change_flow-2_InterviewLabel</interviewLabel>
     <label>Case status change flow</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -110,7 +111,7 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <startElementReference>myDecision</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>
