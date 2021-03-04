@@ -9,12 +9,22 @@
         <value><!-- Step --></value>
     </caseValues>
     <fieldSets>
+        <label><!-- Deployment Steps --></label>
+        <name>copado__Deployment_Steps</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- ViewDeploymentColumns --></label>
         <name>copado__ViewDeploymentColumns</name>
     </fieldSets>
     <fields>
         <label><!-- Attachment Id --></label>
         <name>copado__Attachment_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automation that originated this deployment step. --></help>
+        <label><!-- Automated Behaviour --></label>
+        <name>copado__Automated_Behaviour__c</name>
+        <relationshipLabel><!-- Execution History --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Branch --></label>

@@ -94,7 +94,7 @@ MetadataGrid2.prototype._setSelectionState = function(selected, elts, calledFrom
         }
         e.s = selected;
         if (typeof showTip !== 'undefined' && showTip && selected && tipTypes.indexOf(e.t) < 0) {
-           showTip(e.t);
+            showTip(e.t, e.n);
            tipTypes.push(e.t);
         }
 

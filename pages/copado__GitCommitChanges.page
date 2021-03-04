@@ -602,7 +602,7 @@
                 });
 
                 function checkStatusRedirect(){
-                    var url = "{!urlfor('/apex/' + jsencode(namespace) + 'dxoperation?id=' + gitbackup.Org__c + '&act=gsos')}";
+                    var url = "{!URLFOR('/apex/' + JSENCODE(namespace) + 'dxoperation?id=' + gitbackup.Org__c + '&actionName=gsos')}";
                     var win = window.open(url);
                 }
 

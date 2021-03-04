@@ -1,5 +1,7 @@
-<apex:page docType="html-5.0" showHeader="true" sidebar="true" standardController="copado__Deployment_Task__c" extensions="copado.DeploymentTaskExtension,copado.Settings,copado.JsRemotingController" standardStylesheets="true" title="{!$Label.copado__view} {!$ObjectType.copado__Deployment_Task__c.Label}" lightningStylesheets="true">
+<apex:page docType="html-5.0" showHeader="true" sidebar="true" standardController="copado__Deployment_Task__c" extensions="copado.DeploymentTaskExtension,copado.Settings,copado.JsRemotingController"
+ standardStylesheets="true" title="{!$Label.copado__view} {!$ObjectType.copado__Deployment_Task__c.Label}" lightningStylesheets="true">
 	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en" style="height:100%;">
+
 	    <head>
 			<c:GAnalytics />
 			<apex:slds />
@@ -16,9 +18,11 @@
 				.slds-col{
 					padding-right: 20px;
 				}
+
 				.slds-section-container{
 					padding: 0 20px 0 20px;
 				}
+
 				.slds-form-element{
 					margin-bottom: 4px;
 				}
@@ -117,6 +121,7 @@
 				}
 			</script>
 	    </head>
+
 	    <body class="slds-scope" style="{!IF($User.UIThemeDisplayed == 'Theme4d','margin: 0 12px 0 12px; background-image: url(/_slds/images/themes/oneSalesforce/banner-brand-default.png?cache=210.2),linear-gradient(to top,rgba(32, 92, 159, 0), rgb(32, 92, 159));','')}">
 			<div class="copado-lightning-container">
 				<apex:form >
@@ -136,8 +141,9 @@
 										</span>
 									</div>
 									<div class="slds-media__body">
-										<p class="slds-text-heading--label slds-line-height--reset">{!$ObjectType.Deployment_Task__c.Label}</p>
-										<h1 class="slds-page-header__title slds-truncate slds-align-middle" ><apex:outputField value="{!copado__Deployment_Task__c.Name}"/>
+									<p class="slds-text-heading--label slds-line-height--reset">{!$ObjectType.copado__Deployment_Task__c.Label}</p>
+									<h1 class="slds-page-header__title slds-truncate slds-align-middle">
+										<apex:outputField value="{!copado__Deployment_Task__c.Name}" />
 										</h1>
 
 									</div>
@@ -147,10 +153,12 @@
 							<div class="slds-col slds-no-flex slds-grid slds-align-top ">
 								<div class="slds-button-group" role="group">
 									<apex:commandButton value="{!$Label.copado__edit}" action="{!edit}" styleClass="slds-button slds-button--neutral" />
-									<apex:outputLink rendered="{!copado__Deployment_Task__c.Id != null}" value="{!URLFOR($Action.copado__Deployment_Task__c.Clone,copado__Deployment_Task__c.Id)}" styleClass="slds-button slds-button--neutral">
+								<apex:outputLink rendered="{!copado__Deployment_Task__c.Id != null}" value="{!URLFOR($Action.copado__Deployment_Task__c.Clone,copado__Deployment_Task__c.Id)}"
+								 styleClass="slds-button slds-button--neutral">
 										<span class="slds-truncate" title="Menu Item One">{!$Label.copado__clone}</span>
 									</apex:outputLink>
-									<apex:commandButton value="{!$Label.copado__delete}" onclick="deleteActionJS(); return false;" styleClass="slds-button slds-button--neutral" />
+								<apex:commandButton value="{!$Label.copado__delete}" onclick="deleteActionJS(); return false;" styleClass="slds-button slds-button--neutral"
+								/>
 								</div>
 								<apex:actionFunction name="deleteActionAF" action="{!deleteAction}"/>
 								<script type="text/javascript">
@@ -316,7 +324,8 @@
 											</script>
 										</apex:outputPanel>
 										<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Delete MetaData'}">
-											<c:DeleteMetadataComponent orgId="{!ustry.copado__Org_Credential__c}" stepType="Delete Metadata" filtered="false" isEdit="false"/>
+										<c:DeleteMetadataComponent orgId="{!ustry.copado__Org_Credential__c}" stepType="Delete Metadata" filtered="false" isEdit="false"
+										/>
 											<script type="text/javascript">
 												metadataTask.init(_config,false,datasetup.isScalable);
 												datasetup.setPreviousData = function(){
@@ -324,6 +333,12 @@
 												}
 											</script>
 										</apex:outputPanel>
+									<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Salesforce Flow'}">
+										<c:SalesforceFlowComponent isEdit="false" />
+										<script type="text/javascript">
+											datasetup.setPreviousData = salesforceFlow.setPreviousDataView;
+										</script>
+									</apex:outputPanel>
 									</div>
 								</apex:outputPanel>
 							</div>
@@ -336,5 +351,6 @@
 				</apex:outputPanel>
 			</div>
 	    </body>
+
 	</html>
 </apex:page>

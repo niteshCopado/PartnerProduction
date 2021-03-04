@@ -1,17 +1,15 @@
-<apex:page standardController="copado__Snapshot_Difference__c"
-           extensions="copado.snapshotDifferenceExtension,copado.Settings,copado.JsRemotingController" id="thePage"
-           showHeader="{!$User.UIThemeDisplayed=='Theme3'}" standardStylesheets="true"
-           sidebar="{!$User.UIThemeDisplayed=='Theme3'}" applyHtmlTag="{!$User.UIThemeDisplayed=='Theme3'}"
-           applyBodyTag="false" docType="html-5.0" lightningStylesheets="true">
+<apex:page standardController="copado__Snapshot_Difference__c" extensions="copado.snapshotDifferenceExtension,copado.Settings,copado.JsRemotingController"
+    id="thePage" showHeader="{!$User.UIThemeDisplayed=='Theme3'}" standardStylesheets="true" sidebar="{!$User.UIThemeDisplayed=='Theme3'}"
+    applyHtmlTag="{!$User.UIThemeDisplayed=='Theme3'}" applyBodyTag="false" docType="html-5.0" lightningStylesheets="true">
     <apex:slds />
     <!-- rendered="{!$User.UIThemeDisplayed == 'Theme4d'}" -->
+
     <head>
         <title>Snapshot Differences {!copado__Snapshot_Difference__c.Name} | Copado</title>
         <c:GAnalytics />
         <c:WizardUtils />
-        <c:IncludeStaticsResourceComponent addJquery="true" addDVcss="true" addDLjs="true" addDVjs="true"
-                                           addWizardcss="true" addCometdjs="true" addJcometdjs="true" addJSON2js="true"
-                                           addJSzipjs="true"/>
+        <c:IncludeStaticsResourceComponent addJquery="true" addDVcss="true" addDLjs="true" addDVjs="true" addWizardcss="true" addCometdjs="true"
+            addJcometdjs="true" addJSON2js="true" addJSzipjs="true" />
         <c:IncludeJqxResourceComponent addjqxAlljs="true" addjqxBasecss="true"/>
         <c:ShowWebhook url="webhook/snapshotDiff" recordId="{!copado__Snapshot_Difference__c.Id}"/>
         <script type="text/javascript">
@@ -31,13 +29,23 @@
         <script type="text/javascript" src="{!URLFOR($Resource.snapshotDifferences) }"/>
         <style type="text/css">
             @keyframes flash {
-                from {background-color: #03a9ff;}
-                to {background-color: #f2f3f3;}
+                from {
+                    background-color: #03a9ff;
+                }
+                to {
+                    background-color: #f2f3f3;
+                }
             }
+
             @keyframes remove {
-                from {background-color: #f44274;}
-                to {background-color: #f2f3f3;}
+                from {
+                    background-color: #f44274;
+                }
+                to {
+                    background-color: #f2f3f3;
             }
+            }
+
             .helpText {
                 z-index:999999 !important;
             }
@@ -47,7 +55,12 @@
                 #sectionDiv h3{
                     display:initial;
                 }
-                body button:not(.slds-button), body .x-btn, body .btn, body .btnDisabled, body .btnCancel  {
+
+                body button:not(.slds-button),
+                body .x-btn,
+                body .btn,
+                body .btnDisabled,
+                body .btnCancel {
                     color: #333 !important;
                     margin: 1px !important;
                     padding: 2px 3px !important;
@@ -60,39 +73,74 @@
                     -webkit-border-radius: 3px !important;
                     border-radius: 3px !important;
                 }
-                body .x-btn button, body .btn, body .btnImportant, body .btnDisabled, body .btnCancel, body input.theOption, h1, h2, h3, h4, h5, h6 {
+
+                body .x-btn button,
+                body .btn,
+                body .btnImportant,
+                body .btnDisabled,
+                body .btnCancel,
+                body input.theOption,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
                     font-family: Arial,Helvetica,sans-serif !important;
                 }
-                .pbBody, .pbBody a, .pbBody td, .lbBody a, .lbBodyDescription, .list .headerRow .noRowsHeader {
+
+                .pbBody,
+                .pbBody a,
+                .pbBody td,
+                .lbBody a,
+                .lbBodyDescription,
+                .list .headerRow .noRowsHeader {
                     color: #000 !important;
                 }
-                body, td {
+
+                body,
+                td {
                     font-family: Arial,Helvetica,sans-serif !important;
                     color: #222;
                 }
-                .listRelatedObject .bPageBlock .pbHeader .btn, .listRelatedObject .bPageBlock .pbBottomButtons .btn, .apexp .bPageBlock .pbHeader .btn, .apexp .bPageBlock .pbBottomButtons .btn, div.buttons .btn, div.pbBottomButtons>.btn {
+
+                .listRelatedObject .bPageBlock .pbHeader .btn,
+                .listRelatedObject .bPageBlock .pbBottomButtons .btn,
+                .apexp .bPageBlock .pbHeader .btn,
+                .apexp .bPageBlock .pbBottomButtons .btn,
+                div.buttons .btn,
+                div.pbBottomButtons>.btn {
                     margin-left: 3px !important;
                     margin-right: 3px !important;
                 }
 
-                body input.btn, body input.btnDisabled, body input.btnCancel {
+                body input.btn,
+                body input.btnDisabled,
+                body input.btnCancel {
                     padding: 4px 3px !important;
                 }
+
                 body{
                     font-size: 75% !important;
                 }
-                .slds-scope body, .slds-scope:not(html) {
+
+                .slds-scope body,
+                .slds-scope:not(html) {
                     font-size: .7500rem !important;
                 }
+
                 .slds-scope{
                     line-height:1.3 !important;
                 }
+
                 .slds-scope img.helpOrb{
                     height:15px !important;
                 }
+
                 .slds-scope .slds-modal__container {
                     max-width: 25rem !important;
                 }
+
                 #opText{
                     margin-left: 5%;
                     margin-right: 5%;
@@ -150,16 +198,17 @@
         </script>
         <apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme4d'}">
             <style>
-                @media (min-width: 48em)
-                .slds-scope .slds-modal__container {
+                @media (min-width: 48em) .slds-scope .slds-modal__container {
                     margin: 0 auto;
                     width: 50%;
                     max-width: 30rem;
                     min-width: 20rem;
                 }
+
                 .slds-col{
                     margin-left:15%;
                 }
+
                 #opText{
                     margin-top: 1%;
                 }
@@ -469,12 +518,17 @@
                     }
                 },
                 getIndexFileAttachment: function(cb){
-                    var attachment = dw.u.getDecodedAttach(copadoApp.data.Id,'index.json');
+                    let content = dw.u.getDecodedFileContent(copadoApp.data.Id, 'index.json');
+                    if (content != null) {
+                        cb && cb($copado.parseJSON(content));
+                    } else {
+                        let attachment = dw.u.getDecodedAttach(copadoApp.data.Id, 'index.json');
                     if(attachment!=null){
                         cb && cb($copado.parseJSON(attachment.Body));
                     }else{
                         console.warn("no attach?");
                         cb && cb([]);
+                    }
                     }
                 },
                 /**
@@ -536,13 +590,21 @@
                  * @return {[type]}            [description]
                  */
                 getZippedFileContentByName: function(fileName,attachName,parentId){
-                    console.log('reading zip body: ' + attachName);
-                    var att = dw.u.getAttach(parentId,attachName);
-
-                    if(!att.length)return '';
+                var zip;
+                let content = dw.u.getFileContent(copadoApp.data.Id, attachName);
+                if (content != null) {
+                    zip = new JSZip(content, { base64: true });
+                } else {
+                    let attachment = dw.u.getDecodedAttach(copadoApp.data.Id, attachName);
+                    if (attachment != null) {
+                        zip = new JSZip(attachment.Body, { base64: true });
+                    } else {
+                        console.warn("no attach?");
+                        cb && cb([]);
+                    }
+                }
                     console.log('prepare ZIP file: ' + attachName,fileName);
-                    var zip = new JSZip(att[0].Body,{base64:true});
-                    return zip.file(fileName).asText()
+                return zip.file(fileName).asText();
                 },
 
                 /**
@@ -683,15 +745,15 @@
             };
         </script>
     </head>
+
     <body>
     <div class="copado-lightning-VF">
-        <apex:sectionHeader id="sectionHeader" title="{!$ObjectType.copado__Snapshot_Difference__c.Label}"
-                            subtitle="{!IF(ISBLANK(copado__Snapshot_Difference__c.Name),$Label.copado__new+' '+$ObjectType.copado__Snapshot_Difference__c.Label, copado__Snapshot_Difference__c.Name)}"
+            <apex:sectionHeader id="sectionHeader" title="{!$ObjectType.copado__Snapshot_Difference__c.Label}" subtitle="{!IF(ISBLANK(copado__Snapshot_Difference__c.Name),$Label.copado__new+' '+$ObjectType.copado__Snapshot_Difference__c.Label, copado__Snapshot_Difference__c.Name)}"
                             rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"/>
         <apex:pageMessages id="pmessage" rendered="{!$User.UIThemeDisplayed != 'Theme4d'}"/>
         <div id="usSelectPanel" class="slds-scope">
-            <section role="dialog" tabindex="-1" id="usModal" aria-labelledby="modal-heading-01"
-                     aria-describedby="modal-content-id-1" class="slds-modal slds-modal_medium">
+                <section role="dialog" tabindex="-1" id="usModal" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1"
+                    class="slds-modal slds-modal_medium">
                 <div class="slds-modal__container" style="width: 60% !important;">
                     <apex:form >
                         <apex:outputPanel id="errPnl">
@@ -707,8 +769,7 @@
                             </script>
                         </apex:outputPanel>
                         <header class="slds-modal__header">
-                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-                                    title="{!$Label.CLOSE}" onclick="closeUsModal();return false;">
+                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="{!$Label.CLOSE}" onclick="closeUsModal();return false;">
                                 <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS,'/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
                                 </svg>
@@ -720,19 +781,17 @@
                                 </h2>
                             </apex:outputPanel>
                         </header>
-                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1"
-                             s1tyle="height: 99%;">
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" s1tyle="height: 99%;">
                             <div id="window" style="width:100%">
                                 <div class="slds-grid">
                                     <div class="slds-col" style="display:inline-flex;">
-                                        <apex:outputPanel rendered="{!snapshot.copado__Source_Org_Credential__c != null}"
-                                                          layout="none">
+                                            <apex:outputPanel rendered="{!snapshot.copado__Source_Org_Credential__c != null}" layout="none">
                                             <outputText id="opText" value="">{!$Label.copado__please_select_a_user_story}</outputText>
                                             <apex:inputField value="{!us4Lookup.copado__User_Story__c}"/>
                                             <apex:outputPanel rendered="{!$User.UIThemeDisplayed != 'Theme4d'}">
                                             <span class="helpButton" id="asd.dsa-_help">
-                                                 <img src="/img/s.gif" alt="" class="helpOrb" style="margin-top: 3px;"
-                                                      title=""/><script>sfdcPage.setHelp('asd.dsa', 'The Environment of the selected User Story must be same as the source Environment of the Snapshot Difference.');</script>
+                                                        <img src="/img/s.gif" alt="" class="helpOrb" style="margin-top: 3px;" title="" />
+                                                        <script>sfdcPage.setHelp('asd.dsa', 'The Environment of the selected User Story must be same as the source Environment of the Snapshot Difference.');</script>
                                             </span>
                                             </apex:outputPanel>
                                         </apex:outputPanel>
@@ -767,8 +826,7 @@
                     <div class="slds-col slds-has-flexi-truncate">
                         <div class="slds-media">
                             <div class="slds-media__figure">
-                              <span class="slds-icon_container slds-icon-custom-custom87"
-                                    title="Description of icon when needed">
+                                    <span class="slds-icon_container slds-icon-custom-custom87" title="Description of icon when needed">
                                 <svg class="slds-icon" aria-hidden="true">
                                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS,'/assets/icons/custom-sprite/svg/symbols.svg#custom87')}"></use>
                                 </svg>
@@ -776,8 +834,9 @@
                             </div>
                             <div class="slds-media__body">
                                 <p class="slds-text-heading--label slds-line-height--reset">{!$ObjectType.copado__Snapshot_Difference__c.Label}</p>
-                                <h1 class="slds-page-header__title slds-truncate slds-align-middle"
-                                    title="{!$ObjectType.copado__Snapshot_Difference__c.Label}">{!IF(ISBLANK(copado__Snapshot_Difference__c.Name),$Label.copado__new+' '+$ObjectType.copado__Snapshot_Difference__c.Label, copado__Snapshot_Difference__c.Name)}</h1>
+                                    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="{!$ObjectType.copado__Snapshot_Difference__c.Label}">{!IF(ISBLANK(Snapshot_Difference__c.Name),$Label.NEW+' '+$ObjectType.Snapshot_Difference__c.Label,
+                                        Snapshot_Difference__c.Name)}
+                                    </h1>
                             </div>
                         </div>
                     </div>
@@ -792,11 +851,9 @@
                 <apex:outputPanel layout="block" style="background: white;" id="headerFields">
                     <ul class="slds-grid slds-page-header__detail-row">
                         <apex:variable value="{!1}" var="rowNum"/>
-                        <apex:repeat value="{!$ObjectType.copado__Snapshot_Difference__c.FieldSets.copado__Copado_Header_Fields}"
-                                     var="f">
+                            <apex:repeat value="{!$ObjectType.copado__Snapshot_Difference__c.FieldSets.copado__Copado_Header_Fields}" var="f">
                             <apex:outputPanel layout="block" rendered="{!rowNum < 8}">
-                                <li class="slds-page-header__detail-block slds-truncate"
-                                    style="padding-right: 2em; padding-left: 2em;">
+                                    <li class="slds-page-header__detail-block slds-truncate" style="padding-right: 2em; padding-left: 2em;">
                                     <c:LightningReadyOutputFields dividerBottom="false" SObject="{!copado__Snapshot_Difference__c}" Field="{!f}" />
                                 </li>
                             </apex:outputPanel>
@@ -811,13 +868,13 @@
                 <c:ScreenLocker msg="{!$Label.copado__loading}"/>
             </apex:form>
 
-            <apex:form id="theForm" rendered="{!AND(showOptions,!showError)}" styleClass="copado-lightning-container"
-                       style="padding-top:12px;">
+                <apex:form id="theForm" rendered="{!AND(showOptions,!showError)}" styleClass="copado-lightning-container" style="padding-top:12px;">
 
                 <apex:pageBlock id="pb_edit" rendered="{!isEdit}" mode="edit" title="{!$Label.copado__details}">
                     <apex:pageblockButtons rendered="{!AND(isSnapshotEnabled, $Setup.copado__Copado_License__c.copado__Enable_Copado__c)}">
                         <apex:commandButton value="{!$Label.site.save}" action="{!save}" id="btnSave" />
-                        <apex:commandButton value="{!$Label.site.cancel}" action="{!cancel}" immediate="true" html-formnovalidate="formnovalidate" id="btnCancel" />
+                            <apex:commandButton value="{!$Label.site.cancel}" action="{!cancel}" immediate="true" html-formnovalidate="formnovalidate"
+                                id="btnCancel" />
                     </apex:pageblockButtons>
                     <apex:pageBlockSection id="pbes_pb1" columns="2">
                         <apex:inputField id="if_Name" value="{!copado__Snapshot_Difference__c.Name}" required="true"/>
@@ -831,7 +888,9 @@
                                     <apex:actionSupport event="onchange" action="{!doRerender}" reRender="theForm" status="sourceAction" />
                                 </apex:inputField>
                                 <apex:actionStatus id="sourceAction">
-                                    <apex:facet name="start"><img src="/img/loading.gif"/></apex:facet>
+                                        <apex:facet name="start">
+                                            <img src="/img/loading.gif" />
+                                        </apex:facet>
                                 </apex:actionStatus>
                             </apex:outputPanel>
                         </apex:pageBlockSectionItem>
@@ -842,31 +901,45 @@
                                     <apex:actionSupport event="onchange" action="{!doRerender}" reRender="theForm" status="destinationAction" />
                                 </apex:inputField>
                                 <apex:actionStatus id="destinationAction">
-                                    <apex:facet name="start"><img src="/img/loading.gif"/></apex:facet>
+                                        <apex:facet name="start">
+                                            <img src="/img/loading.gif" />
+                                        </apex:facet>
                                 </apex:actionStatus>
                             </apex:outputPanel>
                         </apex:pageBlockSectionItem>
-                        <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Git Commit'}" id="sourceCommit" value="{!copado__Snapshot_Difference__c.copado__Source_Git_Commit__c}" />
-                        <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}" id="sourceOrg" value="{!copado__Snapshot_Difference__c.copado__Source_Org_Credential__c}" />
+                            <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Git Commit'}" id="sourceCommit" value="{!copado__Snapshot_Difference__c.copado__Source_Git_Commit__c}"
+                            />
+                            <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}" id="sourceOrg" value="{!copado__Snapshot_Difference__c.copado__Source_Org_Credential__c}"
+                            />
                         <apex:outputPanel rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c=''}" />
-                        <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Git Commit'}" id="destinationCommit" value="{!copado__Snapshot_Difference__c.copado__Destination_Git_Commit__c}" />
-                        <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Salesforce Org'}" id="destinationOrg" value="{!copado__Snapshot_Difference__c.copado__Destination_Org_Credential__c}" />
+                            <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Git Commit'}" id="destinationCommit" value="{!copado__Snapshot_Difference__c.copado__Destination_Git_Commit__c}"
+                            />
+                            <apex:inputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Salesforce Org'}" id="destinationOrg" value="{!copado__Snapshot_Difference__c.copado__Destination_Org_Credential__c}"
+                            />
                         <apex:outputPanel rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c=''}" />
-                        <apex:inputField id="if_partialSelection" value="{!copado__Snapshot_Difference__c.copado__Partial_Selection__c}" rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}" />
+                            <apex:inputField id="if_partialSelection" value="{!copado__Snapshot_Difference__c.copado__Partial_Selection__c}" rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}"
+                            />
                     </apex:pageBlockSection>
                 </apex:pageBlock>
 
                 <apex:pageBlock rendered="{!NOT(isEdit)}" title="">
                     <apex:pageblockButtons rendered="{!isSnapshotEnabled}">
-                        <apex:commandButton id="btnEdit" value="{!$Label.site.edit}" action="{!edit}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
-                        <apex:commandButton id="btnDelete" value="{!$Label.copado__delete}" action="{!delete}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
-                        <apex:commandButton value="{!$Label.copado__share}" action="{!URLFOR($Action.Org__c.Share,Snapshot_Difference__c.Id)}" rendered="{!isShareable}" />
-                        <apex:commandButton value="{!$Label.copado__calculate_differences}" onclick="copadoApp.runDeepDiff();return false;" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
+                            <apex:commandButton id="btnEdit" value="{!$Label.site.edit}" action="{!edit}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}"
+                            />
+                            <apex:commandButton id="btnDelete" value="{!$Label.copado__delete}" action="{!delete}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}"
+                            />
+                            <apex:commandButton value="{!$Label.copado__share}" action="{!URLFOR($Action.Org__c.Share,Snapshot_Difference__c.Id)}" rendered="{!isShareable}"
+                            />
+                            <apex:commandButton value="{!$Label.copado__calculate_differences}" onclick="copadoApp.runDeepDiff();return false;" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}"
+                            />
                         <apex:outputPanel layout="none">
-                            <input id="btncommitChngs" type="button" class="btn" value="{!$Label.copado__commit_now}" onclick="copadoApp.prepareSelectedstoCommit();return false;" />
+                                <input id="btncommitChngs" type="button" class="btn" value="{!$Label.copado__commit_now}" onclick="copadoApp.prepareSelectedstoCommit();return false;"
+                                />
                         </apex:outputPanel>
-                        <apex:commandButton id="btnCreateDeployment" value="{!$Label.copado__create_deployment}" styleClass="js-createDeployment" disabled="{!copado__Snapshot_Difference__c.copado__Destination_Option__c=''}" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
-                        <apex:commandButton id="btnShowHookUrl" value="{!$Label.copado__show_hook_url}" onclick="showWebhook(); return false;" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
+                            <apex:commandButton id="btnCreateDeployment" value="{!$Label.copado__create_deployment}" styleClass="js-createDeployment" disabled="{!copado__Snapshot_Difference__c.copado__Destination_Option__c=''}"
+                                rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" />
+                            <apex:commandButton id="btnShowHookUrl" value="{!$Label.copado__show_hook_url}" onclick="showWebhook(); return false;" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}"
+                            />
                     </apex:pageblockButtons>
 
                     <apex:pageBlockSection id="pbds_pb1" columns="2">
@@ -875,11 +948,15 @@
                     </apex:pageBlockSection>
 
                     <apex:pageBlockSection id="pbds_pb2" columns="2">
-                        <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Git Commit'}" id="of_dsourceCommit" value="{!copado__Snapshot_Difference__c.copado__Source_Git_Commit__c}" />
-                        <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}" id="of_dsourceOrg" value="{!copado__Snapshot_Difference__c.copado__Source_Org_Credential__c}" />
+                            <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Git Commit'}" id="of_dsourceCommit" value="{!copado__Snapshot_Difference__c.copado__Source_Git_Commit__c}"
+                            />
+                            <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c='Salesforce Org'}" id="of_dsourceOrg" value="{!copado__Snapshot_Difference__c.copado__Source_Org_Credential__c}"
+                            />
                         <apex:outputPanel rendered="{!copado__Snapshot_Difference__c.copado__Source_Option__c=''}" />
-                        <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Git Commit'}" id="of_ddestinationCommit" value="{!copado__Snapshot_Difference__c.copado__Destination_Git_Commit__c}" />
-                        <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Salesforce Org'}" id="of_ddestinationOrg" value="{!copado__Snapshot_Difference__c.copado__Destination_Org_Credential__c}" />
+                            <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Git Commit'}" id="of_ddestinationCommit" value="{!copado__Snapshot_Difference__c.copado__Destination_Git_Commit__c}"
+                            />
+                            <apex:outputField rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c='Salesforce Org'}" id="of_ddestinationOrg" value="{!copado__Snapshot_Difference__c.copado__Destination_Org_Credential__c}"
+                            />
                         <apex:outputPanel rendered="{!copado__Snapshot_Difference__c.copado__Destination_Option__c=''}" />
                         <apex:outputField id="of_partialSelection" value="{!copado__Snapshot_Difference__c.copado__Partial_Selection__c}" />
                         <apex:outputField id="of_Format" value="{!copado__Snapshot_Difference__c.copado__Format__c}"/>
@@ -894,8 +971,10 @@
                                     -->
                                 <apex:outputPanel layout="block" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}" style="text-align: center;">
                                     <center>
-                                        <input id="btnSelectionsSave" class="btn" onclick="snapshotDifferences.save();return false;" type="button" value="{!$Label.site.save}" style="display:none;" />
-                                        <input id="btnSelectionsCancel" class="btn" onclick="snapshotDifferences.cancel();return false;" type="button" value="{!$Label.site.cancel}" style="display:none;" />
+                                            <input id="btnSelectionsSave" class="btn" onclick="snapshotDifferences.save();return false;" type="button" value="{!$Label.site.save}"
+                                                style="display:none;" />
+                                            <input id="btnSelectionsCancel" class="btn" onclick="snapshotDifferences.cancel();return false;" type="button" value="{!$Label.site.cancel}"
+                                                style="display:none;" />
                                     </center>
                                 </apex:outputPanel>
 
@@ -904,28 +983,33 @@
                                 </div>
                             </div>
                             <apex:outputPanel layout="none">
-                                <div id="metadataGrid2"
-                                     style="{!IF($User.UIThemeDisplayed == 'Theme4d','width:99%;','')}">
+                                    <div id="metadataGrid2" style="{!IF($User.UIThemeDisplayed == 'Theme4d','width:99%;','')}">
                                     <div class='mg2_tabs'>
                                         <ul style="margin-left: 20px;">
                                             <li>All Metadata</li>
                                             <li>Selected Metadata</li>
                                         </ul>
 
-                                        <div><!-- div required for jqxTabs -->
+                                            <div>
+                                                <!-- div required for jqxTabs -->
                                             <div class="mg2_scaleFilterFrame" style="padding: 5px;">
                                                 <label class="mg2_mtFilter">Metadata Type Filter</label>&nbsp;
-                                                <apex:commandLink value="({!$Label.copado__refresh})"
-                                                                  onclick="return metadataGrid2.refreshMetadataTypes();"
-                                                                  rerender="opDummy" id="removeMTCache"/>
+                                                    <apex:commandLink value="({!$Label.copado__refresh})" onclick="return metadataGrid2.refreshMetadataTypes();" rerender="opDummy" id="removeMTCache"
+                                                    />
                                                 <div class="mg2_scaleFilter" style="margin-bottom: 10px;"></div>
                                             </div>
                                         </div>
-                                        <div><!-- empty div, needed as content for the two tabs --></div>
+                                            <div>
+                                                <!-- empty div, needed as content for the two tabs -->
+                                            </div>
                                     </div>
                                     <div class="mg2_jqxgrid">
-                                        <center><img src="/img/loading.gif"/><i><span
-                                                id="retry-label">{!$Label.copado__loading}</span></i></center>
+                                            <center>
+                                                <img src="/img/loading.gif" />
+                                                <i>
+                                                    <span id="retry-label">{!$Label.copado__loading}</span>
+                                                </i>
+                                            </center>
                                     </div>
                                 </div>
                             </apex:outputPanel>
@@ -940,7 +1024,9 @@
                                 </center>
                             </apex:outputPanel>
                             <div id="fileGrid" style="padding-top:8px;padding-bottom:8px;">
-                                <center><i class="empty-msg">{!$Label.copado__loading}</i></center>
+                                    <center>
+                                        <i class="empty-msg">{!$Label.copado__loading}</i>
+                                    </center>
                             </div>
                             <apex:outputPanel layout="block" rendered="{!$Setup.copado__Copado_License__c.copado__Enable_Copado__c}">
                                 <center>

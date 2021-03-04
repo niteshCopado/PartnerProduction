@@ -1,8 +1,7 @@
 function setWithoutRebinding(list, newList) {
     list.splice(0, list.length); // clear the array, without re-binding it.
     console.debug('setWithoutRebinding:::newList',Array.isArray(newList));
-    while(newList.length)
-        Array.prototype.push.apply(list, newList.splice(0,10000));
+    while (newList.length) Array.prototype.push.apply(list, newList.splice(0, 10000));
 }
 var gitCommitCommons = {};
 var operationTypeAttachmentName;
@@ -15,14 +14,14 @@ var operationTypeAttachmentName;
             app.conf.ns = app.conf.ns || '';
             //set variant of the commit mode
             app.setCommitVariant();
-            if(app.conf.scalableGrid == "true"){
+        if (app.conf.scalableGrid == 'true') {
                 app.conf.isScalable = app.conf.scalableGrid;
             }
             //set extension of the commit mode
             app.setCommitExtension();
             //prepare metadataGrid2 render it in the page, load data and assign to object prop
             app.prepareGrid(true);
-            gitCommitCommons.conf.elts.gitCommitMainForm = document.querySelector("[id$=gitcommit_header_form]");
+        gitCommitCommons.conf.elts.gitCommitMainForm = document.querySelector('[id$=gitcommit_header_form]');
             app.conf.elts.commitButton = $copado('#copadoCommit');
             app.conf.elts.advanceButton = $copado('#copadoAdvance');
             var preselectionId = app.returnParameter('MetadataPreselectionId');
@@ -37,13 +36,13 @@ var operationTypeAttachmentName;
                 app.grid = new MetadataGrid2(app.conf);
             }
             app.grid.render(function(){
-                if(app.conf.scalableGrid == "true"){
+            if (app.conf.scalableGrid == 'true') {
                     app.grid.loadMetaDataTypes();
                 }
             });
             app.grid.loadMetaData();
             app.datasource = app.grid.datasource;
-        }
+    };
         app.setCommitVariant = function(){
             if(app.conf.data.commitType === 'main') {
                 app.variant = gitCommitMain;
@@ -58,23 +57,55 @@ var operationTypeAttachmentName;
                 app.extension = gitCommitVlocity;
             }
         };
-        app.returnParameter = (function(param){
+    app.returnParameter = function (param) {
             var url_string = window.location.href;
             var url = new URL(url_string);
             var pValue = url.searchParams.get(param);
             return pValue;
-        });
+    };
 
         app.getRecommitSelection = function(){
             app.userStoryMD = app.userStoryMD || [];
             if(!app.userStoryMD || (app.userStoryMD && app.userStoryMD.length == 0)) {
+            var allMetadataItems = [];
                 var gitMetadataAttachment = dw.u.getAttach(app.conf.data.userStoryId,'Git MetaData');
-                var savedItems = Base64.decode(gitMetadataAttachment[0].Body);
-                setWithoutRebinding(app.userStoryMD, JSON.parse(savedItems));
+            var gitMetadataItems = Base64.decode(gitMetadataAttachment[0].Body);
+            allMetadataItems.push(...JSON.parse(gitMetadataItems));
+
+            var commitedMetadataItems = getCommitedMetadata(app.conf.data.userStoryId);
+            allMetadataItems.push(...commitedMetadataItems);
+            var reCommitItems = processRetrieveOnly(allMetadataItems);
+
+            setWithoutRebinding(app.userStoryMD, reCommitItems);
             }
             app.grid.reloadSelectionsJSON(app.userStoryMD,1);
             app.grid._reapplyFilters(1);
         };
+    getCommitedMetadata = function (usId) {
+        var namespace = app.conf.ns;
+        var commitedMetadataItems = [];
+        var sfQquery = `SELECT Id, Body FROM Attachment WHERE Name = 'Metadata' AND ParentId IN (SELECT ${namespace}Snapshot_Commit__c FROM ${namespace}User_Story_Commit__c WHERE ${namespace}User_Story__r.Id = '${usId}' AND ${namespace}Snapshot_Commit__r.${namespace}Status__c = 'Complete') ORDER BY CreatedDate DESC`,
+            result = sforce.connection.query(sfQquery),
+            records = result.getArray('records');
+        for (var recordItem of records) {
+            commitedMetadataItems.push(Base64.decode(recordItem.Body));
+        }
+        return JSON.parse(commitedMetadataItems);
+    };
+    processRetrieveOnly = function (metadataItems) {
+        var gitCommitMetadataItems = new Map();
+        for (var metadata of metadataItems) {
+            var key = metadata.t + '.' + metadata.n;
+            if (!gitCommitMetadataItems.has(key)) {
+                gitCommitMetadataItems.set(key, metadata);
+            } else {
+                if (!metadata.r) {
+                    gitCommitMetadataItems.get(key).r = false;
+                }
+            }
+        }
+        return Array.from(gitCommitMetadataItems.values());
+    };
         app._getPreSelection = function(attachmentId) {
             if(attachmentId) {
                 app.userStoryMD = app.userStoryMD || [];
@@ -86,10 +117,10 @@ var operationTypeAttachmentName;
                     app.grid.reloadSelectionsJSON(app.userStoryMD,1);
                     app.grid._reapplyFilters(1);
                 }else{
-                    alert("Could not load selections from other User Story commits.");
-                }
+                alert('Could not load selections from other User Story commits.');
             }
         }
+    };
         app.previous;
         app.changeOperation = function(gitOperationType){
             app.conf.data.type = gitOperationType;
@@ -110,17 +141,31 @@ var operationTypeAttachmentName;
             var gridMode = operationDetails.editGrid ? 'gitCommitEditable' : 'gitCommit';
             app.updateConfigData(app.conf,'gridMode', gridMode);
 
-            if(currentMode !== gridMode || operationDetails.reloadGridData || (app.previous && app.previous.length > 0) || (operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0)){
+        if (
+            currentMode !== gridMode ||
+            operationDetails.reloadGridData ||
+            (app.previous && app.previous.length > 0) ||
+            (operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0)
+        ) {
                 app.resetGrid();
             }
 
-            if(operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0 || (!operationDetails.gridMetadataTypes && gitOperationType != 'Recommit Files')){
+        if (
+            (operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0) ||
+            (!operationDetails.gridMetadataTypes && gitOperationType != 'Recommit Files')
+        ) {
                 app.setGridFiltersByCSV(operationDetails.gridMetadataTypes);
             }
             app.previous = operationDetails.gridMetadataTypes;
             operationDetails.showUserStorySelections && app.getRecommitSelection();
-            if(app.conf.scalableGrid == "true"){
-                app.grid.loadMetaDataTypes(undefined,undefined,(operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0) ? operationDetails.gridMetadataTypes.split(',') : undefined);
+        if (app.conf.scalableGrid == 'true') {
+            app.grid.loadMetaDataTypes(
+                undefined,
+                undefined,
+                operationDetails.gridMetadataTypes && operationDetails.gridMetadataTypes.length > 0
+                    ? operationDetails.gridMetadataTypes.split(',')
+                    : undefined
+            );
             }
         };
         // Filter Grid given CSV
@@ -167,9 +212,17 @@ var operationTypeAttachmentName;
 
             // Attachment Name
             var attachmentName = operationTypeAttachmentName || 'MetaData';
-            app.conf.data.orgCommitId && coGridHelper.saveSelected(app.conf.data.orgCommitId , attachmentName, null, true, function(){
+        app.conf.data.orgCommitId &&
+            coGridHelper.saveSelected(
+                app.conf.data.orgCommitId,
+                attachmentName,
+                null,
+                true,
+                function () {
                 app.redirectToOperation(app.conf.data.orgCommitId);
-            },sel);
+                },
+                sel
+            );
         };
         app.redirectToOperation = function(commitId){
             if(goToWaitingForPage && commitId) {
@@ -181,7 +234,7 @@ var operationTypeAttachmentName;
                 unlockScreen();
                 return;
             }
-        }
+    };
 
         /**
          * Update the config values from outside the closure. These values are different from the init values if the user changed the Git Operation in the UI.
@@ -197,7 +250,7 @@ var operationTypeAttachmentName;
          * @param  {[type]} orgCommitId       [description] id of git commit record
          */
         app.updateConfigData = function(node, prop, value, callback){
-            if("undefined" === typeof(node[prop])) {
+        if ('undefined' === typeof node[prop]) {
                 console.error('Property not found in git commit configuration: ',prop);
                 return;
             } else {
@@ -205,7 +258,7 @@ var operationTypeAttachmentName;
             }
 
             if(callback) callback();
-        }
+    };
         /**
         * Refresh metadata cache of subjected org credential
         * @see app.config.data.orgId
@@ -256,20 +309,13 @@ var operationTypeAttachmentName;
             app.variant.startCommit(function(message,orgId,snapshotId,operationName){
                 deleteUSMetadata();
                 var core = app.conf.ns ? window[app.conf.ns.split('__')[0]] : window;
-                (core).GitCommit_HeaderController.createGitOrgCommit(
-                    message,
-                    orgId,
-                    snapshotId,
-                    operationName,
-                    function( result, event ) {
-                        if(result && event.status)
-                        app.doCommit(result);
-                    }
-                );
+            core.GitCommit_HeaderController.createGitOrgCommit(message, orgId, snapshotId, operationName, function (result, event) {
+                if (result && event.status) app.doCommit(result);
+            });
             });
         };
         app.loadSourceStatus = function(isDestructive) {
-            var att = dw.u.getDecodedAttach(app.conf.data.orgId,"SourceStatus");
+        var att = dw.u.getDecodedAttach(app.conf.data.orgId, 'SourceStatus');
             if(att){
                 var body = att.Body;
                 try{
@@ -280,17 +326,35 @@ var operationTypeAttachmentName;
 
                     for(var i = 0; i < actData.length; i++){
                         for(var j = 0; j < metadataRecords.length; j++){
-                            if(!isDestructive && actData[i].n == metadataRecords[j].n && actData[i].t == metadataRecords[j].t && (metadataRecords[j].st.includes("Remote Add") || (metadataRecords[j].st.includes("Remote Changed")))  ){
+                        if (
+                            !isDestructive &&
+                            actData[i].n == metadataRecords[j].n &&
+                            actData[i].t == metadataRecords[j].t &&
+                            (metadataRecords[j].st.includes('Remote Add') || metadataRecords[j].st.includes('Remote Changed'))
+                        ) {
                                 actData[i].s = true;
-                                if(!(actSelected.some( item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n ))) actSelected.push(actData[i]);
-                            }else if(isDestructive && actData[i].n == metadataRecords[j].n && actData[i].t == metadataRecords[j].t && (metadataRecords[j].st.includes("Remote Deleted"))){
+                            if (!(actSelected.some(item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n)))
+                                actSelected.push(actData[i]);
+                        } else if (
+                            isDestructive &&
+                            actData[i].n == metadataRecords[j].n &&
+                            actData[i].t == metadataRecords[j].t &&
+                            metadataRecords[j].st.includes('Remote Deleted')
+                        ) {
                                 actData[i].s = true;
-                                if(!(actSelected.some( item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n ))) actSelected.push(actData[i]);
-                            }else if(isDestructive && (metadataRecords[j].st.includes("Remote Deleted") && !toDelSet.has(metadataRecords[j]))){
+                            if (!(actSelected.some(item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n)))
+                                actSelected.push(actData[i]);
+                        } else if (isDestructive && metadataRecords[j].st.includes('Remote Deleted') && !toDelSet.has(metadataRecords[j])) {
                                 //Item is not found in the Metadata Selections but still show in Source Status, auto select
                                 toDelSet.add(metadataRecords[j]);
                                 metadataRecords[j].s = true;
-                                if(!(actSelected.some( item => item['t'] === metadataRecords[j].t) && actSelected.some(item => item['n'] === metadataRecords[j].n ))) actSelected.push(metadataRecords[j]);
+                            if (
+                                !(
+                                    actSelected.some(item => item['t'] === metadataRecords[j].t) &&
+                                    actSelected.some(item => item['n'] === metadataRecords[j].n)
+                                )
+                            )
+                                actSelected.push(metadataRecords[j]);
                             }
                         }
                     }
@@ -308,5 +372,4 @@ var operationTypeAttachmentName;
         app.getVlocityDependencies = function() {
             app.extension.getVlocityDependencies();
         };
-    }
-)(gitCommitCommons)
+})(gitCommitCommons);
