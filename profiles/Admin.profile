@@ -1380,7 +1380,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>BatchableUpdateUserPermissionSet</apexClass>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>SBQQ__JSONUtils</apexClass>
