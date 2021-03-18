@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Active__c</members>
-        <members>Contact.Level__c</members>
+        <members>Opportunity.OrderNumber__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>Account.CustomerPriority__c</members>
-        <members>Account.Longitude__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>*F5 - PRODUCTION ADMIN</members>
+        <members>Admin</members>
         <name>Profile</name>
     </types>
     <version>51.0</version>
