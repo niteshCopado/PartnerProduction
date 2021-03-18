@@ -5,6 +5,10 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Account.CustomerPriority__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>*F5 - PRODUCTION ADMIN</members>
         <name>Profile</name>
     </types>
