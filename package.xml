@@ -6,6 +6,7 @@
     </types>
     <types>
         <members>Account.CustomerPriority__c</members>
+        <members>Account.Longitude__c</members>
         <name>CustomField</name>
     </types>
     <types>
