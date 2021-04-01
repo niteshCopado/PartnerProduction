@@ -18,6 +18,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- Only user stories that meet this criteria will be eligible to be automatically back promoted. --></help>
+        <label><!-- Back-Promotion Criteria --></label>
+        <name>copado__Back_Promotion_Criteria__c</name>
+    </fields>
+    <fields>
         <help><!-- The schedule for back promotions (if they are scheduled) --></help>
         <label><!-- Back-Promotion Schedule --></label>
         <name>copado__Back_Promotion_Schedule__c</name>
@@ -33,6 +38,14 @@
         <name>copado__Description__c</name>
     </fields>
     <fields>
+        <label><!-- Execute back-promotions in parallel --></label>
+        <name>copado__Execute_back_promotions_in_parallel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Execute promotions in parallel --></label>
+        <name>copado__Execute_promotions_in_parallel__c</name>
+    </fields>
+    <fields>
         <help><!-- Set to 1 to deploy each story individually. Batching deployments speeds up the process but causes all stories in a batch to succeed or fail together. This can delay the deployment of some stories and make it harder to identify the cause of errors. --></help>
         <label><!-- Scheduled Back-Promotion US Group Size --></label>
         <name>copado__Max_Scheduled_Back_Promotion_Batch_Size__c</name>
@@ -46,6 +59,11 @@
         <help><!-- How should user stories be deployed from lower (dev/test) environments to higher environments (test/prod) --></help>
         <label><!-- Promotion Execution --></label>
         <name>copado__Promotion_Behavior__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only user stories that meet this criteria will be eligible to be automatically promoted. --></help>
+        <label><!-- Promotion Criteria --></label>
+        <name>copado__Promotion_Criteria__c</name>
     </fields>
     <fields>
         <help><!-- The schedule for deployments (if they are scheduled) --></help>

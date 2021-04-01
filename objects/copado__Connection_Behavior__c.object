@@ -190,6 +190,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Back_Promotion_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Only user stories that meet this criteria will be eligible to be automatically back promoted.</inlineHelpText>
+        <label>Back-Promotion Criteria</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>copado__Back_Promotion_Schedule__c</fullName>
         <deprecated>false</deprecated>
         <description>The schedule for back promotions (if they are scheduled)</description>
@@ -228,6 +239,26 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>copado__Execute_back_promotions_in_parallel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Execute back-promotions in parallel</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Execute_promotions_in_parallel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Execute promotions in parallel</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copado__Max_Scheduled_Back_Promotion_Batch_Size__c</fullName>
@@ -276,6 +307,17 @@
             <restricted>true</restricted>
             <valueSetName>copado__Connection_Behavior_Type</valueSetName>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Only user stories that meet this criteria will be eligible to be automatically promoted.</inlineHelpText>
+        <label>Promotion Criteria</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>copado__Promotion_Schedule__c</fullName>

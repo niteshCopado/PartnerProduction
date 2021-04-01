@@ -86,7 +86,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
-        <type>Default</type>
+        <content>copado__Deployment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>New</actionName>
@@ -1353,5 +1355,18 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <openType>noSidebar</openType>
         <protected>false</protected>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}deploymentWizard?id={!copado__Deployment__c.Id}&amp;gotoStep=deploynow</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Import_Template</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Import Template</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}Import_Template</url>
     </webLinks>
 </CustomObject>

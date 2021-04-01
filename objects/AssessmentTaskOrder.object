@@ -131,10 +131,12 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AssessmentTaskId</fullName>
+        <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
     </fields>
     <fields>
         <fullName>OrderId</fullName>
+        <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
     </fields>
     <listViews>

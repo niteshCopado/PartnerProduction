@@ -51,16 +51,16 @@
         <label>URL Callout</label>
     </customValue>
     <customValue>
-        <fullName>Compliance</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Compliance</label>
-    </customValue>
-    <customValue>
         <fullName>Static Analysis</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Static Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>Compliance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Compliance</label>
     </customValue>
     <customValue>
         <fullName>Automation Template</fullName>

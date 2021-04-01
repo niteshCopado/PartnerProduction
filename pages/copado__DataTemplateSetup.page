@@ -797,7 +797,7 @@
                                                                                          value="{!criteria.fieldName}"
                                                                                          size="1" multiselect="false"
                                                                                          disabled="{!OR(!enableADD,AND($ObjectType.copado__Data_Template__c.Accessible,!$ObjectType.copado__Data_Template__c.Createable,!$ObjectType.copado__Data_Template__c.Updateable))}">
-                                                                            <apex:selectOptions value="{!AllFieldsAPIName}" />
+                                                                            <apex:selectOptions value="{!allFieldsAPIName}" />
                                                                             <apex:actionSupport action="{!getFieldOperators}"
                                                                                     event="onchange"
                                                                                     reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"

@@ -49,6 +49,14 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <label><!-- Auto Number Field --></label>
+        <name>Auto_Number_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Text field Data --></label>
+        <name>New_Text_field__c</name>
+    </fields>
+    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>
@@ -212,6 +220,10 @@
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
         <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
         <help><!-- Latest Compliance Scan execution date. --></help>
@@ -868,6 +880,10 @@
     <webLinks>
         <label><!-- Mass_Add_User_Stories_Sprint --></label>
         <name>copado__Mass_Add_User_Stories_Sprint</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Open_Org --></label>
+        <name>copado__Open_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Perform_Validation --></label>

@@ -137,6 +137,9 @@
         <fullName>AssessmentTaskDefinitionId</fullName>
         <type>MasterDetail</type>
     </fields>
+    <fields>
+        <fullName>DisplayOrder</fullName>
+    </fields>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
