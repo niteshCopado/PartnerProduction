@@ -884,7 +884,7 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <webLinks>
-        <fullName>Billing</fullName>
+        <fullName>BillingNew</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
         <encodingKey>UTF-8</encodingKey>
@@ -894,13 +894,13 @@
         <height>600</height>
         <isResizable>true</isResizable>
         <linkType>url</linkType>
-        <masterLabel>Billing</masterLabel>
+        <masterLabel>BillingNew</masterLabel>
         <openType>newWindow</openType>
         <position>none</position>
         <protected>false</protected>
         <showsLocation>true</showsLocation>
         <showsStatus>true</showsStatus>
-        <url>http://www.genwatt.com/genwatt/billing.htm?actname={!Account_Name}</url>
+        <url>http://www.genwatt.com/genwatt/billing.htm?actname={!Account.Name}</url>
     </webLinks>
     <webLinks>
         <fullName>SBQQ__Amend_Assets</fullName>
