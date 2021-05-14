@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>4G Data Plan (C-DPP-005 / 9c91bb2c-2b79-f709-8c45-6866579a2fa5)</members>
-        <members>Apple iPhone X (C-PHO-001 / 67ed74e4-d393-763d-0c45-d71b969f9a7e)</members>
-        <name>Product2</name>
+        <members>InteractionLauncher_sampleAccountSearch_English</members>
+        <name>OmniScript</name>
     </types>
-    <types>
-        <members>iPhone X Intro Promo (2dbc9dc1-e1c1-7bf1-f77a-a98ed927af96)</members>
-        <name>Promotion</name>
-    </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>
