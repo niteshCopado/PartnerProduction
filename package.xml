@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>sampleSaveContactDetails</members>
-        <name>DataRaptor</name>
-    </types>
-    <types>
-        <members>MultiService_StartValidatePrice</members>
-        <name>IntegrationProcedure</name>
-    </types>
-    <types>
         <members>InteractionLauncher_sampleAccountSearch_English</members>
+        <members>team_editAccount_English</members>
         <name>OmniScript</name>
     </types>
     <version>51.0</version>
