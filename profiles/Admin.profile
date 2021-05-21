@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
+        <application>Force_com</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>SBQQ__QuoteQuickly</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>blng__QuotetoCash</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>blng__SalesforceBillingConfiguration</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>copado__Copado</application>
         <default>false</default>
         <visible>true</visible>
@@ -116,6 +136,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>standard__Retail</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__Sales</application>
         <default>true</default>
         <visible>true</visible>
@@ -140,6 +165,10 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
+    <classAccesses>
+        <apexClass>BatchableUpdateUserPermissionSet</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <classAccesses>
         <apexClass>ChangePasswordController</apexClass>
         <enabled>true</enabled>
@@ -178,6 +207,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CommunitiesSelfRegControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CopadoMetadata</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CreatingAccount</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -221,6 +258,3266 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SBQQ__APIable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ARLGTestDataLoader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractConsumptionRateDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractConsumptionScheduleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractPriceRuleEvaluator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractPriceRuleEvaluatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractProductRuleValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractReferencedFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AbstractSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccessTokenCacheService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AccountVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AdditionalDocumentsAfterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AliasedMetaDataUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AliasedMetaDataUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AmendContractController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AmendContractControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetAndSubscriptionServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetLookupController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetLookupControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetLookupServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetQuantityValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AssetVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AsyncQuoteLoadExtension</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AttributeItem</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AttributeItemTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AttributeSetDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AttributeSetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AttributeSetServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__AutoProvisionUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchLicenseReadinessCheck</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchMigrateOrderQuantity</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchOrderItemAssetContractSubs</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchProcessPSLAssignments</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchProcessPSLAssignmentsAA</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchProcessPSLAssignmentsBilling</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableAssetPriceDimensionSetter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableAssetPriceDimensionSetterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableConfigAttrReferencedFieldTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableConfigAttrReferencedFieldUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableDSExclusionGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableDSExclusionGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchablePluginTranspileUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableRootIdSetter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BatchableRootIdSetterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BillingPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BillingUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BinaryTree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BlockPriceEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BlockPriceEditorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BlockPriceListModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BlockPriceListModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__BlockPriceTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CPQConstants</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CSVFieldsParser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CSVLinesParser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CSVParser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CSVParserTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculateCallback</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculateCallbackAdapter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculateCallbackAdapterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculatorReferencedFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculatorReferencedFieldGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculatorReferencedFieldRemover</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CalculatorServiceFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ChainedBatchable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ChainedDummy</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ChainedJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ChainedQueueable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ChatterUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CollectionUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CollectionUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnMetadataBeforeTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingClientModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingClientModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ColumnSizingServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ComparableTransactionRate</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Comparator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CompleteBundleUpgradeTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigAttribute</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationAttributeMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationAttributeMapperTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationAttributeTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationItem</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationProductOption</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleAlert</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleExecutor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleExecutorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRuleValidatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRules</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationRulesTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationSummaryController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfigurationSummaryControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConfiguratorSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionClientModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionClientModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunction</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionFactoryTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionJunctionUtilTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionRateDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionRateDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleAndRateTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionScheduleTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionTransactionManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionTransactionManagerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ConsumptionTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractCreationTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractLookupServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractLookupServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractManipulationAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractOrderService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractOrdersResult</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractSelectorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractSelectorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractServiceAmendRenewTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ContractedPriceVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionConditionTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionDefinitions</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomActionTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomLookupController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomLookupControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomScriptTranspileClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomScriptTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__CustomScriptTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DAOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DataChangeTrackerServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DateRange</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DateUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DateUtilsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DefaultDatabase</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DefaultElectronicSignaturePlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DefaultFieldSetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DefaultPageSecurityPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DimensionDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DimensionDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DimensionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DimensionServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DirectionalTree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountAndAccountCallout</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountSchedule</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleExclusionGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleExclusionGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountScheduleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountTierEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountTierEditorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountTierListModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DiscountTierTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentGeneratorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentGeneratorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentSegment</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentStorePlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__DocumentStorePlugin2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ElectronicDocumentProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ElectronicDocumentProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ElectronicSignaturePlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ElectronicSignaturePlugin2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ElectronicSignaturePlugin3</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionDependencyGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionDependencyGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionDependencyServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ErrorConditionTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__EvergreenBillingValidationTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteLookupServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteLookupServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoriteVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoritesManagerController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FavoritesManagerControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldDescriptor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldDescriptorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldMetaData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldSetMetadataDefaultBeforeTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldSetSecure</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldSetSecureTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldSetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldSetServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FieldValueUpdater</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FormulaFieldUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__FormulaFieldUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__HttpRequestAsserter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ICalculateCallback</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ICalculatorService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__IDGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__IQuoteCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__IQuoteSaver</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__IRestClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportColumnDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportColumnVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportFormatDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportFormatVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportLinesController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportLinesControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportLinesHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ImportLinesHandlerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallExecutor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorAssignPS</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchAssetCombineKey</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchAssignPS</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchHasCS</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchHasCSTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchLocalizationIndex</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOIPricingMethod</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOpportunity2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOrderItemBundleRoot</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOrderItemFields</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOrderItemListPrice</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchOrderItemMultiplier</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchQLIPriceBookEntry</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchQuantityEditable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchRegularPrice</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchRequiredByAsset</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorBatchThemeGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorLogDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorOrderItemUpdates</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorQueueable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorRefFieldGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__InstallProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSAGClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSAGClientTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSAGSerializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSARSettings</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSONTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSONUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCClientTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCCustomerLogService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCLookupFieldServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCLookupFieldServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCModelService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCQuoteSerializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCSerializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSQCSettingsSerializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSRGClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JSRGClientTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JobCheckerServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JobCheckerServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JobRecorder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__JobRecorderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LegacyUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LicenseCheckerExt</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LineColumnTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LineEditorLookupCallout</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LineItemsComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LineItemsComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ListModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ListModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationFactoryTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationIndexSearcher</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationIndexTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LocalizationVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LookupQueryTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LookupTableCallout</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LookupTableCalloutTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__LookupTableServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MappingUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MappingUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MassQuoteDocumentSender</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MassQuoteDocumentSenderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MergeFieldProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MergeFieldProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataConverterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetaDataUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetricsService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MetricsServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MockExceptionProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MockFieldSetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MockQueryer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MultiLineTextComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__MultiLineTextComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__NamespaceUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthClientTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthExtension</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OAuthSettings</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OLITestDataLoader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ObjectDescriptor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ObjectDescriptorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ObjectManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Operators</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OperatorsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityLineItemDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityLineItemDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityLineItemTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OpportunityServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OptionConstraintTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderBundleTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderCRUDTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderConstants</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderContractTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderCreateController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderCreateControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderDateTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderDateUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderEndToEndTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderEvergreenTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderException</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderFieldMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderFieldMappingTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderItemConsumptionImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderItemConsumptionImplTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderItemObjectManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderItemVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderMDQTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderManagementPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderMiscTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderObjectManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderPercentOfTotalTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderPriceCalculatorService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderPriceCalculatorServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderPriceScheduleTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderPriceScheduleUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderProductConsumptionScheduleTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderProductDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderProductObjectManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderTestBase</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderUtilsWithoutSharing</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__OrderVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PageActionController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PageSecurityPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PageSecurityPlugin2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PaginationContainers</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PartnerCloneService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PauseApexUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PauseApexUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PermissionSetsProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PermissionSetsService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PermissionUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PicklistValuesOptionModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PicklistValuesOptionModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PluginManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PluginManagerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PrepopulateQuoteService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceActionBeforeTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceActionTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceConditionTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceRuleTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceSchedule</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PriceTier</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricebookEntryDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricebookEntryDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceTierModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PricingGuidanceTierModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProcessInputInitializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProcessInputTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProcessInputValueDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProcessTestServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductActionTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductAttributeDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductAttributeDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductBundleTestUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationInitializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationInitializerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationLoader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationLoaderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationSitesController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationSitesControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConfigurationValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConsumptionImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConsumptionImplTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConsumptionScheduleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductConsumptionScheduleTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductEvergreenTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductFactoryTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductLookupController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductLookupControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductLookupServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionPriceRuleEvaluator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionPriceRuleEvaluatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionTree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductOptionTreeTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleAlert</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleAlertTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleExecutor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleExecutorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleVaidatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductRuleValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchAdapter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchAdapterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchExecutor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchExecutorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSearchPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSelectionModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductSelectionModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductServices</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductTestBase</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductUpgradeController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductUpgradeControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProductVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProposalGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ProposalGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__PublicAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueryBuilder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueryBuilderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Queryable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableAmendmentService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableCalculatorService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableCalculatorServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableContractOrdersClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableJobCheckerExt</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableJobCheckerExtTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableProductServices</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableQuoteDocumentService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QueueableTranspilerService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorFactoryTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorPlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorPlugin2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorRefundTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteCalculatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDAOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDAOTests2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDataProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDataProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentMarkupGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteDocumentUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteEditorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteEditorModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteEditorModelTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteExtSitesController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteExtSitesControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionImplTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionRateDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionRateDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionScheduleDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineConsumptionScheduleDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineDAOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineEditorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineEditorServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineEditorServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupDAOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineGroupValidationTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineObjectTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePriceRuleEvaluator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePriceRuleEvaluatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePricingGuidanceDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePricingGuidanceDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLinePricingGuidanceVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineUBPDataProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteLineValidationTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteOpportunitySynchronizer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteOpportunitySynchronizerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuotePriceHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuotePriceRefreshBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteProcessInitializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteProcessInitializerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteProcessVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteProcessorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRelatedContentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRelatedContentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRestEndpoint</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRestEndpointTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRuleApplicator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteRuleApplicatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteSettingsModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteSortUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTemplateUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermEditorService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermEditorServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermEditorServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermEvaluator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermsComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTermsComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTestsBase</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__QuoteValidationTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Range</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RangeTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RecordInfo</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RecordJobService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RecordJobServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RecordStatus</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RecordUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ReferencedFieldCache</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ReferencedFieldCacheTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ReferencedFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ReferencedFieldGeneratorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ReferencedFieldRemover</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RefreshQuotePricesController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RefreshQuotePricesControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RelatedContentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RelatedContentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RelatedContentVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RelatedRecordCloner</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RenewContractsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RenewContractsControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RenewalAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RenewalQuoteGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RestClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RestClientSettings</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RestClientTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RichTextComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RichTextComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RichTextToFOConverter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RichTextToFOConverterTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RootIdSetterChildAssets</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RootIdSetterChildSubscriptions</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RootIdSetterParentAssets</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RootIdSetterParentSubscriptions</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleAPITests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleActionListener</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleListener</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleProcessorSupport</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleProcessorSupportTests2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleSummaryUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__RuleTriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectListModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectListModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectListOptionModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectListOptionModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SObjectUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SampleServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SaveCalculatedQuoteCallback</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SaveQuote</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SaveRequeryRollbackServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SchemaUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SchemaUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilterDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilterDAOTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilterInitializer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchFilterInitializerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SearchIndexDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SectionComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SectionComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SecurityUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SecurityUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SelectContractController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SelectContractOppController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SelectContractOppControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SelectOptionModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ServiceCloud</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ServiceLoader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ServiceReader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ServiceRouter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ServiceSaver</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsEditorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsEditorControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsExtension</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsExtensionTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsHolder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsVOAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SettingsVOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SimpleServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SolutionGroupModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SolutionGroupModelTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__StringTokenizer</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__StringTokenizerListener</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__StringUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__StringUtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscribedAssetService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscribedAssetVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionConsumptionImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionConsumptionImplTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionDAOTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionLookupController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionLookupControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionLookupServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionLookupServiceProviderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionSearchModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SubscriptionVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryRowComponentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryRowComponentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVarRefFieldGenerator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVariableCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVariableCalculatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVariableDAO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVariableServiceProvider</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SummaryVariableTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__SynchronousProductServices</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TaxExemptionCertificateObjectManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TaxExemptionCertificateTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateContentExtController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateContentExtControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateContentTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateSectionTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateSectionVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateSectionVOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateVO</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TemplateVOFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TestCalloutMock</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TestDocumentStorePlugin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TestRestClient</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TestUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeAfterTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeBeforeTriggerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeDocumentService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeDocumentServiceTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeExtension</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeExtensionTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeLookupController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeSettingsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ThemeSettingsControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TimingStack</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TimingStackTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TransactionConsumptionRateValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TransactionConsumptionRateValidatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TransactionConsumptionScheduleValidator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TransportDigest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TransportDigestTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Tree</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TreeSet</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TriggerControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TriggerControlTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TrxConsumptionScheduleValidatorTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TwinFieldMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__TwinFieldMapperTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UBPEditorRecordLoader</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UBPEditorRecordLoaderTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UBPResultHolder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UIOriginalRecord</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UpgradeController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UploadRelatedContentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UploadRelatedContentControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UserPermUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Utils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__UtilsTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__ValidationException</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SBQQ__Versionable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SiteLoginController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -237,6 +3534,30 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SoftphoneContactSearchController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SoftphoneContactSearchControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SoftphoneProviderController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SoftphoneProviderControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SoftphoneProviderHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SoftphoneProviderHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TemperatureConverter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -245,2491 +3566,2491 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ADD_DependencyHandler</apexClass>
+        <apexClass>TestDataFactory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ADD_RecordMatchingFormulaOperations</apexClass>
+        <apexClass>blng__AccountBalanceSnapshotDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AbstractArtifact</apexClass>
+        <apexClass>blng__AccountDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AbstractDXOrg</apexClass>
+        <apexClass>blng__AccountDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AbstractPackage</apexClass>
+        <apexClass>blng__AccountService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AbstractTestData</apexClass>
+        <apexClass>blng__AccountServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AddCCHRuleCriteriaExt</apexClass>
+        <apexClass>blng__AccountVTController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AddCCHRuleCriteriaExtTest</apexClass>
+        <apexClass>blng__AccountVTControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ApexTestResultTriggerHandler</apexClass>
+        <apexClass>blng__AgingBucketDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ApexTestResultTriggerHelper</apexClass>
+        <apexClass>blng__AgingBucketDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ApexTestTriggerHandler</apexClass>
+        <apexClass>blng__AgingBucketTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ApplicationException</apexClass>
+        <apexClass>blng__AllocationDebitNoteLineTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactFactory</apexClass>
+        <apexClass>blng__AmendmentTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactManageMetadataController</apexClass>
+        <apexClass>blng__Application</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactMetadataService</apexClass>
+        <apexClass>blng__ApplicationConfig</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactPackageController</apexClass>
+        <apexClass>blng__AssetDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactVersion</apexClass>
+        <apexClass>blng__AsyncGeneratePaymentToken</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactVersionTriggerHandler</apexClass>
+        <apexClass>blng__AsyncJobDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ArtifactVersionTriggerHelper</apexClass>
+        <apexClass>blng__BalanceSnapshotEntity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AttachmentTriggerHandler</apexClass>
+        <apexClass>blng__BalanceSnapshotGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AttachmentTriggerHelper</apexClass>
+        <apexClass>blng__BalanceSnapshotRunException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthenticateAnyOrgServiceController</apexClass>
+        <apexClass>blng__BalanceSnapshotRunService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationCheck</apexClass>
+        <apexClass>blng__BalanceSnapshotRunVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationException</apexClass>
+        <apexClass>blng__BalanceSnapshotSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationUtils</apexClass>
+        <apexClass>blng__BalanceSnapshotSchedulerDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationWithSharing</apexClass>
+        <apexClass>blng__BalanceSnapshotSchedulerDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AuthorizationWithoutSharing</apexClass>
+        <apexClass>blng__BalanceSnapshotSchedulerDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__AutomationTemplateExecuter</apexClass>
+        <apexClass>blng__BalanceSnapshotSchedulerService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BackupBatch</apexClass>
+        <apexClass>blng__BalanceSnapshotService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BackupNow</apexClass>
+        <apexClass>blng__BalanceSnapshotVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BatchHelper</apexClass>
+        <apexClass>blng__BatchAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BranchArtifact</apexClass>
+        <apexClass>blng__BatchAPITest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BranchManagementExt</apexClass>
+        <apexClass>blng__BatchBalanceSnapshot</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BranchManagementExtension</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotCreditNote</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BranchMetadataService</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotDebitNote</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BuildTaskEmailController</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BuildTaskTriggerHandler</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotPayment</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BuildTaskTriggerHelper</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BurnDownItemBatchClass</apexClass>
+        <apexClass>blng__BatchBalanceSnapshotVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BurnDownItemScheduler</apexClass>
+        <apexClass>blng__BatchIRCleanUpForInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__BurndownItem</apexClass>
+        <apexClass>blng__BatchIRCleanUpForOrderProduct</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCDFullCycleTestDefaults</apexClass>
+        <apexClass>blng__BatchIRCleanUpForUsageSummary</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_BackPromotionBatch</apexClass>
+        <apexClass>blng__BatchIRCleanUpTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_BackPromotionSchedule</apexClass>
+        <apexClass>blng__BatchInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_BothPromotionQueueable</apexClass>
+        <apexClass>blng__BatchInvoiceAssignGroupQuantity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_CreateMetadataGroupItemExtension</apexClass>
+        <apexClass>blng__BatchInvoiceCalculateGroupQuantity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_CreateQualityGateExtension</apexClass>
+        <apexClass>blng__BatchInvoiceCalculateTax</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_PromotionBatch</apexClass>
+        <apexClass>blng__BatchInvoiceCalculateTaxTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CCD_PromotionSchedule</apexClass>
+        <apexClass>blng__BatchInvoiceCollateGroupIds</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CLIInterface</apexClass>
+        <apexClass>blng__BatchInvoiceExceptionHandlingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CMTestMethodUtilities</apexClass>
+        <apexClass>blng__BatchInvoicePost</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CMUtilities</apexClass>
+        <apexClass>blng__BatchInvoicePostTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CalculateOrgDifferences</apexClass>
+        <apexClass>blng__BatchInvoicePostUsageOperation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CalculateSnapshotDifferences</apexClass>
+        <apexClass>blng__BatchInvoicePreUsageOperation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CheckFeaturesController</apexClass>
+        <apexClass>blng__BatchInvoiceSetOrderProductStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CliProxy</apexClass>
+        <apexClass>blng__BatchInvoiceSetOrderProductStatusTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CliSecurityService</apexClass>
+        <apexClass>blng__BatchInvoiceSetUsageSummaryStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CliSfDataWrapper</apexClass>
+        <apexClass>blng__BatchInvoiceSetUsageSummaryStatusTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CloneSeleniumTestCaseExtension</apexClass>
+        <apexClass>blng__BatchInvoiceSubscription</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CodeScanHandshakeService</apexClass>
+        <apexClass>blng__BatchInvoiceTaxCalculation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ColumnConfig</apexClass>
+        <apexClass>blng__BatchInvoiceUsage</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CommitService</apexClass>
+        <apexClass>blng__BatchInvoiceVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceFindingTestDefaults</apexClass>
+        <apexClass>blng__BatchInvoiceValidate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceFindingTriggerHandler</apexClass>
+        <apexClass>blng__BatchJobService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceFindingTriggerHelper</apexClass>
+        <apexClass>blng__BatchJobVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceHelper</apexClass>
+        <apexClass>blng__BatchPayment</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceRuleCriteriaTriggerHandler</apexClass>
+        <apexClass>blng__BatchPaymentRunCleanUpForInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceRuleCriteriaTriggerHelper</apexClass>
+        <apexClass>blng__BatchPaymentRunCleanUpForTransaction</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceRuleTriggerHandler</apexClass>
+        <apexClass>blng__BatchPaymentVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceScanResultTriggerHandler</apexClass>
+        <apexClass>blng__BatchResults</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ComplianceScanResultTriggerHelper</apexClass>
+        <apexClass>blng__BatchResultsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ConnectionBehaviorTriggerHandler</apexClass>
+        <apexClass>blng__BatchService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ConnectionBehaviorTriggerHelper</apexClass>
+        <apexClass>blng__BatchTransaction</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ConnectionBehaviorUsageInfoController</apexClass>
+        <apexClass>blng__BatchTransactionSetInvoiceStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationExtension</apexClass>
+        <apexClass>blng__BatchTransactionSetInvoiceStatusTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationExtensionTest</apexClass>
+        <apexClass>blng__BatchTransactionTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationPermTrgHandler</apexClass>
+        <apexClass>blng__BatchUpdateBillingTreatment</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationPermTrgHelper</apexClass>
+        <apexClass>blng__BatchUpdateFinanceBookFields</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationTriggerHandler</apexClass>
+        <apexClass>blng__BatchUpdateFinanceBookFieldsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ContinuousIntegrationTriggerHelper</apexClass>
+        <apexClass>blng__BatchUpdateFinancePeriodFamily</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ConvertAutomationToDeployment</apexClass>
+        <apexClass>blng__BatchUpdateFinancePeriodFamilyTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ConvertTypes</apexClass>
+        <apexClass>blng__BatchUpdateFinancePeriodFields</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoAPI</apexClass>
+        <apexClass>blng__BatchUpdateOrderProductStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoCommitChangesTestDefaults</apexClass>
+        <apexClass>blng__BatchUpdatePaymentFields</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoDeploymentWizardTestDefaults</apexClass>
+        <apexClass>blng__BatchUpdatePaymentFieldsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoLicensesComponentController</apexClass>
+        <apexClass>blng__BatchUpdateRefundFields</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoMassBackPromotionTestDefaults</apexClass>
+        <apexClass>blng__BatchUpdateRefundFieldsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoNotificationHelper</apexClass>
+        <apexClass>blng__BatchUpdateRevenueTransactionStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoPipelineWizardTestDefaults</apexClass>
+        <apexClass>blng__BatchUpdateUsageStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoPromotionTestDefaults</apexClass>
+        <apexClass>blng__BatchUpdateUsageSummaryStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoRollup</apexClass>
+        <apexClass>blng__BatchUsage</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoSetupController</apexClass>
+        <apexClass>blng__BatchUsageAggregation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoSetupTestDefaults</apexClass>
+        <apexClass>blng__BatchUsageSubtotalCalculation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoSmartHelpController</apexClass>
+        <apexClass>blng__BillThroughOverrideDateFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CopadoUserStoryTestDefaults</apexClass>
+        <apexClass>blng__BillableUnitPriceOnQuoteLineTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CountryPicklistValues</apexClass>
+        <apexClass>blng__BillingCalculator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CreateTestScriptStepsController</apexClass>
+        <apexClass>blng__BillingCalculatorService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CreateUserStoryScratchOrgController</apexClass>
+        <apexClass>blng__BillingCalculatorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CustomLookupComponentHelper</apexClass>
+        <apexClass>blng__BillingConfigure</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__CustomLookupQueryConfiguration</apexClass>
+        <apexClass>blng__BillingConfigureTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DML_Action</apexClass>
+        <apexClass>blng__BillingPeriod</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_DeploymentExtension</apexClass>
+        <apexClass>blng__BillingPeriodTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_IntermediaryExtension</apexClass>
+        <apexClass>blng__BillingRuleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_OverrideFiltersExtension</apexClass>
+        <apexClass>blng__BillingRuleDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_OverviewExtension</apexClass>
+        <apexClass>blng__BillingRuleDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_SelectChangesExtension</apexClass>
+        <apexClass>blng__BillingScheduleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_SelectDataTemplateExtension</apexClass>
+        <apexClass>blng__BillingScheduleDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_SourceExtension</apexClass>
+        <apexClass>blng__BillingScheduleService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_SummaryExtension</apexClass>
+        <apexClass>blng__BillingScheduleTransactionFtest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DW_TargetExtension</apexClass>
+        <apexClass>blng__BillingTestBase</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXExtensionStatusController</apexClass>
+        <apexClass>blng__BillingTestUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXLabel</apexClass>
+        <apexClass>blng__BillingTestValidationUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXMetadataJsonWrapper</apexClass>
+        <apexClass>blng__BillingTransactionDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXOperationController</apexClass>
+        <apexClass>blng__BillingTransactionDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXOrgFactory</apexClass>
+        <apexClass>blng__BillingTransactionInvoiceGeneratorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXPackageArtifactHelper</apexClass>
+        <apexClass>blng__BillingTransactionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXPackageAsyncJobHandler</apexClass>
+        <apexClass>blng__BillingTreatmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXPackageVersionHandler</apexClass>
+        <apexClass>blng__CalculationOperation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXProject</apexClass>
+        <apexClass>blng__CalculationParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DXTestOrgIntermediaryController</apexClass>
+        <apexClass>blng__CalculationResults</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DataDeploymentService</apexClass>
+        <apexClass>blng__CalculationResultsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DataTemplateImportExtension</apexClass>
+        <apexClass>blng__ChargeDateCalculator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DataTemplateObjectResultController</apexClass>
+        <apexClass>blng__ChargeDateCalculatorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DataTemplateSetupExtension</apexClass>
+        <apexClass>blng__CommonConstant</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DataTemplateTaskComponentController</apexClass>
+        <apexClass>blng__CommonUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DatabaseOperationType</apexClass>
+        <apexClass>blng__CommonUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DefineProductionOrgServiceController</apexClass>
+        <apexClass>blng__ConsumptionScheduleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DependencyHandler</apexClass>
+        <apexClass>blng__ControllerCancelInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeployAPI</apexClass>
+        <apexClass>blng__ControllerForSitePayment</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeployCommits</apexClass>
+        <apexClass>blng__ControllerForSitePaymentTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeployJobHelper</apexClass>
+        <apexClass>blng__ControllerInvoiceRun</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeployLater</apexClass>
+        <apexClass>blng__ControllerPaymentRun</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentEmailController</apexClass>
+        <apexClass>blng__ControllerPaymentRunTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentExt</apexClass>
+        <apexClass>blng__CreditCentralController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentFlowStepTriggerHandler</apexClass>
+        <apexClass>blng__CreditNoteAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentFlowStepTriggerHelper</apexClass>
+        <apexClass>blng__CreditNoteAllocationDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentFlowTriggerHandler</apexClass>
+        <apexClass>blng__CreditNoteAllocationDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentFlowTriggerHelper</apexClass>
+        <apexClass>blng__CreditNoteAllocationDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentHelper</apexClass>
+        <apexClass>blng__CreditNoteAllocationDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentInterface</apexClass>
+        <apexClass>blng__CreditNoteAllocationParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentStatusExtension</apexClass>
+        <apexClass>blng__CreditNoteAllocationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentStepsUtils</apexClass>
+        <apexClass>blng__CreditNoteAllocationServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentTaskExtension</apexClass>
+        <apexClass>blng__CreditNoteDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentTriggerHandler</apexClass>
+        <apexClass>blng__CreditNoteDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentTriggerHelper</apexClass>
+        <apexClass>blng__CreditNoteDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DeploymentWizardExtension</apexClass>
+        <apexClass>blng__CreditNoteDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DestinationOrgTriggerHandler</apexClass>
+        <apexClass>blng__CreditNoteLightningController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DestinationOrgTriggerHelper</apexClass>
+        <apexClass>blng__CreditNoteLightningControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DevHubService</apexClass>
+        <apexClass>blng__CreditNoteLineAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DxCommitService</apexClass>
+        <apexClass>blng__CreditNoteLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DynamicDatatableController</apexClass>
+        <apexClass>blng__CreditNoteLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DynamicDatatableQueryConfiguration</apexClass>
+        <apexClass>blng__CreditNoteLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DynamicScratchOrgController</apexClass>
+        <apexClass>blng__CreditNoteLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__DynamicVariablesInterpreter</apexClass>
+        <apexClass>blng__CreditNoteLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditBackupExtension</apexClass>
+        <apexClass>blng__CreditNoteLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditExternalCISetting</apexClass>
+        <apexClass>blng__CreditNoteRevenueScheduleFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditGit</apexClass>
+        <apexClass>blng__CreditNoteService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditOrg</apexClass>
+        <apexClass>blng__CreditNoteServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditOrgDiffExtension</apexClass>
+        <apexClass>blng__CurrencyUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EditSeleniumSettingOverride</apexClass>
+        <apexClass>blng__CurrencyUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Encoder</apexClass>
+        <apexClass>blng__CustomException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EnvironmentTriggerHandler</apexClass>
+        <apexClass>blng__CustomExceptionCode</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EnvironmentTriggerHelper</apexClass>
+        <apexClass>blng__CustomExceptionTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EnvironmentalVariableTriggerHandler</apexClass>
+        <apexClass>blng__CustomLimitException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__EnvironmentalVariableTriggerHelpler</apexClass>
+        <apexClass>blng__CustomSettingsService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ErrorHandlingComponentController</apexClass>
+        <apexClass>blng__CustomSettingsServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ExecuteDeployment</apexClass>
+        <apexClass>blng__DailyRecognitionModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ExecuteFlow</apexClass>
+        <apexClass>blng__DailyRecognitionModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ExecuteTestRunExtension</apexClass>
+        <apexClass>blng__DatabaseUpdateException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ExternalCIAPIFactory</apexClass>
+        <apexClass>blng__DbtNoteAllocationCrdtNoteLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ExternalCIJobsExtension</apexClass>
+        <apexClass>blng__DebitNoteAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__FeatureAccessHelper</apexClass>
+        <apexClass>blng__DebitNoteAllocationCNLServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__FeatureHelper</apexClass>
+        <apexClass>blng__DebitNoteAllocationCreditNoteLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GenerateStaticCodeAnalysisRuleSet</apexClass>
+        <apexClass>blng__DebitNoteAllocationCreditNoteLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GenericMDAPIDiffCSV</apexClass>
+        <apexClass>blng__DebitNoteAllocationCreditNoteLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitArtifact</apexClass>
+        <apexClass>blng__DebitNoteAllocationCreditNoteLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitBackupTriggerHandler</apexClass>
+        <apexClass>blng__DebitNoteAllocationDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitBackupTriggerHelper</apexClass>
+        <apexClass>blng__DebitNoteAllocationDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommitChangesController</apexClass>
+        <apexClass>blng__DebitNoteAllocationDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommitLookupController</apexClass>
+        <apexClass>blng__DebitNoteAllocationDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_AdvancedController</apexClass>
+        <apexClass>blng__DebitNoteAllocationParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_ComponentBase</apexClass>
+        <apexClass>blng__DebitNoteAllocationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_GridController</apexClass>
+        <apexClass>blng__DebitNoteAllocationServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_HeaderController</apexClass>
+        <apexClass>blng__DebitNoteDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_IntermediaryController</apexClass>
+        <apexClass>blng__DebitNoteDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_MainController</apexClass>
+        <apexClass>blng__DebitNoteDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_MainPageController</apexClass>
+        <apexClass>blng__DebitNoteDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_OperationsController</apexClass>
+        <apexClass>blng__DebitNoteLightningController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitCommit_PageBase</apexClass>
+        <apexClass>blng__DebitNoteLightningControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitHelper</apexClass>
+        <apexClass>blng__DebitNoteLineAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitOrgCommitTriggerHandler</apexClass>
+        <apexClass>blng__DebitNoteLineAPITest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitOrgCommitTriggerHelper</apexClass>
+        <apexClass>blng__DebitNoteLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitRepositoryTriggerHandler</apexClass>
+        <apexClass>blng__DebitNoteLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GitRepositoryTriggerHelper</apexClass>
+        <apexClass>blng__DebitNoteLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GlobalAPI</apexClass>
+        <apexClass>blng__DebitNoteLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GlobalAPI_Test</apexClass>
+        <apexClass>blng__DebitNoteLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__GlobalUtilities</apexClass>
+        <apexClass>blng__DebitNoteLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__HttpCalloutBuilder</apexClass>
+        <apexClass>blng__DebitNoteRevRecognitionFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IAuthorization</apexClass>
+        <apexClass>blng__DebitNoteService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IDXOrgBehavior</apexClass>
+        <apexClass>blng__DebitNoteServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IDXProjectBehavior</apexClass>
+        <apexClass>blng__DivideAndConquer</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IExternalCIAPI</apexClass>
+        <apexClass>blng__DynamicInvoiceFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IPackageBehavior</apexClass>
+        <apexClass>blng__Error</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ITestDefaults</apexClass>
+        <apexClass>blng__ErrorCode</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ITrigger</apexClass>
+        <apexClass>blng__ErrorLog</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ITypeConverter</apexClass>
+        <apexClass>blng__ErrorLogDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__IndexMetadataJob</apexClass>
+        <apexClass>blng__ErrorLogTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__InvokableMethods_Test</apexClass>
+        <apexClass>blng__FinanceBookDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__JenkinsAPI</apexClass>
+        <apexClass>blng__FinanceBookDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__JobWaitingExtension</apexClass>
+        <apexClass>blng__FinanceBookDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__JobsManager</apexClass>
+        <apexClass>blng__FinanceBookDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__JsRemotingController</apexClass>
+        <apexClass>blng__FinancePeriodAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__KanbanBoard</apexClass>
+        <apexClass>blng__FinancePeriodAPIException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__KanbanBoardEditController</apexClass>
+        <apexClass>blng__FinancePeriodAPIInputValidation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__LicenseHelper</apexClass>
+        <apexClass>blng__FinancePeriodAPITest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__LicenseManagerController</apexClass>
+        <apexClass>blng__FinancePeriodDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__LightningReadyFieldsController</apexClass>
+        <apexClass>blng__FinancePeriodDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__LightningReadyRelatedListController</apexClass>
+        <apexClass>blng__FinancePeriodDateFinder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ManageEnvVarsExt</apexClass>
+        <apexClass>blng__FinancePeriodDateFinderTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ManageGitBranchesController</apexClass>
+        <apexClass>blng__FinancePeriodDateInput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ManageRepositoryBranchesController</apexClass>
+        <apexClass>blng__FinancePeriodDateRangeFinder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ManageSeleniumTestingExt</apexClass>
+        <apexClass>blng__FinancePeriodDateRangeInput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ManualTaskComponentController</apexClass>
+        <apexClass>blng__FinancePeriodDateRangeValidation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MassAddDestOrgs</apexClass>
+        <apexClass>blng__FinancePeriodDateValidation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MassAddRunsToGroup</apexClass>
+        <apexClass>blng__FinancePeriodDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MassAddSuitesToGroup</apexClass>
+        <apexClass>blng__FinancePeriodDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MassAddToReleaseExtension</apexClass>
+        <apexClass>blng__FinancePeriodFinder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MergeVersionController</apexClass>
+        <apexClass>blng__FinancePeriodInput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MetadataDeploymentService</apexClass>
+        <apexClass>blng__FinancePeriodInputValidationResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MetadataSource</apexClass>
+        <apexClass>blng__FinancePeriodOutput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MetadataTypeService</apexClass>
+        <apexClass>blng__FinancePeriodParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MetadataTypesHelper</apexClass>
+        <apexClass>blng__FinancePeriodService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MetadataselectorExtension</apexClass>
+        <apexClass>blng__FlexibleFinancePeriodTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MockHttpResponseGenerator</apexClass>
+        <apexClass>blng__FullRecognitionModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__MultiselectController</apexClass>
+        <apexClass>blng__FullRecognitionModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__NewApexTestResultEmailController</apexClass>
+        <apexClass>blng__GLRuleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__NewBuildTaskEmailController</apexClass>
+        <apexClass>blng__GLRuleDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__NewDeploymentEmailController</apexClass>
+        <apexClass>blng__GLTreatmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__NewEnvironmentServiceController</apexClass>
+        <apexClass>blng__GLTreatmentDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__NewPipelineExtension</apexClass>
+        <apexClass>blng__GLTreatmentDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OperatorTypeCodes</apexClass>
+        <apexClass>blng__GLTreatmentDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgApexTestResultsSummaryEmailController</apexClass>
+        <apexClass>blng__GLTreatmentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgAuthenticationComponentController</apexClass>
+        <apexClass>blng__GatewayDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgAuthenticationInterface</apexClass>
+        <apexClass>blng__HPPAccessFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgAuthenticationWrapper</apexClass>
+        <apexClass>blng__HPPAccessTestingUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgDiffExtension</apexClass>
+        <apexClass>blng__HPPAddressRepresentation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgDiffTriggerHandler</apexClass>
+        <apexClass>blng__HPPCardPaymentMethodRepresentation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgMetadataService</apexClass>
+        <apexClass>blng__HPPCardValidator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgPreferencesHandler</apexClass>
+        <apexClass>blng__HPPCardValidatorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgStatusIconsController</apexClass>
+        <apexClass>blng__HPPChargeTransactionValidator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgTriggerHandler</apexClass>
+        <apexClass>blng__HPPPaymentMethodRepresentation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OrgTriggerHelper</apexClass>
+        <apexClass>blng__HPPTestingUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OverrideFiltersComponentController</apexClass>
+        <apexClass>blng__HPPTransactionRepresentation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__OverrideTemplateFiltersController</apexClass>
+        <apexClass>blng__HPPValidationFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PackageArtifactOrgDefinitionController</apexClass>
+        <apexClass>blng__HPPValidationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PackageDependency</apexClass>
+        <apexClass>blng__HPPValidationUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PackageDetail</apexClass>
+        <apexClass>blng__HostedPaymentPageFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PatchArtifact</apexClass>
+        <apexClass>blng__HostedPaymentPageTransactionAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PatchMetadataService</apexClass>
+        <apexClass>blng__HostedPaymentPageTransactionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PermissionSchedulable</apexClass>
+        <apexClass>blng__HostedPaymentPageUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PermissionSetExplorerExt</apexClass>
+        <apexClass>blng__HostedPaymentPageUtilTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaAssignmentHelper</apexClass>
+        <apexClass>blng__HttpService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaAssignmentTriggerHandler</apexClass>
+        <apexClass>blng__HttpServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaPermissionTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaPermissionTriggerHelper</apexClass>
+        <apexClass>blng__InvoiceAPITest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceAmendmentFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PersonaTriggerHelper</apexClass>
+        <apexClass>blng__InvoiceCancelationFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineComponentHelper</apexClass>
+        <apexClass>blng__InvoiceCancellation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineDiagramExtension</apexClass>
+        <apexClass>blng__InvoiceCancellationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineFiltersController</apexClass>
+        <apexClass>blng__InvoiceDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineHeaderController</apexClass>
+        <apexClass>blng__InvoiceDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineManagerExtension</apexClass>
+        <apexClass>blng__InvoiceDateMissingException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelinePagesHelper</apexClass>
+        <apexClass>blng__InvoiceDetailComponentVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineSettingsComponentController</apexClass>
+        <apexClass>blng__InvoiceDetailPageController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PipelineTemplateComponentController</apexClass>
+        <apexClass>blng__InvoiceDetailPageControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PostInstallClass</apexClass>
+        <apexClass>blng__InvoiceDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ProductionOrgServiceController</apexClass>
+        <apexClass>blng__InvoiceDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ProjectArtifact</apexClass>
+        <apexClass>blng__InvoiceEvergreenFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ProjectTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ProjectTriggerHelper</apexClass>
+        <apexClass>blng__InvoiceGeneratorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromoteBetatoReleasedController</apexClass>
+        <apexClass>blng__InvoiceGroup</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromoteChangesExtension</apexClass>
+        <apexClass>blng__InvoiceGroupTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromotionChangeEventTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceGroupingFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromotionEditExtension</apexClass>
+        <apexClass>blng__InvoiceLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromotionTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__PromotionTriggerHelper</apexClass>
+        <apexClass>blng__InvoiceLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__QueryEditor</apexClass>
+        <apexClass>blng__InvoiceLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__QueryEditorController</apexClass>
+        <apexClass>blng__InvoiceLineListControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__QuickCreateUserStoriesController</apexClass>
+        <apexClass>blng__InvoiceLineListForCreditCompController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RecalculateBranchStatus</apexClass>
+        <apexClass>blng__InvoiceLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RecalculateDeploymentFlowBranchStatuses</apexClass>
+        <apexClass>blng__InvoiceLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RefreshOrgMetadataCache</apexClass>
+        <apexClass>blng__InvoiceModuleTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RegisterCopado</apexClass>
+        <apexClass>blng__InvoiceNegativeFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RelatedListConfig</apexClass>
+        <apexClass>blng__InvoiceNewOrderFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RelatedListController</apexClass>
+        <apexClass>blng__InvoicePlanLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RelatedListVisualPicklist</apexClass>
+        <apexClass>blng__InvoicePlanLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ReleaseDetailService</apexClass>
+        <apexClass>blng__InvoiceResultVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ReleaseExt</apexClass>
+        <apexClass>blng__InvoiceRevenueRecognitionFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ReleaseStatusService</apexClass>
+        <apexClass>blng__InvoiceRunDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ReleaseTailService</apexClass>
+        <apexClass>blng__InvoiceRunDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ResolveConflictsController</apexClass>
+        <apexClass>blng__InvoiceRunDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ResultTriggerHandler</apexClass>
+        <apexClass>blng__InvoiceRunException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ResultTriggerHelper</apexClass>
+        <apexClass>blng__InvoiceRunService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ReturnObject</apexClass>
+        <apexClass>blng__InvoiceRunServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunAllOrgApexTests</apexClass>
+        <apexClass>blng__InvoiceRunVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunContinuousIntegration</apexClass>
+        <apexClass>blng__InvoiceSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunDeployPromotion</apexClass>
+        <apexClass>blng__InvoiceSchedulerDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunOrgComplianceScan</apexClass>
+        <apexClass>blng__InvoiceSchedulerDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunOrgStaticCodeAnalysis</apexClass>
+        <apexClass>blng__InvoiceSchedulerDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunSeleniumTest</apexClass>
+        <apexClass>blng__InvoiceSchedulerDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunSeleniumTestGroup</apexClass>
+        <apexClass>blng__InvoiceSchedulerService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunSnapshotComplianceScan</apexClass>
+        <apexClass>blng__InvoiceSchedulerServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunTestGroupsBatch</apexClass>
+        <apexClass>blng__InvoiceService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunUserStoryComplianceScan</apexClass>
+        <apexClass>blng__InvoiceServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunUserStoryStaticCodeAnalysis</apexClass>
+        <apexClass>blng__InvoiceVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__RunUserStoryTests</apexClass>
+        <apexClass>blng__InvokeNextBatchException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SalesforceFlowStepController</apexClass>
+        <apexClass>blng__LegalEntityDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScheduleConnectionBehaviorController</apexClass>
+        <apexClass>blng__LegalEntityDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScheduleCronExpressionController</apexClass>
+        <apexClass>blng__LightningAppControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScheduledJobExtension</apexClass>
+        <apexClass>blng__LightningLookupController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Scheduler</apexClass>
+        <apexClass>blng__LimitExceptionCode</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgCompletionController</apexClass>
+        <apexClass>blng__MappingUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgController</apexClass>
+        <apexClass>blng__MetaDataUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgDefinition</apexClass>
+        <apexClass>blng__MetaDataUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgDefinitionController</apexClass>
+        <apexClass>blng__MockHttpResponseGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgDetail</apexClass>
+        <apexClass>blng__MonthlyRecognitionModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgDisplayController</apexClass>
+        <apexClass>blng__MonthlyRecognitionModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgExtensionsController</apexClass>
+        <apexClass>blng__NamespaceUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgMetadataController</apexClass>
+        <apexClass>blng__NegativeInvoiceCreditNoteFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgOpen</apexClass>
+        <apexClass>blng__NegativeInvoiceLineConversionResponse</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgProjectTemplateController</apexClass>
+        <apexClass>blng__NegativeInvoiceToCreditNoteAction</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgService</apexClass>
+        <apexClass>blng__NegativeInvoiceToCreditNoteInput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgSettings</apexClass>
+        <apexClass>blng__NegativeInvoiceToCreditNoteService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgStatusCtrl</apexClass>
+        <apexClass>blng__NextBillingDateTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgWizardComponentBase</apexClass>
+        <apexClass>blng__NoMatchingOldRecordException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ScratchOrgWizardPageBase</apexClass>
+        <apexClass>blng__OrderDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SecondGenerationManagedArtifact</apexClass>
+        <apexClass>blng__OrderDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SecondGenerationPackageService</apexClass>
+        <apexClass>blng__OrderDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SecureOperations</apexClass>
+        <apexClass>blng__OrderDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestCasePerSuite</apexClass>
+        <apexClass>blng__OrderItemConsumptionRateDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestCasePromoteRollback</apexClass>
+        <apexClass>blng__OrderItemConsumptionRateService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestCaseTriggerHandler</apexClass>
+        <apexClass>blng__OrderItemConsumptionRateVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestCaseViewEdit</apexClass>
+        <apexClass>blng__OrderItemConsumptionScheduleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestGroupExtension</apexClass>
+        <apexClass>blng__OrderItemConsumptionScheduleDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestGroupOCTriggerHandler</apexClass>
+        <apexClass>blng__OrderItemConsumptionScheduleDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestGroupTSTriggerHandler</apexClass>
+        <apexClass>blng__OrderItemConsumptionScheduleVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestGroupTriggerHandler</apexClass>
+        <apexClass>blng__OrderProductDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestGroupTriggerHelper</apexClass>
+        <apexClass>blng__OrderProductDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestQuickRun</apexClass>
+        <apexClass>blng__OrderProductDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestResult</apexClass>
+        <apexClass>blng__OrderProductDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestResultTriggerHandler</apexClass>
+        <apexClass>blng__OrderProductService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestRunResults</apexClass>
+        <apexClass>blng__OrderProductServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestRunTriggerHandler</apexClass>
+        <apexClass>blng__OrderProductVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestRunTriggerHelper</apexClass>
+        <apexClass>blng__OrderProductValidation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SeleniumTestSuiteTriggerHandler</apexClass>
+        <apexClass>blng__OrderProductValidationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Settings</apexClass>
+        <apexClass>blng__OrderRevenueScheduleFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SetupWizardFinishController</apexClass>
+        <apexClass>blng__OrgDefaultData</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SetupWizardStartController</apexClass>
+        <apexClass>blng__OrgDefaultDataTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SfdxAPI</apexClass>
+        <apexClass>blng__PaymentAllocateLightningController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SfdxAPIHelper</apexClass>
+        <apexClass>blng__PaymentAllocationDebitLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SfdxSchedulable</apexClass>
+        <apexClass>blng__PaymentAllocationDebitNoteLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ShowAttachmentDetailController</apexClass>
+        <apexClass>blng__PaymentAllocationDebitNoteLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SnapshotCommitService</apexClass>
+        <apexClass>blng__PaymentAllocationDebitNoteLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SnapshotDiffTriggerHandler</apexClass>
+        <apexClass>blng__PaymentAllocationDebitNoteLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__SprintVirtualWall</apexClass>
+        <apexClass>blng__PaymentAllocationDebitNoteLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__StaticCodeAnalysisSettingsExt</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__StepEditionController</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__StepTriggerHandler</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__StepTriggerHelper</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TakeGitSnapshot</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TeamCityAPI</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestApexTestResultTriggerHandler</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestApexTestSummaryEmail</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestAppHome</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestArtifactVersionTrigger</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestAttachmentTrigger</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestBackupBatch</apexClass>
+        <apexClass>blng__PaymentAllocationInvoiceServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestBackupNow</apexClass>
+        <apexClass>blng__PaymentAllocationParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestBatch</apexClass>
+        <apexClass>blng__PaymentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestBuildTaskEmailController</apexClass>
+        <apexClass>blng__PaymentDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestBuildTaskTrigger</apexClass>
+        <apexClass>blng__PaymentDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCMTestMethodUtilities</apexClass>
+        <apexClass>blng__PaymentDomainFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCheckFeaturesController</apexClass>
+        <apexClass>blng__PaymentDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCloneDeployment</apexClass>
+        <apexClass>blng__PaymentGateWay</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCloneSeleniumTestCaseExtension</apexClass>
+        <apexClass>blng__PaymentGateWayDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCodeScanHandshakeService</apexClass>
+        <apexClass>blng__PaymentGateWayStatus</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestComplianceFindingTriggerHandler</apexClass>
+        <apexClass>blng__PaymentGatewayParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestComplianceRuleTriggerHandler</apexClass>
+        <apexClass>blng__PaymentGateways</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestComplianceRuleTriggerHandler2</apexClass>
+        <apexClass>blng__PaymentGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestComplianceScanResultTriggerHandler</apexClass>
+        <apexClass>blng__PaymentMethodDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestContinuousIntegrationExtension</apexClass>
+        <apexClass>blng__PaymentMethodDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestContinuousIntegrationPermTrg</apexClass>
+        <apexClass>blng__PaymentMethodDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestContinuousIntegrationTrigger</apexClass>
+        <apexClass>blng__PaymentMethodDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCopadoAPI</apexClass>
+        <apexClass>blng__PaymentMethodService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCopadoSetup</apexClass>
+        <apexClass>blng__PaymentMethodServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCopadoSetupController</apexClass>
+        <apexClass>blng__PaymentRunDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCopadoSmartHelpController</apexClass>
+        <apexClass>blng__PaymentRunDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCreateTestScriptStepsController</apexClass>
+        <apexClass>blng__PaymentRunDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCreateUSScratchOrg</apexClass>
+        <apexClass>blng__PaymentRunFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCreditComp</apexClass>
+        <apexClass>blng__PaymentRunService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestCustomLookupComponentHelper</apexClass>
+        <apexClass>blng__PaymentRunServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDataFactory</apexClass>
+        <apexClass>blng__PaymentRunTestUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeployAPI</apexClass>
+        <apexClass>blng__PaymentRunVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeployCommits</apexClass>
+        <apexClass>blng__PaymentRunVOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeployJobHelper</apexClass>
+        <apexClass>blng__PaymentSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentEmailController</apexClass>
+        <apexClass>blng__PaymentSchedulerDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentExt</apexClass>
+        <apexClass>blng__PaymentSchedulerDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentFlowStepTrigger</apexClass>
+        <apexClass>blng__PaymentSchedulerDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentFlowStepTrigger2</apexClass>
+        <apexClass>blng__PaymentSchedulerDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentFlowTrigger</apexClass>
+        <apexClass>blng__PaymentSchedulerService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentFlowTrigger2</apexClass>
+        <apexClass>blng__PaymentSchedulerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentStepsUtils</apexClass>
+        <apexClass>blng__PaymentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentTaskExtension</apexClass>
+        <apexClass>blng__PaymentServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentTrigger</apexClass>
+        <apexClass>blng__PaymentTransactionDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentWizard</apexClass>
+        <apexClass>blng__PaymentTransactionDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentWizardFailures</apexClass>
+        <apexClass>blng__PaymentTransactionDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDeploymentWizardUseCases</apexClass>
+        <apexClass>blng__PaymentTransactionDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDxOperationController</apexClass>
+        <apexClass>blng__PaymentTransactionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDxPackaging</apexClass>
+        <apexClass>blng__PaymentTransactionServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDxPackagingOperations</apexClass>
+        <apexClass>blng__PaymentUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDynamicDatatableController</apexClass>
+        <apexClass>blng__PaymentValidator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestDynamicVariablesInterpreter</apexClass>
+        <apexClass>blng__PerUnitPricingModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEditBackupExtension</apexClass>
+        <apexClass>blng__PerUnitPricingModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEditGit</apexClass>
+        <apexClass>blng__PostInstallClass</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEditOrg</apexClass>
+        <apexClass>blng__PostInstallClassTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEditSeleniumSettingOverride</apexClass>
+        <apexClass>blng__PostTaxEntity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEncodePasswordTrigger</apexClass>
+        <apexClass>blng__PriceScheduleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestEnvironmentTrigger</apexClass>
+        <apexClass>blng__PricebookEntryDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestExecuteTestRunExtension</apexClass>
+        <apexClass>blng__PricingModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestExternalCI</apexClass>
+        <apexClass>blng__PricingModelService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestFeatureAccessHelper</apexClass>
+        <apexClass>blng__PricingModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestFeatureHelper</apexClass>
+        <apexClass>blng__ProductDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestFeatureHelperNegative</apexClass>
+        <apexClass>blng__ProfileDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGenerateStaticCodeAnalysisRuleSet</apexClass>
+        <apexClass>blng__ProrationFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGenericMDAPIDiffCSV</apexClass>
+        <apexClass>blng__QueryBuilder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitBackupTrigger</apexClass>
+        <apexClass>blng__QueryBuilderTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitCommitChangesController</apexClass>
+        <apexClass>blng__QueueableBalancePopulationOnAsset</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitCommitLookupController</apexClass>
+        <apexClass>blng__QueueableCreditNote</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitOrgCommitTriggerHandler</apexClass>
+        <apexClass>blng__QueueablePost</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitRepositoryTrigger</apexClass>
+        <apexClass>blng__QueueableRevenueRecognition</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGitSnapshot</apexClass>
+        <apexClass>blng__QueueableRevenueSchedule</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGlobalUtilities</apexClass>
+        <apexClass>blng__QueueableRevenueScheduleTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestGlobalUtilities_US_Behind</apexClass>
+        <apexClass>blng__QueueableRevenueTransaction</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestHttpCalloutBuilder</apexClass>
+        <apexClass>blng__QueueableRevenueTransactionTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestIndexMetadataJob</apexClass>
+        <apexClass>blng__QueueableTaxCalculator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestJobWaitingExtension</apexClass>
+        <apexClass>blng__QueueableTaxCalculatorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestJobsManager</apexClass>
+        <apexClass>blng__RRCustomFBFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestJsRemotingController</apexClass>
+        <apexClass>blng__RRMonthlyFBFunctionalTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestLicenseHelper</apexClass>
+        <apexClass>blng__RangePricingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestLicenseManagerController</apexClass>
+        <apexClass>blng__RefundCreditNoteLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestLightningReadyFieldsController</apexClass>
+        <apexClass>blng__RefundCreditNoteLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestLightningReadyRelatedListController</apexClass>
+        <apexClass>blng__RefundCreditNoteLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMaddAddOrg</apexClass>
+        <apexClass>blng__RefundCreditNoteLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestManageEnvVarsExt</apexClass>
+        <apexClass>blng__RefundDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestManageGitBranchesController</apexClass>
+        <apexClass>blng__RefundDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestManageSeleniumTestingExt</apexClass>
+        <apexClass>blng__RefundFormController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestManualTaskComponentController</apexClass>
+        <apexClass>blng__RefundLightningController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMassAddRunsToGroup</apexClass>
+        <apexClass>blng__RefundLightningControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMassAddToReleaseExtension</apexClass>
+        <apexClass>blng__RefundLineCreditNoteLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMassBackPromotion</apexClass>
+        <apexClass>blng__RefundLineCreditNoteLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMetadataTypesHelper</apexClass>
+        <apexClass>blng__RefundLinePaymentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestMetadataselectorExtension</apexClass>
+        <apexClass>blng__RefundLinePaymentDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestNewApexTestResultEmail</apexClass>
+        <apexClass>blng__RefundLinePaymentDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestNewBuildTaskEmailController</apexClass>
+        <apexClass>blng__RefundLinePaymentDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestNewDeploymentEmailController</apexClass>
+        <apexClass>blng__RefundParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestNotificationsParser</apexClass>
+        <apexClass>blng__RefundPaymentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestOrgDiffTrigger</apexClass>
+        <apexClass>blng__RefundPaymentServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestOrgTrigger</apexClass>
+        <apexClass>blng__RefundService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPermissionSetExplorerExt</apexClass>
+        <apexClass>blng__RefundServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPersonaAssignmentTrigger</apexClass>
+        <apexClass>blng__RequiredInfoMissingException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPipelineSettingsComponentController</apexClass>
+        <apexClass>blng__RevenueAdjustmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPipelineWizard</apexClass>
+        <apexClass>blng__RevenueAdjustmentDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPostInstallClass</apexClass>
+        <apexClass>blng__RevenueAdjustmentDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestProjectTrigger</apexClass>
+        <apexClass>blng__RevenueAdjustmentLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPromoteChangesExtension</apexClass>
+        <apexClass>blng__RevenueAdjustmentLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPromotionEditExtension</apexClass>
+        <apexClass>blng__RevenueAdjustmentLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPromotionTriggerHandler</apexClass>
+        <apexClass>blng__RevenueAdjustmentLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestPromotionUseCases</apexClass>
+        <apexClass>blng__RevenueAdjustmentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestQueryBuilderController</apexClass>
+        <apexClass>blng__RevenueAgreementDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestQuickCreateUserStoriesController</apexClass>
+        <apexClass>blng__RevenueAgreementFunctionalTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestRegisterCopado</apexClass>
+        <apexClass>blng__RevenueAgreementService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestReleaseExt</apexClass>
+        <apexClass>blng__RevenueAgreementServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestResolveConflictsController</apexClass>
+        <apexClass>blng__RevenuePeriod</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestReturnObject</apexClass>
+        <apexClass>blng__RevenueRecognition</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestRunTestGroupBatch</apexClass>
+        <apexClass>blng__RevenueRecognitionCalculator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestRunTriggerHandler</apexClass>
+        <apexClass>blng__RevenueRecognitionInput</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestRunTriggerHelper</apexClass>
+        <apexClass>blng__RevenueRecognitionModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSalesforceFlowStepController</apexClass>
+        <apexClass>blng__RevenueRecognitionParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestScheduledJobs</apexClass>
+        <apexClass>blng__RevenueRecognitionParameterTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestScratchOrgSettings</apexClass>
+        <apexClass>blng__RevenueRecognitionResponse</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumGroupTriggers</apexClass>
+        <apexClass>blng__RevenueRecognitionRuleAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestCasePromoteRollback</apexClass>
+        <apexClass>blng__RevenueRecognitionRuleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestCaseViewEdit</apexClass>
+        <apexClass>blng__RevenueRecognitionRuleService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestQuickRun</apexClass>
+        <apexClass>blng__RevenueRecognitionRuleServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestResults</apexClass>
+        <apexClass>blng__RevenueRecognitionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestRunResults</apexClass>
+        <apexClass>blng__RevenueRecognitionServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSeleniumTestRunTrigger</apexClass>
+        <apexClass>blng__RevenueRecognitionTestBase</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSettings</apexClass>
+        <apexClass>blng__RevenueRecognitionTreatmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSnapshotDifferenceExtension</apexClass>
+        <apexClass>blng__RevenueRecognitionTreatmentDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestSprintVirtualWall</apexClass>
+        <apexClass>blng__RevenueRecognitionTreatmentDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestStaticCodeAnalysisSettingsExt</apexClass>
+        <apexClass>blng__RevenueRecognitionUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestStepEditionController</apexClass>
+        <apexClass>blng__RevenueRuleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestTestBatch</apexClass>
+        <apexClass>blng__RevenueRuleDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestTestMethodsUtilities</apexClass>
+        <apexClass>blng__RevenueSchedule</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestTestRunTriggerHandler</apexClass>
+        <apexClass>blng__RevenueScheduleAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryApexTestResultsExtension</apexClass>
+        <apexClass>blng__RevenueScheduleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryAssignmentSetController</apexClass>
+        <apexClass>blng__RevenueScheduleDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryCodeAnalysisRequest</apexClass>
+        <apexClass>blng__RevenueScheduleDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryCommitIntermediaryExt</apexClass>
+        <apexClass>blng__RevenueScheduleFinancePeriodInputFinder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryCommitTrigger</apexClass>
+        <apexClass>blng__RevenueScheduleService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryComplianceScan</apexClass>
+        <apexClass>blng__RevenueScheduleServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryExt</apexClass>
+        <apexClass>blng__RevenueTransactionDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryImportSetController</apexClass>
+        <apexClass>blng__RevenueTransactionDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryManagement</apexClass>
+        <apexClass>blng__RevenueTransactionDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryMetadataExt</apexClass>
+        <apexClass>blng__RevenueTransactionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryReadyForPromotionExtension</apexClass>
+        <apexClass>blng__RevenueTransactionServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStorySelectCommits</apexClass>
+        <apexClass>blng__RevenueTreatmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUserStoryTriggerHandler</apexClass>
+        <apexClass>blng__RevenueTreatmentDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestUtilities</apexClass>
+        <apexClass>blng__RevenueTreatmentService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestValidateOrg</apexClass>
+        <apexClass>blng__RevenueTreatmentServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestViewDeploymentExtension</apexClass>
+        <apexClass>blng__SObjectDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestViewOrgDiffCSV</apexClass>
+        <apexClass>blng__SObjectDescribe</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestWebhookAPI</apexClass>
+        <apexClass>blng__SObjectDescribeTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TestWebhookLookupController</apexClass>
+        <apexClass>blng__SObjectDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_AutomationTemplate</apexClass>
+        <apexClass>blng__SObjectFinancePeriodInputFinder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_BranchManagementExtension</apexClass>
+        <apexClass>blng__SObjectUnitOfWork</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_BurnDownItemScheduler</apexClass>
+        <apexClass>blng__SObjectUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CCDFullCycle</apexClass>
+        <apexClass>blng__SObjectUtilsTests</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CCD_CreateMetadataGroupItem</apexClass>
+        <apexClass>blng__SObjectsUnitOfWork</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CCD_CreateQualityGate</apexClass>
+        <apexClass>blng__SaveCreditNotesRequest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CMUtilities</apexClass>
+        <apexClass>blng__SecurityUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CliProxy</apexClass>
+        <apexClass>blng__SecurityUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ConnectionBehaviorInfoController</apexClass>
+        <apexClass>blng__ServiceContructable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ConnectionBehaviorTriggerHandler</apexClass>
+        <apexClass>blng__Services</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CopadoAuthorization</apexClass>
+        <apexClass>blng__SlabPricingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CopadoLicensesComponentController</apexClass>
+        <apexClass>blng__StandardTaxCalculation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_CopadoRollup</apexClass>
+        <apexClass>blng__StandardTaxCalculationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_DeploymentExtension</apexClass>
+        <apexClass>blng__StandardTaxEntity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_IntermediaryExtension</apexClass>
+        <apexClass>blng__StringBuilder</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_OverrideFiltersExtension</apexClass>
+        <apexClass>blng__StringBuilderTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_OverviewExtension</apexClass>
+        <apexClass>blng__StringUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_SelectChangesExtension</apexClass>
+        <apexClass>blng__StringUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_SelectDataTemplateExtension</apexClass>
+        <apexClass>blng__SubInvoiceLineDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_SourceExtension</apexClass>
+        <apexClass>blng__SubInvoiceLineDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_SummaryExtension</apexClass>
+        <apexClass>blng__SubInvoiceLineDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DW_TargetExtension</apexClass>
+        <apexClass>blng__SubInvoiceLineDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DataTemplateImportExtension</apexClass>
+        <apexClass>blng__SubInvoiceLineService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DataTemplateObjectResultController</apexClass>
+        <apexClass>blng__SubInvoiceLineServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DataTemplateSetupExtension</apexClass>
+        <apexClass>blng__SystemPermissionUtility</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_DataTemplateTaskComponent</apexClass>
+        <apexClass>blng__SystemPermissionUtilityTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_Encoder</apexClass>
+        <apexClass>blng__TargetDateMissingException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ErrorHandlingComponentController</apexClass>
+        <apexClass>blng__TaxAddressTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_GitCommitMain</apexClass>
+        <apexClass>blng__TaxCalculationParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_GitCommitMainNegative</apexClass>
+        <apexClass>blng__TaxCalculationParameterTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_KanbanUI</apexClass>
+        <apexClass>blng__TaxCalculationResults</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ManageRepositoryBranchesController</apexClass>
+        <apexClass>blng__TaxCalculationResultsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_NewPipelineExtension</apexClass>
+        <apexClass>blng__TaxCalculationStandardService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_OrgAuthenticationController</apexClass>
+        <apexClass>blng__TaxCalculationXMLGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_OverrideTemplateFiltersController</apexClass>
+        <apexClass>blng__TaxConfigurationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_PipelineDiagramExtension</apexClass>
+        <apexClass>blng__TaxEngine</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_PipelineManagerExtension</apexClass>
+        <apexClass>blng__TaxEngines</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_PipelineSettingsComponentController</apexClass>
+        <apexClass>blng__TaxEntity</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_PipelineTemplatesController</apexClass>
+        <apexClass>blng__TaxIntegrationDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ReleaseDetailService</apexClass>
+        <apexClass>blng__TaxIntegrationDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ReleaseStatusService</apexClass>
+        <apexClass>blng__TaxParameters</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ReleaseTailService</apexClass>
+        <apexClass>blng__TaxParametersTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_ScheduleCronExpressionController</apexClass>
+        <apexClass>blng__TaxProcessor</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_SetupWizardFinishController</apexClass>
+        <apexClass>blng__TaxRateDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_SetupWizardStartController</apexClass>
+        <apexClass>blng__TaxRateDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_WorkDisplayService</apexClass>
+        <apexClass>blng__TaxRateDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_WorkPushService</apexClass>
+        <apexClass>blng__TaxRateDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_WorkSetService</apexClass>
+        <apexClass>blng__TaxResults</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Test_WorkSubmitService</apexClass>
+        <apexClass>blng__TaxResultsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__TriggerFactory</apexClass>
+        <apexClass>blng__TaxRuleDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UIDesignHelper</apexClass>
+        <apexClass>blng__TaxTreatmentDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UnlockPackageService</apexClass>
+        <apexClass>blng__TestClassforBatchScript</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UnlockedArtifact</apexClass>
+        <apexClass>blng__TestData</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UnmanagedPackageMetadataService</apexClass>
+        <apexClass>blng__TestDataBulkCreate</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UpdateDeloymentJobs</apexClass>
+        <apexClass>blng__TestDataTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryApexTestResultsExtension</apexClass>
+        <apexClass>blng__TestMocks</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryAssignmentSetController</apexClass>
+        <apexClass>blng__Tier</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryChangeEventTriggerHandler</apexClass>
+        <apexClass>blng__TierPricingModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCodeAnalysisRequestController</apexClass>
+        <apexClass>blng__TieredPricingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCommitFiles</apexClass>
+        <apexClass>blng__TimeCharge</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCommitIntermediaryExt</apexClass>
+        <apexClass>blng__TimeChargeTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCommitService</apexClass>
+        <apexClass>blng__TransactionAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCommitTriggerHandler</apexClass>
+        <apexClass>blng__TransactionDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCommitTriggerHelper</apexClass>
+        <apexClass>blng__TransactionDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryComplianceScanController</apexClass>
+        <apexClass>blng__TransactionFrequency</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryCounter</apexClass>
+        <apexClass>blng__TransactionMapperAPI</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryExt</apexClass>
+        <apexClass>blng__TransactionParameter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryImportSetController</apexClass>
+        <apexClass>blng__TransactionResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryMetadataExt</apexClass>
+        <apexClass>blng__TransactionResultService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryReadyForPromoteExtension</apexClass>
+        <apexClass>blng__TransactionResultServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStorySelectCommits</apexClass>
+        <apexClass>blng__TransactionResultTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryTriggerHandler</apexClass>
+        <apexClass>blng__TransactionService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__UserStoryTriggerHelper</apexClass>
+        <apexClass>blng__TransactionServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__Utilities</apexClass>
+        <apexClass>blng__TransactionUseCase</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ValidateOrgExtension</apexClass>
+        <apexClass>blng__TransactionVO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__VersionPicklistValues</apexClass>
+        <apexClass>blng__TransactionVOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__ViewDeploymentExtension</apexClass>
+        <apexClass>blng__TriggerManager</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WebhookAPI</apexClass>
+        <apexClass>blng__UBPPricingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WebhookSchedulable</apexClass>
+        <apexClass>blng__UsageDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WizardHelper</apexClass>
+        <apexClass>blng__UsageDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WizardUtilsController</apexClass>
+        <apexClass>blng__UsageDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkDisplayService</apexClass>
+        <apexClass>blng__UsageDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkManager</apexClass>
+        <apexClass>blng__UsageSchedulable</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkManagerTest</apexClass>
+        <apexClass>blng__UsageService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkPushService</apexClass>
+        <apexClass>blng__UsageServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkSetService</apexClass>
+        <apexClass>blng__UsageSummaryDAO</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__WorkSubmitService</apexClass>
+        <apexClass>blng__UsageSummaryDAOTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__appHome</apexClass>
+        <apexClass>blng__UsageSummaryDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__cloneDeploymentExtension</apexClass>
+        <apexClass>blng__UsageSummaryDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__creditsCompController</apexClass>
+        <apexClass>blng__UsageSummaryService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__fflib_SObjectDescribe</apexClass>
+        <apexClass>blng__UsageSummaryServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__queryBuilderController</apexClass>
+        <apexClass>blng__UsageTestBase</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__rateCopadoController</apexClass>
+        <apexClass>blng__UsageTestUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__snapshotDifferenceExtension</apexClass>
+        <apexClass>blng__VolumePricingModel</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__testHttpCalloutMock</apexClass>
+        <apexClass>blng__VolumePricingTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__testMethodUtilities</apexClass>
+        <apexClass>blng__customLookUpController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__usersStepController</apexClass>
+        <apexClass>blng__customLookUpControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>copado__webhookLookupController</apexClass>
+        <apexClass>blng__lightningAppController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -4441,11 +7762,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Location.TimeZone</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Location.VisitorAddressId</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9227,10 +12543,51 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+        <recordType>Account.Person_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+        <recordType>Account.Person_Account_2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>AccountBrand-Account Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>AccountContactRelation-Account Contact Relationship Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlan-Action Plan Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlanTemplate-Action Plan Template Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlanTemplateItem-Action Plan Template Item Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlanTemplateItemValue-Action Plan Template Item Value Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlanTemplateVersion-Action Plan Template Version Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ActionPlanTmplItmAssessmentInd-Action Plan Template Item Assessment Indicator Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Address-Address Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AssessmentIndicatorDefinition-Assessment Indicator Definition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AssessmentTask-Assessment Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AssessmentTaskContentDocument-Assessment Task Content Document Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AssessmentTaskOrder-Assessment Task Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Asset-Asset Layout</layout>
@@ -9281,6 +12638,9 @@
         <layout>CaseClose-Close Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CaseInteraction-Formato de noticias en tiempo real de Caso</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CommunityMemberLayout-Community Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9320,6 +12680,9 @@
         <layout>CreditMemoLine-Credit Memo Line Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Crisis-Crisis Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>DandBCompany-D%26B Company Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9342,6 +12705,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Employee-Employee Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>EmployeeCrisisAssessment-Employee Crisis Assessment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Event-Event Layout</layout>
@@ -9387,6 +12753,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>LegalEntity-Legal Entity Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>LiveChatTranscriptActive-Chat Transcript %28In Progress%29 Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>LiveChatTranscriptWaiting-Chat Transcript %28Waiting%29 Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Location-Location Layout</layout>
@@ -9457,6 +12829,9 @@
         <layout>ProductConsumptionSchedule-Product Consumption Schedule Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>ProductTransfer-Product Transfer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>QuickText-Quick Text Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9487,6 +12862,12 @@
         <layout>ReturnOrderLineItem-Return Order Line Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SOSSession-SOS Session Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SOSSessionActivity-SOS Session Activity Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Scorecard-Scorecard Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9514,6 +12895,9 @@
         <layout>SessionHijackingEventStore-Session Hijacking Event Store Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Shipment-Shipment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SkillRequirement-Skill Requirement Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -9533,6 +12917,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>User-User Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>UserAlt-User Profile Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>UserAppMenuItem-Application Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>UserProvAccount-User Provisioning Account Layout</layout>
@@ -9579,6 +12969,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>AIRecordInsight</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Account</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -9615,6 +13014,60 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentIndicatorDefinition</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentTask</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentTaskContentDocument</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentTaskDefinition</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentTaskIndDefinition</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>AssessmentTaskOrder</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Asset</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -9637,6 +13090,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AssetRelationship</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9644,6 +13106,60 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>AssetStatePeriod</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AssetTokenEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AssignedResource</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AssociatedLocation</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AsyncOperationEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AsyncOperationStatus</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Attachment</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9682,6 +13198,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>BatchApexErrorEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9691,6 +13216,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CampaignMember</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9698,6 +13232,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>Case</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CaseComment</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9725,6 +13268,42 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>ChannelProgramMember</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ChatterActivity</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CollaborationGroup</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CollaborationGroupMember</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CollaborationGroupRecord</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9761,6 +13340,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>CommSubscriptionTiming</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ConsumptionRate</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9835,6 +13423,42 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ContentDistribution</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ContentDocument</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ContentDocumentLink</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ContentVersion</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9851,6 +13475,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>CreditMemo</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CreditMemoLine</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9898,6 +13531,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>DuplicateRecordItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9905,6 +13547,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>DuplicateRecordSet</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>EmailMessage</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9916,6 +13567,33 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Event</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FeedComment</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>FeedItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9923,6 +13601,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>Idea</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>IdeaComment</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -9988,6 +13675,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>LogoutEventStream</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -9995,6 +13691,24 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>Macro</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MacroUsage</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>MessagingDeliveryError</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -10015,6 +13729,24 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>NetworkMember</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Note</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10033,6 +13765,24 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OpportunityContactRole</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OpportunityLineItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10040,6 +13790,78 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>Order</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrderItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrgDeleteRequest</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrgLifecycleNotification</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrgMetric</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrgMetricScanResult</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OrgMetricScanSummary</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>OtherComponentTask</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Partner</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -10087,6 +13909,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>PlatformStatusAlertEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10105,6 +13936,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ProcessExceptionEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10112,6 +13952,51 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>Product2</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ProductConsumptionSchedule</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>ProductFulfillmentLocation</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>ProductItem</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>ProductTransfer</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>PromptAction</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -10132,12 +14017,84 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>QuickTextUsage</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Recommendation</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>RecordAction</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>RemoteKeyCalloutEvent</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ResourceAbsence</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ResourcePreference</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>ReturnOrder</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ReturnOrderLineItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>SOSSession</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -10159,6 +14116,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ServiceResourceSkill</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10168,6 +14134,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ServiceTerritoryMember</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -10175,6 +14150,33 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>ServiceTerritoryWorkType</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SetupAssistantStep</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Shipment</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SkillRequirement</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -10192,6 +14194,123 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>StreamingChannel</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Task</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>TimeSlot</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Topic</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>TopicAssignment</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>User</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserProvAccount</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserProvAccountStaging</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserProvMockTarget</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserProvisioningLog</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>UserProvisioningRequest</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Visit</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>VisitedParty</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Visitor</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -10282,6 +14401,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>copado__Build_Task__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>copado__Bundled_UserStory__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -11010,6 +15138,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>copado__User_Story_Bundle__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>copado__User_Story_Commit__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -11110,6 +15247,526 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>SBQQ__AccessError</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AddAssets</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AddProducts</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AddProductsGuided</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AddSubscriptions</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AdditionalDocumentHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AmendContract</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AmendReQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AssetSelector</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__AssetSelectorAmend</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__BlockPriceHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuoteFromQuoteLine</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CalculateQuoteFromQuoteLineGroup</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneLineItems</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ClonePriceRule</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneProduct</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneProductChildren</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneProductRule</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneQuoteTemplate</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CloneQuoteTemplateRelated</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ConfigurationAttributeHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ConfigurationRuleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ConfigureProducts</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ContractSave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ContractSelector</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ContractedPriceHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CostHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CreateOrder</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CreateOrderFromQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CustomActionsHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CustomScriptHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__CustomScriptSave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__DiscountCategoryHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__DiscountScheduleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__DiscountTierHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditBlockPrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditDiscountTiers</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditQuoteLines</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditRelatedContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditSettings</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditTemplateContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EditWebQuoteLines</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EffectiveContractedPrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EmailDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__EnhancedQuoteDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ErrorConditionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__FavoritesHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__FindAndAmendContract</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__GenerateDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__GenerateOrder</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__GenerateWebDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ImportColumnHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ImportFormatHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ImportLines</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__InactiveUsersWithPS</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__LineColumnHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__LineItemsContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__LocalizationHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__LookupQueryHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewDiscountSchedule</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewOpportunityRelatedContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewQuoteRelatedContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewTemplateContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__NewTemplateSectionRelatedContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OAuthRedirect</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OpportunitySave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OptionConstraintHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OrderContracting</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OrderLineSelector</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__OrderSave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PreviewDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PriceActionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PriceConditionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PriceDimensionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PriceRuleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PriceScheduleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProcessInputConditionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProcessInputHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProcessInputValuesHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProductActionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProductFeatureHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProductOptionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ProductRuleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__PslUserCsv</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteDocumentHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteLineGroupHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteLineHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteLineSave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteProcessHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteSave</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteTemplateHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteTermEditor</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteTermHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__QuoteTermsContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RecordJobHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RefreshMultipleQuotePrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RefreshMultipleWebQuotePrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RefreshQuotePrice</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RefreshQuotePrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RefreshWebQuotePrices</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__RenewContracts</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SearchFilterHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SelectContract</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SelectContractOpp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SelectUpgradeProducts</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SelectUpgradedAssets</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SiteCloneQuote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SiteConfigureProducts</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SolutionGroupHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SubscribedAssetHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SubscriptionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__SummaryVariableHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__TemplateContentHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__TemplateSectionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__TermConditionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__Theme</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ThemeHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ThemeLookup</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__Translations</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__Upgrade</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__UpgradeSourceHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__UsersNeedPSL</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ViewDocument</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__ViewTemplateContent</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SBQQ__sb</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>SiteLogin</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -11135,6 +15792,126 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>UnderConstruction</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__ApplyTaxOnCreditNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__ApplyTaxOnDebitNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__BillingConfigure</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__CancelTaxOnCreditNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__CancelTaxOnDebitNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__EstimateTaxOnCreditNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__EstimateTaxOnDebitNote</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__InvoiceSchedulerHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__NegativeInvoicePage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__PaymentSchedulerHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__RefundOnPaymentTransaction</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__ValidateRevenueTreatment</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__accountVirtualTerminal</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__allocatePayment</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__cancelInvoice</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__checkOut</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__createFinancePeriods</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__creditByInvoice</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__creditInvoice</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__creditNoteLineAllocation</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__debitNoteLineAllocation</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__invoiceRunCleanUp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__invoiceRunPostInvoice</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__paymentMethodPage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__paymentRunCleanUp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__refundPage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__revenueDistributionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__revenueScheduleHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__revenueTransactionHelp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>blng__virtualterminal</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -11777,6 +16554,20 @@
         <apexPage>copado__viewOrg</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>demoAdapterPage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Account.Person_Account</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Account.Person_Account_2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
@@ -12152,6 +16943,26 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-AssessmentIndicatorDefinition</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-AssessmentTask</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-AssessmentTaskContentDocument</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-AssessmentTaskDefinition</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-AssessmentTaskOrder</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Asset</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
@@ -12444,6 +17255,22 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-ProductFulfillmentLocation</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProductItem</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProductRequired</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ProductTransfer</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-ProfilePlatformFeed</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -12472,6 +17299,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-SOSSession</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-ServiceAppointment</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -12481,6 +17312,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-ServiceTerritory</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Shipment</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -12508,6 +17343,18 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-Visit</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-VisitedParty</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Visitor</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-WorkType</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -12528,716 +17375,4 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ActivateContract</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ActivateOrder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ActivitiesAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AddDirectMessageMembers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AllowUniversalSearch</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AllowViewKnowledge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ApexRestServices</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ApiEnabled</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AssignPermissionSets</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AssignTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>AuthorApex</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>BulkMacrosAllowed</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanAccessCE</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanInsertFeedSystemFields</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanUseNewDashboardBuilder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CanVerifyComment</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChangeDashboardColors</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterEditOwnPost</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterEditOwnRecordPost</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterFileLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterInternalUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterInviteExternalUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterOwnGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ConnectOrgToEnvironmentHub</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ConsentApiUpdate</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ContentAdministrator</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ContentWorkspaces</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ConvertLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateCustomizeDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateCustomizeFilters</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateCustomizeReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateDashboardFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateLtngTempFolder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreatePackaging</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateReportFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CreateWorkspaces</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>CustomizeApplication</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>DataExport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>DelegatedTwoFactor</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>DeleteActivatedContract</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>DeleteTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>DistributeFromPersWksp</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditActivatedOrders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditBillingInfo</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditBrandTemplates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditCaseComments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditEvent</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditHtmlTemplates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditKnowledge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditMyDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditMyReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditOppLineItemUnitPrice</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicDocuments</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicFilters</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditPublicTemplates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditReadonlyFields</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditTask</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EmailMass</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EmailSingle</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EnableCommunityAppLauncher</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EnableNotifications</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ExportReport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>GiveRecognitionBadge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ImportCustomObjects</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ImportLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ImportPersonal</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>InstallPackaging</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>LightningConsoleAllowedForUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>LightningExperienceUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ListEmailSend</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageAnalyticSnapshots</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageAuthProviders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageBusinessHourHolidays</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageC360AConnections</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCMS</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCallCenters</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCases</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCategories</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCertificates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageClearbitIntegration</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageContentPermissions</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageContentProperties</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageContentTypes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCustomPermissions</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageCustomReportTypes</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDashbdsInPubFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDataCategories</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDataIntegrations</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageDynamicDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageEmailClientConfig</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageExchangeConfig</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageHealthCheck</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageHubConnections</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageInteraction</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageInternalUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageIpAddresses</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageKnowledge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageKnowledgeImportExport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageLoginAccessPolicies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageMobile</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageNetworks</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePackageLicenses</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePartners</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePasswordPolicies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageProfilesPermissionsets</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePropositions</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManagePvtRptsAndDashbds</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageRecommendationStrategies</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageReleaseUpdates</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageRemoteAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageReportsInPubFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageRoles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageSearchPromotionRules</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageSharing</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageSolutions</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageSubscriptions</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageSynonyms</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageUnlistedGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageZapierIntegration</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>MassInlineEdit</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>MergeTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ModerateChatter</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ModifyAllData</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ModifyDataClassification</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ModifyMetadata</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>NewReportBuilder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>Packaging2</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>Packaging2Delete</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>PrivacyDataAccess</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>PublishPackaging</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>RemoveDirectMessageMembers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ResetPasswords</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>RunReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ScheduleReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SelectFilesFromSalesforce</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SendCustomNotifications</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SendSitRequests</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ShareInternalArticles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ShowCompanyNameAsUserBadge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SolutionImport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubmitMacrosAllowed</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeDashboardRolesGrps</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeDashboardToOtherUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeReportRolesGrps</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeReportToOtherUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeReportsRunAsUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeToLightningDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubscribeToLightningReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>TransactionalEmailSend</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>TransferAnyCase</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>TransferAnyEntity</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>TransferAnyLead</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>UseReturnOrder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>UseReturnOrderAPIs</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>UseTeamReassignWizards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>UseWebLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewAllData</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewAllProfiles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewAllUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewDataAssessment</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewDataCategories</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewDataLeakageEvents</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewEventLogFiles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewFlowUsageAndFlowEventData</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewHealthCheck</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewHelpLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewMyTeamsDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPlatformEvents</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPublicDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPublicReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewRoles</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewSetup</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewUserPII</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>WorkCalibrationUser</name>
-    </userPermissions>
 </Profile>
