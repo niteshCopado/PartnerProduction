@@ -1521,8 +1521,11 @@
         <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.ACCOUNT_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.TYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DANDB_COMPANY</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <webLinks>
         <fullName>Billing</fullName>
         <availability>online</availability>
