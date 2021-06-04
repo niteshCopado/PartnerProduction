@@ -8,7 +8,7 @@
     <applicationVisibilities>
         <application>SBQQ__QuoteQuickly</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>blng__QuotetoCash</application>
