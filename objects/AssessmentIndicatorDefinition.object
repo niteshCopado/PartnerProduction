@@ -138,6 +138,10 @@
     <fields>
         <fullName>Name</fullName>
     </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
     <listViews>
         <fullName>All_AssessmentIndicatorDefinition</fullName>
         <filterScope>Everything</filterScope>

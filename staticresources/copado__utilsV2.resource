@@ -2,7 +2,7 @@ utilsV2 = {
     method: 'GET',
     onSuccessCB: function(res){},
     onFailureCB: function(res){},
-
+    
     getRemote: function(url){
     if(Copado_Licenses.hasMultiLicense && !(Copado_Licenses.hasCopado || Copado_Licenses.hasCCM 
         || Copado_Licenses.hasCST || Copado_Licenses.hasCCH) ) {
@@ -40,8 +40,8 @@ utilsV2 = {
                 if(me.onFailureCB){
                     me.onFailureCB(obj);
                 }
-                else{
-                    var errorMsgs = (obj.messages && obj.messages.length>0)?obj.messages.join('\n'):'Unexpected Error. Please contact support@copado.com';
+                else{ 
+                    var errorMsgs = (obj.messages && obj.messages.length>0)?obj.messages.join('\n'): copadoLabels.JAVASCRIPT_GENERAL_ERROR;
                     alert(errorMsgs);
                     console.error('Error Messages: ', errorMsgs); 
                 }

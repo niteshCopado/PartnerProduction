@@ -49,6 +49,14 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
+        <label><!-- Auto Number Field --></label>
+        <name>Auto_Number_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Text field Data --></label>
+        <name>New_Text_field__c</name>
+    </fields>
+    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>
@@ -187,6 +195,11 @@
         <name>copado__Failing_Methods__c</name>
     </fields>
     <fields>
+        <label><!-- Feature --></label>
+        <name>copado__Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
@@ -207,6 +220,10 @@
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
         <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
         <help><!-- Latest Compliance Scan execution date. --></help>
@@ -723,11 +740,11 @@
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points Other --></label>
+        <label><!-- Planned Points --></label>
         <name>copado__Story_Points_Other__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points SFDC --></label>
+        <label><!-- Actual Points --></label>
         <name>copado__Story_Points_SFDC__c</name>
     </fields>
     <fields>
@@ -759,6 +776,11 @@
         <help><!-- Number of triggers without the minimum required coverage. --></help>
         <label><!-- Triggers Without Coverage --></label>
         <name>copado__Triggers_Without_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature --></label>
+        <name>copado__US_Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Short description of the User Story or requirement. Technical and non-technical team members should be able to understand the description. --></help>
@@ -858,6 +880,10 @@
     <webLinks>
         <label><!-- Mass_Add_User_Stories_Sprint --></label>
         <name>copado__Mass_Add_User_Stories_Sprint</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Open_Org --></label>
+        <name>copado__Open_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Perform_Validation --></label>

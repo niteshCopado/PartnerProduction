@@ -23,5 +23,5 @@
         <label><!-- Timeout --></label>
         <name>copado__Timeout__c</name>
     </fields>
-    <startsWith><!-- Consonant --></startsWith>
+    
 </CustomObjectTranslation>

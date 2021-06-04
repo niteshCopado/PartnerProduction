@@ -1,0 +1,625 @@
+<apex:page standardStylesheets="false" cache="false" sidebar="false" controller="blng.ControllerForSitePayment" showHeader="false" tabStyle="Account" title="CheckOut" >
+   <apex:includeLightning />
+   <apex:stylesheet value="{!URLFOR($Resource.blng__blng_slds, 'assets/styles/salesforce-lightning-design-system.css')}"/>
+   <apex:includeScript value="{!URLFOR($Resource.blng__blng_slds, '/js/jquery.js')}"  />
+   <script >
+        $(document).ready(function() {
+            var slistOfCardTypes = '{!JSENCODE(cardTypes)}';
+            var listOfCardTypes = JSON.parse(slistOfCardTypes);
+            $.each( listOfCardTypes, function( index, value ){
+            if(value == 'Visa'){
+                var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Visa.png')}' /></td>";
+              $(".cardTypeClass").after(html);        
+            }else if(value == 'Mastercard'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Mastercard.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'American Express'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/AmericanExpress.png' )}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == '2CO'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/2CO.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Cirrus'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Cirrus.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Delta'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Delta.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Direct Debit'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/DirectDebit.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Discover'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Discover.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Ebay'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Ebay.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Maestro'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Maestro.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Moneybookers'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'images/Moneybookers.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'PayPal'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/PayPal.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Sagepay'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Sagepay.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Solo'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'images/Solo.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Switch'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/Switch.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Visa Electron'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/VisaElectron.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }else if(value == 'Western Union'){
+              var html = "<td><img src='{!URLFOR($Resource.blng_slds, 'assets/images/WesternUnion.png')}'/></td>";
+              $(".cardTypeClass").after(html);
+            }
+            });
+            disableTextBoxes();
+            setStateValue();
+            });
+        //script to disable right click
+        var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||  document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false");     
+        function disableTextBoxes()
+        {     
+            var firstname = document.getElementById('{!JSENCODE($Component.form1.firstnameId)}'); 
+            firstname.setAttribute("autocomplete", "off");
+            
+            var lastname = document.getElementById('{!JSENCODE($Component.form1.lastnameId)}'); 
+            lastname.setAttribute("autocomplete", "off");
+            
+            var card = document.getElementById('{!JSENCODE($Component.form1.cardNumberId)}'); 
+            card.setAttribute("autocomplete", "off");
+            
+            var cvv = document.getElementById('{!JSENCODE($Component.form1.cvvId)}'); 
+            cvv.setAttribute("autocomplete", "off");
+            
+            var BankAccountNumber = document.getElementById('{!$Component.form1.BankAccountNumberId}');
+            BankAccountNumber.setAttribute("autocomplete", "off");
+            
+            var BankName = document.getElementById('{!$Component.form1.BankNameId}')
+            BankName.setAttribute("autocomplete", "off");
+            
+            var BankRoutingCode = document.getElementById('{!$Component.form1.BankRoutingCodeId}');
+            BankRoutingCode.setAttribute("autocomplete", "off");
+       }
+       function enableAutoPay(ActiveId,AutoId)
+       {
+            var autoPayValue = document.getElementById(AutoId);
+            if(ActiveId)
+            {
+                autoPayValue.disabled = false;
+            }
+            else
+            {
+                autoPayValue.disabled = true;
+                autoPayValue.checked = false;
+            }l
+       }
+
+        function disableButtons()
+        {
+            document.getElementById('{!JSENCODE($Component.form1.PayNowButtonId)}').disabled=true;
+            document.getElementById('{!JSENCODE($Component.form1.BackButtonId)}').disabled=true;
+
+            document.getElementById('{!JSENCODE($Component.form1.PayNowButtonId)}').value="Processing";
+            document.getElementById('{!JSENCODE($Component.form1.BackButtonId)}').value="Processing";
+        }
+   </script>
+	
+    <apex:form forceSSL="true" id="form1" html-autocomplete="off">   
+    <br/><div class="slds-align--absolute-center"><apex:image url="{!URLFOR($Resource.blng__logo)}" height="10%" width="10%"/></div>
+    <div class="slds-align--absolute-center">
+    <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-fade-in-open slds-align--absolute-center" style="width:50%">
+    <!-- <apex:image rendered="{!isLogoExist}" url="{!baseURL}{!$Site.Prefix}/resource/logo"  /> --> 
+    <div class="slds-card__body ">
+        <apex:pageMessages id="pageMesaages"/>
+        <br/>
+            <apex:outputPanel rendered="{!invoice != null && invoice.blng__Balance__c > 0 && (!CreditCard || !ACH)}">
+                    <div class="slds-card" >
+                        <div class="slds-page-header slds-box slds-theme--alt-inverse" role="banner" >
+                            <div class="slds-media slds-media--center">
+                                <div class="slds-media__body">
+                                    <p class="slds-text-heading--medium slds-truncate slds-align-middle" title="Invoice">Invoice Details</p>
+                                </div>
+                            </div>
+                        </div>
+                           <table class="slds-table--bordered slds-table slds-table--cell-buffer slds-m-bottom--medium">
+                            <tr>
+                                <td data-label="">
+                                    <label class="slds-truncate">Invoice Number</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">Invoice Date</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">Due Date</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">Total</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">Current Balance</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">Payment Amount</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="">
+                                    <label class="slds-truncate">{!invoice.Name}</label>
+                                </td>
+                                <td data-label="">
+                                    <apex:outputField value="{!invoice.blng__InvoiceDate__c}" />
+                                </td>
+                                <td data-label="">
+                                    <apex:outputField value="{!invoice.blng__DueDate__c}" />
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">{!invoice.blng__TotalAmount__c}</label>
+                                </td>
+                                <td data-label="">
+                                    <label class="slds-truncate">{!invoice.blng__Balance__c}</label>
+                                </td>
+                                <td data-label="">
+                                    <apex:inputText style="width:5.2rem" value="{!amountToBeProcessed}" Styleclass="slds-input" />
+                                </td>
+                            </tr>
+                        </table>
+					</div>
+            </apex:outputPanel> 
+            <br/>
+            <apex:outputPanel rendered="{!invoice != null && invoice.blng__Balance__c > 0 && !CreditCard && !ACH}">
+                       <div class="slds-card">
+                           <div class="slds-page-header slds-box slds-theme--alt-inverse" role="banner" >
+                               <div class="slds-media slds-media--center">
+                                   <div class="slds-media__body">
+                                       <p class="slds-text-heading--medium slds-truncate slds-align-middle" title="Invoice">Account Information</p>
+                                   </div>
+                               </div>
+                           </div>
+                           <table class="slds-table--bordered slds-table slds-table--cell-buffer slds-m-bottom--medium">
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Name</label>
+                              </td>
+                              <td data-label="">
+                                  <div class="slds-truncate" >{!invoice.Account__r.Name}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Street</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.Account__r.BillingStreet}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">City</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.Account__r.BillingCity}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">State / Province</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.Account__r.BillingState}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Zip / Postal Code</label>
+                              </td>
+                              <td data-label="">
+                                  <div class="slds-truncate" >{!invoice.Account__r.BillingPostalCode}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Country</label>
+                              </td>
+                              <td data-label="">
+                                  <div class="slds-truncate" >{!invoice.Account__r.BillingCountry}</div>
+                              </td>
+                            </tr>   
+                        </table>
+                       </div>
+            </apex:outputPanel>
+        <br/>
+            <apex:outputPanel rendered="{!invoice != null && invoice.blng__Balance__c > 0 && !CreditCard && !ACH}" >
+                       <div class="slds-card">
+                           <div class="slds-page-header slds-box slds-theme--alt-inverse" role="banner" >
+                               <div class="slds-media slds-media--center">
+                                   <div class="slds-media__body">
+                                       <p class="slds-text-heading--medium slds-truncate slds-align-middle" title="Invoice">Billing Contact</p>
+                                   </div>
+                               </div>
+                           </div>
+                           <table class="slds-table--bordered slds-table slds-table--cell-buffer slds-m-bottom--medium">
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Name</label>
+                              </td>
+                              <td data-label="">
+                                  <div class="slds-truncate" >{!invoice.BillToContact__r.FirstName}&nbsp;{!invoice.BillToContact__r.LastName}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Street</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.BillToContact__r.MailingStreet}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">City</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.BillToContact__r.MailingCity}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">State / Province</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.BillToContact__r.MailingState}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Zip / Postal Code</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.BillToContact__r.MailingPostalCode}</div>
+                              </td>
+                            </tr>
+                             <tr>
+                              <td data-label="">
+                                  <label class="slds-truncate">Country</label>
+                              </td>
+                              <td data-label="">
+                                   <div class="slds-truncate" >{!invoice.BillToContact__r.MailingCountry}</div>
+                              </td>
+                            </tr> 
+                        </table>
+                  </div>  
+            </apex:outputPanel>
+        <br/>
+        <apex:outputPanel rendered="{!CreditCard}" id="cardDetails">
+            <div class="ccGrouping" id="ccModalContainer">
+                        <div class="slds-page-header slds-box slds-theme--alt-inverse" role="banner">
+                            <div class="slds-media slds-media--center">
+                                <p class="slds-text-heading--medium slds-truncate slds-align-middle" title="Enter new credit card details">Enter Credit Card Details</p>
+                            </div>
+                        </div>
+                        <div class="slds-card slds-table slds-table--bordered slds-table--cell-buffer slds-m-bottom--medium">
+                            <br/>
+                         <fieldset class="slds-form--compound slds-p-around--medium">
+                           <div class="slds-section__title slds-notify--large slds-notify--alert slds-theme--error">Payment Method Information</div>
+                           <br/>
+                           <div class="form-element__group">
+                               <div class="slds-form-element__row">
+                                   <div class="slds-form-element slds-size--1-of-3">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>First Name</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingFirstName__c}" id="firstnameId" required="true"/>
+                                   </div>
+                                   <div class="slds-form-element slds-size--1-of-3">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Last Name</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingLastName__c}" id="lastnameId" required="true"/>
+                                   </div>
+                                 </div>
+                                <div class="slds-form-element__row">                                   
+                                   <div class="slds-form-element slds-size--1-of-3">
+                                        <label class="uiLabel-left form-element__label uiLabel">
+                                            <span>Phone</span>
+                                        </label>
+                                        <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingPhone__c}" id="phoneCCId" required="true"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size--1-of-3">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Email</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingEmail__c}" id="emailCCId" />
+                                   </div>
+                               </div>
+                               <div class="slds-form-element__row">
+                                   <div class="slds-form-element slds-size--1-of-4">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Street</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingStreet__c}" id="streetCCId" required="true"/> 
+                                   </div>
+                               </div>
+                               <div class="slds-form-element__row">
+                                   <div class="slds-form-element slds-size--1-of-2">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>City</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingCity__c}" id="cityCCId" required="true"/> 
+                                   </div>
+                                   <div class="slds-form-element slds-size--1-of-2 center">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>State / Region</span>
+                                       </label>
+                                        <apex:inputField value="{!paymentMethod.blng__BillingStateProvince__c}" rendered="{!!isCountryPickListEnable}" StyleClass="slds-input"/>
+                                        <apex:inputField value="{!paymentMethod[stateAPIName]}" StyleClass="slds-input" id="stateId" rendered="{!isCountryPickListEnable}" required="true"/> 
+                                   </div>
+                               </div>
+                               <div class="slds-form-element__row">
+                                   <div class="slds-form-element slds-size--1-of-2">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>ZIP Code</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingZipPostal__c}" id="zipCCId" required="true"/> 
+                                   </div>
+                                   <div class="slds-form-element slds-size--1-of-2">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Country</span>
+                                       </label>
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingCountry__c}" id="countryCCId" required="true" rendered="{!!isCountryPickListEnable}"/>
+                                       <apex:inputField value="{!paymentMethod[countryAPIName]}" rendered="{!isCountryPickListEnable}" StyleClass="slds-input" required="true"/>
+                                   </div>
+                               </div>   
+                           </div>
+                        </fieldset>
+                            <fieldset class="slds-form--compound slds-p-around--medium">
+                                <div class="slds-section__title slds-notify--large slds-notify--alert slds-theme--error">Card Information</div>
+                                <br/>
+                                <div class="form-element__group">
+                                    <table class="slds-table--bordered slds-table slds-table--cell-buffer slds-m-bottom--medium">
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">Name on Card</label>
+                                      </td>
+                                      <td data-label="">
+                                          <apex:inputField StyleClass="slds-input" id="NameoncardId" value="{!paymentMethod.blng__Nameoncard__c}" required="true"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">Card Number</label>
+                                      </td>
+                                      <td data-label="">
+                                           <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__CardNumber__c}" id="cardNumberId" required="true"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">Card Type</label>
+                                      </td>
+                                      <td data-label="">
+                                           <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__CardType__c}" id="cardTypeId" required="true"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">Card Expiration Month</label>
+                                      </td>
+                                      <td data-label="">
+                                          <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__CardExpirationMonth__c}" id="cardMonthId" required="true"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">Card Expiration Year</label>
+                                      </td>
+                                      <td data-label="">
+                                          <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__CardExpirationYear__c}" id="cardYearId" required="true"/>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td data-label="">
+                                          <label class="slds-truncate">CVV</label>
+                                      </td>
+                                      <td data-label="">
+                                         <apex:inputSecret StyleClass="slds-input" value="{!paymentMethod.blng__CVV__c}" maxlength="4" id="cvvId" required="{!isPayeezy}"/>
+                                      </td>
+                                    </tr>   
+                                  </table>
+                                    <br/>
+                                    <apex:outputPanel rendered="{!isSaveCardDetails}">
+                                        <div class="slds-form-element__row">
+                                            <div class="slds-form-element slds-size--1-of-2">
+                                                <label class="uiLabel-left form-element__label uiLabel">
+                                                    <span>Save information for easy payment later?</span>
+                                                </label>
+                                                <apex:inputField value="{!paymentMethod.blng__Active__c}" id="activeCCId" onchange="return enableAutoPay(this.checked, '{!$Component.autoPayCCId}');"/><br/><br/>
+                                                <label class="uiLabel-left form-element__label uiLabel">
+                                                    <span>Sign up for the automatic payment option?</span>
+                                                </label>
+                                                <apex:inputField value="{!paymentMethod.blng__AutoPay__c}" id="autoPayCCId" html-disabled="true"/>
+                                            </div>
+                                        </div>
+                                    </apex:outputPanel>  
+                                </div>
+                            </fieldset>
+                            <br/>
+                        </div>
+            </div>  
+            <br/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!ACH}" id="achDetails"  >
+           <div class="achGrouping" id="achModalContainer">
+               <div class="slds-page-header slds-box slds-theme--alt-inverse" role="banner">
+                   <div class="slds-media slds-media--center">
+                       <p class="slds-text-heading--medium slds-truncate slds-align-middle" title="Enter new ACH details">Enter ACH details</p>
+                   </div>
+               </div>
+               <div class="slds-card slds-table slds-table--bordered slds-table--cell-buffer slds-m-bottom--medium">
+                   <br/>
+                   <fieldset class="slds-form--compound slds-p-around--medium">
+                       <div class="slds-section__title slds-notify--large slds-notify--alert slds-theme--error">Payment Method Information</div>
+                       <br/>
+                       <div class="form-element__group">
+                           <div class="slds-form-element__row">
+                               <div class="slds-form-element slds-size--1-of-3">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>First Name</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingFirstName__c}" id="firstnameAchId" required="true"/>
+                               </div>
+                               <div class="slds-form-element slds-size--1-of-3">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>Last Name</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingLastName__c}" id="lastnameAchId" required="true"/>
+                               </div>
+                           </div>
+                           <div class="slds-form-element__row">                                   
+                               <div class="slds-form-element slds-size--1-of-3">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>Phone</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingPhone__c}" id="phoneAchId" required="true"/>
+                               </div>
+                               <div class="slds-form-element slds-size--1-of-3">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>Email</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingEmail__c}" id="emailAchId"/>
+                               </div>
+                           </div>
+                           <div class="slds-form-element__row">
+                               <div class="slds-form-element slds-size--1-of-4">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>Street</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingStreet__c}" id="streetAchId" required="true"/> 
+                               </div>
+                           </div>
+                           <div class="slds-form-element__row">
+                               <div class="slds-form-element slds-size--1-of-2">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>City</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingCity__c}" id="cityAchId" required="true"/> 
+                               </div>
+                               <div class="slds-form-element slds-size--1-of-2 center">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>State / Region</span>
+                                   </label>
+                                   <apex:inputField value="{!paymentMethod.blng__BillingStateProvince__c}" rendered="{!!isCountryPickListEnable}" StyleClass="slds-input"/>
+                                   <apex:inputField value="{!paymentMethod[stateAPIName]}" StyleClass="slds-input" id="stateACHId" rendered="{!isCountryPickListEnable}" required="true"/> 
+                               </div>
+                           </div>
+                           <div class="slds-form-element__row">
+                               <div class="slds-form-element slds-size--1-of-2">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>ZIP Code</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingZipPostal__c}" id="zipAchId" required="true"/> 
+                               </div>
+                               <div class="slds-form-element slds-size--1-of-2">
+                                   <label class="uiLabel-left form-element__label uiLabel">
+                                       <span>Country</span>
+                                   </label>
+                                   <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingCountry__c}" id="countryACHId" required="true" rendered="{!!isCountryPickListEnable}"/>
+                                   <apex:inputField value="{!paymentMethod[countryAPIName]}" rendered="{!isCountryPickListEnable}" StyleClass="slds-input" required="true"/> 
+                               </div>
+                           </div>   
+                       </div>
+                   </fieldset> 
+                   <fieldset class="slds-form--compound slds-p-around--medium">
+                       <div class="slds-section__title slds-notify--large slds-notify--alert slds-theme--error">Bank Account Information</div>
+                       <br/>
+                       <div class="form-element__group">
+                           <table class="slds-table--bordered slds-table slds-table--cell-buffer slds-m-bottom--medium">
+                               <tr>
+                                   <td data-label="">
+                                       <label class="slds-truncate">Bank Name</label>
+                                   </td>
+                                   <td data-label="">
+                                       <apex:inputField StyleClass="slds-input" id="bankNameId" value="{!paymentMethod.blng__BankName__c}" required="true"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td data-label="">
+                                       <label class="slds-truncate">Bank Routing Number</label>
+                                   </td>
+                                   <td data-label="">
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BankRoutingCode__c}" id="routingId" required="true"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td data-label="">
+                                       <label class="slds-truncate">Bank Account Name</label>
+                                   </td>
+                                   <td data-label="">
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BankAccountName__c}" id="accountNameId" required="true"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td data-label="">
+                                       <label class="slds-truncate">Bank Account Number</label>
+                                   </td>
+                                   <td data-label="">
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BankAccountNumber__c}" id="accountNumberId" required="true"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td data-label="">
+                                       <label class="slds-truncate">Bank Account Type</label>
+                                   </td>
+                                   <td data-label="">
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BankAccountType__c}" id="bankAccountTypeId" required="true"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td data-label="">
+                                       <apex:outputLabel value="Check Number" rendered="{!isPayeezyCheck}"></apex:outputLabel>
+                                   </td>
+                                   <td data-label="" >
+                                       <apex:inputField StyleClass="slds-input" value="{!paymentMethod.blng__BillingCity__c}" id="checkNumber" required="true" rendered="{!isPayeezyCheck}"/>
+                                   </td>
+                               </tr>
+                           </table>
+                           <apex:outputLabel rendered="{!isSaveCardDetails}">
+                               <div class="slds-form-element__row">
+                                   <div class="slds-form-element slds-size--1-of-2">
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Save information for easy payment later?</span>
+                                       </label>
+                                       <apex:inputField value="{!paymentMethod.blng__Active__c}" id="activeAchId" onchange="return enableAutoPay(this.checked, '{!$Component.autoPayAchId}');"/><br/><br/>
+                                       <label class="uiLabel-left form-element__label uiLabel">
+                                           <span>Sign up for the automatic payment option?</span>
+                                       </label>
+                                       <apex:inputField value="{!paymentMethod.blng__AutoPay__c}" id="autoPayAchId" html-disabled="true"/>
+                                   </div>
+                               </div>
+                           </apex:outputLabel>   
+                       </div>
+                   </fieldset>
+                   <br/>
+               </div>
+             </div>  
+           </apex:outputPanel>
+     </div>
+    </div>
+    </div>
+        <div class="slds-align--absolute-center">
+            <apex:outputLabel >
+                <apex:commandButton id="BackButtonId" reRender="form1" value="Back" action="{!previous}" styleClass="slds-button slds-button--neutral" rendered="{!CreditCard || ACH}" immediate="true"/>&nbsp;
+                <apex:commandButton id="PayNowButtonId" reRender="form1" value="Pay Now" action="{!processPayment}" onclick="disableButtons();" styleClass="slds-button slds-button--brand slds-button--neutral" rendered="{!CreditCard || ACH}"/>&nbsp;
+                <apex:commandButton reRender="form1" value="Credit Card Payment" action="{!processCreditCard}" styleClass="slds-button slds-button--brand" immediate="true" rendered="{!invoice != null && invoice.blng__Balance__c > 0 && isValidGateWay && !CreditCard && !ACH}" /> &nbsp;
+                <apex:commandButton reRender="form1" value="ACH Payment" action="{!processACH}" styleClass="slds-button slds-button--brand" immediate="true" rendered="{!invoice != null && invoice.blng__Balance__c > 0 && isValidGateWay && !CreditCard && !ACH}"/>&nbsp;
+            </apex:outputLabel>
+        </div>    
+    </apex:form>    
+</apex:page>

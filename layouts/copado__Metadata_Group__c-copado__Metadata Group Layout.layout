@@ -65,9 +65,6 @@
         <quickActionListItems>
             <quickActionName>FeedItem.MobileSmartActions</quickActionName>
         </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>FeedItem.ContentNote</quickActionName>
-        </quickActionListItems>
     </quickActionList>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>

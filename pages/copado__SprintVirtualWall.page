@@ -447,7 +447,12 @@
                 <div class="slds-col slds-no-flex slds-grid slds-align-top">
                     <div class="slds-button-group" role="group">
                         <apex:outputPanel layout="none" rendered="{!isUSCreateable}">
-                            <button type="button" class="slds-button slds-button--neutral" onClick="lockScreen();prepareUs('','new');"> {!$label.SprintWall_Button_New_US} </button>
+                            <apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme4d'}" layout="none">
+                                <a class="slds-button slds-button--neutral" href="{!URLFOR($Action.copado__User_Story__c.New)}">{!$Label.copado__sprintwall_button_new_us}</a>    
+                            </apex:outputPanel> 
+                            <apex:outputPanel rendered="{!$User.UIThemeDisplayed != 'Theme4d'}" layout="none">
+                                <button type="button" class="slds-button slds-button--neutral" onClick="lockScreen();prepareUs('','new');"> {!$label.SprintWall_Button_New_US} </button>
+                            </apex:outputPanel>
                         </apex:outputPanel>
                         <apex:outputPanel layout="none" rendered="{!isUsUpdateable}">
                             <button type="button" class="slds-button slds-button--neutral" onClick="lockScreen();prepareUs('','massupdate');"> {!$label.SprintWall_Button_MassUpdate} </button>
@@ -721,7 +726,7 @@
                 <apex:param name="usId" value="" />
             </apex:actionFunction>
             <apex:actionFunction name="removeSprint" action="{!removeSprintFromUs}" onComplete="userStoryDataTable();userStoryDragDataTable();applyRenderSVG(['rowButton','snippetButton','dragButton','kanbanButton','refreshButton','userStoryImage'],svgButtonsClass);sortUSOrder();unlockScreen();" reRender="cardsPanel,actualvelocities,plannedvelocities,daysleftstring,errors">
-                <apex:param name="usId" value="" />
+                <apex:param name="usId" value="" /> 
             </apex:actionFunction>
             <apex:actionFunction name="prepareUs" action="{!prepareUserStory}" onComplete="showModal('#usModal','#usBackdrop');unlockScreen();" reRender="usContent,usFooter,errors">
                 <apex:param name="usId" value="" />

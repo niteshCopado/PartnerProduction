@@ -130,5 +130,5 @@
         <fileType>XML</fileType>
         <securityRiskFileType>true</securityRiskFileType>
     </dispositions>
-    <noHtmlUploadAsAttachment>false</noHtmlUploadAsAttachment>
+    <noHtmlUploadAsAttachment>true</noHtmlUploadAsAttachment>
 </FileUploadAndDownloadSecuritySettings>

@@ -129,6 +129,46 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>SBQQ__CompactLayout</fullName>
+        <description>Used on hover of a rate to display information about the Consumption Schedule</description>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>BillingTerm</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>BillingTermUnit</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>RatingMethod</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>UnitOfMeasure</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>MatchingAttribute</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Compact Layout</label>
+    </fieldSets>
     <fields>
         <fullName>BillingTerm</fullName>
         <inlineHelpText>Number of billing units that this consumption schedule applies to. For example, if the selected Billing Term Unit is Month, enter 12 to apply the consumption schedules for 12 months. Apply consumption schedules to as many as 20 quarters, 60 months, or 5 years.</inlineHelpText>
@@ -166,6 +206,25 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>SBQQ__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rates</fullName>
+                    <default>true</default>
+                    <label>Rates</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Type</fullName>
         <inlineHelpText>Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier&apos;s value.</inlineHelpText>
         <trackHistory>false</trackHistory>
@@ -175,6 +234,48 @@
         <inlineHelpText>Usage quantities and rates apply to this unit of measurement.</inlineHelpText>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>blng__BillingRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Billing Rule assigned</inlineHelpText>
+        <label>Billing Rule</label>
+        <referenceTo>blng__BillingRule__c</referenceTo>
+        <relationshipLabel>Billing Rule</relationshipLabel>
+        <relationshipName>ConsumptionSchedulesBillingRule</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__RevenueRecognitionRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Revenue Recognition Rule assigned</inlineHelpText>
+        <label>Revenue Recognition Rule</label>
+        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
+        <relationshipLabel>Revenue Recognition Rule</relationshipLabel>
+        <relationshipName>CSsRevenueRecognitionRule</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>blng__TaxRule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to the Tax Rule assigned</inlineHelpText>
+        <label>Tax Rule</label>
+        <referenceTo>blng__TaxRule__c</referenceTo>
+        <relationshipLabel>Tax Rule</relationshipLabel>
+        <relationshipName>ConsumptionSchedulesTaxRule</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <listViews>
         <fullName>All_ConsumptionSchedules</fullName>

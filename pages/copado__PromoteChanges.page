@@ -52,9 +52,9 @@
         <script>
             var copadoApp = {
                 ns: '{!JSENCODE(namespace)}',
-                promotionId: '{!JSENCODE(copado__Promotion__c.Id)}',
-                sourceOrgId: '{!JSENCODE(copado__Promotion__c.copado__Source_Org_Credential__c)}',
-                destinationOrgId: '{!JSENCODE(copado__Promotion__c.copado__Destination_Org_Credential__c)}',
+                promotionId: '{!JSENCODE(Promotion__c.Id)}',
+                sourceOrgId: '{!JSENCODE(Promotion__c.Source_Org_Credential__c)}',
+                destinationOrgId: '{!JSENCODE(Promotion__c.Destination_Org_Credential__c)}',
 
                 createDeployment: function (deploymentName, isTestOnly, testLevel) {
                     if (copadoApp.sourceOrgId == '') {
@@ -65,7 +65,7 @@
                         alert(copadoLabels.DESTINATION_ORG_CREDENTIAL_REQUIRED_FOR_DEPLOYMENT);
                         return false;
                     }
-                    if (isTestOnly == true) setLockScreenMessage('{!$Label.copado__creating_validation_deployment_message}');
+                    if (isTestOnly == true) setLockScreenMessage('{!$Label.Creating_Validation_Deployment_Message}');
                     lockScreen();
 
                     var att = globalJobsManagerStart(copadoApp.promotionId, 'Promotion', "{!JSENCODE(jobsManagerMatchingKeys)}");
@@ -117,9 +117,9 @@
                 return null;
             }
 
-            var gitRepo = "{!JSENCODE(flowDetails.flow.copado__Git_Repository__c)}"
-            var pullBase = gitRepo ? "{!JSENCODE(flowDetails.flow.Git_Repository__r.copado__Pull_Request_Base_URL__c)}" : null;
-            var pullType = gitRepo ? "{!JSENCODE(flowDetails.flow.Git_Repository__r.copado__Git_Provider__c)}" : null;
+            var gitRepo = "{!JSENCODE(flowDetails.flow.Git_Repository__c)}"
+            var pullBase = gitRepo ? "{!JSENCODE(flowDetails.flow.Git_Repository__r.Pull_Request_Base_URL__c)}" : null;
+            var pullType = gitRepo ? "{!JSENCODE(flowDetails.flow.Git_Repository__r.Git_Provider__c)}" : null;
 
             var createPullRequestLinks = function () {
                 $copado('a[href*="{!JSENCODE(deploymentPrefix)}"]:contains("Edit")').each(function () {
@@ -130,7 +130,7 @@
                         }
                     })
                     if (depName) {
-                        var pullLink = $copado('<a href="#" onclick="getPullRequest(\'' + depName + '\');return false;"> | {!$Label.copado__create_pull_request}</a>');
+                        var pullLink = $copado('<a href="#" onclick="getPullRequest(\'' + depName + '\');return false;"> | {!$Label.Create_Pull_Request}</a>');
                         pullLink.appendTo($copado(this).parent());
                     }
                 });
@@ -142,7 +142,7 @@
                         config.type = pullType;
                         config.url = pullBase;
                         config.base = "{!JSENCODE(branch)}";
-                        config.compare = 'promotion/{!URLENCODE(copado__Promotion__c.Name)}' + '-' + pullCompare.replace(/[^a-zA-Z 0-9]+/g, '').replace(/ /g, '');
+                        config.compare = 'promotion/{!URLENCODE(Promotion__c.Name)}' + '-' + pullCompare.replace(/[^a-zA-Z 0-9]+/g, '').replace(/ /g, '');
                         var pullRequest = new PullRequest(config);
                         var win = window.open(pullRequest.URL);
                         if (win) {
@@ -150,13 +150,13 @@
                             win.focus();
                         } else {
                             //Browser has blocked it
-                            alert('{!JSENCODE($Label.copado__popup_blocker_message)}');
+                            alert('{!JSENCODE($Label.POPUP_BLOCKER_MESSAGE)}');
                         }
                     } catch (e) {
                         console.log('getPullRequest::error', e);
                     }
                 } else {
-                    alert('{!JSENCODE($Label.copado__pull_request_validation)}');
+                    alert('{!JSENCODE($Label.PULL_REQUEST_VALIDATION)}');
                 }
             }
             //Modal Close
@@ -172,9 +172,10 @@
             }
 
             var showReviewConflictButton = function () {
-                var reviewConflictButton = $copado('<input id="customReviewConflictButton" type="button" class="btn" value="{!JSENCODE($Label.copado__merge_conflict_review)}" onclick="openResolveConflictsPage();"/>');
-                if({!IF(copado__Promotion__c.copado__Merge_Conflict__c, 1, 0)} || '{!JSENCODE(copado__Promotion__c.copado__Status__c)}' == '{!JSENCODE($Label.copado__merge_conflict)}'){
-                    reviewConflictButton.appendTo($copado('[Id^="topButtonRow"]'));
+                var reviewConflictButton = $copado('<input id="customReviewConflictButton" type="button" class="btn" value="{!JSENCODE($Label.MERGE_CONFLICT_REVIEW)}" onclick="openResolveConflictsPage();"/>');
+                if ({!IF(Promotion__c.Merge_Conflict__c, 1, 0)
+            } || '{!JSENCODE(Promotion__c.Status__c)}' == '{!JSENCODE($Label.MERGE_CONFLICT)}') {
+                reviewConflictButton.appendTo($copado('[Id^="topButtonRow"]'));
                 }
             }
 
@@ -197,7 +198,7 @@
                 if ('{!AND(openCreateDeployment, enableCreateDeploymentButton)}' === 'true' && attPc == null) {
                     openModal();
                 } else if ('{!AND(openCreateDeployment, !enableCreateDeploymentButton)}' === 'true') {
-                    alert('{!$Label.copado__conflict_resolution_deployment_not_enabled}');
+                    alert('{!$Label.CONFLICT_RESOLUTION_DEPLOYMENT_NOT_ENABLED}');
                 }
 
                 //Buttons To middle No PBtitle
@@ -352,8 +353,8 @@
                     animationStep: 5,
                     foregroundBorderWidth: 5,
                     backgroundBorderWidth: 15,
-                    percent: {!IF(str.countAllSourceRegression> 0, str.countFinishedSourceRegression * 100 / str.countAllSourceRegression, 0)            
-}
+                    percent: {!IF(str.countAllSourceRegression > 0, str.countFinishedSourceRegression * 100 / str.countAllSourceRegression, 0)
+            }
                 });
 
             copadoTcSRT.find(".circle-info-half").attr('data-text', '{!IF(str.countAllSourceRegression>0, (TEXT(str.countFinishedSourceRegression)+"/"+TEXT(str.countAllSourceRegression)), "0/0")}');
@@ -364,7 +365,7 @@
                 animationStep: 5,
                 foregroundBorderWidth: 5,
                 backgroundBorderWidth: 15,
-                percent: {!IF(str.countAllDestinationRegression> 0, str.countFinishedDestinationRegression * 100 / str.countAllDestinationRegression, 0)}
+                percent: {!IF(str.countAllDestinationRegression > 0, str.countFinishedDestinationRegression * 100 / str.countAllDestinationRegression, 0)}
                 });
 
             copadoTcDRT.find(".circle-info-half").attr('data-text', '{!IF(str.countAllDestinationRegression>0, (TEXT(str.countFinishedDestinationRegression)+"/"+TEXT(str.countAllDestinationRegression)), "0/0")}');
@@ -375,7 +376,7 @@
                 animationStep: 5,
                 foregroundBorderWidth: 5,
                 backgroundBorderWidth: 15,
-                percent: {!IF(str.countAllSourceUserStory> 0, str.countFinishedSourceUserStory * 100 / str.countAllSourceUserStory, 0)}
+                percent: {!IF(str.countAllSourceUserStory > 0, str.countFinishedSourceUserStory * 100 / str.countAllSourceUserStory, 0)}
                 });
             copadoTcSUST.find(".circle-info-half").attr('data-text', '{!IF(str.countAllSourceUserStory>0, (TEXT(str.countFinishedSourceUserStory)+"/"+TEXT(str.countAllSourceUserStory)), "0/0")}');
             copadoTcSUST.find(".circle-info-half").css('z-index', '-1');
@@ -385,7 +386,7 @@
                 animationStep: 5,
                 foregroundBorderWidth: 5,
                 backgroundBorderWidth: 15,
-                percent: {!IF(str.countAllDestinationUserStory> 0, str.countFinishedDestinationUserStory * 100 / str.countAllDestinationUserStory, 0)}
+                percent: {!IF(str.countAllDestinationUserStory > 0, str.countFinishedDestinationUserStory * 100 / str.countAllDestinationUserStory, 0)}
                 });
             copadoTcDUST.find(".circle-info-half").attr('data-text', '{!IF(str.countAllDestinationUserStory>0, (TEXT(str.countFinishedDestinationUserStory)+"/"+TEXT(str.countAllDestinationUserStory)), "0/0")}');
             copadoTcDUST.find(".circle-info-half").css('z-index', '-1');
@@ -498,7 +499,8 @@
                                                                 />
                                                             </svg>
                                                             <span class="slds-assistive-text">{!IF(promotion.Status__c == 'Completed','Stage Complete','Current
-                                                                Stage:')}</span>
+                                                                Stage:')}
+                                                            </span>
                                                         </span>
                                                         <span class="slds-tabs--path__title" style="{!IF(Promotion__c.Back_Promotion__c,'transform: rotate(180deg);','')}">
                                                             &nbsp;{!Promotion__c.Source_Environment__r.Name}
@@ -987,10 +989,10 @@
                                                         animationStep: 5,
                                                         foregroundBorderWidth: 5,
                                                         backgroundBorderWidth: 15,
-                                                        percent: {!IF(sourceEnvMaxSCAScore> 0, worstSCAscore / sourceEnvMaxSCAScore, 0)                                                
-}
+                                                        percent: {!IF(sourceEnvMaxSCAScore> 0 && worstSCAscore != null, worstSCAscore / sourceEnvMaxSCAScore, 0)
+                                                }
                                                 });
-                                                $copado("#test-circleSCA .circle-info-half").attr('data-text', '{!IF(sourceEnvMaxSCAScore>0, (TEXT(worstSCAscore)+"/"+TEXT(sourceEnvMaxSCAScore)), "0/0")}');
+                                                $copado("#test-circleSCA .circle-info-half").attr('data-text', '{!IF(sourceEnvMaxSCAScore>0 && worstSCAscore != null, (TEXT(worstSCAscore)+"/"+TEXT(sourceEnvMaxSCAScore)), "0/0")}');
                                                 $copado("#test-circleSCA .circle-info-half").css('z-index', '-1');
                                             });
                                             </script>
@@ -998,8 +1000,8 @@
                                                 <center>
                                                     <div class="slds-text-title_caps">Static Code Analysis Score</div>
                                                     <div id="test-circleSCA" data-startdegree="0" data-type="full" data-dimension="150" data-info="platforms" data-width="20"
-                                                        data-fontsize="18" data-animationstep="0" data-text="{!IF(sourceEnvMaxSCAScore>0, (TEXT(worstSCAscore)+"
-                                                    / "+TEXT(sourceEnvMaxSCAScore)), "0/0 ")}" data-percent="{!IF(AND(sourceEnvMaxSCAScore>0,worstSCAscore!=null), worstSCAscore*100/sourceEnvMaxSCAScore, 0)}"
+                                                        data-fontsize="18" data-animationstep="0" data-text="{!IF(sourceEnvMaxSCAScore>0 && worstSCAscore != null, (TEXT(worstSCAscore)+'/'+TEXT(sourceEnvMaxSCAScore)), '0/0')}"
+                                                        data-percent="{!IF(AND(sourceEnvMaxSCAScore>0,worstSCAscore!=null), worstSCAscore*100/sourceEnvMaxSCAScore, 0)}"
                                                         data-fgcolor="{!IF(AND(sourceEnvMaxSCAScore>0,worstSCAscore!=null,worstSCAscore/sourceEnvMaxSCAScore<0.33), '#60C170 ',
                                                             IF(AND(sourceEnvMaxSCAScore>0,worstSCAscore!=null,worstSCAscore/sourceEnvMaxSCAScore<0.66), '#ffffb3 ', '#d68184 '))}"
                                                         data-bgcolor="#eee" data-fill="#fff" style="margin:auto;">
