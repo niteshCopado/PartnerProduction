@@ -304,7 +304,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Destination Org Credential</label>
+        <label>Destination Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Continuous Integrations</relationshipLabel>
         <relationshipName>Continuous_Integrations</relationshipName>

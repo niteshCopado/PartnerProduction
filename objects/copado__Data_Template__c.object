@@ -309,7 +309,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Template Source Org</label>
+        <label>Template Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Data Templates</relationshipLabel>
         <relationshipName>Data_Templates</relationshipName>

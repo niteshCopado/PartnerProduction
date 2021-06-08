@@ -210,7 +210,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Perform in Destination Org(s)</label>
+        <label>Perform in Destination Credential(s)</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -219,7 +219,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Perform in Source Org</label>
+        <label>Perform in Source Credential</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>

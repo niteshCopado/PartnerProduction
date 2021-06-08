@@ -15,7 +15,7 @@
     <fields>
         <label><!-- Deployment --></label>
         <name>copado__Deployment__c</name>
-        <relationshipLabel><!-- Destination Orgs --></relationshipLabel>
+        <relationshipLabel><!-- Destination Credentials --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- SUM Deployed --></label>
@@ -50,12 +50,12 @@
         <name>copado__Step_Count__c</name>
     </fields>
     <fields>
-        <label><!-- To Org Name --></label>
+        <label><!-- To Credential Name --></label>
         <name>copado__To_Org_Name__c</name>
     </fields>
     <fields>
-        <label><!-- To Org --></label>
+        <label><!-- To Credential --></label>
         <name>copado__To_Org__c</name>
-        <relationshipLabel><!-- Deployments To --></relationshipLabel>
+        <relationshipLabel><!-- Destination Credentials --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>

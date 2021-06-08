@@ -264,6 +264,11 @@ The org credential where the unmanaged package is created from. --></help>
         <label><!-- Salesforce Package --></label>
         <name>copado__Package_Artifact</name>
     </recordTypes>
+    <recordTypes>
+        <description><!-- User Story Bundle --></description>
+        <label><!-- User Story Bundle --></label>
+        <name>copado__User_Story_Bundle</name>
+    </recordTypes>
     <validationRules>
         <errorMessage><!-- Package names are in use for DX folder structure, therefore, package names are not editable. --></errorMessage>
         <name>copado__ArtifactNameCannotChange</name>

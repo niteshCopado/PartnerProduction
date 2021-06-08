@@ -59,7 +59,7 @@
                 openWarningModal();
                 return false;
             } else {
-                changePipelineMode();
+                changePipelineModeManager();
             }
         };
         var defineVariables = () => {
@@ -313,11 +313,6 @@
         /* end pipeline promotion */
 
 
-
-
-
-
-
         /* pipeline dialog */ 
         function showApprovalModal(envId) {
             prepareEnvApprovals(envId);
@@ -361,11 +356,17 @@
         }
 
         function openPromotionListModal() {
-            //var message = $copado('.slds-notify__content').html();
-            //if(message == "" || message == undefined) {
+            var message = $copado('.slds-notify__content').text();
+            var messageOne = '{!JSENCODE($Label.Pipeline_Environment_500_US_Limit_Message)}';
+            var messageTwo = '{!JSENCODE($Label.Pipeline_One_promotion_per_release)}';
+            var messageIncludesMessageOne = message.includes(messageOne);
+            var messageIncludesMessageTwo = message.includes(messageTwo);
+            if(message && !messageIncludesMessageOne && !messageIncludesMessageTwo) {
+                unlockScreen();
+                return;
+            }
                 $copado('#promoListBackdrop').addClass('slds-backdrop--open');
                 $copado('#promotionListModal').addClass('slds-fade-in-open');
-            //}
             unlockScreen();
         }
 
@@ -813,6 +814,7 @@
         </apex:form>
         <apex:form id="pipelineForm">
             <apex:actionFunction name="changePipelineMode" action="{!changePipelineMode}" reRender="pipelineWrapper" onComplete="ccd.reRenderFunction();" />
+            <apex:actionFunction name="changePipelineModeManager" action="{!changePipelineMode}" onComplete="refreshPipeline();" />
             <apex:actionFunction name="assingProId" onComplete="ccd.fromAcf2Open();" action="{!assignCurrentPro}" reRender="dependencyUSComponent">
                 <apex:param name="currentProId" value="" />
             </apex:actionFunction>
@@ -1449,6 +1451,7 @@
                                 ccdStoryStream.params.flowStepToEnvJSON = '{!JSENCODE(flowStepToEnvironmentJSON)}';
                                 ccdStoryStream.params.allEnvironmentKeyJSON = '{!JSENCODE(allEnvironmentsKeysetJSON)}';
                                 ccdStoryStream.params.allEnvironmentToStageJSON = '{!JSENCODE(allEnvironmentsToStageGroupKeysetJSON)}';
+                                ccdStoryStream.params.allEnvironmentsMapJSON = '{!JSENCODE(allEnvironmentsMapJSON)}';
                             }
                         }
 
@@ -1957,7 +1960,7 @@
         </apex:actionFunction>
         <apex:actionFunction name="renderPromotionPoller" reRender="promotionPoller" />
         <apex:actionFunction name="resetPromotionList" action="{!resetPromotionList}" oncomplete="renderTable();closePromotionListModal();changeSelectAll('userStoriesTable', 'selectAll');unlockScreen();" reRender="fieldSets,pins" />
-        <apex:actionFunction name="deployPromotionList" action="{!deployPromotionList}" reRender="createdPromotionListPanel,promotionPoller,copadoErrorPanelForDialog" oncomplete="unlockScreen();" />
+        <apex:actionFunction name="deployPromotionList" action="{!deploySelectedPromotions}" reRender="createdPromotionListButtons,createdPromotionListPanel,promotionPoller,copadoErrorPanelForDialog" oncomplete="unlockScreen();" />
         
         
         <apex:outputPanel layout="none">
@@ -1965,7 +1968,31 @@
                 <apex:outputPanel layout="block" id="operationModal" styleClass="slds-modal__container" style="width: 100% !important;">
                     <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="min-height: 85%; height: 100%; overflow-x:scroll;">
                         <apex:outputPanel id="copadoErrorPanelForDialog" layout="none">
-                            <c:CopadoErrorPanel pageMessagesMap="{!pageMessagesMap}" />
+                            <apex:outputPanel layout="none" styleClass="error-panel">
+                                <div id="divToast" class="slds-notify_container slds-is-relative">
+                                    <apex:repeat value="{!pageMessagesMap}" var="severity">
+                                        <div class="slds-notify slds-notify_toast slds-theme_{!severity}" role="status">
+                                            <span class="slds-assistive-text"></span>
+                                            <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top">
+                                                <span class="slds-icon_container slds-icon__svg--default {!severity}ToastIcon"></span>
+                                            </span>
+                                            <div class="slds-notify__content">
+                                                <apex:repeat value="{!pageMessagesMap[severity]}" var="messages">
+                                                    <h2 class="slds-text-heading_small ">{!messages}</h2>
+                                                </apex:repeat>
+                                            </div>
+                                            <div class="slds-notify__close">
+                                                <button type="button" class="slds-button slds-button_icon slds-button_icon-inverse" title="{!$Label.CLOSE}" onclick="$copado('[id=divToast]').addClass('slds-hide');">
+                                                    <svg class="slds-button__icon" aria-hidden="true">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#close')}" />
+                                                    </svg>
+                                                    <span class="slds-assistive-text">Help</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </apex:repeat>
+                                </div>
+                            </apex:outputPanel>
                         </apex:outputPanel>
                         <div class="slds-grid slds-wrap slds-clearfix">
                             <div id="modalHeader" class="slds-col slds-size_1-of-2">
@@ -1977,11 +2004,10 @@
                                 </button>
                             </div>
                             <apex:outputPanel id="GeneralActionButtons" styleClass="slds-col slds-size_1-of-2" style="text-align:right;">
-                                <apex:commandButton value="{!$Label.copado__pipeline_validate_selections}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="validateSelections" action="{!createPromotionforValidation}" reRender="maodalHeader, copadoErrorPanelForDialog, createdPromotionListPanel" onClick="lockScreen();" oncomplete="openPromotionListModal();renderPromotionPoller();" disabled="{!NOT(showUserStories)}" />
-                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote, $Label.copado__pipeline_back_promote)}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createPromotion" action="{!createPromotion}" reRender="maodalHeader, copadoErrorPanelForDialog,createdPromotionListButtons, createdPromotionListPanel" onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" />
-                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote_and_deploy, $Label.copado__pipeline_back_promote_and_deploy)}" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createPromotionAndDeploy" action="{!createPromotionListAndDeploy}" reRender="maodalHeader, copadoErrorPanelForDialog, createdPromotionListPanel,promotionPoller" onClick="lockScreen();" onComplete="openPromotionListModal(); unlockScreen();" disabled="{!NOT(showUserStories)}" />
+                                <apex:commandButton value="{!$Label.copado__pipeline_validate_selections}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="validateSelections" action="{!createPromotionforValidation}" reRender="modalHeader, copadoErrorPanelForDialog, createdPromotionListPanel" onClick="lockScreen();" oncomplete="openPromotionListModal();renderPromotionPoller();" disabled="{!NOT(showUserStories)}" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}"/>
+                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote, $Label.copado__pipeline_back_promote)}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createPromotion" action="{!createPromotion}" reRender="copadoErrorPanel, notify, modalHeader, copadoErrorPanelForDialog,createdPromotionListButtons, createdPromotionListPanel" onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" />
+                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote_and_deploy, $Label.copado__pipeline_back_promote_and_deploy)}" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createPromotionAndDeploy" action="{!createPromotionListAndDeploy}"  onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" reRender="modalHeader, copadoErrorPanelForDialog, createdPromotionListPanel,promotionPoller" />
                             </apex:outputPanel>
-
                         </div>
                         <div class="slds-grid slds-wrap slds-clearfix">
                             <div id="headtitle" class="slds-col slds-align-middle slds-size_1-of-3">
@@ -1991,6 +2017,7 @@
                             </div>
                             <div class="slds-col slds-align-middle slds-size_1-of-3"></div>
                             <div id="headpicklist" class="slds-col slds-size_1-of-3" style="text-align:right;">
+                                <apex:outputPanel layout="none" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}">
                                 <div class="slds-form-element">
                                     <div class="slds-form-element__control" style="float:right;border-bottom: 1px solid gray; width: 30%;min-width:150px;"> <!--min-width is because list cannot be smaller than that-->
                                         <label class="slds-form-element__label" for="testlevelPicklist">{!$Label.Pipeline_Test_Level}</label>
@@ -2003,6 +2030,7 @@
                                         </apex:selectList>
                                     </div>
                                 </div>
+                                </apex:outputPanel>
                             </div>
                         </div>
                         <apex:outputPanel style="width: 100%; float: left; margin-bottom:10px;margin-top:5px;" layout="block" id="tabHeader">
@@ -2030,6 +2058,7 @@
                             </apex:outputPanel>
                         </apex:outputPanel>
                         <apex:outputPanel id="pins" layout="block" styleClass="slds-grid" style="width: 100%; margin-top: 15px;">
+                            <apex:outputPanel layout="none" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}">
                             <div class="slds-button-group slds-size_1-of-2" style="margin-bottom:20px;" role="group">
                                 <button name="templateButton" class="slds-button slds-button_neutral tabButton activeButton" style="border-bottom: 2px solid #3593c6; border-radius: .25rem 0 0 0;" onclick="lockScreen();toggleCurrentButton(this);switchTab('USERSTORY');" type="button">{!IF(newOverlay.pathType == 'merge',$Label.USER_STORIES_AHEAD,$Label.USER_STORIES_BEHIND)} ({!newOverlay.userStories.size})</button>
                                 <button name="templateButton" class="slds-button slds-button_neutral tabButton" style="border-bottom: 2px solid #3593c6;" onclick="lockScreen();toggleCurrentButton(this);switchTab('SELENIUM');" type="button">{!$Label.STR} (<span id="strsize">{!STGSize}</span>)
@@ -2037,7 +2066,14 @@
                                 <button name="templateButton" class="slds-button slds-button_neutral tabButton" style="border-bottom: 2px solid #3593c6; border-radius: 0 .25rem 0 0;" onclick="lockScreen();toggleCurrentButton(this);switchTab('COMPLIANCE');" type="button">{!$Label.CSR} (<span id="csrsize">{!CRSize}</span>)
                                 </button>
                             </div>
-                            <div id="tabfilter" class="slds-size_2-of-2" style="width: 50%; margin-bottom:20px; border-bottom: 2px solid #3593c6;"></div>
+                                <div id="tabfilter" class="slds-size_1-of-6" style="width: 50%; margin-bottom:20px; border-bottom: 2px solid #3593c6;"></div>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!AND(currentPipeline.copado__Platform__c != 'Salesforce',currentPipeline.copado__Platform__c != null)}">
+                                <div class="slds-button-group slds-size_1-of-6" style="margin-bottom:20px;" role="group">
+                                    <button name="templateButton" class="slds-button slds-button_neutral tabButton activeButton" style="border-bottom: 2px solid #3593c6; border-radius: .25rem 0 0 0;" onclick="lockScreen();toggleCurrentButton(this);switchTab('USERSTORY');" type="button">{!IF(newOverlay.pathType == 'merge',$Label.USER_STORIES_AHEAD,$Label.USER_STORIES_BEHIND)} ({!newOverlay.userStories.size})</button>
+                                </div>
+                                <div id="tabfilter" class="slds-size_5-of-6" style="margin-bottom:20px; border-bottom: 2px solid #3593c6;"></div>
+                            </apex:outputPanel>
                         </apex:outputPanel>
                         <apex:outputPanel layout="block" id="fieldSets">
                             <!-- USER STORIES FIELDSET -->
@@ -2193,8 +2229,9 @@
                                         </tbody>
                                     </table>
                                 </fieldset>
-                                <!-- END OF SELENIUM RESULT FIELDSET -->
+                                
                             </apex:outputPanel>
+                            <!-- END OF SELENIUM RESULT FIELDSET -->
                         </apex:outputPanel>
 
                     </div>
@@ -2366,7 +2403,7 @@
                         </header>
                         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
                             <apex:outputPanel rendered="{!currentProId4Dependency!=null}">
-                                <c:UserStoryDependency usMap="{!dependenciesMap}" proId="{!currentProId4Dependency}" />
+                                <c:UserStoryDependency usMap="{!userStoriesByPromotionForDependencies}" proId="{!currentProId4Dependency}" />
                             </apex:outputPanel>
                         </div>
                     </div>
@@ -2431,7 +2468,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <apex:repeat var="prom" value="{!promotionListWrapper}">
+                                <apex:repeat var="prom" value="{!promotionWrappers}">
                                     <tr>
                                         <td style="text-align: center">
                                             <apex:inputCheckbox value="{!prom.isSelected}" onClick="changeSelectAll('promolist', 'selectUnselectPromo');" />

@@ -169,6 +169,20 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Data_Set__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Data Set to use in StepEdition component in deployment page.</description>
+        <externalId>false</externalId>
+        <label>Data Set</label>
+        <referenceTo>copado__Data_Set__c</referenceTo>
+        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
+        <relationshipName>AuxiliaryObjects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Data_Template__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -264,6 +278,19 @@
         <externalId>false</externalId>
         <label>Environment</label>
         <referenceTo>copado__Environment__c</referenceTo>
+        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
+        <relationshipName>AuxiliaryObjects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Function__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Function</label>
+        <referenceTo>copado__Function__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
         <required>false</required>

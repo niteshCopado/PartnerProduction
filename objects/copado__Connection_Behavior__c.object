@@ -241,6 +241,16 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>copado__DisableEnvironmentBranch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Environment Branch</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Execute_back_promotions_in_parallel__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>

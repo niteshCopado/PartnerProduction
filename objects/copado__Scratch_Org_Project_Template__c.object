@@ -304,7 +304,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Developer Hub Org</label>
+        <label>Developer Hub Credential</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -312,10 +312,11 @@
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
-            <infoMessage>Only developer hub org credentials can be selected</infoMessage>
+            <infoMessage>Only developer hub credentials can be selected</infoMessage>
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
+        <relationshipLabel>Scratch Org Project Templates (Developer Hub Org)</relationshipLabel>
         <relationshipName>Scratch_Org_Artifacts_Templates</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -412,7 +413,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Source Org Credential</label>
+        <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Scratch Org Project Templates (Source Org Credential)</relationshipLabel>
         <relationshipName>Scratch_Org_Project_Templates</relationshipName>
