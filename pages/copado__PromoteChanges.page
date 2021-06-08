@@ -56,7 +56,7 @@
                 sourceOrgId: '{!JSENCODE(Promotion__c.Source_Org_Credential__c)}',
                 destinationOrgId: '{!JSENCODE(Promotion__c.Destination_Org_Credential__c)}',
 
-                createDeployment: function (deploymentName, isTestOnly, testLevel) {
+                createDeployment: function (deploymentName, isTestOnly, testLevel, attachdeploymentfile) {
                     if (copadoApp.sourceOrgId == '') {
                         alert(copadoLabels.SOURCE_ORG_CREDENTIAL_REQUIRED_FOR_DEPLOYMENT);
                         return false;
@@ -69,13 +69,13 @@
                     lockScreen();
 
                     var att = globalJobsManagerStart(copadoApp.promotionId, 'Promotion', "{!JSENCODE(jobsManagerMatchingKeys)}");
-                    copadoApp.callBackEnd(deploymentName, isTestOnly, testLevel, att);
+                    copadoApp.callBackEnd(deploymentName, isTestOnly, testLevel, att, attachdeploymentfile);
                 },
                 sforceFailure: function (error) {
                     console.error('An error has occured with the Salesforce Ajax Toolkit: ', error);
                     alert(error);
                 },
-                callBackEnd: function (deploymentName, isTestOnly, testLevel, att) {
+                callBackEnd: function (deploymentName, isTestOnly, testLevel, att, attachdeploymentfile) {
                     var isTestOnly = isTestOnly || false;
                     if (deploymentName == null) {
                         unlockScreen();
@@ -84,7 +84,7 @@
                     else {
                         console.log('Calling Copado for: ', copadoApp.promotionId);
                         deploymentName = deploymentName.substring(0, 80);
-                        var url = '{!JSENCODE(urlBase)}promote/' + copadoApp.promotionId + '{!JSENCODE(urlParameters)}&deploy=false&deploymentName=' + encodeURIComponent(deploymentName) + '&checkOnly=' + isTestOnly + '&testLevel=' + testLevel;
+                        var url = '{!JSENCODE(urlBase)}promote/' + copadoApp.promotionId + '{!JSENCODE(urlParameters)}&deploy=false&deploymentName=' + encodeURIComponent(deploymentName) + '&checkOnly=' + isTestOnly + '&testLevel=' + testLevel + '&attachDeploymentFile=' + attachdeploymentfile;
                         //console.info('url==> ',url);
                         dw.u.getRemote(url, function (res) {
                             console.log('Promote callback: ', res);
@@ -670,6 +670,17 @@
                                                                 </div>
                                                             </div>
                                                             <div class="slds-form-element">
+                                                                <div class="slds-form-element__control">
+                                                                    <span class="slds-checkbox">
+                                                                        <input type="checkbox" name="default" id="attachdeploymentfile" value="on" />
+                                                                        <label class="slds-checkbox__label" for="attachdeploymentfile">
+                                                                            <span class="slds-checkbox_faux"></span>
+                                                                            <span class="slds-form-element__label">Attach Deployment File</span>
+                                                                        </label>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="slds-form-element">
                                                                 <label class="slds-form-element__label" for="input-id-01">Test Level</label>
                                                                 <div class="slds-form-element__control">
                                                                     <select id="testLevel" data-selected="" class="slds-select">
@@ -723,9 +734,10 @@
                                                 var deploymentName = $copado('#deploymentName').val();
                                                 var isTestOnly = $copado('#validationOnly').is(':checked');
                                                 var testLevel = $copado('[id$="testLevel"]').val();
+                                                var attachdeploymentfile = $copado('#attachdeploymentfile').is(':checked');
                                                 console.log(deploymentName, isTestOnly, testLevel);
                                                 closeModal();
-                                                copadoApp.createDeployment(deploymentName, isTestOnly, testLevel);
+                                                copadoApp.createDeployment(deploymentName, isTestOnly, testLevel, attachdeploymentfile);
                                             }
                                         </script>
 

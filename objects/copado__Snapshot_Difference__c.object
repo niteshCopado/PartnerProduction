@@ -286,9 +286,9 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Destination Org Credential</label>
+        <label>Destination Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Snapshot Differences (Destination Org Credential)</relationshipLabel>
+        <relationshipLabel>Snapshot Differences (Destination Credential)</relationshipLabel>
         <relationshipName>Snapshot_Differences1</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -387,7 +387,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Source Org Credential</label>
+        <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Snapshot Differences</relationshipLabel>
         <relationshipName>Snapshot_Differences</relationshipName>

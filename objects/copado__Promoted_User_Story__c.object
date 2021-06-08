@@ -173,7 +173,7 @@
         <deprecated>false</deprecated>
         <description>The status Outdated invalidates that this user story got promoted. The user story will be available again for automated promotions and back promotions if applicable.</description>
         <externalId>false</externalId>
-        <label>Status</label>
+        <label>Active / Outdated</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
