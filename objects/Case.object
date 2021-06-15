@@ -274,6 +274,11 @@
                     <default>false</default>
                     <label>First &amp; Second</label>
                 </value>
+                <value>
+                    <fullName>First &amp;;Third</fullName>
+                    <default>false</default>
+                    <label>First &amp;;Third</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>B</controllingFieldValue>
