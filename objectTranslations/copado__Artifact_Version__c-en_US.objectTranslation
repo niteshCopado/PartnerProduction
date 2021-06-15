@@ -40,6 +40,22 @@
         <name>copado__Sandbox_Installation_URL__c</name>
     </fields>
     <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locked</masterLabel>
+            <translation><!-- Locked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- In order to install a package to a Salesforce environment, installation URL requires a subscriber Id. Please refer to installation URLs. --></help>
         <label><!-- Subscriber Version Id --></label>
         <name>copado__Subscriber_Version_Id__c</name>
@@ -48,6 +64,11 @@
         <help><!-- The package version’s tag. Package version content is stored in this tag in the given repository. Tags are created for each version number. Version with the same version number may overwrite each other. Try to keep your version numbers unique. --></help>
         <label><!-- Tag --></label>
         <name>copado__Tag__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>copado__User_Story__c</name>
+        <relationshipLabel><!-- Bundle Versions --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- The description of the package version --></help>

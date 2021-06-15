@@ -144,6 +144,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>Created test script for your saved case !!!</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -296,7 +297,7 @@ TEXT(copado__Last_Status__c)
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Copado will log in to Salesforce using this Org Credential.  There is no need to record username and password of the Salesforce login page.</inlineHelpText>
-        <label>Org Credential</label>
+        <label>Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Selenium Test Runs</relationshipLabel>
         <relationshipName>SeleniumTestRuns</relationshipName>

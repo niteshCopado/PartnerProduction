@@ -269,17 +269,13 @@
                     <default>false</default>
                     <label>7</label>
                 </value>
+                <value>
+                    <fullName>First &amp; Second</fullName>
+                    <default>false</default>
+                    <label>First &amp; Second</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
-                <controllingFieldValue>A</controllingFieldValue>
-                <valueName>1</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>A</controllingFieldValue>
-                <valueName>2</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>A</controllingFieldValue>
                 <controllingFieldValue>B</controllingFieldValue>
                 <valueName>3</valueName>
             </valueSettings>

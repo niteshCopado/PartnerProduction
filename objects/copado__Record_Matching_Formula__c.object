@@ -160,7 +160,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The Org from where Copado retrieves the list of objects and fields available to build the formula.</inlineHelpText>
-        <label>Configuration Source Org</label>
+        <label>Configuration Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Record Matching Formulas</relationshipLabel>
         <relationshipName>Record_Matching_Formulas</relationshipName>

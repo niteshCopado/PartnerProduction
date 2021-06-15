@@ -141,9 +141,17 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Credential_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Credential_Compact_Layout</fullName>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__Org_Type__c</fields>
+        <fields>copado__Username__c</fields>
+        <label>Credential Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>Org authenticated via OAuth that you will need in order to schedule a deployment, run or schedule a Git Snapshot, run or schedule Apex test for an Org and to add more Org credentials in the same Salesforce server (pod).</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
@@ -389,7 +397,7 @@
         <inlineHelpText>Will be used for Review app creation out of promotions. Otherwise every scratch org may be created by their own scratch org definition either with a template or without.</inlineHelpText>
         <label>Default Scratch Org Definition</label>
         <referenceTo>copado__Scratch_Org_Definition__c</referenceTo>
-        <relationshipLabel>Org Credentials</relationshipLabel>
+        <relationshipLabel>Credentials</relationshipLabel>
         <relationshipName>Org_Credentials</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -401,7 +409,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Developer Hub Org</label>
+        <label>Developer Hub Credential</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -412,7 +420,7 @@
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Org Credentials</relationshipLabel>
+        <relationshipLabel>Credentials</relationshipLabel>
         <relationshipName>Org_Credentials</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -439,7 +447,7 @@
         <inlineHelpText>Environment records are created automatically when Org Credentials are authenticated. The Environment may have multiple Org Credentials which correspond to different users of the same Environment.</inlineHelpText>
         <label>Environment</label>
         <referenceTo>copado__Environment__c</referenceTo>
-        <relationshipLabel>Org Credentials</relationshipLabel>
+        <relationshipLabel>Credentials</relationshipLabel>
         <relationshipName>Org_Credentials</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -626,6 +634,19 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Platform__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(copado__Environment__r.copado__Platform__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Platform</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Profile_Name__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -644,7 +665,7 @@
         <description>Organization Id for the Environment.</description>
         <externalId>true</externalId>
         <inlineHelpText>Organization Id for the Environment.</inlineHelpText>
-        <label>SFDC Org ID</label>
+        <label>SFDC Credential ID</label>
         <length>40</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -769,7 +790,6 @@ IMAGE(&apos;/resource/1516617568000/&apos;+IF($Setup.copado__Settings__c.copado_
 
 ) 
 ) 
-
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Type Icon</label>
@@ -825,12 +845,12 @@ IMAGE(&apos;/resource/1516617568000/&apos;+IF($Setup.copado__Settings__c.copado_
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Is Developer Hub Org</label>
+        <label>Is Developer Hub Credential</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
-    <label>Org Credential</label>
+    <label>Credential</label>
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
@@ -848,11 +868,11 @@ IMAGE(&apos;/resource/1516617568000/&apos;+IF($Setup.copado__Settings__c.copado_
         <language>en_US</language>
     </listViews>
     <nameField>
-        <label>Org Name</label>
+        <label>Credential Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Org Credentials</pluralLabel>
+    <pluralLabel>Credentials</pluralLabel>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Org_Type__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Username__c</customTabListAdditionalFields>

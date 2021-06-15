@@ -3,7 +3,7 @@
     <fields>
         <label><!-- Org Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- User Story Bundles --></relationshipLabel>
+        <relationshipLabel><!-- DEPRECATED --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Status Notes --></label>
@@ -32,6 +32,6 @@
     <fields>
         <label><!-- User Story --></label>
         <name>copado__User_Story__c</name>
-        <relationshipLabel><!-- User Story Bundles --></relationshipLabel>
+        <relationshipLabel><!-- DEPRECATED --></relationshipLabel>
     </fields>
 </CustomObjectTranslation>
