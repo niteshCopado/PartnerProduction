@@ -66,7 +66,7 @@
         <name>copado__Open__c</name>
     </fields>
     <fields>
-        <label><!-- Org Credential --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
         <relationshipLabel><!-- Static Code Analysis Results --></relationshipLabel>
     </fields>

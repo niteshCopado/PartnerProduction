@@ -9,7 +9,11 @@
         <name>copado__Deployed__c</name>
     </fields>
     <fields>
-        <label><!-- Destination Org --></label>
+        <label><!-- Destination Id --></label>
+        <name>copado__Destination_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination Credential --></label>
         <name>copado__Destination_Org__c</name>
         <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
     </fields>
@@ -42,10 +46,22 @@
         <name>copado__External_Status__c</name>
     </fields>
     <fields>
+        <label><!-- Repository Id --></label>
+        <name>copado__Git_Repository__c</name>
+    </fields>
+    <fields>
         <help><!-- Latest result with more details of the job execution. --></help>
         <label><!-- Last Result --></label>
         <name>copado__Last_Result__c</name>
         <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pipeline Id --></label>
+        <name>copado__Pipeline_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Id --></label>
+        <name>copado__Source_Id__c</name>
     </fields>
     <fields>
         <label><!-- Status Flag --></label>
@@ -77,7 +93,7 @@
         <relationshipLabel><!-- Deployment Jobs --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- To Org Name --></label>
+        <label><!-- To Credential Name --></label>
         <name>copado__To_Org_Name__c</name>
     </fields>
     <fields>

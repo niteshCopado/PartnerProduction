@@ -35,7 +35,16 @@
                     formContent.css('width','' + iWidht + 'px');
                 }
             }
-
+            
+            function showUSRecTypeList(){
+                const output = $copado('#usRecTypeIdOutpt');
+                const input = $copado('#usRecTypeIdInp');
+                output.removeClass('slds-show');
+                input.removeClass('slds-hide');
+                output.addClass('slds-hide');
+                input.addClass('slds-show');
+            }
+            
             function userStoryDataTable(){
                 var pbTableUserStories = $copado('#pbTableUserStories');
                 var thSize = pbTableUserStories.find('thead>tr>th');
@@ -728,10 +737,11 @@
             <apex:actionFunction name="removeSprint" action="{!removeSprintFromUs}" onComplete="userStoryDataTable();userStoryDragDataTable();applyRenderSVG(['rowButton','snippetButton','dragButton','kanbanButton','refreshButton','userStoryImage'],svgButtonsClass);sortUSOrder();unlockScreen();" reRender="cardsPanel,actualvelocities,plannedvelocities,daysleftstring,errors">
                 <apex:param name="usId" value="" /> 
             </apex:actionFunction>
-            <apex:actionFunction name="prepareUs" action="{!prepareUserStory}" onComplete="showModal('#usModal','#usBackdrop');unlockScreen();" reRender="usContent,usFooter,errors">
+            <apex:actionFunction name="prepareUs" action="{!prepareUserStory}" onComplete="showModal('#usModal','#usBackdrop');unlockScreen();" reRender="usContent,usFooter,errors,usRecTypeIdInpField">
                 <apex:param name="usId" value="" />
                 <apex:param name="mode" value="" />
             </apex:actionFunction>
+            <apex:actionFunction name="usRecTypeEditEnable" action="{!enableUSrecTypeEdit}" oncomplete="showUSRecTypeList();" reRender="usRecTypeIdInpField"/>
             <apex:actionFunction name="usUpdateOperation" action="{!userStoryUpdateOperation}" onComplete="closeModal('#usModal','#usBackdrop');userStoryDataTable();userStoryDragDataTable();applyRenderSVG(['rowButton','snippetButton','dragButton','kanbanButton','refreshButton','userStoryImage'],svgButtonsClass);sortUSOrder();unlockScreen();" reRender="cardsPanel,actualvelocities,plannedvelocities,daysleftstring,usErrors,errors"/>
             <apex:actionFunction name="gobeginning" action="{!beginning}" onComplete="userStoryDataTable();userStorySnippetDataTable();userStoryDragDataTable();applyRenderSVG(['rowButton','snippetButton','dragButton','kanbanButton','refreshButton','userStoryImage'],svgButtonsClass);sortTable();sortUSOrder();unlockScreen();" reRender="cardsPanel,errors"/>
             <apex:actionFunction name="goprevious" action="{!previous}" onComplete="userStoryDataTable();userStorySnippetDataTable();userStoryDragDataTable();applyRenderSVG(['rowButton','snippetButton','dragButton','kanbanButton','refreshButton','userStoryImage'],svgButtonsClass);sortTable();sortUSOrder();unlockScreen();" reRender="cardsPanel,errors"/>
@@ -772,8 +782,22 @@
                                     <div class="slds-form-element__control">
                                         <div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
-                                            <div class="slds-form-element__control">
-                                                <apex:inputField value="{!us.RecordTypeId}" styleclass="slds-input" />
+                                            <div class="slds-show" id="usRecTypeIdOutpt">  
+                                                <div class="slds-form-element__control">
+                                                    <apex:outputField value="{!us.RecordTypeId}" styleclass="slds-input" />
+                                                    <button type="button" class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" style="border-radius: 10px;" title="{!$Label.SprintWall_Change_Record_Type}" onClick="usRecTypeEditEnable();">
+                                                        <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Resource.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#change_record_type')}">
+                                                            </use>
+                                                        </svg>
+                                                        <span class="slds-assistive-text">{!$Label.copado__sprintwall_change_record_type}</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="slds-hide" id="usRecTypeIdInp">
+                                                <div class="slds-form-element__control">
+                                                    <apex:inputField value="{!us.RecordTypeId}" styleclass="slds-input" id="usRecTypeIdInpField" rendered="{!usRecTypeEdit}"/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -784,7 +808,7 @@
                                         <div class="slds-form-element">
                                             <label class="slds-form-element__label"></label>
                                             <div class="slds-form-element__control">
-                                                <apex:inputField value="{!us.copado__User_Story_Title__c}" styleclass="slds-input" />
+                                                <apex:inputField value="{!us.copado__User_Story_Title__c}" styleclass="slds-input"/>
                                             </div>
                                         </div>
                                     </div>

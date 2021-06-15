@@ -8,8 +8,6 @@
         <c:GAnalytics />
 
         <style type="text/css">
-            /*to force center multiselect component*/
-
             div.duelingListBox {
                 margin-right: auto;
                 margin-left: auto;

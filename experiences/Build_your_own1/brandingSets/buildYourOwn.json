@@ -6,7 +6,7 @@
   "values" : {
     "ActionColor" : "#2574A9",
     "BorderColor" : "#D4D4D4",
-    "CardBackgroundColor" : "rgba(255, 255, 255, 1)",
+    "CardBackgroundColor" : "rgba(255, 255, 255, 0)",
     "CompanyLogo" : "",
     "DetailTextColor" : "#696969",
     "ErrorFontColor" : "#ff9e9e",

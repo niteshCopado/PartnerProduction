@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
+        <label><!-- Bundle --></label>
+        <name>copado__Bundle</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
@@ -215,6 +219,10 @@
             <masterLabel>Mergeable</masterLabel>
             <translation><!-- Mergeable --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Git Repository --></label>
+        <name>copado__Git_Repository__c</name>
     </fields>
     <fields>
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
@@ -607,9 +615,9 @@
     </fields>
     <fields>
         <help><!-- Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment. --></help>
-        <label><!-- Org Credential --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- User Stories (Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Credential) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Parent Epic Title --></label>
@@ -809,6 +817,18 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
+    </fields>
     <recordTypes>
         <label><!-- Bug --></label>
         <name>copado__Bug</name>
@@ -860,6 +880,10 @@
     <webLinks>
         <label><!-- Copado_DX --></label>
         <name>copado__Copado_DX</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Bundle --></label>
+        <name>copado__Create_Bundle</name>
     </webLinks>
     <webLinks>
         <label><!-- Create_Scratch_Org --></label>
