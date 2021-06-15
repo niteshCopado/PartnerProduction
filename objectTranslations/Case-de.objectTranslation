@@ -32,12 +32,16 @@
             <translation></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Delivery - inquiry&amp;dispute</masterLabel>
+            <translation>Lieferung - Anfrage/Reklamation</translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>First &amp; Second</masterLabel>
             <translation>asdfasdfa</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>First &amp;;Third</masterLabel>
-            <translation></translation>
+            <masterLabel>First &amp;Third</masterLabel>
+            <translation>Lieferung - Anfrage/Reklamation</translation>
         </picklistValues>
     </fields>
 </CustomObjectTranslation>

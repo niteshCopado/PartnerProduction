@@ -275,9 +275,14 @@
                     <label>First &amp; Second</label>
                 </value>
                 <value>
-                    <fullName>First &amp;;Third</fullName>
+                    <fullName>First &amp;Third</fullName>
                     <default>false</default>
-                    <label>First &amp;;Third</label>
+                    <label>First &amp;Third</label>
+                </value>
+                <value>
+                    <fullName>Delivery - inquiry&amp;dispute</fullName>
+                    <default>false</default>
+                    <label>Delivery - inquiry&amp;dispute</label>
                 </value>
             </valueSetDefinition>
             <valueSettings>
