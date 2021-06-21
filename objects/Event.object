@@ -231,6 +231,11 @@
         <fullName>WhoId</fullName>
         <type>Lookup</type>
     </fields>
+    <recordTypes>
+        <fullName>TEst_on_Event</fullName>
+        <active>true</active>
+        <label>TEst on Event</label>
+    </recordTypes>
     <searchLayouts/>
     <sharingModel>Private</sharingModel>
 </CustomObject>

@@ -2,6 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>Activity.New_type_activity__c</members>
+        <members>Event.New_type_activity__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -9,6 +10,7 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
+        <members>Event.TEst_on_Event</members>
         <members>Task.Task_Record_Type</members>
         <name>RecordType</name>
     </types>
