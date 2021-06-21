@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>HelloWorld</members>
-        <members>HelloWorldTest</members>
-        <name>ApexClass</name>
+        <members>Activity.New_type_activity__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Activity_type_new</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>Task.Task_Record_Type</members>
+        <name>RecordType</name>
     </types>
     <version>51.0</version>
 </Package>
