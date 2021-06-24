@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>NewFolder</members>
-        <members>NewFolder/SubFolder</members>
-        <members>NewFolder/SubFolder/New_Accounts_Report_cCa</members>
+        <members>Anotherfolder/AnotherSubFolder/test_report_uF7</members>
         <name>Report</name>
     </types>
     <version>51.0</version>
