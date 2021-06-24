@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Activity.New_type_activity__c</members>
-        <members>Event.New_type_activity__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Activity_type_new</members>
-        <name>GlobalValueSet</name>
-    </types>
-    <types>
-        <members>Event.TEst_on_Event</members>
-        <members>Task.Task_Record_Type</members>
-        <name>RecordType</name>
+        <members>NewFolder</members>
+        <members>NewFolder/SubFolder</members>
+        <members>NewFolder/SubFolder/New_Accounts_Report_cCa</members>
+        <name>Report</name>
     </types>
     <version>51.0</version>
 </Package>
