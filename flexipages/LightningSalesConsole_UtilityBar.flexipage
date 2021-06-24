@@ -12,6 +12,7 @@
                 <componentName>notes:utilityBarNoteList</componentName>
             </componentInstance>
         </itemInstances>
+        
         <name>utilityItems</name>
         <type>Region</type>
     </flexiPageRegions>
