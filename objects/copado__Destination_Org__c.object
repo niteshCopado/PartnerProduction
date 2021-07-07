@@ -211,7 +211,6 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
         <externalId>false</externalId>
         <label>Deployment</label>
         <referenceTo>copado__Deployment__c</referenceTo>
-        <relationshipLabel>Destination Orgs</relationshipLabel>
         <relationshipName>Destination_Orgs</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
@@ -301,7 +300,7 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
         <externalId>false</externalId>
         <formula>copado__To_Org__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>To Org Name</label>
+        <label>To Credential Name</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -313,7 +312,7 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
         <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>To Org</label>
+        <label>To Credential</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
@@ -324,21 +323,21 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
             <isOptional>true</isOptional>
         </lookupFilter>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Deployments To</relationshipLabel>
+        <relationshipLabel>Destination Credentials</relationshipLabel>
         <relationshipName>Deployments_to</relationshipName>
         <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Destination Org</label>
+    <label>Destination Credential</label>
     <nameField>
         <displayFormat>DO-{0000}</displayFormat>
-        <label>Destination Org Number</label>
+        <label>Destination Credential Number</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Destination Orgs</pluralLabel>
+    <pluralLabel>Destination Credentials</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

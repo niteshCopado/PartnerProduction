@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Customer Priority --></label>
         <name>CustomerPriority__c</name>
         <picklistValues>
             <masterLabel>High</masterLabel>
-            <translation></translation>
+            <translation><!-- High --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Low</masterLabel>
-            <translation></translation>
+            <translation><!-- Low --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Medium</masterLabel>
-            <translation></translation>
+            <translation><!-- Medium --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Number of Locations --></label>
         <name>NumberofLocations__c</name>
     </fields>
     <fields>
         <help>Opção para combinar as quantidades de vários ativos para o mesmo produto em uma linha quando a cotação de renovação é gerada.</help>
-        <label></label>
+        <label><!-- Combine Asset Quantities --></label>
         <name>SBQQ__AssetQuantitiesCombined__c</name>
     </fields>
     <fields>
         <help>Permita combinar ativos e assinaturas a partir de vários contratos com termo combinado. Por padrão, cada contrato com termo combinado gera um grupo separado na cotação de renovação.</help>
-        <label></label>
+        <label><!-- Combine Co-Termed Contracts --></label>
         <name>SBQQ__CoTermedContractsCombined__c</name>
     </fields>
     <fields>
         <help>Determina quando os contratos são encerrados de modo combinado.</help>
-        <label></label>
+        <label><!-- Co-Termination Event --></label>
         <name>SBQQ__CoTerminationEvent__c</name>
         <picklistValues>
             <masterLabel>Add-on</masterLabel>
@@ -49,7 +49,7 @@
     </fields>
     <fields>
         <help>Determina como os contratos de serviço e as assinaturas para esse cliente são encerrados de modo combinado.</help>
-        <label></label>
+        <label><!-- Contract Co-Termination --></label>
         <name>SBQQ__ContractCoTermination__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -66,28 +66,28 @@
     </fields>
     <fields>
         <help>Oportunidade padrão para essa conta usada por um módulo de comércio eletrônico para obter o catálogo de preços do cliente e associar a cotações do &quot;carrinho de compras&quot;.</help>
-        <label></label>
+        <label><!-- Default Opportunity --></label>
         <name>SBQQ__DefaultOpportunity__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
         <help>Selecione se os preços contratados não devam ser herdados da conta pai.</help>
-        <label></label>
+        <label><!-- Ignore Parent Contracted Prices --></label>
         <name>SBQQ__IgnoreParentContractedPrices__c</name>
     </fields>
     <fields>
         <help>Selecione a caixa de seleção para manter a hierarquia de pacotes em cotações de renovação e alterações.</help>
-        <label></label>
+        <label><!-- Preserve Bundle Structure --></label>
         <name>SBQQ__PreserveBundle__c</name>
     </fields>
     <fields>
         <help>Insira a data até a qual os preços devem ser retidos.</help>
-        <label></label>
+        <label><!-- Price Hold End --></label>
         <name>SBQQ__PriceHoldEnd__c</name>
     </fields>
     <fields>
         <help>Escolha Baseado em ativo para tornar as renovações baseadas nos Ativos da conta ou escolha Baseado em assinatura para tornar as renovações baseadas em assinaturas criadas a partir de uma cotação.</help>
-        <label></label>
+        <label><!-- Renewal Model --></label>
         <name>SBQQ__RenewalModel__c</name>
         <picklistValues>
             <masterLabel>Asset Based</masterLabel>
@@ -100,7 +100,7 @@
     </fields>
     <fields>
         <help>Use &quot;Mesmo&quot; para manter o mesmo preço pago na última vez. Use &quot;Lista&quot; para usar o preço de lista atual. Use &quot;Aumento&quot; para usar o preço pago na última vez mais algum aumento.</help>
-        <label></label>
+        <label><!-- Renewal Pricing Method --></label>
         <name>SBQQ__RenewalPricingMethod__c</name>
         <picklistValues>
             <masterLabel>List</masterLabel>
@@ -117,7 +117,7 @@
     </fields>
     <fields>
         <help>Selecione se essa conta tiver certificados ativos</help>
-        <label></label>
+        <label><!-- Tax-Exempt --></label>
         <name>SBQQ__TaxExempt__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -129,96 +129,96 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA Expiration Date --></label>
         <name>SLAExpirationDate__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA Serial Number --></label>
         <name>SLASerialNumber__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA --></label>
         <name>SLA__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation></translation>
+            <translation><!-- Bronze --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation></translation>
+            <translation><!-- Gold --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Platinum</masterLabel>
-            <translation></translation>
+            <translation><!-- Platinum --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation></translation>
+            <translation><!-- Silver --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Upsell Opportunity --></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
-            <translation></translation>
+            <translation><!-- Maybe --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation></translation>
+            <translation><!-- No --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation></translation>
+            <translation><!-- Yes --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Validation --></label>
         <name>Validation__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Bill To Contact --></label>
         <name>blng__BillToContact__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Customer Profile Id --></label>
         <name>blng__CustomerProfileId__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Default Payment Type --></label>
         <name>blng__DefaultPaymentType__c</name>
     </fields>
     <recordTypes>
-        <label></label>
+        <label><!-- Person Account --></label>
         <name>Person_Account</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- Person Account 2 --></label>
         <name>Person_Account_2</name>
     </recordTypes>
     <webLinks>
-        <label></label>
+        <label><!-- Billing --></label>
         <name>Billing</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Amend_Assets --></label>
         <name>SBQQ__Amend_Assets</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Renew_Assets --></label>
         <name>SBQQ__Renew_Assets</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- CreditCenter --></label>
         <name>blng__CreditCenter</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- PaymentVirtualTerminal --></label>
         <name>blng__PaymentVirtualTerminal</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Refund --></label>
         <name>blng__Refund</name>
     </webLinks>
 </CustomObjectTranslation>

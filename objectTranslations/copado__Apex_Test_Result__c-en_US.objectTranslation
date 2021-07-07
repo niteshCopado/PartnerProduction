@@ -9,7 +9,7 @@
         <name>copado__Failures__c</name>
     </fields>
     <fields>
-        <label><!-- Org --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org__c</name>
         <relationshipLabel><!-- Apex Test Results --></relationshipLabel>
     </fields>

@@ -275,7 +275,6 @@
                             }
                             //if not is forced to be opened
                             !location.href.split('_mtf')[1] &&
-                                //close the metadata filtes 
                                 twistSection($copado('[id$="typesSection"]').find('img')[0]);
 
                         </script>
