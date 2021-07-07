@@ -448,7 +448,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Org Credential</label>
+        <label>Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Static Code Analysis Results</relationshipLabel>
         <relationshipName>Static_Code_Analysis_Results</relationshipName>

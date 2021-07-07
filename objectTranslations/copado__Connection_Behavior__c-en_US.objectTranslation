@@ -38,6 +38,10 @@
         <name>copado__Description__c</name>
     </fields>
     <fields>
+        <label><!-- Disable Environment Branch --></label>
+        <name>copado__DisableEnvironmentBranch__c</name>
+    </fields>
+    <fields>
         <label><!-- Execute back-promotions in parallel --></label>
         <name>copado__Execute_back_promotions_in_parallel__c</name>
     </fields>

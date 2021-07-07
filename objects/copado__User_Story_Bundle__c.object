@@ -152,6 +152,7 @@
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>DEPRECATED</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -169,7 +170,6 @@
         <externalId>false</externalId>
         <label>Org Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>User Story Bundles</relationshipLabel>
         <relationshipName>User_Story_Bundles</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -237,21 +237,20 @@
         <externalId>false</externalId>
         <label>User Story</label>
         <referenceTo>copado__User_Story__c</referenceTo>
-        <relationshipLabel>User Story Bundles</relationshipLabel>
         <relationshipName>User_Story_Bundles</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>User Story Bundle</label>
+    <label>DEPRECATED</label>
     <nameField>
         <displayFormat>USB-{0000000}</displayFormat>
         <label>User Story Bundle Name</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>User Story Bundles</pluralLabel>
+    <pluralLabel>DEPRECATED</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

@@ -263,7 +263,7 @@
                                                                     <tr class="slds-hint-parent">
                                                                         <td>
                                                                             <div class="slds-truncate">
-                                                                                <apex:outputLink value="{!URLFOR($Page.copado__viewOrg,null,[id=orgCredentialMap[ocl].Id])}" target="_blank"> {!orgCredentialMap[ocl].Name}
+                                                                                <apex:outputLink value="{!URLFOR($Action.copado__Org__c.View,orgCredentialMap[ocl].Id)}" target="_blank"> {!orgCredentialMap[ocl].Name}
                                                                                 </apex:outputLink>
                                                                             </div>
                                                                         </td>
@@ -293,7 +293,7 @@
                                                                     <tr class="slds-hint-parent">
                                                                         <td>
                                                                             <div class="slds-truncate">
-                                                                                <apex:outputLink value="{!URLFOR($Page.copado__viewOrg,null,[id=orgCredentialMap[ocl].Id])}" target="_blank"> {!orgCredentialMap[ocl].Name}
+                                                                                <apex:outputLink value="{!URLFOR($Action.copado__Org__c.View,orgCredentialMap[ocl].Id)}" target="_blank"> {!orgCredentialMap[ocl].Name}
                                                                                 </apex:outputLink>
                                                                             </div>
                                                                         </td>
@@ -599,7 +599,7 @@
                                                                         </td>
                                                                         <td>
                                                                             <div class="slds-truncate">
-                                                                                <apex:outputLink value="{!URLFOR($Page.copado__viewOrg,null,[id=grl.copado__Org__c])}" target="_blank"> {!grl.Org__r.Name}
+                                                                                <apex:outputLink value="{!URLFOR($Action.copado__Org__c.View,grl.copado__Org__c)}" target="_blank"> {!grl.Org__r.Name}
                                                                                 </apex:outputLink>
                                                                             </div>
                                                                         </td>

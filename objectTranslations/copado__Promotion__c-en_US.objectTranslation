@@ -41,9 +41,9 @@
     </fields>
     <fields>
         <help><!-- The credential to the Destination Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Destination Environment. --></help>
-        <label><!-- Destination Org Credential --></label>
+        <label><!-- Destination Credential --></label>
         <name>copado__Destination_Org_Credential__c</name>
-        <relationshipLabel><!-- Promotions (Destination Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Promotions (Destination Credential) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Conflicts found in the selected metadata types are not auto-resolved by Copado when merging feature branches into the promotion branch. The conflicts can be manually resolved using Copado. --></help>
@@ -82,9 +82,9 @@
     </fields>
     <fields>
         <help><!-- The credential to the Source Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Source Environment. --></help>
-        <label><!-- Source Org Credential --></label>
+        <label><!-- Source Credential --></label>
         <name>copado__Source_Org_Credential__c</name>
-        <relationshipLabel><!-- Promotions (Source Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- Promotions (Source Credential) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Status --></label>

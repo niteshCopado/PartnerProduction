@@ -179,7 +179,7 @@
         <fullName>copado__Org__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Org</label>
+        <label>Credential</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>

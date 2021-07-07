@@ -550,7 +550,7 @@ var targetDomain = '';
             {
                 text: 'Total Record Count',
                 datafield: 'totalRecords',
-                filtertype: 'input',
+                filterable: false,
                 columntype: 'textbox',
                 width: '10%',
                 cellsrenderer: sumSuccessAndFailRecords
@@ -558,28 +558,28 @@ var targetDomain = '';
             {
                 text: 'Success Record Count',
                 datafield: 'deployedRecords',
-                filtertype: 'input',
+                filterable: false,
                 columntype: 'textbox',
                 width: '10%'
             },
             {
                 text: 'Failed Record Count',
                 datafield: 'failedRecords',
-                filtertype: 'input',
+                filterable: false,
                 columntype: 'textbox',
                 width: '10%'
             },
             {
                 text: 'Attachments (mb)',
                 datafield: 'attachmentSize',
-                filtertype: 'input',
+                filterable: false,
                 columntype: 'textbox',
                 width: '10%'
             },
             {
                 text: 'Generated IDs',
                 datafield: 'generatedIds',
-                filtertype: 'input',
+                filterable: false,
                 columntype: 'textbox',
                 width: '10%',
                 cellsrenderer: generatedIdsCount

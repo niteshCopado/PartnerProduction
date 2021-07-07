@@ -14,6 +14,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
+                <field>copado__Platform__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -45,6 +49,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Static_Code_Analysis_Settings__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__Exclude_From_Auto_Resolve__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -125,6 +133,7 @@
         <fields>copado__Active__c</fields>
         <fields>copado__Git_Repository__c</fields>
         <fields>copado__Main_Branch__c</fields>
+        <fields>copado__Platform__c</fields>
     </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
