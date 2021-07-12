@@ -7,7 +7,8 @@
   "layouts" : {
     "Home" : "e0891cde-a151-4898-a726-e9eac3319230",
     "Inner" : "b53fef5a-2e3c-4d86-8d3a-4a38d88d9a2f",
-    "Login" : "094c1254-1a81-4eaf-abe3-da210864eb27"
+    "Login" : "094c1254-1a81-4eaf-abe3-da210864eb27",
+    "ServiceNotAvailable" : "48e8cc80-6c15-4232-b0f4-a52af11a2892"
   },
   "type" : "theme",
   "views" : [ {
@@ -320,7 +321,10 @@
               "borderStyle" : "outline",
               "buttonColor" : "#db816a",
               "buttonHoverColor" : "#b56854",
-              "crossObjectTypeaheadApiNames" : "",
+              "crossObjectTypeaheadApiNames" : [ {
+                "isPublic" : true,
+                "name" : "FeedItem"
+              } ],
               "iconColor" : "#FFFFFF",
               "placeholderText" : "Search the help center...",
               "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
@@ -358,6 +362,29 @@
         "type" : "component"
       } ],
       "id" : "ea3575fb-3ef2-488d-8a65-e0a5394457e6",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "48e8cc80-6c15-4232-b0f4-a52af11a2892",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "4aaeca13-46b6-434f-b0e1-dda1ace4198c",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "4929daac-48c5-44e8-a3f1-8d74c5d5b9b0",
       "regionName" : "themeFooter",
       "type" : "region"
     } ],
