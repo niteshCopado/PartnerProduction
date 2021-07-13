@@ -291,23 +291,23 @@ var conversionFunc = conversionFunc || {},
                     });
 
                     $copado('.CodeMirror-merge-editor').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><span>' +
+                        '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+resolutionToolTip+'</span></div></div></div><span>' +
                             (attach ? resolution : source + jqxdatatable_config.data.orgName) +
-                            '</span></center></div>'
+                            '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
+                            '</center></div>'
                     );
                     $copado('.CodeMirror-merge-pane-rightmost').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><span>' +
-                            (attach ? featureBranch : target + jqxdatatable_config.data.targetOrgName) +
-                            '</span></center></div>'
+                        '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+featureToolTip+'</span></div></div></div><span>' +
+                            (attach ? featureBranch : target + jqxdatatable_config.data.targetOrgName) + 
+                            '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
+                            '</center></div>'
                     );
                     if ($copado('.CodeMirror-merge-left').length > 0) {
                         $copado('.CodeMirror-merge-left').prepend(
-                            '<div class="panel top" style="background-color:white;"><center><span>' + promotionBranch + '</span></center></div>'
+                            '<div class="panel top" style="background-color:white;"><center><div id="promotionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+promotionToolTip+'</span></div></div></div><span>' + promotionBranch + '</span>'+
+                            '<div onmouseenter="$copado(\'#promotionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#promotionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
+                            '</center></div>'
                         );
-                    }
-
-                    if ((cssTop = $copado('.CodeMirror-merge-copy').css('top'))) {
-                        $copado('.CodeMirror-merge-copy').css('top', parseInt(cssTop.slice(0, -2)) + 19);
                     }
 
                     var gapSize =
@@ -348,6 +348,7 @@ var conversionFunc = conversionFunc || {},
     };
     self.classSetValue = function(elem) {
         var index = $copado(elem).attr('panel');
+        resolutionToolTip = index === '3' ? resolutionToolTip3panel : resolutionToolTip2panel;
         jsCookies.set('merge.conflict.selection', index);
         $copado('#grp>.slds-button_brand').removeClass('slds-button_brand');
         $copado(elem).addClass('slds-button_brand');
@@ -382,7 +383,9 @@ var conversionFunc = conversionFunc || {},
                 firstRow = val.slice(0, firstRowEndsAt);
 
                 // to make it work for yaml we are removing all blank lines
-                val = val.replace(/(^[ \t]*\n)/gm, '');
+                if(format == 'json') {
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             usName = val.slice(val.indexOf('>>>>>>>'), val.indexOf(usName) + usName.length); //'>>>>>>> feature/'+usName;
             while (val.indexOf(usName) > -1 && usName && usName.length > 0) {
@@ -395,7 +398,9 @@ var conversionFunc = conversionFunc || {},
         prepareOrig = function(val, format) {
             if (pMode == 'application/xml') {
                 // to make it work for yaml we are removing all blank lines
-                val = val.replace(/(^[ \t]*\n)/gm, '');
+                if(format == 'json') {
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             while (val.indexOf(usName) > -1 && val.indexOf('<<<<<<< HEAD') > -1) {
                 val = (val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + '======='.length, val.length)).replace(
@@ -555,7 +560,6 @@ var conversionFunc = conversionFunc || {},
                 node = document.createElement('root');
                 root = true;
             }
-
             for (var x in json) {
                 if (json.hasOwnProperty(x)) {
                     if (typeof json == 'string') {
@@ -615,7 +619,6 @@ var conversionFunc = conversionFunc || {},
                     }
                 }
             }
-
             if (root == true) {
                 return node.innerHTML;
             } else {

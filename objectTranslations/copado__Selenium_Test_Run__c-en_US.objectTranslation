@@ -55,7 +55,7 @@
     </fields>
     <fields>
         <help><!-- Copado will log in to Salesforce using this Org Credential.  There is no need to record username and password of the Salesforce login page. --></help>
-        <label><!-- Org Credential --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
         <relationshipLabel><!-- Selenium Test Runs --></relationshipLabel>
     </fields>

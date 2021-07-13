@@ -134,16 +134,16 @@
         <type>MasterDetail</type>
     </fields>
     <fields>
+        <fullName>ContentContextId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ContentDocumentId</fullName>
         <type>Lookup</type>
     </fields>
     <searchLayouts>
-        <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
-        <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>AssessmentTask</customTabListAdditionalFields>
         <customTabListAdditionalFields>ContentDocument</customTabListAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>AssessmentTask</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ContentDocument</searchResultsAdditionalFields>
     </searchLayouts>

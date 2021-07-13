@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
+        <label><!-- Bundle --></label>
+        <name>copado__Bundle</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- CBM Fields --></label>
         <name>copado__CBM_Fields</name>
     </fieldSets>
@@ -48,6 +52,14 @@
         <label><!-- Work Manager Relations --></label>
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
+    <fields>
+        <label><!-- Auto Number Field --></label>
+        <name>Auto_Number_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Text field Data --></label>
+        <name>New_Text_field__c</name>
+    </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
@@ -187,6 +199,11 @@
         <name>copado__Failing_Methods__c</name>
     </fields>
     <fields>
+        <label><!-- Feature --></label>
+        <name>copado__Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
@@ -204,9 +221,17 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Git Repository --></label>
+        <name>copado__Git_Repository__c</name>
+    </fields>
+    <fields>
         <help><!-- Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story. --></help>
         <label><!-- Has Apex Code --></label>
         <name>copado__Has_Apex_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>copado__Is_Bundle__c</name>
     </fields>
     <fields>
         <help><!-- Latest Compliance Scan execution date. --></help>
@@ -590,9 +615,9 @@
     </fields>
     <fields>
         <help><!-- Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment. --></help>
-        <label><!-- Org Credential --></label>
+        <label><!-- Credential --></label>
         <name>copado__Org_Credential__c</name>
-        <relationshipLabel><!-- User Stories (Org Credential) --></relationshipLabel>
+        <relationshipLabel><!-- User Stories (Credential) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Parent Epic Title --></label>
@@ -723,11 +748,11 @@
         <name>copado__Stop_Indexing_Metadata__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points Other --></label>
+        <label><!-- Planned Points --></label>
         <name>copado__Story_Points_Other__c</name>
     </fields>
     <fields>
-        <label><!-- Story Points SFDC --></label>
+        <label><!-- Actual Points --></label>
         <name>copado__Story_Points_SFDC__c</name>
     </fields>
     <fields>
@@ -761,6 +786,11 @@
         <name>copado__Triggers_Without_Coverage__c</name>
     </fields>
     <fields>
+        <label><!-- Feature --></label>
+        <name>copado__US_Feature__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Short description of the User Story or requirement. Technical and non-technical team members should be able to understand the description. --></help>
         <label><!-- User Story Title --></label>
         <name>copado__User_Story_Title__c</name>
@@ -786,6 +816,18 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <recordTypes>
         <label><!-- Bug --></label>
@@ -840,6 +882,10 @@
         <name>copado__Copado_DX</name>
     </webLinks>
     <webLinks>
+        <label><!-- Create_Bundle --></label>
+        <name>copado__Create_Bundle</name>
+    </webLinks>
+    <webLinks>
         <label><!-- Create_Scratch_Org --></label>
         <name>copado__Create_Scratch_Org</name>
     </webLinks>
@@ -858,6 +904,10 @@
     <webLinks>
         <label><!-- Mass_Add_User_Stories_Sprint --></label>
         <name>copado__Mass_Add_User_Stories_Sprint</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Open_Org --></label>
+        <name>copado__Open_Org</name>
     </webLinks>
     <webLinks>
         <label><!-- Perform_Validation --></label>

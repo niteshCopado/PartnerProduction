@@ -49,6 +49,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Deployment Automation --></label>
+        <name>copado__Deployment_Automation__c</name>
+        <relationshipLabel><!-- Pipelines (Deployment Automation) --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- If checked, Deployment Flow Steps best practices validations will be disabled. --></help>
         <label><!-- Disable Validations --></label>
         <name>copado__Disable_Validations__c</name>
@@ -56,6 +61,11 @@
     <fields>
         <label><!-- Enable Copado DX --></label>
         <name>copado__Enable_Copado_DX__c</name>
+    </fields>
+    <fields>
+        <help><!-- If unchecked, Copado will stop applying Smart Conflict resolution during the promotion process and users will have to manually resolve conflicts again in every subsequent promotion. --></help>
+        <label><!-- Enable Smart Conflict Resolution --></label>
+        <name>copado__Enable_Smart_Conflict_Resolution__c</name>
     </fields>
     <fields>
         <help><!-- If checked, Environment names must equal their corresponding Branches in the Deployment Flow Steps. --></help>
@@ -142,6 +152,23 @@
 This value will prefill the order by field on related Promotion record creation if set. (usage exp: name asc) --></help>
         <label><!-- Order User Stories by --></label>
         <name>copado__Order_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion Automation --></label>
+        <name>copado__Promotion_Automation__c</name>
+        <relationshipLabel><!-- Pipelines --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Static Code Analysis settings used whenever the analysis is run in Environments or User Stories linked to the Deployment Flow. --></help>

@@ -92,7 +92,7 @@ MetadataGrid2.prototype._setSelectionState = function (selected, elts, calledFro
         }
         e.s = selected;
         if (typeof showTip !== 'undefined' && showTip && selected && tipTypes.indexOf(e.t) < 0) {
-            showTip(e.t);
+            showTip(e.t, e.n);
             tipTypes.push(e.t);
         }
 
@@ -602,7 +602,6 @@ MetadataGrid2.prototype.render = function (cbAfterRender) {
         this.eltMetaDataTypeFilter.bind('close', function (event) {
             console.debug('MetadataGrid2: filter loading', that.filterByType);
             if (!that.filterByType) return;
-
             document.body.focus();
             that.eltMetaDataTypeFilter.jqxComboBox({ disabled: true });
 
@@ -627,9 +626,16 @@ MetadataGrid2.prototype.render = function (cbAfterRender) {
 
     // now, finally, render the grid (must be done last!)
     var theme = 'base';
-    var gridHeight = '300px';
-    if (that.conf.style && that.conf.style.height) {
-        gridHeight = that.conf.style.height;
+    var $window = $copado(window);
+    var gridHeight = ($window.height() - 320).toString();
+    if ($copado('.mg2_gitOperation').length) {
+        gridHeight = ($window.height() - 480).toString();
+    }
+    if(!((typeof sforce != 'undefined') && sforce && (!!sforce.one))){
+        gridHeight = gridHeight - 130;
+    }
+    if(parseInt(gridHeight) < 400){
+        gridHeight = '400';
     }
     var dataFieldsMap = [];
     if (this.conf.dxGridType !== 'branches') {
@@ -670,7 +676,6 @@ MetadataGrid2.prototype.render = function (cbAfterRender) {
     //keep jquery pointer for performance query
     this.eltGrid = this.eltMain.find('.mg2_jqxgrid');
     console.assert(this.eltGrid.length);
-
     //save local source
     this.datasource = source;
 
@@ -817,6 +822,20 @@ MetadataGrid2.prototype._createCacheDeleteButton = function () {
     }
 
     $btn.show();
+
+    var $btnRefresh = $copado('[id$=refreshInfo]');
+    this._refreshText = this._refreshText || $copado('[id$=refreshInfo]').html() || '';
+    var refreshtxt = this._refreshText;
+    if (!this.allMetaData_cachedDate) {
+        $copado('[id*=refreshInfoContainer]').hide();
+    } else {
+        $copado('[id*=refreshInfoContainer]').show();
+        refreshtxt = this._refreshText.replace('__DATE__', this.allMetaData_cachedDate);
+        $btnRefresh.html(refreshtxt);
+    }
+
+    $btnRefresh.show();
+
 };
 MetadataGrid2.defaultTypes =
     'ActionLinkGroupTemplate,AnalyticSnapshot,ApexClass,ApexComponent,ApexPage,ApexTestSuite,ApexTrigger,AppMenu,ApprovalProcess,AssignmentRule,AssignmentRules,AuraDefinitionBundle,AuthProvider,AutoResponseRule,AutoResponseRules,BrandingSet,BusinessProcess,CallCenter,CaseSubjectParticle,Certificate,ChannelLayout,ChatterExtension,CleanDataService,Community,CompactLayout,ConnectedApp,ContentAsset,CorsWhitelistOrigin,CspTrustedSite,CustomApplication,CustomApplicationComponent,CustomFeedFilter,CustomField,CustomLabel,CustomLabels,CustomMetadata,CustomObject,CustomObjectTranslation,CustomPageWebLink,CustomPermission,CustomSite,CustomTab,Dashboard,DataCategoryGroup,DelegateGroup,Document,DuplicateRule,EclairGeoData,EmailServicesFunction,EmailTemplate,EmbeddedServiceBranding,EmbeddedServiceConfig,EscalationRule,EscalationRules,EventDelivery,EventSubscription,ExternalDataSource,ExternalServiceRegistration,FieldSet,FlexiPage,Flow,FlowCategory,FlowDefinition,GlobalValueSet,GlobalValueSetTranslation,Group,HomePageComponent,HomePageLayout,Index,InstalledPackage,Layout,LeadConvertSettings,Letterhead,LightningBolt,LightningExperienceTheme,ListView,MatchingRule,MatchingRules,NamedCredential,NetworkBranding,PathAssistant,PermissionSet,PlatformCachePartition,PostTemplate,Profile,ProfilePasswordPolicy,ProfileSessionSetting,Queue,QuickAction,RecordType,RemoteSiteSetting,Report,ReportType,Role,SamlSsoConfig,Scontrol,Settings,SharingCriteriaRule,SharingOwnerRule,SharingReason,SharingRules,SharingSet,SiteDotCom,StandardValueSet,StandardValueSetTranslation,StaticResource,SynonymDictionary,TopicsForObjects,ValidationRule,Vlocity,WebLink,Workflow,WorkflowAlert,WorkflowFieldUpdate,WorkflowKnowledgePublish,WorkflowOutboundMessage,WorkflowRule,WorkflowSend,WorkflowTask';
@@ -954,6 +973,13 @@ MetadataGrid2.prototype.loadMetaData = function (callbackFinished, forceRefresh)
                         ' deleted from the source environment.\n\nPlease ignore this pop-up if you are already aware of this.'
                 );
             }
+            //Sorting grid rows based on the last modified date - Latest first
+            var date1,date2;
+            allMetaData.sort(function(a, b) {
+                date1 = a.d ? new Date(a.d): new Date(1900,12,12);
+                date2 = b.d ? new Date(b.d): new Date(1900,12,12);
+                return date2-date1;
+            });
             that._setGridData(allMetaData);
 
             that.allMetaData_cachedDate = cachedDate;
@@ -1155,6 +1181,20 @@ MetadataGrid2.prototype.reloadSelectionsJSON = function (json, tabNumber) {
         that.render();
         unlockScreen();
     });
+
+    var $window = $copado(window);
+    this.eltGrid = this.eltMain.find('.mg2_jqxgrid');
+    var gridHeight = ($window.height() - 320).toString();
+    if ($copado('.mg2_gitOperation').length) {
+        gridHeight = ($window.height() - 480).toString();
+    }
+    if(!((typeof sforce != 'undefined') && sforce && (!!sforce.one))){
+        gridHeight = gridHeight - 130;
+    }
+    if(parseInt(gridHeight) < 400){
+        gridHeight = '400';
+    }
+    this.eltGrid.jqxGrid({ height: gridHeight });
 };
 
 MetadataGrid2.prototype.refreshMetadataTypes = function () {

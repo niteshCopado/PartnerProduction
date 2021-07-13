@@ -21,4 +21,8 @@ global class CheckFeaturesController {
     global static Boolean checkSetup() {
         return null;
     }
+    @RemoteAction
+    global static Boolean isApplicationRegistered() {
+        return null;
+    }
 }

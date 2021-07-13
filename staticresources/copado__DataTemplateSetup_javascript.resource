@@ -434,7 +434,10 @@ var globalSldsResourcePath = globalSldsResourcePath ? globalSldsResourcePath : u
         }
     };
 
-    app.openModals = param => {
+    app.openModals = (param, contentValue) => {
+        if (contentValue === 'none') {
+            return;
+        }
         $copado('[id=modal' + param + ']').show();
         $copado('[id=backDrop' + param + ']').show();
     };

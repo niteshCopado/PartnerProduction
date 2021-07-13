@@ -12,5 +12,5 @@
         <label><!-- API Names --></label>
         <name>copado__API_Names__c</name>
     </fields>
-    <startsWith><!-- Consonant --></startsWith>
+    
 </CustomObjectTranslation>
