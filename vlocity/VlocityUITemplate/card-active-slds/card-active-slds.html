@@ -18,19 +18,26 @@
   </div>
   <div class="slds-card__body via-slds-card__body slds-grid slds-wrap slds-theme--default slds-p-around--medium">
       <div class="slds-col--padded slds-size--1-of-2">
-          <div class="slds-tile slds-p-bottom--medium" ng-repeat="field in data.fields.slice(1) " ng-show="key != 'attributes'">
+          <div class="via-field slds-tile slds-p-bottom--medium" ng-repeat="field in data.fields.slice(1) " ng-show="key != 'attributes'">
             <p class="slds-truncate slds-text-heading--label" title="{{field.label}}">{{field.label}}</p>
             <div class="slds-tile__detail slds-text-heading--small ">
-                <p class="slds-truncate" ng-if="!obj[field.relationshipName]">{{obj | getter: field | picker: field.type}}&nbsp;</p>
-                <p class="slds-truncate" ng-if="obj[field.relationshipName]">{{obj[field.relationshipName]['Name']}}&nbsp;</p>
+                <p class="slds-truncate" ng-if="!obj[field.relationshipName]">{{obj | getter: field | picker: field.type}} </p>
+                <p class="slds-truncate" ng-if="obj[field.relationshipName]">{{obj[field.relationshipName]['Name']}} </p>
+            </div>
+            <div class="track-view" ng-click="trackField(field,entityName, field.label)">
+                <vloc-card-icon icon="'preview'" sprite="'utility'" size="'small'" extra-classes="'big via-action-icon slds-icon-text-default'">
+                </vloc-card-icon>
             </div>
         </div>
       </div>
       <div class="slds-col--padded slds-size--1-of-2">
-          <div class="slds-tile slds-p-top--x-small slds-p-bottom--medium slds-truncate" ng-repeat="action in data.actions | limitTo: (data.limitActionLinksTo?data.limitActionLinksTo:5)">
+          <div class="slds-tile slds-p-top--x-small slds-p-bottom--medium slds-truncate via-actions" ng-repeat="action in data.actions | limitTo: (data.limitActionLinksTo?data.limitActionLinksTo:5)">
               <p class="slds-truncate slds-text-heading--label"> </p>
               <a href="javascript:void(0);" class="slds-truncate via-action-link slds-text-link--reset" ng-click="performAction(action)">
-                <vloc-card-icon data="action" obj="obj" size="'small'" extra-classes="'big via-action-icon slds-icon-text-default'"></vloc-card-icon>{{action.displayName}}
+                <vloc-card-icon ng-if="!action.imageRef" data="action" obj="obj" size="'small'" extra-classes="'big via-action-icon slds-icon-text-default'"></vloc-card-icon>
+                <span ng-if="action.imageRef">
+                        <img ng-src="{{action.imageRef}}" alt="{{action.displayName}}"/>
+                </span>{{action.displayName}}
               </a>
           </div>
       </div>

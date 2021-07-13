@@ -77,7 +77,7 @@
             <apex:outputpanel >
                 <vlocity-product-console namespaceprefix="{!NSP}" sfinstanceurl="{!SalesForceInstanceURL}" sessionid="{!$Api.Session_ID}"
                     userlocale="{!UserLocale}" islanguageRTL="{!isLanguageRTL}" sfcontentinstanceurl="{!SalesForceContentInstanceUrl}" timezone="{!TimeZone}"
-                        timezoneoffset="{!TimeZoneOffset}">
+                        timezoneoffset="{!TimeZoneOffset}" currentdate="{!CurrentDate}">
                     <template id="vpcMainContent">
                         <vlocity-pc-picklist picklistid="{!$CurrentPage.parameters.id}"></vlocity-pc-picklist>
                     </template>

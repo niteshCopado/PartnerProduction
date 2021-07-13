@@ -18,6 +18,10 @@ global class DocumentPdfController {
         get;
         set;
     }
+    global Boolean useTemplateLocaleCode {
+        get;
+        set;
+    }
     global DocumentPdfController() {
 
     }

@@ -2,7 +2,7 @@
     <html  ng-app="manualTaskExecutionApp"  xmlns:ng="http://angularjs.org" lang="en">
     <head>
         <meta charset="utf-8"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/javascripts/vlocity.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
         <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
         
         <script type="text/javascript">
@@ -46,17 +46,17 @@
     </head> 
     
     <body class="vlocity" ng-controller="manualTaskExecutionCtrl">
-       	 <apex:form >
-       	 <apex:pageBlock mode="edit"> 
-           	 	<apex:pageBlockSection title="Manual Task Execution" columns="1">
-            		Action:
-                	<select class="form-control" ng-model="userSelectedAction"  ng-click="$event.stopPropagation();" data-toggle="toggle" ng-options="avlblAction as  avlblAction for avlblAction in avlblActions" required="true">
-            		</select>
-            		<button type="button" class="btn" ng-click="submit() ; $event.stopPropagation();">Submit</button>
-            	</apex:pageBlockSection> 
-            </apex:pageBlock>
-    		</apex:form>
-    </body>
+        <apex:pageBlock mode="edit">
+        <apex:pageBlockSection title="Manual Task Execution" columns="1">
+        <div ng-controller="manualTaskExecutionCtrl">
+            Action:
+            <select class="form-control" ng-model="userSelectedAction"  ng-click="$event.stopPropagation();" data-toggle="toggle" ng-options="avlblAction for avlblAction in avlblActions" required="true">
+            </select>
+            <button type="button" class="btn" ng-click="submit() ; $event.stopPropagation();">Submit</button>
+        </div>    
+        </apex:pageBlockSection> 
+        </apex:pageBlock>		
+</body>
     </html>
   	
 </apex:page>

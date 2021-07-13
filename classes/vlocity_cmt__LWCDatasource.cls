@@ -17,6 +17,10 @@ global class LWCDatasource implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @AuraEnabled
+    global static String doEncryptedDatasourceFlex(String globalKey, String scope, String objType) {
+        return null;
+    }
+    @AuraEnabled
     @RemoteAction
     global static String doEncryptedDatasourceWithKey(String globalKey, String scope, String objType) {
         return null;
@@ -41,11 +45,35 @@ global class LWCDatasource implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @AuraEnabled
+    global static Object getAllApexPages() {
+        return null;
+    }
+    @AuraEnabled
+    global static List<ContentVersion> getAllImageContentVersions() {
+        return null;
+    }
+    @AuraEnabled
+    global static Object getAllOmniscripts() {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,List<SObject>> getAllStreamingChannel() {
+        return null;
+    }
+    @AuraEnabled
     global static String getAppliedAttributes(String clientId, String categoryCode) {
         return null;
     }
     @AuraEnabled
     global static String getAttributeCategories(String accountId) {
+        return null;
+    }
+    @AuraEnabled
+    global static String getBaseUrl() {
+        return null;
+    }
+    @AuraEnabled
+    global static ContentVersion getContentVersion(String contentDocumentId) {
         return null;
     }
     @AuraEnabled
@@ -69,8 +97,22 @@ global class LWCDatasource implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @AuraEnabled
+    global static List<vlocity_cmt__VlocityCard__c> getFlexCardsByName(String cardName) {
+        return null;
+    }
+    @AuraEnabled
     @RemoteAction
     global static String getInteractionObject(Id interactionId) {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static List<vlocity_cmt__VlocityUILayout__c> getLayoutByName(String layoutName) {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static List<vlocity_cmt__VlocityUILayout__c> getLayout(String searchCriterionType, String searchParam) {
         return null;
     }
     @AuraEnabled
@@ -88,6 +130,10 @@ global class LWCDatasource implements vlocity_cmt.VlocityOpenInterface2 {
     }
     @AuraEnabled
     global static String getSearchQuery(String soslStmt) {
+        return null;
+    }
+    @AuraEnabled
+    global static List<String> getTrackingContextFields() {
         return null;
     }
     @AuraEnabled
@@ -109,6 +155,20 @@ global class LWCDatasource implements vlocity_cmt.VlocityOpenInterface2 {
     }
     @AuraEnabled
     global static Boolean isCommunity() {
+        return null;
+    }
+    @AuraEnabled
+    global static Boolean isInsidePckg() {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static vlocity_cmt__VlocityCard__c saveCard(vlocity_cmt__VlocityCard__c card) {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static vlocity_cmt__VlocityUILayout__c saveLayout(vlocity_cmt__VlocityUILayout__c layout) {
         return null;
     }
     @AuraEnabled

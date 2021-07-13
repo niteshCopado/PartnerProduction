@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/efc392de-6e89-cf9a-580f-bdece8c84e81",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Mobile Hotspot",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

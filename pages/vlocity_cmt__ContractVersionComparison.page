@@ -161,7 +161,7 @@
                                 <slds-svg-icon sprite="'utility'" icon="'expand'" size="'x-small'" ng-click="toggleOnlyLeft(true)" ng-if="!showOnlyLeft" style="fill:#54698d; cursor:pointer" extra-classes="'slds-float_right scroll'"></slds-svg-icon>
                                 <slds-svg-icon sprite="'utility'" icon="'contract'" size="'x-small'" ng-click="toggleOnlyLeft(false)" ng-if="showOnlyLeft" style="fill:#54698d; cursor:pointer" extra-classes="'slds-float_right scroll'"></slds-svg-icon>
                             </div>
-                            <div class="doc-paragraph html-diff" ng-show="versionDiff[version_a.Id + ' x ' + version_b.Id]" ng-repeat="section_diff in versionDiff[version_a.Id + ' x ' + version_b.Id]">
+                            <div class="doc-paragraph html-diff" ng-show="versionDiff[version_a.Id + ' x ' + version_b.Id]" ng-repeat="section_diff in versionDiff[version_a.Id + ' x ' + version_b.Id] track by $index">
                                 <p ng-bind-html="trustAsHtml(section_diff)"></p>
                             </div>
                         </div>

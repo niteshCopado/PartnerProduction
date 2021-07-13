@@ -5,10 +5,9 @@
 		<head>
 		<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
 		<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__OrderSummaryCss)}"/>
-        <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__ProductConfigurationCss)}"/>
+        	<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__ProductConfigurationCss)}"/>
 		<apex:includeScript value="/support/console/31.0/integration.js"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__JQUERYJS)}"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularJS)}"/>
+		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
 		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ANGULARBOOT)}"/>
 		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrapslider)}"/>
 		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularStrapJS)}"/>

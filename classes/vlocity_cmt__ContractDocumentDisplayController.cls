@@ -22,6 +22,9 @@ global class ContractDocumentDisplayController {
     global String nameSpacePrefix {
         get;
     }
+    global String pdfGenerationSource {
+        get;
+    }
     global String versionName {
         get;
     }
@@ -60,6 +63,10 @@ global class ContractDocumentDisplayController {
 
     }
     @RemoteAction
+    global static Boolean deleteNotRequiredDocs(Map<String,Object> inputMap) {
+        return null;
+    }
+    @RemoteAction
     global static String downloadPdf(Id parId, String docName) {
         return null;
     }
@@ -77,6 +84,10 @@ global class ContractDocumentDisplayController {
     }
     @RemoteAction
     global static vlocity_cmt__ContractVersion__c getActiveVersion(Id objId) {
+        return null;
+    }
+    @RemoteAction
+    global static String getClientSidePdfLibraries() {
         return null;
     }
     @RemoteAction
@@ -124,7 +135,15 @@ global class ContractDocumentDisplayController {
         return null;
     }
     @RemoteAction
+    global static Map<String,Object> getDocumentType(Id contextID) {
+        return null;
+    }
+    @RemoteAction
     global static vlocity_cmt.ContractDocumentCreationController.ContractDocumentWrapper getDocxTemplate() {
+        return null;
+    }
+    @RemoteAction
+    global static String getPDFIntegrationConfig() {
         return null;
     }
     @RemoteAction
@@ -141,6 +160,14 @@ global class ContractDocumentDisplayController {
     }
     @RemoteAction
     global static Object invokeVOIMethod(String className, String methodName, String inputJson, String optionJson) {
+        return null;
+    }
+    @RemoteAction
+    global static Boolean linkAndcheckInContentVersionForContractVersion(Map<String,Object> inputMap) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> linkContentVersionToContractVersion(Map<String,Object> inputMap) {
         return null;
     }
     @RemoteAction
@@ -162,6 +189,10 @@ global class ContractDocumentDisplayController {
     @RemoteAction
     global static void saveOneSection(vlocity_cmt__ContractSection__c section) {
 
+    }
+    @RemoteAction
+    global static Boolean unlinkContentVersionFromContractVersion(Map<String,Object> inputMap) {
+        return null;
     }
     @RemoteAction
     global static void updateContractSections(Id templateId, Id versionId) {

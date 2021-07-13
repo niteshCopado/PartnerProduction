@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/7b6a3058-b3e7-7b9f-05fd-1b70f408b3f4",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Apple iPhone 7",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

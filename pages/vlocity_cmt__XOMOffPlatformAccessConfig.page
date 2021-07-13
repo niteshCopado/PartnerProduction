@@ -2,10 +2,9 @@
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ng="http://angularjs.org" ng-app="OffPlatformAccessConfig">
     <head>
         <base href="/"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, 'jquery-1.8.2.min.js')}"/>
 
         <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
-        <script type="text/javascript" src="{!URLFOR($Resource.vlocity_assets, '/javascripts/vlocity.js')}"></script>
+        <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
         <script type="text/javascript" src="{!URLFOR($Resource.SldsAngular)}"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>

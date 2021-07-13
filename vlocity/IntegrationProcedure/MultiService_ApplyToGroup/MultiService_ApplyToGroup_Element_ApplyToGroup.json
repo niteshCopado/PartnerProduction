@@ -30,7 +30,7 @@
         "remoteMethod": "applyToGroupChunk",
         "remoteOptions": {
         },
-        "responseJSONNode": "",
+        "responseJSONNode": "response",
         "responseJSONPath": "",
         "returnOnlyAdditionalOutput": false,
         "returnOnlyFailureResponse": false,

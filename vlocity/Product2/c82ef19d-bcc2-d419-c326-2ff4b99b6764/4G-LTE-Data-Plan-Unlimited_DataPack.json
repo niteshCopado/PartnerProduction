@@ -15,7 +15,7 @@
                 "Code__c": "ACAT_Plans",
                 "Name": "Mobile Plans",
                 "displaySequence": 10,
-                "id": "a0J4W000013q1K0UAI",
+                "id": "a0J5Y00000i3dhgUAA",
                 "messages": [
                 ],
                 "productAttributes": {
@@ -23,7 +23,7 @@
                     ],
                     "records": [
                         {
-                            "attributeId": "a0K4W00000YL9boUAD",
+                            "attributeId": "a0K5Y00000iUB9lUAG",
                             "cloneable": true,
                             "code": "ATT_DT_MPT",
                             "dataType": "text",
@@ -59,7 +59,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bhUAD",
+                            "attributeId": "a0K5Y00000iUB9eUAG",
                             "cloneable": true,
                             "code": "ATT_RT_DP",
                             "dataType": "text",
@@ -116,7 +116,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bpUAD",
+                            "attributeId": "a0K5Y00000iUB9mUAG",
                             "cloneable": true,
                             "code": "ATT_RT_NL",
                             "dataType": "number",
@@ -157,7 +157,7 @@
     "%vlocity_namespace%__EndDate__c": "",
     "%vlocity_namespace%__EndOfLifeDate__c": "",
     "%vlocity_namespace%__FulfilmentStartDate__c": "2018-01-05T08:00:00.000Z",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "7c722fc2-1864-9a43-6cca-f57288dbe027",
     "%vlocity_namespace%__GlobalKey__c": "c82ef19d-bcc2-d419-c326-2ff4b99b6764",
     "%vlocity_namespace%__HeaderData__c": "",
     "%vlocity_namespace%__HelpText__c": "",
@@ -175,6 +175,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/d14e749e370a37c0fc6ba62a05ddb7e7",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
+    "%vlocity_namespace%__ObjectTypeName__c": "Data Plan Product Spec",
     "%vlocity_namespace%__ParentClassId__c": "",
     "%vlocity_namespace%__PriceListEntry__c": "4G-LTE-Data-Plan-Unlimited_PriceListEntries.json",
     "%vlocity_namespace%__ProductChildItem__c": "4G-LTE-Data-Plan-Unlimited_ProductChildItems.json",
@@ -193,7 +194,7 @@
     "%vlocity_namespace%__Type__c": "None",
     "%vlocity_namespace%__VendorAccountId__c": "",
     "%vlocity_namespace%__VersionEndDateTime__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "%vlocity_namespace%__VersionStartDateTime__c": "",
     "CanUseQuantitySchedule": false,
     "CanUseRevenueSchedule": false,

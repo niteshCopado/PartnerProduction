@@ -1,14 +1,12 @@
 <apex:page StandardController="vlocity_cmt__Household__c" extensions="vlocity_cmt.HHGroupMembersInfoController">
-  <html xmlns:ng="http://angularjs.org" ng-app="groupmemberlist" lang="en">
+  <html xmlns:ng="http://angularjs.org" lang="en">
   <head>
             <meta charset="utf-8"/>
-            <apex:includeScript value="{!$Resource.vlocity_cmt__AngularJS}" />  
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/javascripts/bootstrap.min.js')}"/>
-            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/css/styles.css')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>  
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/js/bootstrap.min.js')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}" />  
             <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__IcoMoonIconPack, 'style.css')}"/>
   </head>
-    <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/javascripts/bootstrap.min.js')}"/>
-    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/css/styles.css')}"/>
     <style>
 
         .bPageBlock{
@@ -47,7 +45,7 @@
         <apex:outputText value="{!vlocity_cmt__Household__c.vlocity_cmt__PrimaryAccountId__c}" rendered="false" />
         <apex:outputText value="{!vlocity_cmt__Household__c.vlocity_cmt__PrimaryPartyId__c}" rendered="false" />
         <apex:outputPanel layout="none" id="idMemberInfoBlock">
-           <div ng-controller="ctrlContactList" class="vlocity">
+           <div ng-app="groupmemberlist" ng-controller="ctrlContactList" class="vlocity">
                 <div class="panel panel-default">
                     <div class="panel-heading">&nbsp;
                             <apex:commandButton value="{!$Label.vlocity_cmt__addmember}" onClick="window.top.location.href = '{!$Site.BaseRequestUrl}{!AddMemberLink}'" styleClass="btn-primary btn-xs"/>

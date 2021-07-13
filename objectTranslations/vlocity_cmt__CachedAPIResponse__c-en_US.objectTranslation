@@ -56,6 +56,10 @@
             <translation><!-- assetReferenceKey --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>basketPricing</masterLabel>
+            <translation><!-- basketPricing --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>basketWrapper</masterLabel>
             <translation><!-- basketWrapper --></translation>
         </picklistValues>
@@ -94,6 +98,10 @@
         <picklistValues>
             <masterLabel>orderConfiguration</masterLabel>
             <translation><!-- orderConfiguration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>pleOfferMap</masterLabel>
+            <translation><!-- pleOfferMap --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>priceResult</masterLabel>

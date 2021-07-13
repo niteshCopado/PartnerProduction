@@ -9,7 +9,16 @@ global class ObjectDocumentCreationController {
     global String contextId {
         get;
     }
+    global String defaultPdfGenerationSource {
+        get;
+    }
+    global Id docId {
+        get;
+    }
     global String documentName {
+        get;
+    }
+    global String inTest {
         get;
     }
     global String nameSpacePrefix {
@@ -36,7 +45,15 @@ global class ObjectDocumentCreationController {
 
     }
     @RemoteAction
+    global static Map<String,Object> deleteDocumentLink(Map<String,Object> input) {
+        return null;
+    }
+    @RemoteAction
     global static String downloadPdf(Id docId, String docName) {
+        return null;
+    }
+    @RemoteAction
+    global static String getClientSidePdfLibraries() {
         return null;
     }
     @RemoteAction
@@ -48,11 +65,23 @@ global class ObjectDocumentCreationController {
         return null;
     }
     @RemoteAction
+    global static String getPDFIntegrationConfig() {
+        return null;
+    }
+    @RemoteAction
     global static Id saveDocx(Id parentId, String documentName, String data) {
         return null;
     }
     @RemoteAction
+    global static String saveGeneratedPdfDocument(Id contextId, String documentName, String data) {
+        return null;
+    }
+    @RemoteAction
     global static String savePdf(Id contextId, Id docId, String documentName) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> updateDocumentLink(Map<String,Object> input) {
         return null;
     }
 global class ContractDocumentWrapper {

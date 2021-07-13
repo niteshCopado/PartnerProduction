@@ -56,4 +56,8 @@
         <name>LightningInstrumentation</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>OnlineSalesHome</name>
+        <type>StandardAppMenuItem</type>
+    </appMenuItems>
 </AppMenu>

@@ -408,17 +408,6 @@
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>New_Account__c</fullName>
-        <description>Modified the description and length</description>
-        <externalId>false</externalId>
-        <label>New Account</label>
-        <length>18</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>NumberOfEmployees</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -1024,7 +1013,7 @@ IF(CONTAINS(&quot;IL:IN:IA:MI:MN:MO:NE:ND:OH:SD:WI&quot;, BillingState), &quot;N
     <fields>
         <fullName>vlocity_cmt__Juridsiction1__c</fullName>
         <deprecated>false</deprecated>
-        <description>Grouping of accounts by jurisdiction and other attributes - used to drive accounting processes, business logic, and validation rules (i.e. state, company, region, etc.)</description>
+        <description>Grouping of accounts by jurisdiction and other attributes-used to drive accounting processes, business logic, and validation rules (i.e. state, company, region, etc.)</description>
         <externalId>false</externalId>
         <label>Account Jurisdiction 1</label>
         <required>false</required>

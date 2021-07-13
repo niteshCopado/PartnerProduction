@@ -8,6 +8,7 @@
             "VlocityLookupRecordSourceKey": "Product2/2a32c58e-6676-e671-078a-f2a91b380528",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Netflix",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "266cc981-aae7-25d8-1e15-c897414012d2",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -24,6 +25,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Individual Simple Choice Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -42,6 +44,7 @@
             "VlocityLookupRecordSourceKey": "Product2/f3b0be79-5d4a-9e8f-fe60-d2999bfed542",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Unlimited Talk + Text",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "3696906a-3679-3452-2a74-3ee8f379d119",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -58,6 +61,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Individual Simple Choice Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -76,6 +80,7 @@
             "VlocityLookupRecordSourceKey": "Product2/d79e2bfd-6926-0d44-e796-6609a59d9d73",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "4G LTE Data Plan",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "5f88dfec-c4b8-eef6-15cc-45b97446eb0d",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -92,6 +97,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Individual Simple Choice Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -110,6 +116,7 @@
             "VlocityLookupRecordSourceKey": "Product2/efc392de-6e89-cf9a-580f-bdece8c84e81",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Mobile Hotspot",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "c4e8ba49-908a-30e0-fbaf-03d267494a32",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -126,6 +133,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Individual Simple Choice Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -155,6 +163,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Individual Simple Choice Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

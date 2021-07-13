@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/da64b768-6e3b-64cf-abef-8cd55cfa5475",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Samsung Galaxy S8 Active Accessory Pack",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

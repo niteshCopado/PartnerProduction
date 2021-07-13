@@ -23,6 +23,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span style=\"font-size: 8pt;\"><viawrapper>The Family Simple Choice Plan product, hereafter referred to as the Product, includes the following features:</viawrapper></span></p>\n<ul>\n<li><span style=\"font-size: 8pt;\"><viawrapper>Mobile streaming</viawrapper></span></li>\n<li class=\"b2b_c-copy-list__item  b2b_u-space-mb-1 b2b_u-space-mb-1\"><span style=\"font-size: 8pt;\"><viawrapper>4G backup services</viawrapper></span></li>\n<li class=\"b2b_c-copy-list__item \"><span style=\"font-size: 8pt;\"><viawrapper>Maintaining connection on wireless network in event of outage</viawrapper></span></li>\n<li class=\"b2b_c-copy-list__item \"><span style=\"font-size: 8pt;\"><viawrapper>Up to 5 mobile accounts shared under the plan</viawrapper></span></li>\n</ul>\n</div>",
@@ -34,7 +35,7 @@
         "Name": "Terms & Conditions for Family Simple Choice Plan",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__DocumentTemplateSection__c",
-        "VlocityRecordSourceKey": "%vlocity_namespace%__DocumentTemplateSection__c/Generated-395190705"
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DocumentTemplateSection__c/Generated-54774095"
     },
     {
         "%vlocity_namespace%__AutoAddSectionKey__c": false,
@@ -60,6 +61,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span class=\"tinymce-default-style\" style=\"font-size: 8pt; font-family: Arial, Helvetica, sans-serif;\"><viawrapper>The price for the Product may be charged upfront or monthly. For monthly payment Products, at the end of the 12 month minimum period we will continue to supply the Product to you on a month to month basis on the terms applicable at that time (including price), unless you tell us in writing or we tell you otherwise, at least 30 days before the automatic extension.</viawrapper></span></p>\n</div>",

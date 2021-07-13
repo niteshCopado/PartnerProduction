@@ -190,6 +190,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key Of Product</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ProductId__r.vlocity_cmt__GlobalGroupKey__c</formula>
+        <inlineHelpText>Version Group Key Of Product</inlineHelpText>
+        <label>Product Group Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ProductId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>

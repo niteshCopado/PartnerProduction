@@ -79,7 +79,7 @@
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
         "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Details:SLASerialNumber",
         "%vlocity_namespace%__GlobalKey__c": "37e024f0-3878-0e53-7092-a2dd892bdd81",
-        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Details:%vlocity_namespace%__vSLASerialNumber__c",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Details:%vlocity_namespace%__SLASerialNumber__c",
         "%vlocity_namespace%__IsDisabled__c": false,
         "%vlocity_namespace%__IsRequiredForUpsert__c": false,
         "%vlocity_namespace%__MapId__c": "SAMPLEAccountSearchCustom6867",

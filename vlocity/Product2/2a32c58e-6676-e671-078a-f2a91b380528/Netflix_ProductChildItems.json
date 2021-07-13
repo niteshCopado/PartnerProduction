@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/2a32c58e-6676-e671-078a-f2a91b380528",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Netflix",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

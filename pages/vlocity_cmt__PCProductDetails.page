@@ -89,7 +89,7 @@
                         islanguageRTL="{!isLanguageRTL}"
                         timezone="{!TimeZone}"
                         timezoneoffset="{!TimeZoneOffset}"
-                        >
+                        currentdate="{!CurrentDate}">
 
                         <template id="vpcMainContent">
                             <vlocity-pc-product-details productid="{!$CurrentPage.parameters.id}" ></vlocity-pc-product-details>
@@ -109,6 +109,7 @@
                 sforce.console.closeTab(newProductTabId);
             }
             sforce.console.onEnclosingTabRefresh(function() {
+                sessionStorage.clear();
                 /**
                  * This is to ensure that when user changes something from the salesforce edit popup, we refresh our web component also.
                  * For example, If something like Object Type changes, then the entire view of the product should update.
@@ -117,7 +118,8 @@
                 if(prodDetails && prodDetails.length > 0) {
                     prodDetails[0].refresh();
                 }
-            })
+        
+            });
         </script>
 
     </body>

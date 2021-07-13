@@ -77,6 +77,11 @@
         <name>vlocity_cmt__ObjectId__c</name>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Product --></help>
+        <label><!-- Product Group Key --></label>
+        <name>vlocity_cmt__ProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Sequence Number --></label>
         <name>vlocity_cmt__SequenceNumber__c</name>
     </fields>

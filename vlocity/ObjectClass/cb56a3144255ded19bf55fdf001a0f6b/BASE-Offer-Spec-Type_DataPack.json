@@ -1,7 +1,7 @@
 {
     "%vlocity_namespace%__EffectiveFromDate__c": "2017-10-01",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "70c6f5fd-673c-8f4e-7d3f-0fb61572e48b",
     "%vlocity_namespace%__GlobalKey__c": "cb56a3144255ded19bf55fdf001a0f6b",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": false,
@@ -17,7 +17,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/63ba6ae5f8c257f7cdccc385d2a85dca",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "BASE Offer Spec Type",
     "RecordTypeId": {
         "DeveloperName": "ObjectType",

@@ -4,9 +4,8 @@
         <base href="/"/>
         <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.slds_2_5_0, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
 
-        <script type="text/javascript" src="{!URLFOR($Resource.JQUERYJS)}"></script>
         <script type="text/javascript" src="/support/console/31.0/integration.js"></script>
-        <script type="text/javascript" src="{!URLFOR($Resource.vlocity_assets, '/javascripts/vlocity.js')}"></script>
+        <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
         <script type="text/javascript" src="{!URLFOR($Resource.SldsAngular)}"></script>
         <script type="text/javascript" src="{!URLFOR($Resource.XomThorIntegration)}"></script>
 
@@ -61,7 +60,7 @@
 
             app.config(['remoteActionsProvider', function(remoteActionsProvider) {
                 remoteActionsProvider.setRemoteActions({
-                    checkEnvironmentStatus: {action: "{!$RemoteAction.XOMThorStatusControllerExtension.checkEnvironmentStatus}", config: {escape: false}},
+                    checkEnvironmentStatusV2: {action: "{!$RemoteAction.XOMThorStatusControllerExtension.checkEnvironmentStatusV2}", config: {escape: false}},
                     getEnvStatusJobInfo: "{!$RemoteAction.XOMThorStatusControllerExtension.getEnvStatusJobInfo}",
                     startEnvStatusJobs: {action: "{!$RemoteAction.XOMThorStatusControllerExtension.startEnvStatusJobs}"},
                     stopEnvStatusJobs: {action: "{!$RemoteAction.XOMThorStatusControllerExtension.stopEnvStatusJobs}"},
@@ -70,22 +69,46 @@
             }]);
 
 
-            app.controller ('myController', function ($scope, $timeout, remoteActions) {
+            app.controller ('myController', function ($scope, $timeout, $timeout, remoteActions) {
                 $scope.envStatus = {};
                 $scope.envJobStatus = {};
                 $scope.envStatusJonInfoRequestInProgress = true;
 
-                $scope.checkEnvironmentStatus = function () {
+                function enrichE2eStatus(e2eStatusCheck)
+                {
+                    if (e2eStatusCheck.status == 'Failed') {
+                        return 'Failed due to ' + e2eStatusCheck.errorMessage;
+                    } else {
+                        return e2eStatusCheck.status;
+                    }
+                }
+
+                $scope.checkEnvironmentStatus = function (checkInProgress) {
                     $scope.requestInProgress = true;
-                    remoteActions.checkEnvironmentStatus()
+                    remoteActions.checkEnvironmentStatusV2(!checkInProgress)
                         .then(function (envStatus)
                         {
                             $scope.requestInProgress = false;
                             $scope.envStatus.omplStatus = envStatus.omplStatus;
                             $scope.envStatus.envStatus = envStatus.envStatus;
                             $scope.thorEnv = envStatus.envStatus.thorEnv;
+
+                            const e2EHealthStatus = envStatus.envStatus.e2EHealthStatus;
+                            console.log('E2EHealthStatus', e2EHealthStatus);
+                            $scope.envStatus.e2eStatus = enrichE2eStatus(e2EHealthStatus);
+                            console.log($scope.envStatus.e2eStatus);
+
                             console.log('Env Status', envStatus);
                             $scope.loaded = true;
+
+                            if (e2EHealthStatus.status == 'Running')
+                            {
+                                $scope.requestInProgress = true;
+                                $timeout(function() {
+                                    $scope.checkEnvironmentStatus(true);
+                                }, 20000);
+                            }
+
                         })
                         .catch(function(err) {
                             console.error('Error occurred on check environment status', err);
@@ -258,8 +281,10 @@
                         <dd class="slds-item_detail slds-truncate" title="Description for zero label" ng-if="envStatus.envStatus.thorEnv.status">{{envStatus.envStatus.thorEnv.status}}</dd>
                         <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">CMT Package Version:</dt>
                         <dd class="slds-item_detail slds-truncate" title="Description for first label">{{envStatus.envStatus.sfdcVersion}}</dd>
-                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label" ng-if="envStatus.envStatus.thorEnv.thorVersion">OM+ Build:</dt>
-                        <dd class="slds-item_detail slds-truncate" title="Description for second label" ng-if="envStatus.envStatus.thorEnv.thorVersion">{{envStatus.envStatus.thorEnv.thorVersion}}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label" ng-if="envStatus.envStatus.thorEnv.omPlusVersion">OM+ Build:</dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for second label" ng-if="envStatus.envStatus.thorEnv.omPlusVersion">{{envStatus.envStatus.thorEnv.omPlusVersion}}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Zero Label">E2E Health Check: </dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for zero label">{{envStatus.e2eStatus}}</dd>
                     </dl>
                 </div>
             </div>

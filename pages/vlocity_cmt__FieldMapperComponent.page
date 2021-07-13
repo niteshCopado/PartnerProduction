@@ -1,12 +1,11 @@
 <apex:page standardStylesheets="false" controller="vlocity_cmt.AdminUtilitiesController" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false">
     <html xmlns:ng="http://angularjs.org" ng-app="fieldMapperApp" class="ng-cloak" style="height:100%" > 
         <head>
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__jquery_2_2_4, '/jquery.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, '/ui/jquery-ui-1.9.1.custom.min.js')}"/>
             <apex:includeScript value="/soap/ajax/31.0/connection.js" />
-            <apex:includeScript value="{!$Resource.vlocity_cmt__AngularJS}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
-            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/bootstrap.min.css')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/css/bootstrap.min.css')}"/>
             <style>
 
                 .fieldsContainer{
@@ -47,7 +46,6 @@
             </style>
             <script>
                 sforce.connection.sessionId = '{!$Api.Session_ID}';
-                j$ = jQuery.noConflict();
                 
                 function getFieldMaps(sourceObject, destinationObject, callback){ 
                     var parameters = {};
@@ -206,7 +204,7 @@
                     var factory = {};
                     
                     factory.getFieldMaps = function(sourceObject, destinationObject) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getFieldMaps(sourceObject, destinationObject,function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -220,7 +218,7 @@
                             return deferred.promise();  
                     };
                     factory.getCustomFilters = function(sourceObject, destinationObject) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getCustomFilters(sourceObject, destinationObject,function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -234,7 +232,7 @@
                             return deferred.promise();  
                     };
                     factory.getCustomFilterFormula = function(sourceObject, destinationObject) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getCustomFilterFormula(sourceObject, destinationObject,function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -249,7 +247,7 @@
                     };
                     
                     factory.getObjectFieldsDescribe = function(objectNames) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getObjectFieldsDescribe(objectNames, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -264,7 +262,7 @@
                     };
                     
                     factory.getGlobalDescribe = function() {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getGlobalDescribe(function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -279,7 +277,7 @@
                     };
                     
                     factory.getModalData = function(fieldName, sourceObjectType) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getModalData(fieldName, sourceObjectType,  function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -294,7 +292,7 @@
                     };
                     
                     factory.saveCustomFieldMaps = function(settingIdsToDelete, settingsToUpsert) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             saveCustomFieldMaps(settingIdsToDelete, settingsToUpsert,  function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -309,7 +307,7 @@
                     };
                     
                     factory.saveFilterSettings = function(settingIdsToDelete, settingsToUpsert, filterFormulaIdToDelete, filterFormulaToUpsert) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             saveFilterSettings(settingIdsToDelete, settingsToUpsert, filterFormulaIdToDelete, filterFormulaToUpsert, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -324,7 +322,7 @@
                     };
                     
                     factory.deleteSettings = function(settingIdsToDelete) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             deleteSettings(settingIdsToDelete, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -341,7 +339,7 @@
                     return factory;
                 });
                 
-                fieldMapperApp.controller('fieldMapperAppController', function ($scope, $modal, $q, fieldMapperService) {
+                fieldMapperApp.controller('fieldMapperAppController', function ($scope, $uibModal, $q, fieldMapperService) {
                     $scope.settingsList = [];
                     $scope.filterSettingsList = [];
                     $scope.filterOperators = ['=','≠','<','≤','>','≥','{!$Label.StartsWith}','{!$Label.EndsWith}','{!$Label.Contains}','{!$Label.In}','{!$Label.NotIn}','{!$Label.Includes}','{!$Label.Excludes2}'];
@@ -452,22 +450,22 @@
                     }
                     }
                     $scope.displayWaitDialog = function(){
-                        var over = j$('<div id="contentOverlay"><span class="fullHeight"></span>' +
+                        var over = $('<div id="contentOverlay"><span class="fullHeight"></span>' +
                                             '<img id="contentLoading" src="'+'{!$Resource.WAITGIF}'+'">' +
                                             '</div>');
-                        var div = j$('#panelList');
+                        var div = $('#panelList');
                         over.css('top', div.offset().top);
                         over.css('left', div.offset().left);
                         over.css('width', div.width());
                         over.css('height', div.outerHeight());
-                        j$(over).appendTo(div);
+                        $(over).appendTo(div);
                         $scope.disabledSave = true;
 
                     }
                     
                     $scope.removeWaitDialog = function(){
                         
-                        setTimeout( function(){j$('#contentOverlay').remove();$scope.disabledSave = false;},900);
+                        setTimeout( function(){$('#contentOverlay').remove();$scope.disabledSave = false;},900);
                         
                     }
                     
@@ -584,7 +582,7 @@
                     
                     $scope.open = function (elementIndex) {
                         $scope.selectedItemIndex = elementIndex;
-                        var modalInstance = $modal.open({
+                        var modalInstance = $uibModal.open({
                           templateUrl: 'FieldSelectionModal.html',
                           controller: ModalInstanceCtrl,
                           resolve: {
@@ -611,7 +609,7 @@
             
                     $scope.getSettings = function(){
                         
-                        j$.when(fieldMapperService.getFieldMaps($scope.sourceObject, $scope.destinationObject),
+                        $.when(fieldMapperService.getFieldMaps($scope.sourceObject, $scope.destinationObject),
                             fieldMapperService.getCustomFilters($scope.sourceObject, $scope.destinationObject),
                             fieldMapperService.getCustomFilterFormula($scope.sourceObject, $scope.destinationObject),
                             fieldMapperService.getObjectFieldsDescribe([$scope.sourceObject, $scope.destinationObject])).done(function(result1, result2, result3, result4){
@@ -681,7 +679,7 @@
                     }
                 });
 
-                var ModalInstanceCtrl = function ($scope, $modalInstance, items, fieldMapperService) {
+                var ModalInstanceCtrl = function ($scope, $uibModalInstance, items, fieldMapperService) {
                     $scope.selectedItem = items[0];
                     $scope.nsPrefix = items[1];
                     $scope.selectedFields = [];
@@ -741,7 +739,8 @@
     
                                 }
                                 
-                            }
+                            } 
+                            $scope.$apply();
                             
                         })
                     } else {
@@ -752,7 +751,8 @@
                             for (i = 0; i < fieldsList.length; i++) { 
                                 $scope.objectNameToFields[$scope.selectedItem[$scope.nsPrefix + 'SourceSObjectType__c']][fieldsList[i].name] = fieldsList[i];
                                 
-                            }
+                            } 
+                            $scope.$apply();
                         })
                         
                     }
@@ -793,8 +793,7 @@
                             }
                             
                         } 
-                        
-                        $modalInstance.close([fullFieldName, fieldType, lastReferenceObject]);
+                        $uibModalInstance.close([fullFieldName, fieldType, lastReferenceObject]);
                     };
                   
                     $scope.populateNextTable = function(parentIndex, selectedField){
@@ -818,7 +817,7 @@
                                     }
                                     
                                     $scope.fieldSets[++parentIndex] = $scope.objectNameToFieldDescribes[selectedField.referenceTo[0]] ;
-                            
+                                    $scope.$apply();
                                 })
                                 
                             } else {
@@ -831,7 +830,7 @@
                     }
                 
                     $scope.cancel = function () {
-                        $modalInstance.dismiss('cancel');
+                        $uibModalInstance.dismiss('cancel');
                         
                     };
            };
@@ -860,88 +859,90 @@
                         </button>
                     </div>
                 </div>
-                <tabset>
-                    <tab heading="{!$Label.FieldsMap}" id="idSettingsSection">
-                        <div style="margin: 5px;" class="panel panel-default" id="panelList">
-                            <div class="panel-heading">{!$Label.FieldsMap}</div>
-                            <table style="margin-bottom:5px" class="table" ng-if="settingsList.length != 0">
-                                <tr ng-repeat="setting in settingsList track by $index" class="{{setting.color == true ? 'invalid' : 'valid'}}">
-                                    <td style="width: 50%; margin-left: -2px;">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <input ng-model="setting.isSelected" type="checkbox"/>
-                                            </span>
-                                            <input ng-model="setting[nsPrefix + 'SourceFieldName__c']" type="text" class="form-control" disabled="true"/>
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary" ng-click="open($index);" type="button">{!$Label.Select}</button>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td style="width: 50%; margin-right: -2px;">
-                                        <select class="form-control" data-ng-options="field.name as field.label+'<'+field.name+'>' for field in destinationFieldsList|forType:setting[nsPrefix + 'SourceFieldType__c']:setting[nsPrefix + 'SourceSObjectType__c']:setting[nsPrefix + 'SourceFieldSObjectType__c'] | orderBy:'label'" data-ng-model="setting[nsPrefix + 'DestinationFieldName__c']"></select>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div ng-if="settingsList.length == 0">
-                                <alert>{!$Label.NoSettings}</alert>
-                            </div>
-                        </div>  
-                        <div ng-if="hasErrors == true" style="color:red">Duplicate Field Mappings found</div>
-                        <div class="col-md-12 text-center">
-                            <div class="btn-group">
-                                <button type="button" ng-click="addItem();" class="btn btn-primary btn-sm">{!$Label.Add}</button>
-                                <button type="button" ng-readonly="disabledSave" ng-click="saveSettings();" class="btn btn-primary btn-sm">{!$Label.Save}</button>
-                                <button type="button" ng-click="deleteSettings('fieldMaps');" class="btn btn-primary btn-sm">{!$Label.Delete}</button>
-                            </div>
-                        </div>
-                    </tab>
-                    <tab heading="{!$Label.FiltersList}" id="idFilersSection">
-                        <div style="margin: 5px;" class="panel panel-default">
-                            <div class="panel-heading">{!$Label.FilterBy}</div>
-        
-                            <div ng-if="filterSettingsList.length != 0">
-                                <table style="margin-bottom:5px" class="table">
-                                    <tr ng-repeat="filter in filterSettingsList track by $index">
-                                        <td style=" width: 3%;">
-                                            <p ng-model="filter[nsPrefix + 'Index__c']" class="form-control-static">{{$index}}</p>
-                                        </td>
-                                        <td style="width: 42%;">
+                <div>
+                    <uib-tabset>
+                        <uib-tab heading="{!$Label.FieldsMap}" id="idSettingsSection">
+                            <div style="margin: 5px;" class="panel panel-default" id="panelList">
+                                <div class="panel-heading">{!$Label.FieldsMap}</div>
+                                <table style="margin-bottom:5px" class="table" ng-if="settingsList.length != 0">
+                                    <tr ng-repeat="setting in settingsList track by $index" class="{{setting.color == true ? 'invalid' : 'valid'}}">
+                                        <td style="width: 50%; margin-left: -2px;">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <input ng-model="filter.isSelected" type="checkbox"/>
+                                                    <input ng-model="setting.isSelected" type="checkbox"/>
                                                 </span>
-                                                <div style="width:100%; margin-right: -2px;" class="input-group">
-                                                    <select class="form-control" data-ng-options="field as field.label+'<'+field.name+'>' for field in sourceFieldsList" data-ng-model="filter.fieldInfo"></select>
-                                                </div>
+                                                <input ng-model="setting[nsPrefix + 'SourceFieldName__c']" type="text" class="form-control" disabled="true"/>
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-primary" ng-click="open($index);" type="button">{!$Label.Select}</button>
+                                                </span>
                                             </div>
                                         </td>
-                                        <td style="width: 13%; margin-right: -2px;" >
-                                            <select class="form-control" data-ng-options="operator for operator in filterOperators" data-ng-model="filter[nsPrefix + 'Operator__c']"/>
-                                        </td>
-                                        <td style="width: 42%; margin-right: -2px;" >
-                                            <input ng-model="filter[nsPrefix + 'Value__c']" type="text" class="form-control"/>
+                                        <td style="width: 50%; margin-right: -2px;">
+                                            <select class="form-control" data-ng-options="field.name as field.label+'<'+field.name+'>' for field in destinationFieldsList|forType:setting[nsPrefix + 'SourceFieldType__c']:setting[nsPrefix + 'SourceSObjectType__c']:setting[nsPrefix + 'SourceFieldSObjectType__c'] | orderBy:'label'" data-ng-model="setting[nsPrefix + 'DestinationFieldName__c']"></select>
                                         </td>
                                     </tr>
                                 </table>
-                                <div style = "margin: 8px;" class="input-group">
-                                    <span class="input-group-addon">{!$Label.Formula}</span>
-                                    <input ng-model="filterFormula[nsPrefix + 'Value__c']" type="text" class="form-control" placeholder="{!$Label.FormulaExpression}"/>
+                                <div ng-if="settingsList.length == 0">
+                                    <uib-alert>{!$Label.NoSettings}</uib-alert>
+                                </div>
+                            </div>  
+                            <div ng-if="hasErrors == true" style="color:red">Duplicate Field Mappings found</div>
+                            <div class="col-md-12 text-center">
+                                <div class="btn-group">
+                                    <button type="button" ng-click="addItem();" class="btn btn-primary btn-sm">{!$Label.Add}</button>
+                                    <button type="button" ng-readonly="disabledSave" ng-click="saveSettings();" class="btn btn-primary btn-sm">{!$Label.Save}</button>
+                                    <button type="button" ng-click="deleteSettings('fieldMaps');" class="btn btn-primary btn-sm">{!$Label.Delete}</button>
                                 </div>
                             </div>
-                            <div ng-if="filterSettingsList.length == 0">
-                                <alert>{!$Label.NoFilters}</alert>
+                        </uib-tab>
+                        <uib-tab heading="{!$Label.FiltersList}" id="idFilersSection">
+                            <div style="margin: 5px;" class="panel panel-default">
+                                <div class="panel-heading">{!$Label.FilterBy}</div>
+            
+                                <div ng-if="filterSettingsList.length != 0">
+                                    <table style="margin-bottom:5px" class="table">
+                                        <tr ng-repeat="filter in filterSettingsList track by $index">
+                                            <td style=" width: 3%;">
+                                                <p ng-model="filter[nsPrefix + 'Index__c']" class="form-control-static">{{$index}}</p>
+                                            </td>
+                                            <td style="width: 42%;">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <input ng-model="filter.isSelected" type="checkbox"/>
+                                                    </span>
+                                                    <div style="width:100%; margin-right: -2px;" class="input-group">
+                                                        <select class="form-control" data-ng-options="field as field.label+'<'+field.name+'>' for field in sourceFieldsList" data-ng-model="filter.fieldInfo"></select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="width: 13%; margin-right: -2px;" >
+                                                <select class="form-control" data-ng-options="operator for operator in filterOperators" data-ng-model="filter[nsPrefix + 'Operator__c']"/>
+                                            </td>
+                                            <td style="width: 42%; margin-right: -2px;" >
+                                                <input ng-model="filter[nsPrefix + 'Value__c']" type="text" class="form-control"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style = "margin: 8px;" class="input-group">
+                                        <span class="input-group-addon">{!$Label.Formula}</span>
+                                        <input ng-model="filterFormula[nsPrefix + 'Value__c']" type="text" class="form-control" placeholder="{!$Label.FormulaExpression}"/>
+                                    </div>
+                                </div>
+                                <div ng-if="filterSettingsList.length == 0">
+                                    <uib-alert>{!$Label.NoFilters}</uib-alert>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                        <div class="col-md-12 text-center"> 
-                            <div class="btn-group">
-                                <button type="button" ng-click="addFilterItem();" class="btn btn-primary btn-sm">{!$Label.Add}</button>
-                                <button type="button" ng-click="saveFilterSettings();" class="btn btn-primary btn-sm">{!$Label.Save}</button>
-                                <button type="button" ng-click="deleteSettings('filters');" class="btn btn-primary btn-sm">{!$Label.Delete}</button>
+                            <div class="col-md-12 text-center"> 
+                                <div class="btn-group">
+                                    <button type="button" ng-click="addFilterItem();" class="btn btn-primary btn-sm">{!$Label.Add}</button>
+                                    <button type="button" ng-click="saveFilterSettings();" class="btn btn-primary btn-sm">{!$Label.Save}</button>
+                                    <button type="button" ng-click="deleteSettings('filters');" class="btn btn-primary btn-sm">{!$Label.Delete}</button>
+                                </div>
                             </div>
-                        </div>
-                    </tab>
-                </tabset>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
             </div>
                 
             <script type="text/ng-template" id="FieldSelectionModal.html">

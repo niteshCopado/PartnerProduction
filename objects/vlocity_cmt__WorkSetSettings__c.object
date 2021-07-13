@@ -13,6 +13,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Work Set Settings</label>
+    <label>EPC Project Settings</label>
     <visibility>Public</visibility>
 </CustomObject>

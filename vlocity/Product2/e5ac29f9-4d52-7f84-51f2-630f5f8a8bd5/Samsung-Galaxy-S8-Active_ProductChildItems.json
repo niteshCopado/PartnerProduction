@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/e5ac29f9-4d52-7f84-51f2-630f5f8a8bd5",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Samsung Galaxy S8 Active",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

@@ -194,6 +194,10 @@ global class ProductWrapper implements System.Comparable {
         get;
         set;
     }
+    global String productGroupKeyPath {
+        get;
+        set;
+    }
     global String productHierarchyPath {
         get;
         set;

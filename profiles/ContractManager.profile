@@ -116,6 +116,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>standard__OnlineSales</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__Platform</application>
         <default>false</default>
         <visible>false</visible>
@@ -170,6 +175,15 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
+    <applicationVisibilities>
+        <application>vlocity_cmt__Vlocity_Digital_Studio</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <classAccesses>
+        <apexClass>AccountCreation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <classAccesses>
         <apexClass>ApplyFrameContractPrice</apexClass>
         <enabled>false</enabled>
@@ -523,6 +537,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Test_AccountCreation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>UMAssetHandlingBatchJob</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -799,6 +817,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__APIGraphV1ControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__APIGraphsV1</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -832,6 +854,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__APIItemsCartsPricingCpqV2Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__APIOmniAnalyticsMetadataV1</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__APIOmniAnalyticsMetadataV1Test</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1131,6 +1161,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ApexJobSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ApexJobSelectorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__AppContext</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1168,6 +1206,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__ApplicationUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ApplicationUtilitiesTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1256,6 +1298,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__AssetsListServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__AttachmentSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1471,6 +1517,26 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__BasketPricingUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BasketPricingWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BasketResponseBuilder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BasketResponseInfo</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BasketValidationServiceUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__BasketWrapper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1524,6 +1590,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__BillingInfoTriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BillingSpecificationPopulatAutoTaskTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__BillingSpecificationPopulatorAutoTask</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1591,6 +1665,42 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationAsyncRespoRESTServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationAsyncResponseRESTService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationAsyncSystemInterface</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationAsyncSystemInterfaceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationSystemInterface</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CFSIntegrationSystemInterfaceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CLMPostInstallUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CLMProductWrapper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1600,6 +1710,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CLMUtilityServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CMChangeObjects</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1636,6 +1750,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CMTAdminUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CPQCartCheckoutMessagesImpl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1735,6 +1853,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CacheableAPIUtilityTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CacheableAPIsHandlerError</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CacheableAPIsHandlerErrors</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CacheableAttributeService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CacheableFDOHelper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1764,6 +1898,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CachedBasketPricingPlanImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CachedBasketPricingPlanImplTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1915,6 +2053,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CartSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CartesianService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1931,11 +2073,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CatalogDataPublishService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CatalogDataPublishServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CatalogHelper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CatalogHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CatalogMetadataPublishService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CatalogMetadataPublishServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2024,6 +2182,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__ChildItemCurrentVersionImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ChildProductFromDataStore</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2124,6 +2286,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CmPostInstallClassTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CmSandboxPostCopyClass</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CmSandboxPostCopyClassTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2419,6 +2589,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ContractDocumentCreationControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ContractDocumentDisplayController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -2508,6 +2682,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__ContractStateModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ContractStateModelTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -2680,6 +2858,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CpqAppHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CpqAppHandlerAdapter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3027,6 +3209,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CpqGetCartLineItemPricesActionV2Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CpqGetCartPromotionsActionV2</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3124,6 +3310,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CpqProductTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CpqProjectItemTriggerHandlerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3235,6 +3425,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CreateContractChildObjectsBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CreateContractChildObjectsBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CreateDocMetadataBatchJobTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3244,6 +3442,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CreateEcomCartRHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CreateEcommCartBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3280,6 +3482,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__CreateOrder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__CreateOrderTest1</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3479,6 +3685,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__CustomSettingsUtilitiesAdapter</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__CustomSettingsUtilitiesTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3492,6 +3702,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DBHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DCLineItemService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3624,6 +3838,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DRMapItemTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DRMapItemTriggerHandlerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -3827,6 +4045,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefGenericDocuSignRecipientTranslator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultABOAssetImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3899,6 +4121,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultBasketResponseImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultBasketValidatorImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3944,6 +4170,70 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DefaultCAPaginationImplementationTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMCalculationMatrixRow</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMCatalogImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMCatalogProductRelationship</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMContextDimensionImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMEntityFilterCondition</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMEntityFilterImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMPriceListEntryImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMProduct2Implementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMProductChildItemImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMProductConfigurationProcedure</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMProductRelationship</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMPromotionImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMPromotionItemImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMRuleAssignmentImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMRuleImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultCMVlocityAttachmentImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -4167,6 +4457,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultDocuSignDocumentSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultDocuSignOmniScriptIntegration</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4175,11 +4469,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultDocuSignRecipientSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultDocuSignRecipientTranslator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DefaultDocumentGenerationMethodsResolver</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultEPCCompareDetailsImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultEPCComparePricesImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultEPCCompareStructureImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -4399,10 +4709,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>vlocity_cmt__DefaultHandleActionImplementationTest</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>vlocity_cmt__DefaultHandleFollowOnImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4436,6 +4742,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DefaultLoadAccountTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultMSApplyToGroupImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultMSApplyToGroupImplTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -4487,6 +4801,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultOdinAttributeFormatterImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultOdinAttributeFormatterImplTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultOdinClassifyResponseImpl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4496,6 +4818,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DefaultOdinInterfaceFormat</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultOdinNotifFldFormatImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -4775,6 +5101,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultResolveRefDateImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultResultToXLIImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4935,6 +5265,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DefaultV2DeleteLineItemsImplTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultV2DeleteLineItemsImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DefaultV2DeletePromoItemsImplementation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DefaultValidateAddressImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -4995,6 +5337,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DeriveCMAggregateEntityBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DiscountActivationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5040,6 +5386,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__DocuSignEnvelopeControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DocuSignEnvelopeStatusUpdater</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__DocuSignEnvelopeStatusUpdaterTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5191,6 +5545,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__DomainRequestTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__DomainResponse</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5220,6 +5578,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__ENGY_MoveInValidate_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCActiveProductValidation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCActiveProductValidationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5287,6 +5653,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__EPCCompareDetailsImplementationTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCCompareVersionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__EPCContext</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5312,6 +5686,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__EPCCreateContextDimensionBatchJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCDataRaptorScheduler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCDataRaptorSchedulerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCDocumentHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCDocumentHandlerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5435,6 +5825,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__EPCPromotionHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCPromotionHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__EPCPromotionItemHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5483,7 +5881,31 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__EPCUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCUtilsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCValidationUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCValidationUtilsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__EPCVersionCloningService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCVlocityAttachmentHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EPCVlocityAttachmentHandlerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5547,6 +5969,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__EcommAssetToBasketActionV3</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__EcommBaseActionV3</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5600,6 +6026,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__EffectivePriceCalculationTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EinsteinStrategyService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EinsteinStrategyServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5664,6 +6098,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__EncryptionServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EncryptionUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__EncryptionUtilTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -5827,6 +6269,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__FetchStaticResourceUrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__FetchStaticResourceUrlTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__FetchUserDetails</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5983,6 +6433,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__FreezeOrdRejectedExceptionHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__FreezeOrdRejectedGenericHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -5996,6 +6450,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__FulfilmentRequestLineTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__FulfilmentRequestLineTriggerHandlerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6028,6 +6486,30 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__GenericBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignEnvelopeUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignEnvelopeUtilityTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignIntegrationService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignIntegrationServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignObject</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GenericDocuSignObjectTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6199,6 +6681,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__GroupSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GuestUserRESTController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__GuestUserTestSetupHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__HHContactsInfoController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6259,6 +6753,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ICompareVersionResult</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__IDRPreprocess</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6283,6 +6781,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__IMSDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IMSDomainConstructable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IMSGroupDomainConstructable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__IObjectTypeDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6296,6 +6806,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__IOrchestrationScheduler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IPPickList</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6387,6 +6901,26 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__IntegTriggerFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IntegrationJSONAttributeUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IntegrationJSONAttributeUtilitiesTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IntegrationJSONPayloadUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__IntegrationJSONPayloadUtilitiesTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__IntegrationProcedureDataSourceProvider</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6475,11 +7009,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__InvalidateCachedResponsesBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__InvokeResource</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__InvokeService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__InvokeServiceAdapter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6807,6 +7349,246 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__MSActionFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSAppException</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSAppModule</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSApplyToGroupBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSApplyToGroupBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSApplyToGroupData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSApplyToGroupService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSBaseDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSBaseService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSBatchInvokeBase</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCheckoutService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCommonService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCommonUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCompiledMsgData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCompiledMsgDataDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSCompiledMsgDataDomainUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSConfigurations</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSConstants</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSDomainType</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSExternalPricingService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSFieldUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroup</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupCartDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupCartDomainTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupCartService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupDomainTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSGroupTestDataSetup</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeCartPricingBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeCartPricingBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeCartValidationBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeCreateOrderBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeCreateOrderBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeSubmitOrderBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeSubmitOrderBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSInvokeVIPInBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSLogger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSMasterCartDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSMasterCartDomainTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSMasterCartService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSMessage</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSMethodMapping</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSPriceValidateBatch</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSPriceValidateBatchTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSPriceValidateService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSQuantityRollupHelper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSQuantityRollupHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSRequest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSResponse</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSRollupService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSRollupServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSSelectorUtil</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSSelectorUtilTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSSingleCartRecordTypeService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSSingleCartRecordTypeServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSUpgradeJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSUpgradeJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MSUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ManualQueueItemInfo</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6859,6 +7641,18 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__MemberObjectSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MemberObjectSelectorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MemberSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__MergeInterface</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -6867,7 +7661,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__MetaDataSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__MetadataQueryWithoutSharing</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MiniRootService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__MiniRootServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6892,10 +7698,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__MultiPicklistAttrValueConverter</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>vlocity_cmt__MultiSPValidateQuotesBatchTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -6979,6 +7781,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__MultiTransactionUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__NewProductVersionController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -7047,6 +7853,26 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ObjectDocumentCreationDocxControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectDocumentCreationDocxHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectDocumentCreationDocxService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectDocumentCreationHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectDocumentCreationService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ObjectDocumentCreationTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -7067,7 +7893,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ObjectFieldLabelControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ObjectFieldLabelService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectFieldLabelServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7108,6 +7942,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__ObjectStateModel2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ObjectStateModel3</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7407,6 +8245,58 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCacheBuilder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCacheBuilderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCacheWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCacheWrapperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCardDashboard</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsCardDashboardTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsDashBoardService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsDashBoardServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsObjectMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsOmniScriptDashboard</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OmniAnalyticsTrackingHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__OmniCPQCloneLineItemsUtil</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -7519,11 +8409,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__OpenInterfaceSharingWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OpenInterfaceSharingWrapperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__OpportunityProdSchedControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__OpportunityProductScheduleController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OpportunitySelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OpportunitySelectorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7595,6 +8501,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__OrderAmendmentHistoryController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderAmendmentHistoryControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__OrderDomainObject</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -7632,6 +8546,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__OrderEventsControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderGroupSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderIntegratAdapterSystemInterfaceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderIntegrationAdapterSystemInterface</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7695,11 +8621,31 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__OrderMemberSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderMemberTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderMemberTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__OrderPdfController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__OrderPdfControllerUnmanaged</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OrderSelectorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7740,6 +8686,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__OverrideService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OverridesDomain</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__OverridesDomainTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -7971,6 +8925,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__PopulateProdHierarchyGrpKeyPathJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__PopulateProdHierarchyGrpKeyPathJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__PopulateProductSellingPeriodBatchJob</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -7980,6 +8942,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__PopulateRequestedStartDateBatchJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__PopulateVlocAttachmentProdGrpKeyJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__PopulateVlocityAttachmentProdGrpKeyJob</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -8363,6 +9333,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ProcedureTestFrameworkV1</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ProcessException</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -8619,6 +9593,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ProductReport</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ProductReportService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ProductReportServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__ProductReportTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ProductSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -8803,11 +9793,35 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__QuoteGroupSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__QuoteMemberSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__QuoteMemberTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__QuoteMemberTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__QuotePdfController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__QuotePdfControllerUnmanaged</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__QuoteSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__QuoteSelectorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9063,6 +10077,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__RootAndParentItemIdPopulator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__RootProductChildItemBatchJob</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -9083,7 +10101,47 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__RuleEvaluationInput</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleEvaluationInputTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleExpressionBuilderHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleExpressionBuilderHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleExpressionBuilderImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleExpressionBuilderImplTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleLogEntry</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleLogService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleLogServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__RuleManagerController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RuleResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9124,6 +10182,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__RuleWorkbenchController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RulesUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__RulesUtilitiesTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9287,6 +10353,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__ServicePointSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__ServiceUtility</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -9339,6 +10409,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__SpecTemplateAttrMappingTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__SpecTemplateMappingTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__SpecificationDomainObject</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -9383,6 +10461,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__StateModelAdditionalObjectsImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelAdditionalObjectsImplTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelCacheManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelCacheManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__StateModelTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -9391,7 +10485,79 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__StateModelVersion</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelVersionClonerController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelVersionClonerControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelVersionClonerService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateModelVersionClonerServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__StateModelVersionTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateRuleService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateRuleServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleAdminHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleAdminHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleTestUtilities</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRuleTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRulesAdminController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionRulesAdminControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9403,7 +10569,23 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__StateTransitionVOIService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StateTransitionVOIServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__StatelessPricingTestClass</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9588,6 +10770,38 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__SyncToOpportunityTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIProductModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIProductResourceRequestor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIProductService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIProductServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIResource</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPIResourceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPISettingService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__TMFOpenAPISettingServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -9903,6 +11117,50 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__UPCAppConstants</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCAppHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCAppHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCAppModule</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductDetailsReport</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductDetailsReportController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductDetailsReportMailService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductDetailsReportMailServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductDetailsReportTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductReportHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UPCProductReportHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__URLGenerator</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10031,6 +11289,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__UpgradePricingFieldJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UpgradePricingFieldJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__UploadAttachmentController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10099,6 +11365,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__UserSecurity</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__UserSecurityTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__UserTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10119,7 +11393,31 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__V2AddCartPromotionService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2AddCartPromotionServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__V2AppModule</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2AppliedPromotionItemSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2AppliedPromotionItemSelectorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2AppliedPromotionSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2AppliedPromotionSelectorTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10140,6 +11438,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__V2CartRequestContextServiceImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2CartUtility</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2CartUtilityTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2CloneCartItemService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2CloneCartItemServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10167,11 +11481,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__V2DeleteAppliedPromotionItemService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2DeleteAppliedPromotionItemServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__V2DeleteCartItemService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__V2DeleteCartItemServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2ExpandCartItemsService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2ExpandCartItemsServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10227,6 +11557,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__V2ProductHierarchyBatchProcessor</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2ProductHierarchyBatchProcessorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__V2ProductHierarchyDataStore</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10247,11 +11585,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__V2PromotionSelector</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2PromotionSelectorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__V2RelationshipSelector</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__V2RelationshipSelectorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2ReplaceAndCompareOffersTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__V2ReplaceOfferService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10519,6 +11873,22 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__VersioningActiveLineItemBatchJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VersioningActiveLineItemBatchJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VersioningUpgradeBatchJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VersioningUpgradeBatchJobTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__VirtualNodeWrapper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10615,6 +11985,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__VlocityContractServiceLog</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityContractServiceLogTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__VlocityDataCache</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10624,6 +12002,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__VlocityDataCacheTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityDocsUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityDocsUtilsTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10655,6 +12041,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__VlocityIntegrationSettingService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityIntegrationSettingServiceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__VlocityIntelligenceMachineEditCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -10664,6 +12058,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__VlocityMobileChatterFileUpload</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityMultiSiteLogService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityMultiSiteLogServiceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10767,7 +12169,23 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__VlocityTrackingComponentTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityTrackingGroupTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityTrackingGroupTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__VlocityTrackingService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityTrackingServiceFieldMappings</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10788,6 +12206,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__VlocityVersionManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityWebTrackingConfigTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityWebTrackingConfigTriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__VlocityWebTrackingEventTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10827,11 +12257,23 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__WorkSetDMLWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__WorkSetDomain</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__WorkSetDomainTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__WorkSetItemUpgradeBatchJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__WorkSetItemUpgradeBatchJobTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -10947,6 +12389,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMASWAttributeRTPersistorTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMAVAttr2AttrMapper</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11007,6 +12453,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMAssignmentRuleRepository</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMAsyncResponseRESTService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11016,6 +12466,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMAsyncSystemInterface</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMAsyncSystemInterfaceTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11052,6 +12506,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMAttributeAssignmentTriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMAttributeBasedTaskOrchItemProcessor</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11119,6 +12577,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMBatchJobManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMCPQSubmitFlowImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11135,6 +12597,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMCacheManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMCalendarUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11148,6 +12614,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMCatalogSyncBatchJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMCatalogSyncBatchJobTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11203,6 +12673,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMCreateProductVersionExt</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMCreateProductVersionExtTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMCustomChangeDetectorImplementation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11224,6 +12702,22 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMDSIDebugControllerExtensionTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMDataPurgeController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMDataPurgeControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMDataPurgeScheduler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMDataPurgeSchedulerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11344,6 +12838,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMEventListenerManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMEventNotifySumoLogic</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMEventNotifySumoLogicTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11499,6 +13001,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMNewProductVersionWork</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMNoopTriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11611,6 +13117,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMOrchestrationDepDefTriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMOrchestrationDepDefTriggerHandlerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMOrchestrationDependency</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11636,6 +13150,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMOrchestrationItemDefinitionLoaderImpl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMOrchestrationItemDefinitionLoaderTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -11815,6 +13333,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMOrderOrBundleActivationManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMOrderService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11871,6 +13393,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMPONRManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMParametersCache</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -11912,6 +13438,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMQueueItemsControllerTest2</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMRecordsDeleter</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -12103,7 +13633,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesAmendOnAmend</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMTestStoriesAttributeMapping</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesAttributesBackPropagation</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -12151,6 +13689,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesDecompositionMove</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesDecompositionSuppMultiLvl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMTestStoriesDecompositionVirtualNodes</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -12163,7 +13709,39 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesOrderBundleActivation</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesPONR</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesUpdatePlanAmend</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTestStoriesUpdatePlanSanityCheck</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMTestTriggersUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorCheckdoneMonitoringXomV1</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorCheckdoneMonitoringXomV1Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorE2EHealthChecker</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorE2EHealthCheckerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -12203,6 +13781,26 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorSecretsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorSecretsManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorSecretsManagerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorStatusChecker</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorStatusCheckerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>vlocity_cmt__XOMThorStatusControllerExtension</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -12232,6 +13830,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>vlocity_cmt__XOMThorSupplementalOrderProxy</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMThorUtilsTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>vlocity_cmt__XOMTimeService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -12314,11 +13924,6 @@
         <editable>true</editable>
         <field>Account.Jigsaw</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account.New_Account__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13032,6 +14637,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Asset.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Asset.vlocity_cmt__ProductHierarchyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13512,6 +15127,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.EntitlementId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.IsClosedOnCreate</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -13519,6 +15139,21 @@
         <editable>false</editable>
         <field>Case.IsEscalated</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.IsStopped</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatus</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.MilestoneStatusIcon</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13536,13 +15171,38 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ProductId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Case.Reason</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.ServiceContractId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.SlaExitDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.SlaStartDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.SourceId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.StopStartDate</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14292,6 +15952,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.vlocity_cmt__ContractGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.vlocity_cmt__ContractReferenceNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14338,6 +16003,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract.vlocity_cmt__IsNonStandard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.vlocity_cmt__LastDocuSignEnvelopeId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.vlocity_cmt__LastDocuSignEnvelopeStatus__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.vlocity_cmt__LastDocuSignJobId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14452,6 +16132,71 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ContractLineItem.AssetId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.Discount</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.EndDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.ListPrice</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.LocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.ParentContractLineItemId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.RootContractLineItemId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.StartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.StatusIndicator</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.Subtotal</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ContractLineItem.TotalPrice</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>DataUseLegalBasis.Description</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14489,6 +16234,86 @@
         <editable>false</editable>
         <field>EngagementChannelType.ContactPointType</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.AssetId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.BusinessHoursId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.CasesPerEntitlement</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.ContractLineItemId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.EndDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.IsPerIncident</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.LocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.RemainingCases</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.RemainingWorkOrders</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.ServiceContractId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.SlaProcessId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.StartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.StatusIndicator</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.Type</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Entitlement.WorkOrdersPerEntitlement</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -15322,6 +17147,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OpportunityLineItem.vlocity_cmt__OpportunityGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OpportunityLineItem.vlocity_cmt__OpportunityMemberId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>OpportunityLineItem.vlocity_cmt__OverageCalculatedPrice__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15373,6 +17208,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OpportunityLineItem.vlocity_cmt__ProductAttribXN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OpportunityLineItem.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OpportunityLineItem.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15652,6 +17497,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.vlocity_cmt__CartIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Order.vlocity_cmt__CreatedByAPI__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15663,6 +17513,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.vlocity_cmt__DefaultCurrencyPaymentMode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.vlocity_cmt__DefaultPremisesId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15742,7 +17597,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.vlocity_cmt__ExternalPricingStatus__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Order.vlocity_cmt__Fax__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.vlocity_cmt__FirstSubmitAttemptTs__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15832,6 +17697,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.vlocity_cmt__MultiServiceMessageData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Order.vlocity_cmt__NumberOfContractedMonths__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15843,6 +17713,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.vlocity_cmt__OneTimeMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.vlocity_cmt__OneTimeTotal2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15902,6 +17777,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order.vlocity_cmt__ParentOrderId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Order.vlocity_cmt__Phone__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15918,6 +17798,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.vlocity_cmt__ProcessingLog__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.vlocity_cmt__QueuedTs__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15958,6 +17843,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.vlocity_cmt__RecurringMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.vlocity_cmt__RecurringTotal2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16282,6 +18172,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__IsValidated__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>OrderItem.vlocity_cmt__ItemName__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -16293,6 +18188,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OrderItem.vlocity_cmt__JSONNode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__LastPricedAt__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16377,6 +18277,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__OrderGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__OrderMemberId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>OrderItem.vlocity_cmt__OverageCalculatedPrice__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -16438,6 +18348,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OrderItem.vlocity_cmt__ProductAttribXN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16618,6 +18538,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>OrderItem.vlocity_cmt__UsageUnitPrice__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>OrderItem.vlocity_cmt__ValidationDate__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16912,12 +18837,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product2.vlocity_cmt__ObjectTypeName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.vlocity_cmt__ParentClassCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product2.vlocity_cmt__ParentClassId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.vlocity_cmt__ProductSpecId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.vlocity_cmt__ProductSpecName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17142,6 +19082,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Quote.vlocity_cmt__DefaultPremisesId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Quote.vlocity_cmt__DefaultServiceAccountId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17228,6 +19173,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Quote.vlocity_cmt__LeadSource__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote.vlocity_cmt__MultiServiceMessageData__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17527,6 +19477,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__IsValidated__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>QuoteLineItem.vlocity_cmt__ItemName__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17538,6 +19493,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>QuoteLineItem.vlocity_cmt__JSONNode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__LastPricedAt__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17657,6 +19617,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>QuoteLineItem.vlocity_cmt__ProductHierarchyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17668,6 +19638,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>QuoteLineItem.vlocity_cmt__Query__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__QuoteGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__QuoteMemberId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17807,6 +19787,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>QuoteLineItem.vlocity_cmt__ValidationDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Recommendation.vlocity_cmt__VlocityActionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SOSSession.AppVersion</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17873,6 +19863,111 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SOSSession.WaitDuration</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.AccountId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ActivationDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ApprovalStatus</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.BillingAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ContactId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Discount</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.EndDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.GrandTotal</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ParentServiceContractId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.RootServiceContractId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ShippingAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.ShippingHandling</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.SpecialTerms</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.StartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.StatusIndicator</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Subtotal</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Tax</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.Term</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceContract.TotalPrice</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18382,6 +20477,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>WorkOrder.EntitlementId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>WorkOrder.GrandTotal</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -18392,12 +20492,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>WorkOrder.IsStopped</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>WorkOrder.LineItemCount</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>WorkOrder.LocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkOrder.MilestoneStatus</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkOrder.MilestoneStatusIcon</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18427,6 +20542,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>WorkOrder.ServiceContractId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkOrder.SlaExitDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkOrder.SlaStartDate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>WorkOrder.StartDate</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -18438,6 +20568,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>WorkOrder.StatusCategory</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>WorkOrder.StopStartDate</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19032,6 +21167,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__AccountProductRollup__c.vlocity_cmt__CatalogCategoryId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__AccountProductRollup__c.vlocity_cmt__ProductId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ActivityContentDocument__c.vlocity_cmt__ContentDocumentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19102,6 +21247,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__Address1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__Address2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__ApplicationReferenceNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19112,7 +21267,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__Content__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19122,7 +21287,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__Floor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__FullJSON__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__Geolocation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__HouseNumberSupplement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19147,6 +21327,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__PostalCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__PremisesId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__PrimaryPartyId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19167,7 +21357,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__ServicePointId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__State__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__StreetAddress__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19178,6 +21383,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__Application__c.vlocity_cmt__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Application__c.vlocity_cmt__UnitNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -19972,6 +22182,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Attribute__c.vlocity_cmt__ExcludeFromBasketCache__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Attribute__c.vlocity_cmt__Filterable__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -20193,6 +22408,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__CachedAPIResponse__c.vlocity_cmt__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__CachedDataSet__c.vlocity_cmt__IsActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -21077,6 +23297,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__CatalogProductRelationship__c.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__CatalogProductRelationship__c.vlocity_cmt__PromotionId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -21837,6 +24062,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ContractGroup__c.vlocity_cmt__QuoteGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ContractLineItem__c.vlocity_cmt__AssetId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -21863,6 +24093,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ContractLineItem__c.vlocity_cmt__BillingAccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ContractLineItem__c.vlocity_cmt__ContractGroupId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22003,6 +24238,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ContractLineItem__c.vlocity_cmt__Quantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ContractLineItem__c.vlocity_cmt__QuoteLineItem__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22167,6 +24407,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ContractSection__c.vlocity_cmt__ContainsReconcileRedlines__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ContractSection__c.vlocity_cmt__ContainsRedlines__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22243,6 +24488,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ContractSection__c.vlocity_cmt__NeedAutoSectionNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ContractSection__c.vlocity_cmt__NoLineAfterSection__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22447,6 +24697,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__ContainsReconcileRedlines__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__ContainsRedlines__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22458,6 +24713,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__ContractType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__CountOfContainsReconcileRedlines__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22557,6 +24817,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__IsSectionInfoStoredOnDoc__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ContractVersion__c.vlocity_cmt__IsTemplateBatchable__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22608,6 +24873,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__CustomerInteractionTopic__c.vlocity_cmt__AccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__CustomerInteractionTopic__c.vlocity_cmt__Action__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -22877,6 +25147,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__DRBundle__c.vlocity_cmt__SalesforcePlatformCacheType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__DRBundle__c.vlocity_cmt__SampleInputCustom__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22918,6 +25193,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__DRBundle__c.vlocity_cmt__TargetOutXml__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__DRBundle__c.vlocity_cmt__TimeToLiveMinutes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -23102,6 +25382,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__Datastore__c.vlocity_cmt__CachedDataSetId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__Datastore__c.vlocity_cmt__Classname__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -23137,7 +25422,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__DestinationDefaultQuantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__DestinationMaxQuantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__DestinationMinQuantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -23167,7 +25462,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__SourceDefaultQuantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__SourceMaxQuantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__DecompositionRelationship__c.vlocity_cmt__SourceMinQuantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -23303,6 +25608,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__DocumentSection__c.vlocity_cmt__NeedAutoSectionNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__DocumentSection__c.vlocity_cmt__NoLineAfterSection__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -23507,6 +25817,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__DocumentTemplateSection__c.vlocity_cmt__NoLineAfterSection__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__DocumentTemplateSection__c.vlocity_cmt__ParentSectionId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -23618,6 +25933,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__DocumentTemplate__c.vlocity_cmt__IsPublished__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__DocumentTemplate__c.vlocity_cmt__IsSectionIdsReplaced__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -23748,6 +26068,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__Document__c.vlocity_cmt__DocumentCreationSource__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__Document__c.vlocity_cmt__DocumentSourceId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -24453,6 +26778,201 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__FulfilmentRequest__c.vlocity_cmt__orchestrationPlanId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__DocumentIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__DocumentName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__DocumentSourceId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__DocumentSourceType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__EnvelopeIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericDocument__c.vlocity_cmt__FileExtension__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__CompletedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__DeclinedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__EmailMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__EmailSubject__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__EnvelopeIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__EnvelopeUri__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__LastPollDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__OpportunityId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__OrderId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__QuoteId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__SentDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__StatusDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__ViewedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__VoidedDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericEnvelope__c.vlocity_cmt__VoidedReason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__AccessCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__ContactId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DateDeclined__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DateDelivered__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DateSent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DateSigned__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DeclineReason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__DeliveryMethod__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__EnvelopeIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__HostEmail__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__LocaleCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__RecipientFullName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__RecipientId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__RoutingOrder__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__SignerName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__GenericRecipient__c.vlocity_cmt__Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -25637,6 +28157,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ManualQueue__c.vlocity_cmt__Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ManualQueue__c.vlocity_cmt__DisplayedFields__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -25663,6 +28188,46 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ManualQueue__c.vlocity_cmt__QueueType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__AppliedDateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__EndState__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__IsTransitionSuccess__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__LastDefaultState__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__RecordId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__Result__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__StateTransitionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ObjectAppliedResult__c.vlocity_cmt__StateTransitionName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -26062,6 +28627,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OmniScriptInstance__c.vlocity_cmt__IsLwcEnabled__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OmniScriptInstance__c.vlocity_cmt__ObjectId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -26182,6 +28752,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OmniScript__c.vlocity_cmt__IsTest__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OmniScript__c.vlocity_cmt__JSON_Output__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -26238,6 +28813,61 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OmniScript__c.vlocity_cmt__Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__AcceptLanguage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__BrowserVendor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__BrowserVersion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__Channel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__FormFactor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__ReferrerUrl__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__SessionData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__Subdomain__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__UserAgentString__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__UserName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OmniUserSession__c.vlocity_cmt__UserProfileId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -26587,6 +29217,111 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__AsyncJobId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__ExpectedMemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__GroupCartId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__HasUnappliedGroupItems__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__MemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__MultiServiceMessageData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__OneTimeCostTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__OneTimeMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__OneTimeTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__OpportunityGroupMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__RecurringCostTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__RecurringMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__RecurringTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__UsageCostTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__UsageMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityGroup__c.vlocity_cmt__UsagePriceTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OpportunityLineItemRelationship__c.vlocity_cmt__Action__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -26613,6 +29348,111 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OpportunityLineItemRelationship__c.vlocity_cmt__RelationshipType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__Address1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__FirstName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__LastName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__MSISDN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__MemberData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__OpportunityGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__PostalCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__PremisesId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__ServiceAccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__ServicePointId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__ServiceabilityData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__State__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__StreetAddress__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OpportunityMember__c.vlocity_cmt__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -26763,6 +29603,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OrchestrationDependency__c.vlocity_cmt__OrchestrationDependencyDefinitionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrchestrationDependency__c.vlocity_cmt__Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrchestrationDependency__c.vlocity_cmt__Plan__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -27612,6 +30462,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OrderAsyncOperationEvent__e.vlocity_cmt__AsyncOperationData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderAsyncOperationEvent__e.vlocity_cmt__OrderItemId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OrderDiscountItem__c.vlocity_cmt__CatalogCategoryId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -27712,7 +30572,57 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__AsyncJobId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__ExpectedMemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__GroupCartId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__HasUnappliedGroupItems__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__MemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__MultiServiceMessageData__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -27737,6 +30647,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__QuoteGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__RecurringCostTotal__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -27748,6 +30663,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__RecurringTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__UsageCostTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__UsageMarginTotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderGroup__c.vlocity_cmt__UsagePriceTotal__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -27813,6 +30743,116 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OrderItemRelationship__c.vlocity_cmt__RelationshipType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__Address1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__FirstName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__LastName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__MSISDN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__MemberData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__OrderGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__PostalCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__PremisesId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__QuoteMemberId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__ServiceAccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__ServicePointId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__ServiceabilityData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__State__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__StreetAddress__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderMember__c.vlocity_cmt__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -27938,6 +30978,41 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OrderPriceAdjustment__c.vlocity_cmt__TimePolicyId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__CatalogCategoryId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__CurrentDiscountRange__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__NeedsPricing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__OrderGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__PreviousDiscountRange__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__ProductId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OrderProductRollup__c.vlocity_cmt__RollupType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -28077,7 +31152,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__OverrideDefinition__c.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__OverrideDefinition__c.vlocity_cmt__ProductHierarchyGlobalKeyPath__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OverrideDefinition__c.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -28093,6 +31178,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__OverrideDefinition__c.vlocity_cmt__PromotionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__OverrideDefinition__c.vlocity_cmt__PromotionItemGroupKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -29007,6 +32097,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__PriceListEntry__c.vlocity_cmt__PriceListName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__PriceListEntry__c.vlocity_cmt__PricingElementAmount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__PriceListEntry__c.vlocity_cmt__PricingElementGlobalKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -29577,6 +32677,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ProductChildItem__c.vlocity_cmt__ChildProductName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ProductChildItem__c.vlocity_cmt__CollapseHierarchy__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -29632,6 +32737,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ProductChildItem__c.vlocity_cmt__ParentProductName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ProductChildItem__c.vlocity_cmt__Quantity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -29663,6 +32773,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ProductConfigurationProcedure__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ProductConfigurationProcedure__c.vlocity_cmt__ProductGroupKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -29822,12 +32937,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ProductRelationship__c.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ProductRelationship__c.vlocity_cmt__RelatedObjectTypeId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ProductRelationship__c.vlocity_cmt__RelatedProductFilterId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ProductRelationship__c.vlocity_cmt__RelatedProductGroupKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -29872,6 +32997,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__ProjectItem__c.vlocity_cmt__Action__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ProjectItem__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ProjectItem__c.vlocity_cmt__ItemGlobalKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -29893,6 +33028,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__ProjectItem__c.vlocity_cmt__ParentItemId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__ProjectItem__c.vlocity_cmt__RootItemId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30017,6 +33157,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__ContextProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__ContextProductId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -30033,6 +33178,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__EffectiveUntilDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__GlobalGroupKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30062,7 +33212,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__OfferProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__ProductHierarchyGlobalKeyPath__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__PromotionItem__c.vlocity_cmt__ProductHierarchyGroupKeyPath__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30332,6 +33492,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__QuoteAsyncOperationEvent__e.vlocity_cmt__AsyncOperationData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteAsyncOperationEvent__e.vlocity_cmt__QuoteItemId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__QuoteDiscountItem__c.vlocity_cmt__CatalogCategoryId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -30432,12 +33602,57 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__AsyncJobId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__ExpectedMemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__GroupCartId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__HasUnappliedGroupItems__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__MemberCount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteGroup__c.vlocity_cmt__MultiServiceMessageData__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30553,6 +33768,111 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__QuoteLineItemRelationship__c.vlocity_cmt__RelationshipType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__Address1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__AsyncOperation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__City__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__FirstName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__LastName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__LockedBy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__LockedFor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__MSISDN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__MemberData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__MemberType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__PostalCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__PremisesId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__QuoteGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__ServiceAccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__ServicePointId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__ServiceabilityData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__State__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__StreetAddress__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteMember__c.vlocity_cmt__Title__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30678,6 +33998,41 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__QuotePricingAdjustment__c.vlocity_cmt__TimePolicyId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__CatalogCategoryId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__CurrentDiscountRange__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__NeedsPricing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__PreviousDiscountRange__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__ProductId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__QuoteGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__QuoteProductRollup__c.vlocity_cmt__RollupType__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -31177,6 +34532,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__SpecTemplateAttributeMapping__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__SpecTemplateAttributeMapping__c.vlocity_cmt__MappedAttributeId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -31188,6 +34548,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__SpecTemplateAttributeMapping__c.vlocity_cmt__SpecTemplateAttributeId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__SpecTemplateMapping__c.vlocity_cmt__GlobalKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -31672,6 +35037,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__TestResult__c.vlocity_cmt__AsyncApexJobId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__TestResult__c.vlocity_cmt__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__TestResult__c.vlocity_cmt__TestName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__TestResult__c.vlocity_cmt__TestSuiteUniqueKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__ThorOrchestrationQueue__c.vlocity_cmt__GlobalKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -31962,12 +35347,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__ExecutionSequence__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__Filter__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__InvokeClassName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__InvokeMethodInput__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -31983,6 +35378,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__IsSeedAction__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__IsStateDefaultAction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32037,6 +35437,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityAction__c.vlocity_cmt__VlocityStateModelVersionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityAttachment__c.vlocity_cmt__AttachmentId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32082,6 +35487,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityAttachment__c.vlocity_cmt__ProductGroupKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityAttachment__c.vlocity_cmt__SequenceNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32107,6 +35517,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__CardType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__Datasource__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32117,12 +35532,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__GlobalKey__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__IsChildCard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__ParentID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__SampleData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__Styles__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32133,6 +35568,61 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__VlocityCard__c.vlocity_cmt__Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__ContextId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__ContextType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__DateTimeAccepted__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__DateTimeCompleted__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__DateTimeStarted__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__JobType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__RequestData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__ResponseData__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__ServiceType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityContractServiceLog__c.vlocity_cmt__UserId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32647,6 +36137,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__AdditionalObjects__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__CreationVlocityActionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__CurrentStatus__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32663,6 +36163,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__Priority__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__RuleEvaluationClassName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__RuleEvaluationMethodName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32702,6 +36212,51 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__Conditions__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__ExecutionSequence__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__FailureMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__IsActive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__Message__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__RuleEvaluationFalseVlocityActionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransitionRule__c.vlocity_cmt__RuleVlocityActionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransition__c.vlocity_cmt__Alternate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityStateTransition__c.vlocity_cmt__Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32712,7 +36267,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransition__c.vlocity_cmt__IsDefaultTransition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityStateTransition__c.vlocity_cmt__To__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityStateTransition__c.vlocity_cmt__TransitionCompletionCriteria__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32792,6 +36357,136 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingComponent__c.vlocity_cmt__ComponentType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingComponent__c.vlocity_cmt__ComponentVersion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingComponent__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__AccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerComponent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerGlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerLanguage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerSubType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionContainerVersion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionElementLabel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionElementName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionElementType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionExecutionMode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionTargetName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionTargetType__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ActionTargetVersion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__AssetId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__BatchId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__BusinessCategory__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__BusinessEvent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__CaseId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ComponentState__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ContactId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ContextId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -32807,7 +36502,117 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__DataFetchDuration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__DataRequestEndTimeMilliseconds__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__DataRequestEndTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__DataRequestStartTimeMilliseconds__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__DataRequestStartTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__Data__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ElapsedTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ErrorCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ErrorMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ErrorOccurred__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__InstanceIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__LeadId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__LoadDuration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__OmniUserSessionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__OpportunityId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__OrderId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ProductId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__PromotionId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__QuoteId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ReadyTimeMilliseconds__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ReadyTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__RequestPayload__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__RequestUrl__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32817,7 +36622,67 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__ResponsePayload__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__SaveForLaterMinutes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__StartTimeMilliseconds__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__StartTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__StepInstanceIdentifier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__StepSequence__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__StepWaitTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TestAssertFailureMessage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TestAssertionExpression__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TestResult__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__Timestamp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TrackingCategory__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TrackingGroupId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32827,7 +36692,82 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__TrackingVersion__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>vlocity_cmt__VlocityTrackingEntry__c.vlocity_cmt__VlocityInteractionToken__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__ActionContainerName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__Data__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__EventName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__Timestamp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__TrackingCategory__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__TrackingGroupId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingEvent__e.vlocity_cmt__TrackingService__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__EffectiveEndDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__EffectiveStartDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__IsActive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__MaxAgeInDays__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityTrackingGroup__c.vlocity_cmt__VlocityWebTrackingConfigurationId__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32948,6 +36888,46 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>vlocity_cmt__VlocityUITemplate__c.vlocity_cmt__Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingConfiguration__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingConfiguration__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingConfiguration__c.vlocity_cmt__IsActive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingConfiguration__c.vlocity_cmt__TrackingFramework__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingEventType__c.vlocity_cmt__Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingEventType__c.vlocity_cmt__EventPayload__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingEventType__c.vlocity_cmt__GlobalKey__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>vlocity_cmt__VlocityWebTrackingEventType__c.vlocity_cmt__InclusionRule__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -33075,6 +37055,9 @@
         <layout>CaseClose-Close Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CaseMilestone-Case Milestone Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CommunityMemberLayout-Community Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -33093,16 +37076,28 @@
         <layout>ContentVersion-Content Version Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>ContractLineItem-Contract Line Item Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>DataUseLegalBasis-Data Use Legal Basis Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>DataUsePurpose-Data Use Purpose Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>DelegatedAccount-External Managed Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>EmailMessage-Email Message Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Entitlement-Entitlement Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>EntityMilestone-Object Milestone Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Event-Event Layout</layout>
@@ -33152,6 +37147,9 @@
         <layout>OpportunityLineItem-Opportunity Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Order-VU - Order %28Vlocity University%29 Layout V2</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>OrderItem-Order Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -33186,6 +37184,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>ScorecardMetric-Scorecard Metric Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ServiceContract-Service Contract Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SocialPersona-Social Persona Layout</layout>
@@ -33461,6 +37462,15 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ContractLineItem</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -33494,6 +37504,24 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>EngagementChannelType</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Entitlement</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>EntitlementContact</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -33629,6 +37657,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>SOSSession</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ServiceContract</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -34477,6 +38514,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__MSOrderConfiguration</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__ManualQueueMember</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -34566,6 +38607,18 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__OldUITemplateDesigner</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OmniDesignerCustomLabelDeployer</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OmniLwcCompile</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OmniLwcDesignerTinyMceEditor</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34669,6 +38722,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__OpportunityLaunchHybridCPQ</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__OpportunityManager</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -34689,11 +38746,23 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__OrderAmend</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__OrderBulkEdit</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__OrderBulkEdit2</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OrderCancel</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OrderDiscard</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34706,6 +38775,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__OrderFrameContract</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OrderLaunchHybridCPQ</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34726,6 +38799,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__OrderPdfUnmanaged</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__OrderRelationshipVisualization</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34765,7 +38842,15 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__PCProductDelete</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__PCProductDetails</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__PCProductDetailsPDF</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34778,6 +38863,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__PCProductPricing</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__PCProductReport</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -34977,6 +39066,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__QuoteLaunchHybridCPQ</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__QuoteManager</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -35062,6 +39155,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__StateModelImportExport</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__StateModelVersionCloner</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -35173,6 +39270,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>vlocity_cmt__VlocityTrackingManager</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>vlocity_cmt__VqMachineConfiguration</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -35194,6 +39295,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__XOMCompleteItem</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__XOMComplexConditionsLWC</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -35258,6 +39363,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__XOMManageEncryptionKeys</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__XOMManageSecrets</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -35362,6 +39471,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>vlocity_cmt__XOMViewOrderDecomposition</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>vlocity_cmt__XomManualQueueMerged</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -35470,6 +39583,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Order.vlocity_cmt__EnterpriseOrder</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Order.vlocity_cmt__GroupCart</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -35485,16 +39603,26 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Order.vlocity_cmt__StandardOrder</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Order.vlocity_cmt__SubOrder</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>true</default>
+        <default>false</default>
+        <recordType>Order.vlocity_cmt__WorkingCart</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Product2.vlocity_cmt__Class</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
         <recordType>Product2.vlocity_cmt__Product</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -35510,6 +39638,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Quote.vlocity_cmt__EnterpriseQuote</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Quote.vlocity_cmt__GroupCart</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -35520,7 +39653,17 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Quote.vlocity_cmt__StandardQuote</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Quote.vlocity_cmt__SubQuote</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Quote.vlocity_cmt__WorkingCart</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -35725,6 +39868,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>vlocity_cmt__Project__c.vlocity_cmt__Module</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>vlocity_cmt__Project__c.vlocity_cmt__WorkSet</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -35865,6 +40013,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>standard-DelegatedAccount</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>standard-Document</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -35874,6 +40026,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-EngagementChannelType</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Entitlement</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -35998,6 +40154,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-SOSSession</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-ServiceContract</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -36178,6 +40338,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>vlocity_cmt__FieldMapper</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>vlocity_cmt__FlexCards</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

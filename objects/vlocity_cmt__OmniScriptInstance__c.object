@@ -165,6 +165,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__IsLwcEnabled__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__OmniScriptId__r.vlocity_cmt__IsLwcEnabled__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Lightning Web Component Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__LastSaved__c</fullName>
         <defaultValue>NOW()</defaultValue>
         <deprecated>false</deprecated>

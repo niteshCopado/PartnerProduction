@@ -26,6 +26,7 @@
 
 			<script type="text/javascript">
 				var myApp = angular.module('myApp',['forceng','consoleCards']);
+				var mydomainUrl = '{!JSENCODE(domainUrl)}';
 			</script>
 
 		</body>

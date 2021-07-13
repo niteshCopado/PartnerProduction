@@ -109,6 +109,9 @@
                created: '{!$Label.CLMContractDocCreated}',
                lastModified: '{!$Label.CLMContractDocLastModified}'
             };
+
+            Visualforce.remoting.timeout = 120000; // Set timeout at page level
+            
             labels = {
                 clmContractDocActionButtonClicked: '{!$Label.CLMContractDocActionButtonClicked}',
                 clmReconcileFileNameIs: '{!$Label.CLMReconcileFileNameIs}',
@@ -165,6 +168,10 @@
                 getDefaultTemplateInfo: {
                     action: '{!$RemoteAction.ContractDocumentDisplayController.getDefaultTemplateInfo}',
                     config: {escape: false}
+                },
+                linkAndcheckInContentVersionForContractVersion: {
+                    action: '{!$RemoteAction.ContractDocumentDisplayController.linkAndcheckInContentVersionForContractVersion}',
+                    config: {escape: false}
                 }
             };
             (function() {
@@ -188,6 +195,17 @@
                 });
                 window.dispatchEvent(event);
                 console.log(attachmentId);
+            }
+            
+            function getContentVersionId(contentVersionId) {
+                'use strict';
+                var event = new CustomEvent('AttachmentId', {
+                    detail: {
+                        'contentVersionId': contentVersionId
+                    }
+                });
+                window.dispatchEvent(event);
+                console.log(contentVersionId);
             }
         </script>
         <c:VFContractAttachmentUpload />

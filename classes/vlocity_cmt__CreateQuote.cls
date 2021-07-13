@@ -6,7 +6,4 @@ methods, variables, and properties.
 To enable code to compile, all methods return null.
 */
 global class CreateQuote implements vlocity_cmt.GlobalInterfaces.ConfigurePriceQuoteControllerInterface {
-    global CreateQuote() {
-
-    }
 }

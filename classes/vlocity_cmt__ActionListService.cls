@@ -12,6 +12,9 @@ global class ActionListService {
     global static String getActionURL(String objType, String contextId, Id actionId) {
         return null;
     }
+    global static List<vlocity_cmt.Action> getActionsDetailFromId(String objType, String sFilterContextId, String sDisplayOn, String sLinkType) {
+        return null;
+    }
     global static List<vlocity_cmt.Action> getActions(String objType, String sFilterContextId, String sDisplayOn, String sLinkType) {
         return null;
     }
@@ -20,5 +23,8 @@ global class ActionListService {
     }
     global static Object invokeVOIMethod(String className, String methodName, String input, String option) {
         return null;
+    }
+    global static void processOnCreateActions(List<Id> objectIds, Map<String,Object> output, Map<String,Object> options) {
+
     }
 }

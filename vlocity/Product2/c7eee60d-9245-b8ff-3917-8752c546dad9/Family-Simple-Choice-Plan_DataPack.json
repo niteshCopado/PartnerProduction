@@ -14,7 +14,7 @@
                 "Code__c": "ACAT_Plans",
                 "Name": "Mobile Plans",
                 "displaySequence": 10,
-                "id": "a0J4W000013q1K0UAI",
+                "id": "a0J5Y00000i3dhgUAA",
                 "messages": [
                 ],
                 "productAttributes": {
@@ -22,7 +22,7 @@
                     ],
                     "records": [
                         {
-                            "attributeId": "a0K4W00000YL9boUAD",
+                            "attributeId": "a0K5Y00000iUB9lUAG",
                             "cloneable": true,
                             "code": "ATT_DT_MPT",
                             "dataType": "text",
@@ -58,7 +58,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bpUAD",
+                            "attributeId": "a0K5Y00000iUB9mUAG",
                             "cloneable": true,
                             "code": "ATT_RT_NL",
                             "dataType": "number",
@@ -99,7 +99,7 @@
     "%vlocity_namespace%__EndDate__c": "",
     "%vlocity_namespace%__EndOfLifeDate__c": "",
     "%vlocity_namespace%__FulfilmentStartDate__c": "2017-10-01T07:00:00.000Z",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "ee2ee2af-67a4-14d8-4f17-103d521fe55f",
     "%vlocity_namespace%__GlobalKey__c": "c7eee60d-9245-b8ff-3917-8752c546dad9",
     "%vlocity_namespace%__HeaderData__c": "",
     "%vlocity_namespace%__HelpText__c": "",
@@ -117,6 +117,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/7b2e9ae52e44993ed4f83d51f3faf146",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
+    "%vlocity_namespace%__ObjectTypeName__c": "Mobile Plan Product Spec",
     "%vlocity_namespace%__ParentClassId__c": "",
     "%vlocity_namespace%__PriceListEntry__c": "Family-Simple-Choice-Plan_PriceListEntries.json",
     "%vlocity_namespace%__ProductChildItem__c": "Family-Simple-Choice-Plan_ProductChildItems.json",
@@ -135,7 +136,7 @@
     "%vlocity_namespace%__Type__c": "None",
     "%vlocity_namespace%__VendorAccountId__c": "",
     "%vlocity_namespace%__VersionEndDateTime__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "%vlocity_namespace%__VersionStartDateTime__c": "",
     "CanUseQuantitySchedule": false,
     "CanUseRevenueSchedule": false,

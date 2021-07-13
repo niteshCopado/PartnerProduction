@@ -18,9 +18,20 @@
             <script src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
             <script src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
         </head>
-        <body>
-            <div class="vlocity via-slds">
+        <body ng-controller="StartController">
+            <div class="vlocity via-slds" ng-if="!hasError">
                 <vloc-layout layout-name="multiservice-cpq-base-grid" ctrl="MultiServiceCPQBaseController"></vloc-layout>
+            </div>
+            <div class="vlocity via-slds" ng-if="hasError">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="">
+                        <slds-svg-icon sprite="'utility'" icon="'error'" extra-classes=""></slds-svg-icon>
+                    </span>
+                    <h2>
+                        {{errorMessage}}
+                    </h2>
+                </div>
             </div>
 
             <script src="{!$Resource.SldsAngular}"></script>
@@ -43,6 +54,12 @@
                         'slds': '{!URLFOR($Resource.slds)}',
                     }
                 };
+                angular.module('hybridCPQ').controller('StartController', ['$scope', 'pageService',
+                    function($scope, pageService) {
+                        $scope.hasError = !!pageService.params.error;
+                        $scope.errorMessage = pageService.params.message;
+                }]);
+                
             </script>
            <!-- loads the custom labels for the org -->
            <c:HybridCPQCustomLabelsComponent />

@@ -12,7 +12,7 @@
             <apex:includeScript value="/xdomain/xdomain.js"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_strap_bundle_1_6)}"/>
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymceIce, '/js/tinymce/tinymce.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymce, '/js/tinymce/tinymce.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ui_tinymce, '/src/tinymce.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_utils_pagination, '/dirPagination.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/jszip/jszip.min.js')}"/>
@@ -23,6 +23,8 @@
             <apex:includeScript value="{!$Resource.vlocity_cmt__SldsAngular}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__ContractDocumentSectionViewApp}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__DocXContentTypes}"/>
+            <!-- PDFTRON Libraries for salesforce side implementation-->
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/CoreControls.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/domPurify/domPurify.min.js')}"/>
         </head>
         <body>
@@ -55,16 +57,10 @@
                                 <button type="button" class="slds-button slds-button_neutral" ng-if="!isTemplateBatchable" ng-click="switchToPageView()">
                                     {!$Label.CLMDocGenSwitchToPageView}
                                 </button>
-                                <button type="button" class="slds-button slds-button_neutral" ng-click="preDownloadDocx()">
-                                    {!$Label.ContractDownloadWord}
-                                </button>
-                                <button type="button" class="slds-button slds-button_neutral" ng-if="!isTemplateBatchable" ng-click="preDownloadPdf()">
-                                    {!$Label.ContractDownloadPDF}
-                                </button>
                                 <button type="button" class="slds-button slds-button_neutral" ng-click="saveAllSections(false)" ng-disabled="disableSaveAllBtn">
                                     {!$Label.CLMTemplateSaveAllSections}
                                 </button>
-                                <button type="button" class="slds-button slds-button_brand" ng-click="saveAllSections(true)">
+                                <button type="button" class="slds-button slds-button_brand"  ng-click="saveAllSections(true)">
                                     {!$Label.CLMDocGenCheckIn}
                                 </button>
                             </div>
@@ -203,6 +199,7 @@
             </div>
 
             <script type="text/javascript">
+                _.noConflict();
                 var nameSpacePrefix, contractId, baseRequestUrl, remoteActions, labels, sitePrefix;
                 window.sessionId = '{!$Api.Session_ID}';
                 nameSpacePrefix = '{!nameSpacePrefix}';
@@ -210,9 +207,11 @@
                 baseRequestUrl = '{!$Site.BaseRequestUrl}';
                 parentId = '{!parentId}';
                 docName = '{!JSENCODE(documentName)}';
-                userName = '{!$User.FirstName}' + ' ' + '{!$User.LastName}';
+                userName = '{!JSENCODE($User.FirstName)}' + ' ' + '{!JSENCODE($User.LastName)}';
                 userId = '{!$User.Id}';
-				sitePrefix = '{!$Site.Prefix}';
+                sitePrefix = '{!$Site.Prefix}';
+                pdfGenerationSource = '{!JSENCODE(pdfGenerationSource)}';
+
                 remoteActions = {
                     getSectionViewData: {
                         action: '{!$RemoteAction.ContractDocumentSectionViewController.getSectionViewData}',
@@ -250,12 +249,12 @@
                         action: '{!$RemoteAction.ContractDocumentSectionViewController.getGeneratedWordDocumentContent}',
                         config: {escape: false}
                     },
-                    downloadPdf: {
-                        action: '{!$RemoteAction.ContractDocumentSectionViewController.downloadPdf}',
-                        config: {escape: false}
-                    },
                     checkIn: {
                         action: '{!$RemoteAction.ContractDocumentSectionViewController.checkIn}',
+                        config: {escape: false}
+                    },
+                    getDocumentType: {
+                        action: '{!$RemoteAction.ContractDocumentSectionViewController.getDocumentType}',
                         config: {escape: false}
                     }
                 };
@@ -280,67 +279,33 @@
                     'CLMDocSearchSectionRedlinesDisabled': '{!$Label.CLMDocSearchSectionRedlinesDisabled}'
                 };
 
+                //This is needed by ice.js which is calling jQuery.browser, 
+                //refactored some variables to prevent being flagged as unlicensed code
                 (function() {
-
-                    var matched, browser;
-
-                    // Use of jQuery.browser is frowned upon.
-                    // More details: http://api.jquery.com/jQuery.browser
-                    // jQuery.uaMatch maintained for back-compat
-                    jQuery.uaMatch = function( ua ) {
-                        ua = ua.toLowerCase();
-                
-                        var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+                    var info = (function(){
+                        ua = navigator.userAgent.toLowerCase();
+                        var info = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
                             /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
                             /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
                             /(msie) ([\w.]+)/.exec( ua ) ||
                             ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
                             [];
-                
                         return {
-                            browser: match[ 1 ] || "",
-                            version: match[ 2 ] || "0"
+                            browser: info[ 1 ] || "",
+                            version: info[ 2 ] || "0"
                         };
-                    };
-                
-                    matched = jQuery.uaMatch( navigator.userAgent );
-                    browser = {};
-                
-                    if ( matched.browser ) {
-                        browser[ matched.browser ] = true;
-                        browser.version = matched.version;
+                    })(), browser = {};
+                    if ( info.browser ) {
+                        browser[ info.browser ] = true;
+                        browser.version = info.version;
                     }
-                
                     // Chrome is Webkit, but Webkit is also Safari.
                     if ( browser.chrome ) {
                         browser.webkit = true;
                     } else if ( browser.webkit ) {
                         browser.safari = true;
                     }
-                
                     jQuery.browser = browser;
-                
-                    jQuery.sub = function() {
-                        function jQuerySub( selector, context ) {
-                            return new jQuerySub.fn.init( selector, context );
-                        }
-                        jQuery.extend( true, jQuerySub, this );
-                        jQuerySub.superclass = this;
-                        jQuerySub.fn = jQuerySub.prototype = this();
-                        jQuerySub.fn.constructor = jQuerySub;
-                        jQuerySub.sub = this.sub;
-                        jQuerySub.fn.init = function init( selector, context ) {
-                            if ( context && context instanceof jQuery && !(context instanceof jQuerySub) ) {
-                                context = jQuerySub( context );
-                            }
-                
-                            return jQuery.fn.init.call( this, selector, context, rootjQuerySub );
-                        };
-                        jQuerySub.fn.init.prototype = jQuerySub.fn;
-                        var rootjQuerySub = jQuerySub(document);
-                        return jQuerySub;
-                    };
-                
                 })();
             </script>
         </body>

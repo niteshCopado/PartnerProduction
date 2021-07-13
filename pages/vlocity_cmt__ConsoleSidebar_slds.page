@@ -17,7 +17,7 @@
     <vloc-layout layout-name="{{layoutName}}" layout-id="{{layoutId}}"/>
 </div>
 
-<script src="{!URLFOR($Resource.vlocity_core_assets, '/v102/vlocity_core_assets.js')}"></script>
+<script src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
 <script src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
 <script src="{!URLFOR($Resource.cardframework_core_assets, '/latest/cardframework_assets.js')}"></script>
 <script src="{!URLFOR($Resource.cardframework_core_assets, '/latest/cardframework.js')}"></script>
@@ -99,7 +99,7 @@
                 sforce.console.getEnclosingPrimaryTabObjectId(load);
             } else {
                 console.info('outside console');
-                var result = { id:'0014W000027Jkb2' };
+                var result = { id:'0015Y00002aRrbk' };
                 load(result);
             }
         };

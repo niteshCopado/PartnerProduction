@@ -38,26 +38,32 @@ global class OmniScriptDesignerController {
     global static void EnsureDocumentUploads() {
 
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Document> GetAllDocuments() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Map<String,String>> GetAllObjects() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Document> GetDocuments() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<vlocity_cmt__Element__c> GetElements(String omniScriptId) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Document> GetEmailDocuments() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<EmailTemplate> GetEmailTemplates() {
         return null;
@@ -66,6 +72,7 @@ global class OmniScriptDesignerController {
     global static List<Map<String,Object>> GetExternalObjects() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Map<String,Object>> GetFieldsForObject(String interfaceObjectName) {
         return null;
@@ -98,10 +105,19 @@ global class OmniScriptDesignerController {
     global static List<vlocity_cmt__VlocityScheduledJob__c> GetScheduledJobs() {
         return null;
     }
+    @AuraEnabled
+    global static Map<String,List<String>> LoadAvailableScriptTypes() {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,List<String>> LoadAvailableScriptTypes(Boolean isProcedure) {
+        return null;
+    }
     @RemoteAction
     global static List<vlocity_cmt__DRBundle__c> LoadDataRaptorBundles() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<vlocity_cmt__VlocityDocuSignTemplate__c> LoadDocuSignTemplates() {
         return null;
@@ -114,6 +130,7 @@ global class OmniScriptDesignerController {
     global static List<System.SelectOption> LoadIntegrationProcedureElementTypes() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,String> LoadIntegrationProcedureKeys2() {
         return null;
@@ -130,6 +147,7 @@ global class OmniScriptDesignerController {
     global static String LoadPropertySetForElement(String elementType, Boolean isProcedure) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,List<String>> LoadScriptElementTypes() {
         return null;
@@ -150,24 +168,68 @@ global class OmniScriptDesignerController {
     global static Database.UpsertResult SaveOmniScript(Map<Object,Object> omniScriptJson) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
-    global static String ViewFullDataJson(String omniSriptId) {
+    global static String ViewFullDataJson(String omniScriptId) {
         return null;
     }
+    @AuraEnabled
+    global static Map<String,Object> cloneElement(String omniscriptId, String elementName) {
+        return null;
+    }
+    @AuraEnabled
+    global static Object createNewVersion(Id omniScriptId) {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,List<vlocity_cmt__Element__c>> deleteElement(String omniscriptId, String elementName) {
+        return null;
+    }
+    @AuraEnabled
     @RemoteAction
     global static String getCustomLabels(List<String> labelNames, String language) {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,Object> getElementTypes() {
         return null;
     }
     @RemoteAction
     global static String getKnowledgeArticles(String keyword, String publishStatus, String langCode) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,String> getLanguageCodeMap() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<vlocity_cmt__DRBundle__c> getMatchingDRBundles(String name, List<String> types) {
+        return null;
+    }
+    @AuraEnabled
+    global static List<Object> getMatrixNamesLwc() {
+        return null;
+    }
+    @AuraEnabled
+    global static Object getNonOmniScriptLwcs(String nextUrl) {
+        return null;
+    }
+    @AuraEnabled
+    global static List<vlocity_cmt__OmniScript__c> getReusableOmniScriptsLwc() {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,Object> insertNewElement(String omniscriptId, String type, String name, String parentElementId, Integer order, Integer width, Boolean isCancelAction) {
+        return null;
+    }
+    @AuraEnabled
+    global static Boolean isInsidePckg() {
+        return null;
+    }
+    @AuraEnabled
+    global static Map<String,Object> moveElement(String omniscriptId, String elementId, String parentElementId, Integer order) {
         return null;
     }
     @RemoteAction
@@ -178,6 +240,7 @@ global class OmniScriptDesignerController {
     global static void updateScriptLastPreviewPage(Id omniId, String newLastPreviewPage) {
 
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Document> uploadDocument(String encBody, String name, String type) {
         return null;

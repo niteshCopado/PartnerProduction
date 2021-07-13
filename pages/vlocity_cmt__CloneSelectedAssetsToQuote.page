@@ -1,5 +1,5 @@
 <apex:page standardController="Asset" recordSetVar="Assets" tabStyle="Asset" extensions="vlocity_cmt.CloneSelectedLineItemsWrapperController">
-	<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, 'jquery-1.8.2.min.js')}"/>
+	<script src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
 	<apex:form id="idForm">
 		<apex:pageMessages id="idErrorMessages"/>
 		<script>

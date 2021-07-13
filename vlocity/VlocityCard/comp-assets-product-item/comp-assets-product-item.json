@@ -73,7 +73,7 @@
                     "displayLabel": "Quantity",
                     "fieldType": "standard",
                     "group": "Custom Fields",
-                    "label": "['Quantity']['label']",
+                    "label": "CPQCartItemQuantity",
                     "name": "['Quantity']['value']",
                     "type": "string"
                 },
@@ -143,7 +143,7 @@
                     "displayLabel": "Quantity",
                     "fieldType": "standard",
                     "group": "Custom Fields",
-                    "label": "['Quantity']['label']",
+                    "label": "CPQCartItemQuantity",
                     "name": "['Quantity']['value']",
                     "type": "string"
                 },
@@ -243,7 +243,7 @@
                     "displayLabel": "Quantity",
                     "fieldType": "standard",
                     "group": "Custom Fields",
-                    "label": "['Quantity']['label']",
+                    "label": "CPQCartItemQuantity",
                     "name": "['Quantity']['value']",
                     "type": "string"
                 },

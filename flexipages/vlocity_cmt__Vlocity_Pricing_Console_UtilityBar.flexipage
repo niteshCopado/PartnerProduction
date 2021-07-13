@@ -8,7 +8,7 @@
         <name>backgroundComponents</name>
         <type>Background</type>
     </flexiPageRegions>
-    <masterLabel>Vlocity Pricing Console UtilityBar</masterLabel>
+    <masterLabel>Vlocity Pricing Designer UtilityBar</masterLabel>
     <template>
         <name>one:utilityBarTemplateDesktop</name>
     </template>

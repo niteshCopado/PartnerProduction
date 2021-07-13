@@ -1,10 +1,10 @@
 <apex:page StandardController="vlocity_cmt__Household__c" extensions="vlocity_cmt.HHContactsInfoController">
-  <html xmlns:ng="http://angularjs.org" ng-app="contactlist" lang="en">
+  <html xmlns:ng="http://angularjs.org" lang="en">
   <head>
             <meta charset="utf-8"/>
-            <apex:includeScript value="{!$Resource.vlocity_cmt__AngularJS}" />  
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/javascripts/bootstrap.min.js')}"/>
-            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/css/styles.css')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>  
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/js/bootstrap.min.js')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}" />  
             <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__IcoMoonIconPack, 'style.css')}"/>
   </head>
 
@@ -46,7 +46,8 @@
         <apex:outputText value="{!vlocity_cmt__Household__c.vlocity_cmt__PrimaryContactId__c}" rendered="false" />
         <apex:outputText value="{!vlocity_cmt__Household__c.vlocity_cmt__PrimaryPartyId__c}" rendered="false" />
         <apex:outputPanel layout="none" id="idContactInfoBlock"> 
-         <div ng-controller="ctrlContactList" class="vlocity">
+
+         <div ng-app="contactlist" ng-controller="ctrlContactList" class="vlocity">
             <apex:pageBlock >
                 <apex:pageBlockButtons location="top">
                 <!-- PS 492: Adding sforce changes for mobiles s -->

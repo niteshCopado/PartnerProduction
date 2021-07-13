@@ -64,6 +64,10 @@ global class ContractDocumentCreationController {
         return null;
     }
     @RemoteAction
+    global static Map<String,Object> getContentVersionInfo(Id ContractVersionId) {
+        return null;
+    }
+    @RemoteAction
     global static vlocity_cmt.DocumentContentStructure getContractSectionsForVersion(Id versionId) {
         return null;
     }
@@ -77,6 +81,10 @@ global class ContractDocumentCreationController {
     }
     @RemoteAction
     global static Map<String,Object> getDocumentType(Id contextID) {
+        return null;
+    }
+    @RemoteAction
+    global static vlocity_cmt.DocumentContentStructure getDocxSectionHtmlContent(Map<String,Object> inputMap) {
         return null;
     }
     @RemoteAction
@@ -140,6 +148,10 @@ global class ContractDocumentCreationController {
 
     }
     @RemoteAction
+    global static Object saveDocxNewContractSections(vlocity_cmt.DocumentContentStructure docStructureJSON) {
+        return null;
+    }
+    @RemoteAction
     global static void saveNewDocumentSections(vlocity_cmt.DocumentContentStructure docStructureJSON) {
 
     }
@@ -154,6 +166,10 @@ global class ContractDocumentCreationController {
     @RemoteAction
     global static void updateContractSections(Id templateId, Id versionId) {
 
+    }
+    @RemoteAction
+    global static Boolean updateDocxContentVersionLink(Map<String,Object> inputMap) {
+        return null;
     }
     @RemoteAction
     global static Map<String,Object> updateLinkContentVersionFromContractVersion(Map<String,Object> inputMap) {

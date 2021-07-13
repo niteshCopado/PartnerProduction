@@ -156,6 +156,58 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__AsyncJobId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This stores asynchronus job id if any jobs running on this group.</description>
+        <externalId>false</externalId>
+        <label>Async Job</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__AsyncOperation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This stores the asynchronous operation name if this group locked for asynchronous operation.</description>
+        <externalId>false</externalId>
+        <label>Async Operation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Apply To Group</fullName>
+                    <default>false</default>
+                    <label>Apply To Group</label>
+                </value>
+                <value>
+                    <fullName>Price And Validate</fullName>
+                    <default>false</default>
+                    <label>Price And Validate</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+                <value>
+                    <fullName>Validate</fullName>
+                    <default>false</default>
+                    <label>Validate</label>
+                </value>
+                <value>
+                    <fullName>Checkout</fullName>
+                    <default>false</default>
+                    <label>Checkout</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -164,6 +216,32 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ExpectedMemberCount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expected Member Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__GroupCartId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to group cart or associate cart.</description>
+        <externalId>false</externalId>
+        <label>Group Cart</label>
+        <referenceTo>Quote</referenceTo>
+        <relationshipLabel>Quote Cart Groups</relationshipLabel>
+        <relationshipName>QuoteCartGroups</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__HasUnappliedGroupItems__c</fullName>
@@ -175,7 +253,107 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__LockedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This indicates if a quote group locked by a user.</description>
+        <externalId>false</externalId>
+        <label>Locked By User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Quote Groups</relationshipLabel>
+        <relationshipName>QuoteGroups</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__LockedFor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This stores the reason for doing lock on quote member.</description>
+        <externalId>false</externalId>
+        <label>Locked For</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Async Operation</fullName>
+                    <default>false</default>
+                    <label>Async Operation</label>
+                </value>
+                <value>
+                    <fullName>Manual Edit</fullName>
+                    <default>false</default>
+                    <label>Manual Edit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__MemberCount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Member Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__MemberType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This store developer name of CPQ Member Type custom metadata.</description>
+        <externalId>false</externalId>
+        <label>Member Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ServicePoint</fullName>
+                    <default>false</default>
+                    <label>Service Point</label>
+                </value>
+                <value>
+                    <fullName>Premises</fullName>
+                    <default>false</default>
+                    <label>Premises</label>
+                </value>
+                <value>
+                    <fullName>ServiceAccount</fullName>
+                    <default>false</default>
+                    <label>Location</label>
+                </value>
+                <value>
+                    <fullName>SubscriberAccount</fullName>
+                    <default>false</default>
+                    <label>Subscriber</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__MultiServiceMessageData__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field stores messages that are generated and displayed in a MultiService feature.</description>
+        <externalId>false</externalId>
+        <label>Multi Service Message Data</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__OneTimeCostTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final one time cost total of all individual group items</description>
         <externalId>false</externalId>
@@ -188,6 +366,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__OneTimeMarginTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>One Time Margin Total</label>
@@ -199,6 +378,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__OneTimeTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final one time total of all individual group items</description>
         <externalId>false</externalId>
@@ -211,6 +391,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__QuoteGroupMarginTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Quote Group Margin Total</label>
@@ -229,13 +410,14 @@
         <relationshipLabel>Quote Groups</relationshipLabel>
         <relationshipName>QuoteGroups</relationshipName>
         <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
         <fullName>vlocity_cmt__RecurringCostTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final recurring cost total of all individual group items</description>
         <externalId>false</externalId>
@@ -248,6 +430,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__RecurringMarginTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Recurring Margin Total</label>
@@ -259,6 +442,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__RecurringTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final recurring total of all individual group items</description>
         <externalId>false</externalId>
@@ -271,6 +455,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__UsageCostTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final usage cost total of all individual group items</description>
         <externalId>false</externalId>
@@ -283,6 +468,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__UsageMarginTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Usage Margin Total</label>
@@ -294,6 +480,7 @@
     </fields>
     <fields>
         <fullName>vlocity_cmt__UsagePriceTotal__c</fullName>
+        <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
         <description>Final usage price total of all individual group items</description>
         <externalId>false</externalId>

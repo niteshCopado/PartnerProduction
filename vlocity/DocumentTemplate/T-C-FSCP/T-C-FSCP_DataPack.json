@@ -14,6 +14,7 @@
     "%vlocity_namespace%__HasBatchableSections__c": false,
     "%vlocity_namespace%__ImageStyleData__c": "",
     "%vlocity_namespace%__IsPublished__c": false,
+    "%vlocity_namespace%__IsSectionIdsReplaced__c": false,
     "%vlocity_namespace%__IsSignatureRequired__c": false,
     "%vlocity_namespace%__LastSectionKey__c": "",
     "%vlocity_namespace%__LocaleCode__c": "",

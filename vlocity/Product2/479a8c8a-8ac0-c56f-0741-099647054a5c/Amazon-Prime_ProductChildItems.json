@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/479a8c8a-8ac0-c56f-0741-099647054a5c",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Amazon Prime",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

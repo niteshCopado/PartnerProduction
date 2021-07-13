@@ -39,8 +39,6 @@
 
 			<script type="text/javascript">
 				'use strict';
-				window.j$ = jQuery.noConflict();
-                window.$ = jQuery.noConflict();
                 var cloneValue = '{!JSENCODE($CurrentPage.parameters.Clone)}';
 				//Define remote actions.
 				var remoteActions = {

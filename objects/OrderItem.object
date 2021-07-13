@@ -654,6 +654,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__IsValidated__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>NOT(ISNULL(vlocity_cmt__ValidationDate__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validated</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ItemName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -685,6 +695,15 @@
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__LastPricedAt__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Priced At</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__LineItemNumString__c</fullName>
@@ -873,6 +892,34 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__OrderGroupId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>To assign group to line item</description>
+        <externalId>false</externalId>
+        <label>Order Group</label>
+        <referenceTo>vlocity_cmt__OrderGroup__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__OrderMemberId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>To assign member to line item</description>
+        <externalId>false</externalId>
+        <label>Order Member</label>
+        <referenceTo>vlocity_cmt__OrderMember__c</referenceTo>
+        <relationshipLabel>Order Products</relationshipLabel>
+        <relationshipName>OrderProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__OverageCalculatedPrice__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1044,6 +1091,31 @@
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key of Product</description>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.vlocity_cmt__GlobalGroupKey__c</formula>
+        <inlineHelpText>Version Group Key of Product</inlineHelpText>
+        <label>Product Group Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductHierarchyGroupKeyPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</inlineHelpText>
+        <label>Product Hierarchy Group Key Path</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>vlocity_cmt__ProductHierarchyPath__c</fullName>
@@ -1582,5 +1654,14 @@
         <scale>5</scale>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ValidationDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
     </fields>
 </CustomObject>

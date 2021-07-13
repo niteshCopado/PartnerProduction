@@ -1,6 +1,6 @@
 <span class="slds-assistive-text">{{obj.objAPIName}}</span>
 <div class="slds-media" ng-controller="viaTaskController">
-  <div class="slds-media__body" ng-init="cardIcon = $root.cardIconFactory(obj.objAPIName + ' ' + obj.title)">
+  <div class="slds-media__body" ng-init="setCardIcon();">
     <div class="slds-media slds-media--timeline slds-timeline__media--{{cardIcon.sprite}}-{{cardIcon.icon}}">
       <div class="slds-media__figure slds-timeline__icon">
         <div class="slds-icon_container">
@@ -45,7 +45,7 @@
   </div>
   <div class="slds-media__figure slds-media__figure--reverse">
     <div class="slds-timeline__actions">
-      <p class="slds-timeline__date">{{obj.monthDayLastActivityDate}}</p>
+      <p class="slds-timeline__date">{{obj.monthNameLastActivityDate}}</p>
         <slds-dropdown content="data.actions" ng-if="data.actions.length > 0" icon-attribute="vlocityIcon" label-attribute="displayName" action-function="performAction(item)" button-size="x-small" icon-size="x-small"></slds-dropdown>
     </div>
   </div>

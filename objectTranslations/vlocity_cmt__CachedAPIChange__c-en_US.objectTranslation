@@ -28,6 +28,10 @@
             <translation><!-- catalog --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>data</masterLabel>
+            <translation><!-- data --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>offer</masterLabel>
             <translation><!-- offer --></translation>
         </picklistValues>

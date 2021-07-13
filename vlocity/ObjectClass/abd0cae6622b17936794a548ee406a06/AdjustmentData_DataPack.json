@@ -1,7 +1,8 @@
 {
+    "%vlocity_namespace%__AttributeAssignment__c": "AdjustmentData_AttributeAssignments.json",
     "%vlocity_namespace%__EffectiveFromDate__c": "",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "55d3a6c6-b1a4-b545-33ac-290551be4deb",
     "%vlocity_namespace%__GlobalKey__c": "abd0cae6622b17936794a548ee406a06",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": true,
@@ -12,7 +13,7 @@
     "%vlocity_namespace%__ParentObjectClassId__c": "",
     "%vlocity_namespace%__RecordTypeName__c": "",
     "%vlocity_namespace%__RootObjectClassId__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "AdjustmentData",
     "RecordTypeId": {
         "DeveloperName": "Object",

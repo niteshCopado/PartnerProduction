@@ -20,6 +20,7 @@ global class DRDataPackRunnerController {
     global DRDataPackRunnerController(Object existingController) {
 
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> addDataPack(String data) {
         return null;
@@ -28,6 +29,7 @@ global class DRDataPackRunnerController {
     global static Map<String,Object> combineDataPacks(String dataPackId, List<String> combineDataPacksList) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> deleteDataPack(String dataPackId) {
         return null;
@@ -52,10 +54,12 @@ global class DRDataPackRunnerController {
     global static List<vlocity_cmt__VlocityUITemplate__c> getActiveTemplates(List<String> templates) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static String getAllDataPackData(String dataPackId) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Map<String,Object>> getAllDataPacksNoSummary() {
         return null;
@@ -76,10 +80,12 @@ global class DRDataPackRunnerController {
     global static String getCustomLabels(List<String> labelNames, String language) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static String getDataPackDataChunks(String data) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> getDataPack(String dataPackId) {
         return null;
@@ -112,10 +118,12 @@ global class DRDataPackRunnerController {
     global static List<Map<String,Object>> getPublishedTabDataPacks() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static String getRemoteDataPackDataChunks(String data) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> getRemoteDataPackData(String libraryOrg, String vlocityDataPackId) {
         return null;
@@ -132,10 +140,12 @@ global class DRDataPackRunnerController {
     global static List<vlocity_cmt__VlocityUITemplate__c> getTemplatesByName(List<String> templates) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> ignoreErrorForDataPacks(String processType, String dataPackId, List<String> dataPackKeys) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> publishDataPack(String dataPackId, Boolean unpublish) {
         return null;
@@ -144,14 +154,17 @@ global class DRDataPackRunnerController {
     global static Map<String,Object> refreshDataPack(String dataPackId) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> runActivate(String data) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> runExport(String data) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> runImport(String data) {
         return null;
@@ -170,10 +183,12 @@ global class DRDataPackRunnerController {
     global static List<Database.UpsertResult> saveLibraryOrgs(List<Map<String,Object>> libraryOrgs) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> updateDataPackData(String dataPackId, String dataPackData) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Object> updateDataPackInfo(String dataPackId, Map<String,Object> dataPackInfo) {
         return null;

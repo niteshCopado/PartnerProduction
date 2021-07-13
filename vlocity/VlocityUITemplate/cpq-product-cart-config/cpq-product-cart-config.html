@@ -55,7 +55,10 @@
                                 <span class="cpq-error-msg" ng-if="importedScope.detailEditableServerErrorMsg">{{importedScope.detailEditableServerErrorMsg}}</span>
                             </div>
                             <div class="slds-form-element" ng-repeat="editableItem in importedScope.editableItemList">
-                                <label class="slds-form-element__label">{{::editableItem.label}}<span ng-if="editableItem.dataType === 'PERCENT'"> %</span></label>
+                                <label class="slds-form-element__label">
+                                    <span ng-if="editableItem.fieldName != 'Quantity'">{{::editableItem.label}}</span>
+                                    <span ng-if="editableItem.fieldName === 'Quantity'">{{::importedScope.customLabels.CPQCartItemQuantity}}</span>
+                                    <span ng-if="editableItem.dataType === 'PERCENT'"> %</span></label>
                                 <div class="slds-form-element__control">
                                     <input ng-if="::editableItem.dataType === 'STRING'" type='text' class="slds-input" ng-model='editableItem.value' 
                                         ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 800, 'blur': 0 } }"
@@ -65,7 +68,7 @@
                                         type='number' step='any' class="slds-input" 
                                         ng-model='editableItem.value'  
                                         ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 800, 'blur': 0 } }"
-                                        ng-disabled="importedScope.isReadOnly(importedScope.configItemObject) || importedScope.isAsset(importedScope.configItemObject,editableItem.fieldName)"
+                                        ng-disabled="importedScope.isReadOnly(importedScope.configItemObject) || importedScope.isAsset(importedScope.configItemObject,editableItem.fieldName) || importedScope.isGroupAttached(importedScope.configItemObject,editableItem.fieldName)"
                                         ng-change="importedScope.refreshEditableField(editableItem, true);" 
                                         ng-keydown="importedScope.checkQuantityField(editableItem.fieldName, $event.key)"/>
                                     <span class="cpq-error-msg">{{editableItem.qtyValidationMessage}}</span>

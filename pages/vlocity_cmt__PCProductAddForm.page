@@ -95,7 +95,8 @@
                         sessionid="{!$Api.Session_ID}"
                         userlocale="{!UserLocale}"
                         timezone="{!TimeZone}"
-                        timezoneoffset="{!TimeZoneOffset}">
+                        timezoneoffset="{!TimeZoneOffset}"
+                        currentdate="{!CurrentDate}">
                         <template id="vpcMainContent">
                             <vlocity-pc-new-product></vlocity-pc-new-product>
                         </template>
@@ -106,8 +107,6 @@
         <noscript>
             Please enable JavaScript to view Vlocity Product Designer.
         </noscript>
-        <script>
-        </script>
     </body>
 
     </html>

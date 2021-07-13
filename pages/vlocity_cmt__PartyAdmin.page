@@ -2,10 +2,10 @@
 <apex:sectionHeader title="Vlocity Party Maintenance" subtitle="Party Maintenance"/>
 	<html xmlns:ng="http://angularjs.org" ng-app="PartyAdminApp" class="ng-cloak" style="height:100%" >
 		<head>
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/v102/vlocity_core_assets.js')}"/>
+         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
     		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, '/ui/jquery-ui-1.9.1.custom.min.js')}"/>
-		   	<apex:includeScript value="/soap/ajax/31.0/connection.js" />
-		   	<apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
+		   <apex:includeScript value="/soap/ajax/31.0/connection.js" />
+		   <apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
 			<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
 			<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__IcoMoonIconPack, 'style.css')}"/>
 			<style>
@@ -324,7 +324,7 @@
 		<body ng-controller="PartyAdminAppController">
    <div class="vlocity" >
    <div class="container-fluid">
-      <tabset>
+      <uib-tabset>
          <!--  <div class="page-header">
             <h2 style="color: rgb(1, 138, 180);">Vlocity Party Maintenance</h2>
             </div> -->
@@ -341,7 +341,7 @@
                         <button id="idAcctHierStartButton" type="button" ng-click="isPartyAnalysisJobCopplapsed = false; partyAnalysisJob();" class="btn btn-primary btn-sm">{!$Label.StartDT}</button>
                      </div>
                   </div>
-                  <div  collapse="isPartyAnalysisJobCopplapsed">
+                  <div  uib-collapse="isPartyAnalysisJobCopplapsed">
                      <p ng-if="totalRecords != 0" class="text-warning" style="margin-top:30px;">{{partyAnalysisMessage}}</p>
                      <p ng-if="totalRecords == 0" class="text-success" style="margin-top:30px;">{!$Label.VlocityPartyAnalysisNoMissing}</p>
                      <div ng-if="totalRecords != 0" >
@@ -466,7 +466,7 @@
                <button id="idAcctHierStartButton" type="button" ng-click="isCreatePartyJobsCollapsed = false; startCreatePartyJob();" class="btn btn-primary btn-sm">{!$Label.StartDT}</button>
                </div>
                </div>
-               <div ng-if="createPartyJobsList.length != 0" collapse="isCreatePartyJobsCollapsed">
+               <div ng-if="createPartyJobsList.length != 0" uib-collapse="isCreatePartyJobsCollapsed">
                <table style="margin-bottom:5px;margin-top:30px" class="table table-condensed ins-party-admin">
                <tr>
                <th>{!$Label.VlocityPartyMaintenanceJob}</th>
@@ -520,7 +520,7 @@
                <button id="iddeleteparty" type="button" ng-click="isDeletePartyJobsCollapsed = false; deleteOrphanPartyJob()" class="btn btn-primary btn-sm">{!$Label.StartDT}</button>
                </div>
                </div>
-               <div ng-if="deleteOrphanPartyJobList.length != 0" collapse="isDeletePartyJobsCollapsed">
+               <div ng-if="deleteOrphanPartyJobList.length != 0" uib-collapse="isDeletePartyJobsCollapsed">
                <table style="margin-bottom:5px;margin-top:30px" class="table table-condensed ins-party-admin">
                <tr>
                <th>{!$Label.VlocityDeleteOrphanPartyJob}</th>
@@ -575,7 +575,7 @@
                <button id="idmergeparty" type="button" ng-click="isMergePartyJobsCollapsed = false; mergePartyJob()" class="btn btn-primary btn-sm">{!$Label.StartDT}</button>
                </div>
                </div>
-               <div ng-if="mergePartyJobList.length != 0" collapse="isMergePartyJobsCollapsed">
+               <div ng-if="mergePartyJobList.length != 0" uib-collapse="isMergePartyJobsCollapsed">
                <table style="margin-bottom:5px;margin-top:30px" class="table table-condensed ins-party-admin">
                <tr>
                <th>{!$Label.VlocityMergePartyJob}</th>
@@ -623,7 +623,7 @@
 
                </div>
             </div>
-      </tabset>
+      </uib-tabset>
       </div>
    </div>
      </body>

@@ -109,6 +109,18 @@
         <name>vlocity_cmt__RollbackOnError__c</name>
     </fields>
     <fields>
+        <label><!-- Salesforce Platform Cache Type --></label>
+        <name>vlocity_cmt__SalesforcePlatformCacheType__c</name>
+        <picklistValues>
+            <masterLabel>Org Cache</masterLabel>
+            <translation><!-- Org Cache --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Session Cache</masterLabel>
+            <translation><!-- Session Cache --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Sample Input Custom --></label>
         <name>vlocity_cmt__SampleInputCustom__c</name>
     </fields>
@@ -143,6 +155,10 @@
     <fields>
         <label><!-- Expected XML Output --></label>
         <name>vlocity_cmt__TargetOutXml__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time To Live In Minutes --></label>
+        <name>vlocity_cmt__TimeToLiveMinutes__c</name>
     </fields>
     <fields>
         <label><!-- Interface Type --></label>

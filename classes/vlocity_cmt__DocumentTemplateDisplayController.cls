@@ -65,6 +65,10 @@ global class DocumentTemplateDisplayController {
         return null;
     }
     @RemoteAction
+    global static Boolean deleteTemplateSections(List<Id> sectionIds) {
+        return null;
+    }
+    @RemoteAction
     global static List<Map<String,Object>> deleteTemplate(String templateJSON) {
         return null;
     }
@@ -138,6 +142,10 @@ global class DocumentTemplateDisplayController {
     }
     @RemoteAction
     global static Map<String,Object> getDocumentTemplatesById(Map<String,Object> inputMap) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,String> getDocxTemplateSectionHtmlContent(Map<String,Object> inputMap) {
         return null;
     }
     @RemoteAction
@@ -254,6 +262,10 @@ global class DocumentTemplateDisplayController {
     }
     @RemoteAction
     global static Boolean setTemplateContentVersion(Id templateId, Id contentVersionId) {
+        return null;
+    }
+    @RemoteAction
+    global static Boolean setTemplateContentVersionDocx(Id templateId, Id contentVersionId, Boolean isSectionIdsReplaced) {
         return null;
     }
     @RemoteAction

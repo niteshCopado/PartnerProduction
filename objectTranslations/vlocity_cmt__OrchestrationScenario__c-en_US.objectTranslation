@@ -19,6 +19,14 @@
             <masterLabel>NoChange</masterLabel>
             <translation><!-- NoChange --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>Resume</masterLabel>
+            <translation><!-- Resume --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suspend</masterLabel>
+            <translation><!-- Suspend --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Condition Data --></label>

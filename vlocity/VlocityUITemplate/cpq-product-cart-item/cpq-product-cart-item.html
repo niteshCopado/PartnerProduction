@@ -1,4 +1,4 @@
-<div class="cpq-product-cart-item">
+<div class="cpq-product-cart-item" ng-class="{'cpq-product-group-attached': obj[$root.nsPrefix + 'OrderGroupId__c'].value || obj[$root.nsPrefix + 'QuoteGroupId__c'].value}">
     <div ng-class="{'cpq-transitional-hide': importedScope.isDeleting}" data-cart-item-id="{{::obj.Id.value}}">
         <div class="cpq-item-product" ng-class="{'cpq-item-selected':importedScope.isSelected && !attrs.lineItemModal}">
             <div class="cpq-item-product-header cpq-item-base-product">
@@ -111,7 +111,7 @@
                             <input type="{{ customField.data.customInputType ? customField.data.customInputType: 'text' }}" min="{{customField.data.minimum}}"
                                 step="any" class="slds-input cpq-item-input" ng-model="obj[customField.fieldName].value" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 800, 'blur': 0 } }"
                                 ng-change="importedScope.updateLineField(null, obj)"
-                                ng-disabled="importedScope.isChangesNotAllowed(obj) || importedScope.isSupplementalActionCancel(obj) || importedScope.isAsset(obj,customField.fieldName)"
+                                ng-disabled="importedScope.isChangesNotAllowed(obj) || importedScope.isSupplementalActionCancel(obj) || importedScope.isAsset(obj,customField.fieldName) || importedScope.isGroupAttached(obj, customField.fieldName) "
                                 ng-required="{{customField.data.required}}" ng-keydown="importedScope.checkQuantityField(customField.fieldName, $event.key)"
                             />
                         </div>
@@ -231,6 +231,20 @@
                             <slds-button-svg-icon sprite="'utility'" icon="'inbox'"></slds-button-svg-icon>
                             <span class="slds-assistive-text">{{::importedScope.customLabels.CPQCompare}}</span>
                         </button>
+                        <button class="slds-button slds-p-horizontal_xx-small" ng-class="{'slds-button_icon-border': importedScope.isMobileTablet}"
+                            title="{{::importedScope.customLabels.MSAttachGroup}}"
+                            ng-click="importedScope.attachGroup(obj)"
+                            ng-disabled="!obj.actions.attachgroup">
+                            <slds-button-svg-icon sprite="'action'" icon="'add_relationship'"></slds-button-svg-icon>
+                            <span class="slds-assistive-text">{{::importedScope.customLabels.MSAttachGroup}}</span>
+                        </button>
+                        <button class="slds-button slds-p-horizontal_xx-small" ng-class="{'slds-button_icon-border': importedScope.isMobileTablet}"
+                            title="{{::importedScope.customLabels.MSDetachGroup}}"
+                            ng-click="importedScope.detachGroup(obj)"
+                            ng-disabled="!obj.actions.detachgroup">
+                            <slds-button-svg-icon sprite="'action'" icon="'remove_relationship'"></slds-button-svg-icon>
+                            <span class="slds-assistive-text">{{::importedScope.customLabels.MSDetachGroup}}</span>
+                        </button>
                     </div>
                     <div class="cpq-actions-dropdown-menu-dropdown slds-dropdown-trigger_click cpq-item-actions-dropdown-trigger" ng-if="!$root.customViews.productListHidden && !attrs.lineItemModal"
                         ng-show="!importedScope.isProductItemActionsHide(obj)" ng-class="{'slds-is-open': lineActions.show}"
@@ -305,6 +319,24 @@
                                         </span>
                                     </a>
                                 </li>
+                                <li class="slds-dropdown__item cpq-item-actions-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitemcheckbox" aria-checked="true" tabindex="0" ng-click="importedScope.attachGroup(obj); $event.preventDefault();"
+                                        ng-show="obj.actions.attachgroup">
+                                        <span class="slds-truncate cpq-action-item-label">
+                                            <slds-svg-icon sprite="'action'" icon="'add_relationship'" size="'x-small'"></slds-svg-icon>
+                                            {{::importedScope.customLabels.MSAttachGroup}}
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slds-dropdown__item cpq-item-actions-dropdown__item" role="presentation">
+                                    <a href="#" role="menuitemcheckbox" aria-checked="true" tabindex="0" ng-click="importedScope.detachGroup(obj); $event.preventDefault();"
+                                        ng-show="obj.actions.detachgroup">
+                                        <span class="slds-truncate cpq-action-item-label">
+                                            <slds-svg-icon sprite="'action'" icon="'remove_relationship'" size="'x-small'"></slds-svg-icon>
+                                            {{::importedScope.customLabels.MSDetachGroup}}
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -326,7 +358,9 @@
                             <div ng-if="!importedScope.reRenderAttributesForm">
                                 <vlocity-dynamic-form class="cpq-item-attributes-form slds-form_stacked" tooltip-container=".slds-modal" form-on-change="importedScope.saveUpdates(e, formValidation, obj)"
                                     name="productconfig{{attrs.lineItemModal?'modal':''}}{{obj.Id.value}}" ng-model="obj.attributeCategories.records"
-                                    map-object="{{importedScope.mapObject()}}" form-auto-save="{{attrs.lineItemModal}}">
+                                    map-object="{{importedScope.mapObject()}}"
+                                    is-read-only-form="{{importedScope.isReadOnly(obj)}}" 
+                                    form-auto-save="{{attrs.lineItemModal}}">
                                 </vlocity-dynamic-form>
                             </div>
                         </div>

@@ -7,6 +7,14 @@
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>enableActionsConfiguration</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideChatterActions</name>
+                    <value>false</value>
+                </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -27,28 +35,14 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>customCommunityPage</name>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>displayOn</name>
-                    <value>Web Client</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>linkType</name>
-                    <value>OmniScript,Other</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>objType</name>
-                    <value>Opportunity</value>
+                    <name>disableCache</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>recordId</name>
+                    <value>{recordId}</value>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>style</name>
-                    <value>horizontal</value>
-                </componentInstanceProperties>
-                <componentName>vlocity_cmt:ActionToolbarComponent</componentName>
+                <componentName>vlocity_cmt:powerLauncher</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

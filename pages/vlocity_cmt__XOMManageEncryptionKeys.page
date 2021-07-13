@@ -4,12 +4,14 @@
           <base href="/"/>
           <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
 
-          <script type="text/javascript" src="{!URLFOR($Resource.JQUERYJS)}"></script>
           <script type="text/javascript" src="/support/console/31.0/integration.js"></script>
+          <script type="text/javascript" src="/soap/ajax/31.0/connection.js"></script>
+          <script type="text/javascript" src="{!URLFOR($Resource.JsForce)}" ></script>
+          <script type="text/javascript" src="{!URLFOR($Resource.JSZip)}" ></script>
           <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
           <script type="text/javascript" src="{!URLFOR($Resource.SldsAngular)}"></script>
           <script type="text/javascript" src="{!URLFOR($Resource.XomThorIntegration)}"></script>
-          <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/bootstrap.min.css')}"/>
+          <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/css/bootstrap.min.css')}"/>
           <script src="{!$Resource.ANGULARBOOT}"></script>
           <script src="{!URLFOR($Resource.AngularStrapJS_2_3_6)}"></script>
           <script src="{!URLFOR($Resource.AngularStrapTplJS_2_3_6)}"></script>
@@ -95,10 +97,15 @@
             var app = angular.module('changeKeysApp', ["vlocity", "ngSanitize", 'thorIntegration','ui.bootstrap', 'ngMessages']);
             
             var uiServicesUrl = '{!JSENCODE(HTMLENCODE(encryptUIServicesUrl))}';
+
+            var conn = new jsforce.Connection({ accessToken: '{!$Api.Session_Id}' });
+
             
             var remoteActions = {
                 saveXOMSetupCustomSettings: "{!$RemoteAction.XOMOffPlatformAccessConfigController.saveXOMSetupCustomSettings}",
-                rotateAccessKeys: "{!$RemoteAction.XOMOffPlatformAccessConfigController.rotateAccessKeys}"
+                rotateAccessKeys: "{!$RemoteAction.XOMOffPlatformAccessConfigController.rotateAccessKeys}",
+                rotateAccessKeysOfNamedCredentials: "{!$RemoteAction.XOMOffPlatformAccessConfigController.rotateAccessKeysOfNamedCredentials}",
+                areThorNamedCredentialsEnabled: "{!$RemoteAction.XOMOffPlatformAccessConfigController.areThorNamedCredentialsEnabled}"  
             };
 
             app.config(function (remoteActionsProvider) {
@@ -214,6 +221,33 @@
                         console.log($scope.infoMessage);
                         $scope.alertUser = true;
                         $scope.alertMessageType = 'success';
+                        $timeout(function(){
+                            $scope.alertUser = false;
+                            $scope.alertMessageType = '';
+                        }, 5000);
+                    }
+                };
+
+                 $scope.notifyUserForChangeDITKey = function(flag, message){
+                    if(flag == 'error'){
+                        $scope.errorMessage = message;
+                        console.log($scope.errorMessage);
+                        $scope.alertUserError = true;
+                        $scope.alertMessageType = 'error';
+                        $timeout(function(){
+                        }, 0);
+                        $timeout(function(){
+                            $scope.alertUserError = false;
+                            $scope.alertMessageType = '';
+                        }, 5000);
+                    }
+                    else{
+                        $scope.infoMessage = message;
+                        console.log($scope.infoMessage);
+                        $scope.alertUser = true;
+                        $scope.alertMessageType = 'success';
+                        $timeout(function(){
+                        }, 0);
                         $timeout(function(){
                             $scope.alertUser = false;
                             $scope.alertMessageType = '';
@@ -360,12 +394,101 @@
                 };
                 
                 $scope.changeDataInTransitKey = function(){
+
                     $scope.enableDIT = false;
-                    remoteActions.rotateAccessKeys().then(function(json)
-                    {
-                        $scope.enableDIT = true;
-                        console.log('Rotate Keys JSON: ', json);
-                        $scope.notifyUser('info', 'Data In Transit key changed successfully!');
+                    remoteActions.areThorNamedCredentialsEnabled().then(function(areThorNamedCredentialsEnabled) {
+                        if (areThorNamedCredentialsEnabled) {
+                            remoteActions.rotateAccessKeysOfNamedCredentials().then(function(json)
+                            {
+                                let response =  JSON.parse(JSON.stringify(json));
+                                if (response.AccessKey) {
+                                    var accessKeyId = response.AccessKey.AccessKeyId;
+                                    var secretAccessKey = response.AccessKey.SecretAccessKey;
+                                    const request = {
+                                    singlePackage: true,
+                                    unpackaged: {
+                                        version: '46.0',
+                                        types: [
+                                            {name: 'NamedCredential', members: ['*']}]
+                                        }
+                                    };
+                                
+                                    conn.metadata.retrieve(request).complete(function(err, deployResult){
+                                        if (err) {
+                                            console.log(err);
+                                            $scope.notifyUserForChangeDITKey('error', 'Unable to change data transit');
+                                            return;
+                                        }
+                                        var zip = new JSZip(deployResult.zipFile , {base64: true});
+                                        var namedCredentials = zip.file(/^namedCredentials\//);
+                                        for (i = 0; i < namedCredentials.length; i++) {
+                                            var xml = namedCredentials[i].asText();
+                                            var xmlDoc = new DOMParser().parseFromString(xml, "text/xml");
+                                            var protcolNode = xmlDoc.getElementsByTagName("protocol");
+                                            if (protcolNode && protcolNode.length && "AwsSv4" === protcolNode[0].childNodes[0].nodeValue) {
+                                                var rootNode = xmlDoc.getElementsByTagName("NamedCredential");
+                                                var accessKeyNode = xmlDoc.getElementsByTagName("awsAccessKey");
+                                                accessKeyNode[0].childNodes[0].nodeValue = accessKeyId;
+                                                var newEle = xmlDoc.createElement("awsAccessSecret");
+                                                var newText = xmlDoc.createTextNode(secretAccessKey);
+                                                newEle.appendChild(newText);
+                                                rootNode[0].appendChild(newEle);
+                                                var s = new XMLSerializer();
+                                                var xml = s.serializeToString(xmlDoc);
+                                                zip.file(namedCredentials[i].name, xml);
+                                            }  
+                                        }
+                                        conn.metadata.pollInterval = 3000;
+                                        conn.metadata.pollTimeout = 120000;
+                                        conn.metadata.deploy(zip.generate(), {singlePackage: true, allowMissingFiles: true})
+                                        .complete(function(err, result) {
+                                            if (err) {
+                                                console.error(err);
+                                                $scope.notifyUserForChangeDITKey('error', 'Warning: Named credentials deployment took over 2 minutes. See deployment progress in Setup > Deployment Status');
+                                            } else {
+                                                if (result.success == true) {
+                                                    $scope.enableDIT = true;
+                                                    $scope.notifyUserForChangeDITKey('info', 'Data In Transit key changed successfully!');
+                                                } else {
+                                                    $scope.enableDIT = true;
+                                                    $scope.notifyUserForChangeDITKey('error', 'Unable to change data transit, Reason: Named credentials components deployment failed. See Setup > Deployment Status for details');
+                                                }
+                                            }
+                                        });
+                                    }).catch(function(err)
+                                    {
+                                        $scope.enableDIT = true;
+                                        let errorObj =  JSON.parse(JSON.stringify(err));
+                                        $scope.notifyUser('error', 'Unable to change data transit, Reason: unable to access rotateAccessKeys. Error Code:' + errorObj.statusCode);
+                                        console.error(err);
+                                    });
+                                } else {
+                                    $scope.enableDIT = true;
+                                    $scope.notifyUser('error', 'Unable to change data transit, Reason: Internal error.');
+                                    console.error('Unable to change data transit, Reason: Access key not found');
+                                }
+                            }).catch(function(err)
+                            {
+                                $scope.enableDIT = true;
+                                let errorObj =  JSON.parse(JSON.stringify(err));
+                                $scope.notifyUser('error', 'Unable to change data transit, Reason: unable to access rotateAccessKeys. Error Code:' + errorObj.statusCode);
+                                console.error(err);
+                            });
+                        } else {
+                            remoteActions.rotateAccessKeys().then(function(json)
+                            {
+                                $scope.enableDIT = true;
+                                console.log('Rotate Keys JSON: ', json);
+                                $scope.notifyUser('info', 'Data In Transit key changed successfully!');
+                            }).catch(function(err)
+                            {
+                                $scope.enableDIT = true;
+                                let errorObj =  JSON.parse(JSON.stringify(err));
+                                $scope.notifyUser('error', 'Unable to change data transit, Reason: unable to access rotateAccessKeys. Error Code:' + errorObj.statusCode);
+                                console.error(err);
+                            });
+
+                        }
                     }).catch(function(err)
                     {
                         $scope.enableDIT = true;
@@ -373,7 +496,6 @@
                         $scope.notifyUser('error', 'Unable to change data transit, Reason: unable to access rotateAccessKeys. Error Code:' + errorObj.statusCode);
                         console.error(err);
                     });
-
                 };
                 
                 $scope.changePrivateKeyAndCertificate = function(){

@@ -20,6 +20,11 @@
         <apex:includeScript value="{!$Resource.vlocity_cmt__SldsAngular}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__DRVComp}"/>
         <apex:includeScript value="/support/console/42.0/integration.js"/>
+        <apex:includeScript value="{!$Resource.vlocity_cmt__DocxGenerateSections}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/jszip/jszip.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/vendor/jszip-utils.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/vendor/file-saver.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/build/docxtemplater.v3.5.0.min.js')}"/>
     </head> 
     <body>
         <div ng-app="docTemplateListApp" ng-controller="docTemplateListController" class="vlocity via-slds ng-cloak {!$User.UIThemeDisplayed}">
@@ -142,8 +147,8 @@
                     action: '{!$RemoteAction.DocTemplateListController.deleteDocumentTemplate}',
                     config: {escape: false}
                 },
-                setTemplateContentVersion: {
-                    action: '{!$RemoteAction.DocTemplateListController.setTemplateContentVersion}',
+                setTemplateContentVersionDocx: {
+                    action: '{!$RemoteAction.DocTemplateListController.setTemplateContentVersionDocx}',
                     config: {escape: false}
                 },
                 getTemplateLanguages: {
@@ -203,11 +208,13 @@
                     $scope.sourceTemplateId = documentTemplateId;
                     remoteActions.cloneDocumentTemplate(documentTemplateId).then(function(result) {
                         $scope.templateId = result.templateData.Id;
+                        $scope.clonedTemplateDetails = result.templateSections;
                         var templateType = result.templateData[namespacePrefix + 'TemplateContentFormat__c'];
                         $scope.templateTypeParam = (templateType ? '&templateType=' + templateTypeCodeMap[templateType] : '');
 
                         if (templateType === 'Microsoft Word .DOCX Template' || templateType === 'Microsoft Powerpoint .PPTX Template') {
                             $scope.globalKey = result.cvGlobalKey;
+                            $scope.sourceTemplateSections = result.srcTemplateSections;
                             $scope.getContentVersionData(contentVersionId);
                         } else {
                             location.href = '/apex/' + namespacePrefix + 'DocumentTemplate?templateId=' + $scope.templateId + $scope.templateTypeParam;
@@ -238,11 +245,13 @@
                     $scope.sourceTemplateId = documentTemplateId;
                     remoteActions.createNewVersion(documentTemplateId).then(function(result) {
                         $scope.templateId = result.templateData.Id;
+                        $scope.clonedTemplateDetails = result.templateSections;
                         var templateType = result.templateData[namespacePrefix + 'TemplateContentFormat__c'];
                         $scope.templateTypeParam = (templateType ? '&templateType=' + templateTypeCodeMap[templateType] : '');
                         
                         if (templateType === 'Microsoft Word .DOCX Template' || templateType === 'Microsoft Powerpoint .PPTX Template') {
                             $scope.globalKey = result.cvGlobalKey;
+                            $scope.sourceTemplateSections = result.srcTemplateSections;
                             $scope.getContentVersionData(contentVersionId);
                         } else {
                             location.href = '/apex/' + namespacePrefix + 'DocumentTemplate?templateId=' + $scope.templateId + $scope.templateTypeParam;
@@ -290,7 +299,25 @@
                                 'Title': result.records.Title,
                                 'VersionData': result.records.VersionData
                             }
-                            $scope.createContentVersion(contentVersion);
+                            if ($scope.sourceTemplateSections && $scope.sourceTemplateSections.length > 0) {
+                                var docSectionData = [];
+                                for(var i=0; i<$scope.sourceTemplateSections.length; i++) { 
+                                    var tempSectionObj = {};
+                                    tempSectionObj['sectionId']= $scope.sourceTemplateSections[i].Id; 
+                                    docSectionData.push(tempSectionObj)
+                                }
+                                var inputMap = {
+                                    'docName' : contentVersion.Title,
+                                    'docSectionData': docSectionData,
+                                    'newTempSectionData': $scope.clonedTemplateDetails
+                                }
+                                replaceOldSectionIdWithNewId(contentVersion.VersionData, inputMap).then(function (result) {
+                                    contentVersion.VersionData = result.fileContent
+                                    $scope.createContentVersion(contentVersion);
+                                });
+                            } else {
+                                $scope.createContentVersion(contentVersion);
+                            }
                         },  
                         onFailure: function(result) {
                             var errorMsg = result.faultstring;
@@ -313,7 +340,7 @@
                             var status = result[0].getBoolean('success');
                             var generatedContentVersionId = result[0].id;
                             console.log('generatedContentVersionId: ', generatedContentVersionId);
-                            $scope.setTemplateContentVersion($scope.templateId, generatedContentVersionId);
+                            $scope.setTemplateContentVersionDocx($scope.templateId, generatedContentVersionId, true);
                         },
                         onFailure: function(result) {
                             var errorMsg = result.faultstring;
@@ -324,8 +351,8 @@
                     });
                 };
 
-                $scope.setTemplateContentVersion = function(templateId, contentVersionId) {
-                    remoteActions.setTemplateContentVersion(templateId, contentVersionId).then(function(result) {
+                $scope.setTemplateContentVersionDocx = function(templateId, contentVersionId, isSectionIdsReplaced) {
+                    remoteActions.setTemplateContentVersionDocx(templateId, contentVersionId, isSectionIdsReplaced).then(function(result) {
                         location.href = '/apex/' + namespacePrefix + 'DocumentTemplate?templateId=' + templateId + $scope.templateTypeParam;
                     }, function(error) {
                         $scope.templateActionErrorMsg = '<div><p>Visualforce Remoting Exception: ' + error.message + '</p></div>';

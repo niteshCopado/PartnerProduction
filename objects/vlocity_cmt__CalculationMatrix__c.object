@@ -145,6 +145,24 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>vlocity_cmt__GroupMatrix</fullName>
+        <fields>Name</fields>
+        <fields>RecordTypeId</fields>
+        <fields>vlocity_cmt__GroupKey__c</fields>
+        <fields>vlocity_cmt__SubGroupKey__c</fields>
+        <fields>vlocity_cmt__WildcardColumn__c</fields>
+        <fields>vlocity_cmt__WildcardValue__c</fields>
+        <label>Group Matrix</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>vlocity_cmt__StandardMatrix</fullName>
+        <fields>Name</fields>
+        <fields>RecordTypeId</fields>
+        <fields>vlocity_cmt__WildcardColumn__c</fields>
+        <fields>vlocity_cmt__WildcardValue__c</fields>
+        <label>Standard Matrix</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>

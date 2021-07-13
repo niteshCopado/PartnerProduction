@@ -95,10 +95,6 @@
 			 <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/bower_components/ForceTK/forcetk.js')}"/>
 			 <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularStrapJS_2_3_6)}"/>
 			 <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularStrapTplJS_2_3_6)}"/>
-			 <!-- 
-			 <apex:includeScript value="{!URLFOR($Resource.Jquery, 'jquery-1.8.2.min.js')}"/>
-			 <apex:includeScript value="{!URLFOR($Resource.Jquery, '/ui/jquery-ui-1.9.1.custom.min.js')}"/>
-			 -->
 			 <script type="text/javascript">
 		 	(function () {
 		 		'use strict';//changed the name of module from camel case vloc.xomNodeView since grunt is not detecting the module while injecting the dependency and needs to have the same module name as present in the folder structure

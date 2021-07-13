@@ -24,6 +24,14 @@ global class OrchestrationPlanControllerExtension {
     global static String getOrchestrationPlanId(String contextId) {
         return null;
     }
+    @RemoteAction
+    global static String getOrchestrationPlanName(String planId) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> getOrderDetails(Id orderId) {
+        return null;
+    }
 global class CalendarInfo {
     global List<BusinessHours> businessHours;
     global List<Holiday> holidays;
@@ -38,6 +46,7 @@ global class OrchestrationItemView {
     global List<Id> deps;
     global String dueDate;
     global Id id;
+    global Boolean isPointOfNoReturn;
     global String name;
     global Id orderId;
     global Map<String,Object> parameters;

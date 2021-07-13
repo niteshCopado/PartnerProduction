@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/c27c75c5-9610-3027-6399-62bf729b985b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone 8 Accessory Pack",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

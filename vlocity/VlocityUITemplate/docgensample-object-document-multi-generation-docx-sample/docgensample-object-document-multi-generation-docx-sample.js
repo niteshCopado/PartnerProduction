@@ -5,6 +5,7 @@ baseCtrl.prototype.setMultiDocXIPScope = function(scp) {
     if (afterSlash === 'apex') {
         afterSlash = '';
     }
+    window.bpTreeResponseSent = false;
     scp.applyCallResp({
         urlPrefix: window.location.origin + afterSlash
     });
@@ -48,7 +49,7 @@ baseCtrl.prototype.setMultiDocXIPScope = function(scp) {
         if (event.data && event.data.constructor === Object && event.data.hasOwnProperty('docGenContentVersionId')) {
             baseCtrl.prototype.$scope.bpTree.response.templates[baseCtrl.prototype.$scope.bpTree.response.tracker].docGenContentVersionId = event.data.docGenContentVersionId;
             baseCtrl.prototype.$scope.bpTree.response.isWordAttachDone = true;
-            window.VlocOmniSI.applyCallResp(event.data);
+            scp.applyCallResp(event.data);
             baseCtrl.prototype.$scope.bpTree.response.isPDFAttachDone = false;
             scp.aggregate(scp, scp.control.index, scp.control.indexInParent, true, -1);
 
@@ -70,7 +71,7 @@ baseCtrl.prototype.setMultiDocXIPScope = function(scp) {
         }
         else if (event.data && event.data.constructor === Object && baseCtrl.prototype.$scope.bpTree.response.isPDFAttachDone == false && event.data.hasOwnProperty('pdfGenContentVersionId')) {
             baseCtrl.prototype.$scope.bpTree.response.isPDFAttachDone = true;
-            window.VlocOmniSI.applyCallResp(event.data);
+            scp.applyCallResp(event.data);
             scp.aggregate(scp, scp.control.index, scp.control.indexInParent, true, -1);
             baseCtrl.prototype.$scope.bpTree.response.templates[baseCtrl.prototype.$scope.bpTree.response.tracker].pdfGenContentVersionId = event.data.pdfGenContentVersionId;
             var i = baseCtrl.prototype.$scope.bpTree.response.tracker + 1; 

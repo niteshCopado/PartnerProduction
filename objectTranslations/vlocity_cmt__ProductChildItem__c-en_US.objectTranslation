@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldSets>
+        <label><!-- Compare Version --></label>
+        <name>vlocity_cmt__ProductCompareVersion</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- Product Structure --></label>
         <name>vlocity_cmt__ProductStructure</name>
     </fieldSets>
@@ -16,6 +20,10 @@
         <label><!-- Child Product --></label>
         <name>vlocity_cmt__ChildProductId__c</name>
         <relationshipLabel><!-- Product Child Items (Child) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Child Product Name --></label>
+        <name>vlocity_cmt__ChildProductName__c</name>
     </fields>
     <fields>
         <label><!-- Collapse Hierarchy --></label>
@@ -61,6 +69,10 @@
         <label><!-- Parent Product --></label>
         <name>vlocity_cmt__ParentProductId__c</name>
         <relationshipLabel><!-- Product Child Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent Product Name --></label>
+        <name>vlocity_cmt__ParentProductName__c</name>
     </fields>
     <fields>
         <label><!-- Default Quantity --></label>

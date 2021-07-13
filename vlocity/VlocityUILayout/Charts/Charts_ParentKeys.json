@@ -3,5 +3,6 @@
     "VlocityCard/column-chart",
     "VlocityCard/donut-chart",
     "VlocityCard/gauge-chart",
-    "VlocityCard/pie-chart"
+    "VlocityCard/pie-chart",
+    "VlocityUITemplate/Chart-layout"
 ]

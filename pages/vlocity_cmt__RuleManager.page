@@ -252,7 +252,6 @@
 
 		   	<script>
 		   		sforce.connection.sessionId = '{!$Api.Session_ID}'; 
-		   		jQuery.noConflict();
 
                 //Upgrading the old jquery to the latest by using vlocity core assets :CMT-1948
                 //Fixing an incompatible/deprecated methods needed by old jquery drag and drop library

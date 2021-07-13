@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/67ed74e4-d393-763d-0c45-d71b969f9a7e",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Apple iPhone X",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

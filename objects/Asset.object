@@ -940,6 +940,29 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Product2.vlocity_cmt__GlobalGroupKey__c</formula>
+        <label>Product Group Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductHierarchyGroupKeyPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</inlineHelpText>
+        <label>Product Hierarchy Group Key Path</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ProductHierarchyPath__c</fullName>
         <deprecated>false</deprecated>
         <description>Vlocity internal field which identifies the path for this asset within the product hierarchy.</description>
@@ -1271,7 +1294,7 @@
         <fullName>vlocity_cmt__Asset_Activation_Date_Rule</fullName>
         <active>true</active>
         <description>Validation Rule for Asset Activation Date. It should not be in the past.</description>
-        <errorConditionFormula>OR (vlocity_cmt__ActivationDate__c&lt;TODAY())</errorConditionFormula>
+        <errorConditionFormula>OR (vlocity_cmt__ActivationDate__c&lt;TODAY()) &amp;&amp; (NOT( ISCHANGED( vlocity_cmt__ProductHierarchyGroupKeyPath__c )) || ISCHANGED( vlocity_cmt__ActivationDate__c ))</errorConditionFormula>
         <errorDisplayField>vlocity_cmt__ActivationDate__c</errorDisplayField>
         <errorMessage>Activation Date cannot be in the past.</errorMessage>
     </validationRules>

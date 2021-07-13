@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/f2bd66f2-1494-6eb4-5e16-423600fe5dc9",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "EPIX",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

@@ -5,6 +5,8 @@ baseCtrl.prototype.setDocXDocTempSortingList = function(control,scp) {
         afterSlash = '';
     }
 
+	baseCtrl.prototype.$scope.bpTree.response.urlPrefix = afterSlash.replace('/','');
+
     window.bpTreeSortingResponseSent = false;
     window.addEventListener('message', function(event) {
         if (event.data && event.data.constructor === Object && event.data.hasOwnProperty('GET_BPTREE_RESPONSE_SORTING')) {
@@ -30,4 +32,8 @@ baseCtrl.prototype.setDocXDocTempSortingList = function(control,scp) {
         }
 
     }, false);
+
+    var sortingObjectIFrame = document.getElementById('obj-doc-sorting-os-iframe')
+    var fContentWindow = sortingObjectIFrame.contentWindow;
+    fContentWindow.postMessage({'clmDocxSortingBpTreeResponse': baseCtrl.prototype.$scope.bpTree.response}, '*');
  };

@@ -60,11 +60,17 @@
                                 <h2 id="header" class="slds-text-heading_medium">{!$Label.CLMNewContractTermLabel}</h2>
                             </div>
                             <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap">
-
+                                <div class="vloc-attr-config-grid slds-p-bottom_small slds-size_1-of-1 ng-scope">
+                                    <div id="form-name_saveerror" ng-if="saveError" class="slds-popover slds-theme_error" role="alert" aria-live="polite" style="top: 10px;max-width: 100%;width:auto">
+                                        <div id="form-name_popover" class="slds-popover__body slds-text-longform">
+                                            <p id="form-name_popovertext">{{saveErrorMessage}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="vloc-attr-config-grid slds-p-bottom_small slds-size_1-of-1 ng-scope">
                                     <div id="form-name_validation" ng-if="validationErrors.termName" class="slds-popover slds-nubbin_bottom-left slds-theme_error" role="alert" aria-live="polite" style="top: 10px;max-width: 100%;width:auto">
                                         <div id="form-name_popover" class="slds-popover__body slds-text-longform">
-                                            <p id="form-name_popovertext">{!$Label.CLMTermEmptyName}</p>
+                                            <p id="form-name_popovertext">{{validationErrors.termNameError}}</p>
                                         </div>
                                     </div>
                                     <div class="vloc-attr-config-row slds-small-show slds-p-top_small">
@@ -139,7 +145,8 @@
                 var modalLabels = {
                     'CLMTermSave': '{!$Label.CLMTermSave}',
                     'CLMTermCancel': '{!$Label.CLMTermCancel}',
-                    'CLMTermEmptyName':'{!$Label.CLMTermEmptyName}',
+					'CLMTermEmptyName':'{!$Label.CLMTermEmptyName}',
+					'CLMTermNameTooLarge':'{!$Label.CLMTermNameTooLarge}',
                     'CLMTermEmptyCode':'{!$Label.CLMTermEmptyCode}',
                     'CLMNewContractTermLabel':'{!$Label.CLMNewContractTermLabel}',
                     'CLMContractTermName':'{!$Label.CLMContractTermName}',

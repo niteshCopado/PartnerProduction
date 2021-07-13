@@ -81,6 +81,9 @@ global class VlocityBatchFramework implements Database.AllowsCallouts, Database.
     global static Id startBatch(String Id, Map<String,Object> inputMap, Map<String,Object> options) {
         return null;
     }
+    global static Object startBatches(List<Map<String,Object>> processMapsList, Map<String,Object> options) {
+        return null;
+    }
     global static void startIntegrationProcedureBatch(String processName, List<Object> input, Map<String,Object> options) {
 
     }

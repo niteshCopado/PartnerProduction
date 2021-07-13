@@ -309,6 +309,19 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__DefaultPremisesId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The default Premises associated with this quote</description>
+        <externalId>false</externalId>
+        <label>Premises</label>
+        <referenceTo>vlocity_cmt__Premises__c</referenceTo>
+        <relationshipLabel>Premises Quotes</relationshipLabel>
+        <relationshipName>PremisesQuotes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__DefaultServiceAccountId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -583,6 +596,16 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__MultiServiceMessageData__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field stores messages that are generated and displayed in a MultiService feature.</description>
+        <externalId>false</externalId>
+        <label>Multi Service Message Data</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>vlocity_cmt__NumberOfContractedMonths__c</fullName>
@@ -958,9 +981,183 @@
         <label>My Quotes</label>
     </listViews>
     <recordTypes>
+        <fullName>vlocity_cmt__EnterpriseQuote</fullName>
+        <active>true</active>
+        <description>Use enterprise quote for quoting large multi-site or multi-subscriber customers when you want one single large quote.</description>
+        <label>Enterprise Quote</label>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DefaultCurrencyPaymentMode__c</picklist>
+            <values>
+                <fullName>Currency</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Loyalty</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ExternalPricingStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invalidated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Ready</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__LeadSource__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__OriginatingChannel__c</picklist>
+            <values>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__Type__c</picklist>
+            <values>
+                <fullName>Existing Customer - Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ValidationStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not yet run</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Passed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
         <fullName>vlocity_cmt__GroupCart</fullName>
         <active>true</active>
-        <description>Group Cart record</description>
+        <description>A group cart holds the configured offers designed to be applied to all of the members of the associated group.</description>
         <label>Group Cart</label>
         <picklistValues>
             <picklist>Status</picklist>
@@ -1134,7 +1331,7 @@
     <recordTypes>
         <fullName>vlocity_cmt__MasterQuote</fullName>
         <active>true</active>
-        <description>Master Quote record</description>
+        <description>Use master quote for quoting large multi-service point, multi-site or multi-subscriber customers when you need to break the large quote into a collection of sub-quotes.</description>
         <label>Master Quote</label>
         <picklistValues>
             <picklist>Status</picklist>
@@ -1306,9 +1503,183 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
+        <fullName>vlocity_cmt__StandardQuote</fullName>
+        <active>true</active>
+        <description>Use a standard quote for quoting small to medium-sized business customers when the number of sites or subscribers is relatively small.</description>
+        <label>Standard Quote</label>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DefaultCurrencyPaymentMode__c</picklist>
+            <values>
+                <fullName>Currency</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Loyalty</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ExternalPricingStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invalidated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Ready</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__LeadSource__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__OriginatingChannel__c</picklist>
+            <values>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__Type__c</picklist>
+            <values>
+                <fullName>Existing Customer - Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ValidationStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not yet run</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Passed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
         <fullName>vlocity_cmt__SubQuote</fullName>
         <active>true</active>
-        <description>Sub Quote record</description>
+        <description>A sub-quote is a subset of a large master quote. Each sub-quote is often targeted to a single service point, site or subscriber.</description>
         <label>Sub Quote</label>
         <picklistValues>
             <picklist>Status</picklist>
@@ -1327,6 +1698,180 @@
             <values>
                 <fullName>Draft</fullName>
                 <default>true</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Needs Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DefaultCurrencyPaymentMode__c</picklist>
+            <values>
+                <fullName>Currency</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Loyalty</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ExternalPricingStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invalidated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Ready</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Confirmed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__LeadSource__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__OriginatingChannel__c</picklist>
+            <values>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__Type__c</picklist>
+            <values>
+                <fullName>Existing Customer - Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing Customer - Upgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>vlocity_cmt__ValidationStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not yet run</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Passed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>vlocity_cmt__WorkingCart</fullName>
+        <active>true</active>
+        <description>A working cart is a temporary cart used by CPQ processes to calculate validity and pricing for a subset of line items from a large quote.</description>
+        <label>Working Cart</label>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
             </values>
             <values>
                 <fullName>In Review</fullName>
@@ -1582,15 +2127,13 @@ window.location.href = target_url;</url>
     <webLinks>
         <fullName>vlocity_cmt__Configure</fullName>
         <availability>online</availability>
-        <description>This is a Custom Button on Quote page to invoke CPQ in Lightning Experience</description>
+        <description>This is a Custom Button on Quote page to invoke Hybrid CPQ.</description>
         <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
+        <linkType>page</linkType>
         <masterLabel>Configure</masterLabel>
-        <openType>noSidebar</openType>
+        <openType>replace</openType>
+        <page>vlocity_cmt__QuoteLaunchHybridCPQ</page>
         <protected>false</protected>
-        <url>/apex/hybridcpq?id={!Quote.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>vlocity_cmt__ConfigureForNamespace</fullName>

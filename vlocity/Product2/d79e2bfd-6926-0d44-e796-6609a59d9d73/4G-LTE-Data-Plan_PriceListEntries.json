@@ -16,6 +16,8 @@
             "VlocityLookupRecordSourceKey": "%vlocity_namespace%__PriceList__c/PL-001",
             "VlocityRecordSObjectType": "%vlocity_namespace%__PriceList__c"
         },
+        "%vlocity_namespace%__PriceListName__c": "B2C Price List",
+        "%vlocity_namespace%__PricingElementAmount__c": 34.99,
         "%vlocity_namespace%__PricingElementGlobalKey__c": "e129ae66-a4ee-caeb-5dd7-7b35baee835d",
         "%vlocity_namespace%__PricingElementId__c": {
             "%vlocity_namespace%__GlobalKey__c": "9738f8ad-024b-3acc-5c1d-5b4e03f27f71",

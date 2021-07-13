@@ -38,7 +38,7 @@
                     <div class='vlc-slds--tertiary-container'>
 
                         <div class='vlc-slds-button--tertiary'
-                             ng-if='child.bAccordionActive'
+                             ng-if='child.bAccordionActive && bpTree.propSetMap.allowCancel != false'
                              confirmed-click='cancel()'
                              ng-confirm-click='{{::child.propSetMap.cancelMessage}}'>
                             {{::child.propSetMap.cancelLabel}}
@@ -56,7 +56,7 @@
 
 
                         <div class='vlc-slds-button--tertiary'
-                             ng-if='bpTree.propSetMap.allowSaveForLater && bpTree.scriptState !== "review" && child.bAccordionActive'
+                             ng-if='child.propSetMap.allowSaveForLater !== false && bpTree.propSetMap.allowSaveForLater !== false && !bpService.bSflInProgress && bpTree.scriptState !== "review" && child.bAccordionActive'
                              confirmed-click='saveForLater(child)'
                              ng-confirm-click='{{::child.propSetMap.saveMessage}}' >
                             {{::child.propSetMap.saveLabel}}

@@ -295,7 +295,9 @@
                                 <div ng-if="!importedScope.reRenderAttributesForm">
                                     <vlocity-dynamic-form class="cpq-item-attributes-form slds-form_stacked" tooltip-container=".slds-modal" form-on-change="importedScope.saveUpdates(e, formValidation, childProd)"
                                         name="productconfig{{attrs.lineItemModal?'modal':''}}{{childProd.Id.value}}" ng-model="childProd.attributeCategories.records"
-                                        map-object="{{importedScope.mapObject()}}" form-auto-save="{{attrs.lineItemModal}}">
+                                        map-object="{{importedScope.mapObject()}}"
+                                        is-read-only-form="{{importedScope.isReadOnly(childProd,attrs.actionStatus)}}" 
+                                        form-auto-save="{{attrs.lineItemModal}}">
                                     </vlocity-dynamic-form>
                                 </div>
                             </div>

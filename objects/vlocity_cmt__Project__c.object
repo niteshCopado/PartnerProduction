@@ -276,24 +276,24 @@
                     <label>Draft</label>
                 </value>
                 <value>
-                    <fullName>Testing</fullName>
+                    <fullName>In-Review</fullName>
                     <default>false</default>
-                    <label>Testing</label>
+                    <label>In-Review</label>
                 </value>
                 <value>
-                    <fullName>Approved</fullName>
+                    <fullName>In-Test</fullName>
                     <default>false</default>
-                    <label>Approved</label>
+                    <label>In-Test</label>
                 </value>
                 <value>
-                    <fullName>Rejected</fullName>
+                    <fullName>Released</fullName>
                     <default>false</default>
-                    <label>Rejected</label>
+                    <label>Released</label>
                 </value>
                 <value>
-                    <fullName>Deployed</fullName>
+                    <fullName>Canceled</fullName>
                     <default>false</default>
-                    <label>Deployed</label>
+                    <label>Canceled</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -310,17 +310,13 @@
     </nameField>
     <pluralLabel>Projects</pluralLabel>
     <recordTypes>
-        <fullName>vlocity_cmt__WorkSet</fullName>
+        <fullName>vlocity_cmt__Module</fullName>
         <active>true</active>
-        <label>Work Set</label>
+        <label>Module</label>
         <picklistValues>
             <picklist>vlocity_cmt__Status__c</picklist>
             <values>
-                <fullName>Approved</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Deployed</fullName>
+                <fullName>Canceled</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -328,11 +324,43 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Rejected</fullName>
+                <fullName>In-Review</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Testing</fullName>
+                <fullName>In-Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>vlocity_cmt__WorkSet</fullName>
+        <active>true</active>
+        <label>Work Set</label>
+        <picklistValues>
+            <picklist>vlocity_cmt__Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -156,6 +156,30 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__AdditionalObjects__c</fullName>
+        <deprecated>false</deprecated>
+        <description>long text field to store additional objects which user can use to write conditions and the relationship field to StateModel__c.ObjectAPIName__c.  This is used to pull data from parent to all applicable child objects.</description>
+        <externalId>false</externalId>
+        <label>Additional Objects</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__CreationVlocityActionId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>On Creation Action</label>
+        <referenceTo>vlocity_cmt__VlocityAction__c</referenceTo>
+        <relationshipLabel>Vlocity State Model Versions</relationshipLabel>
+        <relationshipName>StateModelVersionActions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__CurrentStatus__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -195,6 +219,28 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__RuleEvaluationClassName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rule Evaluation Class Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__RuleEvaluationMethodName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rule Evaluation Method Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -247,34 +293,11 @@
         <fullName>vlocity_cmt__CreateNewVersion</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
-        <linkType>javascript</linkType>
+        <height>600</height>
+        <linkType>page</linkType>
         <masterLabel>Create New Version</masterLabel>
-        <openType>onClickJavaScript</openType>
+        <openType>sidebar</openType>
+        <page>vlocity_cmt__StateModelVersionCloner</page>
         <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/apex.js&quot;)}
-
-var namespace_prefix_dot = &apos;&apos;; 
-var gettingnamespace = sforce.connection.query(&quot;SELECT NamespacePrefix FROM ApexClass where Name = &apos;ApplicationUtilities&apos; LIMIT 1&quot;); 
-var getname = gettingnamespace.getArray(&quot;records&quot;); 
-if(getname.length &gt; 0 &amp;&amp; getname[0].NamespacePrefix) 
-{ 
-namespace_prefix_dot = getname[0].NamespacePrefix+&quot;.&quot;; 
-}
-
-// Do not include Namespace in this object
-var version = {versionId: &quot;{!vlocity_cmt__VlocityStateModelVersion__c.Id}&quot;, headerIdField: &apos;StateModelId__c&apos;, childObjectType:&apos;VlocityStateTransition__c&apos;, childObjectMasterDetailField: &apos;StateModelVersionId__c&apos;};
-
-var result = sforce.apex.execute(namespace_prefix_dot+&quot;VlocityVersionManager&quot;,&quot;incrementVersion&quot;, {versJSON: JSON.stringify(version) } );
-console.log(result);
-
-if (result != null)
-{
-window.location.href = &apos;/&apos; + result;
-}
-else
-{
-alert(&apos;Creating a new Version Failed&apos;);
-}</url>
     </webLinks>
 </CustomObject>

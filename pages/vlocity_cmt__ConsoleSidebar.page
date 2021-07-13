@@ -22,7 +22,7 @@
     <vloc-cmp name="profileTags" customtemplate="left-profile-tag" ctrl="attributeCtrl" loaded="true"/>     -->
 </div>
 
-<script src="{!URLFOR($Resource.vlocity_core_assets, '/v102/vlocity_core_assets.js')}"></script>
+<script src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
 <script src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
 <script src="{!$Resource.CardFramework_Assets}"></script>
 <script src="{!$Resource.CardFramework}"></script>
@@ -110,7 +110,7 @@
                 sforce.console.getEnclosingPrimaryTabObjectId(load);
             } else {
                 console.info('outside console');
-                var result = { id:'0014W000027Jkb2' };
+                var result = { id:'0015Y00002aRrbk' };
                 load(result);
             }
         };
@@ -235,7 +235,7 @@
                 sforce.console.getEnclosingPrimaryTabObjectId(load);
             } else {
                 console.info('outside console');
-                var result = { id:'0014W000026zljO' };
+                var result = { id:'0015Y00002UkLm1' };
                 load(result);
             }
         };
@@ -315,7 +315,7 @@
                 sforce.console.getEnclosingPrimaryTabObjectId(load);
             } else {
                 console.info('outside console');
-                var result = { id:'0014W000026zljO' };
+                var result = { id:'0015Y00002UkLm1' };
                 load(result);
             }
         };

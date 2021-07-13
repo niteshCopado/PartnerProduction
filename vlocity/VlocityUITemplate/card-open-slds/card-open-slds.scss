@@ -3,6 +3,13 @@
     .via-slds-card__body {
         min-height: 374px;
         
+        .no-link{
+            pointer-events: none;
+            cursor: default;
+            text-decoration:none;
+            color: #000;
+        }
+        
         .via-slds-main-action {
             .icon:before {
                 font-size: 400%;

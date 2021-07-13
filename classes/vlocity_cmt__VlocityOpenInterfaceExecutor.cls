@@ -9,4 +9,10 @@ global class VlocityOpenInterfaceExecutor {
     global VlocityOpenInterfaceExecutor() {
 
     }
+    global static Object invokeMethod(String className, String methodName, Map<String,Object> input, Map<String,Object> output, Map<String,Object> options) {
+        return null;
+    }
+    global static Boolean isCustomClassValid(String className, Map<String,Object> output) {
+        return null;
+    }
 }

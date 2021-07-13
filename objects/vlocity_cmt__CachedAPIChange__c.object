@@ -214,6 +214,11 @@
                     <default>false</default>
                     <label>offer</label>
                 </value>
+                <value>
+                    <fullName>data</fullName>
+                    <default>false</default>
+                    <label>data</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>

@@ -1,7 +1,13 @@
 <div class="opv_cardItem"  ng-class="::{ startDateHt: importedScope.startDate && importedScope.dueDate }">  
 
- {{importedScope.getItemText($parent.$parent.$parent.item)}}<br>
+<div>{{importedScope.getItemText($parent.$parent.$parent.item)}}
+    <div class='PONRIcon' ng-if="importedScope.isPONREnabled($parent.$parent.$parent.item);">
+        <vloc-card-icon icon="'skip'" sprite="'utility'" size="'small'" extra-classes="skipIcon"></vloc-card-icon>
+        <vloc-card-icon icon="'error'" sprite="'utility'" size="'small'" extra-classes="errorIcon"></vloc-card-icon>
+    </div>
+    <br>
      {{$parent.$parent.$parent.item.additionalName}}
+</div>
 <div style="display:flex;"><span ng-if="$parent.$parent.$parent.item['startDate']">{{::$root.vlocity.getCustomLabel('XOMStart', 'Start')}} : </span> <span>{{$parent.$parent.$parent.item['startDate']}}</span></div>
 <div style="display:flex;"><span ng-if="$parent.$parent.$parent.item['dueDate']">{{::$root.vlocity.getCustomLabel('XOMDue', 'Due')}}  : </span> <span>{{$parent.$parent.$parent.item['dueDate']}}</span></div>
 </div>

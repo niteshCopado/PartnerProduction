@@ -6,6 +6,22 @@
         <relationshipLabel><!-- Customer Interaction Topics --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Action --></label>
+        <name>vlocity_cmt__Action__c</name>
+        <picklistValues>
+            <masterLabel>Created</masterLabel>
+            <translation><!-- Created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discussed</masterLabel>
+            <translation><!-- Discussed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Asset --></label>
         <name>vlocity_cmt__AssetId__c</name>
         <relationshipLabel><!-- Customer Interaction Topics --></relationshipLabel>

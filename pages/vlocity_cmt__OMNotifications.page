@@ -65,8 +65,11 @@
                     OMNotifications: "{!$Label.vlocity_cmt__omnotifications}",
                     NoOrderManagementNotification: "{!$Label.NoOrderManagementNotification}"
                 };
-                 var configData = {
+                var configData = {
                     nsPrefix: "{!nsp}"
+                };
+                var currentOrderId = {
+                    Id : "{!$CurrentPage.parameters.Id}"
                 };
             </script>
         </body>

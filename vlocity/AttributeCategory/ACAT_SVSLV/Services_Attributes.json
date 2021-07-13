@@ -22,6 +22,7 @@
         "%vlocity_namespace%__EditMode__c": "",
         "%vlocity_namespace%__EffectiveFromDate__c": "",
         "%vlocity_namespace%__EffectiveUntilDate__c": "",
+        "%vlocity_namespace%__ExcludeFromBasketCache__c": false,
         "%vlocity_namespace%__Filterable__c": false,
         "%vlocity_namespace%__GlobalKey__c": "7cb20cec-e2d7-723a-b0f3-1e19d03c9ed3",
         "%vlocity_namespace%__HelpText__c": "",

@@ -317,6 +317,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ContextProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key of Context Product</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ContextProductId__r.vlocity_cmt__GlobalGroupKey__c</formula>
+        <inlineHelpText>Version Group Key of Context Product</inlineHelpText>
+        <label>Context Product Group Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ContextProductId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -357,6 +370,18 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__GlobalGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Same across the same group of Promotion Items. Used to tie a group Promotion Items together.</description>
+        <externalId>false</externalId>
+        <label>Group Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__IsActive__c</fullName>
@@ -414,12 +439,36 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__OfferProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key of Offer Product</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__OfferId__r.vlocity_cmt__GlobalGroupKey__c</formula>
+        <inlineHelpText>Version Group Key of Offer Product</inlineHelpText>
+        <label>Offer Product Group Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ProductHierarchyGlobalKeyPath__c</fullName>
         <deprecated>false</deprecated>
         <description>This field is similar to Product Hierarchy Path but keeps global keys instead of Ids.</description>
         <externalId>false</externalId>
         <label>Product Hierarchy Global Key Path</label>
         <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductHierarchyGroupKeyPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</description>
+        <externalId>false</externalId>
+        <label>Product Hierarchy Group Key Path</label>
+        <length>32768</length>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>

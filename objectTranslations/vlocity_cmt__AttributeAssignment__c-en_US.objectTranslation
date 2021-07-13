@@ -9,6 +9,10 @@
         <name>vlocity_cmt__ContractTermAdmin</name>
     </fieldSets>
     <fieldSets>
+        <label><!-- Attribute Compare --></label>
+        <name>vlocity_cmt__ProductCompareVersion</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- ProductJsonAttribute --></label>
         <name>vlocity_cmt__ProductJsonAttribute</name>
     </fieldSets>

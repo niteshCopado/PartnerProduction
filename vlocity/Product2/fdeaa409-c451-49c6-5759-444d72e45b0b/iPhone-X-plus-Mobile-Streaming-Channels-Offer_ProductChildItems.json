@@ -8,6 +8,7 @@
             "VlocityLookupRecordSourceKey": "Product2/67ed74e4-d393-763d-0c45-d71b969f9a7e",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Apple iPhone X",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "0ef0bcd7-8e52-a78a-d6fa-9cccb8856642",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -24,6 +25,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/fdeaa409-c451-49c6-5759-444d72e45b0b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone X plus Mobile Streaming Channels Offer",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -53,6 +55,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/fdeaa409-c451-49c6-5759-444d72e45b0b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone X plus Mobile Streaming Channels Offer",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -71,6 +74,7 @@
             "VlocityLookupRecordSourceKey": "Product2/4ff5e00f-17ee-d3d8-1ca7-d16bb1250e01",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Mobile Streaming Bundle",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "7e877cab-a72e-37a5-83c2-c5f0c1eb7de3",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -87,6 +91,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/fdeaa409-c451-49c6-5759-444d72e45b0b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone X plus Mobile Streaming Channels Offer",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -105,6 +110,7 @@
             "VlocityLookupRecordSourceKey": "Product2/c82ef19d-bcc2-d419-c326-2ff4b99b6764",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "4G LTE Data Plan - Unlimited",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "8b3c4aa0-b98b-954b-3912-13184810e129",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -121,6 +127,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/fdeaa409-c451-49c6-5759-444d72e45b0b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone X plus Mobile Streaming Channels Offer",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -139,6 +146,7 @@
             "VlocityLookupRecordSourceKey": "Product2/f3b0be79-5d4a-9e8f-fe60-d2999bfed542",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Unlimited Talk + Text",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "baf2c109-c0cb-300e-c437-04bf973839a4",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -155,6 +163,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/fdeaa409-c451-49c6-5759-444d72e45b0b",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "iPhone X plus Mobile Streaming Channels Offer",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

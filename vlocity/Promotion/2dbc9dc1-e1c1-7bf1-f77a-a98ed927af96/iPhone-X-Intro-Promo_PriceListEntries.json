@@ -21,6 +21,8 @@
             "VlocityLookupRecordSourceKey": "%vlocity_namespace%__PriceList__c/PL-001",
             "VlocityRecordSObjectType": "%vlocity_namespace%__PriceList__c"
         },
+        "%vlocity_namespace%__PriceListName__c": "B2C Price List",
+        "%vlocity_namespace%__PricingElementAmount__c": 20,
         "%vlocity_namespace%__PricingElementGlobalKey__c": "c8c62d22-4fc1-8c77-e5cc-0a08dfbb441f",
         "%vlocity_namespace%__PricingElementId__c": {
             "%vlocity_namespace%__GlobalKey__c": "1405664e-8801-12a4-b3cb-41c3a570d8c8",
@@ -83,6 +85,8 @@
             "VlocityLookupRecordSourceKey": "%vlocity_namespace%__PriceList__c/PL-001",
             "VlocityRecordSObjectType": "%vlocity_namespace%__PriceList__c"
         },
+        "%vlocity_namespace%__PriceListName__c": "B2C Price List",
+        "%vlocity_namespace%__PricingElementAmount__c": 0,
         "%vlocity_namespace%__PricingElementGlobalKey__c": "20c544d0-f5c1-f43b-2e36-28b79a13c1e2",
         "%vlocity_namespace%__PricingElementId__c": {
             "%vlocity_namespace%__GlobalKey__c": "b1be2bde-1aa8-bce8-fdde-31ace50e6cf6",

@@ -58,6 +58,9 @@ $namespace: $cpq-namespace;
 
             }
         }
+        .#{$namespace}-product-group-attached {
+            border-left: 8px solid #027e46;
+        }
     }
 }
 

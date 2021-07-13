@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>CardsDesigner1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -175,6 +178,31 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__CardType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Card record type classic/flex</description>
+        <externalId>false</externalId>
+        <label>Record Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>flex</fullName>
+                    <default>false</default>
+                    <label>Flex</label>
+                </value>
+                <value>
+                    <fullName>classic</fullName>
+                    <default>false</default>
+                    <label>Classic</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Datasource__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -195,6 +223,15 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__GlobalKey__c</fullName>
         <deprecated>false</deprecated>
         <externalId>true</externalId>
@@ -206,6 +243,15 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__IsChildCard__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Child Card?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ParentID__c</fullName>
         <deprecated>false</deprecated>
         <externalId>true</externalId>
@@ -215,6 +261,26 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__SampleData__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sample Data</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__Styles__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Styles</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
     </fields>
     <fields>
         <fullName>vlocity_cmt__Type__c</fullName>

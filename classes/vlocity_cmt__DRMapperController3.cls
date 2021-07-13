@@ -146,6 +146,10 @@ global class DRMapperController3 {
         return null;
     }
     @RemoteAction
+    global static List<String> getAllSObjectFieldsByReferenceToPath(String objectName, String fieldName) {
+        return null;
+    }
+    @RemoteAction
     global static List<String> getAllTokensForJSONBasedDocumentTemplate(String templateName) {
         return null;
     }
@@ -165,6 +169,10 @@ global class DRMapperController3 {
     global static List<vlocity_cmt__VlocityDocuSignTemplate__c> getDocuSignTemplates() {
         return null;
     }
+    @RemoteAction
+    global static List<String> getRelationsByPath(String objectName, String fieldName) {
+        return null;
+    }
     global static void updateBundleTargetOutXml(vlocity_cmt__DRBundle__c bundle) {
 
     }
@@ -172,6 +180,7 @@ global class DRMapperController3 {
     global static Boolean validateUniqueField(String objectType, String fieldName, Id thisId, Object value) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<String> vlocityFormulaParserFunctions() {
         return null;

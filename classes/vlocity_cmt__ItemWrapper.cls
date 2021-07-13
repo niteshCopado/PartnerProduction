@@ -53,6 +53,9 @@ global class ItemWrapper {
         get;
         set;
     }
+    global String productGroupKey {
+        get;
+    }
     global Id productId {
         get;
     }

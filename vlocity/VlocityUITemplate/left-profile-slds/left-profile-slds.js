@@ -19,9 +19,7 @@ vlocity.cardframework.registerModule
                 if (nsPrefix.length > 1 && !/__$/.test(nsPrefix)) {
                     nsPrefix += '__';
                 }
-                if (obj[nsPrefix + 'CustomerValue__c']) {
-                    return obj[nsPrefix + 'CustomerValue__c'].toLowerCase();
-                } else if (obj[nsPrefix + 'CustomerSentiment__c']) {
+                if (obj[nsPrefix + 'CustomerSentiment__c']) {
                     return obj[nsPrefix + 'CustomerSentiment__c'].toLowerCase();
                 }
             }

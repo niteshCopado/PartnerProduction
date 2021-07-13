@@ -29,6 +29,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span class=\"tinymce-default-style\" style=\"font-size: 8pt; font-family: Arial, Helvetica, sans-serif;\"><viawrapper>Taxes and surcharges can add 6% to 44% to your monthly access and usage charges, including these RoadRunner Wireless monthly surcharges: Monthly Federal Universal Service Charge on interstate &amp; international telecom charges (varies quarterly based on FCC rate): 17.4% per line. Regulatory ($.18 per voice line; $.02 per data-only line); Administrative ($.95 per voice line; $.06 per data-only line).</viawrapper></span></p>\n</div>",
@@ -40,7 +41,7 @@
         "Name": "Taxes and Surcharges",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__DocumentTemplateSection__c",
-        "VlocityRecordSourceKey": "%vlocity_namespace%__DocumentTemplateSection__c/Generated1121428719"
+        "VlocityRecordSourceKey": "%vlocity_namespace%__DocumentTemplateSection__c/Generated1293230635"
     },
     {
         "%vlocity_namespace%__AutoAddSectionKey__c": false,
@@ -72,6 +73,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span class=\"tinymce-default-style\" style=\"font-size: 8pt; font-family: Arial, Helvetica, sans-serif;\"><viawrapper>14 day return/exchange period. $35 restock fee for wireless devices (excluding Hawaii). You can exchange your device one time. For \"Buy One Get One\" and similar offers, both items must be returned. Activation fee will be credited if service is cancelled within three days. See roadrunner.com/return policy for complete return details.</viawrapper></span></p>\n</div>",
@@ -115,6 +117,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span class=\"tinymce-default-style\" style=\"font-size: 8pt; font-family: Arial, Helvetica, sans-serif;\"><viawrapper>In some states, recycle credit reduces the tax base. The Taxes or fees on your purchase were based on a price of: %%TotalPrice%%. Trade-in device transactions are final and devices cannot be returned. If you received promo value when trading in a device and/or instant device savings, you will be charged for that value if you do not maintain active service for three billing cycles. RoadRunner will also adjust any promotional Trade-in value if you return or exchange your promotional device for an ineligible device. Promotional trade in credits issued over 24 months and will appear in 2-3 bill cycles after receipt of trade at RoadRunner. Your smartphone purchase must remain active on device payment agreement for 24 months to receive credits. If you cancel service, or if device payment agreement is paid off or transferred, promotional credits will stop. Traded device must be in good working and cosmetic condition to receive credits.</viawrapper></span></p>\n</div>",
@@ -158,6 +161,7 @@
         "%vlocity_namespace%__ItemSectionFontStyle__c": "",
         "%vlocity_namespace%__Level__c": 0,
         "%vlocity_namespace%__NeedAutoSectionNumber__c": false,
+        "%vlocity_namespace%__NoLineAfterSection__c": false,
         "%vlocity_namespace%__ParentSectionId__c": "",
         "%vlocity_namespace%__ResetAutoNumber__c": false,
         "%vlocity_namespace%__SectionContent__c": "<div class=\"section-content-wrapper\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif;\">\n<p><span class=\"tinymce-default-style\" style=\"font-size: 8pt; font-family: Arial, Helvetica, sans-serif;\"><viawrapper>Electronic waste should be recycled or disposed of properly. Contact http://www.state.nj.us/dep/dshw/recycling/Electronic_Waste/index.html or 866-DEPKNOW for information.</viawrapper></span></p>\n</div>",

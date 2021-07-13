@@ -156,6 +156,15 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__DisplayedFields__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -223,9 +232,9 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Priority Queue</fullName>
+                    <fullName>Attributes-Based</fullName>
                     <default>true</default>
-                    <label>Priority Queue</label>
+                    <label>Attributes-Based</label>
                 </value>
                 <value>
                     <fullName>Round Robin</fullName>

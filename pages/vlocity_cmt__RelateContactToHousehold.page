@@ -1,9 +1,9 @@
 <apex:page StandardController="vlocity_cmt__Party__c" extensions="vlocity_cmt.RelateContactToHouseholdController" tabStyle="vlocity_cmt__Household__c" docType="html-5.0">
-    <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/v102/vlocity_core_assets.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
     <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, '/ui/jquery-ui-1.9.1.custom.min.js')}"/>
     <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__Jquery, '/ui/css/ui-lightness/jquery-ui-1.9.1.custom.min.css')}"/>
-    <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/javascripts/bootstrap.min.js')}"/>
-    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/css/styles.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/js/bootstrap.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}" />  
     <style>
         .vlocity .sectionHeaderStyle{
             margin-bottom: 0;
@@ -11,8 +11,7 @@
 
         .bPageBlock{
             margin-bottom: 25px !important;
-        }
-
+        } 
         span.icon-cross{
           background-color: #FF0000;
           background-image: none;
@@ -218,7 +217,7 @@
                             <apex:column style="width:6%; text-align:center;">
                                 <apex:facet name="header"></apex:facet>
                                 <apex:variable var="addrConRowNum" value="{!addrConRowNum + 1}"/>
-                                <span style="cursor:pointer; font-size: 16px;" aria-hidden="true" class="icon-v-plue-line" onClick="AssociateAddressContactRow({!addrConRowNum})"></span>
+                                <span style="cursor:pointer; font-size: 16px;" aria-hidden="true" class="icon-v-plus-line" onClick="AssociateAddressContactRow({!addrConRowNum})"></span>
                             </apex:column>
                             <apex:column style="width:35%;">
                                 <apex:facet name="header">{!$ObjectType.Contact.fields.Name.Label}</apex:facet>

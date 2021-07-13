@@ -43,6 +43,10 @@
         <name>vlocity_cmt__IsReusable__c</name>
     </fields>
     <fields>
+        <label><!-- Test --></label>
+        <name>vlocity_cmt__IsTest__c</name>
+    </fields>
+    <fields>
         <label><!-- JSON Output --></label>
         <name>vlocity_cmt__JSON_Output__c</name>
     </fields>

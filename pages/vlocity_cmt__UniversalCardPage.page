@@ -43,6 +43,7 @@
         var baseURL = '{!$Site.BaseUrl}' || null;
         var instanceURL =  baseURL || ('https://' + instance + '.salesforce.com');
         var sessionId = '{!$Api.Session_ID}';
+        var mydomainUrl = '{!JSENCODE(domainUrl)}';
 
         var vlocCommunities = {
             'localeFileUrlPattern': localeFileUrlPattern,

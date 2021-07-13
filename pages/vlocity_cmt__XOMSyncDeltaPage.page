@@ -30,9 +30,9 @@
             }
           </style>
 
-          <script type="text/javascript" src="{!URLFOR($Resource.JQUERYJS)}"></script>
+
           <script type="text/javascript" src="/support/console/31.0/integration.js"></script>
-          <script type="text/javascript" src="{!URLFOR($Resource.vlocity_assets, '/javascripts/vlocity.js')}"></script>
+          <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
           <script type="text/javascript" src="{!URLFOR($Resource.SldsAngular)}"></script>
           <script type="text/javascript" src="{!URLFOR($Resource.XomThorIntegration)}"></script>
 
@@ -53,7 +53,8 @@
                 getJobStatus: "{!$RemoteAction.XOMSyncDeltaControllerExtension.getJobStatus}",
                 getNumberOfBatches: "{!$RemoteAction.XOMSyncDeltaControllerExtension.getNumberOfBatches}",
                 getBatch: {action: "{!$RemoteAction.XOMSyncDeltaControllerExtension.getBatch}", config: {escape: false}},
-                commitBatch: "{!$RemoteAction.XOMSyncDeltaControllerExtension.commitBatch}"
+                commitBatch: "{!$RemoteAction.XOMSyncDeltaControllerExtension.commitBatch}",
+                getExtendedStatus:"{!$RemoteAction.XOMSyncDeltaControllerExtension.getExtendedStatus}"
               });
             }]);
 
@@ -142,12 +143,15 @@
                       }
 
                       // alert message
+                      var failureMsg;
                       if($scope.jobStatus.Status == 'Completed') {
                         $scope.alertTheme = 'success';
                         $scope.alertText = 'Catalog Sync Job has completed'
                       } else if ($scope.jobStatus.Status == 'Failed') {
                         $scope.alertTheme = 'error';
-                        $scope.alertText = 'Catalog Sync Job has failed'
+                        failureMsg = $scope.jobStatus.ExtendedStatus ? $scope.jobStatus.ExtendedStatus : '';
+                        $scope.percentComplete = 0;
+                        $scope.alertText = 'Catalog Sync Job has failed. ';
                       } else if ($scope.jobStatus.Status == 'Aborted') {
                         $scope.alertTheme = 'error';
                         $scope.alertText = 'Catalog Sync Job was aborted'
@@ -156,17 +160,29 @@
                         $scope.alertText = 'Catalog Sync Job is running'
                       }
                       
+                      if ($scope.jobStatus.Status == 'Failed' && (failureMsg==null || failureMsg=='')){
+                          remoteActions.getExtendedStatus().then(function(extendedStatus) {
+                              $scope.percentComplete = 0;
+                              $scope.alertText = 'Catalog Sync Job has failed. '+extendedStatus;
+                          });
+                      }
+                      
                       var callInterval;
 
                       // generate informative text
                       if($scope.jobStatus.Status == 'Completed' ||
-                        $scope.jobStatus.Status == 'Failed' ||
                         $scope.jobStatus.Status == 'Aborted') {
                         $scope.infoText = 'Processed ';
                         $scope.isJobRunning = false;
                         $scope.syncEnabled = true;
                         callInterval = 120000; // set 2 minutes interval
-                      } else {
+                      } else if ($scope.jobStatus.Status == 'Failed') {
+                        $scope.infoText = failureMsg;
+                        $scope.isJobRunning = false;
+                        $scope.syncEnabled = true;
+                        callInterval = 120000; // set 2 minutes interval
+                      }
+                      else {
                         $scope.infoText = 'Processing ';
                         $scope.isJobRunning = true;
                         $scope.syncEnabled = false;
@@ -174,8 +190,10 @@
                       }
 
                       // call the function again after interval
-                      $scope.infoText += $scope.jobStatus.JobItemsProcessed +
-                        ' of ' + $scope.jobStatus.TotalJobItems + ' batches';
+                      if ($scope.jobStatus.Status != 'Failed'){
+                          $scope.infoText += $scope.jobStatus.JobItemsProcessed +
+                            ' of ' + $scope.jobStatus.TotalJobItems + ' batches';
+                      }
 
                       if(callInterval) {
                         setTimeout(updateJobDetails, callInterval);
@@ -400,7 +418,7 @@
                         </div>
     
                         <div>
-                          <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-6">
+                          <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" ng-class="alertTheme=='error'?'slds-text-color_error':''" id="progress-bar-label-id-6">
                             <span>{{infoText}}</span>
                             <span aria-hidden="true">
                               <strong>{{percentComplete}}%</strong>

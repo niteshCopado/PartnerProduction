@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/06ae808d-0111-da2d-11f9-7f8e59a1ad49",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Apple iPhone 8",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

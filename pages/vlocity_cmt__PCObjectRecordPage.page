@@ -76,7 +76,7 @@
         <div class="via-slds">
             <apex:outputpanel >
                 <vlocity-product-console namespaceprefix="{!NSP}" sfinstanceurl="{!SalesForceInstanceURL}" sessionid="{!$Api.Session_ID}"
-                    userlocale="{!UserLocale}" islanguageRTL="{!isLanguageRTL}" sfcontentinstanceurl="{!SalesForceContentInstanceUrl}" timezone="{!TimeZone}" timezoneoffset="{!TimeZoneOffset}">
+                    userlocale="{!UserLocale}" islanguageRTL="{!isLanguageRTL}" sfcontentinstanceurl="{!SalesForceContentInstanceUrl}" timezone="{!TimeZone}" timezoneoffset="{!TimeZoneOffset}" currentdate="{!CurrentDate}">
                     <template id="vpcMainContent">
                         <vlocity-pc-object objectid="{!$CurrentPage.parameters.id}">
                         </vlocity-pc-object>
@@ -89,7 +89,6 @@
         </noscript>
 
         <script>
-            sforce.console.setTabTitle("Product2")
             sforce.console.onEnclosingTabRefresh(function () {
                 /**
                  * This is to ensure that when user refresh tab from salesforce we refresh our web component also.

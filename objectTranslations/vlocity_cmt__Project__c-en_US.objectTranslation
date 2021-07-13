@@ -40,26 +40,30 @@
         <label><!-- Status --></label>
         <name>vlocity_cmt__Status__c</name>
         <picklistValues>
-            <masterLabel>Approved</masterLabel>
-            <translation><!-- Approved --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Deployed</masterLabel>
-            <translation><!-- Deployed --></translation>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Draft</masterLabel>
             <translation><!-- Draft --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Rejected</masterLabel>
-            <translation><!-- Rejected --></translation>
+            <masterLabel>In-Review</masterLabel>
+            <translation><!-- In-Review --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Testing</masterLabel>
-            <translation><!-- Testing --></translation>
+            <masterLabel>In-Test</masterLabel>
+            <translation><!-- In-Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Released</masterLabel>
+            <translation><!-- Released --></translation>
         </picklistValues>
     </fields>
+    <recordTypes>
+        <label><!-- Module --></label>
+        <name>vlocity_cmt__Module</name>
+    </recordTypes>
     <recordTypes>
         <label><!-- Work Set --></label>
         <name>vlocity_cmt__WorkSet</name>

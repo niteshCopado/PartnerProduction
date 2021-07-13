@@ -3,43 +3,38 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>vlocity_ins:cardDesignerHeader</componentName>
+                <componentName>vlocity_cmt:cardDesignerHeader</componentName>
             </componentInstance>
         </itemInstances>
+        <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>vlocity_ins:cardPreview</componentName>
+                <componentName>vlocity_cmt:cardPreview</componentName>
             </componentInstance>
         </itemInstances>
-        <name>card</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>vlocity_ins:rightSidebar</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>vlocity_ins:carddesignerCommon</componentName>
-            </componentInstance>
-        </itemInstances>
-        <name>sidebar</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
+        <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>vlocity_cmt:rightSidebar</componentName>
+            </componentInstance>
+        </itemInstances>
+        <mode>Replace</mode>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
     <masterLabel>Vlocity Card Designer</masterLabel>
-    <sobjectType>vlocity_ins__VlocityCard__c</sobjectType>
+    <parentFlexiPage>flexipage__default_rec_L</parentFlexiPage>
+    <sobjectType>vlocity_cmt__VlocityCard__c</sobjectType>
     <template>
-        <name>vlocity_ins:cardsDesignerTemplate</name>
+        <name>flexipage:recordHomeTemplateDesktop</name>
     </template>
     <type>RecordPage</type>
 </FlexiPage>

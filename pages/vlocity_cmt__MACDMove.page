@@ -81,13 +81,12 @@
    </style>
    <html>
    <head>
-   <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__JQUERYJS)}"/>
    </head> 
    <body>
     <div class="vlc-move-wrapper">
         <div class="header">
             <div class="headline">
-                <h1><br/><br/><strong>{!$Label.vlocity_cmt__mlsfdomovetitle}</strong></h1><br/><h3><strong>{!$Label.vlocity_cmt__macdmovedesc}</strong><br/><br/><br/></h3>
+                <h1><br/><br/><strong>{!$Label.MLSFDOMoveTitle}</strong></h1><br/><h3><strong>{!$Label.MACDMoveDesc}</strong><br/><br/><br/></h3>
             </div>
         </div>
         <div class="vlcpanel">
@@ -106,14 +105,13 @@
     </div>
 
     <apex:includeScript value="{!$Resource.vlocity_cmt__AngularAnimate}"/>
-    <apex:includeScript value="{!$Resource.vlocity_cmt__AngularMaterialJS}"/>
     <apex:includeScript value="{!$Resource.vlocity_cmt__AngularAriaJS}"/>
     <apex:includeScript value="{!$Resource.vlocity_cmt__AngularMessagesJS}"/>
     <apex:includeScript value="{!$Resource.vlocity_cmt__AngularAnimateMinJS}"/>
 
     <script type="text/javascript">
         (function(){                                                                     
-            var myModule = angular.module('MACDMove', ['vlocity-business-process', 'ngMaterial']);
+            var myModule = angular.module('MACDMove', ['vlocity-business-process']);
         })(); 
     </script>    
   </body>

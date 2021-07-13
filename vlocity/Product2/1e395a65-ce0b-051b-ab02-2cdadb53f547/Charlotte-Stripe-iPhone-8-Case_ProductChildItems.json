@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/1e395a65-ce0b-051b-ab02-2cdadb53f547",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Charlotte Stripe iPhone 8 Case",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

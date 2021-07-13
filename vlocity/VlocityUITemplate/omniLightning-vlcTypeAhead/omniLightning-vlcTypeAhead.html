@@ -36,18 +36,20 @@
                        data-limit="2001"
                        data-trim-value="false"
                        ng-trim="false"
-                       ng-init='init(this, control)'
+                       ng-init='init(this, control); undefinedValueForDataFilter = undefined'
                        ng-model='control.response'
-                       ng-blur='aggregate(this, control.index, control.indexInParent, true, -1)' 
+                       ng-blur='aggregate(this, control.index, control.indexInParent, true, -1)'
                        bs-options="control.propSetMap.typeAheadKey ? option[control.propSetMap.typeAheadKey] : option for option in typeAheadSearch($viewValue, this.bpTree.response, control, this)"
                        ng-required='control.req'
                        ng-disabled='control.ro'
                        ng-maxlength='{{::control.propSetMap.maxLength}}'
                        ng-minlength='{{::control.propSetMap.minLength}}'
                        bs-typeahead autocomplete='off'
+                       data-template='{{::typeaheadHTMLId}}'
                        ng-keydown='typeAheadOnChange($event, this)'
                        data-html='1'
                        vlc-slds-typeahead-prefill="response"
+                       ng-attr-data-filter="{{control.propSetMap.disableDataFilter ? false : undefinedValueForDataFilter}}"
                        vlc-slds-val-checker="response"/>
 
                 <input type="text"
@@ -79,6 +81,7 @@
                        ng-model='control.response'
                        bs-options='control.propSetMap.typeAheadKey ? option[control.propSetMap.typeAheadKey] : option for option in control.propSetMap.options'
                        bs-typeahead
+                       data-template='{{::typeaheadHTMLId}}'
                        data-limit='2001'
                        data-min-length='0'
                        data-watch-options='true'
@@ -89,6 +92,7 @@
                        vlc-slds-typeahead-prefill="response"
                        ng-focus="control.propSetMap.options = null"
                        ng-style="{'background': 'none'}"
+                       ng-attr-data-filter="{{control.propSetMap.disableDataFilter ? false : undefinedValueForDataFilter}}"
                        vlc-slds-val-checker="response"
                        readonly/>
 
@@ -96,7 +100,7 @@
                   <span class="vlc-label-description">
                     {{::control.propSetMap.label}}
                   </span>
-                
+
                   <span class='vlc-asterix icon-v-asterix'
                         ng-if='control.req'>
                   </span>

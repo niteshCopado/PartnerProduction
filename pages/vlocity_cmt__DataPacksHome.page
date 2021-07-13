@@ -14,71 +14,91 @@
         <apex:includeScript value="{!$Resource.vlocity_cmt__DRVComp}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__DataPacksHome}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__ViaDirectives}"/>
-        <style>
-        /* don't show checkbox on Published tab in header since it doesn't work as expected in this context */
-        #datapack-published-group-header-select-all {
-          display: none;
-        }
+  <style>
+    /* don't show checkbox on Published tab in header since it doesn't work as expected in this context */
+    #datapack-published-group-header-select-all {
+      display: none;
+    }
 
-        .bPageTitle .pageType {
-          font-size: .75rem;
-          line-height: 1.25;
-          color: #54698d;
-          text-transform: uppercase;
-          font-family: "Salesforce Sans", Helvetica, Arial;
-          margin-left: 14px;
-        }
-        .bPageTitle .titleSeparatingColon {
-          display: none;
-        }
-        .bPageTitle .pageDescription {
-          font-size: 1.25rem;
-          font-family: "Salesforce Sans", Arial, sans-serif;
-          color: #16325c;
-          font-weight: 400;
-          line-height: 1.25;
-          margin-left: 14px;
-        }
-        .Theme4d {
-          margin: 0;
-          padding: 0;
-          background: rgb(244, 246, 249);
-        }
-        [dir=rtl]  .bPageTitle .pageType {
-          margin-left: auto;
-          margin-left: 14px;
-        }
-        [dir=rtl]  .bPageTitle .pageDescription {
-          margin-left: auto;
-          margin-left: 14px;
-        }
-        #create-multipack-tab-button-wrapper {
-          position: absolute;
-          right: 0px;
-          top: -48px;
-        }
-        [dir=rtl] #create-multipack-tab-button-wrapper {
-          position: absolute;
-          left: 0px;
-          right: auto;
-          top: -48px;
-        }
-        #datapack-installed-tab-wrapper {
-          position: absolute;
-          right: 0px;
-          top: -48px;
-        }
-        [dir=rtl] #datapack-installed-tab-wrapper {
-          position: absolute;
-          left: 0px;
-          right: auto;
-          top: -48px;
-        }
-        </style>
+    .bPageTitle .pageType {
+      font-size: .75rem;
+      line-height: 1.25;
+      color: #54698d;
+      text-transform: uppercase;
+      font-family: "Salesforce Sans", Helvetica, Arial;
+      margin-left: 14px;
+    }
+    .bPageTitle .titleSeparatingColon {
+      display: none;
+    }
+    .bPageTitle .pageDescription {
+      font-size: 1.25rem;
+      font-family: "Salesforce Sans", Arial, sans-serif;
+      color: #16325c;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-left: 14px;
+    }
+    html.Theme4d body,
+    html.Theme4u body {
+        margin: 0;
+    }
+
+    html:not(.Theme3) body.sfdcBody {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .bodyDiv .noSidebarCell {
+        padding: 0;
+    }
+    [dir=rtl]  .bPageTitle .pageType {
+      margin-left: auto;
+      margin-left: 14px;
+    }
+    [dir=rtl]  .bPageTitle .pageDescription {
+      margin-left: auto;
+      margin-left: 14px;
+    }
+    #create-multipack-tab-button-wrapper {
+      position: absolute;
+      right: 1rem;
+      top: -5.5rem;
+    }
+    [dir=rtl] #create-multipack-tab-button-wrapper {
+      position: absolute;
+      left: 1rem;
+      right: auto;
+      top: -5.5rem;
+    }
+    #datapack-installed-tab-wrapper {
+      position: absolute;
+      right: 1rem;
+      top: -5.5rem;
+    }
+    [dir=rtl] #datapack-installed-tab-wrapper {
+      position: absolute;
+      left: 1rem;
+      right: auto;
+      top: -5.5rem;
+    }
+
+    #datapack-installed-group-header--name-text-sort,
+    #datapack-published-group-header--name-text-sort {
+      display: flex !important;
+    }
+    </style>
+      <script>
+        (function () {
+            document.documentElement.classList.add('{!$User.UIThemeDisplayed}');
+        })();
+    </script>
   </head>
 
-  <body class="{!$User.UIThemeDisplayed}">
-    <div ng-app="datapackshome" class="via-slds ng-cloak">
+  <body xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+    <div ng-app="datapackshome" class="via-slds ng-cloak  {!$User.UIThemeDisplayed}">
       <apex:sectionHeader subtitle="{{ ::'DataPacksHomeHome' | localize:'DataPacks' }}"
                           title="{{ ::'DataPacksHomeTitle' | localize:'Vlocity' }}"/>
 

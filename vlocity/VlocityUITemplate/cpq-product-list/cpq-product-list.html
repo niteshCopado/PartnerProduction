@@ -21,8 +21,11 @@
             ng-if="isLoaded">
         </vloc-card>
 
+        <div class="slds-text-align_center slds-p-vertical_small" ng-repeat="msg in payload.messages">
+            <span ng-if="msg.code === importedScope.productConfigErrorCode">{{msg.message}}</span>
+        </div>
         <div class="slds-text-align_center slds-m-vertical_medium cpq-no-products-msg" ng-show="!records && isLoaded">
-            {{::importedScope.customLabels.CPQProductsNotAvailable}}
+            <span ng-if="payload.messages[0].code !== importedScope.productConfigErrorCode">{{::importedScope.customLabels.CPQProductsNotAvailable}} </span>
         </div>
 
         <div class="cpq-next-product slds-col slds-text-align_center slds-m-vertical_medium"  ng-if="session.nextProducts">

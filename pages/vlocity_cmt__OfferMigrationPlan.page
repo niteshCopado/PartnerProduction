@@ -5,7 +5,6 @@
             <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.ConsoleAdminCss)}" />
             <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.ConsoleAdminSearchCss)}" />
 
-            <script type="text/javascript" src="{!URLFOR($Resource.JQUERYJS)}"></script>
             <script type="text/javascript" src="/support/console/31.0/integration.js"></script>
             <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
             <script type="text/javascript" src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
@@ -20,7 +19,6 @@
             </div>
         </body>
         <script type="text/javascript">
-                j$ = jQuery.noConflict();
 
                 var remoteActions = {
                     invokeMethod: {
@@ -38,7 +36,7 @@
                 }
 
                 function bindIframeEvents(action, data) {
-                    var scope = angular.element(j$('#console-admin')).scope();
+                    var scope = angular.element($('#console-admin')).scope();
                     scope.$apply(function() {
                         scope.evalIframeEvents(action, data);
                     });

@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
     <apex:includeScript value="/soap/ajax/31.0/connection.js" />
     <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
-    <script src="{!URLFOR($Resource.vlocity_assets, '/javascripts/vlocity.js')}"></script>
+    <script type="text/javascript" src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
     <script src="{!$Resource.SldsAngular}"></script>
     <script type="text/javascript" src="{!URLFOR($Resource.XomThorIntegration)}"></script>
     <script src="{!URLFOR($Resource.XOMNodeView)}"></script>
@@ -407,8 +407,8 @@
                     isDraftOrder: '{!$RemoteAction.SimpleDecompositionController.isDraftOrder}',
                     thorInfo:'{!$RemoteAction.SimpleDecompositionController.thorInfo}',
                     getMappingDetails:'{!$RemoteAction.SimpleDecompositionController.getMappingDetails}',
-                    getCustomLabels: "{!$RemoteAction.SimpleDecompositionController.getCustomLabels}"
-                    
+                    getCustomLabels: "{!$RemoteAction.SimpleDecompositionController.getCustomLabels}",
+                    getOrderDetails: '{!$RemoteAction.SimpleDecompositionController.getOrderDetails}'
                 };
 
                 var app = angular.module('decomposeApp', ["vlocity","ngSanitize", "forceng","mgcrea.ngStrap",'ngAnimate', 'vloc.xomNodeView', 'thorIntegration']);
@@ -479,10 +479,14 @@
                                                                                             }
 
                                                                                             // something is wrong, check if the order is in Draft status
-                                                                                            return originalRemoteActions['isDraftOrder'](recordId).then(function(isDraftOrder) 
+                                                                                            return originalRemoteActions['getOrderDetails'](recordId).then(function(orderDetails)
                                                                                             {
-                                                                                                if(isDraftOrder) {
+                                                                                                let frStatus = orderDetails['FulfilmentStatus__c'];
+                                                                                                if(frStatus == "Draft") {
                                                                                                     return {sucCode:"10", message:"Order is not yet decomposed.", type:"info"};
+                                                                                                }
+                                                                                                if(frStatus == "Rejected") {
+                                                                                                    return {sucCode:"10", message:"Order is rejected.", type:"error"};
                                                                                                 }
                                                                                                 return {sucCode:"1", message:"Order is still processing...", type:"info"};    
                                                                                             });

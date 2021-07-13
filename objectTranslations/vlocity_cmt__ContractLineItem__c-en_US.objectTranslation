@@ -31,6 +31,11 @@
         <relationshipLabel><!-- Order Products (Billing Account) --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Contract Group --></label>
+        <name>vlocity_cmt__ContractGroupId__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Contract --></label>
         <name>vlocity_cmt__ContractId__c</name>
         <relationshipLabel><!-- Contract Line Items --></relationshipLabel>
@@ -170,6 +175,11 @@
     <fields>
         <label><!-- Quantity --></label>
         <name>vlocity_cmt__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line Item --></label>
+        <name>vlocity_cmt__QuoteLineItem__c</name>
+        <relationshipLabel><!-- Contract Lines --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Recurring Calculated Price --></label>

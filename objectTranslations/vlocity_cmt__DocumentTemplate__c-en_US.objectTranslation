@@ -105,6 +105,10 @@
         <name>vlocity_cmt__IsPublished__c</name>
     </fields>
     <fields>
+        <label><!-- Is Section Ids Replaced --></label>
+        <name>vlocity_cmt__IsSectionIdsReplaced__c</name>
+    </fields>
+    <fields>
         <label><!-- Is Signature Required --></label>
         <name>vlocity_cmt__IsSignatureRequired__c</name>
     </fields>

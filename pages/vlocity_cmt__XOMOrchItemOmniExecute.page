@@ -8,9 +8,7 @@
        <script src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
         
         <apex:stylesheet value="{!$Resource.vlocity_cmt__PlanViewCss}"/>
-        <script src="{!$Resource.JQuery_1_5_1}"></script>
         <script src="{!$Resource.Cometd_2_2_0}"></script>
-        <script src="{!$Resource.JQueryCometd_2_2_0}"></script>
         <script src="{!$Resource.core}"></script>
         <script src="{!$Resource.communications}"></script>
         <apex:includeLightning />

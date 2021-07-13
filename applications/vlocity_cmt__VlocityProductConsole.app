@@ -76,6 +76,7 @@
     <tabs>vlocity_cmt__AttributeCategory__c</tabs>
     <tabs>vlocity_cmt__OfferMigrationPlan__c</tabs>
     <tabs>vlocity_cmt__Picklist__c</tabs>
+    <tabs>vlocity_cmt__ProductRelationship__c</tabs>
     <tabs>vlocity_cmt__Vlocity_String_Translations</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>vlocity_cmt__Vlocity_Product_Console_UtilityBar</utilityBar>
@@ -97,6 +98,9 @@
         </mappings>
         <mappings>
             <tab>vlocity_cmt__Picklist__c</tab>
+        </mappings>
+        <mappings>
+            <tab>vlocity_cmt__ProductRelationship__c</tab>
         </mappings>
         <mappings>
             <tab>vlocity_cmt__Vlocity_String_Translations</tab>

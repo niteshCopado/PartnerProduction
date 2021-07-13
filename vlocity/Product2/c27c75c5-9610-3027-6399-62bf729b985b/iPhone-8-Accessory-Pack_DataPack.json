@@ -12,7 +12,7 @@
                 "Code__c": "ACAT_ACC",
                 "Name": "Accessories",
                 "displaySequence": 50,
-                "id": "a0J4W000013q1JzUAI",
+                "id": "a0J5Y00000i3dhfUAA",
                 "messages": [
                 ],
                 "productAttributes": {
@@ -20,7 +20,7 @@
                     ],
                     "records": [
                         {
-                            "attributeId": "a0K4W00000YL9bmUAD",
+                            "attributeId": "a0K5Y00000iUB9jUAG",
                             "cloneable": true,
                             "code": "ATT_DT_AT",
                             "dataType": "text",
@@ -41,7 +41,7 @@
                             "values": null
                         },
                         {
-                            "attributeId": "a0K4W00000YL9brUAD",
+                            "attributeId": "a0K5Y00000iUB9oUAG",
                             "cloneable": true,
                             "code": "ATT_DURATION",
                             "dataType": "text",
@@ -95,7 +95,7 @@
     "%vlocity_namespace%__EndDate__c": "",
     "%vlocity_namespace%__EndOfLifeDate__c": "",
     "%vlocity_namespace%__FulfilmentStartDate__c": "2017-11-01T07:00:00.000Z",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "4aee8694-0259-5e02-5fea-5bf34edcf182",
     "%vlocity_namespace%__GlobalKey__c": "c27c75c5-9610-3027-6399-62bf729b985b",
     "%vlocity_namespace%__HeaderData__c": "",
     "%vlocity_namespace%__HelpText__c": "",
@@ -113,6 +113,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/f4e6eed7d6e0238df98b1913de6a901d",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
+    "%vlocity_namespace%__ObjectTypeName__c": "Accessory Product Spec",
     "%vlocity_namespace%__ParentClassId__c": "",
     "%vlocity_namespace%__ProductChildItem__c": "iPhone-8-Accessory-Pack_ProductChildItems.json",
     "%vlocity_namespace%__ProductSpecId__c": "",
@@ -130,7 +131,7 @@
     "%vlocity_namespace%__Type__c": "None",
     "%vlocity_namespace%__VendorAccountId__c": "",
     "%vlocity_namespace%__VersionEndDateTime__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "%vlocity_namespace%__VersionStartDateTime__c": "",
     "CanUseQuantitySchedule": false,
     "CanUseRevenueSchedule": false,

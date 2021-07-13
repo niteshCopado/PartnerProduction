@@ -331,6 +331,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__NoLineAfterSection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, new line will not be added after the section</description>
+        <externalId>false</externalId>
+        <label>Remove Line After Section</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ReconciledSectionContent__c</fullName>
         <deprecated>false</deprecated>
         <description>The section content creates as a result of its equivalent reconciled section from the Word document</description>

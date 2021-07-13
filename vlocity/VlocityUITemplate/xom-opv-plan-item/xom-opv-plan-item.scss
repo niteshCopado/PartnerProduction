@@ -15,6 +15,24 @@
     overflow: hidden;
     height: 35px;
 }
+.PONRIcon{
+    float:right;
+}
+.PONRIcon span:first-child{
+    margin-right:-29px;
+}
+.PONRIcon span:first-child svg{
+    width: .9rem;
+    height: 1rem;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    fill:black;
+}
+.PONRIcon span:nth-child(2) svg{
+    fill: red;
+    width: 2em;
+    height: 2em;
+}
 .TaskAction{
     display:inline-block;
 }

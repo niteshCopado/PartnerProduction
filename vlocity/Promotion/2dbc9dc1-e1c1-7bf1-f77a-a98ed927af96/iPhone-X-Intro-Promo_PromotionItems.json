@@ -8,12 +8,14 @@
         "%vlocity_namespace%__Description__c": "",
         "%vlocity_namespace%__EffectiveFromDate__c": "2018-01-01T08:00:00.000Z",
         "%vlocity_namespace%__EffectiveUntilDate__c": "",
+        "%vlocity_namespace%__GlobalGroupKey__c": "",
         "%vlocity_namespace%__IsActive__c": true,
         "%vlocity_namespace%__IsUndoable__c": false,
         "%vlocity_namespace%__MaxQuantity__c": 1,
         "%vlocity_namespace%__MinQuantity__c": 1,
         "%vlocity_namespace%__OfferId__c": "",
         "%vlocity_namespace%__ProductHierarchyGlobalKeyPath__c": "2190bb6b-497b-9300-4345-018ef7d83e2b",
+        "%vlocity_namespace%__ProductHierarchyGroupKeyPath__c": "",
         "%vlocity_namespace%__ProductHierarchyPath__c": {
             "%vlocity_namespace%__GlobalKey__c": "2190bb6b-497b-9300-4345-018ef7d83e2b",
             "VlocityDataPackType": "VlocityLookupMatchingKeyObject",
@@ -37,7 +39,7 @@
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__UndoableMessage__c": "",
         "%vlocity_namespace%__UpdateScope__c": "Update Item and Child Items",
-        "Name": "PromotionItem__ca354W0000031DNQ",
+        "Name": "PromotionItem__ca355Y000008uXyz",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__PromotionItem__c",
         "VlocityRecordSourceKey": "%vlocity_namespace%__PromotionItem__c/%vlocity_namespace%__Promotion__c/2dbc9dc1-e1c1-7bf1-f77a-a98ed927af96/Product2/2190bb6b-497b-9300-4345-018ef7d83e2b"

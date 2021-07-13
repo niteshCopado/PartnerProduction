@@ -27,6 +27,11 @@
         <relationshipLabel><!-- Catalog Product Relationships --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Product --></help>
+        <label><!-- Product Group Key --></label>
+        <name>vlocity_cmt__ProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Promotion --></label>
         <name>vlocity_cmt__PromotionId__c</name>
         <relationshipLabel><!-- Catalog Product Relationships --></relationshipLabel>

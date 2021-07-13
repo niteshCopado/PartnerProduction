@@ -9,6 +9,7 @@ global class JSONAttribute extends vlocity_cmt.JSONRecord {
     global Boolean attributeConfigurable;
     global String attributeId;
     global Boolean autocomplete;
+    global Boolean cacheable;
     global Boolean cloneable;
     global String code;
     global String customTemplate;

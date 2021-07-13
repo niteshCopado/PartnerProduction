@@ -1,7 +1,7 @@
 {
     "%vlocity_namespace%__EffectiveFromDate__c": "2017-10-01",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "5b2c93ea-7d41-28d5-3524-001612d632a0",
     "%vlocity_namespace%__GlobalKey__c": "8e70b1c423aeab63a9e8cd47396fb517",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": false,
@@ -17,7 +17,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/63ba6ae5f8c257f7cdccc385d2a85dca",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "BASE Resource Spec Type",
     "RecordTypeId": {
         "DeveloperName": "ObjectType",

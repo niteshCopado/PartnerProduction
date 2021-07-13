@@ -22,6 +22,10 @@ global class VlocityOrderItemDomainObject {
         get;
         set;
     }
+    global Datetime catalogItemReferenceDateTime {
+        get;
+        set;
+    }
     global List<vlocity_cmt.VlocityOrderProductAttribute> describedBy {
         get;
         set;

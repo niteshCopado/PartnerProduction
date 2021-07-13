@@ -51,6 +51,11 @@
         <relationshipLabel><!-- Promotion Items --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Context Product --></help>
+        <label><!-- Context Product Group Key --></label>
+        <name>vlocity_cmt__ContextProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Context Product --></label>
         <name>vlocity_cmt__ContextProductId__c</name>
         <relationshipLabel><!-- Promotion Items (Context Product Id) --></relationshipLabel>
@@ -66,6 +71,10 @@
     <fields>
         <label><!-- Effective Until --></label>
         <name>vlocity_cmt__EffectiveUntilDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Key --></label>
+        <name>vlocity_cmt__GlobalGroupKey__c</name>
     </fields>
     <fields>
         <label><!-- Active --></label>
@@ -89,8 +98,17 @@
         <relationshipLabel><!-- Promotion Items (Offer Product Id) --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Offer Product --></help>
+        <label><!-- Offer Product Group Key --></label>
+        <name>vlocity_cmt__OfferProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Product Hierarchy Global Key Path --></label>
         <name>vlocity_cmt__ProductHierarchyGlobalKeyPath__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Hierarchy Group Key Path --></label>
+        <name>vlocity_cmt__ProductHierarchyGroupKeyPath__c</name>
     </fields>
     <fields>
         <label><!-- Product Hierarchy Path --></label>

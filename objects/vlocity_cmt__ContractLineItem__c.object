@@ -458,6 +458,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ContractGroupId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract Group</label>
+        <referenceTo>vlocity_cmt__ContractGroup__c</referenceTo>
+        <relationshipLabel>Contract Lines</relationshipLabel>
+        <relationshipName>ContractLines</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ContractId__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -833,6 +846,19 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__QuoteLineItem__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Quote Line Item</label>
+        <referenceTo>QuoteLineItem</referenceTo>
+        <relationshipLabel>Contract Lines</relationshipLabel>
+        <relationshipName>ContractLines</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__RecurringCalculatedPrice__c</fullName>

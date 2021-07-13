@@ -14,6 +14,11 @@
         <name>vlocity_cmt__GlobalKey__c</name>
     </fields>
     <fields>
+        <help><!-- Version Group Key Of Product --></help>
+        <label><!-- Product Group Key --></label>
+        <name>vlocity_cmt__ProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Product --></label>
         <name>vlocity_cmt__ProductId__c</name>
         <relationshipLabel><!-- Product Configuration Procedures --></relationshipLabel>

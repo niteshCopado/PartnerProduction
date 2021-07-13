@@ -377,6 +377,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ExecutionSequence__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Execution Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Filter__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -395,6 +407,16 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__InvokeMethodInput__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Input parameter that would be passed on to the InvokeMethodName__c at runtime.</description>
+        <externalId>false</externalId>
+        <label>Invocation Method Input</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__InvokeMethodName__c</fullName>
@@ -422,6 +444,15 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Is Seed Action</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__IsStateDefaultAction__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>IsStateDefaultAction</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -588,6 +619,28 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>vlocity_cmt__VlocityStateModelVersionId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Vlocity State Model Version</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>vlocity_cmt__VlocityStateModelVersion__c.vlocity_cmt__StateModelId__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.vlocity_cmt__StateModelId__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>vlocity_cmt__VlocityStateModelVersion__c</referenceTo>
+        <relationshipLabel>Vlocity Actions</relationshipLabel>
+        <relationshipName>VlocityStateModelVersionActions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
     <label>Vlocity Action</label>
     <listViews>
         <fullName>Account_Actions</fullName>
@@ -605,6 +658,8 @@
     </listViews>
     <listViews>
         <fullName>Vlocity_CLM_Actions</fullName>
+        <columns>vlocity_cmt__DisplayLabel__c</columns>
+        <columns>vlocity_cmt__DisplaySequence__c</columns>
         <columns>NAME</columns>
         <columns>vlocity_cmt__IsActive__c</columns>
         <columns>vlocity_cmt__ApplicableTypes__c</columns>
@@ -612,6 +667,7 @@
         <columns>vlocity_cmt__StateId__c</columns>
         <columns>vlocity_cmt__IsSeedAction__c</columns>
         <columns>vlocity_cmt__DisplayOn__c</columns>
+        <columns>vlocity_cmt__LinkType__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>vlocity_cmt__ApplicableTypes__c</field>
@@ -627,6 +683,7 @@
         <columns>vlocity_cmt__IsActive__c</columns>
         <columns>vlocity_cmt__ApplicableTypes__c</columns>
         <columns>vlocity_cmt__LinkType__c</columns>
+        <columns>vlocity_cmt__DisplaySequence__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

@@ -8,7 +8,7 @@ vlocity.cardframework.registerModule
             if(customTaskExecUrl) {
                 url = customTaskExecUrl;
                 console.log('customTaskExecUrl', customTaskExecUrl);
-                url=url.toString().replace("{0}",itemId);
+                url=url.toString().replace("ContextId/{0}","ContextId/"+itemId);
             } else {
                 var isExternalId = !isNaN(parseFloat(itemId)) && isFinite(itemId);
                 if(!isExternalId)

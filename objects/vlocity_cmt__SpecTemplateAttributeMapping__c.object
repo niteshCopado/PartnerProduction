@@ -156,6 +156,19 @@
     <enableStreamingApi>false</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__GlobalKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Spec Template Attribute Mapping globally unique identifier which is used across Salesforce orgs and potentially within other systems. Any globally unique identifier can be used when migrated from other initiating systems.</description>
+        <externalId>true</externalId>
+        <label>Global Key</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__MappedAttributeId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>

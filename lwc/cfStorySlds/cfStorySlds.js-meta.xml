@@ -5,22 +5,8 @@
                   
                   <isExposed>true</isExposed>
                   
-                  <masterLabel xmlns="">story-slds</masterLabel>
+                  <masterLabel xmlns="">Vlocity Story Component</masterLabel>
                   
                   <runtimeNamespace xmlns="">vlocity_cmt</runtimeNamespace>
                   
-                  <targets>
-                  
-                      <target>lightning__AppPage</target>
-                      
-                      <target>lightning__HomePage</target>
-                      
-                      <target>lightning__RecordPage</target>
-                      
-                  </targets>
-                  <targetConfigs> 
-                      <targetConfig targets="lightning__AppPage">
-                      <property name="recordId" type="String"  />
-                        </targetConfig>
-                     </targetConfigs>
                 </LightningComponentBundle>

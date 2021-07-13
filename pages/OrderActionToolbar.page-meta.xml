@@ -6,7 +6,7 @@
     <label>OrderActionToolbar</label>
     <packageVersions>
         <majorNumber>900</majorNumber>
-        <minorNumber>125</minorNumber>
+        <minorNumber>377</minorNumber>
         <namespace>vlocity_cmt</namespace>
     </packageVersions>
 </ApexPage>

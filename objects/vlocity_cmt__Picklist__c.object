@@ -388,9 +388,9 @@
                     <label>Draft</label>
                 </value>
                 <value>
-                    <fullName>Deployed</fullName>
+                    <fullName>Released</fullName>
                     <default>false</default>
-                    <label>Deployed</label>
+                    <label>Released</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

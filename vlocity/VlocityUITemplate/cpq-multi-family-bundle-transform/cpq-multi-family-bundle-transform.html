@@ -3,23 +3,23 @@
         <div ng-if="!records" class="slds-align_absolute-center">
             {{::importedScope.customLabels.CPQNoResultsFound}}
         </div>
-        <div ng-if="importedScope.isSelectionListShown && records">
-            <div class="slds-p-bottom_medium">
-                <div class="cpq-multi-family-bundle-heading"><b>{{::importedScope.customLabels.CPQSelectExistingOfferToReplace}}</b></div>
-            </div>
-            <div>
-                <fieldset class="slds-form-element">
-                    <div class="slds-form-element__control">
-                        <div class="slds-checkbox cpq-replace-options-checkbox" ng-repeat="item in records">
-                            <input id="{{item.itemId}}" ng-value="item.productId" type="checkbox" ng-click="importedScope.selectedMultiBundleList(item)" />
-                            <label class="slds-checkbox__label" for="{{item.itemId}}">
-                            <span class="slds-checkbox_faux"></span>
-                            <span class="slds-form-element__label cpq-large-name-text-wrap"  ng-attr-title="{{importedScope.getProductTitle(item)}}" cpq-translate="Product2.Name">{{item.productName}}</span>
-                            </label>
+        <div ng-show="importedScope.isSelectionListShown && records">
+                <div class="slds-p-bottom_medium">
+                    <div class="cpq-multi-family-bundle-heading"><b>{{::importedScope.customLabels.CPQSelectExistingOfferToReplace}}</b></div>
+                </div>
+                <div>
+                    <fieldset class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-checkbox cpq-replace-options-checkbox" ng-repeat="item in records">
+                                <input id="{{item.itemId}}" ng-value="item.productId" type="checkbox" ng-click="importedScope.selectedMultiBundleList(item)" />
+                                <label class="slds-checkbox__label" for="{{item.itemId}}">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label cpq-large-name-text-wrap"  ng-attr-title="{{importedScope.getProductTitle(item)}}" cpq-translate="Product2.Name">{{item.productName}}</span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
-            </div>
+                    </fieldset>
+                </div>
         </div>
         <!--Screen 3-->
         <div ng-show="!importedScope.isSelectionListShown && !importedScope.selectBundleTransformSection">
@@ -83,13 +83,13 @@
                         </div>
                     </div>
                     <div ng-show="transformItem.record.info.Action.selectedActionType.value =='Replace'" class="cpq-next-product slds-col slds-m-vertical_medium slds-text-align_center" ng-if="transformItem.record.response.actions.nextproducts">
-                        <div class="slds-spinner_container" ng-show="loadingMore">
+                        <div class="slds-spinner_container" ng-show="transformItem.showLoader">
                             <div class="slds-spinner_brand slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
                                 <div class="slds-spinner__dot-a"></div>
                                 <div class="slds-spinner__dot-b"></div>
                             </div>
                         </div>
-                        <a ng-click="importedScope.nextPage(transformItem)" ng-hide="loadingMore || !isLoaded">
+                        <a ng-click="importedScope.nextPage(transformItem)" ng-hide="transformItem.showLoader">
                             {{::importedScope.customLabels.CPQLoadMore}}
                         </a>
                     </div>
@@ -133,13 +133,13 @@
                         </div>
                     </div>
                     <div class="cpq-next-product slds-col slds-m-vertical_medium slds-text-align_center" ng-if="targetMultiPlayProducts.record.response.actions.nextproducts">
-                        <div class="slds-spinner_container" ng-show="loadingMore">
+                        <div class="slds-spinner_container" ng-show="targetMultiPlayProducts.showLoader">
                             <div class="slds-spinner_brand slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
                                 <div class="slds-spinner__dot-a"></div>
                                 <div class="slds-spinner__dot-b"></div>
                             </div>
                         </div>
-                        <a ng-click="importedScope.nextPage(targetMultiPlayProducts)" ng-hide="loadingMore || !isLoaded">
+                        <a ng-click="importedScope.nextPage(targetMultiPlayProducts)" ng-hide="targetMultiPlayProducts.showLoader">
                             {{::importedScope.customLabels.CPQLoadMore}}
                         </a>
                     </div>

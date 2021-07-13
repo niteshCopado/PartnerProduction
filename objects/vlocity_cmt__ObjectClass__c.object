@@ -321,9 +321,9 @@
                     <label>Draft</label>
                 </value>
                 <value>
-                    <fullName>Deployed</fullName>
+                    <fullName>Released</fullName>
                     <default>false</default>
-                    <label>Deployed</label>
+                    <label>Released</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -459,10 +459,6 @@
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
             <values>
-                <fullName>Deployed</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Draft</fullName>
                 <default>false</default>
             </values>
@@ -486,11 +482,11 @@
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
             <values>
-                <fullName>Deployed</fullName>
+                <fullName>Draft</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Draft</fullName>
+                <fullName>Released</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -1,5 +1,4 @@
 <apex:page standardController="Account" extensions="vlocity_cmt.VFPageControllerBase" showHeader="false" sidebar="false">
-    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/sfboot.min.css')}"/>
     <apex:includeLightning />
 	<script type="text/javascript">
 

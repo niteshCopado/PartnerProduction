@@ -1,12 +1,11 @@
 <apex:page standardController="vlocity_cmt__EntityFilter__c" standardStylesheets="false" extensions="vlocity_cmt.AdminUtilitiesController" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false">
 	<html xmlns:ng="http://angularjs.org" ng-app="filterConditionsApp" class="ng-cloak" style="height:100%" > 
 		<head>
-			<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__jquery_2_2_4, '/jquery.js')}"/>
+			<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
     		<apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__Jquery, '/ui/jquery-ui-1.9.1.custom.min.js')}"/>
 		   	<apex:includeScript value="/soap/ajax/31.0/connection.js" />
-			<apex:includeScript value="{!$Resource.vlocity_cmt__AngularJS}"/>
 		   	<apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
-		   	<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/bootstrap.min.css')}"/>
+		   	<apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/css/bootstrap.min.css')}"/>
 		   	<apex:includeScript value="{!$Resource.vlocity_cmt__FieldLookupAngDirective}"/>
 		   	<apex:includeScript value="{!$Resource.vlocity_cmt__AttributeLookupAngDirective}"/>
 
@@ -90,7 +89,6 @@
 		   	</style>
 		   	<script>
 		   		sforce.connection.sessionId = '{!$Api.Session_ID}';
-		   		j$ = jQuery.noConflict();
                 
                 function getObjectFieldsDescribe(objectNames, callback){ 
                 	var parameters = {};
@@ -268,7 +266,7 @@
 		        	var factory = {};
                     
                     factory.getObjectFieldsDescribe = function(objectNames) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getObjectFieldsDescribe(objectNames, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -283,7 +281,7 @@
                     };
                     
                     factory.getFilterConditions = function(parentId) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getFilterConditions(parentId, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -298,7 +296,7 @@
                     };
                     
                     factory.saveFilterConditions = function(settingsToUpsert) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             saveFilterConditions(settingsToUpsert, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -313,7 +311,7 @@
                     };
                     
                     factory.deleteFilterConditions = function(settingIdsToDelete) {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             deleteFilterConditions(settingIdsToDelete, function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -328,7 +326,7 @@
                     };
                     
                     factory.getFilterConditionTypes = function() {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getFilterConditionTypes(function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -343,7 +341,7 @@
                     };
 
                     factory.getFilterConditionFieldTypes = function() {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getFilterConditionFieldTypes(function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -358,7 +356,7 @@
                     };
                     
                     factory.getEntityFilterList = function() {
-                            var deferred = new j$.Deferred();
+                            var deferred = new $.Deferred();
                             getEntityFilterList(function(result){  
                                 $rootScope.$apply(function(){ 
                                     var sresult =[];
@@ -373,7 +371,7 @@
                     };
                     
                     factory.getObjectInfo = function(objectId){
-                    	var deferred = new j$.Deferred();
+                    	var deferred = new $.Deferred();
 						getObjectInfo(objectId, function(result){  
 						    $rootScope.$apply(function(){ 
 						        var sresult =[];
@@ -389,7 +387,7 @@
                     }
 
                     factory.getAllObject = function(){
-                        var deferred = new j$.Deferred();
+                        var deferred = new $.Deferred();
                         getAllObject(function(result){  
                             $rootScope.$apply(function(){ 
                                 var sresult =[];
@@ -407,7 +405,7 @@
                     return factory;
 		        });
 		        
-				filterConditionsApp.controller('filterConditionsAppController', function ($scope, $modal, $q, fieldMapperService, attributeLookupService) {
+				filterConditionsApp.controller('filterConditionsAppController', function ($scope, $uibModal, $q, fieldMapperService, attributeLookupService) {
 					$scope.filterConditionsList = [];
 					$scope.filterOperators = ['=','≠','<','≤','>','≥','starts with','ends with','contains','not contains','in','not in','of type','not of type','contains all','contains any'];
 					$scope.nsPrefix = '{!nsPrefix}';
@@ -648,26 +646,26 @@
 					};
 					
 					$scope.displayWaitDialog = function(){
-						var over = j$('<div id="contentOverlay"><span class="fullHeight"></span>' +
+						var over = $('<div id="contentOverlay"><span class="fullHeight"></span>' +
 								            '<img id="contentLoading" src="'+'{!$Resource.WAITGIF}'+'">' +
 								            '</div>');
-						var div = j$('#idFiltersContent');
+						var div = $('#idFiltersContent');
 						over.css('top', div.offset().top);
 						over.css('left', div.offset().left);
 						over.css('width', div.width());
 						over.css('height', div.height());
-				        j$(over).appendTo(div);
+				        $(over).appendTo(div);
 
 					}
 					
 					$scope.removeWaitDialog = function(){
-						j$('#contentOverlay').remove();
+						$('#contentOverlay').remove();
 						
 					}
 					
 					$scope.openFieldSelection = function (elementIndex) {
 						$scope.selectedItemIndex = elementIndex;
-						var modalInstance = $modal.open({
+						var modalInstance = $uibModal.open({
 						  templateUrl: 'fieldSelectionModal.html',
 						  controller: FieldModalInstanceCtrl,
 						  resolve: {
@@ -688,7 +686,7 @@
 					
 					$scope.openAttributeSelection = function (elementIndex) {
 						$scope.selectedItemIndex = elementIndex;
-						var modalInstance = $modal.open({
+						var modalInstance = $uibModal.open({
 						  templateUrl: 'attributeSelectionModal.html',
 						  controller: AttributeModalInstanceCtrl,
 						  resolve: {
@@ -709,7 +707,7 @@
 						});
 					};
                     $scope.filterObjectFieldSelection = function (index) {
-                        var modalInstance = $modal.open({
+                        var modalInstance = $uibModal.open({
                           templateUrl: 'fieldSelectionModal.html',
                           controller: FilterFieldModalCtrl,
                           resolve: {
@@ -735,7 +733,7 @@
                     };
 
                     $scope.relatedObjectFieldSelection = function (index) {
-                        var modalInstance = $modal.open({
+                        var modalInstance = $uibModal.open({
                           templateUrl: 'fieldSelectionModal.html',
                           controller: RelatedObjectFieldModalCtrl,
                           resolve: {
@@ -796,7 +794,7 @@
                         }
                     }
                 });
-                var RelatedObjectFieldModalCtrl = function ($scope, $modalInstance, fieldLookupService, items) {
+                var RelatedObjectFieldModalCtrl = function ($scope, $uibModalInstance, fieldLookupService, items) {
                     $scope.selectedItem = items[0];
                     $scope.nsPrefix = items[1];
                     $scope.selectedRelatedObjectField = items[2];
@@ -808,15 +806,15 @@
                     $scope.selectedFields = [];
                     
                     $scope.save = function () {
-                        $modalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
+                        $uibModalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
                     };
                 
                     $scope.cancel = function () {
-                        $modalInstance.dismiss('cancel');
+                        $uibModalInstance.dismiss('cancel');
                         
                     };
                 };
-				var FilterFieldModalCtrl = function ($scope, $modalInstance, fieldLookupService, items) {
+				var FilterFieldModalCtrl = function ($scope, $uibModalInstance, fieldLookupService, items) {
                     $scope.selectedItem = items[0];
                     $scope.nsPrefix = items[1];
                     $scope.selectedfilterObjectField = items[2];
@@ -828,15 +826,15 @@
                     $scope.selectedFields = [];
                     
                     $scope.save = function () {
-                        $modalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
+                        $uibModalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
                     };
                 
                     $scope.cancel = function () {
-                        $modalInstance.dismiss('cancel');
+                        $uibModalInstance.dismiss('cancel');
                         
                     };
                 };
-				var FieldModalInstanceCtrl = function ($scope, $modalInstance, fieldLookupService, items) {
+				var FieldModalInstanceCtrl = function ($scope, $uibModalInstance, fieldLookupService, items) {
 					$scope.selectedItem = items[0];
 					$scope.nsPrefix = items[1];
 					$scope.objectName = $scope.selectedItem[$scope.nsPrefix + 'EntityFilterId__r'][$scope.nsPrefix + 'FilterOnObjectName__c'];
@@ -844,16 +842,16 @@
 					$scope.selectedFields = [];
 					
 					$scope.save = function () {
-						$modalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
+						$uibModalInstance.close(fieldLookupService.parseFields($scope.selectedFields));
 					};
 				
 					$scope.cancel = function () {
-						$modalInstance.dismiss('cancel');
+						$uibModalInstance.dismiss('cancel');
 						
 					};
 				};
 				
-				var AttributeModalInstanceCtrl = function ($scope, $modalInstance, attributeLookupService, items) {
+				var AttributeModalInstanceCtrl = function ($scope, $uibModalInstance, attributeLookupService, items) {
 					$scope.selectedItem = items[0];
 					$scope.nsPrefix = items[1];
 					$scope.objectName = $scope.selectedItem[$scope.nsPrefix + 'EntityFilterId__r'][$scope.nsPrefix + 'FilterOnObjectName__c'];;
@@ -864,11 +862,11 @@
 					$scope.save = function () {
 						console.log('selected');
 						console.log($scope.selected);
-						$modalInstance.close(attributeLookupService.parseFields($scope.selected));
+						$uibModalInstance.close(attributeLookupService.parseFields($scope.selected));
 					};
 				
 					$scope.cancel = function () {
-						$modalInstance.dismiss('cancel');
+						$uibModalInstance.dismiss('cancel');
 						
 					};
 				};
@@ -975,7 +973,7 @@
 						</table>
 					</div>
 					<div ng-if="filterConditionsList.length == 0">
-						<alert>{!$Label.NoFilters}</alert>
+						<uib-alert>{!$Label.NoFilters}</uib-alert>
 					</div>
 					
 				</div>

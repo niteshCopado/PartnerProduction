@@ -109,12 +109,6 @@
         <label>Bangladesh</label>
     </customValue>
     <customValue>
-        <fullName>BE</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Belgium</label>
-    </customValue>
-    <customValue>
         <fullName>BF</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -257,6 +251,12 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Cote d’Ivoire</label>
+    </customValue>
+    <customValue>
+        <fullName>BE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Belgium</label>
     </customValue>
     <customValue>
         <fullName>CK</fullName>
@@ -811,6 +811,12 @@
         <label>Moldova, Republic of</label>
     </customValue>
     <customValue>
+        <fullName>QA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Qatar</label>
+    </customValue>
+    <customValue>
         <fullName>ME</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -1067,12 +1073,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Paraguay</label>
-    </customValue>
-    <customValue>
-        <fullName>QA</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Qatar</label>
     </customValue>
     <customValue>
         <fullName>RE</fullName>
@@ -1339,6 +1339,12 @@
         <label>Uganda</label>
     </customValue>
     <customValue>
+        <fullName>VE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Venezuela, Bolivarian Republic of</label>
+    </customValue>
+    <customValue>
         <fullName>US</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -1367,12 +1373,6 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Saint Vincent and the Grenadines</label>
-    </customValue>
-    <customValue>
-        <fullName>VE</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Venezuela, Bolivarian Republic of</label>
     </customValue>
     <customValue>
         <fullName>VG</fullName>

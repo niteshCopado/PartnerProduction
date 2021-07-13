@@ -169,6 +169,35 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__Action__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Action</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Created</fullName>
+                    <default>false</default>
+                    <label>Created</label>
+                </value>
+                <value>
+                    <fullName>Discussed</fullName>
+                    <default>false</default>
+                    <label>Discussed</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <label>Resolved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__AssetId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>

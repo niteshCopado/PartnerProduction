@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/6cd10022-1032-7a95-ab27-0dd6791664d4",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Google Pixel2 Accessory Pack",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

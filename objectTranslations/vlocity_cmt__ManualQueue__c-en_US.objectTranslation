@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Active --></label>
+        <name>vlocity_cmt__Active__c</name>
+    </fields>
+    <fields>
         <label><!-- Displayed Fields --></label>
         <name>vlocity_cmt__DisplayedFields__c</name>
     </fields>
@@ -25,12 +29,12 @@
         <label><!-- Queue Type --></label>
         <name>vlocity_cmt__QueueType__c</name>
         <picklistValues>
-            <masterLabel>Least Loaded</masterLabel>
-            <translation><!-- Least Loaded --></translation>
+            <masterLabel>Attributes-Based</masterLabel>
+            <translation><!-- Attributes-Based --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Priority Queue</masterLabel>
-            <translation><!-- Priority Queue --></translation>
+            <masterLabel>Least Loaded</masterLabel>
+            <translation><!-- Least Loaded --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Round Robin</masterLabel>

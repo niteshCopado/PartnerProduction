@@ -25,6 +25,10 @@ global class VlocityTrackingService {
     global static void finishTrackingSession(String trackingKey) {
 
     }
+    @AuraEnabled
+    global static List<String> getTrackingContextFields() {
+        return null;
+    }
     @RemoteAction
     global static Map<String,Object> openInteraction(Map<String,Object> interactionInfo) {
         return null;
@@ -37,6 +41,9 @@ global class VlocityTrackingService {
     }
     @RemoteAction
     global static Map<String,Object> trackJsonList(String trackingDataList) {
+        return null;
+    }
+    global static List<Map<String,Object>> trackOmniAnalytics(List<Map<String,Object>> trackingDataList) {
         return null;
     }
     global static Map<String,Object> trackStringData(String data) {

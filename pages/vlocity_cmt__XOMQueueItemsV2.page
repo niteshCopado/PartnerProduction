@@ -1,13 +1,13 @@
 <apex:page showHeader="true" sidebar="true" standardController="vlocity_cmt__ManualQueue__c" extensions="vlocity_cmt.XOMQueueItemsController" >
-  <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/javascripts/vlocity.js')}"/>
-  <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/bootstrap.min.css')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/css/bootstrap.min.css')}"/>
   <apex:includeScript value="{!$Resource.vlocity_cmt__FieldLookupAngDirective}"/>
   <apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
   <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularStrapJS_2_3_6)}"/><!-- adding  AngularStrapJS_2_3_6 and AngularStrapTplJS_2_3_6 for tooltip-->
   <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularStrapTplJS_2_3_6)}"/>
   <apex:includeScript value="{!$Resource.vlocity_cmt__AttributeLookupAngDirective}"/>
   <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
-  <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/js/bootstrap.min.js')}"/>
+  <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.4.1-dist/js/bootstrap.min.js')}"/>
     <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
     <apex:stylesheet value="{!$Resource.vlocity_cmt__ManualQueueViewCss}"/>
     <script>
@@ -16,7 +16,7 @@
           var remoteActions = {
                           getItems  : {
                                            config : {escape: false},
-                                           action : "{!$RemoteAction.XOMQueueItemsController.getItemsV2}"
+                                           action : "{!$RemoteAction.XOMQueueItemsController.getItemsMerged}"
                                        }, 
                           completeItems : "{!$RemoteAction.XOMQueueItemsController.completeItems}",
                           retryItems : "{!$RemoteAction.XOMQueueItemsController.retryItems}",
@@ -25,8 +25,20 @@
                           getActiveUsers : "{!$RemoteAction.XOMQueueItemsController.getActiveUsers}",
                           getActiveQueueMethod : "{!$RemoteAction.XOMQueueItemsController.getActiveQueue}",
                           assignQueue : "{!$RemoteAction.XOMQueueItemsController.assignQueue}",
-                          redirectURL1: "{!$RemoteAction.XOMQueueItemsController.redirectURL1}"
-                  };
+                          redirectURL1 :  {
+                                           config : {escape: false, buffer: false, timeout: 30000},
+                                           action :  "{!$RemoteAction.XOMQueueItemsController.redirectURL1}"
+                                       },
+                          getMetaData : "{!$RemoteAction.XOMQueueItemsController.getMetaData}",
+                          getActiveQueueWithQuery: {
+                                                        config : {escape: false, buffer: false, timeout: 30000},
+                                                        action :"{!$RemoteAction.XOMQueueItemsController.getActiveQueueWithQuery}"
+                                                    },
+                          getActiveUsersWithQuery: {
+                                                        config : {escape: false, buffer: false, timeout: 30000},
+                                                        action: "{!$RemoteAction.XOMQueueItemsController.getActiveUsersWithQuery}"
+                                                    }
+          };
     </script>
     <script src="{!URLFOR($Resource.ManualQueueView)}"></script>
     <html ng-app = 'manualQueueApp' ng-controller = "manualQueueController" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
@@ -339,8 +351,8 @@
 				                  </span>
 				                </span>
 				                <span class="slds-media__body">
-				                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">{{model.Id}}</span>
-				                  <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{{model.Name}}<span ng-if = "model.Username"> ({{model.Username}})</span></span>
+				                  <span class="slds-listbox__option-text slds-listbox__option-text_entity">{{model.Name}}</span>
+				                  <span class="slds-listbox__option-meta slds-listbox__option-meta_entity"><span ng-if = "model.Username"> ({{model.Username}})</span></span>
 				                </span>
 				              </div>
 				            </li>

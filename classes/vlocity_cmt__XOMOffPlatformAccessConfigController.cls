@@ -10,6 +10,10 @@ global class XOMOffPlatformAccessConfigController {
         get;
     }
     @RemoteAction
+    global static Boolean areThorNamedCredentialsEnabled() {
+        return null;
+    }
+    @RemoteAction
     global static String getOffplatformUrl() {
         return null;
     }
@@ -19,6 +23,10 @@ global class XOMOffPlatformAccessConfigController {
     }
     @RemoteAction
     global static Boolean rotateAccessKeys() {
+        return null;
+    }
+    @RemoteAction
+    global static Object rotateAccessKeysOfNamedCredentials() {
         return null;
     }
     @RemoteAction

@@ -156,6 +156,19 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__Alternate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Alternate</label>
+        <referenceTo>vlocity_cmt__VlocityState__c</referenceTo>
+        <relationshipLabel>Vlocity State Transition (Alternate)</relationshipLabel>
+        <relationshipName>StateTransitionAlternateStates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -176,6 +189,16 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__IsDefaultTransition__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is the checkbox to indicate if the ToState is the default transition from the FromState</description>
+        <externalId>false</externalId>
+        <label>Default Transition</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__StateModelVersionId__c</fullName>
@@ -204,6 +227,32 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>vlocity_cmt__TransitionCompletionCriteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is to determine when the state transition happens. For example, when the mode is set to AllTrue, the transition is effected only when all rules defined for the transition pass.</description>
+        <externalId>false</externalId>
+        <label>State Transition Completion Criteria</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AllTrue</fullName>
+                    <default>false</default>
+                    <label>All True</label>
+                </value>
+                <value>
+                    <fullName>AnyTrue</fullName>
+                    <default>true</default>
+                    <label>Any True</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <label>Vlocity State Transition</label>
     <nameField>
         <label>Vlocity State Transition Name</label>
@@ -212,5 +261,19 @@
     <pluralLabel>Vlocity State Transitions</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>vlocity_cmt__FromStateShouldBeOnTheSameModel</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK(vlocity_cmt__From__c)) &amp;&amp; vlocity_cmt__From__r.vlocity_cmt__StateModelId__c != vlocity_cmt__StateModelVersionId__r.vlocity_cmt__StateModelId__c</errorConditionFormula>
+        <errorDisplayField>vlocity_cmt__From__c</errorDisplayField>
+        <errorMessage>Selected State belongs to a different State Model. Please choose a State from the current State Model.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>vlocity_cmt__ToStateShouldBeOnTheSameModel</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK(vlocity_cmt__To__c)) &amp;&amp; vlocity_cmt__To__r.vlocity_cmt__StateModelId__c != vlocity_cmt__StateModelVersionId__r.vlocity_cmt__StateModelId__c</errorConditionFormula>
+        <errorDisplayField>vlocity_cmt__To__c</errorDisplayField>
+        <errorMessage>Selected State belongs to a different State Model. Please choose a State from the current State Model.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

@@ -24,6 +24,10 @@
         <label><!-- Relationship Type --></label>
         <name>vlocity_cmt__RelationshipType__c</name>
         <picklistValues>
+            <masterLabel>Child Products from Datastore</masterLabel>
+            <translation><!-- Child Products from Datastore --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Many to Many</masterLabel>
             <translation><!-- Many to Many --></translation>
         </picklistValues>

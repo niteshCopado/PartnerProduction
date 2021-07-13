@@ -71,6 +71,9 @@ global class SecurityChecker {
     global static void canUpdate(Schema.SObjectType objType, List<String> fieldNames) {
 
     }
+    global static Boolean parseSoqlStr(String soqlStr, Map<String,Object> options) {
+        return null;
+    }
 global class AccessException extends Exception {
 }
 global enum OPCODE {APEX_ACCESS, FLS_INSERT, FLS_READ, FLS_UPDATE, OB_DELETE, OB_INSERT, OB_READ, OB_UPDATE}

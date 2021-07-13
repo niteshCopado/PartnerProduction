@@ -1,10 +1,10 @@
-import { FlexCardMixin } from "vlocity_ins/flexCardMixin";
-    import {interpolateWithRegex, interpolateKeyValue, fetchCustomLabels } from "vlocity_ins/utility";
+import { FlexCardMixin } from "vlocity_cmt/flexCardMixin";
+    import {interpolateWithRegex, interpolateKeyValue, fetchCustomLabels } from "vlocity_cmt/utility";
     
           import { LightningElement, api, track } from "lwc";
           
 
-          import pubsub from "vlocity_ins/pubsub";
+          import pubsub from "vlocity_cmt/pubsub";
           
           import data from "./definition";
           export default class cfSampleContactsParent extends FlexCardMixin(LightningElement){

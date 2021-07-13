@@ -155,6 +155,41 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>vlocity_cmt__ProductCompareVersion</fullName>
+        <description>Compare Versions</description>
+        <displayedFields>
+            <field>vlocity_cmt__DisplayText__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__PricingElementId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__EffectiveUntilDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__EffectiveFromDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__PricingElementAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__IsActive__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Price Compare</label>
+    </fieldSets>
     <fields>
         <fullName>vlocity_cmt__BasePriceListId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -269,6 +304,33 @@
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__PriceListName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Price List Name.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__PriceListId__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PriceList</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__PricingElementAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Amount from Pricing Element.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__PricingElementId__r.vlocity_cmt__Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>vlocity_cmt__PricingElementGlobalKey__c</fullName>

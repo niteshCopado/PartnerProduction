@@ -18,12 +18,13 @@
             "VlocityRecordSObjectType": "Product2"
         },
         "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "33ebc2b2-dfc0-3a4a-90d2-d9f8b54b7219",
+        "%vlocity_namespace%__ProductGroupKey__c": "c815d4b4-5811-6d2d-48b9-6234bb030988",
         "%vlocity_namespace%__PromotionId__c": "",
         "%vlocity_namespace%__SequenceNumber__c": "",
         "Name": "Individual Simple Choice Plan",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__CatalogProductRelationship__c",
-        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated-1404802113"
+        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated1539342357"
     },
     {
         "%vlocity_namespace%__CatalogId__c": {
@@ -44,12 +45,13 @@
             "VlocityRecordSObjectType": "Product2"
         },
         "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "67ed74e4-d393-763d-0c45-d71b969f9a7e",
+        "%vlocity_namespace%__ProductGroupKey__c": "d2bc624a-b7f1-55ae-6e55-33d92562c91a",
         "%vlocity_namespace%__PromotionId__c": "",
         "%vlocity_namespace%__SequenceNumber__c": "",
         "Name": "Apple iPhone X",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__CatalogProductRelationship__c",
-        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated-662696409"
+        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated163348016"
     },
     {
         "%vlocity_namespace%__CatalogId__c": {
@@ -70,11 +72,12 @@
             "VlocityRecordSObjectType": "Product2"
         },
         "%vlocity_namespace%__Product2Id__r.%vlocity_namespace%__GlobalKey__c": "ccedb38f-2e6c-5d20-2d50-a53c2db601c8",
+        "%vlocity_namespace%__ProductGroupKey__c": "41884922-e1ba-6462-9200-5db97ac1dc28",
         "%vlocity_namespace%__PromotionId__c": "",
         "%vlocity_namespace%__SequenceNumber__c": "",
         "Name": "Apple iPhone Xs",
         "VlocityDataPackType": "SObject",
         "VlocityRecordSObjectType": "%vlocity_namespace%__CatalogProductRelationship__c",
-        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated-347938258"
+        "VlocityRecordSourceKey": "%vlocity_namespace%__CatalogProductRelationship__c/Generated-1373997703"
     }
 ]

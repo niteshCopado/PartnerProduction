@@ -380,6 +380,16 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__IsSectionIdsReplaced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, indicates that the DOCX contract boundary sections have been processed</description>
+        <externalId>false</externalId>
+        <label>Is Section Ids Replaced</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__IsSignatureRequired__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>

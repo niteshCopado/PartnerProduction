@@ -93,6 +93,10 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     global static Boolean clearAllCache(String orgCache, String sessionCache) {
         return null;
     }
+    @RemoteAction
+    global static String createInteractionTopic(Id accountId, String name, Id contextId, Id interactionId) {
+        return null;
+    }
     @AuraEnabled
     @RemoteAction
     global static Object createLWCBundle(String body) {
@@ -107,6 +111,7 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     global static void deleteCard(vlocity_cmt__VlocityCard__c card) {
 
     }
+    @AuraEnabled
     @RemoteAction
     global static void deleteCardById(String cardId) {
 
@@ -169,7 +174,15 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @RemoteAction
+    global static String getActionsDetailFromId(String sObjType, String sFilterContextId, String displayOn, String linkType) {
+        return null;
+    }
+    @RemoteAction
     global static List<vlocity_cmt__VlocityAction__c> getActionsInfo() {
+        return null;
+    }
+    @AuraEnabled
+    global static vlocity_cmt__VlocityCard__c getActiveCardByName(String Name) {
         return null;
     }
     @RemoteAction
@@ -189,7 +202,22 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @RemoteAction
+    global static List<vlocity_cmt__VlocityCard__c> getAllCardDefinitionsInBatch(Integer offset) {
+        return null;
+    }
+    @RemoteAction
     global static List<vlocity_cmt__VlocityCard__c> getAllCardDefinitions() {
+        return null;
+    }
+    @AuraEnabled
+    global static List<vlocity_cmt__VlocityCard__c> getAllCardsByRecordType(String cardType) {
+        return null;
+    }
+    @AuraEnabled
+    global static List<vlocity_cmt__VlocityCard__c> getAllCardsDetailsByRecordType(String cardType, String scope, List<Map<String,String>> filters) {
+        return null;
+    }
+    global static List<vlocity_cmt__VlocityCard__c> getAllFlexCardDefinitions() {
         return null;
     }
     @AuraEnabled
@@ -206,8 +234,19 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     global static List<vlocity_cmt__VlocityUILayout__c> getAllLayouts() {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<Map<String,String>> getAllObjects() {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static List<ApexClass> getApexClasses() {
+        return null;
+    }
+    @AuraEnabled
+    @RemoteAction
+    global static vlocity_cmt__VlocityCard__c getCardById(String Id) {
         return null;
     }
     @RemoteAction
@@ -218,10 +257,12 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     global static List<vlocity_cmt__VlocityCard__c> getCardDefinitionsForIds(List<Id> Ids) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<vlocity_cmt__VlocityCard__c> getCardsByGlobalKeys(List<String> keys) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static List<vlocity_cmt__VlocityCard__c> getCardsByNames(List<String> cardNames) {
         return null;
@@ -262,6 +303,7 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     global static String getDatasourceQuery(String soqlStmt) {
         return null;
     }
+    @AuraEnabled
     @RemoteAction
     global static Map<String,Map<String,Object>> getFieldsForObject(String interfaceObjectName) {
         return null;
@@ -359,6 +401,10 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
         return null;
     }
     @RemoteAction
+    global static Boolean isAllTriggersOn() {
+        return null;
+    }
+    @RemoteAction
     global static Boolean isCommunity() {
         return null;
     }
@@ -380,6 +426,13 @@ global class CardCanvasController implements vlocity_cmt.VlocityOpenInterface2 {
     }
     @RemoteAction
     global static vlocity_cmt__VlocityUITemplate__c saveTemplate(vlocity_cmt__VlocityUITemplate__c template) {
+        return null;
+    }
+    @RemoteAction
+    global static void setAllTriggers() {
+
+    }
+    global static vlocity_cmt__VlocityCard__c setCardStatus(String id, Boolean status, String cardType) {
         return null;
     }
     @RemoteAction

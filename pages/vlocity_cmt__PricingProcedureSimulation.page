@@ -2,10 +2,8 @@
     <html xmlns:ng="http://angularjs.org" ng-app="pricingSimulationApp" lang="en">
         <head>
             <meta charset="utf-8"/>
-            <apex:includeScript value="{!$Resource.vlocity_cmt__JQUERYJS}"/>
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/javascripts/bootstrap.min.js')}"/>
-            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vstrap2, '/css/styles.css')}"/>
-            <apex:includeScript value="{!$Resource.vlocity_cmt__AngularJS}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}" />
             <apex:includeScript value="{!$Resource.vlocity_cmt__ANGULARBOOT}"/>
         </head>
 
@@ -15,7 +13,12 @@
                 width:100%;
             }
 
+            .vlocity h4 {
+                font-weight: bold;
+            }
+
             .vlocity .table {
+                table-layout: auto;
                 border-collapse: separate;
             }
 
@@ -58,11 +61,11 @@
                 return true;
             }
 
-            function formatDate(str) {
-                const date = new Date(str.replace(/-/g, '/'));
+            function formatDate(date) {
                 return date.getFullYear()
                     + '-' + ('0' + (date.getMonth()+1)).slice(-2)
-                    + '-' + ('0' + date.getDate()).slice(-2);
+                    + '-' + ('0' + date.getDate()).slice(-2)
+                    + ' 00:00:00';
             }
 
             // Bootstraps the angular application to load only after angular is ready (mainly for IE9)
@@ -116,10 +119,9 @@
                 $scope.finalStepSimulationOutputList = $scope.input['outputList'];
                 $scope.variableDataTypeMap = $scope.input['variableDataTypeMap'];
                 $scope.currencySymbol = $scope.input['currencySymbol'];
-
-                $scope.effectiveDate = formatDate($scope.input['effectiveStartDate']);
-                $scope.minDate = formatDate($scope.input['effectiveStartDate']);
-                $scope.maxDate = $scope.input['effectiveEndDate'] ? formatDate($scope.input['effectiveEndDate']) : '';
+                $scope.effectiveDate = new Date($scope.input['effectiveStartDate'].replace(/-/g, '/'));
+                $scope.minDate = new Date($scope.input['effectiveStartDate'].replace(/-/g, '/'));
+                $scope.maxDate = $scope.input['effectiveEndDate'] ? new Date($scope.input['effectiveEndDate'].replace(/-/g, '/')) : '';
                 $scope.useDatesOnly = false;
 
                 if ($scope.input['applicableType']!=null)
@@ -380,7 +382,7 @@
 
                 $scope.getSimulationRate = function()
                 {
-                    var effectiveDate = !$scope.effectiveDate ? null : $scope.effectiveDate + ' 00:00:00';
+                    var effectiveDate = $scope.effectiveDate ? formatDate($scope.effectiveDate) : null;
                     //Invoke the Pricing Service to calculate rates
                     $scope.configMap['configurationName']= $scope.name;
                     $scope.configMap['configurationVersionId']=$scope.configurationVersionId;
@@ -525,10 +527,8 @@
                                     name="{!$Label.CPEffectiveDate}"
                                     ng-change="resetPageDetails()"
                                     placeholder="{!$Label.CPEffectiveDate}"
-                                    min="{{minDate}}"
-                                    max="{{maxDate}}"
-                                    ng-min="{{minDate}}"
-                                    ng-max="{{maxDate}}"
+                                    min="{{minDate | date:'yyyy-MM-dd'}}"
+                                    max="{{maxDate | date:'yyyy-MM-dd'}}"
                                     />
                             </td>
                             <td></td>

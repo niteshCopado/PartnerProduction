@@ -115,6 +115,11 @@
         <relationshipLabel><!-- Product Relationships --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Product --></help>
+        <label><!-- Product Group Key --></label>
+        <name>vlocity_cmt__ProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Related Object Type --></label>
         <name>vlocity_cmt__RelatedObjectTypeId__c</name>
         <relationshipLabel><!-- Product Relationships (Related) --></relationshipLabel>
@@ -123,6 +128,11 @@
         <label><!-- Related Product Qualifying Filter --></label>
         <name>vlocity_cmt__RelatedProductFilterId__c</name>
         <relationshipLabel><!-- Product Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Version Group Key of Related Product --></help>
+        <label><!-- Related Product Group Key --></label>
+        <name>vlocity_cmt__RelatedProductGroupKey__c</name>
     </fields>
     <fields>
         <label><!-- Related Product --></label>

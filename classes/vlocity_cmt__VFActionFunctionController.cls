@@ -10,6 +10,10 @@ global class VFActionFunctionController {
         get;
         set;
     }
+    global String contentVersionId {
+        get;
+        set;
+    }
     global String fileName {
         get;
         set;
@@ -53,6 +57,9 @@ global class VFActionFunctionController {
 
     }
     global void runAddAttachmentMethod() {
+
+    }
+    global void runCreateContentVersionMethod() {
 
     }
 global class ActionFunctionException extends Exception {

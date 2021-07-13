@@ -19,19 +19,23 @@
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
     <enableNewChartsEngine>true</enableNewChartsEngine>
+    <enableOrgHasMobileOfflineEnabled>true</enableOrgHasMobileOfflineEnabled>
     <enableOrgHasWatchlistEnabled>true</enableOrgHasWatchlistEnabled>
     <enableQueryLiveConnectors>true</enableQueryLiveConnectors>
     <enableRemoveFooterForRepDisplay>false</enableRemoveFooterForRepDisplay>
     <enableRemoveFooterFromRepExp>false</enableRemoveFooterFromRepExp>
-    <enableReportCrtAutoAddPref>false</enableReportCrtAutoAddPref>
+    <enableReportHideXlsExportPref>false</enableReportHideXlsExportPref>
     <enableReportNotificationsEnable>true</enableReportNotificationsEnable>
     <enableS1AnalyticsEclairEnable>true</enableS1AnalyticsEclairEnable>
     <enableS3OutputConnector>false</enableS3OutputConnector>
     <enableSFXJoinedReportsEnable>false</enableSFXJoinedReportsEnable>
+    <enableSalesforceOutputConnector>false</enableSalesforceOutputConnector>
     <enableSecureImageSharing>false</enableSecureImageSharing>
     <enableSnowflakeOutputConnector>false</enableSnowflakeOutputConnector>
+    <enableSqlLiveDataset>true</enableSqlLiveDataset>
+    <enableTableauHyperOutputConnector>false</enableTableauHyperOutputConnector>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
-    <enableWaveIndexMVDim>false</enableWaveIndexMVDim>
+    <enableWaveIndexMVDim>true</enableWaveIndexMVDim>
     <enableWaveRecordNavigation>false</enableWaveRecordNavigation>
     <enableWaveReplication>false</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>

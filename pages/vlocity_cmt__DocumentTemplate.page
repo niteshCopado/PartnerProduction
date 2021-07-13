@@ -22,6 +22,7 @@
             <apex:includeScript value="{!$Resource.vlocity_cmt__ViaDirectives}"/> 
             <apex:includeScript value="{!$Resource.vlocity_cmt__SldsAngular}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__DocumentTemplateApp}"/>
+            <apex:includeScript value="{!$Resource.vlocity_cmt__DocxGenerateSections}"/>
             
             <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__slds, '/assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
             <apex:includeScript value="/support/console/42.0/integration.js"/>
@@ -32,7 +33,7 @@
             <apex:stylesheet value="{!$Resource.vlocity_cmt__ContractEntityFilterOverrideCss}" id="contract-entity-filter-override" />
 
             <!-- PDFTRON Libraries for salesforce side implementation-->
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/external/jquery-3.2.1.min.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/external/jquery-3.5.1.min.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/CoreControls.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/pdf/PDFNet.js')}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__cs_pdftron_documentgeneration}"/>
@@ -66,6 +67,7 @@
                 var nameSpacePrefix = '{!nameSpacePrefix}';
                 var checkFontEmbeddingInDOCXTemplate = {!checkFontEmbeddingInDOCXTemplate};
                 var pdfGenerationSource = '{!JSENCODE(pdfGenerationSource)}';
+                Visualforce.remoting.timeout = 120000; // Set timeout at page level
 
                 var remoteActions = {
                     getAllCloneableTemplates: {
@@ -130,6 +132,10 @@
                     },
                     deleteTemplateSection: {
                         action: '{!$RemoteAction.DocumentTemplateDisplayController.deleteTemplateSection}',
+                        config: {escape: false}
+                    },
+                    deleteTemplateSections: {
+                        action: '{!$RemoteAction.DocumentTemplateDisplayController.deleteTemplateSections}',
                         config: {escape: false}
                     },
                     cloneAllSections: {
@@ -240,12 +246,16 @@
                         action: '{!$RemoteAction.DocumentTemplateDisplayController.getDocumentTemplatesById}',
                         config: {escape: false}
                     },
-                    setTemplateContentVersion: {
-                        action: '{!$RemoteAction.DocumentTemplateDisplayController.setTemplateContentVersion}',
+                    setTemplateContentVersionDocx: {
+                        action: '{!$RemoteAction.DocumentTemplateDisplayController.setTemplateContentVersionDocx}',
                         config: {escape: false}
                     },
                     getClauseContentForDocx: {
                         action: '{!$RemoteAction.DocumentTemplateDisplayController.getClauseContentForDocx}',
+                        config: {escape: false}
+                    },
+                    getDocxTemplateSectionHtmlContent: {
+                        action: '{!$RemoteAction.DocumentTemplateDisplayController.getDocxTemplateSectionHtmlContent}',
                         config: {escape: false}
                     },
                     linkContentVersionToTemplateElement: {
@@ -339,6 +349,7 @@
                     'CLMClausePrefix':'{!$Label.vlocity_cmt__clmclauseprefix}',
                     'CLMTemplateMissingClausesLabel':'{!$Label.vlocity_cmt__clmtemplatemissingclauseslabel}',
                     'CLMTemplateNoClauseFoundWarningMessage':'{!$Label.vlocity_cmt__clmtemplatenoclausefoundwarningmessage}',
+                    'CLMTemplateFoundWarningMessage':'{!$Label.vlocity_cmt__clmtemplatefoundwarningmessage}',
                     'CLMTemplateClauseTokenFoundMessage':'{!$Label.vlocity_cmt__clmtemplateclausetokenfoundmessage}',
                     'CLMTemplateClickNext':'{!$Label.vlocity_cmt__clmtemplateclicknext}',
                     'CLMTemplateNext':'{!$Label.vlocity_cmt__clmtemplatenext}',

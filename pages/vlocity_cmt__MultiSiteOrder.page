@@ -2,12 +2,11 @@
 <html xmlns:ng="http://angularjs.org" ng-app="multiSiteApp" class="ng-cloak">
     <head>
         <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
-
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
         <apex:includeScript value="/support/console/31.0/integration.js"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__AngularRoute)}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ANGULARBOOT)}"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ANGULARBOOTSTRAPTPLS)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_strap_bundle_1_6)}"/>
    
         <style>
             .vlocityModal{
@@ -302,7 +301,7 @@ angular.module('checklist-model', [])
         
         </script>
         <script>
-            var nsp = '{!namespacePrefix}';
+            var nsp = '{!JSENCODE(namespacePrefix)}';
             console.log('nsp:'+nsp);
             var currencySymbol = '{!currencyLocaleSymbol}';
             var multiSiteApp = angular.module("multiSiteApp", ['ui.bootstrap','checklist-model','ngRoute','mgcrea.ngStrap.datepicker','mgcrea.ngStrap.timepicker']);

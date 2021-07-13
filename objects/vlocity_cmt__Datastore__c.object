@@ -156,6 +156,20 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__CachedDataSetId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Identifies a Cached Data Set entry.</description>
+        <externalId>false</externalId>
+        <label>Cached Data Set</label>
+        <referenceTo>vlocity_cmt__CachedDataSet__c</referenceTo>
+        <relationshipLabel>Data Stores</relationshipLabel>
+        <relationshipName>DataStores</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Classname__c</fullName>
         <deprecated>false</deprecated>
         <description>The fully qualified class name of the reader class to use to deserialize the value of this entry.</description>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Price Compare --></label>
+        <name>vlocity_cmt__ProductCompareVersion</name>
+    </fieldSets>
     <fields>
         <label><!-- Base Price List --></label>
         <name>vlocity_cmt__BasePriceListId__c</name>
@@ -46,6 +50,14 @@
         <label><!-- Price List --></label>
         <name>vlocity_cmt__PriceListId__c</name>
         <relationshipLabel><!-- Price List Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PriceList --></label>
+        <name>vlocity_cmt__PriceListName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>vlocity_cmt__PricingElementAmount__c</name>
     </fields>
     <fields>
         <label><!-- Pricing Element Global Key --></label>

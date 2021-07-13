@@ -12,7 +12,7 @@
         <apex:includeScript value="/xdomain/xdomain.js"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_strap_bundle_1_6)}"/>
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymceIce, '/js/tinymce/tinymce.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymce, '/js/tinymce/tinymce.js')}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ui_tinymce, '/src/tinymce.js')}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_utils_pagination, '/dirPagination.js')}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/jszip/jszip.min.js')}"/>
@@ -22,6 +22,7 @@
         <apex:includeScript value="{!$Resource.vlocity_cmt__ViaDirectives}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__SldsAngular}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__ContractDocumentEditSectionsApp}"/>
+        <apex:includeScript value="{!$Resource.vlocity_cmt__DocXContentTypes}"/>
     </head>
     
     <body style="height: 100%">
@@ -130,7 +131,7 @@
             contractVersionId = '{!contractVersionId}';
             isEditableValue = '{!isEditableValue}';
             isInConsole = sforce.console.isInConsole();
-            userName = '{!$User.FirstName}' + ' ' + '{!$User.LastName}';
+            userName = '{!JSENCODE($User.FirstName)}' + ' ' + '{!JSENCODE($User.LastName)}';
             userId = '{!$User.Id}';
             docName = '{!JSENCODE(documentName)}';
             containsRedlines = {!containsRedlines};

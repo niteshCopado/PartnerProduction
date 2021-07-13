@@ -13,6 +13,7 @@
         "elementValueMap": {
             "Cases": [
                 {
+                    "CaseDescription": "Case escalated after client called in",
                     "CaseId": "5003i000001YkPoZZZ",
                     "CaseNumber": "00001002",
                     "CaseOpenDate": "2019-08-20T18:16:09.000Z",
@@ -20,6 +21,7 @@
                     "CaseSubject": "Placeholder Escalated"
                 },
                 {
+                    "CaseDescription": "Placeholder comment",
                     "CaseId": "5003i000001YkPlZZZ",
                     "CaseNumber": "00001003",
                     "CaseOpenDate": "2019-08-26T18:16:09.000Z",

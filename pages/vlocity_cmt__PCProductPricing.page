@@ -78,7 +78,8 @@
                         islanguageRTL="{!isLanguageRTL}"
                         userlocale="{!UserLocale}"
                         timezone="{!TimeZone}"
-                        timezoneoffset="{!TimeZoneOffset}">
+                        timezoneoffset="{!TimeZoneOffset}"
+                        currentdate="{!CurrentDate}">
                         <template id="vpcMainContent">
                             <vlocity-pc-pricing
                                     productId="{!$CurrentPage.parameters.id}"

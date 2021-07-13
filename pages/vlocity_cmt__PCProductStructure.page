@@ -79,7 +79,8 @@
                 islanguageRTL="{!isLanguageRTL}"
                 userlocale="{!UserLocale}"
                 timezone="{!TimeZone}"
-                timezoneoffset="{!TimeZoneOffset}">
+                timezoneoffset="{!TimeZoneOffset}"
+                currentdate="{!CurrentDate}">
 
                 <template id="vpcMainContent">
                     <vlocity-pc-product-structure productid="{!$CurrentPage.parameters.id}" >
@@ -99,7 +100,7 @@
                 */
                 var prodStructure = document.querySelector("vlocity-pc-product-structure");
                 prodStructure.reloadProduct();
-            })
+            });
         </script>
     </body>
 

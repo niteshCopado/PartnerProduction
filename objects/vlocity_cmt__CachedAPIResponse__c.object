@@ -342,6 +342,16 @@
                     <default>false</default>
                     <label>CatalogCtxQualificationMap</label>
                 </value>
+                <value>
+                    <fullName>pleOfferMap</fullName>
+                    <default>false</default>
+                    <label>pleOfferMap</label>
+                </value>
+                <value>
+                    <fullName>basketPricing</fullName>
+                    <default>false</default>
+                    <label>basketPricing</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>

@@ -90,7 +90,10 @@
                     show-config-panel="{{attrs.showConfigPanel}}"  
                     ng-if="isLoaded" is-last="{{$last}}">
                 </vloc-card>
-                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center cpq-no-cart-items-msg" ng-show="(!records || records.length === 0 ) && isLoaded">
+                <div ng-if="payload.messages[0].severity === 'ERROR' && !records.length > 0" class="slds-text-align_center slds-p-vertical_small" ng-repeat="msg in payload.messages">
+                    <span>{{msg.message}}</span>
+                </div>
+                <div ng-if="payload.messages[0].severity !== 'ERROR'" class="slds-grid slds-grid_vertical-align-center slds-grid_align-center cpq-no-cart-items-msg" ng-show="(!records || records.length === 0 ) && isLoaded">
                     {{::importedScope.customLabels.CPQCartIsEmpty}}
                 </div>
                  <div class="cpq-next-product slds-col slds-text-align_center slds-m-vertical_medium" ng-if="session.nextProducts">

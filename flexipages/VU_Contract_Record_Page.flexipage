@@ -8,6 +8,10 @@
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>enableActionsConfiguration</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>hideChatterActions</name>
                     <value>false</value>
                 </componentInstanceProperties>
@@ -29,6 +33,19 @@
                     <value>linear</value>
                 </componentInstanceProperties>
                 <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>disableCache</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>recordId</name>
+                    <value>{recordId}</value>
+                </componentInstanceProperties>
+                <componentName>vlocity_cmt:powerLauncher</componentName>
             </componentInstance>
         </itemInstances>
         <name>header</name>
@@ -127,41 +144,18 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>disableCache</name>
+                    <name>height</name>
+                    <value>50</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>pageName</name>
+                    <value>vlocity_cmt__ContractActionBar</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showLabel</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>recordId</name>
-                    <value>{recordId}</value>
-                </componentInstanceProperties>
-                <componentName>vlocity_cmt:powerLauncher</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>customCommunityPage</name>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>displayOn</name>
-                    <value>Web Client</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>linkType</name>
-                    <value>OmniScript,Other</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>objType</name>
-                    <value>Contract</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>recordId</name>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>style</name>
-                    <value>horizontal</value>
-                </componentInstanceProperties>
-                <componentName>vlocity_cmt:ActionToolbarComponent</componentName>
+                <componentName>flexipage:visualforcePage</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>

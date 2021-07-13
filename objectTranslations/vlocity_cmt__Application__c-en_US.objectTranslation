@@ -10,6 +10,14 @@
         <relationshipLabel><!-- Applications --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Street Supplement 1 --></label>
+        <name>vlocity_cmt__Address1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Supplement 2 --></label>
+        <name>vlocity_cmt__Address2__c</name>
+    </fields>
+    <fields>
         <label><!-- Application Reference Number --></label>
         <name>vlocity_cmt__ApplicationReferenceNumber__c</name>
     </fields>
@@ -19,16 +27,36 @@
         <relationshipLabel><!-- Applications --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- City --></label>
+        <name>vlocity_cmt__City__c</name>
+    </fields>
+    <fields>
         <label><!-- Content --></label>
         <name>vlocity_cmt__Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>vlocity_cmt__Country__c</name>
     </fields>
     <fields>
         <label><!-- Files Map --></label>
         <name>vlocity_cmt__FilesMap__c</name>
     </fields>
     <fields>
+        <label><!-- Floor --></label>
+        <name>vlocity_cmt__Floor__c</name>
+    </fields>
+    <fields>
         <label><!-- Full JSON --></label>
         <name>vlocity_cmt__FullJSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocation --></label>
+        <name>vlocity_cmt__Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- House Number Supplement --></label>
+        <name>vlocity_cmt__HouseNumberSupplement__c</name>
     </fields>
     <fields>
         <label><!-- Data JSON --></label>
@@ -49,6 +77,15 @@
         <relationshipLabel><!-- Applications --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Postal Code --></label>
+        <name>vlocity_cmt__PostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premises --></label>
+        <name>vlocity_cmt__PremisesId__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Primary Applicant --></label>
         <name>vlocity_cmt__PrimaryPartyId__c</name>
         <relationshipLabel><!-- Applications --></relationshipLabel>
@@ -66,6 +103,15 @@
     <fields>
         <label><!-- Screening Result --></label>
         <name>vlocity_cmt__ScreeningResult__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Point --></label>
+        <name>vlocity_cmt__ServicePointId__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>vlocity_cmt__State__c</name>
     </fields>
     <fields>
         <label><!-- Status --></label>
@@ -96,6 +142,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Street Address --></label>
+        <name>vlocity_cmt__StreetAddress__c</name>
+    </fields>
+    <fields>
         <label><!-- Summary --></label>
         <name>vlocity_cmt__Summary__c</name>
     </fields>
@@ -106,6 +156,10 @@
             <masterLabel>All</masterLabel>
             <translation><!-- All --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit / Apartment --></label>
+        <name>vlocity_cmt__UnitNumber__c</name>
     </fields>
     <webLinks>
         <label><!-- Review --></label>

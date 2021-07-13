@@ -5,6 +5,10 @@
         <name>vlocity_cmt__IsContentEncoded__c</name>
     </fields>
     <fields>
+        <label><!-- Is Lightning Web Component Enabled --></label>
+        <name>vlocity_cmt__IsLwcEnabled__c</name>
+    </fields>
+    <fields>
         <label><!-- Last Saved --></label>
         <name>vlocity_cmt__LastSaved__c</name>
     </fields>

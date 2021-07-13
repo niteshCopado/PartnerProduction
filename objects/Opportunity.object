@@ -1057,15 +1057,13 @@
     <webLinks>
         <fullName>vlocity_cmt__Configure</fullName>
         <availability>online</availability>
-        <description>This is a Custom Button on Oppurtunity page to invoke CPQ in Lightning Experience</description>
+        <description>This is a Custom Button on Oppurtunity page to invoke Hybrid CPQ.</description>
         <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
+        <linkType>page</linkType>
         <masterLabel>Configure</masterLabel>
-        <openType>noSidebar</openType>
+        <openType>replace</openType>
+        <page>vlocity_cmt__OpportunityLaunchHybridCPQ</page>
         <protected>false</protected>
-        <url>/apex/hybridcpq?id={!Opportunity.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>vlocity_cmt__ConfigureForNamespace</fullName>
@@ -1081,12 +1079,23 @@
         <url>/apex/vlocity_cmt__hybridcpq?id={!Opportunity.Id}</url>
     </webLinks>
     <webLinks>
+        <fullName>vlocity_cmt__ConfigureMSOrder</fullName>
+        <availability>online</availability>
+        <description>This is a Custom Button on Opportunity page to configure multi service orders</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Multi-Site Order</masterLabel>
+        <openType>replace</openType>
+        <page>vlocity_cmt__MSOrderConfiguration</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>vlocity_cmt__ConfigureMultiServicePoints</fullName>
         <availability>online</availability>
         <description>This is a Custom Button on Opportunity page to configure multi service points</description>
         <displayType>button</displayType>
         <linkType>page</linkType>
-        <masterLabel>Multi-ServicePoint</masterLabel>
+        <masterLabel>Multi-Site Quote</masterLabel>
         <openType>replace</openType>
         <page>vlocity_cmt__MultiServiceConfiguration</page>
         <protected>false</protected>

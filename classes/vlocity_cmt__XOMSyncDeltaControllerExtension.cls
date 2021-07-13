@@ -31,6 +31,10 @@ global class XOMSyncDeltaControllerExtension {
         return null;
     }
     @RemoteAction
+    global static String getExtendedStatus() {
+        return null;
+    }
+    @RemoteAction
     global static AsyncApexJob getJobStatus() {
         return null;
     }

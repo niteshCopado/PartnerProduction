@@ -104,7 +104,7 @@
                 };
 
                 $scope.retrieveAttachments = function() {
-                    var attachmentId = '00P4W000014sWAA';
+                    var attachmentId = '00P5Y000026WbaM';
                     sforce.connection.sessionId = '{!$Api.Session_ID}';
                     sforce.connection.query( "SELECT Id, Name, Body, ContentType FROM Attachment WHERE Id = \'" + attachmentId + "\'", {
                         onSuccess: function(result){
@@ -154,15 +154,29 @@
                             contractData.ContractData = $scope.wmlContents;
                             doc.setData(contractData);
                             doc.render();
-                            if (docType === 'blob') {
-                                out = doc.getZip().generate({type: 'blob', compression: "DEFLATE", compressionOptions:{level: 9}});
-                            } else {
-                                out = doc.getZip().generate({type: 'base64', compression: "DEFLATE", compressionOptions:{level: 9}});
-                            }
+
+                            var outputFileConfig = {
+                                'type': docType,
+                                'mimeType': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                                'compression': 'DEFLATE',
+                                'compressionOptions': {
+                                    'level': 9
+                                }
+                            }; 
+                            out = doc.getZip().generate(outputFileConfig);
+
                             var time = new Date();
                             console.log('End time: '+time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
                             if (!isAttachCall) {
-                                saveAs(out, 'Test.docx');
+                                if (navigator.userAgent.toLowerCase().indexOf('firefox') >0 || (navigator.userAgent.toLowerCase().indexOf('safari') && navigator.userAgent.toLowerCase().indexOf('chrome') == -1 )) {
+                                    let url = window.URL.createObjectURL(blob);
+                                    window.open(url, "_top");
+                                    setTimeout(function () {
+                                        window.URL.revokeObjectURL(url);
+                                    }, 2000);
+                                } else {
+                                    saveAs(blob,'Test.docx');
+                                }
                             } else {
                                 $scope.$emit('wordFileContents', out);
                             }
@@ -189,27 +203,28 @@
                     remoteActions.downloadPdf($scope.objId).then(function(result, event) {
                         var data = result;
                         var blob = $scope.b64toBlob(data, 'application/pdf');
-                        saveAs(blob,'Test.pdf');
+                        if (navigator.userAgent.toLowerCase().indexOf('firefox') >0 || (navigator.userAgent.toLowerCase().indexOf('safari') && navigator.userAgent.toLowerCase().indexOf('chrome') == -1 )) {
+                            let url = window.URL.createObjectURL(blob);
+                            window.open(url, "_blank");
+                            setTimeout(function () {
+                                window.URL.revokeObjectURL(url);
+                            }, 2000);
+                        } else {
+                            saveAs(blob,'Test.pdf');
+                        }
                     });
                 };
 
-                $scope.b64toBlob = function (b64Data, contentType) {
-                    contentType = contentType || '';
-                    var sliceSize = 512;
-                    var byteCharacters = atob(b64Data);
-                    var byteArrays = [];
-                    for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-                        var slice = byteCharacters.slice(offset, offset + sliceSize);
-                        var byteNumbers = new Array(slice.length);
-                        for (var i = 0; i < slice.length; i++) {
-                            byteNumbers[i] = slice.charCodeAt(i);
-                        }
-                        var byteArray = new Uint8Array(byteNumbers);
-                        byteArrays.push(byteArray);
+                $scope.base64ToBlob = function(base64, contentType) {
+                    var binaryString = window.atob(base64);
+                    var len = binaryString.length;
+                    var bytes = new Uint8Array(len);
+                    for (var i = 0; i < len; ++i) {
+                    bytes[i] = binaryString.charCodeAt(i);
                     }
-                    var blob = new Blob(byteArrays, {type: contentType});
-                    return blob;
-                }
+                    var type = contentType || 'application/pdf';
+                    return new Blob([bytes], { type: type });
+                };
 
             });
     </script>

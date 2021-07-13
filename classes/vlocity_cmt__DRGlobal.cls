@@ -16,13 +16,34 @@ global abstract class DRGlobal {
     global static void clearCacheForDataRaptor(String dataRaptorName) {
 
     }
+    global static Boolean clearOrgCache(String cacheKey) {
+        return null;
+    }
+    global static Boolean clearOrgCache(String dataRaptorName, Object inputData) {
+        return null;
+    }
+    global static Boolean clearSessionCache(String cacheKey) {
+        return null;
+    }
+    global static Boolean clearSessionCache(String dataRaptorName, Object inputData) {
+        return null;
+    }
     global static vlocity_cmt.DRProcessResult doPost(String objectList, String bundleName, String filesMap) {
+        return null;
+    }
+    global static vlocity_cmt.DRProcessResult doPost(String objectList, String bundleName, String filesMap, Map<String,Object> options) {
         return null;
     }
     global static vlocity_cmt.DRProcessResult processFromApex(List<Map<String,Object>> objectList, String bundleName) {
         return null;
     }
+    global static vlocity_cmt.DRProcessResult processFromApex(List<Map<String,Object>> objectList, String bundleName, String locale) {
+        return null;
+    }
     global static vlocity_cmt.DRProcessResult processFromApex(Map<String,Object> objectList, String bundleName) {
+        return null;
+    }
+    global static vlocity_cmt.DRProcessResult processFromApex(Map<String,Object> objectMap, String bundleName, String locale) {
         return null;
     }
     @HttpPost
@@ -44,13 +65,22 @@ global abstract class DRGlobal {
     global static Map<String,Object> processPost(Map<String,Object> bodyData) {
         return null;
     }
+    global static Map<String,Object> processPost(Map<String,Object> bodyData, Map<String,Object> options) {
+        return null;
+    }
     global static vlocity_cmt.DRProcessResult processString(String input, String bundleName) {
         return null;
     }
     global static vlocity_cmt.DRProcessResult process(List<Map<String,Object>> objectList, String bundleName) {
         return null;
     }
+    global static vlocity_cmt.DRProcessResult process(List<Map<String,Object>> objectList, String bundleName, String locale) {
+        return null;
+    }
     global static vlocity_cmt.DRProcessResult process(Map<String,Object> objectList, String bundleName) {
+        return null;
+    }
+    global static vlocity_cmt.DRProcessResult process(Map<String,Object> objectMap, String bundleName, String locale) {
         return null;
     }
     global static void process(List<SObject> objectList) {

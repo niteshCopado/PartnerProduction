@@ -18,6 +18,9 @@ global class PricingPlanService implements vlocity_cmt.GlobalInterfaces.PricingI
     global static Map<String,Object> getParentPricingVariableValues() {
         return null;
     }
+    global static Set<String> getPricingContextKeySet() {
+        return null;
+    }
     global Boolean invokeMethod(String methodName, Map<String,Object> input, Map<String,Object> output, Map<String,Object> options) {
         return null;
     }

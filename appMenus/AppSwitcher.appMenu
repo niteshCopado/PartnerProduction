@@ -137,11 +137,19 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
+        <name>vlocity_cmt__Vlocity_Digital_Studio</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>standard__LightningBolt</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
         <name>standard__AllTabSet</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__OnlineSales</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

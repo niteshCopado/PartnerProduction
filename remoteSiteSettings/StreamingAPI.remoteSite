@@ -2,5 +2,5 @@
 <RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
     <disableProtocolSecurity>true</disableProtocolSecurity>
     <isActive>true</isActive>
-    <url>https://content-bandwidth-05203--vlocity-cmt.NA139.visual.force.com</url>
+    <url>https://bandwidth-analytics-18811--vlocity-cmt.NA156.visual.force.com</url>
 </RemoteSiteSetting>

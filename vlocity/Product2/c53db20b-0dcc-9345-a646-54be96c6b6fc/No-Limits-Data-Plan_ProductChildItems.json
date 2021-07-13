@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/c53db20b-0dcc-9345-a646-54be96c6b6fc",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "No Limits Data Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

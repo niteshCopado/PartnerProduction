@@ -51,7 +51,9 @@
                 id-prefix="cards-home"
                 default-columns="defaultColumns"
                 additional-table-buttons="additionalTableButtons"
-                additional-header-buttons="additionalHeaderButtons">
+                additional-header-buttons="additionalHeaderButtons"
+                is-global-warnings="isGlobalWarnings"
+                show-global-warnings="showGlobalWarnings">
       </slds-home>
     </div>
     <c:VFActionFunction />
@@ -91,7 +93,10 @@
         "Value":"{!$Label.vlocity_cmt__value}",
         "Done":"{!$Label.vlocity_cmt__done}",
         "AllType":"{!$Label.vlocity_cmt__alltype}",
-        "MyType":"{!$Label.vlocity_cmt__mytype}"
+        "MyType":"{!$Label.vlocity_cmt__mytype}",
+        "WarningsTitle": "{!$Label.vlocity_cmt__warningstitle}",
+        "RemoteSiteNotOnWarning": "{!$Label.vlocity_cmt__remotesitenotonwarning}",
+        "FixWarnings": "{!$Label.vlocity_cmt__fixwarnings}"
       };
 
       //Setting LEX tab icon and title

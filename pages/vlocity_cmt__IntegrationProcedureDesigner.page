@@ -5,7 +5,7 @@
            tabStyle="IntegrationProcedureHome__tab"
            standardController="vlocity_cmt__OmniScript__c"
            extensions="vlocity_cmt.OmniScriptDesignerController,vlocity_cmt.OmniScriptHomeController,vlocity_cmt.DRMapperController3,vlocity_cmt.DRDataPackRunnerController"
-           language="en">
+           language="{!$CurrentPage.parameters.LanguageCode}">
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jsforce-core.min.js')}"></script>
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jsforce-api-metadata.min.js')}"></script>
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jszip.min.js')}"></script>
@@ -62,7 +62,7 @@
         </div>
         <apex:sectionHeader subtitle="{{scriptElement.Name}}"
                             id="sectionHeader"
-                            title="{{ ::'IntProcDesigner' | localize }}" />
+                            title="{{ ($root.scriptElement.IsTest__c ? 'TestProcDesigner' : 'IntProcDesigner') | localize }}" />
         <div class="vlocity url-settings">
         </div>
         <div class="vlocity"
@@ -221,9 +221,15 @@
                                     <calculation-action-property-set element="activeElement"
                                                                      script-element="scriptElement"
                                                                      ng-switch-when="Calculation Action"></calculation-action-property-set>
+                                    <chatter-action-property-set element="activeElement"
+                                                                     script-element="scriptElement"
+                                                                     ng-switch-when="Chatter Action"></chatter-action-property-set>
                                     <dataraptor-extract-action-property-set element="activeElement"
                                                                             script-element="scriptElement"
                                                                             ng-switch-when="DataRaptor Extract Action"></dataraptor-extract-action-property-set>
+                                    <dataraptor-extract-action-property-set element="activeElement"
+                                                                            script-element="scriptElement"
+                                                                            ng-switch-when="DataRaptor Turbo Action"></dataraptor-extract-action-property-set>
                                     <dataraptor-post-action-property-set element="activeElement"
                                                                          script-element="scriptElement"
                                                                          ng-switch-when="DataRaptor Post Action"></dataraptor-post-action-property-set>
@@ -282,6 +288,9 @@
                                     <batch-action-property-set element="activeElement"
                                                                 script-element="scriptElement"
                                                                 ng-switch-when="Batch Action"></batch-action-property-set>
+                                    <assert-action-property-set element="activeElement"
+                                                                script-element="scriptElement"
+                                                                ng-switch-when="Assert Action"></assert-action-property-set>
                                 </div>
                                 <div class="push"
                                      ng-if="scriptElement.PropertySet__c && !showJsonEditor && activeElement === scriptElement"></div>
@@ -370,6 +379,7 @@
         var i18n = {
             OmniAdd: '{!JSENCODE($Label.OmniAdd)}',
             IntProcDesigner: '{!JSENCODE($Label.IntProcDesigner)}',
+            TestProcDesigner: '{!JSENCODE($Label.TestProcDesigner)}',
             OmniDesAvailableComps: '{!JSENCODE($Label.OmniDesAvailableComps)}',
             OmniDesPaletteGroups: '{!JSENCODE($Label.OmniDesPaletteGroups)}',
             OmniDesPaletteOmniScripts: '{!JSENCODE($Label.OmniDesPaletteOmniScripts)}',
@@ -527,11 +537,13 @@
             IntProcChainableCpuLimitTooltip: '{!JSENCODE($Label.IntProcChainableCpuLimitTooltip)}',
             IntProcLoopOutput: '{!JSENCODE($Label.IntProcLoopOutput)}',
             IntProcLoopList: '{!JSENCODE($Label.IntProcLoopList)}',
+            IntProcListInput: '{!JSENCODE($Label.IntProcListInput)}',
             IntProcTimeToLiveInMinutesTooltip: '{!JSENCODE($Label.IntProcTimeToLiveInMinutesTooltip)}',
             IntProcQueueableChainableQueriesLimitTooltip: '{!JSENCODE($Label.IntProcQueueableChainableQueriesLimitTooltip)}',
             IntProcQueueableChainableHeapSizeLimitTooltip: '{!JSENCODE($Label.IntProcQueueableChainableHeapSizeLimitTooltip)}',
             IntProcQueueableChainableCpuLimitTooltip: '{!JSENCODE($Label.IntProcQueueableChainableCpuLimitTooltip)}',
-            IntProcChainableActualTimeLimit: '{!JSENCODE($Label.IntProcChainableActualTimeLimit)}'
+            IntProcChainableActualTimeLimit: '{!JSENCODE($Label.IntProcChainableActualTimeLimit)}',
+            IntProcAssertAction: '{!JSENCODE($Label.IntProcAssertAction)}'
         };
     /* END_VLOC_I18N */
     </script>

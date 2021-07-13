@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/3b67317a-d41f-f91d-e77e-6f5c279e0501",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Google Pixel2",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

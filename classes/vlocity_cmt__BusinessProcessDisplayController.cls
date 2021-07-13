@@ -137,6 +137,10 @@ global virtual class BusinessProcessDisplayController extends vlocity_cmt.BaseDi
         return null;
     }
     @AuraEnabled
+    global static Object GenericInvoke2NoCont(String sClassName, String sMethodName, String input, String options) {
+        return null;
+    }
+    @AuraEnabled
     global static Object GenericInvokeLwc(String sClassName, String sMethodName, Map<String,Object> input, Map<String,Object> options) {
         return null;
     }
@@ -169,6 +173,14 @@ global virtual class BusinessProcessDisplayController extends vlocity_cmt.BaseDi
     }
     @RemoteAction
     global static String getCustomLabels(List<String> labelNames, String language) {
+        return null;
+    }
+    @AuraEnabled
+    global static String getGeneralSettings(String triggerName) {
+        return null;
+    }
+    @AuraEnabled
+    global static Boolean getTriggerStatus(String triggerName) {
         return null;
     }
     @AuraEnabled

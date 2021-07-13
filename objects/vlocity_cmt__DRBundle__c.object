@@ -497,6 +497,31 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__SalesforcePlatformCacheType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>SalesforcePlatformCacheType__c</description>
+        <externalId>false</externalId>
+        <label>Salesforce Platform Cache Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Session Cache</fullName>
+                    <default>false</default>
+                    <label>Session Cache</label>
+                </value>
+                <value>
+                    <fullName>Org Cache</fullName>
+                    <default>false</default>
+                    <label>Org Cache</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__SampleInputCustom__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -591,6 +616,19 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__TimeToLiveMinutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time To Live Minutes</description>
+        <externalId>false</externalId>
+        <label>Time To Live In Minutes</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__Type__c</fullName>

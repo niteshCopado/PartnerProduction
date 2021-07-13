@@ -6,10 +6,10 @@
     <issuer>https://vlocity-dev-ed.my.salesforce.com</issuer>
     <loginUrl>https://vlocity-dev-ed.my.salesforce.com/idp/endpoint/HttpPost</loginUrl>
     <name>vlocity-dev-ed SAML SSO Setting</name>
-    <oauthTokenEndpoint>https://content-bandwidth-05203.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <oauthTokenEndpoint>https://bandwidth-analytics-18811.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
     <redirectBinding>false</redirectBinding>
-    <requestSigningCertId>0P14W0000048iLH</requestSigningCertId>
-    <salesforceLoginUrl>https://content-bandwidth-05203.my.salesforce.com</salesforceLoginUrl>
+    <requestSigningCertId>0P15Y000000QvxT</requestSigningCertId>
+    <salesforceLoginUrl>https://bandwidth-analytics-18811.my.salesforce.com</salesforceLoginUrl>
     <samlEntityId>https://saml.salesforce.com/00Df40000001Ru0EAE</samlEntityId>
     <samlVersion>SAML2_0</samlVersion>
     <useConfigRequestMethod>false</useConfigRequestMethod>

@@ -217,7 +217,10 @@
                                     <button type="button" class="btn btn-default always-active" ng-click="doLwcDeploy()">Deploy</button>
                                 </div>
                                 <div class="previewPanel-wrapper">
-                                    <div class="iframe-holder"></div>
+                                    <div ng-show="loadIframe" class="iframe-holder"></div>
+                                    <div ng-hide="loadIframe" class="iframe-holder">
+                                    There is an error. No component(s) named {{pendingCards}}.
+                                    </div>
                                 </div>
                             </div>
 
@@ -230,8 +233,9 @@
     <script type="text/javascript">
         var nsPrefix = '{!nsPrefix}',
             sessionId = '{!$Api.Session_ID}',
-            orgName = '{!$Organization.Name}';
-            toolingBaseUrl = '{!baseUrl}';
+            orgName = '{!$Organization.Name}',
+            toolingBaseUrl = '{!baseUrl}',
+            mydomainUrl = '{!JSENCODE(domainUrl)}';
         /* START_VLOC_I18N */
         var i18n = {
             "CardDesTabStates": "{!$Label.CardDesTabStates}",

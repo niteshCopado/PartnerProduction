@@ -68,6 +68,10 @@
         <name>vlocity_cmt__NeedAutoSectionNumber__c</name>
     </fields>
     <fields>
+        <label><!-- Remove Line After Section --></label>
+        <name>vlocity_cmt__NoLineAfterSection__c</name>
+    </fields>
+    <fields>
         <label><!-- Reconciled Section Content --></label>
         <name>vlocity_cmt__ReconciledSectionContent__c</name>
     </fields>

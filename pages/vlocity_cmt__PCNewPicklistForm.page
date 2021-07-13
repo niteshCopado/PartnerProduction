@@ -94,7 +94,8 @@
                 sessionid="{!$Api.Session_ID}"
                 userlocale="{!UserLocale}"
                 timezone="{!TimeZone}"
-                timezoneoffset="{!TimeZoneOffset}">
+                timezoneoffset="{!TimeZoneOffset}"
+                currentdate="{!CurrentDate}">
                 <template id="vpcMainContent">
                     <vlocity-pc-picklist-detail type="new"></vlocity-pc-picklist-detail>
                 </template>

@@ -156,6 +156,16 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>vlocity_cmt__ContainsReconcileRedlines__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the contract reconcile section contains at least one redline</description>
+        <externalId>false</externalId>
+        <label>Contains Reconcile Redlines</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ContainsRedlines__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -338,6 +348,16 @@
         <description>If checked, indicates that the section number for this section will be automatically generated</description>
         <externalId>false</externalId>
         <label>Auto Section Number</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__NoLineAfterSection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, new line will not be added after the section</description>
+        <externalId>false</externalId>
+        <label>Remove Line After Section</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>

@@ -1,5 +1,7 @@
 [
     "AttributeCategory/ACAT_ACC",
+    "AttributeCategory/ACAT_COMM_COMPONENT",
+    "AttributeCategory/ACAT_COMM_OFFER",
     "AttributeCategory/ACAT_Phones",
     "AttributeCategory/ACAT_Plans",
     "AttributeCategory/ACAT_SVSLV",

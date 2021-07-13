@@ -5,16 +5,16 @@
            tabStyle="OmniScriptHome__tab"
            standardController="vlocity_cmt__OmniScript__c"
            extensions="vlocity_cmt.OmniScriptDesignerController,vlocity_cmt.OmniScriptHomeController,vlocity_cmt.DRMapperController3,vlocity_cmt.DRDataPackRunnerController,vlocity_cmt.LWCDesignerController"
-           language="en">
+           language="{!$CurrentPage.parameters.LanguageCode}">
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jsforce-core.min.js')}"></script>
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jsforce-api-metadata.min.js')}"></script>
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jsforce-api-tooling.min.js')}"></script>
     <script src="{!URLFOR($Resource.jsforce_1_7, '/jszip.min.js')}"></script>
     <script>
-        window.conn = new jsforce.Connection({ accessToken: '{!$API.Session_Id}', version: '45.0' });
+        window.conn = new jsforce.Connection({ accessToken: '{!$API.Session_Id}', version: '48.0' });
         window.conn.metadata.pollTimeout = 600000;  // 10 minute polling timeout
     </script>
-    <script src="{!URLFOR($Resource.vlocity_core_assets, '/v102/vlocity_core_assets.js')}"></script>
+    <script src="{!URLFOR($Resource.vlocity_core_assets, '/latest/vlocity_core_assets.js')}"></script>
     <script src="{!URLFOR($Resource.angular_strap_bundle_1_6)}"></script>
 
     <script src="{!URLFOR($Resource.vlocity_assets, '/bower_components/angular-rangeslider/angular.rangeSlider.js')}"></script>
@@ -64,8 +64,7 @@
         <div class="vlocity url-settings">
             <button class="btn btn-default"
                     ng-click="showHowToUse()">
-                <i class="icon icon-v-information-line
-		  "></i>{{::"OmniDesHowToUse" | localize:'How to launch activated script'}}</button>
+                <i class="icon icon-v-information-line"></i>{{::"OmniDesHowToUse" | localize:'How to launch activated script'}}</button>
             <button class="btn btn-default"
                     ng-click="viewFullDataJson()">
                 <i class="icon icon-v-information-line
@@ -277,6 +276,12 @@
                             <select class="form-control pull-right action-item"
                                     ng-options="mode for mode in lwcPreviewModes"
                                     ng-model="lwcPreviewMode"></select>
+                                    <select class="form-control pull-right action-item"
+                                    style="margin-right: 4px;"
+                                    ng-if="$root.scriptElement.Language__c === 'Multi-Language'"
+                                    ng-options="previewlang.value as previewlang.label for previewlang in languages"
+                                    ng-model="lwcPreviewLanguage"
+                                    ng-change="changelwcPreviewLanguage(lwcPreviewLanguage)"></select>
                             <button class="btn btn-link pull-right action-item"
                                     type="button"
                                     ng-click="toggleFullScreen()">
@@ -346,6 +351,9 @@
                                     <dataraptor-extract-action-property-set element="activeElement"
                                                                             script-element="scriptElement"
                                                                             ng-switch-when="DataRaptor Extract Action"></dataraptor-extract-action-property-set>
+                                    <dataraptor-extract-action-property-set element="activeElement"
+                                                                            script-element="scriptElement"
+                                                                            ng-switch-when="DataRaptor Turbo Action"></dataraptor-extract-action-property-set>
                                     <dataraptor-post-action-property-set element="activeElement"
                                                                          script-element="scriptElement"
                                                                          ng-switch-when="DataRaptor Post Action"></dataraptor-post-action-property-set>
@@ -451,6 +459,9 @@
                                     <type-ahead-block-property-set element="activeElement"
                                                                    script-element="scriptElement"
                                                                    ng-switch-when="Type Ahead Block"></type-ahead-block-property-set>
+                                    <action-block-property-set element="activeElement"
+                                                               script-element="scriptElement"
+                                                               ng-switch-when="Action Block"></action-block-property-set>
 
                                     <!-- Input elements -->
                                     <checkbox-property-set element="activeElement"
@@ -556,11 +567,13 @@
                                 </dl>
                                 <div class="button-row"
                                      ng-controller="scriptFormController">
+                                    <button id="OmniScript__c_OpenInLwcDesigner" type="button" class="btn btn-default" ng-disabled="disableOpenInLwcDesigner()"
+                                        ng-show="scriptElement.IsLwcEnabled__c && scriptElement.Id"
+                                        ng-click="$root.vlocityOpenUrl('/lightning/cmp/{!namespacePrefix}OmniDesignerAuraWrapper?c__recordId=' + scriptElement.Id, $event, false)">Open in LWC OmniScript Designer</button>
                                     <button id="OmniScript__c_deleteBtn"
                                             type="button"
                                             class="btn btn-default"
                                             ng-disabled="scriptElement.IsActive__c || !scriptElement.Id || scriptElement.saving"
-
                                             ng-click="delete()">{{ ::'OmniDesDelete' | localize }}</button>
                                     <button id="OmniScript__c_createVersionBtn"
                                             type="button"
@@ -589,12 +602,18 @@
                                             ng-click="export($event)">{{ ::'OmniHomeExport' | localize }}</button>
                                     <button type="button"
                                             class="btn btn-default"
-                                            ng-if="scriptElement.Id && scriptElement.IsLwcEnabled__c"
+                                            ng-if="scriptElement.Id && scriptElement.IsLwcEnabled__c && scriptElement.IsActive__c"
                                             ng-disabled="!scriptElement.Id|| scriptElement.activating || scriptElement.saving"
                                             ng-click="downloadLwc()">{{ ::'OmniDesDownload' | localize }}</button>
                                     <button type="button"
                                             class="btn btn-default"
                                             ng-if="scriptElement.Id && scriptElement.IsLwcEnabled__c && scriptElement.IsActive__c"
+                                            ng-disabled="!scriptElement.Id|| scriptElement.activating || scriptElement.saving"
+                                            ng-click="downloadOffPlatformLwc()">{{ ::'OmniDesDownloadOffPlatform' | localize }}</button>
+                                    <button type="button"
+                                            class="btn btn-default"
+                                            ng-if="scriptElement.Id && scriptElement.IsLwcEnabled__c && scriptElement.IsActive__c"
+
                                             ng-disabled="!scriptElement.Id || scriptElement.activating || scriptElement.saving"
                                             ng-click="deployLwc()">{{ ::'OmniDesDeploy' | localize }}</button>
                                     <button id="OmniScript__c_saveBtn"
@@ -658,23 +677,23 @@
                                         <div class="form-group">
                                             <label>{{ ::'OmniDesContextId' | localize:"ContextId" }}</label>
                                             <input type="text"
-                                                class="form-control"
-                                                ng-model="viewModel.lwcContextId" />
+                                                   class="form-control"
+                                                   ng-model="viewModel.lwcContextId" />
                                         </div>
                                     </div>
-                                    <div class="col-md-3">                                        
+                                    <div class="col-md-3">
                                         <button type="button"
-                                        class="btn btn-primary update-button"
-                                        ng-click="updateLwcPrefillData()">{{ ::'OmniDesUpdate' | localize:'Update' }}</button>
+                                                class="btn btn-primary update-button"
+                                                ng-click="updateLwcPrefillData()">{{ ::'OmniDesUpdate' | localize:'Update' }}</button>
                                     </div>
                                 </div>
                                 <key-value-small-prop label="Test Data"
-                                                ng-model="viewModel.lwcPrefillKeyPair"
-                                                help-text=""
-                                                key-label="Key"
-                                                value-label="Value"
-                                                add-btn-label="Add New Key/Value Pair"
-                                                id-prefix="OmniScript__lwcprefill"></key-value-small-prop>
+                                                      ng-model="viewModel.lwcPrefillKeyPair"
+                                                      help-text=""
+                                                      key-label="Key"
+                                                      value-label="Value"
+                                                      add-btn-label="Add New Key/Value Pair"
+                                                      id-prefix="OmniScript__lwcprefill"></key-value-small-prop>
                                 <div class="form-group lwc-prefill-textarea-wrapper">
                                     <h4 class="pull-left">{{ ::'OmniDesData' | localize:'Data' }}</h4>
                                     <textarea class='form-control lwc-prefill-textarea'
@@ -705,7 +724,7 @@
     <script type="text/javascript">
         var ns = "{!namespacePrefix}",
             oid = "{!$Organization.Id}"
-            isInsidePckg = '{!isInsidePckg}';
+        isInsidePckg = '{!isInsidePckg}';
 
         /* START_VLOC_I18N */
         var i18n = {
@@ -859,6 +878,7 @@
             OmniDesKnowledgeFieldVal: '{!JSENCODE($Label.OmniDesKnowledgeFieldVal)}',
             OmniDesDataTypes: '{!JSENCODE($Label.OmniDesDataTypes)}',
             OmniDesDownload: '{!JSENCODE($Label.OmniDesDownload)}',
+            OmniDesDownloadOffPlatform: '{!JSENCODE($Label.OmniDesDownloadOffPlatform)}',
             OmniDesDebug: '{!JSENCODE($Label.OmniDesDebug)}',
             OmniDesDeploy: '{!JSENCODE($Label.OmniDesDeploy)}',
             OmniDesLwcDeployError: '{!JSENCODE($Label.OmniDesLwcDeployError)}',
@@ -877,6 +897,8 @@
             OmniDesWaitForLwcDeployment: '{!JSENCODE($Label.OmniDesWaitForLwcDeployment)}',
             OmniPlaceholderMaksingTooltipText: '{!JSENCODE($Label.OmniPlaceholderMaksingTooltipText)}',
             OmniPlaceholderTooltipText: '{!JSENCODE($Label.OmniPlaceholderTooltipText)}',
+            NotSupportedInLwc: '{!JSENCODE($Label.NotSupportedInLwc)}',
+            OmniDesNoComponentFound: '{!JSENCODE($Label.OmniDesNoComponentFound)}',
         };
     /* END_VLOC_I18N */
     </script>

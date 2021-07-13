@@ -13,6 +13,10 @@
         <name>vlocity_cmt__BatchJobStatus__c</name>
     </fields>
     <fields>
+        <label><!-- Contains Reconcile Redlines --></label>
+        <name>vlocity_cmt__ContainsReconcileRedlines__c</name>
+    </fields>
+    <fields>
         <label><!-- Contains Redlines --></label>
         <name>vlocity_cmt__ContainsRedlines__c</name>
     </fields>
@@ -28,6 +32,10 @@
     <fields>
         <label><!-- Contract Type --></label>
         <name>vlocity_cmt__ContractType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Of Contains Reconcile Redlines --></label>
+        <name>vlocity_cmt__CountOfContainsReconcileRedlines__c</name>
     </fields>
     <fields>
         <label><!-- Count Of Contains Redlines --></label>
@@ -118,6 +126,10 @@
     <fields>
         <label><!-- New Template Version Available --></label>
         <name>vlocity_cmt__IsNewTemplateVersionAvailable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Section Info Stored On Doc --></label>
+        <name>vlocity_cmt__IsSectionInfoStoredOnDoc__c</name>
     </fields>
     <fields>
         <label><!-- Is Template Batchable --></label>

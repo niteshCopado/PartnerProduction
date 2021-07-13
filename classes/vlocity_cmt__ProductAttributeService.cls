@@ -9,7 +9,7 @@ global class ProductAttributeService {
     global ProductAttributeService() {
 
     }
-    global static void createProductAttributeJSON(List<Id> productIdList) {
+    global static void createProductAttributeJSON(List<Id> productIds) {
 
     }
 }

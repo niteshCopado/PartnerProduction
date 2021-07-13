@@ -1,27 +1,3 @@
 <apex:page standardController="Account" extensions="vlocity_cmt.VFPageControllerBase" showHeader="false" sidebar="false">
-    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/sfboot.min.css')}"/>
-    <apex:includeLightning />
-	<script type="text/javascript">
-
-	    if ($Lightning) {
-
-	        var nsPrefix = "{!JSENCODE(sNSP)}"; //
-	        var lightningNsPrefix = nsPrefix.substring(0, nsPrefix.length - 2) + ':';
-	        var ltngOutVFComponentName = lightningNsPrefix + "ltngOutVF";
-	        var profileTopLevelContainerViewComponentName = lightningNsPrefix + "profileTopLevelContainerView";
-
-	        $Lightning.use(ltngOutVFComponentName, function() {
-	          $Lightning.createComponent(profileTopLevelContainerViewComponentName,
-	          { entityId : "{!$CurrentPage.parameters.Id}"},
-              "lightning-profiler",
-              function(cmp) {
-                // do some stuff
-              });
-            });
-
-        }
-
-	</script>
-    <div id="lightning-profiler" >
-    </div>
+    <h1>This page is obsolete, please use AccountProfiler.page to display Lightning Profiler.</h1>
 </apex:page>

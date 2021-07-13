@@ -17,7 +17,7 @@
                 "Code__c": "ACAT_Phones",
                 "Name": "Mobile Devices",
                 "displaySequence": 20,
-                "id": "a0J4W000013q1K1UAI",
+                "id": "a0J5Y00000i3dhhUAA",
                 "messages": [
                 ],
                 "productAttributes": {
@@ -25,7 +25,7 @@
                     ],
                     "records": [
                         {
-                            "attributeId": "a0K4W00000YL9c5UAD",
+                            "attributeId": "a0K5Y00000iUBA2UAO",
                             "cloneable": true,
                             "code": "ATT_RT_PAY_TYPE",
                             "dataType": "text",
@@ -46,7 +46,7 @@
                             "values": null
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bjUAD",
+                            "attributeId": "a0K5Y00000iUB9gUAG",
                             "cloneable": true,
                             "code": "ATT_DT_BRD",
                             "dataType": "text",
@@ -96,7 +96,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9biUAD",
+                            "attributeId": "a0K5Y00000iUB9fUAG",
                             "cloneable": true,
                             "code": "ATT_RT_CLR",
                             "dataType": "text",
@@ -139,7 +139,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bkUAD",
+                            "attributeId": "a0K5Y00000iUB9hUAG",
                             "cloneable": true,
                             "code": "ATT_DT_CAP",
                             "dataType": "text",
@@ -182,7 +182,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9blUAD",
+                            "attributeId": "a0K5Y00000iUB9iUAG",
                             "cloneable": true,
                             "code": "ATT_RT_MOS",
                             "dataType": "text",
@@ -218,7 +218,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bnUAD",
+                            "attributeId": "a0K5Y00000iUB9kUAG",
                             "cloneable": true,
                             "code": "ATT_DT_SZ",
                             "dataType": "text",
@@ -277,7 +277,7 @@
     "%vlocity_namespace%__EndDate__c": "",
     "%vlocity_namespace%__EndOfLifeDate__c": "",
     "%vlocity_namespace%__FulfilmentStartDate__c": "2017-10-01T07:00:00.000Z",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "dad591f8-2cec-f1c0-c5cb-02959042c0b1",
     "%vlocity_namespace%__GlobalKey__c": "06ae808d-0111-da2d-11f9-7f8e59a1ad49",
     "%vlocity_namespace%__HeaderData__c": "",
     "%vlocity_namespace%__HelpText__c": "",
@@ -295,6 +295,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/0dcba5d42ab6de0806123ba60dbf5817",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
+    "%vlocity_namespace%__ObjectTypeName__c": "SmartPhone Product Spec",
     "%vlocity_namespace%__ParentClassId__c": "",
     "%vlocity_namespace%__PriceListEntry__c": "Apple-iPhone-8_PriceListEntries.json",
     "%vlocity_namespace%__ProductChildItem__c": "Apple-iPhone-8_ProductChildItems.json",
@@ -313,7 +314,7 @@
     "%vlocity_namespace%__Type__c": "None",
     "%vlocity_namespace%__VendorAccountId__c": "",
     "%vlocity_namespace%__VersionEndDateTime__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "%vlocity_namespace%__VersionStartDateTime__c": "",
     "CanUseQuantitySchedule": false,
     "CanUseRevenueSchedule": false,

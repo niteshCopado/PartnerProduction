@@ -22,16 +22,16 @@
         <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/font-hack.css')}"/>
         <apex:stylesheet value="{!$Resource.vlocity_cmt__DocumentBaseCss}" />
         <apex:stylesheet value="{!$Resource.vlocity_cmt__ContractDocumentCreationCss}"/>
-        <!-- PDF.js -->
-        <apex:stylesheet value="{!$Resource.vlocity_cmt__pdfViewerCss}"/>
-        <apex:includeScript value="{!$Resource.vlocity_cmt__pdfJS}"/>
-        <apex:includeScript value="{!$Resource.vlocity_cmt__pdfjsViewer}"/>
 
         <!-- PDFTRON Libraries for salesforce side implementation-->
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/external/jquery-3.2.1.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/external/jquery-3.5.1.min.js')}"/>
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/core/CoreControls.js')}"/>
         <!--<apex:includeScript value="{!URLFOR($Resource.cs_pdftron_lib, '/core/pdf/PDFNet.js')}"/>-->
         <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__cs_pdftron_lib, '/webviewer.min.js')}"/>
+        <!-- Docx Contract Section Creation-->
+        <apex:includeScript value="{!$Resource.vlocity_cmt__DocxGenerateSections}"/>
+
+
     </head>
     <body>
         <div class="vloc-body vlocity via-slds ng-cloak" ng-app="contractDocumentCreationApp" ng-controller="contractDocumentCreationCtrl" via-screen-height="viaScreenHeight" via-affix="top" style="min-height:1000px">
@@ -64,10 +64,24 @@
                                 <slds-button-svg-icon id="back-to-contract" sprite="'utility'" icon="'back'" size="'small'" extra-classes="'slds-button__icon--left'"></slds-button-svg-icon>
                                 {!$Label.CLMDocGenGoBackToContract}
                             </button>
-                            <button class="slds-button slds-button--neutral toggle-view" ng-click="reconcileChanges.toggleContractView()" ng-if="reconcileChanges.toggleView.label" ng-show="isReconciledView">
+                            <button class="slds-button slds-button--neutral toggle-view" ng-click="reconcileChanges.toggleContractView()" ng-if="showWebTemplate && reconcileChanges.toggleView.label" ng-show="isReconciledView">
                                 <i class="icon slds-button__icon slds-button__icon--left {{reconcileChanges.toggleView.icon}}"></i>
                                 {{reconcileChanges.toggleView.label}}
                             </button>
+                            <div class="slds-button-group slds-float--right" role="group" ng-if="showDocXTemplate && isWordCheckinReady">
+                                <button class="slds-button slds-button--neutral toggle-view" ng-class="{active : showDocumentView }"   ng-click="showSelectedView('viewDocument')" ng-if="documentSectionData || isReconciledView">
+                                    <i class="icon slds-button__icon slds-button__icon--left icon-v-view"></i>
+                                    {{labels.CLMDocPreview}}
+                                </button>
+                                <button class="slds-button slds-button--neutral toggle-view" ng-class="{active : showViewTrackSections}" ng-click="showSelectedView('viewTrackSections')" ng-if="documentSectionData">
+                                    <i class="icon slds-button__icon slds-button__icon--left icon-v-view"></i>
+                                    {{labels.CLMViewTrackSections}}
+                                </button>
+                                <button class="slds-button slds-button--neutral toggle-view" ng-class="{active : showReconcileView}" ng-click="showSelectedView('reconcileView')" ng-if="isReconciledView">
+                                    <i class="icon slds-button__icon slds-button__icon--left icon-v-reconcile-word-doc"></i>
+                                    {{labels.clmReconcileDocViewReconcileDetail}}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +111,7 @@
                         <div class="document-buttons" ng-if="showWebTemplate">
                             <div class="main-buttons buttons-group" ng-if="showTemplateSelection()">
                                 <h4>{!$Label.CLMDocGenCheckInDoc}</h4>
-                                <button type="button" class="slds-button slds-button--brand generate-file" ng-click="checkInDocument()">{!$Label.CLMDocGenCheckIn}</button>
+                                <button type="button" class="slds-button slds-button--brand generate-file" ng-disabled="isAttachmentTypePdf && !isPdfDownloadReady" ng-click="checkInDocument()">{!$Label.CLMDocGenCheckIn}</button>
                             </div>
                             <div class="main-buttons buttons-group attach-buttons" ng-if="!showTemplateSelection() && (isAttachmentTypePdf || isAttachmentTypeWord)">
                                 <h4>{!$Label.CLMDocGenAttachToContract}</h4>
@@ -106,8 +120,8 @@
                             </div>
                             <div class="download-buttons buttons-group" ng-show="!showDownloadNone">
                                 <h4>{!$Label.CLMDocGenDownloadDoc}</h4>
-                                <button ng-show="showDownloadPdf" type="button" class="slds-button slds-button--neutral download-pdf"  ng-click="preDownloadPdf()">{!$Label.CLMDocGenDownloadPDF}</button>
-                                <button ng-show="showDownloadWord" type="button" class="slds-button slds-button--neutral download-word"  ng-click="preDownloadDocx()">{!$Label.CLMDocGenDownloadWord}</button>
+                                <button ng-show="showDownloadPdf" type="button" class="slds-button slds-button--neutral download-pdf"   ng-disabled="!isPdfDownloadReady" ng-click="preDownloadPdf()">{{isPdfDownloadReady ? labels.CLMDocGenDownloadPDF : labels.CLMDocGeneratingPDF}}</button>
+                                <button ng-show="showDownloadWord" type="button" class="slds-button slds-button--neutral download-word" ng-disabled="!isDocxDownloadReady" ng-click="preDownloadDocx()">{!$Label.CLMDocGenDownloadWord}</button>
                             </div>
                         </div>
                         <!-- BATCHABLE TEMPLATE ACTIONS -->
@@ -126,12 +140,12 @@
                         <div class="document-buttons" ng-if="showDocXTemplate">
                             <div class="main-buttons buttons-group" ng-if="!generatedContentCheckedIn">
                                 <h4>{!$Label.CLMDocGenCheckInDoc}</h4>
-                                <button type="button" class="slds-button slds-button--brand generate-file" ng-disabled="isAttachmentTypePdf && !isPdfDownloadReady" ng-click="checkInDocument()">{!$Label.CLMDocGenCheckIn}</button>
+                                <button type="button" class="slds-button slds-button--brand generate-file" ng-disabled="!isWordCheckinReady || (isAttachmentTypePdf && !isPdfDownloadReady)" ng-click="checkInDocument()">{!$Label.CLMDocGenCheckIn}</button>
                             </div>
                             <div class="download-buttons buttons-group" ng-if="!showDownloadNone && pdfViewer !== 'none'">
                                 <h4>{!$Label.CLMDocGenDownloadDoc}</h4>
-                                <button ng-show="showDownloadWord" type="button" class="slds-button slds-button--neutral download-word" ng-click="downloadGeneratedFile(false)">{!$Label.CLMDocGenDownloadWord}</button>
-                                <button ng-show="showDownloadPdf" type="button" class="slds-button slds-button--neutral download-pdf" ng-disabled=" !isPdfDownloadReady" ng-click="downloadGeneratedFile(true)">{{isPdfDownloadReady ? labels.CLMDocGenDownloadPDF : labels.CLMDocGeneratingPDF}}</button>
+                                <button ng-show="showDownloadWord" type="button" class="slds-button slds-button--neutral download-word" ng-disabled= "!isWordCheckinReady" ng-click="downloadGeneratedFile(false)">{!$Label.CLMDocGenDownloadWord}</button>
+                                <button ng-show="showDownloadPdf" type="button" class="slds-button slds-button--neutral download-pdf" ng-disabled="!isPdfDownloadReady" ng-click="downloadGeneratedFile(true)">{{isPdfDownloadReady ? labels.CLMDocGenDownloadPDF : labels.CLMDocGeneratingPDF}}</button>
                             </div>
                         </div>
                     </div>
@@ -166,7 +180,17 @@
                         </div>
                     </div>
                     <!-- DOCX TEMPLATE CONTENT -->
-                    <docx-template-component generated-pdf-content-version="generatedPDFContentVersion" pdf-single-page-viewer="pdfSinglePageViewer" ispdf-download-ready='isPdfDownloadReady' content-version="generatedContentVersion" labels="labels" class="docx-template-component ng-hide" ng-show="showDocXTemplate"></docx-template-component>
+                    <div class="docx-template-container ng-hide" ng-show="showDocXTemplate" ng-if="showViewTrackSections || showReconcileView">
+                        <div class="document-wrapper">
+                            <div id="container" class="document-container" ng-class="{'regular':showViewTrackSections, 'reconcile': showReconcileView}">
+                                <p ng-if="templateAttached && !versionData.template.templateId" class="no-template-attached">{!$Label.CLMDocGenNoDocTemplate}</p>
+                                <div ng-if="docxSectionList.length === 0 && versionData.template.templateId" class="alert alert-warning" role="alert"><em>{{versionData.template.templateLabel}}</em> {!$Label.CLMDocGenNoSectionsTemplate}</div>
+                                <div ng-if="showViewTrackSections" ng-bind-html="trustAsHtml(docxSectionList)"></div>
+                                <div ng-if="showReconcileView" ng-bind-html="reconcileChanges.getReconciledView()"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <docx-template-component  ng-if='showDocumentView' generated-pdf-content-version="generatedPDFContentVersion" pdf-single-page-viewer="pdfSinglePageViewer" ispdf-download-ready='isPdfDownloadReady' content-version="generatedContentVersion" labels="labels" class="docx-template-component ng-hide" ng-show="showDocXTemplate"></docx-template-component>
                 </div>
             </div>
         </div>
@@ -189,6 +213,7 @@
             recordDeletionLimit = '{!recordDeletionLimit}';
             templateType = '{!templateType}';
             autoAttachDoc = '{!autoAttachDoc}';
+            isReconcileDoc = '{!reconcileDoc}';
             documentTemplateId = '{!documentTemplateId}';
 			preview = '{!preview}';
 			sitePrefix = '{!$Site.Prefix}';
@@ -225,7 +250,9 @@
                 'CLMDocGenDownloadWord':'{!$label.CLMDocGenDownloadWord}',
                 'CLMDocGeneratingPDF':'{!$label.CLMDocGeneratingPDF}',
                 'VlocityPDFTronNoSystemUserMsg':'{!$label.VlocityPDFTronNoSystemUserMsg}',
-                'PdfGenerationWaitingMessage':'{!$label.PdfGenerationWaitingMessage}'
+                'PdfGenerationWaitingMessage':'{!$label.PdfGenerationWaitingMessage}',
+                'CLMViewTrackSections':'{!$Label.CLMViewTrackSections}',
+                'CLMDocPreview':'{!$Label.CLMDocPreview}'
             };
             remoteActions = {
                 getContractSectionsForVersion: {
@@ -350,6 +377,18 @@
                 },
                 remoteGenerateDoc: {
                     action: '{!$RemoteAction.ContractDocumentCreationController.remoteGenerateDoc}',
+                    config: {escape: false}
+                },
+                getDocxSectionHtmlContent: {
+                    action: '{!$RemoteAction.ContractDocumentCreationController.getDocxSectionHtmlContent}',
+                    config: {escape: false} 
+                },
+                saveDocxNewContractSections: {
+                    action: '{!$RemoteAction.ContractDocumentCreationController.saveDocxNewContractSections}',
+                    config: {escape: false}
+                },
+                updateDocxContentVersionLink: {
+                    action: '{!$RemoteAction.ContractDocumentCreationController.updateDocxContentVersionLink}',
                     config: {escape: false}
                 }
             };

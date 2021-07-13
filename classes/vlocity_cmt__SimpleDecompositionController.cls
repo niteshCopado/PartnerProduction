@@ -39,6 +39,10 @@ global class SimpleDecompositionController {
         return null;
     }
     @RemoteAction
+    global static Map<String,Object> getOrderDetails(Id orderId) {
+        return null;
+    }
+    @RemoteAction
     global static String getOrderOrchestrationPlanReferenceId(Id orderId) {
         return null;
     }

@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/4dd36638-381c-519c-8919-b64f09153e1e",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "5G Data Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

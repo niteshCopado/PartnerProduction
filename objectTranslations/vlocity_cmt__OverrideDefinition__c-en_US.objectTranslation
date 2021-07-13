@@ -107,8 +107,18 @@
         <relationshipLabel><!-- Override Definitions Overriding Product Relationship --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Version Group Key of Product --></help>
+        <label><!-- Product Group Key --></label>
+        <name>vlocity_cmt__ProductGroupKey__c</name>
+    </fields>
+    <fields>
         <label><!-- Product Hierarchy Global Key Path --></label>
         <name>vlocity_cmt__ProductHierarchyGlobalKeyPath__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key --></help>
+        <label><!-- Product Hierarchy Group Key Path --></label>
+        <name>vlocity_cmt__ProductHierarchyGroupKeyPath__c</name>
     </fields>
     <fields>
         <label><!-- Product Hierarchy Path --></label>
@@ -123,6 +133,11 @@
         <label><!-- Promotion --></label>
         <name>vlocity_cmt__PromotionId__c</name>
         <relationshipLabel><!-- Override Definitions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Global Group Key of Promotion Item --></help>
+        <label><!-- Promotion Item Group Key --></label>
+        <name>vlocity_cmt__PromotionItemGroupKey__c</name>
     </fields>
     <fields>
         <label><!-- Promotion Item --></label>

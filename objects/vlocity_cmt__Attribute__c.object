@@ -251,6 +251,11 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__ExcludeFromBasketCache__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>New Attribute</label>
     </fieldSets>
     <fieldSets>
@@ -616,6 +621,16 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ExcludeFromBasketCache__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>For product attributes, indicates if this attribute should be excluded from Basket Cache Key. When ExcludeFromBasketCache__c is false, Attribute will be included while generating basket cache key.</description>
+        <externalId>false</externalId>
+        <label>Exclude From Basket Cache</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Filterable__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -852,6 +867,11 @@
                     <fullName>Multi Picklist</fullName>
                     <default>false</default>
                     <label>Multi Picklist</label>
+                </value>
+                <value>
+                    <fullName>Lookup</fullName>
+                    <default>false</default>
+                    <label>Lookup</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

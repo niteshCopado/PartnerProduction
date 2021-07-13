@@ -17,6 +17,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Document Source Id --></label>
+        <name>vlocity_cmt__DocumentSourceId__c</name>
+    </fields>
+    <fields>
         <label><!-- Document Template --></label>
         <name>vlocity_cmt__DocumentTemplateId__c</name>
         <relationshipLabel><!-- Documents --></relationshipLabel>

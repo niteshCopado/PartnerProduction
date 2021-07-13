@@ -185,6 +185,16 @@
                     <default>false</default>
                     <label>NoChange</label>
                 </value>
+                <value>
+                    <fullName>Suspend</fullName>
+                    <default>false</default>
+                    <label>Suspend</label>
+                </value>
+                <value>
+                    <fullName>Resume</fullName>
+                    <default>false</default>
+                    <label>Resume</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
         <visibleLines>5</visibleLines>

@@ -39,7 +39,7 @@
          }
     </style>
     <script type='text/javascript'>
-        window.addEventListener('DOMContentLoaded', function(event){
+        function onPageLoad(event){
             var domClass = '';
             var searchStr = event.currentTarget.location.search;
 
@@ -54,11 +54,11 @@
                 domClass.style.display = 'block';
             }
             //Using object to fix OMNI-5324 because handle_message function of BusinessProcessJS expecting string object to parse
-            window.parent.postMessage(JSON.stringify({docusignStatus: searchStr}), '*');
-        });
+            window.parent.postMessage(JSON.stringify({docusignStatus: searchStr, docusignPostMessage: true}), '*');
+        }
     </script>
 
-    <body>
+    <body onload='onPageLoad(event)'>
         <div class='vlocity'>
             <div id='signing_complete' class='panel'>
                 <h3>{!$Label.OmniDocuSignSuccessMsg}</h3>

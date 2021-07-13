@@ -76,12 +76,12 @@
         <label><!-- Lifecycle Status --></label>
         <name>vlocity_cmt__LifecycleStatus__c</name>
         <picklistValues>
-            <masterLabel>Deployed</masterLabel>
-            <translation><!-- Deployed --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Draft</masterLabel>
             <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Released</masterLabel>
+            <translation><!-- Released --></translation>
         </picklistValues>
     </fields>
     <fields>

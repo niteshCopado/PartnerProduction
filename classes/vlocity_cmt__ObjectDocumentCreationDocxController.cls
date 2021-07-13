@@ -61,6 +61,10 @@ global class ObjectDocumentCreationDocxController {
 
     }
     @RemoteAction
+    global static Map<String,Object> createDocumentLink(Map<String,Object> inputMap) {
+        return null;
+    }
+    @RemoteAction
     global static String generatePdfDocument(Map<String,Object> inputMap) {
         return null;
     }
@@ -84,7 +88,11 @@ global class ObjectDocumentCreationDocxController {
         return null;
     }
     @RemoteAction
-    global static Map<String,Object> getTokenData(Map<String,Object> inputData) {
+    global static Map<String,Object> getTokenData(Map<String,Object> inputMap) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> linkContentVersionToObjectGuestUser(Map<String,Object> inputMap) {
         return null;
     }
     @RemoteAction

@@ -54,6 +54,12 @@ $namespace: $cpq-namespace;
                     margin-bottom: -5px;
                 }
             }
+            .#{$namespace}-next-product {
+                .slds-spinner_container {
+                    position: relative;
+                    padding-top: 10px;
+                }
+            }
             .#{$namespace}-multiplay-text-wrap {
                 max-width: 17vw;
                 white-space: nowrap;

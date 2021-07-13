@@ -8,8 +8,8 @@
               </div>
             </div>
         </div>
-        <div class="slds-p-bottom--small">    
-            <table  class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout via-slds-table-pinned-header">
+        <div id="table-div" class="slds-p-bottom--small">    
+            <table class="slds-table slds-table--bordered slds-table--resizable-cols slds-table--fixed-layout via-slds-table-pinned-header">
               <thead>
                 <tr class="slds-text-heading--label">
                     <th ng-click="sortBy(field)" class="slds-p-bottom--small" ng-repeat="field in cards[0].states[0].fields" scope="col" ng-class="{'slds-is-sorted' : sortingOrder == 'obj'+field.name, 'slds-is-sorted--desc' : reverse, 'slds-is-sorted--asc': !reverse}">
@@ -22,8 +22,8 @@
                     <th ng-if="cards[0].actions.length" class="slds-p-bottom--small" scope="col"><div class="slds-truncate slds-th__action" >{{::$root.vlocity.getCustomLabel('CustomAction', 'Custom action')}}</div></th>
                 </tr>
               </thead>
-              <tbody>
-                 <tr ng-repeat="card in getCardList() | orderBy:sortingOrder:reverse track by card.cardIndex" ng-model="card" vloc-card data="card" records="records" use-existing-element-type>
+              <tbody ng-if="render">
+                 <tr ng-repeat="card in getCardList() | orderBy:sortingOrder:reverse track by card.cardIndex + card.cardName" ng-model="card" vloc-card data="card" records="records" use-existing-element-type>
                   </tr>
               </tbody>
             </table>

@@ -162,6 +162,10 @@
         <name>vlocity_cmt__EffectiveUntilDate__c</name>
     </fields>
     <fields>
+        <label><!-- Exclude From Basket Cache --></label>
+        <name>vlocity_cmt__ExcludeFromBasketCache__c</name>
+    </fields>
+    <fields>
         <label><!-- Filterable --></label>
         <name>vlocity_cmt__Filterable__c</name>
     </fields>
@@ -258,6 +262,10 @@
         <picklistValues>
             <masterLabel>Datetime</masterLabel>
             <translation><!-- Datetime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lookup</masterLabel>
+            <translation><!-- Lookup --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Multi Picklist</masterLabel>

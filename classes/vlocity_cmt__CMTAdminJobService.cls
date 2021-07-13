@@ -12,4 +12,7 @@ global class CMTAdminJobService {
     global static void startProductHierarchyMaintenanceJob(Id pricebookId) {
 
     }
+    global static void startProductHierarchyMaintenanceJob(Id pricebookId, Boolean deleteOldData) {
+
+    }
 }

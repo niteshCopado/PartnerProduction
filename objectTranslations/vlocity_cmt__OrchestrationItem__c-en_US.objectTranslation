@@ -70,7 +70,7 @@
         <name>vlocity_cmt__ExecutionLog__c</name>
     </fields>
     <fields>
-        <label><!-- Expected Completion Date --></label>
+        <label><!-- Requested Completion Date --></label>
         <name>vlocity_cmt__ExpectedCompletionDate__c</name>
     </fields>
     <fields>

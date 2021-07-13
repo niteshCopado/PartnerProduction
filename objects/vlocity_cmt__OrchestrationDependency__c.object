@@ -195,6 +195,29 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;   vlocity_cmt__DependsOnItemId__r.vlocity_cmt__OrchestrationPlanId__r.vlocity_cmt__OrderId__r.Id,   vlocity_cmt__DependsOnItemId__r.vlocity_cmt__OrchestrationPlanId__r.vlocity_cmt__OrderId__r.OrderNumber   )</formula>
+        <label>Order</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__Plan__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;  vlocity_cmt__DependsOnItemId__r.vlocity_cmt__OrchestrationPlanId__r.Id,   vlocity_cmt__DependsOnItemId__r.vlocity_cmt__OrchestrationPlanId__r.Name  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Plan</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__State__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

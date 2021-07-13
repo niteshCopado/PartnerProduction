@@ -121,6 +121,18 @@
             <quickActionName>Task.UpdatePriority_3</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
+            <quickActionName>Task.UpdatePriority_0</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>FeedItem.TextPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>FeedItem.ContentPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>FeedItem.LinkPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
             <quickActionName>Task.EditDescription_2</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
@@ -131,6 +143,9 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.UpdatePriority_2</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>LogACall</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.EditDescription_1</quickActionName>
@@ -145,9 +160,6 @@
             <quickActionName>Task.UpdatePriority_1</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
-            <quickActionName>LogACall</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
             <quickActionName>Task.EditDescription_0</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
@@ -155,18 +167,6 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.UpdateStatus_0</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>Task.UpdatePriority_0</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>FeedItem.TextPost</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>FeedItem.ContentPost</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>FeedItem.LinkPost</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.PollPost</quickActionName>

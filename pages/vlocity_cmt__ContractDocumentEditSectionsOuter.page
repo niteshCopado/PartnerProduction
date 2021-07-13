@@ -12,7 +12,7 @@
             <apex:includeScript value="/xdomain/xdomain.js"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_strap_bundle_1_6)}"/>
-            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymceIce, '/js/tinymce/tinymce.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__tinymce, '/js/tinymce/tinymce.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__ui_tinymce, '/src/tinymce.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__angular_utils_pagination, '/dirPagination.js')}"/>
             <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__docxtemplater_bundle, '/jszip/jszip.min.js')}"/>
@@ -22,6 +22,7 @@
             <apex:includeScript value="{!$Resource.vlocity_cmt__ViaDirectives}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__SldsAngular}"/>
             <apex:includeScript value="{!$Resource.vlocity_cmt__ContractDocumentEditSectionsApp}"/>
+            <apex:includeScript value="{!$Resource.vlocity_cmt__DocXContentTypes}"/>
         </head>
         <body>
             <div class="vlocity via-slds vloc-body contract-edit-sections" ng-app="contractDocumentEditSectionsApp" ng-controller="contractDocumentEditSectionsCtrl" via-affix="top" via-screen-height="viaScreenHeight" ng-class="{'msie': isInternetExplorer}">
@@ -82,11 +83,6 @@
                                     <div class="checkin-button buttons-group">
                                         <h4>{!$Label.ContractCheckInDoc}</h4>
                                         <button type="button" class="slds-button slds-button_brand go-back" ng-click="checkInDocumentConsole()">{!$Label.ContractCheckIn}</button>
-                                    </div>
-                                    <div class="download-buttons buttons-group">
-                                        <h4>{!$Label.ContractDownloadDoc}</h4>
-                                        <button type="button" class="slds-button slds-button_neutral download-pdf" ng-click="preDownloadPdfConsole()">{!$Label.ContractDownloadPDF}</button> 
-                                        <button type="button" class="slds-button slds-button_neutral download-word" ng-click="preDownloadDocxConsole()">{!$Label.ContractDownloadWord}</button>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +163,7 @@
                 contractVersionId = '{!contractVersionId}';
                 isEditableValue = '{!isEditableValue}';
                 isInConsole = sforce.console.isInConsole();
-                userName = '{!$User.FirstName}' + ' ' + '{!$User.LastName}';
+                userName = '{!JSENCODE($User.FirstName)}' + ' ' + '{!JSENCODE($User.LastName)}';
                 userId = '{!$User.Id}';
                 docName = '{!JSENCODE(documentName)}';
                 containsRedlines = {!containsRedlines};

@@ -61,7 +61,9 @@
         renderLoader(true);
         componentLoading = true;
         componentName = event.data.name;
-        $Lightning.use('{!namespace}:ltngOutVF', function() {
+        let orgNamespace = '{!namespace}';
+        orgNamespace = orgNamespace ? orgNamespace : 'c';
+        $Lightning.use(orgNamespace + ':ltngOutVF', function() {
           $Lightning.createComponent(`${event.data.namespace ? event.data.namespace : 'c'}:${event.data.name}`,
               event.data.attrs,
               "lightning",

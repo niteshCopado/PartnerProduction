@@ -595,6 +595,32 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__OpportunityGroupId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>To assign group to line item</description>
+        <externalId>false</externalId>
+        <label>Opportunity Group</label>
+        <referenceTo>vlocity_cmt__OpportunityGroup__c</referenceTo>
+        <relationshipLabel>Opportunity Line Items</relationshipLabel>
+        <relationshipName>OpportunityLineItems</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__OpportunityMemberId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>To assign member to line item</description>
+        <externalId>false</externalId>
+        <label>Opportunity Member</label>
+        <referenceTo>vlocity_cmt__OpportunityMember__c</referenceTo>
+        <relationshipLabel>Opportunity Line Items</relationshipLabel>
+        <relationshipName>OpportunityLineItems</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__OverageCalculatedPrice__c</fullName>
         <deprecated>false</deprecated>
         <description>System generated price based on Overage Charge</description>
@@ -735,6 +761,29 @@
         <relationshipName>Opportunity_Product</relationshipName>
         <required>false</required>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key of Product</description>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.vlocity_cmt__GlobalGroupKey__c</formula>
+        <inlineHelpText>Version Group Key of Product</inlineHelpText>
+        <label>Product Group Key</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductHierarchyGroupKeyPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the resulting string obtained by replacing every Product Id in the Product Hierarchy Path with its Version Group key</inlineHelpText>
+        <label>Product Hierarchy Group Key Path</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>vlocity_cmt__ProductHierarchyPath__c</fullName>

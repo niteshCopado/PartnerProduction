@@ -2,13 +2,7 @@
 <html xmlns:ng="http://angularjs.org" ng-app="contentListApp" lang="en">
     <head>
         <meta charset="utf-8"/>
-        <!-- <apex:includeScript value="{!$Resource.JQUERYJS}"/>
-        <apex:includeScript value="{!URLFOR($Resource.vstrap2, '/javascripts/bootstrap.min.js')}"/>
-        <apex:stylesheet value="{!URLFOR($Resource.vstrap2, '/css/styles.css')}"/>
-
-        <apex:includeScript value="{!$Resource.AngularJS}"/>
-        <apex:includeScript value="{!$Resource.ANGULARBOOT}"/> -->
-        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/javascripts/vlocity.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.vlocity_cmt__vlocity_core_assets, '/latest/vlocity_core_assets.js')}"/> 
         <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__vlocity_assets, '/css/vlocity.css')}"/>
         <apex:stylesheet value="{!$Resource.vlocity_cmt__ngtablemin}"/>
         <apex:includeScript value="{!$Resource.vlocity_cmt__ngtableminjs}"/>

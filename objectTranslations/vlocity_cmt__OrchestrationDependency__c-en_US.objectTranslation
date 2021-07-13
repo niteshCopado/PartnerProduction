@@ -16,6 +16,14 @@
         <relationshipLabel><!-- Orchestration Dependencies --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Order --></label>
+        <name>vlocity_cmt__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>vlocity_cmt__Plan__c</name>
+    </fields>
+    <fields>
         <label><!-- State --></label>
         <name>vlocity_cmt__State__c</name>
         <picklistValues>

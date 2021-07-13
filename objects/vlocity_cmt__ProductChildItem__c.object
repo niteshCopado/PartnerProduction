@@ -156,6 +156,56 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
+        <fullName>vlocity_cmt__ProductCompareVersion</fullName>
+        <description>Structure Compare</description>
+        <displayedFields>
+            <field>vlocity_cmt__ChildProductName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__ParentProductName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__MinQuantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__MaxQuantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__MinimumChildItemQuantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__MaximumChildItemQuantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__CollapseHierarchy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__IsVirtualItem__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Compare Version</label>
+    </fieldSets>
+    <fieldSets>
         <fullName>vlocity_cmt__ProductStructure</fullName>
         <description>Product Structure page</description>
         <displayedFields>
@@ -198,6 +248,17 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ChildProductName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ChildProductId__r.Name</formula>
+        <label>Child Product Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__CollapseHierarchy__c</fullName>
@@ -328,6 +389,17 @@ Only one will be allowed for each root product.</description>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ParentProductName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ParentProductId__r.Name</formula>
+        <label>Parent Product Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__Quantity__c</fullName>

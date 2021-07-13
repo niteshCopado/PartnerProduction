@@ -17,7 +17,7 @@
                 "Code__c": "ACAT_Phones",
                 "Name": "Mobile Devices",
                 "displaySequence": 20,
-                "id": "a0J4W000013q1K1UAI",
+                "id": "a0J5Y00000i3dhhUAA",
                 "messages": [
                 ],
                 "productAttributes": {
@@ -25,7 +25,7 @@
                     ],
                     "records": [
                         {
-                            "attributeId": "a0K4W00000YL9c5UAD",
+                            "attributeId": "a0K5Y00000iUBA2UAO",
                             "cloneable": true,
                             "code": "ATT_RT_PAY_TYPE",
                             "dataType": "text",
@@ -46,7 +46,7 @@
                             "values": null
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bjUAD",
+                            "attributeId": "a0K5Y00000iUB9gUAG",
                             "cloneable": true,
                             "code": "ATT_DT_BRD",
                             "dataType": "text",
@@ -100,7 +100,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9biUAD",
+                            "attributeId": "a0K5Y00000iUB9fUAG",
                             "cloneable": true,
                             "code": "ATT_RT_CLR",
                             "dataType": "text",
@@ -154,7 +154,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bkUAD",
+                            "attributeId": "a0K5Y00000iUB9hUAG",
                             "cloneable": true,
                             "code": "ATT_DT_CAP",
                             "dataType": "text",
@@ -192,7 +192,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9blUAD",
+                            "attributeId": "a0K5Y00000iUB9iUAG",
                             "cloneable": true,
                             "code": "ATT_RT_MOS",
                             "dataType": "text",
@@ -238,7 +238,7 @@
                             ]
                         },
                         {
-                            "attributeId": "a0K4W00000YL9bnUAD",
+                            "attributeId": "a0K5Y00000iUB9kUAG",
                             "cloneable": true,
                             "code": "ATT_DT_SZ",
                             "dataType": "text",
@@ -296,8 +296,8 @@
     "%vlocity_namespace%__EffectiveDate__c": "2019-02-01",
     "%vlocity_namespace%__EndDate__c": "",
     "%vlocity_namespace%__EndOfLifeDate__c": "",
-    "%vlocity_namespace%__FulfilmentStartDate__c": "2020-02-01T08:00:00.000Z",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__FulfilmentStartDate__c": "2019-02-01T08:00:00.000Z",
+    "%vlocity_namespace%__GlobalGroupKey__c": "69b8c573-8176-d0f9-afdf-3bdf6d8ba8d1",
     "%vlocity_namespace%__GlobalKey__c": "6ff55065-3051-4db7-cc99-f6896cc1f9cf",
     "%vlocity_namespace%__HeaderData__c": "",
     "%vlocity_namespace%__HelpText__c": "",
@@ -315,6 +315,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/0dcba5d42ab6de0806123ba60dbf5817",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
+    "%vlocity_namespace%__ObjectTypeName__c": "SmartPhone Product Spec",
     "%vlocity_namespace%__ParentClassId__c": "",
     "%vlocity_namespace%__PriceListEntry__c": "Samsung-Galaxy-S10_PriceListEntries.json",
     "%vlocity_namespace%__ProductChildItem__c": "Samsung-Galaxy-S10_ProductChildItems.json",
@@ -333,7 +334,7 @@
     "%vlocity_namespace%__Type__c": "None",
     "%vlocity_namespace%__VendorAccountId__c": "",
     "%vlocity_namespace%__VersionEndDateTime__c": "",
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "%vlocity_namespace%__VersionStartDateTime__c": "",
     "CanUseQuantitySchedule": false,
     "CanUseRevenueSchedule": false,

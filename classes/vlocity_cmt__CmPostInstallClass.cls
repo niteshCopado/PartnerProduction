@@ -9,6 +9,9 @@ global class CmPostInstallClass implements System.InstallHandler {
     global CmPostInstallClass() {
 
     }
+    global static void asyncProcessCustomFontFiles(Set<String> fontNameSet) {
+
+    }
     global static void cmRunDev2ProdInserts() {
 
     }
@@ -43,6 +46,9 @@ global class CmPostInstallClass implements System.InstallHandler {
 
     }
     global static void upgradeCustomSettingsToContractTypes() {
+
+    }
+    global static void upgradeDocuSignCustomSettings() {
 
     }
 }

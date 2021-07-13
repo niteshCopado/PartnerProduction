@@ -6,6 +6,7 @@ methods, variables, and properties.
 To enable code to compile, all methods return null.
 */
 global class IntegrationProcedureService implements vlocity_cmt.VlocityOpenInterface2 {
+    global static Boolean isTest;
     global IntegrationProcedureService() {
 
     }

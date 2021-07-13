@@ -4,9 +4,10 @@
 <html>
     <script type='text/javascript'>
         window.addEventListener('DOMContentLoaded', function(event) {
-            window.parent.postMessage('docuSignViewPdfPageloaded', '*');
+            window.parent.postMessage({docuSignViewPdfPageloaded: true, docusignPostMessage:true}, '*');
             window.addEventListener('message', function(event){
-                document.querySelector('embed').setAttribute('src', 'data:application/pdf;base64,' + event.data);
+                if (typeof event.data === 'object' && event.data.docusignPostMessageViewPdf)
+                    document.querySelector('embed').setAttribute('src', 'data:application/pdf;base64,' + event.data.pdfData);
         	});
         });
     </script>

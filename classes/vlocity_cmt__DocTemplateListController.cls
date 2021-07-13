@@ -46,4 +46,8 @@ global class DocTemplateListController {
     global static Boolean setTemplateContentVersion(Id templateId, Id contentVersionId) {
         return null;
     }
+    @RemoteAction
+    global static Boolean setTemplateContentVersionDocx(Id templateId, Id contentVersionId, Boolean isSectionIdsReplaced) {
+        return null;
+    }
 }

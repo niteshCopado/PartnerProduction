@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/0c8b0640-aa3e-a256-4998-24f6051698ea",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Incipio Canvas Fabric Wrap Case - iPhone X",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

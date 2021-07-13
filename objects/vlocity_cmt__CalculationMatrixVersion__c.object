@@ -145,6 +145,16 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>vlocity_cmt__VlocityMatrixVersion</fullName>
+        <fields>Name</fields>
+        <fields>vlocity_cmt__VersionNumber__c</fields>
+        <fields>vlocity_cmt__IsEnabled__c</fields>
+        <fields>vlocity_cmt__StartDateTime__c</fields>
+        <fields>vlocity_cmt__EndDateTime__c</fields>
+        <fields>vlocity_cmt__Priority__c</fields>
+        <label>Vlocity Matrix Version</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>

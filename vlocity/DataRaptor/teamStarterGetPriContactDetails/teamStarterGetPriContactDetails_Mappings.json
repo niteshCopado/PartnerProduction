@@ -21,6 +21,20 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "AccountId",
+        "%vlocity_namespace%__GlobalKey__c": "c0da429a-9166-ba10-2fb4-c0e921bf5c4b",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Account:Id",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "teamStarterGetPriContactDetailsCustom9879",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "teamStarterGetPriContactDetails",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
         "%vlocity_namespace%__DomainObjectFieldAPIName__c": "AccountPostalCode",
         "%vlocity_namespace%__GlobalKey__c": "c8760ea1-da28-51c9-7538-f9b469dd9c16",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Account:BillingPostalCode",

@@ -1,7 +1,7 @@
 {
     "%vlocity_namespace%__EffectiveFromDate__c": "2017-09-01",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "a4175edd-3e94-e33f-cf8a-e4d2861b6c23",
     "%vlocity_namespace%__GlobalKey__c": "58b2906a510c354c2cda489386983515",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": false,
@@ -22,7 +22,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/63ba6ae5f8c257f7cdccc385d2a85dca",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "Cable Internet Product Spec",
     "RecordTypeId": {
         "DeveloperName": "ObjectType",

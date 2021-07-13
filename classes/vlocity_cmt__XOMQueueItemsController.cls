@@ -17,7 +17,23 @@ global class XOMQueueItemsController {
         return null;
     }
     @RemoteAction
+    global static Map<String,Object> assignToMe(List<String> orchestrationItemIdList) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> clearAssignment(List<String> orchestrationItemIdList) {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> clearUserAssignment(List<String> orchestrationItemIdList) {
+        return null;
+    }
+    @RemoteAction
     global static Map<String,Object> completeItems(List<String> orchestrationItemIdList) {
+        return null;
+    }
+    @RemoteAction
+    global static List<vlocity_cmt__ManualQueue__c> getActiveQueueWithQuery(String filterQuery) {
         return null;
     }
     @RemoteAction
@@ -25,7 +41,15 @@ global class XOMQueueItemsController {
         return null;
     }
     @RemoteAction
+    global static List<User> getActiveUsersWithQuery(String filterKey) {
+        return null;
+    }
+    @RemoteAction
     global static List<User> getActiveUsers() {
+        return null;
+    }
+    @RemoteAction
+    global static Map<String,Object> getItemsMerged(String manualQueueId, Integer limitLength, Integer offSet, List<Map<String,String>> sortParameters, Map<String,String> additionalFilter, Boolean deepCheck, String userId, Map<String,List<String>> additionalFilterReferenced, String displayedFields) {
         return null;
     }
     @RemoteAction
@@ -33,7 +57,15 @@ global class XOMQueueItemsController {
         return null;
     }
     @RemoteAction
+    global static Map<String,Object> getMetaData(String manualQueueId, String displayedFields) {
+        return null;
+    }
+    @RemoteAction
     global static List<vlocity_cmt__OrchestrationItem__c> getSuggestedValues(String referenceName, String manualQueueId) {
+        return null;
+    }
+    @RemoteAction
+    global static Integer getTimeZoneOffset() {
         return null;
     }
     @RemoteAction

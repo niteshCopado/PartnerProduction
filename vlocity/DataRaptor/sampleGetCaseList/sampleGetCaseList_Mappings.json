@@ -58,7 +58,21 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
-        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Cases:CaseId",
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseDescription",
+        "%vlocity_namespace%__GlobalKey__c": "961aa4a4-30ca-592d-efd5-8af4e1e49a24",
+        "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:Description",
+        "%vlocity_namespace%__IsDisabled__c": false,
+        "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+        "%vlocity_namespace%__MapId__c": "sampleGetCaseListCustom8463",
+        "%vlocity_namespace%__UpsertKey__c": false,
+        "Name": "sampleGetCaseList",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c"
+    },
+    {
+        "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+        "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseId",
         "%vlocity_namespace%__GlobalKey__c": "3655c031-a650-efb6-47a6-469d580857ca",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:Id",
         "%vlocity_namespace%__IsDisabled__c": false,
@@ -72,7 +86,7 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
-        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Cases:CaseNumber",
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseNumber",
         "%vlocity_namespace%__GlobalKey__c": "21c61642-02f4-15ff-84ad-ce483d1e324d",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:CaseNumber",
         "%vlocity_namespace%__IsDisabled__c": false,
@@ -86,7 +100,7 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
-        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Cases:CaseOpenDate",
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseOpenDate",
         "%vlocity_namespace%__GlobalKey__c": "bcb0aa20-6403-ac1d-c70f-41a04fe15200",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:CreatedDate",
         "%vlocity_namespace%__IsDisabled__c": false,
@@ -100,7 +114,7 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
-        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Cases:CaseStatus",
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseStatus",
         "%vlocity_namespace%__GlobalKey__c": "f5aa7b09-294f-111e-a862-04eb7506c2f6",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:Status",
         "%vlocity_namespace%__IsDisabled__c": false,
@@ -114,7 +128,7 @@
     {
         "%vlocity_namespace%__DomainObjectAPIName__c": "json",
         "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
-        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Cases:CaseSubject",
+        "%vlocity_namespace%__DomainObjectFieldAPIName__c": "CaseSubject",
         "%vlocity_namespace%__GlobalKey__c": "ffa360ee-963f-5391-366d-288492d1912c",
         "%vlocity_namespace%__InterfaceFieldAPIName__c": "Case:Subject",
         "%vlocity_namespace%__IsDisabled__c": false,

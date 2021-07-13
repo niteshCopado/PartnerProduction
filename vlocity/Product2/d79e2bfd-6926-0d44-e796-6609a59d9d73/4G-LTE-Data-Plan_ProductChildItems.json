@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/d79e2bfd-6926-0d44-e796-6609a59d9d73",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "4G LTE Data Plan",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

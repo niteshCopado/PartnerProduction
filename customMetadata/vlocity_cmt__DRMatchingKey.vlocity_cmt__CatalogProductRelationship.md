@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>vlocity_cmt__MatchingKeyFields__c</field>
-        <value xsi:type="xsd:string">%vlocity_namespace%__CatalogId__c,%vlocity_namespace%__Product2Id__c</value>
+        <value xsi:type="xsd:string">%vlocity_namespace%__CatalogId__c,%vlocity_namespace%__Product2Id__c,%vlocity_namespace%__PromotionId__c</value>
     </values>
     <values>
         <field>vlocity_cmt__MatchingKeyObject__c</field>

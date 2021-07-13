@@ -1,7 +1,7 @@
 {
     "%vlocity_namespace%__Active__c": true,
     "%vlocity_namespace%__OmniScriptId__c": {
-        "Name": "Team  Stub Master Account Layout",
+        "Name": "Team  Stub Master Account",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
         "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/team/getMasterAccountDetails/Procedure",
         "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"

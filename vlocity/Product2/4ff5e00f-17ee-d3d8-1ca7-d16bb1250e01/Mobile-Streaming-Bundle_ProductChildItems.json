@@ -19,6 +19,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/4ff5e00f-17ee-d3d8-1ca7-d16bb1250e01",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Mobile Streaming Bundle",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -37,6 +38,7 @@
             "VlocityLookupRecordSourceKey": "Product2/62a38d2d-1ec2-0723-6735-0b01ef16ed19",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "HULU Plus",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "569d0d3a-fcf4-bbf7-a1e9-d8b14cbaefdb",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -53,6 +55,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/4ff5e00f-17ee-d3d8-1ca7-d16bb1250e01",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Mobile Streaming Bundle",
         "%vlocity_namespace%__Quantity__c": 0,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -71,6 +74,7 @@
             "VlocityLookupRecordSourceKey": "Product2/f2bd66f2-1494-6eb4-5e16-423600fe5dc9",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "EPIX",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "9d80f4b6-5697-be83-43ad-0654b56d74ff",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -87,6 +91,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/4ff5e00f-17ee-d3d8-1ca7-d16bb1250e01",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Mobile Streaming Bundle",
         "%vlocity_namespace%__Quantity__c": 1,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",
@@ -105,6 +110,7 @@
             "VlocityLookupRecordSourceKey": "Product2/479a8c8a-8ac0-c56f-0741-099647054a5c",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ChildProductName__c": "Amazon Prime",
         "%vlocity_namespace%__CollapseHierarchy__c": false,
         "%vlocity_namespace%__GlobalKey__c": "cf76051e-63a8-265e-788f-b44f575f1b9e",
         "%vlocity_namespace%__IsOverride__c": false,
@@ -121,6 +127,7 @@
             "VlocityMatchingRecordSourceKey": "Product2/4ff5e00f-17ee-d3d8-1ca7-d16bb1250e01",
             "VlocityRecordSObjectType": "Product2"
         },
+        "%vlocity_namespace%__ParentProductName__c": "Mobile Streaming Bundle",
         "%vlocity_namespace%__Quantity__c": 0,
         "%vlocity_namespace%__RelationshipType__c": "Child",
         "%vlocity_namespace%__SelectionMethodImplementation__c": "",

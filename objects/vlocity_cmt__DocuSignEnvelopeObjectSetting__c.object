@@ -15,6 +15,102 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__DocuSignAccountBrand__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Account Brand Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignAccountBrand</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignExpireAfter__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Expire After Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignExpireAfter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignExpireEnabled__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Expire Enabled Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignExpireEnabled</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignExpireWarn__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Expire Warn Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignExpireWarn</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignReminderDelay__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Reminder Delay Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignReminderDelay</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignReminderEnabled__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Reminder Enabled Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignReminderEnabled</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignReminderFrequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Reminder Frequency Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignReminderFrequency</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__DocuSignUseAccountDefaultNotification__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Use Account Default Notification Setting</description>
+        <externalId>false</externalId>
+        <label>DocuSignUseAccountDefaultNotification</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__EnvelopeObjectName__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

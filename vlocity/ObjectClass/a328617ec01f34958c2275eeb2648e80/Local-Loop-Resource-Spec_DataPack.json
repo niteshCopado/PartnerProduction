@@ -1,7 +1,7 @@
 {
     "%vlocity_namespace%__EffectiveFromDate__c": "2017-10-01",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "c18aed73-c611-285b-0e7b-a9e69386714f",
     "%vlocity_namespace%__GlobalKey__c": "a328617ec01f34958c2275eeb2648e80",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": false,
@@ -22,7 +22,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/63ba6ae5f8c257f7cdccc385d2a85dca",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "Local Loop Resource Spec",
     "RecordTypeId": {
         "DeveloperName": "ObjectType",

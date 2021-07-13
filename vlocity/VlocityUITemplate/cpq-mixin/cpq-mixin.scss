@@ -30,19 +30,3 @@ $final-level: 10;
         }
     }
 }
-
-@mixin productChildLevelLoadMoreStyling($namespace: 'cpq', $direction: 'left', $padding: $padding-offset, $level: 1) {
-    .#{$namespace}-product-cart-item-child-load-more-level-#{$level} {
-        @if $direction == 'left' {
-            padding-left : $padding + px;
-            padding-right: 0;
-        }
-        @if $direction == 'right' {
-            padding-right: $padding + px; 
-            padding-left: 0;
-        }
-    }
-    @if ($level < $final-level) {
-        @include productChildLevelLoadMoreStyling($namespace, $direction, $padding + $padding-offset, $level + 1);
-    }
-}

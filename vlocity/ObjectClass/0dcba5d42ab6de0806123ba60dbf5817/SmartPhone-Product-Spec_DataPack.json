@@ -2,7 +2,7 @@
     "%vlocity_namespace%__AttributeAssignment__c": "SmartPhone-Product-Spec_AttributeAssignments.json",
     "%vlocity_namespace%__EffectiveFromDate__c": "2017-10-01",
     "%vlocity_namespace%__EffectiveUntilDate__c": "",
-    "%vlocity_namespace%__GlobalGroupKey__c": "",
+    "%vlocity_namespace%__GlobalGroupKey__c": "196a9901-6d25-54dd-bec5-fef317979c49",
     "%vlocity_namespace%__GlobalKey__c": "0dcba5d42ab6de0806123ba60dbf5817",
     "%vlocity_namespace%__IsActive__c": true,
     "%vlocity_namespace%__IsVirtual__c": false,
@@ -23,7 +23,7 @@
         "VlocityLookupRecordSourceKey": "%vlocity_namespace%__ObjectClass__c/63ba6ae5f8c257f7cdccc385d2a85dca",
         "VlocityRecordSObjectType": "%vlocity_namespace%__ObjectClass__c"
     },
-    "%vlocity_namespace%__VersionLabel__c": "",
+    "%vlocity_namespace%__VersionLabel__c": "V1",
     "Name": "SmartPhone Product Spec",
     "RecordTypeId": {
         "DeveloperName": "ObjectType",

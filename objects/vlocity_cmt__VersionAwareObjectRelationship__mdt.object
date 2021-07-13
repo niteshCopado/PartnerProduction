@@ -63,7 +63,7 @@
     <fields>
         <fullName>vlocity_cmt__RelationshipType__c</fullName>
         <deprecated>false</deprecated>
-        <description>This picklist contains relationship types, e.g. One to Many, Many to One and Many to Many.</description>
+        <description>This picklist contains relationship types, e.g. One to Many, Many to One, Many to Many and Child Products from Datastore.</description>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Relationship Type</label>
@@ -87,6 +87,11 @@
                     <fullName>Many to Many</fullName>
                     <default>false</default>
                     <label>Many to Many</label>
+                </value>
+                <value>
+                    <fullName>Child Products from Datastore</fullName>
+                    <default>false</default>
+                    <label>Child Products from Datastore</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

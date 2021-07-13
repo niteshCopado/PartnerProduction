@@ -144,6 +144,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>Represents a submission of an application for products or services made by an individual, group of individuals or organization.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -189,6 +190,32 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__Address1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Additional address information 1 of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Street Supplement 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__Address2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Additional street address information 2 of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Street Supplement 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ApplicationReferenceNumber__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -215,6 +242,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Content__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -224,6 +264,19 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__Country__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Country of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__FilesMap__c</fullName>
@@ -237,6 +290,19 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__Floor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The floor in a building of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Floor</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__FullJSON__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -246,6 +312,32 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__Geolocation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Geolocation of the address that is the topic of an Application (If no Premises is identified).</description>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>8</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__HouseNumberSupplement__c</fullName>
+        <deprecated>false</deprecated>
+        <description>House number supplement of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>House Number Supplement</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__JSONData__c</fullName>
@@ -292,6 +384,34 @@
         <externalId>false</externalId>
         <label>Opportunity</label>
         <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__PostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Postal code of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__PremisesId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Premises that is the topic of an Application.</description>
+        <externalId>false</externalId>
+        <label>Premises</label>
+        <referenceTo>vlocity_cmt__Premises__c</referenceTo>
         <relationshipLabel>Applications</relationshipLabel>
         <relationshipName>Applications</relationshipName>
         <required>false</required>
@@ -354,6 +474,34 @@
         <visibleLines>10</visibleLines>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ServicePointId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Service Point that is the topic of an Application.</description>
+        <externalId>false</externalId>
+        <label>Service Point</label>
+        <referenceTo>vlocity_cmt__ServicePoint__c</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__State__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State or Province of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -399,6 +547,19 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__StreetAddress__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street address of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__Summary__c</fullName>
         <deprecated>false</deprecated>
         <description>Summary of the reason for screening failure.</description>
@@ -429,6 +590,19 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__UnitNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unit / Apartment number of the address that is the topic of an Application (If no Premises is identified).</description>
+        <externalId>false</externalId>
+        <label>Unit / Apartment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <label>Application</label>
     <listViews>

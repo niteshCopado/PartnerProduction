@@ -186,6 +186,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__DocumentSourceId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Document Source Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__DocumentTemplateId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>

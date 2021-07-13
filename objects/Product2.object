@@ -240,6 +240,71 @@
         <label>New Product Class</label>
     </fieldSets>
     <fieldSets>
+        <fullName>vlocity_cmt__ProductCompareVersion</fullName>
+        <description>Fields displayed in the compare version feature</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ProductCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__ObjectTypeName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__ProductSpecName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>IsActive</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__ProductSpecId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__LifecycleStatus__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__SellingStartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__SellingEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>vlocity_cmt__IsOrderable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Product Compare</label>
+    </fieldSets>
+    <fieldSets>
         <fullName>vlocity_cmt__ProductDetails</fullName>
         <description>Vlocity Product Console</description>
         <displayedFields>
@@ -667,9 +732,14 @@
                     <label>Draft</label>
                 </value>
                 <value>
-                    <fullName>Deployed</fullName>
+                    <fullName>Released</fullName>
                     <default>false</default>
-                    <label>Deployed</label>
+                    <label>Released</label>
+                </value>
+                <value>
+                    <fullName>Amendment Pending</fullName>
+                    <default>false</default>
+                    <label>Amendment Pending</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -700,6 +770,32 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>vlocity_cmt__ObjectTypeName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Name of the Object Type.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ObjectTypeId__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Object Type Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ParentClassCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Product code of parent class.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ParentClassId__r.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Parent Class Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>vlocity_cmt__ParentClassId__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -726,6 +822,19 @@
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductSpecName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Name of the Product Specification.</description>
+        <externalId>false</externalId>
+        <formula>vlocity_cmt__ProductSpecId__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Specification Type Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>vlocity_cmt__ProductTemplateProductId__c</fullName>
@@ -917,6 +1026,21 @@
                     <default>true</default>
                     <label>None</label>
                 </value>
+                <value>
+                    <fullName>Electricity</fullName>
+                    <default>false</default>
+                    <label>Electricity</label>
+                </value>
+                <value>
+                    <fullName>Unit Rate</fullName>
+                    <default>false</default>
+                    <label>Unit Rate</label>
+                </value>
+                <value>
+                    <fullName>Standing Charges</fullName>
+                    <default>false</default>
+                    <label>Standing Charges</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>None</controllingFieldValue>
@@ -962,6 +1086,16 @@
                     <fullName>None</fullName>
                     <default>true</default>
                     <label>None</label>
+                </value>
+                <value>
+                    <fullName>Commodity</fullName>
+                    <default>false</default>
+                    <label>Commodity</label>
+                </value>
+                <value>
+                    <fullName>Cost Component</fullName>
+                    <default>false</default>
+                    <label>Cost Component</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1029,10 +1163,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
-            <values>
-                <fullName>Deployed</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Draft</fullName>
                 <default>false</default>
@@ -1124,11 +1254,15 @@
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
             <values>
-                <fullName>Deployed</fullName>
+                <fullName>Amendment Pending</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Released</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1225,10 +1359,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
-            <values>
-                <fullName>Deployed</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Draft</fullName>
                 <default>false</default>
@@ -1346,10 +1476,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>vlocity_cmt__LifecycleStatus__c</picklist>
-            <values>
-                <fullName>Deployed</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Draft</fullName>
                 <default>false</default>
@@ -1640,6 +1766,17 @@ window.location = &apos;apex/&apos;+namespace_prefix+&apos;DocumentClause?produc
         <openType>sidebar</openType>
         <page>vlocity_cmt__NewProductVersion</page>
         <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>vlocity_cmt__ProductConsoleGenerateReportButton</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Generate Report</masterLabel>
+        <openType>replace</openType>
+        <page>vlocity_cmt__PCProductReport</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
     </webLinks>
     <webLinks>
         <fullName>vlocity_cmt__ProductConsoleNewButton</fullName>

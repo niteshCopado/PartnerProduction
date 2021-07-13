@@ -4,31 +4,31 @@
             {
                 "displayName": "Action Name 1",
                 "title": "Action Title 1",
-                "url": "http://www.vlocity.com",
+                "url": "https://www.vlocity.com",
                 "vlocityIcon": "icon-v-plus"
             },
             {
                 "displayName": "Action Name 2",
                 "title": "Action Title 2",
-                "url": "http://www.vlocity.com",
+                "url": "https://www.vlocity.com",
                 "vlocityIcon": "icon-v-plus"
             },
             {
                 "displayName": "Action Name 3",
                 "title": "Action Title 3",
-                "url": "http://www.vlocity.com",
+                "url": "https://www.vlocity.com",
                 "vlocityIcon": "icon-v-plus"
             },
             {
                 "displayName": "Action Name 4",
                 "title": "Action Title 4",
-                "url": "http://www.vlocity.com",
+                "url": "https://www.vlocity.com",
                 "vlocityIcon": "icon-v-plus"
             },
             {
                 "displayName": "Action Name 5",
                 "title": "Action Title 5",
-                "url": "http://www.vlocity.com",
+                "url": "https://www.vlocity.com",
                 "vlocityIcon": "icon-v-plus"
             }
         ],

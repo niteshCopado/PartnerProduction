@@ -15,6 +15,9 @@ global class VCloudServiceGateway {
     global static Map<String,Object> createJob(Map<String,Object> parameters) {
         return null;
     }
+    global static Map<String,Object> createMaintenanceJob(Map<String,Object> parameters) {
+        return null;
+    }
     global static Boolean hasActiveSubscription() {
         return null;
     }

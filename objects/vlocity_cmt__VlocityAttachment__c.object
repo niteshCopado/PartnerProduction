@@ -268,6 +268,11 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
+                    <fullName>File</fullName>
+                    <default>false</default>
+                    <label>File</label>
+                </value>
+                <value>
                     <fullName>Image</fullName>
                     <default>false</default>
                     <label>Image</label>
@@ -276,11 +281,6 @@
                     <fullName>Video</fullName>
                     <default>false</default>
                     <label>Video</label>
-                </value>
-                <value>
-                    <fullName>File</fullName>
-                    <default>false</default>
-                    <label>File</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -340,6 +340,19 @@
         <externalId>true</externalId>
         <label>Object Id</label>
         <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vlocity_cmt__ProductGroupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Version Group Key of Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Version Group Key of Product</inlineHelpText>
+        <label>Product Group Key</label>
+        <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>

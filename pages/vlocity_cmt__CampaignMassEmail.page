@@ -1,5 +1,4 @@
 <apex:page standardController="Campaign" showHeader="false" sidebar="false" extensions="vlocity_cmt.CampaignActionsDisplayController">
-    <apex:stylesheet value="{!URLFOR($Resource.vlocity_cmt__bootstrap, '/bootstrap-3.2.0-dist/css/sfboot.min.css')}"/>
     <html xmlns:ng="http://angularjs.org" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ng-app="campaignActions" class="ng-cloak" dir="{!IF(isLanguageRTL, 'rtl', 'ltr')}">
      <head>
         <meta charset="utf-8"/>

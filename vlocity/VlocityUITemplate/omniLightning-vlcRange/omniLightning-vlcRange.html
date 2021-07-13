@@ -32,8 +32,8 @@
                        ng-disabled='control.ro'
                        ng-required='control.req'
                        name='loopname'
-                       min='{{::control.propSetMap.rangeLow}}'
-                       max='{{::control.propSetMap.rangeHigh}}'
+                       min='{{control.propSetMap.rangeLow}}'
+                       max='{{control.propSetMap.rangeHigh}}'
                        step='{{::control.propSetMap.step}}'
                        ng-model="control.response"
                        mask='{{::control.propSetMap.mask}}'
