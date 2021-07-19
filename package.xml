@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ActivateFrameAgreement_Oppty</members>
-        <name>IntegrationProcedure</name>
+        <members>sample_editAccount_English</members>
+        <name>OmniScript</name>
     </types>
     <version>52.0</version>
 </Package>
