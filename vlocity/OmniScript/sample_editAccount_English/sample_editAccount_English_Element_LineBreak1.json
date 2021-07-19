@@ -1,28 +1,27 @@
 {
     "%vlocity_namespace%__Active__c": true,
     "%vlocity_namespace%__OmniScriptId__c": {
-        "Name": "Sample Edit Account",
+        "Name": "With Cancel button",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
         "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/sample/editAccount/English",
         "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
     },
     "%vlocity_namespace%__ParentElementId__c": {
         "%vlocity_namespace%__OmniScriptId__c": {
-            "Name": "Sample Edit Account",
+            "Name": "With Cancel button",
             "VlocityDataPackType": "VlocityMatchingKeyObject",
             "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/sample/editAccount/English",
             "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
         },
-        "Name": "StepAccount",
+        "Name": "Step1",
         "VlocityDataPackType": "VlocityMatchingKeyObject",
-        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/sample/editAccount/English/StepAccount",
+        "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/sample/editAccount/English/Step1",
         "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c"
     },
-    "%vlocity_namespace%__ParentElementName__c": "StepAccount",
+    "%vlocity_namespace%__ParentElementName__c": "Step1",
     "%vlocity_namespace%__ParentElementType__c": "Step",
     "%vlocity_namespace%__PropertySet__c": {
         "HTMLTemplateId": "",
-        "disOnTplt": false,
         "label": "LineBreak1",
         "padding": 0,
         "show": null
