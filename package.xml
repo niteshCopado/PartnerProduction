@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Test_Community</members>
-        <name>CustomSite</name>
+        <members>Account.Recommit_1__c</members>
+        <name>CustomField</name>
     </types>
-    <types>
-        <members>Test_Community1</members>
-        <name>ExperienceBundle</name>
-    </types>
-    <types>
-        <members>Test Community</members>
-        <name>ManagedTopics</name>
-    </types>
-    <types>
-        <members>Test Community</members>
-        <name>Network</name>
-    </types>
-    <types>
-        <members>Test_Community1</members>
-        <name>SiteDotCom</name>
-    </types>
-    <version>51.0</version>
+    <version>52.0</version>
 </Package>

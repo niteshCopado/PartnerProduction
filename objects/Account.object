@@ -431,6 +431,16 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Recommit_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommit_1</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__AssetQuantitiesCombined__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
