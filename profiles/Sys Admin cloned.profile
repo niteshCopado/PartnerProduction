@@ -8203,6 +8203,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Developer_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account.DunsNumber</field>
         <readable>true</readable>
@@ -19605,6 +19610,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AIViewInsightObjects</name>
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivitiesAccess</name>

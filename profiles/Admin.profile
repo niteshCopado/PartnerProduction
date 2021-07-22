@@ -8186,6 +8186,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Developer_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account.DunsNumber</field>
         <readable>true</readable>
@@ -15794,6 +15799,14 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+        <recordType>Account.Person_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Account Layout</layout>
+        <recordType>Account.Person_Account_2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>AccountBrand-Account Brand Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -19590,6 +19603,10 @@
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
+        <name>AIViewInsightObjects</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ActivateContract</name>
     </userPermissions>
     <userPermissions>
@@ -19906,10 +19923,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageClearbitIntegration</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageContentPermissions</name>
     </userPermissions>
     <userPermissions>
@@ -20071,10 +20084,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageUsers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageZapierIntegration</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
