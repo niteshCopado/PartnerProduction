@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>sample_editAccount_English</members>
-        <name>OmniScript</name>
+        <members>Account.Manual_Task_Dep__c</members>
+        <name>CustomField</name>
     </types>
     <version>52.0</version>
 </Package>
