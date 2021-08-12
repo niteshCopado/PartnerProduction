@@ -6271,6 +6271,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>copado__Copado_Setting__mdt</name>
+    </customMetadataTypeAccesses>
     <customPermissions>
         <enabled>true</enabled>
         <name>copado__Enable_Vlocity_Integration</name>
