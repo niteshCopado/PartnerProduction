@@ -8145,6 +8145,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>copado__Enable_Vlocity_Integration</name>
+    </customPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.AccountNumber</field>

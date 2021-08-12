@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Test_Connected_App</members>
-        <name>ConnectedApp</name>
+        <members>copado__Copado_Setting.copado__Actual_Velocity_Statuses</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>copado__Enable_Vlocity_Integration</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
     </types>
     <version>52.0</version>
 </Package>
