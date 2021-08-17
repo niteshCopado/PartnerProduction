@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <custom>true</custom>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>copado__Copado_Setting__mdt</name>
+    </customMetadataTypeAccesses>
     <customPermissions>
         <enabled>true</enabled>
         <name>SBQQ__HideGlobalHeader</name>
