@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Test_Number__mdt.New_term__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Test_Number__mdt</members>
-        <name>CustomObject</name>
+        <members>Cloned Min Access</members>
+        <name>Profile</name>
     </types>
     <version>52.0</version>
 </Package>
