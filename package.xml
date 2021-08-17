@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>copado__Copado_Setting.copado__Big_Metadata</members>
-        <name>CustomMetadata</name>
-    </types>
-    <types>
-        <members>copado__Copado_Setting__mdt</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>SBQQ__HideGlobalHeader</members>
-        <name>CustomPermission</name>
-    </types>
-    <types>
         <members>Cloned Min Access</members>
         <name>Profile</name>
     </types>
