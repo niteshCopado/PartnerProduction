@@ -15,9 +15,6 @@
         <fullName>CancelDateTime</fullName>
     </fields>
     <fields>
-        <fullName>CapacityModel</fullName>
-    </fields>
-    <fields>
         <fullName>CapacityPercentage</fullName>
     </fields>
     <fields>
@@ -42,13 +39,7 @@
         <fullName>IsConference</fullName>
     </fields>
     <fields>
-        <fullName>IsOwnerChangeInitiated</fullName>
-    </fields>
-    <fields>
         <fullName>IsPreferredUserRequired</fullName>
-    </fields>
-    <fields>
-        <fullName>IsStatusChangeInitiated</fullName>
     </fields>
     <fields>
         <fullName>IsTransfer</fullName>
@@ -89,9 +80,6 @@
     </fields>
     <fields>
         <fullName>RoutingType</fullName>
-    </fields>
-    <fields>
-        <fullName>SecondaryRoutingPriority</fullName>
     </fields>
     <fields>
         <fullName>ServiceChannelId</fullName>

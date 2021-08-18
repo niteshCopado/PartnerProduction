@@ -19,11 +19,11 @@
                 <field>AuthorizationFormTextId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>ConsentCapturedSourceType</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>ConsentCapturedDateTime</field>
             </layoutItems>
             <layoutItems>
@@ -37,7 +37,7 @@
                 <field>ConsentGiverId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>ConsentCapturedSource</field>
             </layoutItems>
         </layoutColumns>

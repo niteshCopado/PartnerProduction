@@ -221,6 +221,31 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>CSAT__c</fullName>
+        <externalId>false</externalId>
+        <label>CSAT</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_ExternalId__c</fullName>
+        <externalId>false</externalId>
+        <label>Case_ExternalId</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ClosedDate</fullName>
         <trackTrending>false</trackTrending>
     </fields>
@@ -270,6 +295,24 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FCR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to mark cases that are closed on first contact, without requiring additional engagement with the customer. Off by default. Driven by workflow rule</description>
+        <externalId>false</externalId>
+        <label>First Contact Resolution</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsClosedOnCreate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -279,6 +322,20 @@
         <fullName>IsEscalated</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -333,6 +390,54 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Family_KB__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Digital Media</fullName>
+                    <default>false</default>
+                    <label>Digital Media</label>
+                </value>
+                <value>
+                    <fullName>Accessories</fullName>
+                    <default>false</default>
+                    <label>Accessories</label>
+                </value>
+                <value>
+                    <fullName>Laptops</fullName>
+                    <default>false</default>
+                    <label>Laptops</label>
+                </value>
+                <value>
+                    <fullName>Tablets</fullName>
+                    <default>false</default>
+                    <label>Tablets</label>
+                </value>
+                <value>
+                    <fullName>Phones</fullName>
+                    <default>false</default>
+                    <label>Phones</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -427,6 +532,50 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>SLA_Type__c</fullName>
+        <description>Created for use by Service Wave to segment cases by SLA. Entitlements field now accessible to Wave.</description>
+        <externalId>false</externalId>
+        <label>SLA Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Basic</fullName>
+                    <default>false</default>
+                    <label>Basic</label>
+                </value>
+                <value>
+                    <fullName>Premium</fullName>
+                    <default>false</default>
+                    <label>Premium</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ServiceContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>SourceId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -435,10 +584,14 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Subject</fullName>
@@ -497,24 +650,6 @@
         <label>All Open Cases</label>
     </listViews>
     <listViews>
-        <fullName>InternationalEscalations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Escalations</label>
-        <queue>InternationalEscalations</queue>
-    </listViews>
-    <listViews>
-        <fullName>InternationalPlatinumGold</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Platinum/Gold</label>
-        <queue>InternationalPlatinumGold</queue>
-    </listViews>
-    <listViews>
-        <fullName>InternationalSilverBronze</fullName>
-        <filterScope>Queue</filterScope>
-        <label>International - Silver/Bronze</label>
-        <queue>InternationalSilverBronze</queue>
-    </listViews>
-    <listViews>
         <fullName>MyCases</fullName>
         <filterScope>Mine</filterScope>
         <label>My Cases</label>
@@ -528,30 +663,6 @@
             <value>0</value>
         </filters>
         <label>My Open Cases</label>
-    </listViews>
-    <listViews>
-        <fullName>PartnerRelations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>Partner Relations</label>
-        <queue>PartnerRelations</queue>
-    </listViews>
-    <listViews>
-        <fullName>USEscalations</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Escalations</label>
-        <queue>USEscalations</queue>
-    </listViews>
-    <listViews>
-        <fullName>USPlatinumGold</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Platinum/Gold</label>
-        <queue>USPlatinumGold</queue>
-    </listViews>
-    <listViews>
-        <fullName>USSilverBronze</fullName>
-        <filterScope>Queue</filterScope>
-        <label>US - Silver/Bronze</label>
-        <queue>USSilverBronze</queue>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
@@ -574,7 +685,7 @@
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWriteTransfer</sharingModel>
     <webLinks>
         <fullName>UpsellCrosssellOpportunity</fullName>
         <availability>online</availability>

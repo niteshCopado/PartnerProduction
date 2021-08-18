@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AIApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>House_checking</developerName>
+    <masterLabel>House checking</masterLabel>
+    <status>Enabled</status>
+    <type>PredictionBuilder</type>
+</AIApplication>

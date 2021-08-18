@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLPredictionDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiApplicationDeveloperName>House_checking</aiApplicationDeveloperName>
+    <developerName>mlpd_House_checking_v0</developerName>
+    <masterLabel>mlpd_House_checking_v0</masterLabel>
+    <negativeExpression>
+        <filterName>37525714-2463-4739-899b-1810ca632d3b</filterName>
+        <lhPredictionField>Account.Industry</lhPredictionField>
+        <operation>NotEquals</operation>
+        <rhType>String</rhType>
+        <rhValue>Chemicals</rhValue>
+    </negativeExpression>
+    <positiveExpression>
+        <filterName>589511cc-4173-447b-8787-d87526a63ce2</filterName>
+        <lhPredictionField>Account.Industry</lhPredictionField>
+        <operation>Equals</operation>
+        <rhType>String</rhType>
+        <rhValue>Chemicals</rhValue>
+    </positiveExpression>
+    <pushbackField>Account.Prediction__c</pushbackField>
+    <status>Enabled</status>
+    <type>BinaryClassification</type>
+</MLPredictionDefinition>

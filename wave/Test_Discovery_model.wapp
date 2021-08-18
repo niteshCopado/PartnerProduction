@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assetIcon>/analytics/wave/web/proto/images/app/icons/6.png</assetIcon>
+    <folder>Test_Discovery_model</folder>
+    <masterLabel>Test Discovery model</masterLabel>
+    <shares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>nnatha@copado.comea</sharedTo>
+        <sharedToType>User</sharedToType>
+    </shares>
+    <templateOrigin>sfdc_internal__TimeToClose</templateOrigin>
+    <templateVersion>1.0</templateVersion>
+</WaveApplication>
