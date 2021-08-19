@@ -337,16 +337,6 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>Manual_Task_Dep__c</fullName>
-        <externalId>false</externalId>
-        <label>Manual Task Dep</label>
-        <length>18</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Latitude__c</fullName>
         <description>This is latitude</description>
         <displayLocationInDecimal>false</displayLocationInDecimal>
@@ -369,6 +359,16 @@
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Manual_Task_Dep__c</fullName>
+        <externalId>false</externalId>
+        <label>Manual Task Dep</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>NaicsCode</fullName>
@@ -898,11 +898,8 @@
         <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ACCOUNT_NUMBER</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.TYPE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>DANDB_COMPANY</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
     <webLinks>
         <fullName>BillingNew</fullName>
         <availability>online</availability>
