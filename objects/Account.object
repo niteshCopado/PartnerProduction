@@ -319,10 +319,6 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>Jigsaw</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
         <fullName>NaicsCode</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -650,10 +646,6 @@
     </fields>
     <fields>
         <fullName>Sic</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>SicDesc</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
