@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>copado__Copado_Setting.copado__Big_Metadata</members>
+        <members>copado__Copado_Setting.copado__Functions_backend_communication_timeout</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>SBQQ__CPQStandardPerm</members>
+        <members>SBQQ__HideGlobalHeader</members>
+        <members>copado__Edit_Git_Promotion_Step</members>
+        <members>copado__Edit_Quality_Gate_Step</members>
+        <members>copado__Edit_User_Story_Commit_Base_Branch</members>
+        <members>copado__Enable_Vlocity_Integration</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
         <members>Cloned Min Access</members>
         <name>Profile</name>
     </types>
