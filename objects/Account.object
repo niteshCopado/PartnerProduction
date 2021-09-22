@@ -320,16 +320,6 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>Manual_Task_Dep__c</fullName>
-        <externalId>false</externalId>
-        <label>Manual Task Dep</label>
-        <length>18</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Latitude__c</fullName>
         <description>This is latitude</description>
         <displayLocationInDecimal>false</displayLocationInDecimal>
@@ -352,6 +342,26 @@
         <scale>2</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Manual_Task_Dep__c</fullName>
+        <externalId>false</externalId>
+        <label>Manual Task Dep</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Metadata_RL__c</fullName>
+        <externalId>false</externalId>
+        <label>Metadata RL</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>NaicsCode</fullName>
