@@ -3,7 +3,7 @@
     <applicationVisibilities>
         <application>New_App</application>
         <default>false</default>
-        <visible>false</visible>
+        <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>SBQQ__QuoteQuickly</application>
