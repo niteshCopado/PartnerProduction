@@ -21,11 +21,11 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Perform in Destination Org(s) --></label>
+        <label><!-- Perform in Destination Credential(s) --></label>
         <name>copado__Perform_in_Destination_Orgs__c</name>
     </fields>
     <fields>
-        <label><!-- Perform in Source Org --></label>
+        <label><!-- Perform in Source Credential --></label>
         <name>copado__Perform_in_Source_Org__c</name>
     </fields>
     <fields>

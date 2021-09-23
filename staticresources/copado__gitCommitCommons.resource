@@ -267,6 +267,51 @@ var operationTypeAttachmentName;
         app.grid.refreshCache();
         rerenderRefreshCachePoller();
     };
+    app.refreshRecentChanges = function (orgId) {
+        const core = app.conf.ns ? window[app.conf.ns.split('__')[0]] : window;
+        core.GitCommit_GridController.retrieveRecentChanges(orgId, function (result, event) {
+           if (event.status) {
+                const sourceMembers = result;
+                if (sourceMembers && sourceMembers.length) {
+                    const mdtAtt = dw.u.getDecodedAttach(orgId, 'MetaData');
+
+                    const allMdt = JSON.parse(mdtAtt.Body);
+
+                    for (const member of sourceMembers) {
+                        const isEqual = (mdt) => mdt.t === member.MemberType && mdt.n === member.MemberName;
+                        const index = allMdt.findIndex(isEqual);
+
+                        const mdtWrapper = {
+                            t: member.MemberType,
+                            n: member.MemberName,
+                            b: member.LastModifiedBy.Name,
+                            d: member.LastModifiedDate.substr(0, member.LastModifiedDate.indexOf('T')),
+                            cb: member.CreatedBy.Name,
+                            cd: member.CreatedDate.substr(0, member.CreatedDate.indexOf('T'))
+                        };
+
+                        if (index != -1) {
+                            if (member.IsNameObsolete) {
+                                allMdt.splice(index, 1);
+                            } else {
+                                allMdt.splice(index, 1, mdtWrapper);
+                            }
+                        } else {
+                            const isSameType = (mdt) => mdt.t === member.MemberType;
+                            const i = allMdt.findIndex(isSameType);
+                            allMdt.splice(i, 0, mdtWrapper);
+                        }
+                    }
+
+                    dw.u.upsertAttach(orgId, 'MetaData', JSON.stringify(allMdt));
+                }
+            }
+            reRenderHeader();
+            unlockScreen();
+            app.resetGrid();
+        })
+
+    };
     /**
      * update or hide refresh button
      * @param  {[type]} date [description]
@@ -274,26 +319,6 @@ var operationTypeAttachmentName;
      */
     app.showRefreshButton = function (date) {
         // TODO Add title to refresh button like : Last index date 22.03.2019 22:00
-    };
-    app.toggleGridFullScreen = function (sectionId) {
-        var gridSection = $copado('[Id$="' + sectionId + '"]');
-        if (!gridSection) {
-            console.error('Grid section not found with Id:', sectionId);
-            return;
-        }
-        var $window = $copado(window);
-        var grid = $copado('.mg2_jqxgrid');
-        if (!grid) {
-            console.error('Grid not found with class mg2_jqxgrid');
-            return;
-        }
-        if (gridSection.hasClass('fullScreen')) {
-            gridSection.removeClass('fullScreen');
-            grid.jqxGrid({ height: app.conf.style.height });
-        } else {
-            gridSection.addClass('fullScreen');
-            grid.jqxGrid({ height: ($window.height() - 250).toString() });
-        }
     };
     app.startCommit = function () {
         if (!app.variant) {
@@ -328,7 +353,7 @@ var operationTypeAttachmentName;
                             (metadataRecords[j].st.includes('Remote Add') || metadataRecords[j].st.includes('Remote Changed'))
                         ) {
                             actData[i].s = true;
-                            if (!(actSelected.some(item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n)))
+                            if (!(actSelected.some((item) => item['t'] === actData[i].t) && actSelected.some((item) => item['n'] === actData[i].n)))
                                 actSelected.push(actData[i]);
                         } else if (
                             isDestructive &&
@@ -337,7 +362,7 @@ var operationTypeAttachmentName;
                             metadataRecords[j].st.includes('Remote Deleted')
                         ) {
                             actData[i].s = true;
-                            if (!(actSelected.some(item => item['t'] === actData[i].t) && actSelected.some(item => item['n'] === actData[i].n)))
+                            if (!(actSelected.some((item) => item['t'] === actData[i].t) && actSelected.some((item) => item['n'] === actData[i].n)))
                                 actSelected.push(actData[i]);
                         } else if (isDestructive && metadataRecords[j].st.includes('Remote Deleted') && !toDelSet.has(metadataRecords[j])) {
                             //Item is not found in the Metadata Selections but still show in Source Status, auto select
@@ -345,8 +370,8 @@ var operationTypeAttachmentName;
                             metadataRecords[j].s = true;
                             if (
                                 !(
-                                    actSelected.some(item => item['t'] === metadataRecords[j].t) &&
-                                    actSelected.some(item => item['n'] === metadataRecords[j].n)
+                                    actSelected.some((item) => item['t'] === metadataRecords[j].t) &&
+                                    actSelected.some((item) => item['n'] === metadataRecords[j].n)
                                 )
                             )
                                 actSelected.push(metadataRecords[j]);
@@ -367,4 +392,102 @@ var operationTypeAttachmentName;
     app.getVlocityDependencies = function () {
         app.extension.getVlocityDependencies();
     };
+
+    app.autoSelectMetadata = function (usId, orgId, usOrgId, selectedOption, commitNotPresentLabel, nameNotPresentMsg, noAutoSelectDataMsg, currentUserFirstName, currentUserLastName){
+        var nameToMatch = currentUserFirstName ? currentUserFirstName + ' ' + currentUserLastName : currentUserLastName;
+        if (usId) {
+            orgId = usOrgId;
+        }
+        var selectedDate;
+
+        switch (selectedOption) {
+            case "donetoday":
+                selectedDate = new Date();
+                break;
+            case "doneyesterday":
+                selectedDate = new Date();
+                selectedDate.setDate(selectedDate.getDate() - 1);
+                break;
+            case "donelastcommit":
+                selectedDate = getLastCommitDate(usId, orgId, commitNotPresentLabel);
+        }
+
+        selectedDate.setHours(0, 0, 0, 0);
+        setAutoSelectedDataToGrid(selectedDate, nameToMatch, nameNotPresentMsg, noAutoSelectDataMsg);
+    };
+
+    getLastCommitDate = function (usId, orgId, commitNotPresentLabel) {
+        var namespace = app.conf.ns;
+        var latestCommitQuery;
+        var selectedDate;
+        if (usId) {
+            (latestCommitQuery = `SELECT Id,${namespace}Snapshot_Commit__r.${namespace}Commit_Date__c FROM ${namespace}User_Story_Commit__c WHERE  ${namespace}User_Story__c ='${usId}' AND ${namespace}Snapshot_Commit__r.${namespace}Status__c = 'Complete' ORDER BY ${namespace}Snapshot_Commit__r.${namespace}Commit_Date__c DESC LIMIT 1`),
+                (commitResult = sforce.connection.query(latestCommitQuery)),
+                (commitResults = commitResult.getArray("records"));
+            if (Array.isArray(commitResults) && commitResults.length) {
+                selectedDate = new Date(
+                    commitResults[0][`${namespace}Snapshot_Commit__r`][`${namespace}Commit_Date__c`]
+                );
+            }
+        }
+        if (!usId || !Array.isArray(commitResults) || !commitResults.length) {
+            //SOQL query to get the latest commit date from the Org credential in case user story has no commit or it is a git snapshot commit
+            (latestCommitQuery = `SELECT Id,${namespace}Commit_Date__c FROM ${namespace}Git_Org_Commit__c WHERE ${namespace}Org__c = '${orgId}' AND ${namespace}Status__c = 'Complete' ORDER BY ${namespace}Commit_Date__c DESC LIMIT 1`),
+                (commitResult = sforce.connection.query(latestCommitQuery)),
+                (commitResults = commitResult.getArray("records"));
+            if (Array.isArray(commitResults) && commitResults.length) {
+                selectedDate = new Date(
+                    commitResults[0][`${namespace}Commit_Date__c`]
+                );
+            }
+            else {
+                alert(commitNotPresentLabel);
+                $copado('#autooption').toggleClass("slds-hide");
+                return;
+            }
+        }
+        return selectedDate;
+
+    }
+
+    setAutoSelectedDataToGrid = function (selectedDate, createByName, nameNotPresentMsg, noAutoSelectDataMsg) {
+        var compDate;
+        var autoSelectedItems = [];
+        var metadataDateMatched;
+        var nameMatched;
+        var namePresent;
+        var alertMessage;
+
+        app.grid.allMetaData.forEach((metadataItem) => {
+            compDate = new Date(metadataItem.d);
+            compDate.setHours(0, 0, 0, 0);
+            metadataDateMatched = compDate.getTime() >= selectedDate.getTime();
+            nameMatched = metadataItem.b && (dw.u.removeDiacritics(metadataItem.b.toUpperCase()) == dw.u.removeDiacritics(createByName.toUpperCase()));
+            if (metadataDateMatched && nameMatched) {
+                autoSelectedItems.push(metadataItem);
+            } else {
+                metadataItem.s = false;
+            }
+
+            if(nameMatched && !namePresent){
+                namePresent = true;
+            }
+        });
+        if(!namePresent){
+            alertMessage = nameNotPresentMsg;
+        }
+        else if (!autoSelectedItems.length) {
+            alertMessage = noAutoSelectDataMsg;
+        }
+        if (alertMessage) {
+            alert(alertMessage);
+            $copado('#autooption').toggleClass("slds-hide");
+            return;
+        }
+        app.userStoryMD = app.userStoryMD || [];
+        setWithoutRebinding(app.userStoryMD, autoSelectedItems);
+        app.grid.reloadSelectionsJSON(app.userStoryMD, 1);
+        app.grid._reapplyFilters(1);
+        $copado('#autooption').toggleClass("slds-hide");
+    }
 })(gitCommitCommons);

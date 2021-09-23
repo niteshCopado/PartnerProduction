@@ -7,24 +7,8 @@
         <label>Assessment Task Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>AssessmentTaskDefinitionId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ParentId</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>Status</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>IsRequired</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SequenceNumber</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -51,11 +35,7 @@
         <style>CustomLinks</style>
     </layoutSections>
     <miniLayout>
-        <fields>AssessmentTaskDefinitionId</fields>
-        <fields>ParentId</fields>
         <fields>Status</fields>
-        <fields>IsRequired</fields>
-        <fields>SequenceNumber</fields>
     </miniLayout>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>

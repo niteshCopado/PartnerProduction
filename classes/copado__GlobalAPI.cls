@@ -21,6 +21,9 @@ global class GlobalAPI {
     global copado.GlobalAPI.CopadoLicenses getLicenseInformation() {
         return null;
     }
+    global List<copado.SourceMemberResult> getRecentChanges(String orgId) {
+        return null;
+    }
     global List<copado.GlobalAPI.UserLicense> listCopadoLicenses() {
         return null;
     }

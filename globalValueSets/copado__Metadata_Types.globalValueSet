@@ -601,6 +601,11 @@
         <label>WorkflowTask</label>
     </customValue>
     <customValue>
+        <fullName>ExperienceBundle</fullName>
+        <default>false</default>
+        <label>ExperienceBundle</label>
+    </customValue>
+    <customValue>
         <fullName>InstalledPackageLayout</fullName>
         <default>false</default>
         <isActive>false</isActive>

@@ -6,6 +6,11 @@
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Data Set --></label>
+        <name>copado__Data_Set__c</name>
+        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Data Template --></label>
         <name>copado__Data_Template__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
@@ -39,6 +44,11 @@
     <fields>
         <label><!-- Environment --></label>
         <name>copado__Environment__c</name>
+        <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Function --></label>
+        <name>copado__Function__c</name>
         <relationshipLabel><!-- AuxiliaryObjects --></relationshipLabel>
     </fields>
     <fields>
