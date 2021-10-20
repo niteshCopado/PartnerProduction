@@ -135,6 +135,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Browser</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>ConsentCapturedDateTime</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -147,6 +151,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ConsentExpirationDateTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>ConsentGiverId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -155,6 +163,23 @@
         <fullName>DocumentVersionId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>InfoAuthRequestFormId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ip</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Location</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>

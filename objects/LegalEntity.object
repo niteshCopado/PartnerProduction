@@ -155,13 +155,9 @@
         <trackHistory>false</trackHistory>
     </fields>
     <listViews>
-        <fullName>mine</fullName>
-        <columns>Name</columns>
-        <columns>CompanyName</columns>
-        <columns>Description</columns>
-        <columns>Status</columns>
-        <filterScope>Mine</filterScope>
-        <label>My Legal Entities</label>
+        <fullName>All_LegalEntities</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Legal Entities</label>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>

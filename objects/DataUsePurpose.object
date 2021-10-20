@@ -138,6 +138,14 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsReadOnly</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>LegalBasisId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

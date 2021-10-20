@@ -209,5 +209,70 @@
     <fields>
         <fullName>Title</fullName>
     </fields>
+    <fields>
+        <fullName>mcdm_15__DM_Auto_Send__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DM Auto Send</label>
+        <referenceTo>mcdm_15__DM_Auto_Send__c</referenceTo>
+        <relationshipLabel>Campaign Members</relationshipLabel>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>mcdm_15__DM_Error__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Error</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>mcdm_15__JourneyApprovalState__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Campaign member&apos;s approval state for a single journey / campaign pair. The status controls if a member is available for approval, or reflects an on-journey, rejected, or error state.</description>
+        <externalId>false</externalId>
+        <label>Journey Approval State</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Ready</fullName>
+                    <default>false</default>
+                    <label>Ready</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                    <label>Error</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <sharingModel>ControlledByCampaign</sharingModel>
 </CustomObject>

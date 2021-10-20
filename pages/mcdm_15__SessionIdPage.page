@@ -1,0 +1,21 @@
+<apex:page >
+    <body>
+        <div id="value">
+            {!$Api.Session_ID}
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        var qsParams = window.location.search.slice(1).split('='),
+            origin = window.decodeURIComponent(qsParams[qsParams.indexOf('origin') + 1]);
+
+        if (origin) {
+            var data = {
+                type: 'mcdm_15__SessionIdPageEvent',
+                value: document.getElementById('value').innerText.trim()
+            };
+
+            window.parent.postMessage(data, origin);
+        }
+    </script>
+</apex:page>

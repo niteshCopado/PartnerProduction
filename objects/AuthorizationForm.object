@@ -130,6 +130,14 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>AssociatedRegulation</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ConsentDurationDayCount</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>DefaultAuthFormTextId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

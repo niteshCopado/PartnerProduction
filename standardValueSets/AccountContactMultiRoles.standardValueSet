@@ -2,44 +2,49 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Business User</fullName>
-        <default>false</default>
-        <label>Business User</label>
+        <fullName>Client</fullName>
+        <default>true</default>
+        <label>Client</label>
     </standardValue>
     <standardValue>
-        <fullName>Decision Maker</fullName>
+        <fullName>Dependent</fullName>
         <default>false</default>
-        <label>Decision Maker</label>
+        <label>Dependent</label>
     </standardValue>
     <standardValue>
-        <fullName>Economic Buyer</fullName>
+        <fullName>Domestic Partner</fullName>
         <default>false</default>
-        <label>Economic Buyer</label>
+        <label>Domestic Partner</label>
     </standardValue>
     <standardValue>
-        <fullName>Economic Decision Maker</fullName>
+        <fullName>Spouse</fullName>
         <default>false</default>
-        <label>Economic Decision Maker</label>
+        <label>Spouse</label>
     </standardValue>
     <standardValue>
-        <fullName>Evaluator</fullName>
+        <fullName>Grantor</fullName>
         <default>false</default>
-        <label>Evaluator</label>
+        <label>Grantor</label>
     </standardValue>
     <standardValue>
-        <fullName>Executive Sponsor</fullName>
+        <fullName>Beneficiary</fullName>
         <default>false</default>
-        <label>Executive Sponsor</label>
+        <label>Beneficiary</label>
     </standardValue>
     <standardValue>
-        <fullName>Influencer</fullName>
+        <fullName>Board Member</fullName>
         <default>false</default>
-        <label>Influencer</label>
+        <label>Board Member</label>
     </standardValue>
     <standardValue>
-        <fullName>Technical Buyer</fullName>
+        <fullName>Employee</fullName>
         <default>false</default>
-        <label>Technical Buyer</label>
+        <label>Employee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trustee</fullName>
+        <default>false</default>
+        <label>Trustee</label>
     </standardValue>
     <standardValue>
         <fullName>Other</fullName>

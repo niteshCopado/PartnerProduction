@@ -2,10 +2,10 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>High</fullName>
+        <fullName>Low</fullName>
         <default>false</default>
-        <label>High</label>
-        <highPriority>true</highPriority>
+        <label>Low</label>
+        <highPriority>false</highPriority>
     </standardValue>
     <standardValue>
         <fullName>Normal</fullName>
@@ -14,9 +14,9 @@
         <highPriority>false</highPriority>
     </standardValue>
     <standardValue>
-        <fullName>Low</fullName>
+        <fullName>High</fullName>
         <default>false</default>
-        <label>Low</label>
-        <highPriority>false</highPriority>
+        <label>High</label>
+        <highPriority>true</highPriority>
     </standardValue>
 </StandardValueSet>
