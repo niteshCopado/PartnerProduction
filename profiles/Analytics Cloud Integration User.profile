@@ -8903,6 +8903,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BMC__c.PV1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Campaign.ActualCost</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15827,6 +15832,17 @@
         <layout>AuthorizationFormText-Authorization Form Text Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+        <recordType>BMC__c.RT1</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+        <recordType>BMC__c.RT2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Campaign-Campaign Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -16181,6 +16197,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>AuthorizationFormText</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>BMC__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -18750,6 +18775,16 @@
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>BMC__c.RT1</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>BMC__c.RT2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
@@ -19475,6 +19510,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>QueryAllFiles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>RunReports</name>
     </userPermissions>
     <userPermissions>
@@ -19484,6 +19523,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewAllData</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

@@ -8924,6 +8924,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>BMC__c.PV1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Campaign.ActualCost</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15840,6 +15845,17 @@
         <layout>AuthorizationFormText-Authorization Form Text Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+        <recordType>BMC__c.RT1</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BMC__c-BMC Layout</layout>
+        <recordType>BMC__c.RT2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Campaign-Campaign Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -17629,6 +17645,16 @@
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>BMC__c.RT1</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>BMC__c.RT2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
@@ -18455,6 +18481,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewDeveloperName</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
