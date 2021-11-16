@@ -1135,6 +1135,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
         <columns>copado__Date__c</columns>
         <columns>copado__Status__c</columns>
         <columns>copado__Deployed__c</columns>
@@ -1143,7 +1144,6 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
-        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Deployment Name</label>
@@ -1391,16 +1391,19 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         </picklistValues>
     </recordTypes>
     <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Date__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__From_Org__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Completed__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Status__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Schedule__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Date__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__From_Org__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Completed__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Status__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Schedule__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Date__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__From_Org__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Completed__c</searchResultsAdditionalFields>
