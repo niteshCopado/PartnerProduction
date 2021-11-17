@@ -172,7 +172,7 @@
         <deprecated>false</deprecated>
         <description>If checked, committing changes on user stories linked to this Pipeline will not be allowed</description>
         <externalId>false</externalId>
-        <inlineHelpText>If checked, committing changes on user stories linked to this deployment flow will not be allowed.</inlineHelpText>
+        <inlineHelpText>If checked, committing changes on user stories linked to this Pipeline will not be allowed</inlineHelpText>
         <label>Block Commits</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>

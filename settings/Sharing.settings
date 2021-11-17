@@ -3,11 +3,11 @@
     <deferGroupMembership>false</deferGroupMembership>
     <deferSharingRules>false</deferSharingRules>
     <enableAccountRoleOptimization>false</enableAccountRoleOptimization>
-    <enableAssetSharing>false</enableAssetSharing>
+    <enableAssetSharing>true</enableAssetSharing>
     <enableCommunityUserVisibility>true</enableCommunityUserVisibility>
     <enableExternalSharingModel>true</enableExternalSharingModel>
     <enableManagerGroups>false</enableManagerGroups>
-    <enableManualUserRecordSharing>true</enableManualUserRecordSharing>
+    <enableManualUserRecordSharing>false</enableManualUserRecordSharing>
     <enablePartnerSuperUserAccess>false</enablePartnerSuperUserAccess>
     <enablePortalUserCaseSharing>true</enablePortalUserCaseSharing>
     <enablePortalUserVisibility>true</enablePortalUserVisibility>

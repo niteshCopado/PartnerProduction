@@ -387,6 +387,7 @@
                 <value>
                     <fullName>DX</fullName>
                     <default>false</default>
+                    <isActive>false</isActive>
                     <label>DX</label>
                 </value>
             </valueSetDefinition>
