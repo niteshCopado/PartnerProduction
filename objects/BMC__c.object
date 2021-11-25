@@ -208,26 +208,6 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <recordTypes>
-        <fullName>RT2</fullName>
-        <active>true</active>
-        <label>RT2</label>
-        <picklistValues>
-            <picklist>PV1__c</picklist>
-            <values>
-                <fullName>A</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>b</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>c</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
