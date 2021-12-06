@@ -628,6 +628,21 @@
         <filterScope>Everything</filterScope>
         <label>Platinum and Gold SLA Customers</label>
     </listViews>
+    <recordTypes>
+        <fullName>Person_Account_Test</fullName>
+        <active>true</active>
+        <label>Person Account Test</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ardev__Business_Account</fullName>
+        <active>true</active>
+        <label>Business Account</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>testRT</fullName>
+        <active>true</active>
+        <label>testRT</label>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
