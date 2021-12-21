@@ -165,10 +165,6 @@
         <type>Network</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copadovsm__Value_Stream_Maps</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>copado__Copado_Branch_Management_Lightning</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -177,7 +173,15 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>copadoccmint__Copado_Integrations</name>
-        <type>CustomApplication</type>
+        <name>Test_Connected_App</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>DEVHUB_k7scfyhhevtwoc7by0up</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Copado_DX</name>
+        <type>ConnectedApp</type>
     </appMenuItems>
 </AppMenu>

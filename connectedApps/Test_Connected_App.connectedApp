@@ -4,6 +4,7 @@
     <label>Test Connected App</label>
     <oauthConfig>
         <callbackUrl>https://localhost:1717</callbackUrl>
+        <consumerKey>3MVG9n_HvETGhr3A2HidETt.BmdDT6uF5Kby.S4W7ZvSwbCcvd171zC3ke3lX8Hra07vGtzXuHV34RC1zGkiW</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <isConsumerSecretOptional>false</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>

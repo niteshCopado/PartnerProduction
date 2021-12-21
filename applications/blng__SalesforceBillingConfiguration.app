@@ -22,4 +22,5 @@
     <tabs>blng__RevenueRecognitionTreatment__c</tabs>
     <tabs>blng__RevenueDistributionMethod__c</tabs>
     <tabs>blng__PaymentGateway__c</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

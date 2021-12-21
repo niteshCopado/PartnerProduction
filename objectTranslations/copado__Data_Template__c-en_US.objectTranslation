@@ -5,7 +5,7 @@
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <label><!-- Attachment Options --></label>
+        <label><!-- Attachment Actions --></label>
         <name>copado__Attachment_Options__c</name>
         <picklistValues>
             <masterLabel>Insert Attachments</masterLabel>

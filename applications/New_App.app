@@ -27,16 +27,9 @@
     <tabs>standard-AuthorizationFormDataUse</tabs>
     <tabs>standard-AuthorizationFormText</tabs>
     <tabs>standard-Award</tabs>
-    <tabs>standard-BoardCertification</tabs>
     <tabs>standard-Event</tabs>
     <tabs>standard-Campaign</tabs>
     <tabs>standard-CardPaymentMethod</tabs>
-    <tabs>standard-CareProviderAdverseAction</tabs>
-    <tabs>standard-CareProviderFacilitySpecialty</tabs>
-    <tabs>standard-CareProviderSearchableField</tabs>
-    <tabs>standard-CareRegisteredDevice</tabs>
-    <tabs>standard-CareSpecialty</tabs>
-    <tabs>standard-CareTaxonomy</tabs>
     <tabs>standard-Case</tabs>
     <tabs>standard-Feed</tabs>
     <tabs>standard-CmsChannel</tabs>
@@ -63,6 +56,7 @@
     <tabs>standard-EmailTemplate</tabs>
     <tabs>standard-EngagementChannelType</tabs>
     <tabs>standard-EnhancedLetterhead</tabs>
+    <tabs>BMC__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>New_App_UtilityBar</utilityBar>
 </CustomApplication>

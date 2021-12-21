@@ -3,7 +3,6 @@
     <enableAccessCheckCrucPref>false</enableAccessCheckCrucPref>
     <enableApiUserLtngOutAccessPref>false</enableApiUserLtngOutAccessPref>
     <enableAuraCDNPref>true</enableAuraCDNPref>
-    <enableAuraDepAccessChksCRUCPref>false</enableAuraDepAccessChksCRUCPref>
     <enableAuraSecStaticResCRUCPref>false</enableAuraSecStaticResCRUCPref>
     <enableFeedbackInMobile>true</enableFeedbackInMobile>
     <enableIE11DeprecationMsgHidden>false</enableIE11DeprecationMsgHidden>
@@ -26,7 +25,6 @@
     <enableS1BrowserEnabled>true</enableS1BrowserEnabled>
     <enableS1DesktopEnabled>true</enableS1DesktopEnabled>
     <enableS1UiLoggingEnabled>true</enableS1UiLoggingEnabled>
-    <enableSplitViewOnStandard>false</enableSplitViewOnStandard>
     <enableTryLightningOptOut>false</enableTryLightningOptOut>
     <enableUseS1AlohaDesktop>false</enableUseS1AlohaDesktop>
     <enableUsersAreLightningOnly>false</enableUsersAreLightningOnly>

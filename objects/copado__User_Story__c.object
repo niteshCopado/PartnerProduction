@@ -162,6 +162,416 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fieldSets>
+        <fullName>copado__Bundle</fullName>
+        <availableFields>
+            <field>copado__Acceptance_Criteria_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Acceptance_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Apex_Code_Coverage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Apex_Tests_Passed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Backburner_Rank__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Backlog_Rank__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Base_Branch__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Business_Analyst__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Cancellation_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Classes_Without_Coverage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Close_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Compliance_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Compliance_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Compliance__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Data_Privacy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Developer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Documentation_Complete__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Environment_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Environment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Epic__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Exclude_From_CBM__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Failing_Methods__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Feature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Functional_Specifications__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Git_Merge_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Has_Apex_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Is_Bundle__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Compliance_Scan_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Promotion_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Validation_Deployment_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Validation_Deployment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Validation_Promotion__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Latest_Commit_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Legal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Manual_Step_Required__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Manual_Tests_Passed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Metadata_Types_in_Selection__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Minimum_Apex_Code_Coverage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Order__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Org_Credential__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Parent_Epic_Title__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Priority__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Progress_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Progress__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Project__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Promote_Change__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Promote_and_Deploy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Promote_as_Single_Step__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Promotion_Test_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Pull_Requests_Approved__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__QR_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Release__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Sprint__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Stop_Indexing_Metadata__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Story_Points_Other__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Story_Points_SFDC__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Team__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Technical_Specifications__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Test_Script_Owner__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Theme__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Total_Story_Points__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Triggers_Without_Coverage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__US_Feature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__User_Story_Title__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Validate_Only__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__View_in_Git__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__userStory_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__userStory_need__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__userStory_reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>User Story Bundle</description>
+        <label>Bundle</label>
+    </fieldSets>
+    <fieldSets>
         <fullName>copado__CBM_Fields</fullName>
         <availableFields>
             <field>copado__Acceptance_Criteria_Status__c</field>
@@ -1804,6 +2214,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>copado__Environment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>copado__Epic__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -1980,6 +2395,11 @@
         </availableFields>
         <availableFields>
             <field>copado__Sprint__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Status__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -4752,6 +5172,32 @@
         <label>Work Manager Relations</label>
     </fieldSets>
     <fields>
+        <fullName>Bundle_User_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Lookup to Bundle (Parent) User Story</description>
+        <externalId>false</externalId>
+        <label>Bundle User Story</label>
+        <referenceTo>copado__User_Story__c</referenceTo>
+        <relationshipLabel>Bundled User Stories</relationshipLabel>
+        <relationshipName>Bundle_User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_Bundle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates when a User Story is a Bundle</description>
+        <externalId>false</externalId>
+        <label>Is Bundle</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Acceptance_Criteria_Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -5101,6 +5547,7 @@
         <fullName>copado__Functional_Specifications__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>Test</inlineHelpText>
         <label>Functional Specifications</label>
         <length>30000</length>
         <trackHistory>false</trackHistory>
@@ -5136,6 +5583,18 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>copado__Git_Repository__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>copado__Project__r.copado__Deployment_Flow__r.copado__Git_Repository__c</formula>
+        <label>Git Repository</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Has_Apex_Code__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -5143,6 +5602,16 @@
         <externalId>false</externalId>
         <inlineHelpText>Value automatically updated by Copado whenever there are Apex Classes added or committed in the User Story.</inlineHelpText>
         <label>Has Apex Code</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Is_Bundle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Bundle</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -5172,23 +5641,23 @@
     <fields>
         <fullName>copado__Last_Validation_Deployment_Status__c</fullName>
         <deprecated>false</deprecated>
-        <description>Status of the latest validation Deployment for the User Story.</description>
+        <description>Status of the latest validation Promotion for the User Story.</description>
         <externalId>false</externalId>
         <formula>IF(copado__Last_Validation_Deployment__r.copado__Date__c &lt; copado__Latest_Commit_Date__c,
-			 IMAGE(&apos;/img/msg_icons/warning16.png&apos;,&apos;OutDated&apos;)+&quot; &quot;+&quot;Validation Outdated&quot;, 
-				IF(AND(NOT(ISBLANK(copado__Last_Validation_Deployment__c)),
-											CONTAINS(TEXT(copado__Last_Validation_Deployment__r.copado__Status__c),&apos;Error&apos;)),
-							IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;failed&quot;)+&quot; &quot;+TEXT(copado__Last_Validation_Deployment__r.copado__Status__c),
-							IF(AND(NOT(ISBLANK(copado__Last_Validation_Deployment__c)),
-											CONTAINS(TEXT(copado__Last_Validation_Deployment__r.copado__Status__c),&apos;Successfully&apos;)),
-										IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;completed&quot;)+&quot; &quot;+TEXT(copado__Last_Validation_Deployment__r.copado__Status__c),
-										TEXT(copado__Last_Validation_Deployment__r.copado__Status__c)
-									)
-		    )
-			)</formula>
+IMAGE(&apos;/img/msg_icons/warning16.png&apos;,&apos;OutDated&apos;)+&quot; &quot;+&quot;Validation Outdated&quot;, 
+   IF(AND(NOT(ISBLANK(copado__Last_Validation_Promotion__c)),
+                               (CONTAINS(TEXT(copado__Last_Validation_Promotion__r.copado__Status__c),&apos;error&apos;)) || ISPICKVAL(copado__Last_Validation_Promotion__r.copado__Status__c, &apos;Validation failed&apos;)),
+               IMAGE(&quot;/img/samples/flag_red.gif&quot;,&quot;failed&quot;)+&quot; &quot;+TEXT(copado__Last_Validation_Promotion__r.copado__Status__c),
+               IF(AND(NOT(ISBLANK(copado__Last_Validation_Promotion__c)),
+                               (CONTAINS(TEXT(copado__Last_Validation_Promotion__r.copado__Status__c),&apos;Successfully&apos;)) || ISPICKVAL(copado__Last_Validation_Promotion__r.copado__Status__c, &apos;Validated&apos;)),
+                           IMAGE(&quot;/img/samples/flag_green.gif&quot;,&quot;completed&quot;)+&quot; &quot;+TEXT(copado__Last_Validation_Promotion__r.copado__Status__c),
+                           TEXT(copado__Last_Validation_Promotion__r.copado__Status__c)
+                       )
+)
+)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Status of the latest validation Deployment for the User Story.</inlineHelpText>
-        <label>Last Validation Deployment Status</label>
+        <label>Last Validation Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -5723,12 +6192,12 @@
         <fullName>copado__Org_Credential__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment.</description>
+        <description>Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment.</description>
         <externalId>false</externalId>
         <inlineHelpText>Org Credential used to add or commit metadata and to promote and deploy the User Story to the next Environment.</inlineHelpText>
-        <label>Org Credential</label>
+        <label>Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>User Stories (Org Credential)</relationshipLabel>
+        <relationshipLabel>User Stories (Credential)</relationshipLabel>
         <relationshipName>User_Stories</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -7614,6 +8083,453 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
         </picklistValues>
     </recordTypes>
+    <recordTypes>
+        <fullName>copado__Utility</fullName>
+        <active>true</active>
+        <label>Utility</label>
+        <picklistValues>
+            <picklist>copado__Acceptance_Criteria_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Compliance_Status__c</picklist>
+            <values>
+                <fullName>Completed - Findings detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - No Findings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Git_Merge_Status__c</picklist>
+            <values>
+                <fullName>Conflicts Detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mergeable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Metadata_Types_in_Selection__c</picklist>
+            <values>
+                <fullName>ActionLinkGroupTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AnalyticSnapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexClass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexComponent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexPage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApexTrigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AppMenu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ApprovalProcess</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AssignmentRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AssignmentRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AuraDefinitionBundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AuthProvider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AutoResponseRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AutoResponseRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BusinessProcess</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CallCenter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ChannelLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CompactLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ConnectedApp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CorsWhitelistOrigin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomApplication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomField</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomLabel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomLabels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomMetadata</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomObject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomObjectTranslation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomPageWebLink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomPermission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomSite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomTab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DataCategoryGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DelegateGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EmailTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EscalationRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EscalationRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ExternalDataSource</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FieldSet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FlexiPaFlow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FlowDefinitioGroup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomePageComponent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HomePageLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>InstalledPackageLayout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Letterhead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ListView</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MatchingRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MatchingRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NamedCredential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PathAssistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PermissionSet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PlatformCachePartition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PostTemplate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ProfilQueue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QuickAction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RecordType</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RemoteSiteSettingReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ReportTyRole</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SamlSsoConfig</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scontrol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingCriteriaRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingOwnerRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingReason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SharingRules</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SiteDotCom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>StaticResource</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SynonymDictionary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ValidationRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WebLink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowAlert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowFieldUpdate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowOutboundMessage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowRule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowSend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WorkflowTask</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Promotion_Test_Level__c</picklist>
+            <values>
+                <fullName>NoTestRun</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>RunAllTestsInOrg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RunLocalTests</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RunSpecifiedTests</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Backburner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Backlog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>copado__User_Story_Title__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__userStory_Role__c</customTabListAdditionalFields>
@@ -7639,6 +8555,13 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Cancelling_a_child_user_story_bundled</fullName>
+        <active>true</active>
+        <description>Cancelling a child user story is not allowed.</description>
+        <errorConditionFormula>NOT( ISBLANK( Bundle_User_Story__c ) )  &amp;&amp;   ISPICKVAL(copado__Status__c, &apos;Cancelled&apos;)</errorConditionFormula>
+        <errorMessage>The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story.</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>copado__Cancellation_reason_required</fullName>
         <active>true</active>
@@ -7681,6 +8604,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <errorMessage>Test scratch orgs cannot be used for developments</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>User_Story_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Bundle User Stories</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/CUSB_UserStoryBundle</url>
+    </webLinks>
     <webLinks>
         <fullName>copado__Add_Apex_Tests</fullName>
         <availability>online</availability>
@@ -7747,6 +8682,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}UserStoryAssignment</url>
     </webLinks>
     <webLinks>
+        <fullName>copado__Commit_Data</fullName>
+        <availability>online</availability>
+        <description>Go to Commit Data page.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Commit Data</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/lightning/n/{!IF(CONTAINS($Action.copado__User_Story_Data_Commit__c.View, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}Commit_Data?{!IF(CONTAINS($Action.copado__User_Story_Data_Commit__c.View, &apos;copado__&apos;), &apos;copado__&apos;, &apos;c__&apos;)}User_Story={!copado__User_Story__c.Id}</url>
+    </webLinks>
+    <webLinks>
         <fullName>copado__Commit_Files</fullName>
         <availability>online</availability>
         <description>Execute Git actions linked to the user story.</description>
@@ -7769,6 +8716,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <openType>noSidebar</openType>
         <protected>false</protected>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}dxoperation?id={!copado__User_Story__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Create_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Bundle</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}UserStoryBundle</url>
     </webLinks>
     <webLinks>
         <fullName>copado__Create_Scratch_Org</fullName>
@@ -7835,6 +8794,19 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <protected>false</protected>
         <requireRowSelection>false</requireRowSelection>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}QuickCreateUserStories?sid={!copado__Sprint__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Open_Org</fullName>
+        <availability>online</availability>
+        <description>Open the org speficied in the org credential for the US</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Open Org</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}ScratchOrgOpen?id={! copado__User_Story__c.copado__Org_CredentialId__c }</url>
     </webLinks>
     <webLinks>
         <fullName>copado__Perform_Validation</fullName>

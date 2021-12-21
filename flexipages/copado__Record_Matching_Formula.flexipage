@@ -4,6 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>copado:addRecordTypeMatchingContainer</componentName>
+                <identifier>addRecordTypeMatchingContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>

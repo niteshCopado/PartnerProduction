@@ -1,4 +1,5 @@
-<apex:page standardController="copado__Deployment__c" extensions="copado.DW_SummaryExtension,copado.Settings,copado.JsRemotingController" id="DW_Summary" lightningStylesheets="true" sideBar="false" docType="html-5.0" title="Deployment Summary">
+<apex:page standardController="copado__Deployment__c" extensions="copado.DW_SummaryExtension,copado.Settings,copado.JsRemotingController" id="DW_Summary"
+    lightningStylesheets="true" sideBar="false" docType="html-5.0" title="Deployment Summary">
     <apex:slds />
     <c:WizardUtils />
     <apex:includeScript value="{!URLFOR($Resource.utilsV2) }" />
@@ -14,21 +15,21 @@
         var currentStepValue = '{!currentStepValue}';
         var Copado_Licenses = '{!CurrentUserLicenses}';
         var dId = '{!deployment.Id}';
-        var stepId = '{!stepId}';
-        var namespace = '{!namespace}';
+        var stepId = '{!JSENCODE(stepId)}';
+        var namespace = '{!JSENCODE(namespace)}';
 
         //***IMPORTANT***  use exactly the same name(jqxdatatable_config) for the configuration for future uses on new pages
         var jqxdatatable_config = {
             data:{
                 orgId: '{!deployment.copado__From_Org__c}',
-                envId: '{!deployment.copado__Source_Environment__c}',
+                envId: '{!JSENCODE(deployment.copado__Source_Environment__c)}',
                 deploymentId: '{!deployment.Id}',
                 stepId: ''
             },
             elts: {},
             server: {
                 baseUrl: '{!JSENCODE(urlBase)}',
-                metadataUrl: '{!metadataURL}&parentId={!deployment.copado__From_Org__c}',
+                metadataUrl: '{!JSENCODE(metadataURL)}&parentId={!deployment.copado__From_Org__c}',
                 typesUrl: '{!JSENCODE(urlBase)}gitTypes{!JSENCODE(urlParameters)}'
             },
             jsonData: {
@@ -44,7 +45,7 @@
 
         $copado(document).ready(function(){
             $copado('#tabbingUl li').on('click',{param:this},dw.handleTabs);
-            var depJobId = '{!deploymentJobId}';
+            var depJobId = '{!JSENCODE(deploymentJobId)}';
             if(depJobId.length > 0){
                 dw.prepareErrorGrid(depJobId);
             }
@@ -157,10 +158,12 @@
 
                         <ul id="tabbingUl" class="slds-tabs_default__nav" role="tablist">
                             <li class="slds-tabs_default__item slds-is-active" title="{!$Label.STEP_TYPE_METADATA}" role="presentation">
-                                <a class="slds-tabs_default__link" style="cursor:pointer;" href="javascript:void(0);" data-open="true" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">{!$Label.STEP_TYPE_METADATA}</a>
+                                <a class="slds-tabs_default__link" style="cursor:pointer;" href="javascript:void(0);" data-open="true" role="tab" tabindex="0"
+                                    aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">{!$Label.STEP_TYPE_METADATA}</a>
                             </li>
                             <li class="slds-tabs_default__item" title="{!$Label.DeploymentLogs}" role="presentation">
-                                <a class="slds-tabs_default__link disabled-tab" title="{!$Label.NoWarningRelated}" data-open="false" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">{!$Label.DeploymentLogs}</a>
+                                <a class="slds-tabs_default__link disabled-tab" title="{!$Label.NoWarningRelated}" data-open="false" href="javascript:void(0);"
+                                    role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">{!$Label.DeploymentLogs}</a>
                             </li>
                         </ul>
                         <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
@@ -193,12 +196,16 @@
                     </apex:outputPanel>
 
                     <div class="buttons slds-m-top--xx-large">
-                        <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__start_new_deployment}" action="{!startNewDeployment}" />
-                        <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__clone}" action="{!deepCloneDeployment}" onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent"/>
+                        <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__start_new_deployment}"
+                            action="{!startNewDeployment}" />
+                        <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__clone}" action="{!deepCloneDeployment}"
+                            onComplete="dw.buttonOnComplete();unlockScreen();" reRender="errorPanel,headerComponent" />
                         <apex:outputPanel layout="none" rendered="{!deploymentInterface.StepGeneralHeader == $Label.copado__new_data_deployment}">
-                            <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__restart_deployment}" action="{!deploymentDMLs}" onComplete="restartDeployment();" reRender="nothingtorender" />
+                            <apex:commandButton styleClass="slds-button slds-button_outline-brand" onClick="lockScreen();" value="{!$Label.copado__restart_deployment}"
+                                action="{!deploymentDMLs}" onComplete="restartDeployment();" reRender="nothingtorender" />
                         </apex:outputPanel>
-                        <apex:commandButton styleClass="slds-button slds-button_brand btn-confirm" onClick="lockScreen();" value="{!$Label.copado__close_deployment}" action="{!goToDeploymentTab}" />
+                        <apex:commandButton styleClass="slds-button slds-button_brand btn-confirm" onClick="lockScreen();" value="{!$Label.copado__close_deployment}"
+                            action="{!goToDeploymentTab}" />
                     </div>
 
                     <apex:actionFunction name="restartDeployment" action="{!restartDeployment}" onComplete="unlockScreen();" />

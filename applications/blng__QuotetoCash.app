@@ -23,4 +23,5 @@
     <tabs>blng__PaymentTransaction__c</tabs>
     <tabs>blng__RevenueSchedule__c</tabs>
     <tabs>blng__RevenueTransaction__c</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

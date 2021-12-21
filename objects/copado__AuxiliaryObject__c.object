@@ -303,6 +303,15 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Git Snapshot</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>copado__Git_Backup__c.copado__Git_Snapshot_Permissions__c</field>
+                <operation>notEqual</operation>
+                <value>Allow Commits Only</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>copado__Git_Backup__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
@@ -343,6 +352,19 @@
         <externalId>false</externalId>
         <label>Org Difference</label>
         <referenceTo>copado__OrgDiff__c</referenceTo>
+        <relationshipLabel>AuxiliaryObjects</relationshipLabel>
+        <relationshipName>AuxiliaryObjects</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Package_Version__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Package Version</label>
+        <referenceTo>copado__Artifact_Version__c</referenceTo>
         <relationshipLabel>AuxiliaryObjects</relationshipLabel>
         <relationshipName>AuxiliaryObjects</relationshipName>
         <required>false</required>

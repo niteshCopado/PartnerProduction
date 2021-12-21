@@ -19,8 +19,12 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Order</tabs>
+    <tabs>BMC__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>BMC__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

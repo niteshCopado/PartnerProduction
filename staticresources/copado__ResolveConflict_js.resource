@@ -120,7 +120,6 @@ var conversionFunc = conversionFunc || {},
             config.hasError = true;
             config.errorLines.push(lineNo);
             var line = editor.edit.doc.getLineHandle(lineNo);
-            console.log('addLineError :: adding error message ', line);
             if (line) {
                 editor.edit.doc.addLineClass(line, 'background', 'line-error');
             }
@@ -129,7 +128,6 @@ var conversionFunc = conversionFunc || {},
             config.hasError = false;
             for (var i = 0; i < config.errorLines; i++) {
                 var line = editor.edit.doc.getLineHandle(config.errorLines[i]);
-                console.log('removeLineErrors :: removing error message ', line);
                 if (line) editor.edit.doc.removeLineClass(line, 'background', 'line-error');
             }
             config.errorLines = [];
@@ -146,9 +144,7 @@ var conversionFunc = conversionFunc || {},
         } catch (e) {
             removeLineErrors('line-error');
             var lineNo = e.mark.line;
-            // console.log('lineNo===> ',lineNo);
             e.message = e.message.replace('line ' + lineNo, 'line ' + (lineNo + 1));
-            console.warn('code exception: ', e.message);
             setGlobalErrorMessage('ERROR: ' + e.message, lineNo);
             addLineError(lineNo);
             return true;
@@ -159,8 +155,6 @@ var conversionFunc = conversionFunc || {},
 (function(self) {
     self.setPreValue = function(sPane, format) {
         att2Res = $copado('[id$=attHiddenInp]').val();
-        console.log('directly inp hidden ===> ', $copado('[id$=attHiddenInp]').val());
-        console.log('directly att2Res ===> ', att2Res);
 
         $copado('#xmlJson>button').removeClass('slds-button_brand');
         if (format) {
@@ -227,9 +221,6 @@ var conversionFunc = conversionFunc || {},
                     returnFlag = true;
                 }
 
-                console.log('preSource ==> ', preSource);
-                console.log('preTarget ==> ', preTarget);
-                console.log('returnFlag==> ', returnFlag);
                 preFlag = true;
             }
             if (((attach && attach.Body.length > 0) || preFlag) && !returnFlag) {
@@ -270,6 +261,7 @@ var conversionFunc = conversionFunc || {},
                         format = currentMode;
                         offsetAmount = 30;
                     } else {
+                        currentMode = 'xml';
                         $copado('#xmlJson').css('display', 'none');
                     }
 
@@ -278,6 +270,7 @@ var conversionFunc = conversionFunc || {},
                     $copado('.CodeMirror-simplescroll').css('display', 'none');
                     var value = attach ? prapareValue(Base64.decode(attach.Body), format) : prapareValue(preSource[0], format);
                     var orig1 = attach ? prepareOrig(Base64.decode(attach.Body), format) : prapareValue(preTarget[0], format);
+
                     editor = CodeMirror.MergeView(document.getElementById('view'), {
                         value: value,
                         origLeft: panes == 3 ? value : null,
@@ -286,20 +279,29 @@ var conversionFunc = conversionFunc || {},
                         mode: format == 'json' ? 'application/json' : pMode,
                         highlightDifferences: true,
                         connect: 'align',
-                        collapseIdentical: false,
-                        readOnly: attach ? false : true
+                        collapseIdentical: true,
+                        readOnly: attach ? false : true,
+                        lineWrapping: true,
+                        extraKeys: {
+                            'Ctrl-Q': function(cm) {
+                                cm.foldCode(cm.getCursor());
+                            }
+                        },
+                        foldGutter: true,
+                        gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter']
                     });
+
                     $copado('.CodeMirror-merge-editor').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+resolutionToolTip+'</span></div></div></div><span>' +
-                            (attach ? resolution : source + jqxdatatable_config.data.orgName) +
-                            '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
-                            '</center></div>'
+                        '<div class="panel top" style="background-color:white;"><center><div id="resolutionToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top-left slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + resolutionToolTip + '</span></div></div></div><span>' +
+                        (attach ? resolution +
+                            '</span><div onmouseenter="$copado(\'#resolutionToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#resolutionToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                            '</center></div>' : source + jqxdatatable_config.data.orgName)
                     );
                     $copado('.CodeMirror-merge-pane-rightmost').prepend(
-                        '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>'+featureToolTip+'</span></div></div></div><span>' +
-                            (attach ? featureBranch : target + jqxdatatable_config.data.targetOrgName) +
-                            '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>'+
-                            '</center></div>'
+                        '<div class="panel top" style="background-color:white;"><center><div id="featureToolTip" class="slds-popover slds-popover_tooltip slds-nubbin_top slds-is-absolute slds-hide toolTipTopHeight" role="tooltip"><div class="slds-popover__body"><div><span>' + featureToolTip + '</span></div></div></div><span>' +
+                        (attach ? featureBranch +
+                            '</span><div onmouseenter="$copado(\'#featureToolTip\').removeClass(\'slds-hide\')" onmouseleave="$copado(\'#featureToolTip\').addClass(\'slds-hide\')" class="slds-icon_container slds-icon__svg--default slds-p-left_xx-small informationIcon"><svg class="slds-button__icon"><use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#info"></use></svg></div>' +
+                            '</center></div>' : target + jqxdatatable_config.data.targetOrgName)
                     );
                     if ($copado('.CodeMirror-merge-left').length > 0) {
                         $copado('.CodeMirror-merge-left').prepend(
@@ -317,7 +319,9 @@ var conversionFunc = conversionFunc || {},
                         ) + 19;
                     $copado('.CodeMirror-merge-gap').css('height', gapSize);
                 } else {
+                    currentMode = 'xml';
                     $copado('#xmlJson').css('display', 'none');
+
                     CodeMirror.defineMode('highlightSearch', function(config, parserConfig) {
                         var searchOverlay = {
                             token: function(stream, state) {
@@ -382,12 +386,12 @@ var conversionFunc = conversionFunc || {},
 
                 // to make it work for yaml we are removing all blank lines
                 if(format == 'json') {
-                val = val.replace(/(^[ \t]*\n)/gm, '');
-            }
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             usName = val.slice(val.indexOf('>>>>>>>'), val.indexOf(usName) + usName.length); //'>>>>>>> feature/'+usName;
             while (val.indexOf(usName) > -1 && usName && usName.length > 0) {
-                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + usName.length, val.length)).replace('<<<<<<< HEAD', '');
+                val = (val.slice(0, val.indexOf('=======')) + val.slice(val.indexOf(usName) + (usName+'\n').length, val.length)).replace('<<<<<<< HEAD\n', '');
             }
 
             var returnVal = format == 'json' ? conversionFunc.json2yaml(parseOperations.convertXml2formattedJSON(val)) : val;
@@ -397,12 +401,12 @@ var conversionFunc = conversionFunc || {},
             if (pMode == 'application/xml') {
                 // to make it work for yaml we are removing all blank lines
                 if(format == 'json') {
-                val = val.replace(/(^[ \t]*\n)/gm, '');
-            }
+                    val = val.replace(/(^[ \t]*\n)/gm, '');
+                }
             }
             while (val.indexOf(usName) > -1 && val.indexOf('<<<<<<< HEAD') > -1) {
-                val = (val.slice(0, val.indexOf('<<<<<<< HEAD')) + val.slice(val.indexOf('=======') + '======='.length, val.length)).replace(
-                    usName,
+                val = (val.slice(0, val.indexOf('<<<<<<< HEAD\n')) + val.slice(val.indexOf('=======') + '=======\n'.length, val.length)).replace(
+                    usName+'\n',
                     ''
                 );
             }
@@ -435,7 +439,6 @@ var conversionFunc = conversionFunc || {},
         return false;
     };
     self.renderBundleSelection = function(optionName) {
-        // console.log('optionName ',optionName);
         preSource[0] = bundleSource[0].file(optionName).asText();
         preTarget[1] = preSource[1] = optionName;
         preTarget[0] = bundleTarget[0].file(optionName).asText();
@@ -536,7 +539,6 @@ var conversionFunc = conversionFunc || {},
                     var item = xml.childNodes.item(i);
                     var nodeName = item.nodeName;
                     if (typeof obj[nodeName] == 'undefined') {
-                        // console.log('nodeName==1=> ',nodeName);
                         if (nodeName != '#text') obj[nodeName] = xmlToJson(item);
                     } else {
                         if (typeof obj[nodeName].push == 'undefined') {
@@ -544,8 +546,6 @@ var conversionFunc = conversionFunc || {},
                             obj[nodeName] = [];
                             obj[nodeName].push(old);
                         }
-                        // console.log('nodeName==2=> ',nodeName);
-                        // console.log('obj[nodeName]===> ',obj[nodeName]);
                         obj[nodeName].push(xmlToJson(item));
                     }
                 }
@@ -581,9 +581,7 @@ var conversionFunc = conversionFunc || {},
                         // elements
                         if (json[x] instanceof Array) {
                             // handle arrays
-                            // console.log('json[x]==in if==> ',json[x]);
                             for (var i = 0; i < json[x].length; i++) {
-                                // console.log('x==array= in for==> ',x);
                                 var str = x;
                                 var uppercaseLetters = str.replace(/[a-z]/g, '');
                                 let exX = x;
@@ -676,6 +674,48 @@ var conversionFunc = conversionFunc || {},
         return param.length != '' ? JSON.stringify(xmlToJson(new DOMParser().parseFromString(param, 'text/xml')), null, '\t') : '';
     };
     parseOperations.convertJSON2formattedXml = function(param) {
-        return formatXml(json2Xml(JSON.parse(param)));
+        return formatXml(jsonToXml(JSON.parse(param)));
+    };
+    jsonToXml = function (o, tab) {
+        var toXml = function (v, name, ind) {
+            var xml = "";
+            if (v instanceof Array) {
+                for (var i = 0, n = v.length; i < n; i++)
+                    xml += ind + toXml(v[i], name, ind + "\t") + "\n";
+            }
+            else if (typeof (v) == "object") {
+                var hasChild = false;
+                xml += ind + "<" + name;
+                for (var m in v) {
+                    if (m.charAt(0) == "@") {
+                        for (var j in v[m]) {
+                            xml += " " + j + "=\"" + v[m][j] + "\"";
+                        }
+                    }
+                    else
+                        hasChild = true;
+                }
+                xml += hasChild ? ">" : "/>";
+                if (hasChild) {
+                    for (var m in v) {
+                        if (m == "#text")
+                            xml += v[m];
+                        else if (m == "#cdata")
+                            xml += "<![CDATA[" + v[m] + "]]>";
+                        else if (m.charAt(0) != "@")
+                            xml += toXml(v[m], m, ind + "\t");
+                    }
+                    xml += (xml.charAt(xml.length - 1) == "\n" ? ind : "") + "</" + name + ">";
+                }
+            }
+            else {
+                xml += ind + "<" + name + ">" + v.toString() + "</" + name + ">";
+            }
+            return xml;
+        }, xml = "";
+        for (var m in o) {
+            xml += toXml(o[m], m, "");
+        }
+        return tab ? xml.replace(/\t/g, tab) : xml.replace(/\t|\n/g, "");
     };
 })(parseOperations);

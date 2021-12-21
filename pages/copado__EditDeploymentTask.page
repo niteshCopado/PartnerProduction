@@ -369,34 +369,48 @@
 								<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == ''}">
 								</apex:outputPanel>
 								<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Manual Task'}">
-									<c:ManualTaskComponent isEdit="true" />
+									<c:ManualTaskComponent deploymentTask="{!copado__Deployment_Task__c}" isEdit="true" userStoryIdOfDeploymentTask="{!copado__Deployment_Task__c.copado__User_Story__c}"/>
 									<script type="text/javascript">
 										datasetup.save = function () {
 											var manualTask = {};
 											var Perform_in_Source_Org = $copado('[Id$="jsPerformInSource"]').prop('checked');
 											var Perform_in_Destination_Orgs = $copado('[Id$="jsPerformInDestinations"]').prop('checked');
+                                            var Disable_Task_for_Back_Promotions = $copado('[Id$="jsDisableTaskForBackPromotions"]').prop('checked');
 											var Task_Description = $copado('[Id$="jsTaskDesc"]').val();
 											var Task_Owner = $copado('[Id$="jsTaskOwner_lkid"]').val();
 											var Notify_Task_Owner = $copado('[Id$="jsNotifyTaskOwner"]').val();
+                                            var Apply_to = $copado('[Id$="jsApplyTo"]').val();
+                                            var selectedEnvironmentsSelectList = $copado('[Id$="rightList"]')[0];
+                                            var result = [];
+                                            var options = selectedEnvironmentsSelectList && selectedEnvironmentsSelectList.options;
+                                            var opt;
+                                            if(options) {
+                                                for (var i=0, iLen=options.length; i<iLen; i++) {
+                                                    opt = options[i];
+                                                    result.push(opt.value || opt.text);
+                                                }
+                                            }
 											manualTask.Perform_in_Source_Org = Perform_in_Source_Org;
 											manualTask.Perform_in_Destination_Orgs = Perform_in_Destination_Orgs;
 											manualTask.Task_Description = Task_Description;
 											manualTask.Task_Owner = Task_Owner;
 											manualTask.Notify_Task_Owner = Notify_Task_Owner;
-
-											console.info('Saving Manual task...', manualTask);
+                                            manualTask.Apply_to = Apply_to;
+                                            manualTask.Disable_Task_for_Back_Promotions = Disable_Task_for_Back_Promotions;
+                                            manualTask.Selected_Environments = result;
 											return JSON.stringify(manualTask);
 										}
 										datasetup.setPreviousData = function (data) {
 											if (data) {
-												console.info('Setting previosly selected data for Manual Task');
 												data = JSON.parse(data);
-												console.log('data==> ', data);
 												$copado('[Id$="jsTaskDesc"]').val(data.Task_Description);
 												$copado('[Id$="jsPerformInSource"]').prop('checked', data.Perform_in_Source_Org);
 												$copado('[Id$="jsPerformInDestinations"]').prop('checked', data.Perform_in_Destination_Orgs);
+                                                $copado('[Id$="jsDisableTaskForBackPromotions"]').prop('checked', data.Disable_Task_for_Back_Promotions);
 												$copado('[Id$="jsNotifyTaskOwner"]').val(data ? data.Notify_Task_Owner : 'None');
+                                                $copado('[Id$="jsApplyTo"]').val(data ? data.Apply_to : 'None');
 												$copado('[Id$="jsTaskOwner_lkid"]').val(data ? data.Task_Owner : null);
+
 												if (data.Task_Owner != undefined && data.Task_Owner != '') {
 													sforce.connection.query('SELECT id, FirstName, LastName FROM User WHERE Id = \'' + data.Task_Owner + '\' LIMIT 1', {
 														onSuccess: function (result) {
@@ -414,6 +428,19 @@
 														}
 													});
 												}
+
+                                                var selectedEnvironments = data ? data.Selected_Environments : [];
+                                                var leftEnvironmentsSelectList = $copado('[Id$="leftList"]')[0];
+                                                var result = [];
+                                                var options = leftEnvironmentsSelectList && leftEnvironmentsSelectList.options;
+                                                var opt;
+                                                if(options) {
+                                                    for (var i = 0, iLen = options.length; i<iLen; i++) {
+                                                        opt = options[i];
+                                                        opt.selected = selectedEnvironments.includes(opt.value);;
+                                                    }
+                                                    moveSelectedOptions($copado('[Id$="leftList"]')[0].id,$copado('[Id$="rightList"]')[0].id, $copado('[Id$="leftHidden"]')[0].id, $copado('[Id$="rightHidden"]')[0].id);
+                                                }
 											} else {
 												$copado('[id$=jsTaskOwner]').val(null);
 											}
@@ -490,10 +517,54 @@
 								<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Data Template'}">
 									<c:DataTemplateTaskComponent isEdit="true" />
 									<script type="text/javascript">
+										getDataSetDetailsById = function (dataSetId) {
+											let dataSets = sforce.connection.query('SELECT Id, Name, '
+												+ _config.ns + 'Data_Template__c, '
+												+ _config.ns + 'Data_Template__r.Name, '
+												+ _config.ns + 'Description__c FROM ' + _config.ns + 'Data_Set__c WHERE Id = \'' + dataSetId + '\'');
+											let dataSetRecords = dataSets.getArray('records');
+											if (dataSetRecords.length > 0) {
+												let record = dataSetRecords[0];
+												return record;
+											}
+											return null;
+										}
+
+										toggleDataTemplateHtmlElements = function () {
+											let type = $copado('[id$=DataSourceType]').val();
+											let sourceDataTemplatePanel = document.getElementById('dataTemplateSourcePanel');
+											let sourceDataSetPanel = document.getElementById('dataSetSourcePanel');
+											if (sourceDataTemplatePanel && sourceDataSetPanel) {
+												switch (type) {
+													case 'ENVIRONMENT':
+														sourceDataTemplatePanel.style.display = 'block';
+														sourceDataSetPanel.style.display = 'none';
+														break;
+													case 'DATASET':
+														sourceDataTemplatePanel.style.display = 'none';
+														sourceDataSetPanel.style.display = 'block';
+														break;
+												}
+											}
+										}
+
 										datasetup.save = function () {
-											var obj = {
-												dataTemplateId: $copado('[id$=auxDataTemplateId_lkid]').val(),
-												dataTemplateName: $copado('[id$=auxDataTemplateId]').val()
+											var obj = {};
+											let type = $copado('[id$=DataSourceType]').val();
+											switch (type) {
+												case 'ENVIRONMENT':
+												case undefined:
+													obj = {
+														dataTemplateId: $copado('[id$=SourceDataTemplate_lkid]').val(),
+														dataTemplateName: $copado('[id$=SourceDataTemplate]').val()
+													}
+													break;
+												case 'DATASET':
+													obj = {
+														source: { type: 'DATASET', id: $copado('[id$=SourceDataSet_lkid]').val() },
+														destination: { type: 'ENVIRONMENT' }
+													}
+													break;
 											}
 											return JSON.stringify(obj);
 										}
@@ -501,10 +572,26 @@
 										datasetup.setPreviousData = function (data) {
 											if (data) {
 												data = JSON.parse(data);
-												$copado('[id$=auxDataTemplateId_lkid]').val(data.dataTemplateId);
-												$copado('[id$=auxDataTemplateId]').val(data.dataTemplateName);
+												let type = data.source ? data.source.type : 'ENVIRONMENT';
+												$copado('[id$=DataSourceType]').val(type);
+												toggleDataTemplateHtmlElements();
+												switch (type) {
+													case 'ENVIRONMENT':
+													case undefined:
+														$copado('[id$=SourceDataTemplate_lkid]').val(data.dataTemplateId);
+														$copado('[id$=SourceDataTemplate]').val(data.dataTemplateName);
+														break;
+													case 'DATASET':
+														const dataSetRecord = getDataSetDetailsById(data.source.id);
+														$copado('[id$=SourceDataSet_lkid]').val(dataSetRecord.Id);
+														$copado('[id$=SourceDataSet]').val(dataSetRecord.Name);
+														break;
+												}
 											}
 										}
+									</script>
+									<script type="text/javascript">
+										toggleDataTemplateHtmlElements();
 									</script>
 								</apex:outputPanel>
 								<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Bulk Data'}">

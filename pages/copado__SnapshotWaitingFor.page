@@ -183,7 +183,7 @@
                     <script>
                         function updateURLForRefresh(){
                             var newUrls = new window.URL(window.location.href);
-                            var copadoJobId = '{!copadoNotificationId}';
+                            var copadoJobId = '{!JSENCODE(copadoNotificationId)}';
                             newUrls.hash = '&jobStarted=' + copadoJobId;
                             window.history.replaceState('copado', document.title, newUrls);
                         }

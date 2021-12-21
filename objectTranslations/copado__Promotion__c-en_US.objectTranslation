@@ -51,6 +51,11 @@
         <name>copado__Exclude_From_Auto_Resolve__c</name>
     </fields>
     <fields>
+        <help><!-- Indicates that this promotion includes a manual conflict resolution. --></help>
+        <label><!-- Merge Conflict --></label>
+        <name>copado__Merge_Conflict__c</name>
+    </fields>
+    <fields>
         <help><!-- Fill this field only if you want to change the selected user stories order on deployment. (usage exp: name asc, copado__backlog_rank__c desc) --></help>
         <label><!-- Order User Stories by --></label>
         <name>copado__Order_by__c</name>

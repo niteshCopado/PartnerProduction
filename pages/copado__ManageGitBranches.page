@@ -263,11 +263,7 @@
         <script>
                     var cacheDate;
                     var initBraches = function (conf) {
-                        var branchsInUse = '{!branchNamesInUse}';
-                        branchsInUse = branchsInUse.replace('[','').replace(']','');
-                        while(branchsInUse.indexOf(', ') > -1){
-                            branchsInUse = branchsInUse.replace(', ',',');
-                        }
+                        var branchsInUse = '{!JSENCODE(branchNamesInUseJoined)}';
                         var branchSet = branchsInUse.split(',');
                         console.log('branchSet===> ',branchSet);
 
@@ -295,9 +291,9 @@
                                 ],
                                 datatype: 'array'
                             };
-                            
+
                             var dataAdapter = new $copado.jqx.dataAdapter(initBraches.source);
-                            var types = []; 
+                            var types = [];
                             for (i =0; i<listOfBranches.length; i++){
                                 if(!types.includes(listOfBranches[i].type) && listOfBranches[i].type){
                                     types.push(listOfBranches[i].type);
@@ -306,7 +302,7 @@
                             initBraches.branchGrid = $copado("#branchSelectorGrid").jqxGrid({
                                 width: '100%',
                                 height: '100%',
-                                source: dataAdapter, 
+                                source: dataAdapter,
                                 pageable: true,
                                 autoheight: false,
                                 filterable: true,
@@ -335,7 +331,7 @@
                                     },
                                     {
                                         text: copadoLabels.type,
-                                        datafield: 'type', 
+                                        datafield: 'type',
                                         filtertype: 'checkedlist',
                                         filterItems: types,
                                         editable: false,
@@ -355,7 +351,7 @@
                         } else {
                             $copado("#branchSelectorGrid").hide();
                         }
-                        
+
                         if(conf.repoId && conf.repoId != '000000000000000') {
                             createCacheDeleteButton(conf.repoId);
                         }

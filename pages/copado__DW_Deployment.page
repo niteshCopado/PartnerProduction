@@ -20,7 +20,7 @@
         var renderGridForError = () => {
             var openErrorPanel = $copado('[id$=statusAction]').val();
             if (openErrorPanel == 'Error') {
-                var jobId = '{!DeploymentJobId}';
+                var jobId = '{!JSENCODE(DeploymentJobId)}';
                 dw.prepareErrorGrid(jobId);
             }
             dw.buttonOnComplete();
@@ -28,7 +28,7 @@
 
         $copado(document).ready(function() {
             startPoller();
-            var depJobId = "{!DeploymentJobId}";
+            var depJobId = "{!JSENCODE(DeploymentJobId)}";
             if (depJobId.length > 0) {
                 dw.prepareErrorGrid(depJobId);
             }

@@ -19,4 +19,5 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Document</tabs>
     <tabs>SBQQ__ImportFormat__c</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

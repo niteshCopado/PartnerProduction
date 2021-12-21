@@ -26,12 +26,6 @@
         <label>Error</label>
     </customValue>
     <customValue>
-        <fullName>Billed</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Billed</label>
-    </customValue>
-    <customValue>
         <fullName>Processed - No Invoice Generated</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -48,6 +42,12 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>Processing for Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Billed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Billed</label>
     </customValue>
     <masterLabel>Usage Status</masterLabel>
     <sorted>false</sorted>

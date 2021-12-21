@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>License Manager Walkthrough</masterLabel>
+    <promptVersions>
+        <body>We completely revamped the License Manager. To learn about the new features, please continue with the walkthrough.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>true</isPublished>
+        <masterLabel>License Manager Walkthrough Step 1</masterLabel>
+        <publishedDate>2021-07-06</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2021-05-02</startDate>
+        <stepNumber>1</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Welcome to the new License Manager!</title>
+        <uiFormulaRule>
+            <criteria>
+                <leftValue>{!$Permission.StandardPermission.ManageUsers}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>TRUE</rightValue>
+            </criteria>
+        </uiFormulaRule>
+        <userAccess>SpecificPermissions</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>&lt;p&gt;This is your organization&apos;s control panel for all the Copado Licenses. Here, you can check and manage the different &lt;b&gt;Copado Managed Package &lt;/b&gt;and&lt;b&gt; Copado Features&lt;/b&gt; licenses, now &lt;b&gt;all in&lt;/b&gt; &lt;b&gt;one place&lt;/b&gt;!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;This new experience will help you manage the multiple licenses seamlessly and simultaneously, &lt;b&gt;filter&lt;/b&gt;, &lt;b&gt;search&lt;/b&gt;, &lt;b&gt;add&lt;/b&gt; &lt;b&gt;custom fields &lt;/b&gt;and more.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You&apos;ll find this walkthrough useful if you have never used the License Manager before and this is your first time here, or if you want to take a look at the new functionalities. &lt;b&gt;Let&apos;s go!&lt;/b&gt;&lt;/p&gt;</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <displayType>DockedComposer</displayType>
+        <header>A new Copado License Manager</header>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 2</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>2</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>What&apos;s new? 😎</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>The new license bars are color-coded. When your consume over 75% of the assigned licenses for a specific type, the bar will turn red. When the consumption is between 50% and 75%, it&apos;ll turn yellow. Otherwise, it&apos;ll be blue.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>TopRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 3</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>3</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>License Bars</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>The table can be customized to include User fields. To do that, use the &quot;Copado License Manager&quot; fieldset available in the User object. Added fields will appear in the left section of the table. We have already included &quot;Name&quot; and &quot;Active&quot;.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 4</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>4</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>Licenses Table - Custom Columns</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>Columns display Copado Managed Package and Feature licenses. They can be sorted and filtered. An icon will appear when filters are applied. Using the column filters will dynamically update the license bars at the top.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 5</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>5</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>Licenses Table - License Columns</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>Select one or multiple rows and use the &quot;Remove User(s) Licenses&quot; button to mass remove all licenses from selected users. Both Managed Package and Feature licenses will be removed. User records will not be deleted from your org.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 6</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>6</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>Mass Remove User(s) Licenses</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>Use the &quot;Add User(s)&quot; button to add users not yet present in the table. Users already in the table will not show up in the Search modal. Beware of accents and special characters since they are considered when searching here.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 7</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>7</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>Add Users to the table</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <body>To add, remove or edit specific licenses, use the in-line edit. You can select multiple cells or rows to mass edit licenses for several users at once.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>BottomCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 8</masterLabel>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>8</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>Edit licenses</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+    <promptVersions>
+        <actionButtonLabel>License Manager Article</actionButtonLabel>
+        <actionButtonLink>https://docs.copado.com/category/ycqzgzqz6d-license-manager</actionButtonLink>
+        <body>Learn more about the New License Manager in our documentation article below.</body>
+        <customApplication>copado__Copado_Change_Management</customApplication>
+        <dismissButtonLabel>Dismiss</dismissButtonLabel>
+        <displayPosition>MiddleCenter</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <isPublished>false</isPublished>
+        <masterLabel>License Manager Walkthrough Step 9</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <stepNumber>9</stepNumber>
+        <targetPageKey1>copado__License_Manager</targetPageKey1>
+        <targetPageType>standard__navItemPage</targetPageType>
+        <title>That&apos;s all folks! 🎉🎉🎉</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

@@ -11,5 +11,5 @@
     <tabs>standard-Solution</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>standard-WaveHome</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

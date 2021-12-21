@@ -172,7 +172,7 @@
         <deprecated>false</deprecated>
         <description>If checked, committing changes on user stories linked to this Pipeline will not be allowed</description>
         <externalId>false</externalId>
-        <inlineHelpText>If checked, committing changes on user stories linked to this Pipeline will not be allowed</inlineHelpText>
+        <inlineHelpText>If checked, committing changes on user stories linked to this deployment flow will not be allowed.</inlineHelpText>
         <label>Block Commits</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -271,7 +271,23 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>List of steps to be used when deploying promoted user stories to a destination environment.</inlineHelpText>
         <label>Deployment Automation</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>copado__Deployment__c</referenceTo>
         <relationshipLabel>Pipelines (Deployment Automation)</relationshipLabel>
         <relationshipName>DeploymentPipelines</relationshipName>
@@ -528,7 +544,23 @@ This value will prefill the order by field on related Promotion record creation 
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>List of steps to be used when merging user stories before deployment.</inlineHelpText>
         <label>Promotion Automation</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only active automation templates are allowed</errorMessage>
+            <filterItems>
+                <field>copado__Deployment__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Automation Template</value>
+            </filterItems>
+            <filterItems>
+                <field>copado__Deployment__c.copado__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
         <referenceTo>copado__Deployment__c</referenceTo>
         <relationshipLabel>Pipelines</relationshipLabel>
         <relationshipName>Pipelines</relationshipName>
@@ -586,6 +618,17 @@ This value will prefill the order by field on related Promotion record creation 
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
+        <active>true</active>
+        <description>A pipeline cannot have the same template for both Promote and Deploy</description>
+        <errorConditionFormula>AND(
+  NOT(ISBLANK(copado__Promotion_Automation__c)), 
+  copado__Promotion_Automation__c ==  copado__Deployment_Automation__c
+)</errorConditionFormula>
+        <errorDisplayField>copado__Deployment_Automation__c</errorDisplayField>
+        <errorMessage>A pipeline cannot have the same template for both Promote and Deploy</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Find_Replace_Rule_Editor</fullName>
@@ -638,6 +681,17 @@ This value will prefill the order by field on related Promotion record creation 
         <openType>replace</openType>
         <protected>false</protected>
         <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}ManageSeleniumTesting?regression=true&amp;flowId={!copado__Deployment_Flow__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Pipeline_Wizard</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Launch Pipeline Wizard</masterLabel>
+        <openType>replace</openType>
+        <page>copado__NewPipeline</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
     </webLinks>
     <webLinks>
         <fullName>copado__Select_Main_Branch</fullName>

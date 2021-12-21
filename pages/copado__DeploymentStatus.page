@@ -14,7 +14,7 @@
     <body>
         <script>
             copadoApp = {
-                ns: '{!namespace}',
+                ns: '{!JSENCODE(namespace)}',
                 deploymentId: '{!JSENCODE(Deployment__c.Id)}',
                 deployment: [],
                 jobIds: [],
@@ -200,7 +200,7 @@
                 cancelDeployment: function(jobId){
                     var orgId = $copado('#orgId_'+jobId).val();
                     var asyncJobId = $copado('#asyncJobId_'+jobId).val();
-                    var url= '{!settings.urlBase}cancelDeployment/'+orgId+'/'+asyncJobId+'{!settings.urlParameters}&jobId='+jobId;
+                    var url= '{!JSENCODE(settings.urlBase)}cancelDeployment/'+orgId+'/'+asyncJobId+'{!JSENCODE(settings.urlParameters)}&jobId='+jobId;
                     console.log("Cancel URL:", url);
                     sforce.connection.remoteFunction({
                         url : url,

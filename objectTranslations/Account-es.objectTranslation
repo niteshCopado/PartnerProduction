@@ -29,12 +29,20 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Developer 1 --></label>
+        <name>Developer_1__c</name>
+    </fields>
+    <fields>
         <label><!-- External Id --></label>
         <name>External_Id__c</name>
     </fields>
     <fields>
         <label><!-- First Field --></label>
         <name>First_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is true --></label>
+        <name>Is_true__c</name>
     </fields>
     <fields>
         <help><!-- This is latitude --></help>
@@ -47,8 +55,32 @@
         <name>Longitude__c</name>
     </fields>
     <fields>
+        <label><!-- Manual Task Dep --></label>
+        <name>Manual_Task_Dep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata RL --></label>
+        <name>Metadata_RL__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Field 2 --></label>
+        <name>New_Field_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Field --></label>
+        <name>New_Field__c</name>
+    </fields>
+    <fields>
         <label><!-- Number of Locations --></label>
         <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommit_1 --></label>
+        <name>Recommit_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommit_2 --></label>
+        <name>Recommit_2__c</name>
     </fields>
     <fields>
         <help><!-- Option to combine quantities of multiple assets for the same product into one line when renewal quote is generated. --></help>
@@ -187,6 +219,14 @@
         <name>Second_field__c</name>
     </fields>
     <fields>
+        <label><!-- Snapshot Diff --></label>
+        <name>Snapshot_Diff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Fieldnew --></label>
+        <name>TestFieldnew__c</name>
+    </fields>
+    <fields>
         <label><!-- Upsell Opportunity --></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>
@@ -219,9 +259,21 @@
         <label><!-- Default Payment Type --></label>
         <name>blng__DefaultPaymentType__c</name>
     </fields>
+    <recordTypes>
+        <label><!-- Person Account Test --></label>
+        <name>Person_Account_Test</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Business Account --></label>
+        <name>ardev__Business_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- testRT --></label>
+        <name>testRT</name>
+    </recordTypes>
     <webLinks>
-        <label><!-- Billing --></label>
-        <name>Billing</name>
+        <label><!-- BillingNew --></label>
+        <name>BillingNew</name>
     </webLinks>
     <webLinks>
         <label><!-- Amend_Assets --></label>

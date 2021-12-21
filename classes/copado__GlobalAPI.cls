@@ -9,6 +9,9 @@ global class GlobalAPI {
     global GlobalAPI() {
 
     }
+    global static void authenticateGitRepository(Id gitRepositoryId, String username, String password) {
+
+    }
     global String createUserAPIKey() {
         return null;
     }

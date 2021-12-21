@@ -23,6 +23,5 @@
     <tabs>copado__External_CI_Setting__c</tabs>
     <tabs>copado__External_CI_Job__c</tabs>
     <tabs>copado__Data_Template__c</tabs>
-    <tabs>copado__Record_Matching_Formula__c</tabs>
-    <tabs>copado__Application__c</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

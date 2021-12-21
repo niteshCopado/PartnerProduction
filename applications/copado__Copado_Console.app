@@ -7,6 +7,7 @@
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
     <description>Quick Access to Key Parts of Copado</description>
+    <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
@@ -33,9 +34,17 @@
     <tabs>copado__Selenium_Test_Group__c</tabs>
     <tabs>copado__Git_Repository__c</tabs>
     <tabs>copado__Git_Backup__c</tabs>
+    <tabs>copado__Application__c</tabs>
+    <tabs>copado__Application_Feature__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>copado__Copado_Console_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>copado__Application_Feature__c</tab>
+        </mappings>
+        <mappings>
+            <tab>copado__Application__c</tab>
+        </mappings>
         <mappings>
             <tab>copado__Compliance_Rule_Group__c</tab>
         </mappings>

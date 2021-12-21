@@ -19,4 +19,5 @@
     <tabs>copado__Artifact__c</tabs>
     <tabs>copado__Account_Summary</tabs>
     <tabs>standard-report</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

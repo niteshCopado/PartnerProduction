@@ -53,12 +53,13 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
-        <label><!-- Auto Number Field --></label>
-        <name>Auto_Number_Field__c</name>
+        <label><!-- Bundle User Story --></label>
+        <name>Bundle_User_Story__c</name>
+        <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- New Text field Data --></label>
-        <name>New_Text_field__c</name>
+        <label><!-- Is Bundle --></label>
+        <name>Is_Bundle__c</name>
     </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
@@ -204,6 +205,7 @@
         <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Test --></help>
         <label><!-- Functional Specifications --></label>
         <name>copado__Functional_Specifications__c</name>
     </fields>
@@ -244,7 +246,7 @@
     </fields>
     <fields>
         <help><!-- Status of the latest validation Deployment for the User Story. --></help>
-        <label><!-- Last Validation Deployment Status --></label>
+        <label><!-- Last Validation Status --></label>
         <name>copado__Last_Validation_Deployment_Status__c</name>
     </fields>
     <fields>
@@ -817,18 +819,6 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
-    <fields>
-        <label><!-- Enable Logs --></label>
-        <name>copadoccmint__Enable_Logs__c</name>
-    </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>copadoccmint__External_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA key --></label>
-        <name>copadoccmint__JIRA_key__c</name>
-    </fields>
     <recordTypes>
         <label><!-- Bug --></label>
         <name>copado__Bug</name>
@@ -841,6 +831,14 @@
         <label><!-- User Story --></label>
         <name>copado__User_Story</name>
     </recordTypes>
+    <recordTypes>
+        <label><!-- Utility --></label>
+        <name>copado__Utility</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The user story status cannot be changed to Cancelled since it is part of a bundle and the bundle will continue moving the changes committed in this user story. You need to cancel the parent user story bundle first in order to cancel this user story. --></errorMessage>
+        <name>Cancelling_a_child_user_story_bundled</name>
+    </validationRules>
     <validationRules>
         <errorMessage><!-- A cancellation reason must be given. --></errorMessage>
         <name>copado__Cancellation_reason_required</name>
@@ -853,6 +851,10 @@
         <errorMessage><!-- Test scratch orgs cannot be used for developments --></errorMessage>
         <name>copado__Test_scratch_orgs_cannot_be_used_for_dev</name>
     </validationRules>
+    <webLinks>
+        <label><!-- User_Story_Bundle --></label>
+        <name>User_Story_Bundle</name>
+    </webLinks>
     <webLinks>
         <label><!-- Add_Apex_Tests --></label>
         <name>copado__Add_Apex_Tests</name>
@@ -872,6 +874,10 @@
     <webLinks>
         <label><!-- Assign_to_Release --></label>
         <name>copado__Assign_to_Release</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Commit_Data --></label>
+        <name>copado__Commit_Data</name>
     </webLinks>
     <webLinks>
         <label><!-- Commit_Files --></label>

@@ -179,7 +179,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>New Custom Objects</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

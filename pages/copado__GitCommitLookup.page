@@ -296,7 +296,7 @@
 
     <script>
             $copado(document).ready(function() {
-                copadoApp.ns = '{!namespace}';
+                copadoApp.ns = '{!JSENCODE(namespace)}';
                 copadoApp.init();
             });
         </script>

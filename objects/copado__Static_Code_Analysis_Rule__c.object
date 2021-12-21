@@ -438,46 +438,6 @@
                     <default>false</default>
                     <label>WhileLoopsMustUseBraces</label>
                 </value>
-                <value>
-                    <fullName>ApexAssertionsShouldIncludeMessage</fullName>
-                    <default>false</default>
-                    <label>ApexAssertionsShouldIncludeMessage</label>
-                </value>
-                <value>
-                    <fullName>ApexUnitTestMethodShouldHaveIsTestAnnotation</fullName>
-                    <default>false</default>
-                    <label>ApexUnitTestMethodShouldHaveIsTestAnnotation</label>
-                </value>
-                <value>
-                    <fullName>DebugsShouldUseLoggingLevel</fullName>
-                    <default>false</default>
-                    <label>DebugsShouldUseLoggingLevel</label>
-                </value>
-                <value>
-                    <fullName>UnusedLocalVariable</fullName>
-                    <default>false</default>
-                    <label>UnusedLocalVariable</label>
-                </value>
-                <value>
-                    <fullName>FieldDeclarationsShouldBeAtStart</fullName>
-                    <default>false</default>
-                    <label>FieldDeclarationsShouldBeAtStart</label>
-                </value>
-                <value>
-                    <fullName>CognitiveComplexity</fullName>
-                    <default>false</default>
-                    <label>CognitiveComplexity</label>
-                </value>
-                <value>
-                    <fullName>TestMethodsMustBeInTestClasses</fullName>
-                    <default>false</default>
-                    <label>TestMethodsMustBeInTestClasses</label>
-                </value>
-                <value>
-                    <fullName>AvoidSoslInLoops</fullName>
-                    <default>false</default>
-                    <label>AvoidSoslInLoops</label>
-                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
