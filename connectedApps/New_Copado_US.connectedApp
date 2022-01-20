@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>info@copado.com</contactEmail>
+    <contactPhone>+34 910 56 11 75</contactPhone>
+    <description>Copado</description>
+    <infoUrl>https://copado.com</infoUrl>
+    <label>Copado (US)</label>
+    <logoUrl>https://copado--c.documentforce.com/servlet/servlet.ImageServer?id=0150N000006oDXO&amp;oid=00D1l0000000dkE</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://app-api.copa.do/forcedotcomoauth2/callback
+https://copado.herokuapp.com/forcedotcomoauth2/callback
+https://app-api.copado.com/forcedotcomoauth2/callback
+https://api.backend.copado.com/forcedotcomoauth2/callback</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6ft1Y9n7M2VbbiMN1RBte0gXaHCfvdO9D55FJm8KkqNWIqim_VTEwAS8NKPXc9hmGK9.BU_</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

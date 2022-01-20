@@ -1,0 +1,33 @@
+<apex:page sidebar="true" showHeader="true" docType="html-5.0" >
+<apex:slds />
+
+       <apex:form >
+        
+     
+     <div class="slds-scope"> 
+     <c:pageheader title="SLA Setup" icon="custom"/>
+     </div>
+     
+     
+     <!--start content-->
+ 
+
+          <c:column type="col-md-12" style="margin-left: 0%;">  
+          <c:panel type="default" id="pb"> 
+ 
+ 
+            <apex:pageMessages />
+            <br/>
+            <div class="slds-button-group" role="group">
+            <apex:commandButton title="Manage SLAs" action="{!URLFOR($Page.ManageSLA)}" value="Manage SLAs" styleClass="slds-button slds-button--neutral"/><br/><br/>
+            <apex:commandButton title="Service Settings" action="{!URLFOR($Page.ServiceSetup)}" value="Service Settings" styleClass="slds-button slds-button--neutral"/><br/>
+            </div>
+
+     
+        </c:panel>
+      </c:column>
+     <!--end content-->
+     
+     </apex:form>
+
+ </apex:page>

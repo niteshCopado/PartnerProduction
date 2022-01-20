@@ -17,6 +17,11 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- Enter a URL of a documentation page or article to help your users understand more about this tip. Please, enter the URL with full https:// format. Example https://www.copado.com/ --></help>
+        <label><!-- Help Text Url --></label>
+        <name>copado__Help_Text_Url__c</name>
+    </fields>
+    <fields>
         <label><!-- Help Text --></label>
         <name>copado__Help_Text__c</name>
     </fields>
@@ -33,7 +38,16 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Triggering Value --></label>
+        <help><!-- This is a non-mandatory field. You can use it to complement the Triggering Metadata Type in case you want specific Metadata items to trigger the tips. The Metadata items can be separated by &quot;;&quot;. Example standard-Account;standard-AppLauncher. --></help>
+        <label><!-- Triggering Metadata Items --></label>
+        <name>copado__Triggering_Metadata_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggering Metadata Type --></label>
         <name>copado__Triggering_Value__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- Please enter Triggering Metadata Type to populate Triggering Metadata Items --></errorMessage>
+        <name>copado__Validate_triggering_metadata_type</name>
+    </validationRules>
 </CustomObjectTranslation>

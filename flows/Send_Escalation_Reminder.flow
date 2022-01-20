@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <name>Check_User_Story_status</name>
+        <label>Check User Story status</label>
+        <locationX>83</locationX>
+        <locationY>396</locationY>
+        <defaultConnector>
+            <targetReference>Is_known_issue_populated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Status_is_Waiting_for_Customer_Released_Completed_Cancelled</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.copado__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Waiting for customer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.copado__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Released</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.copado__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.copado__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Status is Waiting for Customer, Released, Completed, Cancelled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Does_the_user_story_has_Planned_Release</name>
+        <label>Does the user story has Planned Release</label>
+        <locationX>182</locationX>
+        <locationY>636</locationY>
+        <defaultConnector>
+            <targetReference>Create_Case_Comment0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Planned Release is not Populated</defaultConnectorLabel>
+        <rules>
+            <name>Planned_Release_is_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Story__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.Planned_Release__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Case_Comment</targetReference>
+            </connector>
+            <label>Planned Release is Populated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_known_issue_populated</name>
+        <label>Is known issue populated</label>
+        <locationX>380</locationX>
+        <locationY>516</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Send_case_comment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Story__r.Known_Issue__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Does_the_user_story_has_Planned_Release</targetReference>
+            </connector>
+            <label>Send case comment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Last_escalation_reminder_meet_frequency</name>
+        <label>Last escalation reminder meet Frequency</label>
+        <locationX>462</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Frequency_passed_since_last_escalation_reminder</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LastEscalationreminder</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>EscalationFrequency</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_User_Story_status</targetReference>
+            </connector>
+            <label>Frequency passed since last escalation reminder</label>
+        </rules>
+    </decisions>
+    <description>Created for US-0023393</description>
+    <formulas>
+        <name>EscalationFrequency</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Account.Escalation_Reminder_Frequency__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>LastEscalationreminder</name>
+        <dataType>Number</dataType>
+        <expression>TODAY() - {!$Record.Escalation_Date__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>PlannedReleaseDate</name>
+        <dataType>String</dataType>
+        <expression>CASE(MONTH({!$Record.User_Story__r.Planned_Release__c}),
+1, &quot;January&quot;,
+2, &quot;February&quot;,
+3, &quot;March&quot;,
+4, &quot;April&quot;,
+5, &quot;May&quot;,
+6, &quot;June&quot;,
+7, &quot;July&quot;,
+8, &quot;August&quot;,
+9, &quot;September&quot;,
+10, &quot;October&quot;,
+11, &quot;November&quot;,
+12, &quot;December&quot;,
+&quot;None&quot;)
+&amp; &quot; &quot;
+&amp; TEXT(DAY({!$Record.User_Story__r.Planned_Release__c}))
+&amp; &quot;, &quot;
+&amp; TEXT(YEAR({!$Record.User_Story__r.Planned_Release__c}))</expression>
+    </formulas>
+    <interviewLabel>Send Escalation Reminder {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Escalation Reminder</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Case_Comment</name>
+        <label>Create Case Comment</label>
+        <locationX>50</locationX>
+        <locationY>756</locationY>
+        <assignRecordIdToReference>casecomment</assignRecordIdToReference>
+        <connector>
+            <targetReference>Update_Escalation_Date</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CommentBody</field>
+            <value>
+                <elementReference>EscalationReminderWithRelease</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPublished</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseComment</object>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Case_Comment0</name>
+        <label>Create Case Comment</label>
+        <locationX>314</locationX>
+        <locationY>756</locationY>
+        <connector>
+            <targetReference>Update_Escalation_Date</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CommentBody</field>
+            <value>
+                <elementReference>EscalationReminder</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPublished</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseComment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Update_Escalation_Date</name>
+        <label>Update Escalation Date</label>
+        <locationX>182</locationX>
+        <locationY>972</locationY>
+        <inputAssignments>
+            <field>Escalation_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>336</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Last_escalation_reminder_meet_frequency</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Escalated</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012b00000005OsCAAU</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2021-08-20</startDate>
+            <startTime>00:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EscalationReminder</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Contact.FirstName},
+This is a follow up email on case {!$Record.CaseNumber}. Your case is escalated to our development team for further review.
+We will be in touch as soon as we have additional information to share- our next update will come in {!$Record.Account.Escalation_Reminder_Frequency__c} days. If you have additional questions or comments in the meantime, you can reply to this email or respond on the case through the Copado Community.
+Thank you.
+Copado Support
+
+{!$Flow.CurrentDate}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EscalationReminderWithRelease</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Contact.FirstName},
+This is a follow up email on case {!$Record.CaseNumber}. The development team is working on the issue now- based on their initial review, they have provided an ETA of {!PlannedReleaseDate} for the completion of their investigation.
+We will be in touch as soon as we have additional information to share- our next update will come in {!$Record.Account.Escalation_Reminder_Frequency__c} days. If you have additional questions or comments in the meantime, you can reply to this email or respond on the case through the Copado Community. 
+Thank you.
+Copado Support
+
+
+{!$Flow.CurrentDate}</text>
+    </textTemplates>
+    <variables>
+        <name>casecomment</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

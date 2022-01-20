@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>ChangeOwnerOne</excludeButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
     <excludeButtons>Clone</excludeButtons>
-    <excludeButtons>PrintableView</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
@@ -21,18 +19,22 @@
                 <field>copado__Severity__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>copado__Action__c</field>
+                <behavior>Edit</behavior>
+                <field>copado__Risk_Details__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OwnerId</field>
+                <field>copado__Active__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>copado__Action__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>copado__Active__c</field>
+                <field>copado__Error_Message__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -44,12 +46,8 @@
         <label>New Section</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>copado__Risk_Details__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>copado__Error_Message__c</field>
+                <behavior>Readonly</behavior>
+                <field>copado__Is_Valid__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -58,14 +56,15 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Criteria</label>
+        <label>Validation</label>
         <layoutColumns>
             <layoutItems>
-                <height>720</height>
-                <page>copado__AddCCHRuleCriteria</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>true</showScrollbars>
-                <width>100%</width>
+                <behavior>Readonly</behavior>
+                <field>copado__Last_Validation_Date_time__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copado__Last_Validation_Status_Message__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -99,32 +98,9 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <platformActionList>
-        <actionListContext>Record</actionListContext>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Manage_Criteria</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-    </platformActionList>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>copado__Criteria__c</fields>
-        <fields>copado__Order__c</fields>
-        <relatedList>copado__Compliance_Rule_Criteria__c.copado__Compliance_Rule__c</relatedList>
-        <sortField>copado__Order__c</sortField>
-        <sortOrder>Asc</sortOrder>
+        <relatedList>copado__Compliance_Rule_Group_Item__c.copado__Compliance_Rule__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>New</excludeButtons>
@@ -145,7 +121,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0Y000004yi89</masterLabel>
+        <masterLabel>00hb000000XQmPA</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

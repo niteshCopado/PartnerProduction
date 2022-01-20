@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>nnatha@copado.com.uat</sharedTo>
-        <sharedToType>User</sharedToType>
+        <accessLevel>View</accessLevel>
+        <sharedTo>CEO</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>CSO</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>CTO</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SVP_Growth</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Global_VP_Of_Sales</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>CTO</sharedTo>
+        <sharedToType>RoleAndSubordinatesInternal</sharedToType>
     </folderShares>
     <name>Copado Permissioner</name>
 </ReportFolder>

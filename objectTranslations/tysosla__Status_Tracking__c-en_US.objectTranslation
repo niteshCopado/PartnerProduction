@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Hours --></label>
+        <name>tysosla__Business_Hours_in_Stage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Related Case. --></help>
+        <label><!-- Case --></label>
+        <name>tysosla__Case__c</name>
+        <relationshipLabel><!-- Status Tracking --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Elapsed Hours --></label>
+        <name>tysosla__Elapsed_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enter Time --></label>
+        <name>tysosla__Enter_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit Time --></label>
+        <name>tysosla__Exit_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>tysosla__Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Name --></label>
+        <name>tysosla__Status_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

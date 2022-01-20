@@ -1,0 +1,29 @@
+.project-navigation_icon {
+    width: 70px;
+    height: 70px;
+}
+.project-navigation_tab:hover {
+    color: #1583BE;
+}
+.project-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+.project-no-records_header {
+    font-size: 24px;
+}
+.project-header_icon {
+    width:20px;
+    height:20px;
+}
+.project-navigation-tab_container {
+    text-align: center;
+}
+.project-navigation-text_container {
+    font-weight: bold;
+    font-size:16px
+}
+.header-horizontal_border {
+    margin-right: -25px;
+    margin-left: -25px;
+}

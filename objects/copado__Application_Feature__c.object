@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Feature_Record_Page_Dynamic_Forms</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -141,13 +144,23 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Feature_Highlight_Panel</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Feature_Highlight_Panel</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Application__c</fields>
+        <fields>copado__Epic__c</fields>
+        <fields>copado__Product_Owner__c</fields>
+        <fields>copado__Priority__c</fields>
+        <label>Feature Highlight Panel</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Copado&apos;s Feature object enables you to manage Features related to User Stories &amp; Applications. Features are made up of multiple User Stories.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
@@ -155,6 +168,58 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Business_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Features</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Estimated Release</label>
+        <referenceTo>copado__Release__c</referenceTo>
+        <relationshipLabel>Features</relationshipLabel>
+        <relationshipName>Features</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rejected_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Rejected Reason</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Time_Spent_Hours__c</fullName>
+        <description>Sum of all related User Stories &quot;Time Spent (hours)&quot;.</description>
+        <externalId>false</externalId>
+        <label>Time Spent (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>copado__Application__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -165,6 +230,7 @@
         <relationshipLabel>Features</relationshipLabel>
         <relationshipName>ApplicationFeatures</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -178,6 +244,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>FeatureArchitects</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -190,6 +257,7 @@
         <precision>10</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -201,6 +269,7 @@
         <externalId>false</externalId>
         <label>Description</label>
         <length>131072</length>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Html</type>
@@ -216,7 +285,8 @@
         <relationshipLabel>Features</relationshipLabel>
         <relationshipName>ApplicaitonFeatures</relationshipName>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -228,6 +298,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
@@ -238,7 +309,8 @@
         <externalId>false</externalId>
         <label>Priority</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -281,6 +353,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>FeatureOwners</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -292,7 +365,8 @@
         <inlineHelpText>Status of Feature</inlineHelpText>
         <label>Status</label>
         <required>false</required>
-        <trackHistory>false</trackHistory>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -348,6 +422,7 @@
         <inlineHelpText>Technical Assumptions or Design Considerations for Feature</inlineHelpText>
         <label>Technical Assumptions</label>
         <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Html</type>
@@ -361,6 +436,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -373,6 +449,7 @@
         <inlineHelpText>Business Value of Feature</inlineHelpText>
         <label>Value Type</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -389,6 +466,26 @@
                     <default>false</default>
                     <label>New Revenue</label>
                 </value>
+                <value>
+                    <fullName>User Adoption</fullName>
+                    <default>false</default>
+                    <label>User Adoption</label>
+                </value>
+                <value>
+                    <fullName>User Experience</fullName>
+                    <default>false</default>
+                    <label>User Experience</label>
+                </value>
+                <value>
+                    <fullName>Performance</fullName>
+                    <default>false</default>
+                    <label>Performance</label>
+                </value>
+                <value>
+                    <fullName>Stability</fullName>
+                    <default>false</default>
+                    <label>Stability</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -400,6 +497,7 @@
     </listViews>
     <nameField>
         <label>Feature Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
@@ -407,4 +505,28 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Send_to_Slack</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Slack</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/slackv2__sendToSlack?recordId={!CASESAFEID (copado__Application_Feature__c.Id)}&amp;objectApiName=copado__Application_Feature__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Slack_Alerts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Slack Alerts</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/slackv2__slackAlerts?recordId={!CASESAFEID (copado__Application_Feature__c.Id)}&amp;objectApiName=copado__Application_Feature__c</url>
+    </webLinks>
 </CustomObject>

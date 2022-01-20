@@ -23,12 +23,12 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>GitCommitMain</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>GitCommitMain</label>
                 </value>
                 <value>
                     <fullName>GitCommitChanges</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>GitCommitChanges</label>
                 </value>
             </valueSetDefinition>

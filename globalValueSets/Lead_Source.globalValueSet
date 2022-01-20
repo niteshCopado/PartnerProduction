@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>3rd Party Website</fullName>
+        <default>false</default>
+        <label>3rd Party Website</label>
+    </customValue>
+    <customValue>
+        <fullName>AE Outbound</fullName>
+        <default>false</default>
+        <label>AE Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Alliances Outbound</fullName>
+        <default>false</default>
+        <label>Alliances Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>AppExchange</fullName>
+        <default>false</default>
+        <label>AppExchange</label>
+    </customValue>
+    <customValue>
+        <fullName>BDR Outbound</fullName>
+        <default>false</default>
+        <label>BDR Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Click Deploy</fullName>
+        <default>false</default>
+        <label>Click Deploy</label>
+    </customValue>
+    <customValue>
+        <fullName>CSM Outbound</fullName>
+        <default>false</default>
+        <label>CSM Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Drift</fullName>
+        <default>false</default>
+        <label>Drift</label>
+    </customValue>
+    <customValue>
+        <fullName>Live Event</fullName>
+        <default>false</default>
+        <label>Live Event</label>
+    </customValue>
+    <customValue>
+        <fullName>SDR Outbound</fullName>
+        <default>false</default>
+        <label>SDR Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Virtual Event</fullName>
+        <default>false</default>
+        <label>Virtual Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </customValue>
+    <masterLabel>Lead Source</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

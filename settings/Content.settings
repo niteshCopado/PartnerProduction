@@ -8,15 +8,15 @@
     <enableContentDistPwOptionsBit1>true</enableContentDistPwOptionsBit1>
     <enableContentDistPwOptionsBit2>true</enableContentDistPwOptionsBit2>
     <enableContentDistribution>true</enableContentDistribution>
-    <enableContentSupportMultiLanguage>false</enableContentSupportMultiLanguage>
+    <enableContentSupportMultiLanguage>true</enableContentSupportMultiLanguage>
     <enableContentWorkspaceAccess>true</enableContentWorkspaceAccess>
     <enableDeleteFileInContentPacks>false</enableDeleteFileInContentPacks>
     <enableFileShareSetByRecord>false</enableFileShareSetByRecord>
     <enableFilesUsrShareNetRestricted>false</enableFilesUsrShareNetRestricted>
     <enableJPGPreviews>false</enableJPGPreviews>
-    <enableLibraryManagedFiles>false</enableLibraryManagedFiles>
+    <enableLibraryManagedFiles>true</enableLibraryManagedFiles>
     <enableSiteGuestUserToUploadFiles>false</enableSiteGuestUserToUploadFiles>
-    <enableUploadFilesOnAttachments>false</enableUploadFilesOnAttachments>
+    <enableUploadFilesOnAttachments>true</enableUploadFilesOnAttachments>
     <setValidContentTypeForAtchDocDownload>false</setValidContentTypeForAtchDocDownload>
     <skipContentAssetTriggers>false</skipContentAssetTriggers>
     <skipContentAssetTriggersOnDeploy>true</skipContentAssetTriggersOnDeploy>

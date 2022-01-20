@@ -244,16 +244,15 @@
 									<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Manual Task'}">
 										<c:ManualTaskComponent isEdit="false" />
 										<script type="text/javascript">
-
 											datasetup.setPreviousData = function (data) {
-
 												if (data) {
-													console.info('Setting previosly selected data for Manual Task');
 													data = JSON.parse(data);
 													$copado('[id=jsTaskOwner_lkid_View]').val(data ? data.Task_Owner : null);
 													$copado('[Id$=jsTaskDescView]').text(data.Task_Description);
 													$copado('[Id$=jsPerformInSourceView]').prop('checked', data.Perform_in_Source_Org);
 													$copado('[Id$=jsPerformInDestinationsView]').prop('checked', data.Perform_in_Destination_Orgs);
+                                                    $copado('[Id$=jsDisableTaskForBackPromotionsView]').prop('checked', data.Disable_Task_for_Back_Promotions);
+                                                    $copado('[Id$="jsApplyToView"]').val(data ? data.Apply_to : 'None');
 													$copado('[Id$=jsNotifyTaskOwner_View]').val(data ? data.Notify_Task_Owner : 'None');
 													sforce.connection.query('SELECT id, FirstName, LastName FROM User WHERE Id = \'' + data.Task_Owner + '\' LIMIT 1', {
 														onSuccess: function (result) {
@@ -313,10 +312,59 @@
 									<apex:outputPanel layout="none" rendered="{!copado__Deployment_Task__c.copado__Type__c == 'Data Template'}">
 										<c:DataTemplateTaskComponent isEdit="false" />
 										<script type="text/javascript">
+											getDataSetDetailsById = function (dataSetId) {
+												let dataSets = sforce.connection.query('SELECT Id, Name, '
+													+ _config.ns + 'Data_Template__c, '
+													+ _config.ns + 'Data_Template__r.Name, '
+													+ _config.ns + 'Description__c FROM ' + _config.ns + 'Data_Set__c WHERE Id = \'' + dataSetId + '\'');
+												let dataSetRecords = dataSets.getArray('records');
+												if (dataSetRecords.length > 0) {
+													let record = dataSetRecords[0];
+													let recordName = record.Name;
+													let recordId = record.Id;
+													let dataSetDataTemplateId = record[_config.ns + 'Data_Template__c'];
+													let dataSetDataTemplateName = record[_config.ns + 'Data_Template__r'].Name;
+													let description = record[_config.ns + 'Description__c'] != null ? record[_config.ns + 'Description__c'] : '-';
+													$copado('[id$=openDataSet]').show();
+													$copado('[id$=openDataSetTemplate]').show();
+													$copado('[id$=headerDataSet]').text(recordName);
+													$copado('[id$=headerDataSet]').data('recordid', recordId);
+													$copado('[id$=dataSetTemplate]').text(dataSetDataTemplateName);
+													$copado('[id$=dataSetTemplate]').data('recordid', dataSetDataTemplateId);
+													$copado('[id$=description]').text(description);
+													let contentDocuments = sforce.connection.query('SELECT ContentDocumentId '
+														+ 'FROM ContentDocumentLink '
+														+ 'WHERE LinkedEntityId = \'' + dataSetId + '\'');
+													let contentDocumentRecords = contentDocuments.getArray('records');
+													let contentDocumentIds = contentDocumentRecords.map(record => record.ContentDocumentId);
+													let contentDocumentIdsQueryParameter = '\'' + contentDocumentIds.toString().replace(/,/g, "','") + '\'';
+													let contentVersions = sforce.connection.query('SELECT Id, ContentSize '
+														+ 'FROM ContentVersion '
+														+ 'WHERE ContentDocumentId IN (' + contentDocumentIdsQueryParameter + ')');
+													let files = contentVersions.getArray('records');
+													$copado('[id$=numberOfFiles]').text(files.length);
+													let sizeInBytes = 0;
+													files.forEach(file => {
+														sizeInBytes += parseInt(file.ContentSize);
+													});
+													let sizeInKB = sizeInBytes > 0 ? (sizeInBytes / (1024)).toFixed(2) : 0;
+													$copado('[id$=totalFileSize]').text(sizeInKB + ' KB');
+													return record;
+												}
+												return null;
+											}
+
 											datasetup.setPreviousData = function (data) {
 												console.log('**f**data : ', data);
 												if (data) {
 													data = JSON.parse(data);
+													if (data.source && data.source.id) {
+														$copado('[id$=js-stepBlock-DataTemplateView]').hide();
+														$copado('[id$=js-stepBlock-DataSetView]').show();
+														getDataSetDetailsById(data.source.id);
+													} else {
+														$copado('[id$=js-stepBlock-DataTemplateView]').show();
+														$copado('[id$=js-stepBlock-DataSetView]').hide();
 													var deferredArray = [];
 													var deferred = new $copado.Deferred();
 													deferredArray.push(deferred);
@@ -347,29 +395,30 @@
 															}
 														});
 													});
+													}
 
 													$copado('[id$=relationship-diagram-link]').on('click', function (event) {
 														event.preventDefault();
-														var templateId = data.dataTemplateId;
+														const templateId = data.dataTemplateId;
 
 														// for dev orgs it need to have c: but for namespace context in managed package it should be copado
-														var namespace = _config.ns == '' ? 'c' : 'copado';
+														const namespace = _config.ns == '' ? 'c' : 'copado';
 
-														var compDefinition = {
+														const compDefinition = {
 															componentDef: `${namespace}:addRelationalDiagramContainer`,
 															attributes: {
 																recordId: templateId
 															}
 														};
 														// Base64 encode the compDefinition JS object
-														var encodedCompDef = btoa(JSON.stringify(compDefinition));
+														const encodedCompDef = btoa(JSON.stringify(compDefinition));
 														window.open(`/one/one.app#${encodedCompDef}`, '_blank');
 													});
 
 													$copado('[id$=open-template-link]').on('click', function (event) {
 														event.preventDefault();
-														var _namespace = (_config.ns != '') ? _config.ns + '__' : '';
-														var templateId = data.dataTemplateId;
+														const _namespace = (_config.ns != '') ? _config.ns + '__' : '';
+														const templateId = data.dataTemplateId;
 														if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)) {
 															return window.open('/lightning/r/' + templateId + '/view', '_blank');
 														} else {
@@ -378,8 +427,25 @@
 													});
 
 													$copado('[id$=open-override-filter-link]').on('click', function (event) {
-														var _namespace = (_config.ns != '') ? _config.ns + '__' : '';
+														const _namespace = (_config.ns != '') ? _config.ns + '__' : '';
 														return window.open('/one/one.app#/alohaRedirect/apex/' + _namespace + 'OverrideTemplateFilters?taskId=' + '{!Deployment_Task__c.Id}', '_parent');
+													});
+
+													$copado('[id$=open-dataset-link]').on('click', function (event) {
+														event.preventDefault();
+														const dataSetId = data.source.id;
+														return window.open('/lightning/r/' + dataSetId + '/view', '_blank');
+													});
+
+													$copado('[id$=open-dataset-template-link]').on('click', function (event) {
+														event.preventDefault();
+														const _namespace = (_config.ns != '') ? _config.ns + '__' : '';
+														const dataTemplateId = $copado('[id$=dataSetTemplate]').data('recordid');
+														if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)) {
+															return window.open('/lightning/r/' + dataTemplateId + '/view', '_blank');
+														} else {
+															return window.open('/apex/' + _namespace + 'DataTemplateSetup?id=' + dataTemplateId, '_blank');
+														}
 													});
 												}
 											}

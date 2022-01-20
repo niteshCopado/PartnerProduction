@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>IT_Support_Path</developerName>
+    <isActive>true</isActive>
+    <masterLabel>IT Support Path</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>SC_IT_Support</recordTypeName>
+    <sobjectType>Case</sobjectType>
+    <targetField>Status</targetField>
+    <targetFieldChangeToValues>Closed - Resolved,Closed - Bug fix submitted,Closed - Duplicate,Closed - Feature Request,Closed - No response from customer,Closed - Out of scope,Closed - Routed to internal helpdesk,Closed - Spam</targetFieldChangeToValues>
+</AnimationRule>

@@ -52,7 +52,7 @@
         <relationshipLabel><!-- Automations --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Automations and Quality Gates will be executed when the metadata deployed or committed matches the one specified here. --></help>
+        <help><!-- Automations and Quality Gates will be executed when the metadata deployed or committed matches the one specified here --></help>
         <label><!-- Metadata Group --></label>
         <name>copado__Metadata_Group__c</name>
         <relationshipLabel><!-- Automations --></relationshipLabel>
@@ -78,6 +78,11 @@
         <help><!-- If &apos;Apex Test with Validation&apos; is selected as the type, what test level should be performed. &apos;Run Specified Tests&apos; will run whatever tests are included on the user stories being deployed --></help>
         <label><!-- Apex Test Level --></label>
         <name>copado__Test_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Automations --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- What type of verification will be performed for this quality gate --></help>

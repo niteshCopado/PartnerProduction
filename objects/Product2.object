@@ -128,6 +128,7 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <externalSharingModel>ReadWrite</externalSharingModel>
     <fieldSets>
         <fullName>SBQQ__ConfiguratorFilter</fullName>
         <availableFields>
@@ -299,12 +300,70 @@
         <label>Search Results</label>
     </fieldSets>
     <fields>
+        <fullName>ACV_ARR_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field to identify ACV/ARR product &amp; Aggregate to ACV Field on Quote.</inlineHelpText>
+        <label>ACV/ARR Product</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CanUseRevenueSchedule</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Credits_to_be_assigned__c</fullName>
+        <externalId>false</externalId>
+        <label>Credits to be assigned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>DisplayUrl</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Engagement_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies the Engagement Type this Product relates to.</inlineHelpText>
+        <label>Engagement Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Strategic Services</fullName>
+                    <default>false</default>
+                    <label>Strategic Services</label>
+                </value>
+                <value>
+                    <fullName>Professional Services</fullName>
+                    <default>false</default>
+                    <label>Professional Services</label>
+                </value>
+                <value>
+                    <fullName>Program Architect</fullName>
+                    <default>false</default>
+                    <label>Program Architect</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>ExternalDataSourceId</fullName>
@@ -316,9 +375,75 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>Family</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Hidden_Product_for_new_quote__c</fullName>
+        <description>This field is used in search filter to hide the Products from New Quote. It is not added on layout.</description>
+        <externalId>false</externalId>
+        <formula>IF( SBQQ__Hidden__c == true, &apos;Quote&apos;, &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Product for new quote</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Image_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Image URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Image__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(Image_URL__c) 
+, IMAGE(&apos;https://copado--copadodev--c.documentforce.com/servlet/servlet.ImageServer?id=0151j000000810m&amp;oid=00D1j0000008axc&amp;lastMod=1567781752000&apos;, Name , 55, 55) 
+, IMAGE(Image_URL__c, Name, VALUE(Image_height__c),VALUE(Image_width__c)) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Image</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Image_height__c</fullName>
+        <externalId>false</externalId>
+        <label>Image height</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Image_width__c</fullName>
+        <externalId>false</externalId>
+        <label>Image width</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>IsActive</fullName>
@@ -329,13 +454,116 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>Non_Standard_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field to identify Non Standard product &amp; Aggregate to Non Standard ACV Field on Quote.</inlineHelpText>
+        <label>Non Standard Product</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NumberOfRevenueInstallments</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Partner_Product_Catalog__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Partner Product Catalog</label>
+        <referenceTo>CHANNEL_ORDERS__Partner_Product_Catalog__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ProductCode</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Product_Grouping__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Grouping</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certification</fullName>
+                    <default>false</default>
+                    <label>Certification</label>
+                </value>
+                <value>
+                    <fullName>CICD</fullName>
+                    <default>false</default>
+                    <label>CICD</label>
+                </value>
+                <value>
+                    <fullName>Testing</fullName>
+                    <default>false</default>
+                    <label>Testing</label>
+                </value>
+                <value>
+                    <fullName>Discontinued</fullName>
+                    <default>false</default>
+                    <label>Discontinued</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+                <value>
+                    <fullName>Essentials</fullName>
+                    <default>false</default>
+                    <label>Essentials</label>
+                </value>
+                <value>
+                    <fullName>Services</fullName>
+                    <default>false</default>
+                    <label>Services</label>
+                </value>
+                <value>
+                    <fullName>Success</fullName>
+                    <default>false</default>
+                    <label>Success</label>
+                </value>
+                <value>
+                    <fullName>ARR Services</fullName>
+                    <default>false</default>
+                    <label>ARR Services</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>QuantityUnitOfMeasure</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RevenueInstallmentPeriod</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RevenueScheduleType</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AllocatePotOnOrders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When ordered, this indicates whether the product should calculate its unit and total price based on the targets.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to base its calculations within an order on the targets.</inlineHelpText>
+        <label>Allocate POT on Orders</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>SBQQ__AssetAmendmentBehavior__c</fullName>
@@ -1296,14 +1524,35 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Hardware</fullName>
+                    <fullName>Licenses</fullName>
                     <default>false</default>
-                    <label>Hardware</label>
+                    <label>Licenses</label>
                 </value>
                 <value>
-                    <fullName>Software</fullName>
+                    <fullName>License - PBT</fullName>
                     <default>false</default>
-                    <label>Software</label>
+                    <label>License - PBT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionConversion__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates how this Product is converted to Subscriptions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates how this Product is converted to Subscriptions</inlineHelpText>
+        <label>Subscription Conversion</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>One per subscribed asset</fullName>
+                    <default>false</default>
+                    <label>One per subscribed asset</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1398,16 +1647,6 @@
                     <fullName>One-time</fullName>
                     <default>false</default>
                     <label>One-time</label>
-                </value>
-                <value>
-                    <fullName>Renewable/Evergreen</fullName>
-                    <default>false</default>
-                    <label>Renewable/Evergreen</label>
-                </value>
-                <value>
-                    <fullName>Evergreen</fullName>
-                    <default>false</default>
-                    <label>Evergreen</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1551,25 +1790,329 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Select_Profile__c</fullName>
+        <externalId>false</externalId>
+        <label>Select Profile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales User</fullName>
+                    <default>false</default>
+                    <label>Sales User</label>
+                </value>
+                <value>
+                    <fullName>ABM Sales User</fullName>
+                    <default>false</default>
+                    <label>ABM Sales User</label>
+                </value>
+                <value>
+                    <fullName>Operations End user</fullName>
+                    <default>false</default>
+                    <label>Operations End user</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
         <fullName>StockKeepingUnit</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>blng__BillingRule__c</fullName>
+        <fullName>Used_on_Website__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Used on Website</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>amc__Milestone_Template__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Links to the Milestone that will be used as a Template when auto-generating a new Project from the Opportunity</description>
         <externalId>false</externalId>
-        <label>Billing Rule</label>
+        <inlineHelpText>Links to the Milestone that will be used as a Template when auto-generating a new Project from the Opportunity</inlineHelpText>
+        <label>Milestone  Template</label>
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>blng__BillingRule__c.blng__Active__c</field>
+                <field>amc__Milestone__c.amc__Project__r.amc__Template__c</field>
                 <operation>equals</operation>
                 <value>True</value>
             </filterItems>
             <isOptional>true</isOptional>
         </lookupFilter>
-        <referenceTo>blng__BillingRule__c</referenceTo>
+        <referenceTo>amc__Milestone__c</referenceTo>
+        <relationshipLabel>Products (Template)</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>amc__Project_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Identifies the unit of measure for calculating the total Hours required on the Actions required for this Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies the unit of measure for calculating the total Hours required on the Actions required for this Product</inlineHelpText>
+        <label>Project Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+                <value>
+                    <fullName>Hour</fullName>
+                    <default>false</default>
+                    <label>Hour</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Addon_Applicability__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Addon Applicability</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Addon_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Addon Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Bill_Every_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Bill Every Unit</description>
+        <externalId>false</externalId>
+        <label>Bill Every Unit</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Bill_Every__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CB Bill Every</description>
+        <externalId>false</externalId>
+        <label>Bill Every</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Billing_Cycles__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Billing Cycles</description>
+        <externalId>false</externalId>
+        <label>Billing Cycles</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__ChargeBee_Modified_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ChargeBee_Modified_Time</description>
+        <externalId>false</externalId>
+        <label>ChargeBee Modified Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Free_Quantity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Free Quantity</description>
+        <externalId>false</externalId>
+        <label>Free Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Invoice_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Invoice name in Plans and Addons</description>
+        <externalId>false</externalId>
+        <label>Invoice Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CB Price</description>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Product_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Product type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product Type as classified in Chargebee</inlineHelpText>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ADDON</fullName>
+                    <default>false</default>
+                    <label>ADDON</label>
+                </value>
+                <value>
+                    <fullName>PLAN</fullName>
+                    <default>false</default>
+                    <label>PLAN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Recurring_charge_model__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CB Recurring charge model</description>
+        <externalId>false</externalId>
+        <label>Recurring charge model</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Set_Up_Fee__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Set Up Fee</description>
+        <externalId>false</externalId>
+        <label>Set Up Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CB Status</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Trial_Period_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Trial Period Unit</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>chargebeeapps__Trial_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CB Trial Period</description>
+        <externalId>false</externalId>
+        <label>Trial Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kuga_sub__Renewable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Renewable Services are Auto-Added to Renewal Opportuntiy when an Order is Approved or Released, as per Kugamon Settings. 
+
+Renewable Products are only Auto-Added to Renewal Opportuntiy if the Order also contains a Renewable Service.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Renewable Services are Auto-Added to Renewal Opportuntiy when an Order is Approved or Released, as per Kugamon Settings. 
+
+Renewable Products are only Auto-Added to Renewal Opportuntiy if the Order also contains a Renewable Service.</inlineHelpText>
+        <label>Renewable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>kuga_sub__RenewalProduct__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Replacement Product/Service that is used for Renewal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Replacement Product/Service that is used for Renewal.</inlineHelpText>
+        <label>Renewal Product</label>
+        <referenceTo>Product2</referenceTo>
         <relationshipLabel>Products</relationshipLabel>
         <relationshipName>Products</relationshipName>
         <required>false</required>
@@ -1577,44 +2120,110 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>blng__RevenueRecognitionRule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>kuga_sub__Track__c</fullName>
+        <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Applies to Services only. Subscriptions are Auto-Created for Services when an Order is Approved or Released, as per Kugamon Settings.</description>
         <externalId>false</externalId>
-        <label>Revenue Recognition Rule</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>blng__RevenueRecognitionRule__c.blng__Active__c</field>
-                <operation>equals</operation>
-                <value>True</value>
-            </filterItems>
-            <isOptional>true</isOptional>
-        </lookupFilter>
-        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
-        <relationshipLabel>Products</relationshipLabel>
-        <relationshipName>RevenueRecognitionRuleProducts</relationshipName>
-        <required>false</required>
+        <inlineHelpText>Applies to Services only. Subscriptions are Auto-Created for Services when an Order is Approved or Released, as per Kugamon Settings.</inlineHelpText>
+        <label>Create Subscription</label>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
+        <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>blng__TaxRule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>kuga_sub__UpliftRenewalPrice__c</fullName>
+        <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
+        <description>Increases the Price to the Renewable Product/Service when Auto-Added to the Renewal Opportunity. Price Increase is determined by the Uplift Renewal Price on the Additional Account Info object for the related Account.</description>
         <externalId>false</externalId>
-        <label>Tax Rule</label>
-        <referenceTo>blng__TaxRule__c</referenceTo>
-        <relationshipLabel>Products</relationshipLabel>
-        <relationshipName>TaxRulesProducts</relationshipName>
-        <required>false</required>
+        <inlineHelpText>Increases the Price to the Renewable Product/Service when Auto-Added to the Renewal Opportunity. Price Increase is determined by the Uplift Renewal Price on the Additional Account Info object for the related Account.</inlineHelpText>
+        <label>Uplift Renewal Price</label>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
+        <type>Checkbox</type>
     </fields>
     <listViews>
-        <fullName>AllProducts</fullName>
+        <fullName>Active_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>SBQQ__SortOrder__c</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>Product_Grouping__c</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>SBQQ__SubscriptionType__c</columns>
+        <columns>SBQQ__DefaultPricingTable__c</columns>
+        <columns>SBQQ__SubscriptionPricing__c</columns>
+        <columns>SBQQ__SubscriptionPercent__c</columns>
+        <columns>SBQQ__IncludeInMaintenance__c</columns>
+        <columns>SBQQ__ExcludeFromMaintenance__c</columns>
+        <columns>ACV_ARR_Product__c</columns>
+        <columns>Non_Standard_Product__c</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Products</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>SBQQ__Hidden__c</columns>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>SBQQ__SortOrder__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>PRODUCT2.EXTERNAL_ID</columns>
+        <columns>Select_Profile__c</columns>
+        <columns>ACV_ARR_Product__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
         <label>All Products</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Component_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>SBQQ__Component__c</columns>
+        <columns>SBQQ__Hidden__c</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SBQQ__Component__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Component Products</label>
+    </listViews>
+    <listViews>
+        <fullName>Copado_Subscriptions</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>SBQQ__SortOrder__c</columns>
+        <columns>SBQQ__DefaultPricingTable__c</columns>
+        <columns>SBQQ__IncludeInMaintenance__c</columns>
+        <columns>SBQQ__PricingMethod__c</columns>
+        <columns>SBQQ__SubscriptionCategory__c</columns>
+        <columns>SBQQ__SubscriptionPercent__c</columns>
+        <columns>SBQQ__SubscriptionPricing__c</columns>
+        <columns>SBQQ__SubscriptionTerm__c</columns>
+        <columns>SBQQ__NonDiscountable__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Copado Subscriptions</label>
+        <language>en_US</language>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
@@ -1635,6 +2244,20 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
+        <fullName>Product_Identification</fullName>
+        <active>true</active>
+        <description>Product  identification for ACV Calculation</description>
+        <errorConditionFormula>NOT(ISPICKVAL(SBQQ__SubscriptionType__c, &quot;Renewable&quot;))  &amp;&amp;
+( ACV_ARR_Product__c = true ||  Non_Standard_Product__c = true)</errorConditionFormula>
+        <errorMessage>This Product can&apos;t be an ACV/ARR Product or Non Standard Product since the subscription type is not &quot;Renewable&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Cannot_Allocate_POT_With_Constraint</fullName>
+        <active>true</active>
+        <errorConditionFormula>SBQQ__AllocatePotOnOrders__c &amp;&amp; NOT(ISPICKVAL(SBQQ__DynamicPricingConstraint__c,&apos;&apos;))</errorConditionFormula>
+        <errorMessage>You cannot have Allocate POT on Orders enabled if Percent of Total Constraint is specified.</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>SBQQ__Include_or_Exclude_Maintenance</fullName>
         <active>true</active>
         <description>Validates that either Includes In Maintenance or Excludes From Maintenance checkbox is checked but not both.</description>
@@ -1648,6 +2271,25 @@
         <errorConditionFormula>AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Recurring&apos;), ISPICKVAL(SBQQ__BillingType__c, &apos;&apos;))</errorConditionFormula>
         <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
         <errorMessage>When Charge Type is Recurring, a Billing Type must be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Subscription_Conversion_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(SBQQ__SubscriptionConversion__c, &apos;One per subscribed asset&apos;) &amp;&amp; NOT(ISPICKVAL(SBQQ__SubscriptionPricing__c, &apos;Percent Of Total&apos;))</errorConditionFormula>
+        <errorDisplayField>SBQQ__SubscriptionConversion__c</errorDisplayField>
+        <errorMessage>You can only select One per Subscribed Asset for Subscription Conversion for Percent of Total Subscriptions</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Subscription_Pricing_Must_Be_POT</fullName>
+        <active>true</active>
+        <description>Subscription Pricing must be &apos;Percent of Total&apos; to set this field to true.</description>
+        <errorConditionFormula>IF(
+            SBQQ__AllocatePotOnOrders__c=TRUE,
+            NOT(ISPICKVAL(SBQQ__SubscriptionPricing__c, &quot;Percent Of Total&quot;)),
+            FALSE
+            )</errorConditionFormula>
+        <errorDisplayField>SBQQ__AllocatePotOnOrders__c</errorDisplayField>
+        <errorMessage>Subscription Pricing must be &apos;Percent of Total&apos; to set this field to true.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>SBQQ__Term_schedule_requires_subscription</fullName>

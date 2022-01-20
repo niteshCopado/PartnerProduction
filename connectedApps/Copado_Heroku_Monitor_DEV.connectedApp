@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>fl@copa.do</contactEmail>
+    <label>Copado Heroku Monitor DEV</label>
+    <logoUrl>https://c.eu2.content.force.com/servlet/servlet.ImageServer?id=015b0000000Hg8u&amp;oid=00D1l0000000dkE&amp;lastMod=1372245086000</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://dev-copado-heroku-monitor.herokuapp.com/oauthCallback
+https://google-copado-worker.backend.copa.do/oauthCallback</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6ft1Y9n7M2VbbiMN1RBte0gfLLKmPttuFyBM7nIOUEI287hn.2JWN9LcZNZuu69uslPYRYG</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

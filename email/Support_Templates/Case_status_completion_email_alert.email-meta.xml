@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Once case status is completed then use this alert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Case status completion email alert</name>
+    <style>none</style>
+    <subject>Your case has been completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -3,7 +3,7 @@ Action: {!Action}
 
 Browser: {!Browser}
 Operating System: {!Operating_System}
-Username: {!Receiving_User.Username}
+Username: {!User.Username}
 
 To ensure your account's security, we must verify your identity. Enter the following code where prompted by {!Community_Name}.
 

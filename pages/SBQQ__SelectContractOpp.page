@@ -26,9 +26,9 @@
 									<thead class="dr-table-thead">
 									<tr class="headerRow">
 										<th class="headerRow">&nbsp;</th>
-										<apex:repeat var="field" value="{!$ObjectType.Contract.FieldSets.SBQQ__ActiveContractLookup}">
+										<apex:repeat var="field" value="{!dataTableFields}">
 											<th class="headerRow">
-												<apex:outputText value="{!$ObjectType.Contract.Fields[field].label}"/>
+												<apex:outputText value="{!field['label']}"/>
 											</th>
 										</apex:repeat>
 									</tr>
@@ -39,9 +39,9 @@
 												<td class="dataCell">
 													<input style="width:20px !important" type="radio" name="contractSelector" value="{!contract.record.Id}" onclick="document.getElementById('{!JSENCODE($Component.selectedContractId)}').value = this.value"/>
 												</td>
-												<apex:repeat var="field" value="{!$ObjectType.Contract.FieldSets.SBQQ__ActiveContractLookup}">
+												<apex:repeat var="field" value="{!dataTableFields}">
 													<td class="dataCell">
-														<apex:outputField value="{!contract.record[field]}" />
+														<apex:outputField value="{!contract.record[field['apiName']]}" />
 													</td>
 												</apex:repeat>
 											</tr>
@@ -56,9 +56,9 @@
 									<thead class="dr-table-thead">
 									<tr class="headerRow">
 										<th class="headerRow">&nbsp;</th>
-										<apex:repeat var="field" value="{!$ObjectType.Contract.FieldSets.SBQQ__ActiveContractLookup}">
+										<apex:repeat var="field" value="{!dataTableFields}">
 											<th class="headerRow">
-												<apex:outputText value="{!$ObjectType.Contract.Fields[field].label}"/>
+												<apex:outputText value="{!field['label']}"/>
 											</th>
 										</apex:repeat>
 									</tr>
@@ -69,9 +69,9 @@
 												<td class="dataCell">
 													<input style="width:20px !important" type="radio" name="contractSelector" value="{!contract.record.Id}" onclick="document.getElementById('{!JSENCODE($Component.selectedContractId)}').value = this.value"/>
 												</td>
-												<apex:repeat var="field" value="{!$ObjectType.Contract.FieldSets.SBQQ__ActiveContractLookup}">
+												<apex:repeat var="field" value="{!dataTableFields}">
 													<td class="dataCell">
-														<apex:outputField value="{!contract.record[field]}" />
+														<apex:outputField value="{!contract.record[field['apiName']]}" />
 													</td>
 												</apex:repeat>
 											</tr>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Hours ID --></label>
+        <name>tysosla__Business_Hours_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Key --></label>
+        <name>tysosla__Custom_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>tysosla__Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution Time (Hours) --></label>
+        <name>tysosla__Resolution_Time_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Expressed in Days. --></help>
+        <label><!-- Resolution Time --></label>
+        <name>tysosla__Resolution_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Time --></label>
+        <name>tysosla__Response_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- field0 --></label>
+        <name>tysosla__field0__c</name>
+    </fields>
+    <fields>
+        <label><!-- field1 --></label>
+        <name>tysosla__field1__c</name>
+    </fields>
+    <fields>
+        <label><!-- field2 --></label>
+        <name>tysosla__field2__c</name>
+    </fields>
+    <fields>
+        <label><!-- field3 --></label>
+        <name>tysosla__field3__c</name>
+    </fields>
+    <fields>
+        <label><!-- field4 --></label>
+        <name>tysosla__field4__c</name>
+    </fields>
+    <fields>
+        <label><!-- field5 --></label>
+        <name>tysosla__field5__c</name>
+    </fields>
+    <fields>
+        <label><!-- field6 --></label>
+        <name>tysosla__field6__c</name>
+    </fields>
+</CustomObjectTranslation>

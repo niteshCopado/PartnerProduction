@@ -167,23 +167,8 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>44.0</fullName>
-                    <default>false</default>
-                    <label>44.0</label>
-                </value>
-                <value>
-                    <fullName>43.0</fullName>
-                    <default>false</default>
-                    <label>43.0</label>
-                </value>
-                <value>
-                    <fullName>42.0</fullName>
-                    <default>false</default>
-                    <label>42.0</label>
-                </value>
-                <value>
                     <fullName>41.0</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>41.0</label>
                 </value>
                 <value>
@@ -290,11 +275,6 @@
                     <fullName>20.0</fullName>
                     <default>false</default>
                     <label>20.0</label>
-                </value>
-                <value>
-                    <fullName>45.0</fullName>
-                    <default>true</default>
-                    <label>45.0</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -415,7 +395,7 @@
         <externalId>false</externalId>
         <label>Source Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
-        <relationshipLabel>Scratch Org Project Templates (Source Org Credential)</relationshipLabel>
+        <relationshipLabel>Scratch Org Project Templates (Source Credential)</relationshipLabel>
         <relationshipName>Scratch_Org_Project_Templates</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>

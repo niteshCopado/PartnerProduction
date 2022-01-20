@@ -18,10 +18,16 @@ global class GlobalAPI {
     global Boolean deleteCopadoLicense(Id userId) {
         return null;
     }
+    global String getCopadoServerUrl() {
+        return null;
+    }
     global copado.GlobalAPI.CopadoLicenses getLicenseInformation() {
         return null;
     }
     global List<copado.SourceMemberResult> getRecentChanges(String orgId) {
+        return null;
+    }
+    global List<copado.SourceMemberResult> getRecentChanges(String orgId, Datetime dateTimeToRetrieveChanges) {
         return null;
     }
     global List<copado.GlobalAPI.UserLicense> listCopadoLicenses() {

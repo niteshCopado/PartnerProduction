@@ -1,0 +1,93 @@
+<template>
+    <div class="slds-text-color_error slds-align_absolute-center slds-text-heading_medium">{errorMsg}</div>
+
+    <div class="slds-m-bottom_large">
+        <lightning-button variant="brand" label={filterButtonText} title={filterButtonText} onclick={handleShowHideFilters}></lightning-button>
+    </div>
+    <template if:true={showHideFilters}>
+        <div class="slds-m-bottom_small">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <lightning-input type="search" variant="standard" name="all"
+                                    label="Search All Fields" placeholder="Type text here..."
+                                    value={searchAll} onchange={handleChangeSearch} ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <lightning-input type="search" variant="standard" name="username"
+                                    label="Search Username" placeholder="User Name"
+                                    value={userName} onchange={handleChangeSearch} ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <c-combobox-with-pill fieldname="certName" placeholder="Certification Name" label="Certification Name"
+                        pick-list-values={certPickListValues} onpillupdate={handleSelection} ></c-combobox-with-pill>
+
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <c-combobox-with-pill fieldname="certStatus" placeholder="Certification Status" label="Certification Status"
+                        pick-list-values={statusPickListValues} onpillupdate={handleSelection} ></c-combobox-with-pill>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <c-combobox-with-pill fieldname="dateType" placeholder="Date Type" label="Date Type"
+                        pick-list-values={filterDateTypeOptions} onpillupdate={handleSelection} ></c-combobox-with-pill>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <lightning-input type="date" name="startDate" label="Start Date"
+                                    placeholder="Start Date" value={startDate} onchange={handleChangeSearch} disabled={isDateDisable}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small">
+                    <lightning-input type="date" name="endDate" label="End Date"
+                                    placeholder="End Date" value={endDate} onchange={handleChangeSearch} disabled={isDateDisable}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-p-vertical_small slds-p-right_small slds-m-top_large slds-align_absolute-center">
+                    <lightning-button variant="natural" label="Clear All" title="Clear All" onclick={clearSearch} ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div class="outer-div">
+        <template if:true={isLoading}>
+            <lightning-spinner 
+                variant="brand" 
+                alternative-text="Loading...."     
+                size="medium" class="slds-align_absolute-center">
+            </lightning-spinner>
+        </template>
+
+        <div class="slds-border_top slds-border_left slds-border_right">
+            <lightning-datatable data={recordsToDisplay} columns={columns} key-field="id" hide-checkbox-column="true"
+                                                        onsort={handlesort} sorted-by={sortedBy} sorted-direction={sortDirection}
+                                                        default-sort-direction={defaultSortDirection}>
+            </lightning-datatable>
+        </div>
+
+
+        <template if:true={data}>
+            <div class="slds-grid slds-m-top_large slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-align_absolute-center">
+                    <span class="slds-p-around_xx-small">{pageRecordsRange}</span>
+                    <lightning-combobox name="NumberOfRecords" value={recordsperpage} variant="label-hidden"
+                        placeholder="Records/Page" options={recordsPerPageOptions} onchange={handleChange} ></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button variant="neutral" title="first" label="First" icon-name="utility:chevronleft" 
+                        icon-position="left" onclick={handleClick} ></lightning-button>
+                    <lightning-button variant="neutral" title="previous" label="Previous" icon-name="utility:chevronleft" 
+                        icon-position="left" onclick={handleClick} ></lightning-button>
+                    <lightning-button variant="neutral" title="next" label="Next" icon-name="utility:chevronright" 
+                        icon-position="right" onclick={handleClick} ></lightning-button>
+                    <lightning-button variant="neutral" title="last" label="Last" icon-name="utility:chevronright" 
+                        icon-position="right" onclick={handleClick} ></lightning-button>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-align_absolute-center">
+                    <span class="slds-p-around_xx-small">Page</span>
+                    <lightning-input type="text" value={pageNo} onblur={handlePage} name="pageNumber" variant='label-hidden' ></lightning-input>
+                    <span class="slds-p-around_xx-small">{numberOfPages}</span>
+                </div>
+            </div>
+        </template>
+        <template if:false={data}>
+            <div class="slds-align_absolute-center slds-text-heading_medium"> No Records found</div>
+        </template>
+    </div>
+</template>

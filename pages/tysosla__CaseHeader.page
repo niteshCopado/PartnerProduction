@@ -1,0 +1,227 @@
+<apex:page standardController="Case" showHeader="false" sidebar="false">
+  <apex:slds />
+ <div class="slds-scope" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  
+  
+ <style>
+    .slds-scope .slds-truncate {
+    max-width: 100%;
+    overflow: visible !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+ </style>
+  
+  <div class="slds-grid slds-gutters slds-wrap" >
+  <apex:outputtext rendered="{!AND(Case.isClosed==false,Case.tysosla__First_Touch__c==null)}">
+  
+  <!--this panel is rendered before first touch-->
+  <!--start slds-media__figure-->
+  <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#touch_action')}"></use>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="Touch Due In">Touch Due In</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        <apex:outputText value="{0, number, ##0.00}" style="font-size:large;">
+        <apex:param value="{!IF(((NOW()-Case.tysosla__First_Touch_Due__c)*-24*60)>120,(NOW()-Case.tysosla__First_Touch_Due__c)*-24,(NOW()-Case.tysosla__First_Touch_Due__c)*-24*60)}"/>
+        </apex:outputText>&nbsp;
+        <apex:outputText value="{!IF(((NOW()-Case.tysosla__First_Touch_Due__c)*-24*60)>120,'Hours','Minutes')}"></apex:outputText> 
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+
+  </apex:outputtext>
+  
+  
+   <!--this panel is rendered until close before first touch-->
+  <apex:outputtext rendered="{!AND(Case.isClosed==false,Case.tysosla__Business_Hours_Response__c!=null)}">
+   <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#dayview')}"></use>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="Age">Age</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        <apex:outputText value="{0, number, ##0}" style="font-size:large;">
+         <apex:param value="{!NOW()-Case.CreatedDate}"/>
+         </apex:outputText>&nbsp;
+        <apex:outputText value="Days"></apex:outputText> 
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+  
+  </apex:outputtext>
+  
+  
+  <!--this panel is rendered after close-->
+  <apex:outputtext rendered="{!Case.isClosed!=false}">
+
+   <!--start slds-media__figure-->
+  <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#clock')}"></use>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="Open Duration">Open Duration</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        <apex:outputText value="{0, number, ##0.00}" style="font-size:large;">
+         <apex:param value="{!Case.tysosla__Open_Duration_Business_Hours__c}"/>&nbsp;
+        </apex:outputText> &nbsp;
+        <apex:outputText value="Biz Hours"></apex:outputText> 
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+  </apex:outputtext>
+  
+  <!--start slds-media__figure-->
+  <div class="slds-media__figure">
+      <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+       <apex:outputtext rendered="{!IF($Setup.tysosla__Service_Settings__c.tysosla__Highest_Priority__c=Case.Priority, true, false)}"> 
+       <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}" ></use>
+      </apex:outputtext> 
+       <apex:outputtext rendered="{!IF($Setup.tysosla__Service_Settings__c.tysosla__Lowest_Priority__c=Case.Priority, true, false)}" > 
+       <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#arrowdown')}" ></use>
+      </apex:outputtext>    
+       <apex:outputtext rendered="{!IF(AND($Setup.tysosla__Service_Settings__c.tysosla__Lowest_Priority__c!=Case.Priority,$Setup.tysosla__Service_Settings__c.tysosla__Highest_Priority__c!=Case.Priority), true, false )}" > 
+       <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#priority')}" ></use>
+      </apex:outputtext> 
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="Priority">Priority</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        
+        <apex:outputText value="{!Case.Priority}"></apex:outputText> 
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+ 
+  
+  
+     <!--start slds-media__figure-->
+  <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <apex:outputtext rendered="{!!Case.tysosla__First_Touch_Violation__c}">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#like')}" ></use>
+      </apex:outputtext>
+      <apex:outputtext rendered="{!Case.tysosla__First_Touch_Violation__c}">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#dislike')}" ></use>
+      </apex:outputtext>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="First Touch">First Touch</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        
+        <apex:outputPanel rendered="{!Case.tysosla__First_Touch__c!=null&&Case.tysosla__Follow_up_Variance__c!=null}">
+                    <center class="centertext"><apex:outputText value="{!IF(Case.tysosla__Follow_up_Variance__c>0, 'Beat SLA by: ', 'Missed SLA by:')}"></apex:outputText>
+                    <apex:outputText value="{0, number, ##0.0}"><apex:param value="{!IF(Case.tysosla__Follow_up_Variance__c>0,Case.tysosla__Follow_up_Variance__c*60,Case.tysosla__Follow_up_Variance__c*-60)}"/>
+                    </apex:outputText>&nbsp;Minutes</center>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!AND(Case.tysosla__First_Touch__c==null,Case.tysosla__First_Touch_Violation__c)}">
+                    <center class="centertext">Overdue:&nbsp; <apex:outputfield value="{!Case.tysosla__First_Touch_Due__c}"/></center>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!AND(Case.tysosla__First_Touch__c==null,Case.tysosla__First_Touch_Violation__c==false)}">
+                    <center class="centertext">Due:&nbsp; <apex:outputfield value="{!Case.tysosla__First_Touch_Due__c}"/></center>
+                    </apex:outputPanel>
+        
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+  
+  
+  
+  <apex:outputtext rendered="{!Case.tysosla__Business_Hours_Response__c!=null}">
+  <!--start slds-media__figure-->
+  <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#warning')}"></use>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+   <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="First Touch">Response Time</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        
+                <apex:outputText value="{0, number, ##0}">
+                <apex:param value="{!Case.tysosla__Business_Hours_Response__c*60}"/>
+                </apex:outputText> &nbsp; Minutes
+        
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+  </apex:outputtext>
+  
+  
+   <!--this panel is rendered until first touch-->
+   <apex:outputtext rendered="{!Case.tysosla__Business_Hours_Response__c==null}">
+   <div class="slds-media__figure">
+    <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-text-default ">
+      <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#dayview')}"></use>
+    </svg>
+  </div><!--end slds-media__figure-->
+  
+  <!--start slds-media__body-->
+  <div class="slds-media__body">
+    <h3 class="slds-truncate" title="Age">Age</h3>
+    <div class="slds-tile__detail slds-text-body--small">
+      <dl class="slds-list--horizontal slds-wrap">
+        <dt class="slds-item--label slds-text-color--weak slds-truncate" title="First Label">
+        <apex:outputText value="{0, number, ##0}" style="font-size:large;">
+         <apex:param value="{!NOW()-Case.CreatedDate}"/>
+         </apex:outputText>&nbsp;
+        <apex:outputText value="Days"></apex:outputText> 
+        </dt>
+      </dl>
+    </div>
+  </div>
+  <!--end slds-media__body-->
+  </apex:outputtext>
+  
+</div>
+
+
+</div>
+</apex:page>

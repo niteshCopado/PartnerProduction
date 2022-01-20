@@ -1,0 +1,27 @@
+<template>
+    <template if:false={showError}>
+        <div class="slds-box slds-theme--default slds-m-top_xx-small slds-box_x-small">
+            <div class="slds-p-around_medium">
+                <c-project-configuration-header selected-tab={selectedTab} onmanageteam={handleManageTeam} onprojectdetails={handleProjectDetails} oncases={handleCases} oncertifications={handleCertifications} onprojectchange={handleProjectChange} onerror={handleError}></c-project-configuration-header>
+                <template if:true={showBottomBorder}>
+                    <hr class="layout-horizontal_border"/>
+                </template>
+                <template if:true={navigationTabs.showManageTeam}>
+                    <c-project-configuration-manage-team project-details={projectDetails} proj-id={projectDetails.Id} is-edit={projectDetails.TeamMemberManageTeam}></c-project-configuration-manage-team>
+                </template>
+                <template if:true={navigationTabs.showProjectDetails}>
+                    <c-project-configuration-project-details project-details={projectDetails} onmanageteam={handleManageTeam} oncases={handleCases} oncertifications={handleCertifications}></c-project-configuration-project-details>
+                </template>
+                <template if:true={navigationTabs.showCases}>
+                    <c-project-configuration-cases project-details={projectDetails}></c-project-configuration-cases>
+                </template>
+                <template if:true={navigationTabs.showCertifications}>
+                    <c-project-configuration-certifications proj-id={projectDetails.Id}></c-project-configuration-certifications>
+                </template>
+            </div>
+        </div>
+    </template>
+    <template if:true={showError}>
+        <c-support-copado-error error-message={errorMessage}></c-support-copado-error>
+    </template>
+</template>

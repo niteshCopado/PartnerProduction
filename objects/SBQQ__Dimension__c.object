@@ -156,6 +156,14 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>SBQQ__CostEditable__c</fullName>
         <deprecated>false</deprecated>
         <description>Controls whether cost for this product may be modified on individual quotes.</description>

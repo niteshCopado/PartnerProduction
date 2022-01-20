@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Invite User To Join Community</name>
+    <style>none</style>
+    <subject>You have been invited to Join the Copado Community</subject>
+    <textOnly>Hello,
+
+You have been invited to join the Copado Community by {!User.Name}.
+Please go to the  link  and follow the registration  process  to join the community.
+This is how you will manage cases and certifications with Copado. Please be sure to use the same business email address where you received this invite.
+
+Regards
+{!User.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

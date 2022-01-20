@@ -1197,6 +1197,11 @@
             <field>SBQQ__WatermarkShown__c</field>
             <table>SBQQ__Quote__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Shipping_Contact__c</field>
+            <table>SBQQ__Quote__c</table>
+        </columns>
         <masterLabel>Quotes</masterLabel>
     </sections>
 </ReportType>

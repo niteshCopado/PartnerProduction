@@ -1,0 +1,15 @@
+Hello <b>{!Project_Team_Member__c.Contact_Name__c}</b>,<br/>
+<br/>
+You have been added as a team member with the following permissions by <b>{!Project_Team_Member__c.CreatedBy}</b>.<br/>
+<br/>
+Active : {!IF(Project_Team_Member__c.IsActive__c, 'Yes', 'No')}<br/>
+Super User : {!IF(Project_Team_Member__c.Is_Super_User__c, 'Yes', 'No')}<br/>
+Manage Team : {!IF(Project_Team_Member__c.Manage_Team__c, 'Yes', 'No')}<br/>
+Log Case : {!IF(Project_Team_Member__c.Log_Case__c, 'Yes', 'No')}<br/>
+View Case Report : {!IF(Project_Team_Member__c.View_Case_Report__c, 'Yes', 'No')}<br/>
+View Cert Report : {!IF(Project_Team_Member__c.View_Certification_Report__c, 'Yes', 'No')}<br/>
+<br/>
+<a href="https://success.copado.com/s/customer-projects">Visit</a> to view the Project details.<br/>
+<br/>
+Regards<br/>
+{!Project_Team_Member__c.CreatedBy}

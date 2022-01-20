@@ -1,0 +1,77 @@
+<template>
+    <div class="slds-m-bottom_small">
+        <div>
+            <h3 style="font-size:20px">Filter Cases :</h3>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <lightning-input
+                    type="search"
+                    variant="standard"
+                    name="searchText"
+                    label="Search Case"
+                    onchange={handleChangeSearch}
+                    placeholder="Type Case Number or Subject..."
+                ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <c-combobox-with-pill 
+                    fieldname="status" 
+                    placeholder="Status"
+                    label="Status"
+                    pick-list-values={filterStatusOptions} 
+                    onpillupdate={handleSelection} 
+                ></c-combobox-with-pill>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <lightning-input
+                    type="search"
+                    variant="standard"
+                    name="createdBy"
+                    onchange={handleChangeSearch}
+                    label="Case Created By"
+                    placeholder="Created By"
+                ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <c-combobox-with-pill 
+                    fieldname="filterDateType" 
+                    label="Date Type"
+                    placeholder="Date Type"
+                    pick-list-values={filterDateTypeOptions} 
+                    onpillupdate={handleSelection} 
+                ></c-combobox-with-pill>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <lightning-input 
+                    type="date" 
+                    name="startDate"
+                    label="Start Date"
+                    data-id="startDate"
+                    onchange={handleChangeSearch}
+                    disabled={showDateFilters}
+                    placeholder="Start Date"
+                ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-vertical_small slds-p-right_small">
+                <lightning-input 
+                    type="date" 
+                    name="endDate"
+                    label="End Date"
+                    data-id="endDate"
+                    onchange={handleChangeSearch}
+                    disabled={showDateFilters}
+                    placeholder="End Date"
+                ></lightning-input>
+            </div>
+        </div>
+        <div class="slds-align_absolute-center">
+            <lightning-button 
+                variant="natural" 
+                label="Clear All" 
+                title="Clear All" 
+                onclick={clearFilters}
+            ></lightning-button>
+        </div>
+    </div>
+</template>

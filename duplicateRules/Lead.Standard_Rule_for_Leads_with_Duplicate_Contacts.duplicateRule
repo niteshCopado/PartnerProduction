@@ -4,32 +4,26 @@
     <actionOnUpdate>Allow</actionOnUpdate>
     <alertText>Use one of these records?</alertText>
     <description>Identify leads with duplicate contacts.</description>
-    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>LeadSource</field>
+            <operation>notEqual</operation>
+            <value>AppExchange, Web, Webinar - Inbound</value>
+            <sortOrder>1</sortOrder>
+            <table>Lead</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>Standard_Lead_Match_Rule_v1_0</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
     <duplicateRuleMatchRules>
         <matchRuleSObjectType>Contact</matchRuleSObjectType>
         <matchingRule>Standard_Contact_Match_Rule_v1_1</matchingRule>
         <objectMapping>
             <inputObject>Lead</inputObject>
-            <mappingFields>
-                <inputField>FirstName</inputField>
-                <outputField>FirstName</outputField>
-            </mappingFields>
-            <mappingFields>
-                <inputField>LastName</inputField>
-                <outputField>LastName</outputField>
-            </mappingFields>
-            <mappingFields>
-                <inputField>Phone</inputField>
-                <outputField>Phone</outputField>
-            </mappingFields>
-            <mappingFields>
-                <inputField>Email</inputField>
-                <outputField>Email</outputField>
-            </mappingFields>
-            <mappingFields>
-                <inputField>City</inputField>
-                <outputField>MailingCity</outputField>
-            </mappingFields>
             <mappingFields>
                 <inputField>Street</inputField>
                 <outputField>MailingStreet</outputField>
@@ -39,12 +33,32 @@
                 <outputField>MailingPostalCode</outputField>
             </mappingFields>
             <mappingFields>
+                <inputField>Phone</inputField>
+                <outputField>Phone</outputField>
+            </mappingFields>
+            <mappingFields>
                 <inputField>Title</inputField>
                 <outputField>Title</outputField>
             </mappingFields>
             <mappingFields>
                 <inputField>Company</inputField>
                 <outputField>AccountId</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Email</inputField>
+                <outputField>Email</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>FirstName</inputField>
+                <outputField>FirstName</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>LastName</inputField>
+                <outputField>LastName</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>City</inputField>
+                <outputField>MailingCity</outputField>
             </mappingFields>
             <outputObject>Contact</outputObject>
         </objectMapping>
@@ -53,6 +67,7 @@
     <masterLabel>Standard Rule for Leads with Duplicate Contacts</masterLabel>
     <operationsOnInsert>Alert</operationsOnInsert>
     <operationsOnInsert>Report</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
     <operationsOnUpdate>Report</operationsOnUpdate>
     <securityOption>EnforceSharingRules</securityOption>
     <sortOrder>1</sortOrder>

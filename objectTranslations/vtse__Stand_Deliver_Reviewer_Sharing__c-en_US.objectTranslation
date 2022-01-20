@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Media Sharing Rule --></label>
+        <name>vtse__Media_Sharing_Rule__c</name>
+        <relationshipLabel><!-- Stand and Deliver Reviewer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>vtse__Relationship_Type__c</name>
+        <picklistValues>
+            <masterLabel>Relative</masterLabel>
+            <translation><!-- Relative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Static</masterLabel>
+            <translation><!-- Static --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Relative Reviewer Role --></label>
+        <name>vtse__Relative_Reviewer__c</name>
+        <picklistValues>
+            <masterLabel>Delegated Approver</masterLabel>
+            <translation><!-- Delegated Approver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Reports (Manager Field)</masterLabel>
+            <translation><!-- Direct Reports (Manager Field) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Reports (Role Hierarchy)</masterLabel>
+            <translation><!-- Direct Reports (Role Hierarchy) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manager</masterLabel>
+            <translation><!-- Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peers (Role Hierarchy)</masterLabel>
+            <translation><!-- Peers (Role Hierarchy) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peers (Role-Based)</masterLabel>
+            <translation><!-- Peers (Role-Based) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peers (Same Manager)</masterLabel>
+            <translation><!-- Peers (Same Manager) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role Hierarchy Manager(s)</masterLabel>
+            <translation><!-- Role Hierarchy Manager(s) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stand and Deliver --></label>
+        <name>vtse__Stand_Deliver__c</name>
+        <relationshipLabel><!-- Stand and Deliver Reviewer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>vtse__Type__c</name>
+        <picklistValues>
+            <masterLabel>Approver</masterLabel>
+            <translation><!-- Approver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewer</masterLabel>
+            <translation><!-- Reviewer --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

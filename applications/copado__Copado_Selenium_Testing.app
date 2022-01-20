@@ -5,7 +5,6 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Copado Selenium Testing</label>
-    <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__SeleniumGettingStarted</tabs>
     <tabs>copado__Selenium_Test_Case__c</tabs>
     <tabs>copado__Selenium_Test_Suite__c</tabs>
@@ -16,4 +15,8 @@
     <tabs>copado__Account_Summary</tabs>
     <tabs>copado__Scheduled_Job__c</tabs>
     <tabs>copado__Selenium_Locator__c</tabs>
+    <tabs>Competitor__c</tabs>
+    <tabs>Custom_Account_Trends__c</tabs>
+    <tabs>SBQQ__QuoteLine__c</tabs>
+    <tabs>Action_Plan__c</tabs>
 </CustomApplication>

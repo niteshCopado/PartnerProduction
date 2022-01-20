@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Media --></label>
+        <name>vtse__Media__c</name>
+        <relationshipLabel><!-- Attached Media --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Send Email --></label>
+        <name>vtse__Send_Email__c</name>
+        <relationshipLabel><!-- Attached Media --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

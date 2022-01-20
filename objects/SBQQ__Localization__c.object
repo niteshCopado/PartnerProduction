@@ -156,6 +156,16 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__APIName__c</fullName>
         <deprecated>false</deprecated>
         <description>The API Name of this content.</description>

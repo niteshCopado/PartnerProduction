@@ -18,7 +18,7 @@
     <enableLexToClassicFeedbackEnable>false</enableLexToClassicFeedbackEnable>
     <enableOrchestrationInSandbox>false</enableOrchestrationInSandbox>
     <enableOrgUserAssistEnabled>true</enableOrgUserAssistEnabled>
-    <enableScheduledSwitcher>true</enableScheduledSwitcher>
+    <enableScheduledSwitcher>false</enableScheduledSwitcher>
     <enableSfdcProductFeedbackSurvey>true</enableSfdcProductFeedbackSurvey>
     <enableShowSalesforceUserAssist>true</enableShowSalesforceUserAssist>
     <isAutoTransitionDelayed>false</isAutoTransitionDelayed>

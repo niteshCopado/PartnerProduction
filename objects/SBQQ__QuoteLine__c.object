@@ -430,11 +430,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SBQQ__Description__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>SBQQ__DistributorDiscount__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -490,6 +485,11 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
+            <field>SBQQ__NetPrice__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
             <field>SBQQ__Optional__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -521,6 +521,11 @@
         </availableFields>
         <availableFields>
             <field>SBQQ__PricingMethod__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ProductCode__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -596,7 +601,12 @@
         </availableFields>
         <description>Fields displayed on Edit Lines page.</description>
         <displayedFields>
-            <field>SBQQ__ProductCode__c</field>
+            <field>SBQQ__Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>PS_CPQ_Term_in_Months__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -606,7 +616,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>SBQQ__Quantity__c</field>
+            <field>SBQQ__Description__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -621,7 +631,7 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>SBQQ__NetPrice__c</field>
+            <field>Net_Unit_Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -835,11 +845,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SBQQ__EndDate__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>SBQQ__GrossProfit__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -856,6 +861,11 @@
         </availableFields>
         <availableFields>
             <field>SBQQ__Markup__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__NetPrice__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -920,11 +930,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SBQQ__StartDate__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>SBQQ__SubscribedAssetIds__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -966,6 +971,26 @@
         </availableFields>
         <description>Quote Line fields to display for segmented Products when clicking into Line Item Detail in the Line Editor</description>
         <displayedFields>
+            <field>Add_On_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>PS_CPQ_Term_in_Months__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>SBQQ__Quantity__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -986,12 +1011,22 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>SBQQ__NetPrice__c</field>
+            <field>Net_Unit_Price__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
             <field>SBQQ__NetTotal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Proposal_Segment_Label__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Proposal_Segment_Index__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -1025,15 +1060,15 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
+        <displayedFields>
+            <field>Add_On_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>Segmented Line Editor Summary</label>
     </fieldSets>
     <fieldSets>
         <fullName>SBQQ__StandardLineItemDrawer</fullName>
-        <availableFields>
-            <field>SBQQ__AdditionalDiscount__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
         <availableFields>
             <field>SBQQ__AdditionalQuantity__c</field>
             <isFieldManaged>false</isFieldManaged>
@@ -1076,21 +1111,6 @@
         </availableFields>
         <availableFields>
             <field>SBQQ__DistributorDiscount__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SBQQ__EffectiveEndDate__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SBQQ__EffectiveStartDate__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SBQQ__EndDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -1190,22 +1210,12 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>SBQQ__Quantity__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>SBQQ__RegularPrice__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
             <field>SBQQ__RegularTotal__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
-            <field>SBQQ__StartDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
@@ -1255,6 +1265,61 @@
             <isRequired>false</isRequired>
         </availableFields>
         <description>Quote Line fields to display in the drawer for standard products.</description>
+        <displayedFields>
+            <field>SBQQ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__Quantity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__AdditionalDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>AdditionalDiscountUnit__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EffectiveStartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EffectiveEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Parent_Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Proposal_Segment_Index__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Proposal_Segment_Label__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Non_Segmented_or_Non_Subscription__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <label>Standard Line Item Drawer</label>
     </fieldSets>
     <fieldSets>
@@ -1312,6 +1377,606 @@
         <description>Fields to be summarized in Line Editor. Note that field must also be in field set displayed on the page.</description>
         <label>Summary Fields</label>
     </fieldSets>
+    <fields>
+        <fullName>ACV_ARR_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ACV/ARR Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ACV_Segment_Index__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(SBQQ__ProductFamily__c = &quot;Licenses&quot;,SBQQ__ProductFamily__c = &quot;Premier Support&quot;) &amp;&amp;  SBQQ__SegmentIndex__c = 1 ,&quot;1&quot;,
+   IF(OR(SBQQ__ProductFamily__c = &quot;Licenses&quot;,SBQQ__ProductFamily__c = &quot;Premier Support&quot;) &amp;&amp;  SBQQ__SegmentIndex__c = 2 ,&quot;2&quot;,
+   IF(OR(SBQQ__ProductFamily__c = &quot;Licenses&quot;,SBQQ__ProductFamily__c = &quot;Premier Support&quot;) &amp;&amp;  SBQQ__SegmentIndex__c = 3 ,&quot;3&quot;,
+   IF(OR(SBQQ__ProductFamily__c = &quot;Licenses&quot;,SBQQ__ProductFamily__c = &quot;Premier Support&quot;) &amp;&amp;  SBQQ__SegmentIndex__c = 4 ,&quot;4&quot;,
+   IF(OR(SBQQ__ProductFamily__c = &quot;Licenses&quot;,SBQQ__ProductFamily__c = &quot;Premier Support&quot;) &amp;&amp;  SBQQ__SegmentIndex__c = 5 ,&quot;5&quot;,
+NULL)))))</formula>
+        <label>ARR Segment Index</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ARR_Converted__c</fullName>
+        <externalId>false</externalId>
+        <label>ARR (Converted)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ARR__c</fullName>
+        <externalId>false</externalId>
+        <label>ARR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Add_On_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Add On Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Add_on_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>Add on ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AdditionalDiscountUnit__c</fullName>
+        <externalId>false</externalId>
+        <label>AdditionalDiscountUnit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Percent</fullName>
+                    <default>false</default>
+                    <label>Percent</label>
+                </value>
+                <value>
+                    <fullName>Total Override</fullName>
+                    <default>false</default>
+                    <label>Total Override</label>
+                </value>
+                <value>
+                    <fullName>Amount</fullName>
+                    <default>false</default>
+                    <label>Amount</label>
+                </value>
+                <value>
+                    <fullName>Unit Override</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Unit Override</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Annualized_ACV_Converted__c</fullName>
+        <externalId>false</externalId>
+        <label>Annualized ACV (Converted)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annualized_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Line ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRT_and_Success_Product__c</fullName>
+        <description>This field is for backend to add filter on Robotics and Success/Success+ Product used in &apos;Calculate Copado Robotic Testing ACV on QuoteLines&apos; Flow.</description>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(SBQQ__Product__r.Product_Grouping__c) == &apos;Testing&apos; , &apos;Testing&apos; , IF(  CONTAINS(SBQQ__Product__r.Name, &apos;Success&apos;),&apos;Success&apos; ,&apos;&apos; )  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CRT and Success Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Copado_Robotic_Testing_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>Copado Robotic Testing ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Default_Net_Total__c</fullName>
+        <description>This field is used to calculate the net total per year to update ACV in Quote, when year is less than 12 months.</description>
+        <externalId>false</externalId>
+        <formula>IF ( SBQQ__DefaultSubscriptionTerm__c = 1,  Net_Unit_Price__c * SBQQ__Quantity__c * 12, Net_Unit_Price__c * SBQQ__Quantity__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Default Net Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exclude_for_PSup_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(SBQQ__PricingMethod__c, &quot;Percent Of Total&quot;) &amp;&amp;  SBQQ__ProductCode__c != &apos;PSup&apos; , &quot;False&quot;, IF( SBQQ__Product__r.SBQQ__ExcludeFromMaintenance__c = True &amp;&amp; ISPICKVAL(SBQQ__Product__r.SBQQ__SubscriptionCategory__c, &quot;Licenses&quot;) , &quot;True&quot;, &quot;False&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Exclude for PSup Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GroupNumber__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__Group__r.SBQQ__Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Group #</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Default_Quantity_Set__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used by Copado package product rules to prevent override of manually-adjusted quantities for included products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by Copado package product rules to prevent override of manually-adjusted quantities for included products.</inlineHelpText>
+        <label>Initial Default Quantity Set</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Current_ARR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND(SBQQ__EffectiveStartDate__c  &lt;=  TODAY(), TODAY()   &lt;=  SBQQ__EffectiveEndDate__c),true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Current ARR</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Line_Discount__c</fullName>
+        <description>This field is used to store the discount % when given on Amt or %</description>
+        <externalId>false</externalId>
+        <label>Line Discount</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_net_total_for_Renewal__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(  AND( SBQQ__SegmentIndex__c = 1,  PS_CPQ_With_Without_Terms__c =&apos;Licenses and Premier Support&apos; ),  Net_Unit_Price__c  * 12 , 0)</formula>
+        <label>Monthly net total for Renewal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Unit_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Months__c</fullName>
+        <description>This field is used in &apos;RenewalOpportunityHelper&apos; class to calculate the number of months between start date and end date.</description>
+        <externalId>false</externalId>
+        <formula>(YEAR( SBQQ__EndDate__c)*12+MONTH(SBQQ__EndDate__c))-
+(YEAR( SBQQ__StartDate__c )*12+MONTH(SBQQ__StartDate__c ))+1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No of Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Segmented_or_Non_Subscription__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(ISBLANK(SBQQ__SegmentIndex__c), TEXT(SBQQ__SubscriptionType__c) = &quot;Renewable&quot;),&quot;Non-Segmented Item&quot;,
+IF(AND(ISBLANK(SBQQ__SegmentIndex__c), TEXT(SBQQ__SubscriptionType__c) &lt;&gt; &quot;Renewable&quot;),&quot;Non-Subscription Item&quot;,
+IF(AND(!ISBLANK(SBQQ__SegmentIndex__c), !ISBLANK(TEXT(SBQQ__SubscriptionType__c))),&quot;Segmented Item&quot;,Null)))</formula>
+        <label>Non-Segmented or Non-Subscription</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Standard_ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(SBQQ__Quote__r.PS_CPQ_Term_in_Months__c  &gt;= 12, (SBQQ__NetTotal__c  / SBQQ__Quote__r.PS_CPQ_Term_in_Months__c) * 12, SBQQ__NetTotal__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Non-Standard ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Standard_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Non Standard Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>One_time_Product_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(SBQQ__Product__r.SBQQ__SubscriptionType__c,&apos;One-time&apos;), PS_CPQ_Original_Price__c - SBQQ__NetTotal__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>One-time Product Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityLineItemId__c</fullName>
+        <externalId>false</externalId>
+        <label>OpportunityLineItemId</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OriginalQuoteLineId2__c</fullName>
+        <externalId>false</externalId>
+        <label>OriginalQuoteLineId</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_CPQ_Equivalent_Discount__c</fullName>
+        <description>Total % discount for this line item, including all discounts applied.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+  SBQQ__NonDiscountable__c=TRUE,
+  0,
+  1-((SBQQ__NetPrice__c/(IF(SBQQ__ProrateMultiplier__c&gt;0,SBQQ__ProrateMultiplier__c,1)))/SBQQ__OriginalPrice__c)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total % discount for this line item, including all discounts applied.</inlineHelpText>
+        <label>Equivalent Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PS_CPQ_Net_Price_Per_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__NetPrice__c/  SBQQ__ProrateMultiplier__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Price Per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_CPQ_Original_Price__c</fullName>
+        <description>Original (default) List Price of this item. Created for display in Line Editor.</description>
+        <externalId>false</externalId>
+        <formula>SBQQ__OriginalPrice__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Original (default) List Price of this item.</inlineHelpText>
+        <label>Original Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PS_CPQ_Term_in_Months__c</fullName>
+        <description>The term of this line, in Months, rounded up. Matches Prorate Multiplier for any Subscription Pricing=Fixed Price products.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+NOT(ISPICKVAL(SBQQ__SubscriptionPricing__c,&quot;Fixed Price&quot;)),null,
+MCEILING(SBQQ__ProrateMultiplier__c) 
+)</formula>
+        <inlineHelpText>The term of this line, in Months, rounded up.</inlineHelpText>
+        <label>Term in Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_CPQ_With_Without_Terms__c</fullName>
+        <description>a field created for output document purposes. will group product by product families to distinguish number of columns for each gruop</description>
+        <externalId>false</externalId>
+        <formula>IF( OR( ISPICKVAL( SBQQ__Product__r.Family , &quot;Licenses&quot;), ISPICKVAL(SBQQ__Product__r.Family, &quot;Premier Support&quot;) ), &quot;Licenses and Premier Support&quot;, &quot;Services and others&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>With/Without Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_Is_Licence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked when Product Family equals Licence or Premier Support. Used in Template</description>
+        <externalId>false</externalId>
+        <label>Is Licence</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PS_Template_Monthly_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>PS_CPQ_Net_Price_Per_Month__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Template Monthly Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_Template_Net_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__NetTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Template Net Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_Uplift__c</fullName>
+        <externalId>false</externalId>
+        <label>Uplift</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PS_Uplift_from_Quote__c</fullName>
+        <externalId>false</externalId>
+        <formula>0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Uplift from Quote</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Product_Code__c</fullName>
+        <description>The Product Code of the &quot;Parent Product&quot; or Package product.</description>
+        <externalId>false</externalId>
+        <formula>Parent_Product__r.ProductCode</formula>
+        <inlineHelpText>The Product Code of the &quot;Parent Product&quot; or Package product.</inlineHelpText>
+        <label>Parent Product Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Package Product that is parent to this child product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Package Product that is parent to this child product.</inlineHelpText>
+        <label>Parent Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Quote Lines (Parent Product)</relationshipLabel>
+        <relationshipName>Included_Product</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_With_Uplift__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(SBQQ__ListPrice__c  = 0, Net_Unit_Price__c, IF (AND(!ISBLANK( SBQQ__Uplift__c ), ISBLANK(SBQQ__SubscriptionPercent__c)),
+
+CASE( SBQQ__SegmentIndex__c,
+	2, ROUND(SBQQ__ListPrice__c *(SBQQ__Uplift__c +1),2),
+	3, ROUND(SBQQ__ListPrice__c * (SBQQ__Uplift__c + 1)*(SBQQ__Uplift__c +1) ,2),
+	4, ROUND(SBQQ__ListPrice__c * (SBQQ__Uplift__c +1)*(SBQQ__Uplift__c +1) * (SBQQ__Uplift__c +1),2),
+	SBQQ__ListPrice__c
+		) ,
+IF(! ISBLANK(SBQQ__SubscriptionPercent__c) , SBQQ__RegularPrice__c, IF( Line_Discount__c &lt; 0 , SBQQ__ListPrice__c ,SBQQ__RegularPrice__c))))</formula>
+        <label>Price With Uplift</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ProductSortOrder__c</fullName>
+        <description>Displays the product sort order for line item ordering</description>
+        <externalId>false</externalId>
+        <formula>TEXT(SBQQ__Product__r.SBQQ__SortOrder__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Displays the product sort order for line item ordering</inlineHelpText>
+        <label>Product Sort Order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Family_Segment__c</fullName>
+        <description>Used for filtering both Product Family &amp; Segment # for summary variables on quote line price rule.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(SBQQ__Group__r.SBQQ__Number__c) + SBQQ__ProductFamily__c + TEXT(SBQQ__SegmentIndex__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Returns value as Licenses1, Licesnses2, etc</inlineHelpText>
+        <label>Product Family &amp; Segment #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposal_Segment_Index__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposal Segment Index</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposal_Segment_Label__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposal Segment Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Quantity_Whole__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quote Quantity Whole</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewable_Product_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(SBQQ__Product__r.SBQQ__SubscriptionType__c,&apos;Renewable&apos;),  PS_CPQ_Original_Price__c -  SBQQ__NetTotal__c  , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Renewable Product Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
     <fields>
         <fullName>SBQQ__AdditionalDiscountAmount__c</fullName>
         <deprecated>false</deprecated>
@@ -1500,6 +2165,18 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>SBQQ__CompletelyContracted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if this line is completely contracted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this line is completely contracted.</inlineHelpText>
+        <label>Is Contracted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>SBQQ__ComponentCost__c</fullName>
         <deprecated>false</deprecated>
         <description>Total cost of components in this package.</description>
@@ -1566,12 +2243,7 @@
                 <value>
                     <fullName>Both</fullName>
                     <default>false</default>
-                    <label>Package &amp; Components</label>
-                </value>
-                <value>
-                    <fullName>Entire Hierarchy</fullName>
-                    <default>false</default>
-                    <label>Entire Hierarchy</label>
+                    <label>Both</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2071,6 +2743,18 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>SBQQ__HasSplitOrders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if multiple orders are created from this quote line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if multiple orders are created from this quote line.</inlineHelpText>
+        <label>Has Split Orders</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>SBQQ__Hidden__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -2379,6 +3063,22 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>SBQQ__OriginalSource__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Original source of cloned quote line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Original Source of cloned quote line.</inlineHelpText>
+        <label>Original Source</label>
+        <referenceTo>SBQQ__QuoteLine__c</referenceTo>
+        <relationshipLabel>Quote Lines (Dependents)</relationshipLabel>
+        <relationshipName>OriginalSource</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>SBQQ__OriginalUnitCost__c</fullName>
         <deprecated>false</deprecated>
         <description>Cost for one unit of product quoted on this line item if Cost Schedules were not applied.</description>
@@ -2429,7 +3129,7 @@
         <deprecated>false</deprecated>
         <description>Product code for the package generated by appending codes of selected components according to specified pattern.</description>
         <externalId>false</externalId>
-        <inlineHelpText>A code listing each of this package&apos;s components based on their component codes.</inlineHelpText>
+        <inlineHelpText>Automatically generated list of product codes for each component in this package.</inlineHelpText>
         <label>Package Product Code</label>
         <length>255</length>
         <required>false</required>
@@ -2443,7 +3143,7 @@
         <deprecated>false</deprecated>
         <description>Product Description for the package generated by appending descriptions of selected components according to specified pattern.</description>
         <externalId>false</externalId>
-        <inlineHelpText>A description of each component in this package.</inlineHelpText>
+        <inlineHelpText>Dynamic Product Description generated from the components inside this package.</inlineHelpText>
         <label>Package Product Description</label>
         <length>32000</length>
         <trackHistory>false</trackHistory>
@@ -3058,14 +3758,9 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Hardware</fullName>
+                    <fullName>Licenses</fullName>
                     <default>false</default>
-                    <label>Hardware</label>
-                </value>
-                <value>
-                    <fullName>Software</fullName>
-                    <default>false</default>
-                    <label>Software</label>
+                    <label>Licenses</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -3087,7 +3782,7 @@
     <fields>
         <fullName>SBQQ__SubscriptionPricing__c</fullName>
         <deprecated>false</deprecated>
-        <description>Determines how the subscription on this line item is priced. Blank value means this line contains product that&apos;s not a subscription.</description>
+        <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
         <externalId>false</externalId>
         <inlineHelpText>Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
         <label>Subscription Pricing</label>
@@ -3429,28 +4124,79 @@ IF(SBQQ__Quantity__c == SBQQ__PriorQuantity__c, 0, (SBQQ__ProratedListPrice__c *
         <type>Percent</type>
     </fields>
     <fields>
-        <fullName>blng__BillableUnitPrice__c</fullName>
-        <deprecated>false</deprecated>
-        <description>The unprorated amount that will bill each billing period. Equals ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)).</description>
+        <fullName>SegmentIndex__c</fullName>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(SBQQ__ChargeType__c , &apos;One-Time&apos;),  SBQQ__NetTotal__c,
-        (SBQQ__NetTotal__c * (CASE(SBQQ__BillingFrequency__c,
-        &quot;Monthly&quot;, 1,
-        &quot;Quarterly&quot;, 3,
-        &quot;Semiannual&quot;, 6,
-        &quot;Annual&quot;, 12,
-        0))) / ( SBQQ__ProrateMultiplier__c * SBQQ__DefaultSubscriptionTerm__c )
-        )</formula>
-        <inlineHelpText>The unprorated amount that will bill each billing period. Equals ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)).</inlineHelpText>
-        <label>Billable Unit Price</label>
+        <formula>SBQQ__Number__c + IF(!ISBLANK(SBQQ__SegmentIndex__c),(SBQQ__SegmentIndex__c/100),0)</formula>
+        <label>SegmentIndex</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Currency</type>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term_in_Months_for_ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+(ISBLANK(SBQQ__Group__c) ||(ISBLANK(SBQQ__Group__r.SBQQ__StartDate__c) &amp;&amp; ISBLANK(SBQQ__Group__r.SBQQ__EndDate__c))), SBQQ__Quote__r.PS_CPQ_Term_in_Months__c, 
+IF( 
+ROUND(((SBQQ__Group__r.SBQQ__EndDate__c-SBQQ__Group__r.SBQQ__StartDate__c)/(365/12)),0)  &lt;&gt; SBQQ__Quote__r.PS_CPQ_Term_in_Months__c, ROUND(((SBQQ__Group__r.SBQQ__EndDate__c-SBQQ__Group__r.SBQQ__StartDate__c)/(365/12)),0),
+SBQQ__Quote__r.PS_CPQ_Term_in_Months__c 
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Term in Months for ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Business</fullName>
+                    <default>false</default>
+                    <label>New Business</label>
+                </value>
+                <value>
+                    <fullName>Add-On</fullName>
+                    <default>false</default>
+                    <label>Add-On</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Swap</fullName>
+                    <default>false</default>
+                    <label>Swap</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>Quote Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>QL-{0000000}</displayFormat>
         <label>Line Name</label>
@@ -3523,15 +4269,6 @@ AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__Bi
 AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Usage&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))))</errorConditionFormula>
         <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
         <errorMessage>When Charge Type is One-Time or Usage, a Billing Type value cannot be selected.</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>blng__Dynamic_Invoicing_Amendment</fullName>
-        <active>true</active>
-        <description>Dynamic Invoicing only supports amendment cancellation and below error will be shown if a quantity increase or decrease is done instead.</description>
-        <errorConditionFormula>ISPICKVAL(SBQQ__BillingFrequency__c, &apos;Invoice Plan&apos;) &amp;&amp; SBQQ__Quantity__c != SBQQ__PriorQuantity__c &amp;&amp;
-SBQQ__Quantity__c != 0 &amp;&amp;
-ISPICKVAL( SBQQ__Quote__r.SBQQ__Type__c , &apos;Amendment&apos;)</errorConditionFormula>
-        <errorMessage>Can’t update the quantity. Dynamic Invoicing only supports cancellation amendments.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
     <webLinks>

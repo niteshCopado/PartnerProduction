@@ -1,0 +1,60 @@
+<!--
+  @File Name          : ManageFields.page
+  @Last Modified On   : 1/21/2020, 8:31:26 AM
+-->
+<apex:page controller="tysosla.ManageFields" sidebar="false" showHeader="true" docType="html-5.0" action="{!init}">
+
+<apex:slds />
+
+       <apex:form >
+         
+     
+     <div class="slds-scope"> 
+     <c:spinner />
+     <c:pageheader title="Manage Custom Fields" icon="service_contract"/>
+     </div> 
+     
+     
+     <!--start content-->
+
+    <c:column type="col-md-12" style="margin-left: 0%;">  
+    <c:panel type="default" id="pb"> 
+    <apex:pageMessages />
+      
+           <apex:dataTable value="{!wrapperList}" var="s" styleClass="slds-table slds-table--bordered slds-table--cell-buffer"> 
+             <apex:column headerValue="No." style="width:20px; text-align:center;" headerClass="centertext">
+                <apex:outputText value="{!s.index}" style="text-align:center;"> 
+                 </apex:outputText>
+            </apex:column>
+             
+             <apex:column headerValue="Field Name" > 
+                  <apex:selectList value="{!s.fieldName}" multiselect="false" size="1"  styleclass="slds-input" >
+                     <apex:selectOptions value="{!caseFields}"/>
+                 </apex:selectList>
+             </apex:column>
+
+
+          <apex:column headerValue="Action" >
+           <apex:commandButton value="Delete" action="{!deleteField}" reRender="pb" status="busyStatus" styleClass="slds-button slds-button--neutral">
+                <apex:param name="rowIndex" value="{!s.Index}"/>
+            </apex:commandButton>
+            </apex:column>
+            
+           </apex:dataTable>  
+
+
+            <br/>
+            <div class="slds-button-group" role="group">
+            <apex:commandButton action="{!addField}" value="Add Field" status="busyStatus" reRender="pb" styleClass="slds-button slds-button--neutral"/>
+            <apex:commandButton value="Save" action="{!saveFields}" status="busyStatus" styleClass="slds-button slds-button--neutral"/>
+            <apex:commandButton value="Cancel" action="{!cancelPage}" status="busyStatus" styleClass="slds-button slds-button--neutral"/>
+            
+          </div>  
+
+     
+        </c:panel>
+      </c:column>
+     <!--end content-->
+     </apex:form>
+
+ </apex:page>

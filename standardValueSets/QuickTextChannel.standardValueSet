@@ -22,6 +22,11 @@
         <label>Internal</label>
     </standardValue>
     <standardValue>
+        <fullName>Knowledge</fullName>
+        <default>false</default>
+        <label>Knowledge</label>
+    </standardValue>
+    <standardValue>
         <fullName>Event</fullName>
         <default>false</default>
         <label>Event</label>

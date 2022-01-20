@@ -209,6 +209,11 @@
                     <default>false</default>
                     <label>Status</label>
                 </value>
+                <value>
+                    <fullName>Running_User_Profile__c</fullName>
+                    <default>false</default>
+                    <label>Running_User_Profile__c</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Quote</controllingFieldValue>
@@ -217,6 +222,10 @@
             <valueSettings>
                 <controllingFieldValue>Quote</controllingFieldValue>
                 <valueName>Status</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quote</controllingFieldValue>
+                <valueName>Running_User_Profile__c</valueName>
             </valueSettings>
         </valueSet>
     </fields>
@@ -273,10 +282,19 @@
                     <default>false</default>
                     <label>Primary</label>
                 </value>
+                <value>
+                    <fullName>SBQQ__Type__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__Type__c</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Quote</controllingFieldValue>
                 <valueName>Primary</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quote</controllingFieldValue>
+                <valueName>SBQQ__Type__c</valueName>
             </valueSettings>
         </valueSet>
     </fields>
@@ -422,6 +440,16 @@
                     <default>false</default>
                     <label>Status</label>
                 </value>
+                <value>
+                    <fullName>Select_Profile__c</fullName>
+                    <default>false</default>
+                    <label>Select_Profile__c</label>
+                </value>
+                <value>
+                    <fullName>Hidden_Product_for_new_quote__c</fullName>
+                    <default>false</default>
+                    <label>Hidden_Product_for_new_quote__c</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Product</controllingFieldValue>
@@ -443,6 +471,14 @@
                 <controllingFieldValue>Product</controllingFieldValue>
                 <controllingFieldValue>Asset</controllingFieldValue>
                 <valueName>Product Description</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Product</controllingFieldValue>
+                <valueName>Select_Profile__c</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Product</controllingFieldValue>
+                <valueName>Hidden_Product_for_new_quote__c</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Asset</controllingFieldValue>

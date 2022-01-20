@@ -1,0 +1,91 @@
+<!--
+  @File Name          : ManageSLA.page
+  @Last Modified On   : 03-04-2021
+-->
+<apex:page standardController="tysosla__SLA_Tracking__c" extensions="tysosla.ManageSLA" sidebar="false" showHeader="true" docType="html-5.0">
+    <apex:slds />
+
+    <apex:form >
+        <div class="slds-scope">
+            <c:spinner />
+            <c:pageheader title="Manage SLAs" icon="service_contract" />
+        </div>
+        <!--start content-->
+        <c:column type="col-md-12" style="margin-left: 0%;">
+            <c:panel type="default" id="pb">
+                <apex:pageMessages />
+                <apex:variable var="rowNumber" value="{!0}" />
+
+                <apex:dataTable value="{!wrapperList}" var="s" id="dt" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <apex:column headerValue="No." style="width: 20px; text-align: center;" headerClass="centertext">
+                        <apex:outputText value="{0}" style="text-align: center;">
+                            <apex:param value="{!rowNumber+1}" />
+                        </apex:outputText>
+                    </apex:column>
+
+                    <apex:column headerValue="Name">
+                        <c:formgroup >
+                            <apex:inputField value="{!s.sla.Name}" required="false" styleClass="slds-input" />
+                        </c:formgroup>
+                    </apex:column>
+
+                    <apex:column headerValue="Business Hours">
+                        <c:formgroup >
+                            <apex:outputPanel id="picklistOP">
+                                <apex:selectList value="{!s.sla.tysosla__Business_Hours_ID__c}" multiselect="false" size="1" styleclass="slds-input">
+                                   <apex:selectOptions value="{!BusinessHours}" />
+                                </apex:selectList>
+                            </apex:outputPanel>
+                        </c:formgroup>
+                    </apex:column>
+
+                    <apex:column headerValue="Priority" rendered="{!customFields!=true}">
+                        <c:formgroup >
+                            <apex:selectList value="{!s.sla.tysosla__Priority__c}" multiselect="false" size="1" styleclass="slds-input">
+                                <apex:selectOptions value="{!s.SLAPriority}" />
+                            </apex:selectList>
+                        </c:formgroup>
+                    </apex:column>
+
+                    <apex:repeat value="{!customFieldList}" var="cfl">
+                        <apex:column headerValue="{!$ObjectType.Case.Fields[cfl.tysosla__API_Name__c].Label}">
+                            <apex:selectList value="{!s.sla['field'+cfl.Name+'__c']}" multiselect="false" size="1" styleclass="slds-input">
+                                <apex:selectOptions value="{!CustomCaseFields[cfl.tysosla__API_Name__c]}" />
+                                <apex:param name="wrapfields" value="{!s.sla['field'+cfl.Name+'__c']}" assignTo="{!s['field'+cfl.Name]}" />
+                            </apex:selectList>
+                        </apex:column>
+                    </apex:repeat>
+
+                    <apex:column headerValue="Response Time (Hours)">
+                        <c:formgroup >
+                            <apex:inputField value="{!s.sla.tysosla__Response_Time__c}" styleClass="slds-input" />
+                        </c:formgroup>
+                    </apex:column>
+
+                    <apex:column headerValue="Resolution Time {!IF($Setup.tysosla__Service_Settings__c.tysosla__Resolution_in_Hours__c, '(Hours)', '(Days)')}">
+                        <c:formgroup >
+                            <apex:inputField value="{!s.sla.tysosla__Resolution_Time__c}" styleClass="slds-input" rendered="{!$Setup.tysosla__Service_Settings__c.tysosla__Resolution_in_Hours__c==false}" />
+                            <apex:inputField value="{!s.sla.tysosla__Resolution_Time_Hours__c}" styleClass="slds-input" rendered="{!$Setup.tysosla__Service_Settings__c.tysosla__Resolution_in_Hours__c}" />
+                        </c:formgroup>
+                    </apex:column>
+
+                    <apex:column headerValue="Action">
+                        <apex:commandButton value="Delete" action="{!deleteSLA}" reRender="pb" status="busyStatus" styleClass="slds-button slds-button--neutral">
+                            <apex:param name="rowIndex" value="{!rowNumber}" />
+                        </apex:commandButton>
+                        <apex:variable var="rowNumber" value="{!rowNumber+1}" />
+                    </apex:column>
+                </apex:dataTable>
+
+                <br />
+                <div class="slds-button-group" role="group">
+                    <apex:commandButton action="{!addSLA}" value="Add SLA" status="busyStatus" reRender="pb,dt" styleClass="slds-button slds-button--neutral" />
+                    <apex:commandButton value="Save" action="{!save}" status="busyStatus" styleClass="slds-button slds-button--neutral" />
+                    <apex:commandButton value="Cancel" action="{!cancelSLAs}" status="busyStatus" styleClass="slds-button slds-button--neutral" />
+                    <apex:commandButton value="Reset" action="{!reset}" reRender="pb" styleClass="slds-button slds-button--neutral" />
+                </div>
+            </c:panel>
+        </c:column>
+        <!--end content-->
+    </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Support Case Internal Priority Setup</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Support Case Internal Priority Setups</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Impact - Critical Functionality --></label>
+        <name>Business_Impact_Critical_Functionality__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Impact - Data Integrity --></label>
+        <name>Business_Impact_Data_Integrity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Impact - Users --></label>
+        <name>Business_Impact_Users__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Impact - Workaround --></label>
+        <name>Business_Impact_Workaround__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internal Priority To Set --></label>
+        <name>Internal_Priority_To_Set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Production Deployment --></label>
+        <name>Production_Deployment__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Recipient --></label>
+        <name>vtse__Recipient__c</name>
+        <relationshipLabel><!-- Email Recipients --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Send Email --></label>
+        <name>vtse__Send_Email__c</name>
+        <relationshipLabel><!-- Email Recipients --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,15 @@
+<p>Media Launches Summary</p>
+
+[SINGLE_MEDIA_START]
+{RECIPIENT} has launched the
+[SINGLE_MEDIA_END]
+
+[MULTIPLE_MEDIA_START] 
+{RECIPIENT} has launched the following media:
+[MULTIPLE_MEDIA_END]
+
+[MEDIA_ITEM_START]
+{MEDIA_ITEM} at {TIME} on {DATE}
+[MEDIA_ITEM_END]
+
+<p>For more details, click into contact's name</p>

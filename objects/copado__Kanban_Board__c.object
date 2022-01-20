@@ -277,7 +277,7 @@
         <fullName>copado__SOQL_Query__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>SOQL Query to retrieve each Id, Title (second field in the query), and the &quot;Status&quot; field, as defined in Field to read/update. Every other field will be shown as the text content of the item.</inlineHelpText>
+        <inlineHelpText>SOQL Query to retrieve each Id, Name, and the &quot;Status&quot; field, as defined in Update_Status_Field__c. Every other field will be shown as the text content of the item.</inlineHelpText>
         <label>SOQL Query</label>
         <length>20480</length>
         <trackTrending>false</trackTrending>
@@ -311,10 +311,9 @@
         <searchFilterFields>OWNER.ALIAS</searchFilterFields>
         <searchFilterFields>UPDATEDBY_USER.ALIAS</searchFilterFields>
         <searchFilterFields>CREATEDBY_USER</searchFilterFields>
-        <searchResultsAdditionalFields>copado__Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Field_to_read_update__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CREATEDBY_USER.ALIAS</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>UPDATEDBY_USER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

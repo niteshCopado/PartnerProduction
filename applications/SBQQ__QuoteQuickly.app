@@ -6,7 +6,6 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Salesforce CPQ</label>
-    <logo>SBQQ__Salesforce_CPQ_Assets/SBQQ__Salesforce_CPQ_Logo.png</logo>
     <tabs>standard-Account</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>SBQQ__Quote__c</tabs>
@@ -19,4 +18,8 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Document</tabs>
     <tabs>SBQQ__ImportFormat__c</tabs>
+    <tabs>Competitor__c</tabs>
+    <tabs>Custom_Account_Trends__c</tabs>
+    <tabs>SBQQ__QuoteLine__c</tabs>
+    <tabs>Action_Plan__c</tabs>
 </CustomApplication>

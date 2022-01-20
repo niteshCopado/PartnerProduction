@@ -21,6 +21,14 @@
         <type>StandardAppMenuItem</type>
     </appMenuItems>
     <appMenuItems>
+        <name>Notes</name>
+        <type>StandardAppMenuItem</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>News</name>
+        <type>StandardAppMenuItem</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>Search</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
@@ -49,11 +57,15 @@
         <type>StandardAppMenuItem</type>
     </appMenuItems>
     <appMenuItems>
-        <name>LightningInstrumentation</name>
+        <name>Forecasting</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
     <appMenuItems>
-        <name>LightningSchedulerSetupAssistant</name>
+        <name>OnlineSalesHome</name>
+        <type>StandardAppMenuItem</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>MobileHome</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
 </AppMenu>

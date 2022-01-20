@@ -1,0 +1,129 @@
+<!--
+  @File Name          : ServiceSetup.page
+  @Description        : 
+-->
+<apex:page standardController="tysosla__Service_Settings__c" extensions="tysosla.ServiceSettings" action="{!init}" sidebar="false">
+  <apex:slds />
+
+       <apex:form > 
+        <style>
+        .slds-input {
+        margin: 5px !important;
+        }
+        </style>
+     
+     <div class="slds-scope"> 
+     <c:pageheader title="Service Settings" icon="case_change_status"/>
+     </div>
+  
+         <apex:outputPanel layout="block" styleClass="alert alert-warning" rendered="{!tysosla__Service_Settings__c.Id==null}">
+            You have not yet initiliazed your settings, please click the "Create" button to begin.
+        </apex:outputPanel>   
+     
+     <!--start content-->
+      
+     <div>
+      <c:row rendered="{!tysosla__Service_Settings__c.Id!=null}">
+                      
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Enable Automation</apex:outputLabel>
+                                        <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Enable_Automation__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                            <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                            <apex:selectOption itemLabel="No" itemValue="false"/>                                         
+                                        </apex:selectList>                   
+                            </c:formgroup>
+                      </c:column>
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12" >
+                             <apex:outputLabel >Allow First Touch to be Adjusted </apex:outputLabel>
+                                        <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Allow_First_Touch_to_Change__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                           <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                           <apex:selectOption itemLabel="No" itemValue="false"/>
+                                        </apex:selectList>
+                         </c:formgroup>
+                      </c:column>
+
+                      <c:column type="col-md-3" rendered="{!advanced&&internalOrg==false}">
+                         <c:formgroup styleclass="col-xs-12" >
+                             <apex:outputLabel >Default Business Hours </apex:outputLabel>
+                                        <apex:selectList value="{!tysosla__Service_Settings__c['tyoslaext__Default_Business_Hours__c']}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                           <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                           <apex:selectOption itemLabel="No" itemValue="false"/>
+                                        </apex:selectList>
+                         </c:formgroup>
+                      </c:column>
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Default Case Status</apex:outputLabel>
+                                   <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Initial_Case_Status__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                       <apex:selectOptions value="{!Status}"/>
+                                    </apex:selectList>                 
+                            </c:formgroup>
+                      </c:column>                      
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >High Priority Case</apex:outputLabel>
+                                   <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Highest_Priority__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                       <apex:selectOptions value="{!Priority}"/>
+                                    </apex:selectList>                 
+                            </c:formgroup>
+                      </c:column>   
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Low Priority Case</apex:outputLabel>
+                                   <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Lowest_Priority__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                       <apex:selectOptions value="{!Priority}"/>
+                                    </apex:selectList>                 
+                            </c:formgroup>
+                      </c:column> 
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Error Logging</apex:outputLabel>
+                                    <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Error_Logging__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                       <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                       <apex:selectOption itemLabel="No" itemValue="false"/>
+                                    </apex:selectList>              
+                            </c:formgroup>
+                      </c:column>   
+
+                      <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Manage SLA Resolutions in Hours</apex:outputLabel>
+                                    <apex:selectList value="{!tysosla__Service_Settings__c.tysosla__Resolution_in_Hours__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                       <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                       <apex:selectOption itemLabel="No" itemValue="false"/>
+                                    </apex:selectList>              
+                            </c:formgroup>
+                      </c:column>   
+                   
+                     <!-- <c:column type="col-md-3">
+                         <c:formgroup styleclass="col-xs-12">
+                            <apex:outputLabel >Track Closed Case Statuses</apex:outputLabel>
+                                        <apex:selectList value="{!Service_Settings__c.Track_Closed_Case_Statuses__c}" multiselect="false" size="1" styleclass="slds-input" style="width:150px;">
+                                            <apex:selectOption itemLabel="Yes" itemValue="true"/>
+                                            <apex:selectOption itemLabel="No" itemValue="false"/>                                         
+                                        </apex:selectList>                   
+                            </c:formgroup>
+                      </c:column>-->
+                   
+                   
+                   </c:row>
+                   
+                   
+                   
+  </div>
+      <div class="btn-group" align="center" style="left: 27%;">
+            <apex:commandButton value="Save" action="{!saveRecord}" styleClass="slds-button slds-button--neutral" rendered="{!tysosla__Service_Settings__c.Id!=null}"/>
+            <apex:commandButton value="Create" action="{!create}" styleClass="slds-button slds-button--neutral" rendered="{!tysosla__Service_Settings__c.Id==null}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}" styleClass="slds-button slds-button--neutral"/>
+
+          </div>  
+       
+ </apex:form>
+ </apex:page>

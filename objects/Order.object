@@ -197,10 +197,22 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -209,29 +221,65 @@
     </fields>
     <fields>
         <fullName>ActivatedById</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ActivatedDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>BillToContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>BillingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>COA_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>COA Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>false</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>CompanyAuthorizedById</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>CompanyAuthorizedDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -239,6 +287,7 @@
     </fields>
     <fields>
         <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -246,24 +295,57 @@
         <fullName>ContractName</fullName>
     </fields>
     <fields>
+        <fullName>Contract_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>ContractId</formula>
+        <label>Contract ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Custom_Salesforce_Org__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Salesforce Org</label>
+        <referenceTo>Salesforce_Org__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>CustomerAuthorizedById</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>CustomerAuthorizedDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>EffectiveDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>EndDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -271,15 +353,42 @@
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>Opp_ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.ACV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opp_TCV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>OpportunityId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OrderReferenceNumber</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -288,21 +397,66 @@
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>PoDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>PoNumber</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Pricebook2Id</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QuoteId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Order_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+  AND(
+    TotalAmount &gt; 0,
+    AND(EffectiveDate&lt;=TODAY(), Contract.EndDate&gt;TODAY())
+  ),
+  ((TotalAmount/((Contract.EndDate+1)-EffectiveDate))*((Contract.EndDate+1)-TODAY())),
+  0
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Order Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingFrequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the billing frequency.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the billing frequency.</inlineHelpText>
+        <label>Billing Frequency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__BillingFrequency</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SBQQ__Contracted__c</fullName>
@@ -312,6 +466,7 @@
         <externalId>false</externalId>
         <inlineHelpText>Indicates if the order is contracted.</inlineHelpText>
         <label>Contracted</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -323,12 +478,29 @@
         <inlineHelpText>&quot;By Subscription End Date&quot; creates a separate Contract for each unique Subscription End Date, containing only those Subscriptions. &quot;Single Contract&quot; creates one Contract containing all Subscriptions, regardless of their End Dates.</inlineHelpText>
         <label>Contracting Method</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
             <restricted>true</restricted>
             <valueSetName>SBQQ__ContractingMethod</valueSetName>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__FirstContractedOrder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>If Contracting Method is set to &quot;Single Contract&quot;, this field references the original contracted order, where the single contract is created from. All subsequent contracted subscriptions and assets will be added to the single contract associated to the original contracted order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If Contracting Method is set to &quot;Single Contract&quot;, this field references the original contracted order, where the single contract is created from. The field value is set by the system.</inlineHelpText>
+        <label>First Contracted Order</label>
+        <referenceTo>Order</referenceTo>
+        <relationshipLabel>Single Contracted Orders</relationshipLabel>
+        <relationshipName>FirstContractedOrders</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>SBQQ__OrderBookings__c</fullName>
@@ -351,6 +523,7 @@
         <inlineHelpText>The payment term for this order.</inlineHelpText>
         <label>Payment Term</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -367,6 +540,7 @@
         <label>Price Calculation Status Message</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
@@ -379,6 +553,7 @@
         <inlineHelpText>Indicates the order price calculation job status.  It is set by the system.</inlineHelpText>
         <label>Price Calculation Status</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
         <valueSet>
@@ -398,6 +573,7 @@
         <relationshipLabel>Orders</relationshipLabel>
         <relationshipName>Orders</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -411,6 +587,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
@@ -425,6 +602,7 @@
         <precision>11</precision>
         <required>false</required>
         <scale>3</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Percent</type>
     </fields>
@@ -442,296 +620,66 @@
         <type>Summary</type>
     </fields>
     <fields>
+        <fullName>SBQQ__TotalAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total order amount with tax included</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total order amount with tax included</inlineHelpText>
+        <label>Total Amount (With Tax)</label>
+        <summarizedField>OrderItem.SBQQ__TotalAmount__c</summarizedField>
+        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>ShipToContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ShippingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>TCV__c</fullName>
+        <externalId>false</externalId>
+        <label>TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>TotalAmount</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
-    <fields>
-        <fullName>blng__BillNow__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Bill Now</label>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>blng__BilledAmountwithouttax__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>The sum of all invoices for this order (excluding tax).</inlineHelpText>
-        <label>Billed Amount (without tax)</label>
-        <summarizedField>OrderItem.blng__BilledAmountwithouttax__c</summarizedField>
-        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>blng__BilledTax__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>The sum of all taxes on invoices for this order.</inlineHelpText>
-        <label>Billed Tax</label>
-        <summarizedField>OrderItem.blng__BilledTax__c</summarizedField>
-        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>blng__BillingAccount__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Billing Account</label>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>Orders (Billing Account)</relationshipLabel>
-        <relationshipName>BillingAccountOrders</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>blng__BillingDayOfMonth__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Billing Day Of Month</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>1</fullName>
-                    <default>false</default>
-                    <label>1</label>
-                </value>
-                <value>
-                    <fullName>2</fullName>
-                    <default>false</default>
-                    <label>2</label>
-                </value>
-                <value>
-                    <fullName>3</fullName>
-                    <default>false</default>
-                    <label>3</label>
-                </value>
-                <value>
-                    <fullName>4</fullName>
-                    <default>false</default>
-                    <label>4</label>
-                </value>
-                <value>
-                    <fullName>5</fullName>
-                    <default>false</default>
-                    <label>5</label>
-                </value>
-                <value>
-                    <fullName>6</fullName>
-                    <default>false</default>
-                    <label>6</label>
-                </value>
-                <value>
-                    <fullName>7</fullName>
-                    <default>false</default>
-                    <label>7</label>
-                </value>
-                <value>
-                    <fullName>8</fullName>
-                    <default>false</default>
-                    <label>8</label>
-                </value>
-                <value>
-                    <fullName>9</fullName>
-                    <default>false</default>
-                    <label>9</label>
-                </value>
-                <value>
-                    <fullName>10</fullName>
-                    <default>false</default>
-                    <label>10</label>
-                </value>
-                <value>
-                    <fullName>11</fullName>
-                    <default>false</default>
-                    <label>11</label>
-                </value>
-                <value>
-                    <fullName>12</fullName>
-                    <default>false</default>
-                    <label>12</label>
-                </value>
-                <value>
-                    <fullName>13</fullName>
-                    <default>false</default>
-                    <label>13</label>
-                </value>
-                <value>
-                    <fullName>14</fullName>
-                    <default>false</default>
-                    <label>14</label>
-                </value>
-                <value>
-                    <fullName>15</fullName>
-                    <default>false</default>
-                    <label>15</label>
-                </value>
-                <value>
-                    <fullName>16</fullName>
-                    <default>false</default>
-                    <label>16</label>
-                </value>
-                <value>
-                    <fullName>17</fullName>
-                    <default>false</default>
-                    <label>17</label>
-                </value>
-                <value>
-                    <fullName>18</fullName>
-                    <default>false</default>
-                    <label>18</label>
-                </value>
-                <value>
-                    <fullName>19</fullName>
-                    <default>false</default>
-                    <label>19</label>
-                </value>
-                <value>
-                    <fullName>20</fullName>
-                    <default>false</default>
-                    <label>20</label>
-                </value>
-                <value>
-                    <fullName>21</fullName>
-                    <default>false</default>
-                    <label>21</label>
-                </value>
-                <value>
-                    <fullName>22</fullName>
-                    <default>false</default>
-                    <label>22</label>
-                </value>
-                <value>
-                    <fullName>23</fullName>
-                    <default>false</default>
-                    <label>23</label>
-                </value>
-                <value>
-                    <fullName>24</fullName>
-                    <default>false</default>
-                    <label>24</label>
-                </value>
-                <value>
-                    <fullName>25</fullName>
-                    <default>false</default>
-                    <label>25</label>
-                </value>
-                <value>
-                    <fullName>26</fullName>
-                    <default>false</default>
-                    <label>26</label>
-                </value>
-                <value>
-                    <fullName>27</fullName>
-                    <default>false</default>
-                    <label>27</label>
-                </value>
-                <value>
-                    <fullName>28</fullName>
-                    <default>false</default>
-                    <label>28</label>
-                </value>
-                <value>
-                    <fullName>29</fullName>
-                    <default>false</default>
-                    <label>29</label>
-                </value>
-                <value>
-                    <fullName>30</fullName>
-                    <default>false</default>
-                    <label>30</label>
-                </value>
-                <value>
-                    <fullName>31</fullName>
-                    <default>false</default>
-                    <label>31</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>blng__CanceledBillings__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Total of all canceled order products.</inlineHelpText>
-        <label>Canceled Billing Amount (without tax)</label>
-        <summarizedField>OrderItem.blng__CanceledBillings__c</summarizedField>
-        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>blng__InvoiceBatch__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Invoice Batch</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>blng__InvoiceBatch</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>blng__PendingBillings__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Total pending for all order products.</inlineHelpText>
-        <label>Pending Billing Amount (without tax)</label>
-        <summarizedField>OrderItem.blng__PendingBillings__c</summarizedField>
-        <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>blng__TotalBilling__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <formula>blng__BilledAmountwithouttax__c  +  blng__BilledTax__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>The sum of all invoice lines and taxes for this order.</inlineHelpText>
-        <label>Total Billings</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <type>Currency</type>
-    </fields>
     <listViews>
         <fullName>AllActivatedOrders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>ORDERS.TOTAL_AMOUNT</columns>
+        <columns>ORDERS.EFFECTIVE_DATE</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>COA_Status__c</columns>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>ORDERS.STATUS_CODE</field>
@@ -739,6 +687,7 @@
             <value>A</value>
         </filters>
         <label>All Activated Orders</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>AllDraftOrders</fullName>
@@ -752,6 +701,12 @@
     </listViews>
     <listViews>
         <fullName>AllOrders</fullName>
+        <columns>ORDERS.ORDER_NUMBER</columns>
+        <columns>SALES.ACCOUNT.NAME</columns>
+        <columns>ORDERS.TOTAL_AMOUNT</columns>
+        <columns>ORDERS.EFFECTIVE_DATE</columns>
+        <columns>ORDERS.STATUS</columns>
+        <columns>CONTRACT.CONTRACT_NUMBER</columns>
         <filterScope>Everything</filterScope>
         <label>All Orders</label>
     </listViews>
@@ -779,6 +734,58 @@
         <errorDisplayField>SBQQ__Contracted__c</errorDisplayField>
         <errorMessage>Can&apos;t contract the order. Activate the order and try again.</errorMessage>
     </validationRules>
+    <webLinks>
+        <fullName>Create_Renewal_Opportunity</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Renewal Opportunity</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/CreateRenewalOpportunity?id={!Order.OpportunityId}&amp;contractId={!Order.Contract_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_SFDC_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Create SFDC Order</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/ContractOrder?id={!Order.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Import_Line_Items</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Import Line Items</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/OrderItemImporter?id={!Order.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Provision_Org</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Provision Org</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/ProvisionOrder?id={!Order.Id}</url>
+    </webLinks>
     <webLinks>
         <fullName>SBQQ__EditOrderProducts</fullName>
         <availability>online</availability>

@@ -151,7 +151,7 @@
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
-    <enableLicensing>false</enableLicensing>
+    <enableLicensing>true</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
@@ -393,12 +393,7 @@
                 <value>
                     <fullName>Both</fullName>
                     <default>false</default>
-                    <label>Package &amp; Components</label>
-                </value>
-                <value>
-                    <fullName>Entire Hierarchy</fullName>
-                    <default>false</default>
-                    <label>Entire Hierarchy</label>
+                    <label>Both</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -980,7 +975,7 @@
         <deprecated>false</deprecated>
         <description>Define the price of quote lines that appear on the renewal quote when you renew this subscription. This field overrides the result of price calculations from your account’s renewal pricing method. If renewal pricing method is Uplift, uplift will be applied to the Renewal Price.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Override the default calculated price of this subscription on a renewal quote. If your account&apos;s renewal pricing method is Uplift, the uplift applies to this renewal price.</inlineHelpText>
+        <inlineHelpText>Enter renewal price to override default calculation. Overrides default renewal price computation based on account&apos;s Renewal Pricing field.</inlineHelpText>
         <label>Renewal Price</label>
         <precision>14</precision>
         <required>false</required>
@@ -1268,6 +1263,32 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>SBQQ__SubscriptionPricing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Method of calculating the subscription price.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Method of calculating the subscription price.</inlineHelpText>
+        <label>Subscription Pricing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed Price</fullName>
+                    <default>false</default>
+                    <label>Fixed Price</label>
+                </value>
+                <value>
+                    <fullName>Percent Of Total</fullName>
+                    <default>false</default>
+                    <label>Percent Of Total</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SBQQ__SubscriptionStartDate__c</fullName>
         <deprecated>false</deprecated>
         <description>Matches the quote line start date by default. If blank, it will match the contract start date.</description>
@@ -1351,14 +1372,17 @@
     <listViews>
         <fullName>SBQQ__All</fullName>
         <columns>NAME</columns>
+        <columns>SBQQ__Account__c</columns>
         <columns>SBQQ__ContractNumber__c</columns>
         <columns>SBQQ__QuoteLine__c</columns>
         <columns>SBQQ__Product__c</columns>
         <columns>SBQQ__SubscriptionStartDate__c</columns>
         <columns>SBQQ__StartDate__c</columns>
         <columns>SBQQ__EndDate__c</columns>
+        <columns>SBQQ__ProrateMultiplier__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <displayFormat>SUB-{0000000}</displayFormat>

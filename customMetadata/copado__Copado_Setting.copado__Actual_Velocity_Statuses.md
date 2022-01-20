@@ -8,6 +8,6 @@
     </values>
     <values>
         <field>copado__Text_Field__c</field>
-        <value xsi:type="xsd:string">Completed</value>
+        <value xsi:type="xsd:string">Completed,Ready for Packaging,Packaging in Progress,Packaging Blocked,Ready for Regression,Regression in Progress,Regression Blocked,Ready for Release,Release in Progress,Release Blocked,Released</value>
     </values>
 </CustomMetadata>

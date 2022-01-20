@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Test_Script_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -155,6 +158,23 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Is_Obsolete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Obsolete</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Steps</label>
+        <summaryForeignKey>copado__Test_Script_Step__c.copado__Test_Script__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
     <fields>
         <fullName>copado__Expected_Result__c</fullName>
         <deprecated>false</deprecated>
@@ -362,6 +382,7 @@
         <columns>copado__Project__c</columns>
         <columns>copado__Status__c</columns>
         <columns>copado__User_Story__c</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -397,6 +418,30 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Send_to_Slack</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Slack</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/slackv2__sendToSlack?recordId={!CASESAFEID (copado__Test_Script__c.Id)}&amp;objectApiName=copado__Test_Script__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Slack_Alerts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Slack Alerts</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/slackv2__slackAlerts?recordId={!CASESAFEID (copado__Test_Script__c.Id)}&amp;objectApiName=copado__Test_Script__c</url>
+    </webLinks>
     <webLinks>
         <fullName>copado__Add_Test_Script_Steps</fullName>
         <availability>online</availability>

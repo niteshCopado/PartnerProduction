@@ -148,6 +148,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>FolderId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>IsAlohaSupported</fullName>
     </fields>
     <fields>
@@ -165,6 +170,18 @@
     <fields>
         <fullName>StartingContext</fullName>
     </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Name</columns>
+        <columns>LastModifiedDate</columns>
+        <columns>LastModifiedBy</columns>
+        <columns>StartingContext</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>StartingContext</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>

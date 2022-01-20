@@ -1,0 +1,24 @@
+<messaging:emailTemplate subject="You have been assigned to {!relatedTo.Stand_Deliver__r.Name}"
+    recipientType="User"
+    relatedToType="vtse__Stand_Deliver_Task__c"
+    language="{!recipient.LanguageLocaleKey}"
+    renderUsingSystemContextWithoutSharing="true"
+>
+    <messaging:htmlEmailBody >
+        <apex:outputPanel layout="block">
+            <apex:outputText rendered="{!relatedTo.Stand_Deliver__r.Name != null}" value="You have been assigned to the {!relatedTo.Stand_Deliver__r.Name}" />
+            <br/><br/>
+
+            <apex:outputText rendered="{!relatedTo.Stand_Deliver__r.vtse__Description__c != null}" escape="false" value="Description: {! relatedTo.Stand_Deliver__r.Description__c }"/>
+            <br/><br/>
+
+            <apex:outputText rendered="{!relatedTo.vtse__Due_Date__c != null}" value="Due Date: {0, date, MMMM d','  yyyy}">
+                <apex:param value="{!relatedTo.vtse__Due_Date__c}"/>
+            </apex:outputText>
+            <br/><br/>
+
+            <c:EmailNotification recordId="{!relatedTo.Id}" communityId="{!relatedTo.vtse__Community_Id__c}" hasDetailPageLink="true"/>
+        </apex:outputPanel>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

@@ -158,6 +158,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__EffectiveDate__c</fullName>
         <deprecated>false</deprecated>
         <description>The date when this block price is effective.  The value is taken when a block price snapshot is taken at order creation time.</description>
@@ -287,8 +298,16 @@
     <label>Block Price</label>
     <listViews>
         <fullName>SBQQ__All</fullName>
+        <columns>NAME</columns>
+        <columns>SBQQ__Product__c</columns>
+        <columns>SBQQ__PriceBook2__c</columns>
+        <columns>SBQQ__LowerBound__c</columns>
+        <columns>SBQQ__UpperBound__c</columns>
+        <columns>SBQQ__Price__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Price Name</label>

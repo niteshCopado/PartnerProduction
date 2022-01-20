@@ -157,6 +157,16 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>External Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__AppliedImmediately__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -431,9 +441,11 @@
         <fullName>SBQQ__All</fullName>
         <columns>NAME</columns>
         <columns>SBQQ__TargetField__c</columns>
-        <columns>RECORDTYPE</columns>
+        <columns>SBQQ__Product__c</columns>
+        <columns>SBQQ__Global__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <listViews>
         <fullName>SBQQ__ConfigurationAttributes</fullName>
@@ -460,9 +472,9 @@
         <columns>SBQQ__TargetField__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>RECORDTYPE</field>
+            <field>SBQQ__Global__c</field>
             <operation>equals</operation>
-            <value>SBQQ__ConfigurationAttribute__c.SBQQ__Global_Attribute</value>
+            <value>1</value>
         </filters>
         <label>Global Attributes</label>
         <language>en_US</language>
@@ -588,12 +600,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts>
-        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
-        <customTabListAdditionalFields>SBQQ__Product__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>SBQQ__TargetField__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>SBQQ__Required__c</customTabListAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>SBQQ__Column_Order_is_required</fullName>
@@ -604,7 +611,7 @@
     </validationRules>
     <validationRules>
         <fullName>SBQQ__Product_is_required_if_not_global</fullName>
-        <active>false</active>
+        <active>true</active>
         <description>Product is required (not implemented; override existing validation rule behavior for existing orgs</description>
         <errorConditionFormula>false</errorConditionFormula>
         <errorMessage>Product is required.</errorMessage>

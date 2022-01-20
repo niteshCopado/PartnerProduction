@@ -265,7 +265,11 @@ AssetLookupCtrl.prototype.onAction = function(/*String*/ accountOrOppId, /*Boole
 		scope.blockingOperationInProgress = false;
 	}else {
 		var successHandler = function (/*String*/ result) {
-			document.location.assign(result);
+			if(sforce && sforce.one) { // LEX navigation
+				sforce.one.navigateToURL(result, true);
+			} else { // classic navigation
+				document.location.assign(result);
+			}
 		}
 		if (isAmend) {
 			scope.assetService.amendAssets(assetIds, accountOrOppId, scope.searchModel.isAssetBased, pricebookId, successHandler, this.controller.createErrorHandler());

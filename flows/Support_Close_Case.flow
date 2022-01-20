@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Assign_User_Story_Fields</name>
+        <label>Assign User Story Fields</label>
+        <locationX>823</locationX>
+        <locationY>61</locationY>
+        <assignmentItems>
+            <assignToReference>newUserStory.copado__User_Story_Title__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>user_Story_Title</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newUserStory.copado__Functional_Specifications__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>funcSpecs</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newUserStory.Business_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Current_Case.CreatedBy.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newUserStory.copado__Acceptance_Criteria__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Current_Case.Acceptance__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newUserStory.User_Story_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>User_Story_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Insert_New_User_Story</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_User_Story_field_on_Case</name>
+        <label>Update User Story field on Case</label>
+        <locationX>1160</locationX>
+        <locationY>59</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Current_Case.User_Story__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newUserStory.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Case_with_User_Story</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>bug</name>
+        <choiceText>Bug</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Bug</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>enhancement</name>
+        <choiceText>Enhancement</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Enhancement</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>investigation</name>
+        <choiceText>Investigation</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Investigation</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>newfeature</name>
+        <choiceText>New Feature</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>New Feature</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Does_Case_have_a_User_Story</name>
+        <label>Does Case have a User Story</label>
+        <locationX>514</locationX>
+        <locationY>186</locationY>
+        <defaultConnector>
+            <targetReference>Create_New_User_Story</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User Story Does Not Exist</defaultConnectorLabel>
+        <rules>
+            <name>User_Story_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Current_Case.User_Story__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>User_Story_Created</targetReference>
+            </connector>
+            <label>User Story Exists</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>funcSpecs</name>
+        <dataType>String</dataType>
+        <expression>&apos;Description&apos; &amp; BR() &amp;  BR() &amp;
+{!Get_Current_Case.Description} &amp; BR() &amp; BR() &amp;
+&apos;Requirements&apos; &amp; BR() &amp; BR() &amp;
+{!Get_Current_Case.Requirements__c} &amp; BR() &amp; BR() &amp;
+&apos;Steps to Recreate&apos; &amp; BR() &amp; BR() &amp;
+{!Get_Current_Case.Steps_to_Recreate__c} &amp; BR() &amp; BR() &amp;
+&apos;Actual Result&apos; &amp; BR() &amp;
+{!Get_Current_Case.Actual_Results__c} &amp; BR() &amp;
+&apos;Expected Results&apos; &amp; BR() &amp; BR() &amp;
+{!Get_Current_Case.Expected_Result__c}</expression>
+    </formulas>
+    <formulas>
+        <name>userStoryTitleFormula</name>
+        <dataType>String</dataType>
+        <expression>{!Get_Current_Case.Subject} &amp; &apos; (Case Number#&apos; &amp; {!Get_Current_Case.CaseNumber} &amp; &apos;)&apos;</expression>
+    </formulas>
+    <interviewLabel>Support Close Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Support Close Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Insert_New_User_Story</name>
+        <label>Insert New User Story</label>
+        <locationX>994</locationX>
+        <locationY>59</locationY>
+        <connector>
+            <targetReference>Update_User_Story_field_on_Case</targetReference>
+        </connector>
+        <inputReference>newUserStory</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Current_Case</name>
+        <label>Get Current Case</label>
+        <locationX>390</locationX>
+        <locationY>185</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Does_Case_have_a_User_Story</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Case_with_User_Story</name>
+        <label>Update Case with User Story</label>
+        <locationX>1335</locationX>
+        <locationY>59</locationY>
+        <inputReference>Get_Current_Case</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Create_New_User_Story</name>
+        <label>Create New User Story</label>
+        <locationX>637</locationX>
+        <locationY>56</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_User_Story_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>user_Story_Title</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>userStoryTitleFormula</elementReference>
+            </defaultValue>
+            <fieldText>User Story Title</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>User_Story_Type</name>
+            <choiceReferences>newfeature</choiceReferences>
+            <choiceReferences>bug</choiceReferences>
+            <choiceReferences>investigation</choiceReferences>
+            <choiceReferences>enhancement</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>newfeature</defaultSelectedChoiceReference>
+            <fieldText>User Story Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>functional_Specifications</name>
+            <defaultValue>
+                <stringValue>{!funcSpecs}</stringValue>
+            </defaultValue>
+            <fieldText>Functional Specifications</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>User_Story_Created</name>
+        <label>User Story Created</label>
+        <locationX>1403</locationX>
+        <locationY>182</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>UserStoryCreatedMessage</name>
+            <fieldText>&lt;p&gt;Your user created successfully. You can open the user story from &lt;a href=&quot;https://copado.my.salesforce.com/{!newUserStory.Id}&quot; target=&quot;_blank&quot;&gt;https://copado.my.salesforce.com/&lt;/a&gt;&lt;a href=&quot;https://copado.my.salesforce.com/%7B!newUserStory.Id%7D&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Current_Case.User_Story__c}&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>18</locationX>
+        <locationY>166</locationY>
+        <connector>
+            <targetReference>Get_Current_Case</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>User story to create</description>
+        <name>newUserStory</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>copado__User_Story__c</objectType>
+    </variables>
+    <variables>
+        <description>Current case id</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

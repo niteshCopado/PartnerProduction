@@ -2,6 +2,8 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <customButtons>SBQQ__Amend_Assets</customButtons>
     <customButtons>SBQQ__Renew_Assets</customButtons>
+    <customButtons>slackv2__Send_to_Slack</customButtons>
+    <customButtons>slackv2__Slack_Alerts</customButtons>
     <excludeButtons>DataDotComAccountInsights</excludeButtons>
     <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
@@ -28,7 +30,59 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>External_Id__c</field>
+                <field>Entity__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Executive_Sponsor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ltcomm__Price_Book__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Region__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Territory_State__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Territory_Country__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FunnelBeam_Enrichment_Done__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>accountIntentScore6sense_Copado__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>accountProfileFit6sense_Copado__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>accountBuyingStage6sense_Copado__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FB_Company_Key__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FunnelBeam_Enrichment_Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CS_Tier__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Company_Size__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -65,11 +119,31 @@
                 <behavior>Edit</behavior>
                 <field>AnnualRevenue</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Exhausted_Reason__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Exhausted_Until__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>NumberOfEmployees</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Lead_Source_Detail__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Customer_Executive_Sponsor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Account_Plan__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -146,6 +220,10 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__PreserveBundle__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PS_CPQ_Discount_Matrix_Required__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -178,6 +256,97 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>false</editHeading>
+        <label>Slack Messages</label>
+        <layoutColumns>
+            <layoutItems>
+                <height>450</height>
+                <page>slackv2__accountMessageViewer</page>
+                <showLabel>false</showLabel>
+                <showScrollbars>false</showScrollbars>
+                <width>100%</width>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
+    </layoutSections>
+    <platformActionList>
+        <actionListContext>Record</actionListContext>
+        <platformActionListItems>
+            <actionName>Account.slackv2__Send_to_Slack</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Account.slackv2__Slack_Alerts</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewTask</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>2</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>LogACall</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewCase</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>4</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewLead</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewEvent</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>SendEmail</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>ChangeRecordType</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Share</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>11</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Submit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>12</sortOrder>
+        </platformActionListItems>
+    </platformActionList>
+    <relatedContent>
+        <relatedContentItems>
+            <layoutItem>
+                <component>wits:newsPanel</component>
+            </layoutItem>
+        </relatedContentItems>
+    </relatedContent>
     <relatedLists>
         <fields>FULL_NAME</fields>
         <fields>CONTACT.TITLE</fields>
@@ -233,8 +402,11 @@
         <fields>CASES.PRIORITY</fields>
         <fields>CASES.CREATED_DATE_DATE_ONLY</fields>
         <fields>CASES.STATUS</fields>
+        <fields>CASES.CLOSED</fields>
         <fields>OWNER_NAME</fields>
         <relatedList>RelatedCaseList</relatedList>
+        <sortField>CASES.CREATED_DATE_DATE_ONLY</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>
@@ -260,6 +432,19 @@
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Account_Ebsta_Score__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CustomAccountTrendDate__c</fields>
+        <fields>CustomAccountTrendSalesforceMidpoint__c</fields>
+        <fields>CustomAccountTrendEbstaScore__c</fields>
+        <fields>NAME</fields>
+        <relatedList>Custom_Account_Trends__c.CustomAccountTrendCopadoApoAccount__c</relatedList>
+        <sortField>CustomAccountTrendDate__c</sortField>
+        <sortOrder>Asc</sortOrder>
+    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -267,7 +452,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hA000000YQ1SI</masterLabel>
+        <masterLabel>00hb000000WZdcc</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

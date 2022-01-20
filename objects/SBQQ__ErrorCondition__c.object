@@ -158,6 +158,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>field for data migration and integration with external systems</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__FilterType__c</fullName>
         <deprecated>false</deprecated>
         <description>Type of filtering used in this condition.</description>
@@ -188,7 +200,7 @@
         <deprecated>false</deprecated>
         <description>The value you want the tested variable to be evaluated against.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Enter the value you want the tested variable to be evaluated against. Date value must use this format: YYYY-MM-DD 00:00:00</inlineHelpText>
+        <inlineHelpText>Enter the value you want the tested variable to be evaluated against.</inlineHelpText>
         <label>Filter Value</label>
         <length>255</length>
         <required>false</required>
@@ -370,10 +382,19 @@
                     <default>false</default>
                     <label>Unit Price</label>
                 </value>
+                <value>
+                    <fullName>Account_Has_Premier_Support__c</fullName>
+                    <default>false</default>
+                    <label>Account_Has_Premier_Support__c</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Quote</controllingFieldValue>
                 <valueName>Group Line Items</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quote</controllingFieldValue>
+                <valueName>Account_Has_Premier_Support__c</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Product Option</controllingFieldValue>
@@ -444,6 +465,17 @@
         <type>Lookup</type>
     </fields>
     <label>Error Condition</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>SBQQ__Rule__c</columns>
+        <columns>SBQQ__TestedObject__c</columns>
+        <columns>SBQQ__TestedVariable__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>{000000}</displayFormat>
         <label>Condition #</label>

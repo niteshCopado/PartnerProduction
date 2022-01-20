@@ -153,10 +153,22 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id to be used in data migration and integration with external systems</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
     <fields>
         <fullName>SBQQ__Alignment__c</fullName>
         <deprecated>false</deprecated>
@@ -357,11 +369,6 @@
                     <label>Open Sans</label>
                 </value>
                 <value>
-                    <fullName>Play</fullName>
-                    <default>false</default>
-                    <label>Play</label>
-                </value>
-                <value>
                     <fullName>PT Sans</fullName>
                     <default>false</default>
                     <label>PT Sans</label>
@@ -390,11 +397,6 @@
                     <fullName>Titillium Web</fullName>
                     <default>false</default>
                     <label>Titillium Web</label>
-                </value>
-                <value>
-                    <fullName>Ubuntu</fullName>
-                    <default>false</default>
-                    <label>Ubuntu</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -739,6 +741,30 @@
         <unique>false</unique>
     </fields>
     <label>Line Column</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>SBQQ__FieldName__c</columns>
+        <columns>SBQQ__Template__c</columns>
+        <columns>SBQQ__Section__c</columns>
+        <columns>SBQQ__DisplayOrder__c</columns>
+        <columns>SBQQ__DynamicNumberScale__c</columns>
+        <columns>SBQQ__Width__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>SBQQ__Alignment__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SBQQ__Template__c</field>
+            <operation>contains</operation>
+            <value>Final</value>
+        </filters>
+        <label>Copado Order Form Template Final</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Column Heading</label>
         <type>Text</type>

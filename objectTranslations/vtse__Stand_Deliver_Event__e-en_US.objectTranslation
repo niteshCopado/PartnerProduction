@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- SObjectId --></label>
+        <name>vtse__SObjectId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approver Action --></label>
+        <name>vtse__isApproverAction__c</name>
+    </fields>
+</CustomObjectTranslation>

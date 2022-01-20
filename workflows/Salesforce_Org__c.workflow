@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_For_Ops_AMs_and_CSMs_for_SFDC_Orgs</fullName>
+        <description>Email Alert For Ops, AMs, and CSMs for SFDC Orgs</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Account_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Sales_Templates/Email_Alert_For_Ops_AMs_and_CSMs_for_SFDC_Orgs</template>
+    </alerts>
+    <rules>
+        <fullName>Email Alert For Ops%2C AMs%2C and CSMs for SFDC Orgs</fullName>
+        <actions>
+            <name>Email_Alert_For_Ops_AMs_and_CSMs_for_SFDC_Orgs</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Salesforce_Org__c.Org_Type__c</field>
+            <operation>equals</operation>
+            <value>Production</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Salesforce_Org__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Salesforce_Org__c.Account_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Salesforce_Org__c.FPI_Expiration_Date__c</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <offsetFromField>Salesforce_Org__c.FPI_Expiration_Date__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <offsetFromField>Salesforce_Org__c.FPI_Expiration_Date__c</offsetFromField>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

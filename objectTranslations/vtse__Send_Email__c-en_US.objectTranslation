@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>vtse__Account__c</name>
+        <relationshipLabel><!-- Send Emails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>vtse__Case__c</name>
+        <relationshipLabel><!-- Send Emails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Community Link Url --></label>
+        <name>vtse__Community_Link_Url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>vtse__Contact__c</name>
+        <relationshipLabel><!-- Send Emails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created On --></label>
+        <name>vtse__Created_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Body --></label>
+        <name>vtse__Email_Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Subject --></label>
+        <name>vtse__Email_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>vtse__Lead__c</name>
+        <relationshipLabel><!-- Send Emails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notify Sender When Media Launched --></label>
+        <name>vtse__Notify_Sender_When_Media_Launched__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>vtse__Opportunity__c</name>
+        <relationshipLabel><!-- Send Emails --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sent From --></label>
+        <name>vtse__Sent_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sent On --></label>
+        <name>vtse__Sent_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vtse__Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media Converting</masterLabel>
+            <translation><!-- Media Converting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <currency>USD</currency>
+    <format>Summary</format>
+    <name>Customer Success Field History Tracking</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_Success_Field_History_Tracking__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Customer_Success_History__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -5,6 +5,163 @@
         <name>SBQQ__ActiveContractLookup</name>
     </fieldSets>
     <fields>
+        <label><!-- ACV1 --></label>
+        <name>ACV1__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACV --></label>
+        <name>ACV2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACV --></label>
+        <name>ACV_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACV --></label>
+        <name>ACV__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1st yr ARR --></label>
+        <name>ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Terms --></label>
+        <name>Billing_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- COA Status --></label>
+        <name>COA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CRT Value --></label>
+        <name>CRT_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current ARR --></label>
+        <name>Current_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Org --></label>
+        <name>Custom_Salesforce_Org__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The indication of how many days left till contract End Date. If the value is greater than 120 days, the renewal quote will be automatically created on renewal opportunity. --></help>
+        <label><!-- Days Since End Date --></label>
+        <name>Days_Since_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checkbox to be activated automatically, as soon as a customer has an active order with Premier Support. Used in CPQ Product Rules, as well as in Add on Calculation --></help>
+        <label><!-- Has Premier Support --></label>
+        <name>Has_Premier_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key Contact --></label>
+        <name>Key_Contact__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Non Standard ACV --></label>
+        <name>Non_Standard_ACV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of licenses --></label>
+        <name>Number_of_licenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order 1st yr ARR --></label>
+        <name>Order_1st_yr_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order ACV --></label>
+        <name>Order_ACV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Current ARR --></label>
+        <name>Order_Current_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Entitlement Created --></label>
+        <name>PS_Is_Entitlement_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Contract --></label>
+        <name>Parent_Contract__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment method --></label>
+        <name>Payment_method__c</name>
+        <picklistValues>
+            <masterLabel>BACS/Bank transfer</masterLabel>
+            <translation><!-- BACS/Bank transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit card</masterLabel>
+            <translation><!-- Credit card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct debit</masterLabel>
+            <translation><!-- Direct debit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Previous Contract --></label>
+        <name>Previous_Contract__c</name>
+        <relationshipLabel><!-- Contracts (Previous Contract) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quote Id --></label>
+        <name>Quote_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Feedback --></label>
+        <name>Renewal_Feedback__c</name>
+        <picklistValues>
+            <masterLabel>Cancellation requested</masterLabel>
+            <translation><!-- Cancellation requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal requested</masterLabel>
+            <translation><!-- Renewal requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation><!-- Requested --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal Opportunity --></label>
+        <name>Renewal_Opportunity__c</name>
+        <relationshipLabel><!-- Contracts (Renewal Opportunity) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date when the renewal process should start --></help>
+        <label><!-- Renewal Process Start Date --></label>
+        <name>Renewal_Process_Start_Date__c</name>
+    </fields>
+    <fields>
         <help>Determina se esse contrato está em vigor.</help>
         <label><!-- Active Contract --></label>
         <name>SBQQ__ActiveContract__c</name>
@@ -89,7 +246,7 @@
     </fields>
     <fields>
         <help>ID do catálogo de preços usado da oportunidade original.</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>
@@ -166,6 +323,145 @@
         <label><!-- Combine Subscription Quantities --></label>
         <name>SBQQ__SubscriptionQuantitiesCombined__c</name>
     </fields>
+    <fields>
+        <help><!-- This is the contract number that we receive from SFDC for this contract submission. --></help>
+        <label><!-- SFDC Contract Number --></label>
+        <name>SFDC_Contract_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- The org to which the contract is applied. --></help>
+        <label><!-- Salesforce Org --></label>
+        <name>Salesforce_Org__c</name>
+        <relationshipLabel><!-- Contracts (for Salesforce Org) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TCV1 --></label>
+        <name>TCV1__c</name>
+    </fields>
+    <fields>
+        <label><!-- TCV --></label>
+        <name>TCV_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- TCV --></label>
+        <name>TCV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term ACV --></label>
+        <name>Term_ACV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit price --></label>
+        <name>Unit_price__c</name>
+    </fields>
+    <fields>
+        <help><!-- Forecast of Annual Recurring Revenue based on Monthly Recurring Revenue. --></help>
+        <label><!-- Annual Recurring Revenue (Forecast) --></label>
+        <name>kuga_sub__AnnualRecurringRevenueForecast__c</name>
+    </fields>
+    <fields>
+        <help><!-- Summation of Subscription Annual Recurring Revenue values. Includes values of Subscriptions with Term 12 months or less. If Subscription Term is greater than 12 months, only 12 months is calculated. --></help>
+        <label><!-- Annual Recurring Revenue (Committed) --></label>
+        <name>kuga_sub__AnnualRecurringRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Email Renewal Notice --></label>
+        <name>kuga_sub__AutoEmailRenewalNotice__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field updates Current Renewal Opportunity Auto Email Renewal Order field --></help>
+        <label><!-- Auto Email Renewal Order --></label>
+        <name>kuga_sub__AutoEmailRenewalOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Buying --></label>
+        <name>kuga_sub__ContactBuying__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Dependent on if Auto Email Renewal Notice = True and Effective = True --></help>
+        <label><!-- Contract Renewal Notice Date --></label>
+        <name>kuga_sub__ContractRenewalNoticeDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective --></label>
+        <name>kuga_sub__Effective__c</name>
+    </fields>
+    <fields>
+        <help><!-- If one or more contributing Orders = Expansion, this should be set to true. --></help>
+        <label><!-- Expanded --></label>
+        <name>kuga_sub__Expanded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Renewal Notice Sent Date --></label>
+        <name>kuga_sub__LastRenewalNoticeSentDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Recurring Revenue --></label>
+        <name>kuga_sub__MonthlyRecurringRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Book --></label>
+        <name>kuga_sub__Pricebook2Id__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Renewal Opportunity --></label>
+        <name>kuga_sub__RenewalOpportunity__c</name>
+        <relationshipLabel><!-- Parent Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Renewal Term (months) --></label>
+        <name>kuga_sub__RenewalTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Renewal Notice Today --></label>
+        <name>kuga_sub__SendRenewalNoticeToday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription End Date --></label>
+        <name>kuga_sub__SubscriptionEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscription Start Date --></label>
+        <name>kuga_sub__SubscriptionStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Subscription Amount --></label>
+        <name>kuga_sub__TotalSubscriptionAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Subscription Count --></label>
+        <name>kuga_sub__TotalSubscriptionCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Subscription Quantity --></label>
+        <name>kuga_sub__TotalSubscriptionQuantity__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Merge --></label>
+        <name>APXTConga4__Conga_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Test_Button --></label>
+        <name>Conga_Test_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Entitlement --></label>
+        <name>Create_Entitlement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_PDF_contract --></label>
+        <name>Create_PDF_contract</name>
+    </webLinks>
     <webLinks>
         <label><!-- Amend --></label>
         <name>SBQQ__Amend</name>
@@ -173,5 +469,29 @@
     <webLinks>
         <label><!-- RenewContracts --></label>
         <name>SBQQ__RenewContracts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_End_of_Contract_Expiration --></label>
+        <name>Send_End_of_Contract_Expiration</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CancelContract --></label>
+        <name>kuga_sub__CancelContract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewExpansionOpportunity --></label>
+        <name>kuga_sub__NewExpansionOpportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewExpansionOpportunityList --></label>
+        <name>kuga_sub__NewExpansionOpportunityList</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewExpansionOrder --></label>
+        <name>kuga_sub__NewExpansionOrder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewExpansionOrderList --></label>
+        <name>kuga_sub__NewExpansionOrderList</name>
     </webLinks>
 </CustomObjectTranslation>

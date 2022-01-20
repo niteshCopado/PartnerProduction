@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Task Was Closed</name>
+    <packageVersions>
+        <majorNumber>5</majorNumber>
+        <minorNumber>203</minorNumber>
+        <namespace>scormanywhere</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>5</majorNumber>
+        <minorNumber>100</minorNumber>
+        <namespace>vtui</namespace>
+    </packageVersions>
+    <style>none</style>
+    <subject>Your Stand Deliver Task was closed.</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

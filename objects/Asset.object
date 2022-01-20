@@ -99,6 +99,19 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>kugo2p__AssetDefault</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>ContactId</fields>
+        <fields>Quantity</fields>
+        <fields>kugo2p__PurchasePrice__c</fields>
+        <fields>PurchaseDate</fields>
+        <fields>Status</fields>
+        <fields>kugo2p__ShipmentDate__c</fields>
+        <fields>kugo2p__ShipmentStatus__c</fields>
+        <label>Asset Default</label>
+    </compactLayouts>
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
@@ -336,25 +349,30 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ConsequenceOfFailure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>ContactId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>CurrentAmount</fullName>
+        <fullName>CurrencyIsoCode</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>CurrentLifecycleEndDate</fullName>
+        <fullName>Custom_Salesforce_Org__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Salesforce Org</label>
+        <referenceTo>Salesforce_Org__c</referenceTo>
+        <relationshipLabel>Assets</relationshipLabel>
+        <relationshipName>Assets</relationshipName>
+        <required>false</required>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>CurrentMrr</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>CurrentQuantity</fullName>
-        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -371,9 +389,6 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>HasLifecycleManagement</fullName>
-    </fields>
-    <fields>
         <fullName>InstallDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -383,14 +398,6 @@
     </fields>
     <fields>
         <fullName>IsInternal</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>LifecycleEndDate</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>LifecycleStartDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -406,11 +413,6 @@
     <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>OwnerId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
@@ -1227,6 +1229,29 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Salesforce_Org__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Once licenses are assigned to an org, this lookup field should be set.</inlineHelpText>
+        <label>Salesforce Org</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Salesforce Org</value>
+            </filterItems>
+            <infoMessage>Only Accounts with Salesforce Org set as the record type will be displayed.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Assets</relationshipLabel>
+        <relationshipName>Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>SerialNumber</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -1245,10 +1270,6 @@
         <fullName>StockKeepingUnit</fullName>
     </fields>
     <fields>
-        <fullName>TotalLifecycleAmount</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>UsageEndDate</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -1258,22 +1279,132 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>blng__InvoiceLineBalance__c</fullName>
+        <fullName>kuga_sub__ContractNumber__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>The sum of all posted invoice line balances for this asset.</description>
+        <description>Lookup to the Contract record which contains the related Asset record.</description>
         <externalId>false</externalId>
-        <inlineHelpText>The sum of all posted invoice line balances for this asset.</inlineHelpText>
-        <label>Invoice Line Balance</label>
+        <inlineHelpText>Lookup to the Contract record which contains the related Asset record.</inlineHelpText>
+        <label>Contract Number</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Assets</relationshipLabel>
+        <relationshipName>Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>kuga_sub__Renew__c</fullName>
+        <deprecated>false</deprecated>
+        <description>References the Renew field on the associated Order Product Line.</description>
+        <externalId>false</externalId>
+        <formula>kugo2p__OrderProductLine__r.kuga_sub__Renew__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>References the Renew field on the associated Order Product Line.</inlineHelpText>
+        <label>Renew</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>kugo2p__OrderNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+kugo2p__OrderProductLine__r.kugo2p__SalesOrder__r.Id, kugo2p__OrderProductLine__r.kugo2p__SalesOrder__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>kugo2p__OrderProductLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order Product Line</label>
+        <referenceTo>kugo2p__SalesOrderProductLine__c</referenceTo>
+        <relationshipLabel>Assets</relationshipLabel>
+        <relationshipName>Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>kugo2p__PurchasePrice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Purchase Price</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
     </fields>
+    <fields>
+        <fullName>kugo2p__ShipmentDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(
+  NOT(ISBLANK(kugo2p__ShipmentLine__c)),
+  kugo2p__ShipmentLine__r.kugo2p__ShipmentDate__c,
+  NULL
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shipment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>kugo2p__ShipmentLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shipment Line</label>
+        <referenceTo>kugo2p__ShipmentLine__c</referenceTo>
+        <relationshipLabel>Assets</relationshipLabel>
+        <relationshipName>Assets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>kugo2p__ShipmentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(
+  NOT(ISBLANK(kugo2p__ShipmentLine__c)),
+  kugo2p__ShipmentLine__r.kugo2p__RecordStatus__c,
+  NULL
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shipment Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <listViews>
         <fullName>AllAssets</fullName>
         <filterScope>Everything</filterScope>
         <label>All Assets</label>
+    </listViews>
+    <listViews>
+        <fullName>kugo2p__All</fullName>
+        <columns>ASSET.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.NAME</columns>
+        <columns>kugo2p__OrderNumber__c</columns>
+        <columns>kugo2p__OrderProductLine__c</columns>
+        <columns>ASSET.QUANTITY</columns>
+        <columns>kugo2p__PurchasePrice__c</columns>
+        <columns>ASSET.PURCHASE_DATE</columns>
+        <columns>kugo2p__ShipmentDate__c</columns>
+        <columns>kugo2p__ShipmentStatus__c</columns>
+        <columns>ASSET.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>ASSET.NAME</customTabListAdditionalFields>

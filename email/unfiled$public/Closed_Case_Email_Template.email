@@ -1,0 +1,15 @@
+Hello {!Case.CreatedBy},
+
+Your case has been closed, please see the details of the record below:
+
+
+Case Number: {!Case.CaseNumber}
+
+Subject: {!Case.Subject}
+
+Status: {!Case.Status}
+
+Closed Reason/Comment: {!Case.Last_comment__c}
+
+
+{!Case.Link}

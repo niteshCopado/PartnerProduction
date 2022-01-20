@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Project Team Member</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Project Team Members</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Customer Project Team Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Project --></label>
+        <name>Customer_Project__c</name>
+        <relationshipLabel><!-- Customer Project Team Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Only the Active Team Member will be able to access Project on Community. --></help>
+        <label><!-- IsActive --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
+        <help><!-- A Super User by default will get all the other permissions. --></help>
+        <label><!-- Is Super User --></label>
+        <name>Is_Super_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Log Case --></label>
+        <name>Log_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manage Team --></label>
+        <name>Manage_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Pic URL --></label>
+        <name>Profile_Pic_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Name --></label>
+        <name>Project_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Customer Project Team Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- View Case Report --></label>
+        <name>View_Case_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Certification Report --></label>
+        <name>View_Certification_Report__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Only Community User can be added as Project Team Member --></errorMessage>
+        <name>Select_Only_Community_User_Contact</name>
+    </validationRules>
+</CustomObjectTranslation>

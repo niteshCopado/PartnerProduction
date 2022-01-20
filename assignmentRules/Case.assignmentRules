@@ -1,92 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignmentRule>
-        <fullName>Standard</fullName>
+        <fullName>Default Assignment</fullName>
         <active>true</active>
         <ruleEntry>
-            <assignedTo>nnatha@copado.com.uat</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>Sales_Cases</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.Origin</field>
                 <operation>equals</operation>
-                <value>US,USA,United States,United States of America</value>
+                <value>Sales Email</value>
             </criteriaItems>
-            <criteriaItems>
-                <field>Account.SLA__c</field>
-                <operation>equals</operation>
-                <value>Gold,Platinum</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
-            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>nnatha@copado.com.uat</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>Product_Team_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR  2</booleanFilter>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.RecordTypeId</field>
                 <operation>equals</operation>
-                <value>US,USA,United States,United States of America</value>
+                <value>Support Case</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Account.SLA__c</field>
+                <field>Case.Origin</field>
                 <operation>equals</operation>
-                <value>Silver,Bronze</value>
+                <value>Community</value>
             </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
-            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>nnatha@copado.com.uat</assignedTo>
-            <assignedToType>User</assignedToType>
-            <criteriaItems>
-                <field>Account.BillingCountry</field>
-                <operation>notEqual</operation>
-                <value>US,USA,United States,United States of America</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.SLA__c</field>
-                <operation>equals</operation>
-                <value>Gold,Platinum</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
-            </criteriaItems>
+            <assignedTo>APO_Platform_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(   RecordType.DeveloperName = &apos;APO_Request&apos;,   OR( ISPICKVAL (Status, &quot;Business Review Completed&quot;),       ISPICKVAL(Business_Process__c, &quot;APO - Applications&quot;),       ISPICKVAL(Business_Process__c, &quot;APO - User Access&quot;),       ($Setup.APO_Requests__c.Business_Process_Owner__c = true &amp;&amp; ISNEW()) ) )</formula>
+            <template>Support_Templates/New_case_notification_internal_users</template>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>nnatha@copado.com.uat</assignedTo>
+            <assignedTo>mmessina@copado.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
-                <operation>notEqual</operation>
-                <value>US,USA,United States,United States of America</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.SLA__c</field>
+                <field>Case.Business_Process__c</field>
                 <operation>equals</operation>
-                <value>Silver,Bronze</value>
+                <value>Marketing - Campaign,Marketing - Lead</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
             </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>nnatha@copado.com.uat</assignedTo>
+            <assignedTo>sfrazier@copado.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Partner</value>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Sales - Account/Contact,Sales - Activity/Event,Sales - Opportunity/Quota/Forecast</value>
             </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>gramchandani@copado.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Services - Mission Control Objects</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>kbelton@copado.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Customer Success</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Support_Cases_APO_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Support - Cases</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>mbarclay@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Support - Knowledge Articles</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>adodge@copado.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Community - Academy Certification Objects,Community - AC Events,Community - Achievements,Community - Appinium,Community - Coupon,Community - Coupon Request,Community - Ideas,Community - Listing (DevOps Exchange),Community - Listing Detail</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Community - Academy Certification Objects,Community - AC Events,Community - Achievements,Community - Ideas,Community - Success App</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>egarcia@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Product &amp; Engineering - Applications,Product &amp; Engineering - Epic,Product &amp; Engineering - Feature,Product &amp; Engineering - Module,Product &amp; Engineering - Project,Product &amp; Engineering - Sprint,Product &amp; Engineering - User Story/User Story Tasks</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>egarcia@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Product &amp; Engineering - Action Plan,Product &amp; Engineering - Value Stream Maps</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>fnunez@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Product &amp; Engineering - Deployment,Product &amp; Engineering - Environments,Product &amp; Engineering - Pipeline,Product &amp; Engineering - Promotion</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Release_Cases_APO_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Product &amp; Engineering - Release</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>rmilem@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>&quot;Finance - Pricebook, CPQ and Kugamon&quot;,Finance - Quote/Order/Contract/Invoice</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>sgidwani@copa.do</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Business_Process__c</field>
+                <operation>equals</operation>
+                <value>Product &amp; Engineering - Copado Work Management System</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>APO Request</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Support_Architect</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Customer Success Architect</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Case_Transfer__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <template>Support_Templates/New_case_notification_internal_users</template>
         </ruleEntry>
     </assignmentRule>
 </AssignmentRules>

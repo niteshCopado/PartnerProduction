@@ -9,6 +9,7 @@
         <name>copado__Deployed__c</name>
     </fields>
     <fields>
+        <help><!-- Read only field used internally for system property replacement. --></help>
         <label><!-- Destination Id --></label>
         <name>copado__Destination_Id__c</name>
     </fields>
@@ -46,6 +47,7 @@
         <name>copado__External_Status__c</name>
     </fields>
     <fields>
+        <help><!-- Read only field used internally for system property replacement. --></help>
         <label><!-- Repository Id --></label>
         <name>copado__Git_Repository__c</name>
     </fields>
@@ -60,6 +62,7 @@
         <name>copado__Pipeline_Id__c</name>
     </fields>
     <fields>
+        <help><!-- Read only field used internally for system property replacement. --></help>
         <label><!-- Source Id --></label>
         <name>copado__Source_Id__c</name>
     </fields>
@@ -73,10 +76,6 @@
         <picklistValues>
             <masterLabel>Failed</masterLabel>
             <translation><!-- Failed --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>In progress</masterLabel>
-            <translation><!-- In progress --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pending</masterLabel>

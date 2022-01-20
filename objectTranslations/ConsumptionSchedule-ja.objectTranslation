@@ -12,22 +12,4 @@
             <translation>レート</translation>
         </picklistValues>
     </fields>
-    <fields>
-        <help>割り当てられた請求ルールのルックアップ</help>
-        <label><!-- Billing Rule --></label>
-        <name>blng__BillingRule__c</name>
-        <relationshipLabel><!-- Billing Rule --></relationshipLabel>
-    </fields>
-    <fields>
-        <help><!-- Lookup to the Revenue Recognition Rule assigned --></help>
-        <label><!-- Revenue Recognition Rule --></label>
-        <name>blng__RevenueRecognitionRule__c</name>
-        <relationshipLabel><!-- Revenue Recognition Rule --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>割り当てられた税金ルールのルックアップ</help>
-        <label><!-- Tax Rule --></label>
-        <name>blng__TaxRule__c</name>
-        <relationshipLabel><!-- Tax Rule --></relationshipLabel>
-    </fields>
 </CustomObjectTranslation>

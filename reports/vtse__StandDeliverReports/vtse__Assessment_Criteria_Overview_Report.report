@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>vtse__Stand_Deliver_Task__c.vtse__Stand_Deliver_Submissions__r.vtse__Assessment_Feedbacks__r.vtse__Assessment_Feedback_Details__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>vtse__Stand_Deliver_Task__c.vtse__Stand_Deliver_Submissions__r.vtse__Assessment_Feedbacks__r.vtse__Assessment_Feedback_Details__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>vtse__Stand_Deliver_Task__c.vtse__Stand_Deliver_Submissions__r.vtse__Assessment_Feedbacks__r.vtse__Assessment_Feedback_Details__r$vtse__Score__c</field>
+    </columns>
+    <columns>
+        <field>vtse__Stand_Deliver_Task__c.vtse__Stand_Deliver_Submissions__r.vtse__Assessment_Feedbacks__r.vtse__Assessment_Feedback_Details__r$vtse__Response__c</field>
+    </columns>
+    <description>Assessment Criteria Overview Report</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>vtse__Stand_Deliver_Task__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>vtse__Stand_Deliver_Task__c$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>vtse__Stand_Deliver_Task__c.vtse__Stand_Deliver_Submissions__r.vtse__Assessment_Feedbacks__r.vtse__Assessment_Feedback_Details__r$vtse__Assessment_Criteria__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Assessment Criteria Overview Report</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>vtse__FeedbackDetails_with_Feedbacks_Submissions_Tasks__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>vtse__Stand_Deliver_Task__c$vtse__Closes_On__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

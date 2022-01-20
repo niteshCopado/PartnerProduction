@@ -66,10 +66,8 @@
                         return false;
                     }
                     if (isTestOnly == true) setLockScreenMessage('{!$Label.Creating_Validation_Deployment_Message}');
-                    lockScreen();
 
-                    var att = globalJobsManagerStart(copadoApp.promotionId, 'Promotion', "{!JSENCODE(jobsManagerMatchingKeys)}");
-                    copadoApp.callBackEnd(deploymentName, isTestOnly, testLevel, att, attachdeploymentfile);
+                    copadoApp.callBackEnd(deploymentName, isTestOnly, testLevel, '', attachdeploymentfile);
                 },
                 sforceFailure: function (error) {
                     console.error('An error has occured with the Salesforce Ajax Toolkit: ', error);
@@ -85,23 +83,8 @@
                         console.log('Calling Copado for: ', copadoApp.promotionId);
                         deploymentName = deploymentName.substring(0, 80);
                         var url = '{!JSENCODE(urlBase)}promote/' + copadoApp.promotionId + '{!JSENCODE(urlParameters)}&deploy=false&deploymentName=' + encodeURIComponent(deploymentName) + '&checkOnly=' + isTestOnly + '&testLevel=' + testLevel + '&attachDeploymentFile=' + attachdeploymentfile;
-                        //console.info('url==> ',url);
-                        dw.u.getRemote(url, function (res) {
-                            console.log('Promote callback: ', res);
-                            copadoApp.callComplete();
-                        }, true, false, function (res) {//added by ucu to be able to get rid of the attachment of failed job which still shows in progress and locks the page.
-                            try {
-                                statusManager.handleStatusComplete(res);
-                                dw.u.deleteAttach(att.ParentId, att.Name);
-                            }
-                            catch (ex) {
-                                console.error('error is the following==> ', ex);
-                            }
-                        });
+                        callBackendToCreateDeployment(url);
                     }
-                },
-                callComplete: function () {
-                    reloadPromotionPage();
                 }
             }
 
@@ -421,6 +404,15 @@
                     }
                 );
             });
+
+            function verifyPollStatus(isPollInProgress, conflictMessage) {
+                if (!isPollInProgress) {
+                    if (conflictMessage) {
+                        alert(conflictMessage);
+                    }
+                    reloadPromotionPage();
+                }
+            }
         </script>
     </head>
 
@@ -569,8 +561,9 @@
                                         <apex:actionFunction name="reRenderForm" reRender="theForm" />
                                         <apex:actionFunction name="reloadPromotionPage" action="{!reloadPromotion}" reRender="dummy" />
                                         <apex:actionFunction name="openResolveConflictsPage" action="{!openResolveConflictsPage}" reRender="dummy" />
-
-                                        <c:JobsManager matchingKeys="{!jobsManagerMatchingKeys}"></c:JobsManager>
+                                        <apex:outputPanel id="jobManager">
+                                            <c:JobsManager matchingKeys="{!jobsManagerMatchingKeys}"></c:JobsManager>
+                                        </apex:outputPanel>
 
                                         <apex:outputPanel id="pnlDetail" layout="block" styleClass="copado-lightning-container">
                                             <apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme4d'}" layout="none">
@@ -739,6 +732,10 @@
                                                 closeModal();
                                                 copadoApp.createDeployment(deploymentName, isTestOnly, testLevel, attachdeploymentfile);
                                             }
+
+                                            function closeProgressModalFunction() {
+                                                closeProgressModal();
+                                            }
                                         </script>
 
                                         <div id="usOutput" class="slds-scope copado-lightning-container">
@@ -819,10 +816,30 @@
                                                 </script>
                                             </apex:outputPanel>
                                         </div>
+                                        <apex:outputPanel id="copadoNotificationStatus">
+                                            <apex:actionFunction name="callBackendToCreateDeployment" action="{!callBackendToCreateDeployment}" reRender="pageMessages,copadoNotificationStatus">
+                                                <apex:param id="url" name="url" value="" />
+                                            </apex:actionFunction>
+                                            <apex:actionFunction name="closeProgressModal" action="{!closeProgressModal}" reRender="copadoNotificationStatus" />
+                                            <apex:actionPoller oncomplete="verifyPollStatus({!isPollInProgress},'{!conflictMessage}'); return false;" enabled="{!isPollInProgress}"
+                                                action="{!checkCopadoNotificationStatus}" interval="5" reRender="copadoNotificationStatus,jobManager"
+                                            />
+                                            <apex:outputPanel rendered="{!AND(isPollInProgress,NOT(isSpinnerHiddenByUser))}">
+                                                <div id="screenLocker" class="slds-screenlocker lightninglocker" style="display:block;">
+                                                    <div id="screenLockerLightningFrame">
+                                                        <img style="width: 100px;" src="{!URLFOR($Resource.SLDS,'/assets/images/spinners/slds_spinner_brand.gif')}" />
+                                                        <p id="screenLockerMessage" class="lightninglockerMessage">{!notificationStep}</p>
+                                                        <br />
+                                                        <a href="#" onclick="closeProgressModalFunction(); return false;">{!$Label.HIDE_MESSAGE}</a>
+                                                    </div>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </apex:outputPanel>
                                     </apex:form>
 
                                 </apex:outputPanel>
                             </div>
+
                             <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
                                 <div class="slds-scope copado-lightning-container">
                                     <apex:outputPanel styleClass="copado-lightning-container">
@@ -1261,12 +1278,6 @@
                     statusManager.sessionId = __sfdcSessionId;
                     statusManager.parentId = '{!JSENCODE(Promotion__c.Id)}';
                     statusManager.waitTimeout = 10000;
-                    statusManager.initFunction = function () { };
-                    statusManager.successFunction = function () { copadoApp.callComplete(); };
-
-                    setTimeout(function () {
-                        statusManager.initialise();
-                    }, 2000);
                     var body = document.getElementsByTagName('body')[0];
                     body.addEventListener("beforeunload", function () {
                         copadoStreamingService.unload();
@@ -1296,11 +1307,9 @@
                     var excludeds = [];
                     var excludedstr = "{!JSENCODE(excludeds)}";
                     var seleniumtest = "{!isCSTEnabled}";
-                    console.log('exc==> ', excludeds);
                     if (excludedstr.length > 0) {
                         excludeds = excludedstr.split(';');
                         for (var i = 0; i < excludeds.length; i++) {
-                            console.log('excludeds[i]==> ', excludeds[i]);
                             $copado('[id$="' + excludeds[i] + '"]').detach();
                         }
                     }

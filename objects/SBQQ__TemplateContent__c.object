@@ -158,6 +158,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id for data migration &amp; integration with other solutions</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__CustomSource__c</fullName>
         <deprecated>false</deprecated>
         <description>URL to a VisualForce page that generates content when type is set to &quot;Custom&quot;.</description>
@@ -242,11 +254,6 @@
                     <label>Open Sans</label>
                 </value>
                 <value>
-                    <fullName>Play</fullName>
-                    <default>false</default>
-                    <label>Play</label>
-                </value>
-                <value>
                     <fullName>PT Sans</fullName>
                     <default>false</default>
                     <label>PT Sans</label>
@@ -275,11 +282,6 @@
                     <fullName>Titillium Web</fullName>
                     <default>false</default>
                     <label>Titillium Web</label>
-                </value>
-                <value>
-                    <fullName>Ubuntu</fullName>
-                    <default>false</default>
-                    <label>Ubuntu</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -406,11 +408,17 @@
     <listViews>
         <fullName>SBQQ__All</fullName>
         <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>External_Id__c</columns>
         <columns>SBQQ__Type__c</columns>
+        <columns>SBQQ__FontFamily__c</columns>
+        <columns>SBQQ__FontSize__c</columns>
+        <columns>SBQQ__TextColor__c</columns>
         <columns>CREATED_DATE</columns>
         <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Content Name</label>

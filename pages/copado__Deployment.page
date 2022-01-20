@@ -237,7 +237,8 @@
                         rendered="{!AND($User.UIThemeDisplayed != 'Theme4d',!showStepsOnly)}" />
                 </apex:outputPanel>
                 <apex:outputPanel id="chatter" layout="block" styleClass="copado-lightning-chatter">
-                    <chatter:feedWithFollowers entityId="{!deployment.id}" showHeader="true" rendered="{!AND(isChatterEnabled,!showStepsOnly)}" />
+                    <chatter:feedWithFollowers entityId="{!deployment.id}" showHeader="true" rendered="{!AND(isChatterEnabled,!showStepsOnly)}"
+                    />
                 </apex:outputPanel>
                 <div id="form" class="copado-lightning-container" style="padding-top:12px;">
                     <apex:form id="theForm" rendered="{!!showStepsOnly}">
@@ -247,8 +248,8 @@
                             <apex:panelGrid id="theGrid" columns="2" style="width:100%;" columnClasses="co-info-panel">
                                 <apex:pageblock title="Information" id="pbInformation">
                                     <apex:pageBlockButtons id="pbbInfo" location="top">
-                                        <apex:commandButton id="btnDeploymentSave" value="{!$Label.site.save}" onclick="copadoApp.dirty=false;"
-                                            action="{!saveDeployment}" rerender="pbsDestinations,otherInfoSection,msg,pJSConfig,headerFields,lexHeaderContainer,sectionHeaderContainer"
+                                        <apex:commandButton id="btnDeploymentSave" value="{!$Label.site.save}" onclick="copadoApp.dirty=false;" action="{!saveDeployment}"
+                                            rerender="pbsDestinations,otherInfoSection,msg,pJSConfig,headerFields,lexHeaderContainer,sectionHeaderContainer"
                                         />
                                         <apex:commandButton id="btnDeploymentCancel" value="{!$Label.site.cancel}" action="{!cancel}" onclick="copadoApp.cancel();return false;"
                                         />
@@ -388,12 +389,14 @@
                                     <apex:pageBlockSection id="pbsPbStatus" columns="1">
                                         <apex:outputField id="ofStatus" value="{!deployment.copado__Status__c}">
                                             <span class="orgIcon">
-                                                <apex:image styleClass="js-status-icon" value="{!HTMLENCODE(deployment.copado__Flag_Status__c)}" style="width:20px; height:auto;" />
+                                                <apex:image styleClass="js-status-icon" value="{!HTMLENCODE(deployment.copado__Flag_Status__c)}" style="width:20px; height:auto;"
+                                                />
                                             </span>
                                         </apex:outputField>
                                         <apex:outputField id="ofDate" value="{!deployment.copado__Date__c}" />
                                         <apex:outputField id="ofCompleted" value="{!deployment.copado__Completed__c}" />
-                                        <apex:outputField id="ofPromotion" value="{!deployment.copado__Promotion__c}" rendered="{!NOT(ISBLANK(copado__Deployment__c.copado__Promotion__c))}" />
+                                        <apex:outputField id="ofPromotion" value="{!deployment.copado__Promotion__c}" rendered="{!NOT(ISBLANK(copado__Deployment__c.copado__Promotion__c))}"
+                                        />
                                         <apex:outputField id="ofComplianceStatus" value="{!deployment.copado__Compliance_Status__c}" />
                                         <apex:outputField id="ofLastComplianceScanDate" value="{!deployment.copado__Last_Compliance_Scan_Date__c}" />
                                         <apex:outputField id="ofBT" value="{!copado__Deployment__c.Build_Task__r.Name}" rendered="{!NOT(ISBLANK(copado__Deployment__c.copado__Build_Task__c))}"
@@ -463,8 +466,10 @@
                                                     <option value="Custom Settings">{!$Label.STEP_TYPE_CUSTOM_SETTINGS}</option>
                                                     <option value="Apex">{!$Label.STEP_TYPE_APEX}</option>
                                                     <option value="Manual Task">{!$Label.STEP_TYPE_MANUAL_TASK}</option>
+                                                    <option value="Test">{!$Label.StepTypeTest}</option>
                                                     <option value="Git MetaData">{!$Label.STEP_TYPE_GIT_METADATA}</option>
                                                     <option value="Git Promotion" data-non-user-selectable="true" disabled="disabled">Git Promotion</option>
+                                                    <option value="{!$Label.Rollback}" data-non-user-selectable="true" disabled="disabled">{!$Label.Rollback}</option>
                                                     <option value="Automation">{!$Label.Automation}</option>
                                                     <option value="Function">Function</option>
                                                     <option value="Salesforce Flow">{!$Label.SALESFORCE_FLOW}</option>

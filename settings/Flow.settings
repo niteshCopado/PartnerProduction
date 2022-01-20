@@ -3,7 +3,7 @@
     <canDebugFlowAsAnotherUser>false</canDebugFlowAsAnotherUser>
     <doesEnforceApexCpuTimeLimit>false</doesEnforceApexCpuTimeLimit>
     <doesFormulaEnforceDataAccess>true</doesFormulaEnforceDataAccess>
-    <doesFormulaGenerateHtmlOutput>true</doesFormulaGenerateHtmlOutput>
+    <doesFormulaGenerateHtmlOutput>false</doesFormulaGenerateHtmlOutput>
     <enableFlowBREncodedFixEnabled>true</enableFlowBREncodedFixEnabled>
     <enableFlowCustomPropertyEditor>false</enableFlowCustomPropertyEditor>
     <enableFlowDeployAsActiveEnabled>false</enableFlowDeployAsActiveEnabled>
@@ -14,7 +14,7 @@
     <enableFlowPauseEnabled>false</enableFlowPauseEnabled>
     <enableFlowUseApexExceptionEmail>false</enableFlowUseApexExceptionEmail>
     <enableLightningRuntimeEnabled>true</enableLightningRuntimeEnabled>
-    <isAccessToInvokedApexRequired>true</isAccessToInvokedApexRequired>
+    <isAccessToInvokedApexRequired>false</isAccessToInvokedApexRequired>
     <isApexPluginAccessModifierRespected>true</isApexPluginAccessModifierRespected>
     <isEnhancedFlowListViewVisible>true</isEnhancedFlowListViewVisible>
     <isFlowApexContextRetired>false</isFlowApexContextRetired>

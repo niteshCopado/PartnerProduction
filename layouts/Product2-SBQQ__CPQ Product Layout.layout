@@ -17,6 +17,14 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>DisplayUrl</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Description</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>IsActive</field>
             </layoutItems>
             <layoutItems>
@@ -46,6 +54,30 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__ConfiguredDescriptionPattern__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Image_height__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Image_width__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Image_URL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Image__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Select_Profile__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Product_Grouping__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -85,21 +117,16 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__DescriptionLocked__c</field>
             </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Description Information</label>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Description</field>
+                <field>ACV_ARR_Product__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Non_Standard_Product__c</field>
             </layoutItems>
         </layoutColumns>
-        <style>OneColumn</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
@@ -118,6 +145,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__ReconfigurationDisabled__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ConfigurationFields__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -178,6 +209,10 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__DynamicPricingConstraint__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__DefaultPricingTable__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -209,8 +244,150 @@
                 <field>SBQQ__DiscountCategory__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>CurrencyIsoCode</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>SBQQ__PricingGuidance__c</field>
+                <field>ExternalId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>External_Id__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Mission Control Fields</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Engagement_Type__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>amc__Milestone_Template__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>amc__Project_Unit__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>TEMP</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ChargeType__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__BillingType__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__BillingFrequency__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ConfigurationFieldSet__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ConfigurationFormTitle__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ConfigurationValidator__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__CostSchedule__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__CustomConfigurationPage__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__CustomConfigurationRequired__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ExternalDataSourceId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ExternallyConfigurable__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__GenerateContractedPrice__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__HasConfigurationAttributes__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__NewQuoteGroup__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ProductPictureID__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>StockKeepingUnit</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>QuantityUnitOfMeasure</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__SubscriptionConversion__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Taxable__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__TaxCode__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__UpgradeRatio__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Used_on_Website__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Credits_to_be_assigned__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Partner_Product_Catalog__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__AllocatePotOnOrders__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -293,6 +470,60 @@
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Renewal Information (Kugamon)</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>kuga_sub__Renewable__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>kuga_sub__UpliftRenewalPrice__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>kuga_sub__RenewalProduct__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>kuga_sub__Track__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Scheduling Information (Kugamon Invoicing)</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CanUseRevenueSchedule</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>RevenueScheduleType</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>NumberOfRevenueInstallments</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>RevenueInstallmentPeriod</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Fields</label>
@@ -321,23 +552,33 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <customButtons>SBQQ__EditAll</customButtons>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>SBQQ__PriceBook2__c</fields>
-        <fields>SBQQ__LowerBound__c</fields>
-        <fields>SBQQ__UpperBound__c</fields>
-        <fields>SBQQ__Price__c</fields>
-        <relatedList>SBQQ__BlockPrice__c.SBQQ__Product__c</relatedList>
+        <fields>kugo2p__ProductCode__c</fields>
+        <fields>kugo2p__NonStock__c</fields>
+        <fields>kugo2p__DisableShipments__c</fields>
+        <fields>kugo2p__KitBundle__c</fields>
+        <fields>kugo2p__Service__c</fields>
+        <fields>kugo2p__DefaultServiceTerm__c</fields>
+        <fields>kugo2p__UnitofTerm__c</fields>
+        <fields>kugo2p__Hide__c</fields>
+        <fields>kugo2p__Active__c</fields>
+        <relatedList>kugo2p__AdditionalProductDetail__c.kugo2p__ReferenceProduct__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>SBQQ__Active__c</fields>
-        <fields>SBQQ__UnitCost__c</fields>
-        <relatedList>SBQQ__Cost__c.SBQQ__Product__c</relatedList>
+        <fields>kugo2p__PriceBookName__c</fields>
+        <fields>kugo2p__Type__c</fields>
+        <fields>kugo2p__IsActive__c</fields>
+        <relatedList>kugo2p__TieredPricing__c.kugo2p__Product__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <relatedList>SBQQ__Dimension__c.SBQQ__Product__c</relatedList>
+        <fields>CREATEDBY_USER</fields>
+        <relatedList>kugo2p__FavoriteMember__c.kugo2p__Product__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -347,6 +588,18 @@
         <fields>SBQQ__DiscountSchedule__c</fields>
         <fields>SBQQ__Category__c</fields>
         <relatedList>SBQQ__ProductFeature__c.SBQQ__ConfiguredSKU__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>SBQQ__Number__c</fields>
+        <fields>SBQQ__OptionalSKU__c</fields>
+        <fields>SBQQ__Feature__c</fields>
+        <fields>SBQQ__Type__c</fields>
+        <fields>SBQQ__Bundled__c</fields>
+        <fields>SBQQ__ComponentCode__c</fields>
+        <fields>SBQQ__MinQuantity__c</fields>
+        <fields>SBQQ__MaxQuantity__c</fields>
+        <relatedList>SBQQ__ProductOption__c.SBQQ__ConfiguredSKU__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -363,43 +616,10 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>SBQQ__Number__c</fields>
-        <fields>SBQQ__OptionalSKU__c</fields>
-        <fields>SBQQ__Feature__c</fields>
+        <fields>CURRENCY_ISO_CODE</fields>
+        <fields>SBQQ__PriceEditable__c</fields>
         <fields>SBQQ__Type__c</fields>
-        <fields>SBQQ__Bundled__c</fields>
-        <fields>SBQQ__ComponentCode__c</fields>
-        <fields>SBQQ__MinQuantity__c</fields>
-        <fields>SBQQ__MaxQuantity__c</fields>
-        <relatedList>SBQQ__ProductOption__c.SBQQ__ConfiguredSKU__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>SBQQ__Active__c</fields>
-        <fields>SBQQ__ConstrainingOption__c</fields>
-        <fields>SBQQ__ConstrainedOption__c</fields>
-        <fields>SBQQ__Type__c</fields>
-        <relatedList>SBQQ__OptionConstraint__c.SBQQ__ConfiguredSKU__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>SBQQ__ProductAction__c.SBQQ__Product__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>SBQQ__RuleType__c</fields>
-        <fields>SBQQ__ProductRule__c</fields>
-        <fields>SBQQ__Active__c</fields>
-        <relatedList>SBQQ__ConfigurationRule__c.SBQQ__Product__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>SBQQ__Feature__c</fields>
-        <fields>SBQQ__DisplayOrder__c</fields>
-        <fields>SBQQ__Position__c</fields>
-        <fields>SBQQ__Required__c</fields>
-        <fields>SBQQ__TargetField__c</fields>
-        <relatedList>SBQQ__ConfigurationAttribute__c.SBQQ__Product__c</relatedList>
+        <relatedList>SBQQ__Dimension__c.SBQQ__Product__c</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedStandardPriceList</relatedList>
@@ -440,13 +660,29 @@
     <relatedLists>
         <relatedList>RelatedPricebookEntryList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Default_Package_Quantity__c.Included_Product__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Default_Package_Quantity__c.Package_Product__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>SBQQ__QuoteLine__c.Parent_Product__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>SBQQ__QuoteLine__c.SBQQ__Product__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hS00000010lHF</masterLabel>
+        <masterLabel>00hb000000WZdcm</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

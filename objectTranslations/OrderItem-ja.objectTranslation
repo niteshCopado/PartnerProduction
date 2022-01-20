@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Deferred Revenue --></label>
+        <name>Deferred_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring Monthly Price --></label>
+        <name>Recurring_Monthly_Price__c</name>
+    </fields>
+    <fields>
         <help>注文商品が有効かどうかを示します。</help>
         <label><!-- Activated --></label>
         <name>SBQQ__Activated__c</name>
@@ -238,6 +246,11 @@
         <name>SBQQ__TerminatedDate__c</name>
     </fields>
     <fields>
+        <help><!-- Total amount with tax included --></help>
+        <label><!-- Total Amount (With Tax) --></label>
+        <name>SBQQ__TotalAmount__c</name>
+    </fields>
+    <fields>
         <help>個別品目の全期間正価。</help>
         <label><!-- Full-Term Net Unit Price --></label>
         <name>SBQQ__UnproratedNetPrice__c</name>
@@ -247,266 +260,6 @@
         <label><!-- Upgraded Subscription --></label>
         <name>SBQQ__UpgradedSubscription__c</name>
         <relationshipLabel><!-- Upgraded Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Revenue Allocation Amount --></label>
-        <name>blng__AllocatedRevenueAmount__c</name>
-    </fields>
-    <fields>
-        <label><!-- Asset (CALM) --></label>
-        <name>blng__Asset__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Bill Through Date Override --></label>
-        <name>blng__BillThroughDateOverride__c</name>
-    </fields>
-    <fields>
-        <label><!-- Billable Unit Price --></label>
-        <name>blng__BillableUnitPrice__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品のすべての請求書の合計 (税抜)</help>
-        <label><!-- Billed Amount (without tax) --></label>
-        <name>blng__BilledAmountwithouttax__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品の請求書で課せられる、すべての税金の合計。</help>
-        <label><!-- Billed Tax --></label>
-        <name>blng__BilledTax__c</name>
-    </fields>
-    <fields>
-        <label><!-- Billing Account --></label>
-        <name>blng__BillingAccount__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Billing GL Rule --></label>
-        <name>blng__BillingGLRule__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Billing GL Treatment --></label>
-        <name>blng__BillingGLTreatment__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>この注文商品に割り当てられた請求ルールのルックアップ</help>
-        <label><!-- Billing Rule --></label>
-        <name>blng__BillingRule__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>この注文商品に割り当てられた請求処理のルックアップ</help>
-        <label><!-- Billing Treatment --></label>
-        <name>blng__BillingTreatment__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>キャンセルや切り替えのために注文商品から差し引かれた合計。</help>
-        <label><!-- Canceled Billing Amount (without tax) --></label>
-        <name>blng__CanceledBillings__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品の会計の記録に使用する財務帳簿オブジェクトのルックアップ。</help>
-        <label><!-- Finance Book (Accounting) --></label>
-        <name>blng__FinanceBookAccounting__c</name>
-        <relationshipLabel><!-- Order Products (Finance Book (Accounting)) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Group Id --></label>
-        <name>blng__GroupId__c</name>
-    </fields>
-    <fields>
-        <label><!-- Group Quantity (System Field) --></label>
-        <name>blng__GroupQuantity__c</name>
-    </fields>
-    <fields>
-        <label><!-- Group Unit Price (System Field) --></label>
-        <name>blng__GroupUnitPrice__c</name>
-    </fields>
-    <fields>
-        <label><!-- Hold Billing --></label>
-        <name>blng__HoldBilling__c</name>
-    </fields>
-    <fields>
-        <label><!-- Included Usage --></label>
-        <name>blng__IncludedUsage__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Group ID --></label>
-        <name>blng__InvoiceGroupId__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Group --></label>
-        <name>blng__InvoiceGrouping__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Run Processing Status --></label>
-        <name>blng__InvoiceRunProcessingStatus__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Run Start Date --></label>
-        <name>blng__InvoiceRunStartDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Run Status (Index) --></label>
-        <name>blng__InvoiceRunStatusIndex__c</name>
-    </fields>
-    <fields>
-        <label><!-- Invoice Run --></label>
-        <name>blng__InvoiceRun__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Last Charge To Date --></label>
-        <name>blng__LastChargeToDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Last Invoice Target Date --></label>
-        <name>blng__LastInvoiceTargetDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- LegalEntityReference --></label>
-        <name>blng__LegalEntityReference__c</name>
-    </fields>
-    <fields>
-        <label><!-- Legal Entity --></label>
-        <name>blng__LegalEntity__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <help>システムによって生成されます。この注文商品の次の請求書品目の請求期間の開始。</help>
-        <label><!-- Next Billing Date --></label>
-        <name>blng__NextBillingDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Next Charge Date --></label>
-        <name>blng__NextChargeDate__c</name>
-    </fields>
-    <fields>
-        <help>この項目を使用して、計算済み請求可能単価を手動で上書きます。</help>
-        <label><!-- Override Billable Unit Price --></label>
-        <name>blng__OverrideBillableUnitPrice__c</name>
-    </fields>
-    <fields>
-        <label><!-- Override Initial Revenue End Date --></label>
-        <name>blng__OverrideInitialRevenueEndDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Override Initial Revenue Start Date --></label>
-        <name>blng__OverrideInitialRevenueStartDate__c</name>
-    </fields>
-    <fields>
-        <label><!-- Override Next Billing Date --></label>
-        <name>blng__OverrideNextBillingDate__c</name>
-    </fields>
-    <fields>
-        <help>残りの請求合計</help>
-        <label><!-- Pending Billing Amount (without tax) --></label>
-        <name>blng__PendingBillings__c</name>
-    </fields>
-    <fields>
-        <label><!-- Revenue Expected Amount --></label>
-        <name>blng__RevenueExpectedAmount__c</name>
-    </fields>
-    <fields>
-        <label><!-- Revenue Liability Amount --></label>
-        <name>blng__RevenueLiabilityAmount__c</name>
-    </fields>
-    <fields>
-        <label><!-- Revenue Most Likely Amount --></label>
-        <name>blng__RevenueMostLikelyAmount__c</name>
-    </fields>
-    <fields>
-        <label><!-- Revenue Recognition Rule --></label>
-        <name>blng__RevenueRecognitionRule__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Revenue Schedule Status --></label>
-        <name>blng__RevenueScheduleStatus__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax City (Override) --></label>
-        <name>blng__TaxCity__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax Country (Override) --></label>
-        <name>blng__TaxCountry__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax County (Override) --></label>
-        <name>blng__TaxCounty__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax Error Message --></label>
-        <name>blng__TaxErrorMessage__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax GL Rule --></label>
-        <name>blng__TaxGLRule__c</name>
-        <relationshipLabel><!-- Order Products (Tax GL Rule) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Tax GL Treatment --></label>
-        <name>blng__TaxGLTreatment__c</name>
-        <relationshipLabel><!-- Order Products (Tax GL Treatment) --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Tax Percentage Applied --></label>
-        <name>blng__TaxPercentageApplied__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品に割り当てられた税金ルールのルックアップ</help>
-        <label><!-- Tax Rule --></label>
-        <name>blng__TaxRule__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Tax State (Override) --></label>
-        <name>blng__TaxState__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品の税金計算の状況。</help>
-        <label><!-- Tax Calculation Status --></label>
-        <name>blng__TaxStatus__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax Street 2 (Override) --></label>
-        <name>blng__TaxStreet2__c</name>
-    </fields>
-    <fields>
-        <label><!-- Tax Street 1 (Override) --></label>
-        <name>blng__TaxStreet__c</name>
-    </fields>
-    <fields>
-        <help>この注文商品に割り当てられた税金処理のルックアップ</help>
-        <label><!-- Tax Treatment --></label>
-        <name>blng__TaxTreatment__c</name>
-        <relationshipLabel><!-- Order Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Tax Postal Code (Override) --></label>
-        <name>blng__TaxZipCode__c</name>
-    </fields>
-    <fields>
-        <help>解除日に基づいて注文商品からキャンセルできた金額。保留請求金額より多額にすることはできません。</help>
-        <label><!-- Terminated Billing Amount (without tax) --></label>
-        <name>blng__TerminatedBillings__c</name>
-    </fields>
-    <fields>
-        <help>この注文の請求書品目および税金すべての合計。</help>
-        <label><!-- Total Billings --></label>
-        <name>blng__TotalBilling__c</name>
-    </fields>
-    <fields>
-        <label><!-- Unique Id --></label>
-        <name>blng__UniqueId__c</name>
-    </fields>
-    <fields>
-        <label><!-- Usage Floor Quantity --></label>
-        <name>blng__UsageFloorQuantity__c</name>
     </fields>
     <validationRules>
         <errorMessage><!-- Can’t edit the bookings status on an activated order product. --></errorMessage>
@@ -523,17 +276,5 @@
     <validationRules>
         <errorMessage><!-- When Charge Type is One-Time or Usage, a Billing Type value cannot be selected. --></errorMessage>
         <name>SBQQ__Validate_billing_type</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Billing Rule must be selected --></errorMessage>
-        <name>blng__BIllingRuleMustBeSelected</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Revenue Recognition Rule must be selected --></errorMessage>
-        <name>blng__RevenueRecognitionRuleMustBeSelected</name>
-    </validationRules>
-    <validationRules>
-        <errorMessage><!-- Tax Rule must be selected --></errorMessage>
-        <name>blng__TaxRuleMustBeSelected</name>
     </validationRules>
 </CustomObjectTranslation>

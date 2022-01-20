@@ -19,6 +19,12 @@
             .slds-scope *+.lookupInput {
                 margin-left: 0;
             }
+
+            .lookup-icon {
+                height: 20px !important;
+                margin-bottom: 5px;
+                margin-left: 5px;
+            }
         </style>
         <c:IncludeStaticsResourceComponent addJQuery="true" />
         <c:IncludeConnectionJsComponent />
@@ -253,6 +259,9 @@
                                                                     <div class="slds-truncate">{!$ObjectType.copado__Org__c.fields.copado__Environment__c.Label}</div>
                                                                 </th>
                                                                 <th scope="col">
+                                                                    <div class="slds-truncate">{!$ObjectType.copado__Org__c.fields.copado__Platform__c.Label}</div>
+                                                                </th>
+                                                                <th scope="col">
                                                                     <div class="slds-truncate">{!$Label.copado__action_column_header}</div>
                                                                 </th>
                                                             </tr>
@@ -274,14 +283,17 @@
                                                                             <div class="slds-truncate">{!orgCredentialMap[ocl].Username__c}</div>
                                                                         </td>
                                                                         <td>
-                                                                            <div class="slds-truncate">{!IF(orgCredentialMap[ocl].Environment__r !=
-                                                                                null,orgCredentialMap[ocl].Environment__r.Name,
-                                                                                '')}
+                                                                            <div class="slds-truncate">
+                                                                                <apex:outputLink rendered="{!orgCredentialMap[ocl].Environment__r != null}" value="{!URLFOR($Action.copado__Environment__c.View,orgCredentialMap[ocl].Environment__c)}"
+                                                                                    target="_blank"> {!orgCredentialMap[ocl].Environment__r.Name}
+                                                                                </apex:outputLink>
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <apex:commandLink styleClass="slds-button slds-button--neutral" value="{!$Label.copado__set_oauth_authentication}" action="{!doOauth}"
-                                                                                target="_blank">
+                                                                            <div class="slds-truncate">{!orgCredentialMap[ocl].Platform__c}</div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <apex:commandLink styleClass="slds-button slds-button--neutral" value="{!$Label.copado__set_oauth_authentication}" action="{!doOauth}" target="_blank" rendered="{!OR(orgCredentialMap[ocl].Platform__c == null,orgCredentialMap[ocl].Platform__c == 'Salesforce')}">
                                                                                 <apex:param name="setOauth" value="{!orgCredentialMap[ocl].Id}" />
                                                                             </apex:commandLink>
                                                                         </td>
@@ -311,7 +323,10 @@
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <apex:outputLink styleClass="slds-button slds-button--neutral" target="_blank" value="{!URLFOR($Page.copado__ScratchOrgOpen,null,[id=orgCredentialMap[ocl].Id])}">
+                                                                            <div class="slds-truncate">{!orgCredentialMap[ocl].Platform__c}</div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <apex:outputLink styleClass="slds-button slds-button--neutral" target="_blank" value="{!URLFOR($Page.copado__ScratchOrgOpen,null,[id=orgCredentialMap[ocl].Id])}" rendered="{!OR(orgCredentialMap[ocl].Platform__c == null,orgCredentialMap[ocl].Platform__c == 'Salesforce')}">
                                                                                 {!$Label.copado__open_org}
                                                                             </apex:outputLink>
                                                                             <apex:outputLink styleClass="slds-button slds-button--neutral" target="_blank" value="{!URLFOR($Page.copado__DXOperation,null,[id=orgCredentialMap[ocl].Id])}"
@@ -351,7 +366,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="slds-no-flex">
-                                                    <a onclick="navigateTo('/apex/{!JSINHTMLENCODE(namespace)}LicenseManager');" Class="slds-button slds-button--neutral slds-col--bump-left">
+                                                    <a onclick="navigateTo('/lightning/n/{!JSINHTMLENCODE(namespace)}License_Manager');" Class="slds-button slds-button--neutral slds-col--bump-left">
                                                         {!$Label.ASSIGN_LICENSES}
                                                     </a>
                                                 </div>
@@ -655,6 +670,12 @@
                                                                         onComplete="unlockScreen();" />
                                                                     <apex:selectOptions value="{!DeploymentFlows}" />
                                                                 </apex:selectList>
+                                                                <apex:outputPanel layout="none" rendered="{!AND(selectedDeploymentFlow != '', selectedDeploymentFlow != 'none')}">
+                                                                    <apex:commandLink action="{!openPipelineDetail}" target="_blank">
+                                                                        <apex:image value="{!URLFOR($Resource.copado__DTS_images,'lookup.png')}" styleClass="lookup-icon" />
+                                                                        <apex:param name="pipelineId" value="{!selectedDeploymentFlow}" />
+                                                                    </apex:commandLink>
+                                                                </apex:outputPanel>
                                                             </div>
                                                         </div>
                                                     </apex:outputPanel>
@@ -664,6 +685,12 @@
                                                                 <label class="slds-form-element__label" for="flow-id-01">{!$ObjectType.copado__Deployment_Flow__c.fields.Name.Label}</label>
                                                                 <div class="slds-form-element__control">
                                                                     <apex:inputField id="flow-id-01" styleClass="slds-input2" value="{!deploymentFlow.Name}" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="slds-form-element">
+                                                                <label class="slds-form-element__label" for="flow-id-05">{!$ObjectType.copado__Deployment_Flow__c.fields.copado__Platform__c.Label}</label>
+                                                                <div class="slds-form-element__control">
+                                                                    <apex:inputField id="flow-id-05" styleClass="slds-input2" value="{!deploymentFlow.copado__Platform__c}" />
                                                                 </div>
                                                             </div>
                                                             <div class="slds-form-element">

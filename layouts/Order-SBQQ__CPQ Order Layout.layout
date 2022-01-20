@@ -3,22 +3,6 @@
     <customButtons>SBQQ__EditOrderProducts</customButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
-        <label>OrderContracting</label>
-        <layoutColumns>
-            <layoutItems>
-                <height>22</height>
-                <page>SBQQ__OrderContracting</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>false</showScrollbars>
-                <width>100%</width>
-            </layoutItems>
-        </layoutColumns>
-        <style>OneColumn</style>
-    </layoutSections>
-    <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
@@ -43,6 +27,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>EndDate</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__FirstContractedOrder__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -212,6 +200,14 @@
         <fields>SBQQ__CrossOrders__c</fields>
         <fields>SBQQ__CrossProducts__c</fields>
         <relatedList>SBQQ__PriceSchedule__c.SBQQ__Order__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>ORDERS.ORDER_NUMBER</fields>
+        <fields>SALES.ACCOUNT.NAME</fields>
+        <fields>ORDERS.STATUS</fields>
+        <fields>ORDERS.TOTAL_AMOUNT</fields>
+        <fields>ORDERS.ISREDUCTIONORDER</fields>
+        <relatedList>Order.SBQQ__FirstContractedOrder__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>TASK.SUBJECT</fields>

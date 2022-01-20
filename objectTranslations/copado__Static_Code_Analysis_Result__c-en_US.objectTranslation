@@ -83,6 +83,14 @@
         <name>copado__Resolved__c</name>
     </fields>
     <fields>
+        <label><!-- Rules Violated --></label>
+        <name>copado__Rules_Violated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>copado__Score__c</name>
+    </fields>
+    <fields>
         <label><!-- Score --></label>
         <name>copado__Score_v11__c</name>
     </fields>

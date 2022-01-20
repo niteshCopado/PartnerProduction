@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>ksharma@copado.com</contactEmail>
+    <label>Fortella</label>
+    <oauthConfig>
+        <callbackUrl>https://app.fortella.com/#/settings/integrations</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6fQgxftMTkBANMyRwLv7.QaDV46MYf4j5siicDshMEjMTsDuS8OafPeoTWVR_TZ5ArzN1Wr</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

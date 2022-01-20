@@ -158,11 +158,11 @@
                                     </apex:outputPanel>
                                 </apex:pageBlockSectionItem>
                                 <!-- Following fields and button will be disabled for users with insufficent permission on license assignment on license manager page-->
-                                <apex:pageBlockSectionItem helpText="Copado = Copado Enterprise">
+                                <apex:pageBlockSectionItem helpText="Copado = Copado Admin">
                                     <apex:outputLabel value="{!$Label.copado__assign_copado_license}" />
                                     <apex:inputCheckbox id="chkAssignCopado" value="{!assignCopado}" disabled="{!fieldDisableFlag}" />
                                 </apex:pageBlockSectionItem>
-                                <apex:pageBlockSectionItem helpText="CCM = Copado Change Management" rendered="{!enableMultiLicenses}">
+                                <apex:pageBlockSectionItem helpText="CCM = Copado User" rendered="{!enableMultiLicenses}">
                                     <apex:outputLabel value="{!$Label.copado__assign_ccm_license}" />
                                     <apex:inputCheckbox id="chkAssignCCM" value="{!assignCCM}" disabled="{!fieldDisableFlag}" />
                                 </apex:pageBlockSectionItem>
@@ -170,7 +170,7 @@
                                     <apex:outputLabel value="{!$Label.copado__assign_cst_license}" />
                                     <apex:inputCheckbox id="chkAssignCST" value="{!assignCST}" disabled="{!fieldDisableFlag}" />
                                 </apex:pageBlockSectionItem>
-                                <apex:pageBlockSectionItem helpText="CAD = Copado Agile Delivery" rendered="{!enableMultiLicenses}">
+                                <apex:pageBlockSectionItem helpText="CAD = Copado Plan" rendered="{!enableMultiLicenses}">
                                     <apex:outputLabel value="{!$Label.copado__assign_cad_license}" />
                                     <apex:inputCheckbox id="chkAssignCAD" value="{!assignCAD}" disabled="{!fieldDisableFlag}" />
                                 </apex:pageBlockSectionItem>

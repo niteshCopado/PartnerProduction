@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feature with Accounts</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Features with Accounts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Feature Unique Id --></label>
+        <name>Account_Feature_Unique_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Features with Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Feature --></label>
+        <name>Feature__c</name>
+        <relationshipLabel><!-- Features with Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>Relationship_Type__c</name>
+        <picklistValues>
+            <masterLabel>Committed</masterLabel>
+            <translation><!-- Committed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dependency</masterLabel>
+            <translation><!-- Dependency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Adopter</masterLabel>
+            <translation><!-- Early Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interested</masterLabel>
+            <translation><!-- Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested By</masterLabel>
+            <translation><!-- Requested By --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

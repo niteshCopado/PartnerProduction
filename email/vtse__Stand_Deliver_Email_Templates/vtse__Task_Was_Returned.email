@@ -1,0 +1,18 @@
+<messaging:emailTemplate subject="Your Stand Deliver Task '{!relatedTo.Stand_Deliver__r.Name}' has been returned"
+    recipientType="User"
+    relatedToType="vtse__Stand_Deliver_Task__c"
+    language="{!recipient.LanguageLocaleKey}"
+    renderUsingSystemContextWithoutSharing="true"
+>
+    <messaging:htmlEmailBody >
+        <apex:outputPanel layout="block">
+            <apex:outputText rendered="{!relatedTo.Stand_Deliver__r.Name != null}"
+                value="Your Stand Deliver Task '{!relatedTo.Stand_Deliver__r.Name}' has been returned by {!relatedTo.Closed_By__r.Name}"
+            />
+            <br/><br/>
+
+            <c:EmailNotification recordId="{!relatedTo.Id}" communityId="{!relatedTo.vtse__Community_Id__c}" hasDetailPageLink="true"/>
+        </apex:outputPanel>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

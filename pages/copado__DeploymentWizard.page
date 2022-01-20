@@ -9,6 +9,10 @@
                 'page': '/wizardStep4',
                 'title': 'Wizard - Schedule'
             });
+
+            const updateDeployment = () => {
+                setTimeout(confirmDeployment, 3000);
+            };
         </script>
         <apex:stylesheet value="{!URLFOR($Resource.copado__CopadoLightningCSS)}" />
         <style>
@@ -67,12 +71,12 @@
                 <div class="slds-card__body slds-card__body_inner">
                     <div class="slds-grid" style="margin-bottom:20px">
                         <div class="slds-col">
-                            <apex:outputPanel >
+                            <apex:outputPanel id="schedule">
                                 <apex:selectList id="if_schedule" value="{!copado__Deployment__c.copado__Schedule__c}" size="1" required="true" onchange="lockScreen();validateDate();" styleClass="js-estimation-schedule">
                                     <apex:selectOptions value="{!scheduleOptions}"/>
                                 </apex:selectList>
                                 <apex:inputField id="if_date" value="{!copado__Deployment__c.copado__Date__c}" rendered="{!showDateField}" />
-                                <apex:actionFunction name="validateDate" action="{!scheduleShowDate}" onComplete="unlockScreen();" rerender="if_date,messagesPanel"/>
+                                <apex:actionFunction name="validateDate" action="{!scheduleShowDate}" onComplete="unlockScreen();" rerender="schedule,if_date,messagesPanel"/>
                             </apex:outputPanel>
                         </div>
                     </div>
@@ -162,8 +166,8 @@
 
             <apex:actionFunction action="{!creditCheckAndValidations}" name="confirmAllValidations" oncomplete="resetStatusForDeployment();" status="buttonStatus"/>
             <apex:actionFunction action="{!creditCheckAndValidations}" name="confirmDeploymentOutstandingValidation" oncomplete="resetStatusDeploymentOutstanding();" status="buttonStatus"/>
-            <apex:actionFunction action="{!confirmAll}" name="resetStatusForDeployment" oncomplete="confirmDeployment();" status="buttonStatus"/>
-            <apex:actionFunction action="{!confirmOutstanding}" name="resetStatusDeploymentOutstanding" oncomplete="confirmDeployment();" reRender="messagesPanel"/>
+            <apex:actionFunction action="{!confirmAll}" name="resetStatusForDeployment" oncomplete="updateDeployment();" status="buttonStatus"/>
+            <apex:actionFunction action="{!confirmOutstanding}" name="resetStatusDeploymentOutstanding" oncomplete="updateDeployment();" reRender="messagesPanel"/>
             <apex:actionFunction action="{!confirm}" name="confirmDeployment" oncomplete="deployCall();" status="buttonStatus"/>
             <apex:actionFunction action="{!deployCall}" name="deployCall" oncomplete="proceedToDeployment();unlockScreen();" reRender="messagesPanel, proceedToDeploymentBlock" />
         </apex:form>

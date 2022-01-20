@@ -1,0 +1,20 @@
+<messaging:emailTemplate subject="Your Stand Deliver Task '{!relatedTo.Stand_Deliver_Submission__r.Stand_Deliver_Task__r.Stand_Deliver__r.Name}' was reviewed"
+    recipientType="User"
+    relatedToType="vtse__Assessment_Feedback__c"
+    language="{!recipient.LanguageLocaleKey}"
+    renderUsingSystemContextWithoutSharing="true"
+>
+    <messaging:htmlEmailBody >
+        <apex:outputPanel layout="block">
+            <apex:outputText rendered="{!relatedTo.Stand_Deliver_Submission__r.Stand_Deliver_Task__r.Stand_Deliver__r.Name != null}"
+                value="Your Stand Deliver Task '{!relatedTo.Stand_Deliver_Submission__r.Stand_Deliver_Task__r.Stand_Deliver__r.Name}' has been reviewed by {!relatedTo.Reviewer__r.Name}"
+            />
+            <br/><br/>
+
+            <c:EmailNotification recordId="{!relatedTo.Stand_Deliver_Submission__r.vtse__Stand_Deliver_Task__c}" 
+                                 communityId="{!relatedTo.Stand_Deliver_Submission__r.Stand_Deliver_Task__r.vtse__Community_Id__c}" 
+                                 hasDetailPageLink="true"/>
+        </apex:outputPanel>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

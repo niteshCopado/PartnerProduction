@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Check_Approval_Process</name>
+        <label>Check Approval Process</label>
+        <locationX>538</locationX>
+        <locationY>360</locationY>
+        <actionName>InvokeListingApprovalProcess</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Has_Error</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Screen_Error</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>listingId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>ApprovalProcessResult</assignToReference>
+            <name>ErrorMessage</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Submit_For_Approval</name>
+        <label>Submit For Approval</label>
+        <locationX>160</locationX>
+        <locationY>522</locationY>
+        <actionName>submit</actionName>
+        <actionType>submit</actionType>
+        <connector>
+            <targetReference>Submit_Approval</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>processDefinitionNameOrId</name>
+            <value>
+                <stringValue>Listing_Approval_Process_V2</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>objectId</name>
+            <value>
+                <elementReference>getListing.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Has_Error</name>
+        <label>Has Error</label>
+        <locationX>531</locationX>
+        <locationY>528</locationY>
+        <defaultConnector>
+            <targetReference>Error_Find</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Error</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ApprovalProcessResult</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Submit_For_Approval</targetReference>
+            </connector>
+            <label>No Error</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Copado Listing Approval Process {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Copado Listing Approval Process</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>getListing</name>
+        <label>getListing</label>
+        <locationX>536</locationX>
+        <locationY>206</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Approval_Process</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Listing__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Error_Find</name>
+        <label>Error Find</label>
+        <locationX>830</locationX>
+        <locationY>605</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Error</name>
+            <fieldText>&lt;pre class=&quot;ql-syntax&quot; spellcheck=&quot;false&quot;&gt;Unable to submit for approval.
+{!ApprovalProcessResult}
+
+
+&lt;/pre&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Screen_Error</name>
+        <label>Screen Error</label>
+        <locationX>891</locationX>
+        <locationY>356</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>DisplayTextError</name>
+            <fieldText>&lt;pre class=&quot;ql-syntax&quot; spellcheck=&quot;false&quot;&gt;Unable to submit for approval.
+Note that all listing fields need to be completed first before submitting:
+{!$Flow.FaultMessage}
+&lt;/pre&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Submit_Approval</name>
+        <label>Submit Approval</label>
+        <locationX>161</locationX>
+        <locationY>681</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Submitted</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;User story submitted for approval.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>410</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>getListing</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ApprovalProcessResult</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

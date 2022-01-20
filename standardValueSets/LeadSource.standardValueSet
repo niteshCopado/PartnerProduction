@@ -1,29 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sorted>false</sorted>
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>3rd Party Website</fullName>
+        <default>false</default>
+        <label>3rd Party Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AE Outbound</fullName>
+        <default>false</default>
+        <label>AE Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Alliances Outbound</fullName>
+        <default>false</default>
+        <label>Alliances Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AppExchange</fullName>
+        <default>false</default>
+        <label>AppExchange</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BDR Outbound</fullName>
+        <default>false</default>
+        <label>BDR Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Click Deploy</fullName>
+        <default>false</default>
+        <label>Click Deploy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CSM Outbound</fullName>
+        <default>false</default>
+        <label>CSM Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Drift</fullName>
+        <default>false</default>
+        <label>Drift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Event</fullName>
+        <default>false</default>
+        <label>Live Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SDR Outbound</fullName>
+        <default>false</default>
+        <label>SDR Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Virtual Event</fullName>
+        <default>false</default>
+        <label>Virtual Event</label>
+    </standardValue>
     <standardValue>
         <fullName>Web</fullName>
         <default>false</default>
         <label>Web</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Phone Inquiry</fullName>
-        <default>false</default>
-        <label>Phone Inquiry</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Partner Referral</fullName>
-        <default>false</default>
-        <label>Partner Referral</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Purchased List</fullName>
-        <default>false</default>
-        <label>Purchased List</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <label>Other</label>
     </standardValue>
 </StandardValueSet>

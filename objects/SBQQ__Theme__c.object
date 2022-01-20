@@ -2623,6 +2623,86 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>SBQQ__HeaderBackgroundImagePosition__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Position of page header background image (Click the icon for additional information)</inlineHelpText>
+        <label>Header Background Image Position</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__HeaderBackgroundImageRepeat__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Sets if/how page header background image should be repeated (Click the icon for additional information)</inlineHelpText>
+        <label>Header Background Image Repeat</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>repeat</fullName>
+                    <default>false</default>
+                    <label>repeat</label>
+                </value>
+                <value>
+                    <fullName>repeat-x</fullName>
+                    <default>false</default>
+                    <label>repeat-x</label>
+                </value>
+                <value>
+                    <fullName>repeat-y</fullName>
+                    <default>false</default>
+                    <label>repeat-y</label>
+                </value>
+                <value>
+                    <fullName>no-repeat</fullName>
+                    <default>true</default>
+                    <label>no-repeat</label>
+                </value>
+                <value>
+                    <fullName>initial</fullName>
+                    <default>false</default>
+                    <label>initial</label>
+                </value>
+                <value>
+                    <fullName>inherit</fullName>
+                    <default>false</default>
+                    <label>inherit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SBQQ__HeaderBackgroundImageSize__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Size of page header background image (Click the icon for additional information)</inlineHelpText>
+        <label>Header Background Image Size</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__HeaderBackgroundImageUrl__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Url of the image uploaded as a Document to be displayed onpage header</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Url for page header background image</inlineHelpText>
+        <label>Header Background Image Url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
         <fullName>SBQQ__HeaderBorderColor__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -2936,7 +3016,7 @@
                 </value>
                 <value>
                     <fullName>300</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>300</label>
                 </value>
                 <value>
@@ -2956,7 +3036,7 @@
                 </value>
                 <value>
                     <fullName>700</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>700</label>
                 </value>
                 <value>

@@ -1,0 +1,79 @@
+<template>
+    <div if:true={isBusy} class="slds-spinner_inline slds-align_absolute-center slds-p-around_medium">
+        <lightning-spinner variant="brand" 
+                           alternative-text="Loading...."     
+                           size="medium">
+        </lightning-spinner>
+    </div>
+    <template if:true={hasNoRecords}>
+        <h1 class="slds-text-align_center project-no-records_header">You don't have access to any Project currently. Please contact your super user for more information.</h1>
+    </template>
+    <template if:true={hasRecords}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_9-of-12">
+                <lightning-layout vertical-align="center">
+                    <lightning-layout-item>                        
+                        <img class="project-header_icon" src={projectConfigurationLogo} alt="Manage Team"/>
+                    </lightning-layout-item>
+                    <lightning-layout-item class="slds-m-left_x-small">           
+                        <h1 class="project-header">
+                            Project Configuration
+                        </h1>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_3-of-12">
+                <lightning-combobox
+                        name="progress"
+                        label="Status"
+                        placeholder="Select Project"
+                        options={userProjects}
+                        value={selectedProjectId}
+                        variant="label-hidden"
+                        onchange={handleChange}>
+                </lightning-combobox>
+            </div>                       
+        </div>
+        <hr class="header-horizontal_border"/>
+        <div class="slds-theme--default">
+            <lightning-layout class="slds-wrap slds-grid_align-space" horizontal-align="center">
+                <lightning-layout-item class="project-navigation-tab_container">                        
+                    <a class="project-navigation_tab" onclick={handleProjectDetails} data-name='projectDetails'>
+                        <img class="project-navigation_icon" src={projectSummaryLogo} alt="Manage Team"/>
+                        <div class="slds-p-top_medium text-color project-navigation-text_container">
+                            <span class="slds-p-right_x-small">Project Summary</span>
+                        </div>
+                    </a>
+                </lightning-layout-item>
+                    <lightning-layout-item class="project-navigation-tab_container">                        
+                        <a class="project-navigation_tab" onclick={handleManageTeam} data-name='ManageTeam'>
+                            <img class="project-navigation_icon" src={manageTeamLogo} alt="Manage Team"/>
+                            <div class="slds-p-top_medium text-color project-navigation-text_container">
+                                <span class="slds-p-right_x-small">Manage Team</span>
+                            </div>
+                        </a>
+                    </lightning-layout-item>
+                <template if:true={showCasesTab}>
+                    <lightning-layout-item class="project-navigation-tab_container">
+                        <a class="project-navigation_tab" onclick={handleCases} data-name='Cases'>
+                            <img class="project-navigation_icon" src={casesLogo} alt="Cases"/>
+                            <div class="slds-p-top_medium text-color project-navigation-text_container">
+                                <span class="slds-p-right_x-small">Cases</span>
+                            </div>
+                        </a>
+                    </lightning-layout-item>
+                </template>
+                <template if:true={showCertificationsTab}>
+                    <lightning-layout-item class="project-navigation-tab_container">
+                        <a class="project-navigation_tab" onclick={handleCertifications} data-name='Certifications'>
+                            <img class="project-navigation_icon" src={certificationsLogo} alt="Certifications"/>
+                            <div class="slds-p-top_medium text-color project-navigation-text_container">
+                                <span class="slds-p-right_x-small">Certifications</span>
+                            </div>
+                        </a>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </div>
+    </template>
+</template>

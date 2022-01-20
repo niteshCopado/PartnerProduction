@@ -128,7 +128,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <content>copado__DataTemplateSetup</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
@@ -141,7 +143,15 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Data_Template_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Data_Template_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Template_Source_Org__c</fields>
+        <fields>copado__Main_Object__c</fields>
+        <fields>copado__Active__c</fields>
+        <label>Data Template Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -167,6 +177,7 @@
         <fullName>copado__Attachment_Options__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>Insert, update or remove attachments of the records that will get deployed.</inlineHelpText>
         <label>Attachment Actions</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -178,7 +189,7 @@
                 <value>
                     <fullName>No Attachments</fullName>
                     <default>true</default>
-                    <label>No Actions</label>
+                    <label>No Attachments</label>
                 </value>
                 <value>
                     <fullName>Insert Attachments</fullName>
@@ -206,6 +217,7 @@
     </fields>
     <fields>
         <fullName>copado__Batch_Size__c</fullName>
+        <defaultValue>200</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Batch Size</label>
@@ -254,6 +266,7 @@
     </fields>
     <fields>
         <fullName>copado__Filter_Logic__c</fullName>
+        <defaultValue>TEXT(1)</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Filter Logic</label>
@@ -279,6 +292,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>When not matching owners, the owner of the deployed records in the target Credential will be automatically assigned to the user executing the deployment.</inlineHelpText>
         <label>Match Owners</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -288,6 +302,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>When matching record types, the records in the target Credential are assigned to the same record type as in the source Credential, if found. Otherwise they are assigned to the default record type in the deploying user&apos;s profile.</inlineHelpText>
         <label>Match Record Type</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -309,7 +324,8 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Template Source Credential</label>
+        <inlineHelpText>The main objects, fields and related objects will be listed based on the Salesforce Org data model of the selected credential. The Salesforce user linked to the credential must have access to all the fields and objects necessary for your deployments.</inlineHelpText>
+        <label>Template Schema Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Data Templates</relationshipLabel>
         <relationshipName>Data_Templates</relationshipName>
@@ -327,8 +343,10 @@
         <columns>copado__Max_Record_Limit__c</columns>
         <columns>copado__Batch_Size__c</columns>
         <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Data Template Name</label>

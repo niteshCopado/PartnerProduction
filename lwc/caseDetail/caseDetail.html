@@ -1,0 +1,51 @@
+<template>
+    <div class="slds-text-color_error slds-align_absolute-center slds-text-heading_medium">{errorMsg}</div>
+
+    <template if:true={isLoading}>
+        <lightning-spinner variant="brand" alternative-text="Loading...." size="medium" class="slds-align_absolute-center"></lightning-spinner>
+    </template>
+
+    <template if:true={hasData}>
+        <div class="slds-m-bottom_small slds-page-header slds-page-header_record-home">
+            <lightning-layout horizontal-align="spread" vertical-align="center">
+                <lightning-layout-item>
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="standard:case" size="medium" variant="slds-icon-inverse"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__title slds-text-heading_large">Case - {caseNo}</div>
+                        </div>
+                        <div class="slds-media__figure slds-media__figure_reverse"></div>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <div class="slds-m-top_medium" style="background-color: white; width:100%;">
+                <lightning-layout class="slds-wrap" multiple-rows="true">
+                    <template for:each={dataNonTA} for:item="cs">
+                        <lightning-layout-item key={cs.key} size="6">
+                            <div class="slds-form-element slds-m-around_small">
+                                <span class="slds-form-element__label slds-text-heading_small"><b>{cs.key}</b></span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{cs.value}</span>
+                                </div>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+
+                <template for:each={dataTA} for:item="cs">
+                    <div key={cs.key} class="slds-form-element slds-m-around_small">
+                        <span class="slds-form-element__label slds-text-heading_small"><b>{cs.key}</b></span>
+                        <div class="slds-form-element__control">
+                            <span class="slds-form-element__static">
+                                <lightning-formatted-rich-text value={cs.value}></lightning-formatted-rich-text>
+                            </span>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

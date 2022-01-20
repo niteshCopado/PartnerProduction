@@ -157,6 +157,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__Action__c</fullName>
         <deprecated>false</deprecated>
         <description>Action that this custom action performs.</description>
@@ -296,19 +307,9 @@
                     <label>View Discount Schedule</label>
                 </value>
                 <value>
-                    <fullName>View Consumption Schedule</fullName>
-                    <default>false</default>
-                    <label>View Consumption Schedule</label>
-                </value>
-                <value>
                     <fullName>Launch External</fullName>
                     <default>false</default>
                     <label>Launch External</label>
-                </value>
-                <value>
-                    <fullName>Apply Edit Rules</fullName>
-                    <default>false</default>
-                    <label>Apply Edit Rules</label>
                 </value>
                 <value>
                     <fullName>Clone with Related</fullName>
@@ -395,16 +396,6 @@
                     <default>false</default>
                     <label>Email</label>
                 </value>
-                <value>
-                    <fullName>Save and Navigate</fullName>
-                    <default>false</default>
-                    <label>Save and Navigate</label>
-                </value>
-                <value>
-                    <fullName>View Pricing Guidance</fullName>
-                    <default>false</default>
-                    <label>View Pricing Guidance</label>
-                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Quote Document Panel</controllingFieldValue>
@@ -460,10 +451,6 @@
                 <controllingFieldValue>Quote</controllingFieldValue>
                 <controllingFieldValue>Group</controllingFieldValue>
                 <valueName>Optional: None</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Quote</controllingFieldValue>
-                <valueName>Save and Navigate</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Quote/Group</controllingFieldValue>
@@ -522,20 +509,8 @@
                 <valueName>View Discount Schedule</valueName>
             </valueSettings>
             <valueSettings>
-                <controllingFieldValue>Line</controllingFieldValue>
-                <valueName>View Consumption Schedule</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Line</controllingFieldValue>
-                <valueName>View Pricing Guidance</valueName>
-            </valueSettings>
-            <valueSettings>
                 <controllingFieldValue>Configurator</controllingFieldValue>
                 <valueName>Launch External</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Configurator</controllingFieldValue>
-                <valueName>Apply Edit Rules</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Quote Panel</controllingFieldValue>
@@ -736,7 +711,7 @@
         <type>Picklist</type>
         <valueSet>
             <valueSetDefinition>
-                <sorted>false</sorted>
+                <sorted>true</sorted>
                 <value>
                     <fullName>3dots</fullName>
                     <default>false</default>
@@ -1258,11 +1233,6 @@
                     <label>page</label>
                 </value>
                 <value>
-                    <fullName>paired-lines</fullName>
-                    <default>false</default>
-                    <label>paired-lines</label>
-                </value>
-                <value>
                     <fullName>paste</fullName>
                     <default>false</default>
                     <label>paste</label>
@@ -1543,11 +1513,6 @@
                     <label>to-start</label>
                 </value>
                 <value>
-                    <fullName>trending</fullName>
-                    <default>false</default>
-                    <label>trending</label>
-                </value>
-                <value>
                     <fullName>underline</fullName>
                     <default>false</default>
                     <label>underline</label>
@@ -1822,16 +1787,6 @@
                     <fullName>Edit Order Products</fullName>
                     <default>false</default>
                     <label>Edit Order Products</label>
-                </value>
-                <value>
-                    <fullName>View Consumption Schedule</fullName>
-                    <default>false</default>
-                    <label>View Consumption Schedule</label>
-                </value>
-                <value>
-                    <fullName>Pricing Guidance</fullName>
-                    <default>false</default>
-                    <label>Pricing Guidance</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2172,6 +2127,7 @@
         <columns>SBQQ__Label__c</columns>
         <columns>SBQQ__ParentCustomAction__c</columns>
         <columns>SBQQ__Location__c</columns>
+        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <language>en_US</language>

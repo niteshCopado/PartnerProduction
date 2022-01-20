@@ -1,0 +1,83 @@
+<template>
+    <div class="slds-m-bottom_small slds-page-header slds-page-header_record-home">
+        <lightning-layout horizontal-align="spread" vertical-align="center">
+            <lightning-layout-item>
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:account" size="medium" variant="slds-icon-inverse"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__title slds-text-heading_large">{projectDetails.Name}</div>
+                    </div>
+                    <div class="slds-media__figure slds-media__figure_reverse"></div>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+
+
+
+        <div class="slds-m-top_small whitebg">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-5 slds-p-vertical_small slds-p-right_small">
+                    <div class="slds-form-element">
+						<span class="slds-text-heading_small slds-align_absolute-center"><b>Account Name</b></span>
+						<div class="slds-form-element__control">
+							<span class="slds-form-element__static slds-align_absolute-center">
+								{projectDetails.AccountName}
+							</span>
+						</div>
+					</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-5 slds-p-vertical_small slds-p-right_small">
+                    <div class="slds-form-element">
+						<span class="slds-text-heading_small slds-align_absolute-center"><b>Customer Success Manager</b></span>
+						<div class="slds-form-element__control">
+							<span class="slds-form-element__static slds-align_absolute-center">{projectDetails.projectCSM}</span>
+						</div>
+					</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-5 slds-p-vertical_small slds-p-right_small">
+                    <div class="slds-form-element">
+						<span class="slds-text-heading_small slds-align_absolute-center"><b>Active Team Members</b></span>
+						<div class="slds-form-element__control">
+							<span class="slds-form-element__static slds-align_absolute-center">
+								<a id="team" onclick={handleClickTM}><u>{projectDetails.NumberOfActiveTeamMembers}</u></a>
+							</span>
+						</div>
+					</div>
+                </div>
+				<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-5 slds-p-vertical_small slds-p-right_small">
+                    <div class="slds-form-element">
+						<span class="slds-text-heading_small slds-align_absolute-center"><b>Number of Open Cases</b></span>
+						<div class="slds-form-element__control">
+							<span class="slds-form-element__static slds-align_absolute-center">
+								<template if:true={showCasesTab}>
+									<a id="case" onclick={handleClickCase}><u>{projectDetails.noOfOpenCases}</u></a>
+								</template>
+								<template if:false={showCasesTab}>
+									{projectDetails.noOfOpenCases}
+								</template>
+							</span>
+						</div>
+					</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-5 slds-p-vertical_small slds-p-right_small">
+                    <div class="slds-form-element">
+						<span class="slds-text-heading_small slds-align_absolute-center"><b>Number of Certifications</b></span>
+						<div class="slds-form-element__control">
+							<span class="slds-form-element__static slds-align_absolute-center">
+								<template if:true={showCertificationsTab}>
+									<a id="cert" onclick={handleClickCert}><u>{projectDetails.noOfCerts}</u></a>
+								</template>
+								<template if:false={showCertificationsTab}>
+									{projectDetails.noOfCerts}
+								</template>
+							</span>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

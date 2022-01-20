@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Delayed_Send_Notification_Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>Delayed_Send_Notification_Interval</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_Media_Notification_Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Media Notification Interval</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__All_Stand_Deliver_Tasks_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>All Stand Deliver Tasks URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Default_Stand_Deliver_Example_Video__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Stand and Deliver Example Video</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Default_Stand_Deliver_Thumbnail_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Stand Deliver Thumbnail URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_All_Stand_Deliver_Triggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable All Stand Deliver triggers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Assessment_Criteria_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Assessment Criteria trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Assessment_Rubric_Item_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Assessment Rubric Item trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Feedback_Details_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Feedback Details trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Feedback_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Feedback trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Stand_Deliver_Criteria_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Stand Deliver Criteria trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Stand_Deliver_Reviewer_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Stand Deliver Reviewer trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Stand_Deliver_Submission_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Stand Deliver Submission trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Stand_Deliver_Task_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Stand Deliver Task trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Disable_Stand_Deliver_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Stand Deliver trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Chatter_Notifications__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable this setting if you want to receive any Stand Deliver notifications in Chatter</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable this setting if you want to receive any Stand Deliver notifications in Chatter</inlineHelpText>
+        <label>Enable Chatter Notifications</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Conversion_Error_Notification__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Conversion Error Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Email_Notifications__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable this setting if you want to receive any Stand Deliver notifications on email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable this setting if you want to receive any Stand Deliver notifications on email</inlineHelpText>
+        <label>Enable Email Notifications</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Email_Sent_Notification__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Email Sent Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Stand_Deliver_Assign_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable notification when Stand &amp; Deliver record was assigned to the user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable notification when Stand &amp; Deliver record was assigned to the user</inlineHelpText>
+        <label>Enable Stand Deliver Assign Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Stand_Deliver_Shared_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable notification when Stand &amp; Deliver record was shared with user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable notification when Stand &amp; Deliver record was shared with user</inlineHelpText>
+        <label>Enable Stand Deliver Shared Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Task_Was_Closed_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable notification for assignees when their Task was closed or approved/rejected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable notification for assignees when their Task was closed or approved/rejected</inlineHelpText>
+        <label>Enable Task Was Closed Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Task_Was_Reviewed_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Notification when user&apos;s Task was reviewed by another user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable Notification when user&apos;s Task was reviewed by another user</inlineHelpText>
+        <label>Enable Task Was Reviewed Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Enable_Task_Was_Submitted_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable notification for reviewers/approvers when Task was submitted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable notification for reviewers/approvers when Task was submitted</inlineHelpText>
+        <label>Enable Task Was Submitted Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>vtse__Notifications_Batch_Interval__c</fullName>
+        <defaultValue>60</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Notification Batch interval in minutes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Notification Batch interval in minutes</inlineHelpText>
+        <label>Notifications Batch Interval</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Stand_Deliver_Assign_Columns_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field Set on User object to add new columns to Assign component</description>
+        <externalId>false</externalId>
+        <label>Stand Deliver Assign Columns Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Stand_Deliver_Assign_Filters_Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field Set on User object to add new filters to Assign component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field Set on User object to add new filters to Assign component</inlineHelpText>
+        <label>Stand Deliver Assign Filters Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Stand_Deliver_Task_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Stand Deliver Task URL</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>vtse__Video_Coaching_Reviewer_Tabs__c</fullName>
+        <defaultValue>&apos;relative, static, user&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Determine which types of reviewers can be added to a video coaching task.</inlineHelpText>
+        <label>Video Coaching Reviewer Tabs</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sales Enablement Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

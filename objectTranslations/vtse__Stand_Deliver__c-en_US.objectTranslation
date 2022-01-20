@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Information --></label>
+        <name>vtse__Additional_Information__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, feedback will be visible to the user, but no reviewer names will be displayed. --></help>
+        <label><!-- Anonymous Feedback --></label>
+        <name>vtse__Anonymous_Feedback__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the Media Catalog where all video submissions will be organized. --></help>
+        <label><!-- Catalog --></label>
+        <name>vtse__Catalog__c</name>
+        <relationshipLabel><!-- Stand and Delivers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>vtse__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Public (feedback can be seen by anyone viewing the submission), Approvers (approvers can see feedback from other reviewers), or Private (reviewers and approvers can only see their own feedback). --></help>
+        <label><!-- Feedback Visibility --></label>
+        <name>vtse__Feedback_Type__c</name>
+        <picklistValues>
+            <masterLabel>Approvers</masterLabel>
+            <translation><!-- Approvers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If checked, users will see their average scores, but not individual reviews or scores. --></help>
+        <label><!-- Hide Feedback Details --></label>
+        <name>vtse__Hide_Feedback_Details__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, users will not be able to see reviewer feedback until the submission is ultimately approved or rejected. --></help>
+        <label><!-- Hide Feedback In Review --></label>
+        <name>vtse__Hide_Feedback_In_Review__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determine how many times a user can try again after having their submission rejected. --></help>
+        <label><!-- Maximum Attempts --></label>
+        <name>vtse__Maximum_Attempts__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, reviewers and approvers can record a video as part of their feedback. --></help>
+        <label><!-- Video Feedback --></label>
+        <name>vtse__Media_Feedback__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a submission is not manually approved or rejected, determine approved/rejected based on average score when the shelf life closes. --></help>
+        <label><!-- Minimum Average Score --></label>
+        <name>vtse__Minimum_Average_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determine how many reviews must be submitted by the shelf life in order to dynamically approve or reject the task. If minimum reviewers are not met, the task will remain In Review. --></help>
+        <label><!-- Minimum Reviewers --></label>
+        <name>vtse__Minimum_Reviewers__c</name>
+    </fields>
+    <fields>
+        <help><!-- Public tasks can be modified and assigned by managers to their teams. --></help>
+        <label><!-- Public --></label>
+        <name>vtse__Public__c</name>
+    </fields>
+    <fields>
+        <help><!-- Require the reviewer/approver to watch the entire video before submitting feedback. --></help>
+        <label><!-- Require Watching Before Review --></label>
+        <name>vtse__Require_Watching_Before_Review__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a submission is not manually approved or rejected, dynamically approve or reject the submission based on the average score. If left blank, a submission will require manual approval. --></help>
+        <label><!-- Shelf Life --></label>
+        <name>vtse__Shelf_Life__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status will determine if users can register and/or submit videos for review. --></help>
+        <label><!-- Status --></label>
+        <name>vtse__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If no image is selected, the default image will be used. --></help>
+        <label><!-- Thumbnail URL --></label>
+        <name>vtse__Thumbnail_URL__c</name>
+    </fields>
+</CustomObjectTranslation>

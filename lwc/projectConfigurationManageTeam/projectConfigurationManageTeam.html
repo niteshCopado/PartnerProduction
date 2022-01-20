@@ -1,0 +1,87 @@
+<template>
+
+    <template if:true={isEdit}>
+        <div>
+            <lightning-button variant="brand" label="Add Team Member" title="Add Team Member" onclick={openModal} class="slds-m-left_x-small"></lightning-button>
+        </div>
+        </br>
+    </template>
+    
+    <div>
+        <div class="slds-border_top slds-border_left slds-border_right">
+            <c-custom-lightning-datatable key-field="id" data-record-id={Id} data={members} columns={columns} 
+                                    resize-column-disabled hide-checkbox-column show-row-number-column onrowaction={handleRowAction}>
+            </c-custom-lightning-datatable> 
+        </div>
+    </div> 
+
+
+    <template if:true={showModelBox}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create/Update Project Team Member</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-text-color_error slds-align_absolute-center">{errorMsg}</div>
+                        <div class="slds-col slds-size_3-of-3">
+                            <c-contact-lookup busy={isBusy} default-value={editValue} onlookupupdate={handleSearch} onerror={handleErrorSearch} isdisable={isUpdate}> </c-contact-lookup>
+                        </div>
+                        <template if:false={isInvite}>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="Is Active" name="isactive" checked={isactive} onchange={activeChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="Is Super User" name="issuper" checked={issuper} onchange={superChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="Manage Team" name="manageteam" checked={manageteam} onchange={manageTeamChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="Log Case" name="logcase" checked={logcase} onchange={logCaseChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="View Case Report" name="viewcasereport" checked={viewcasereport} onchange={viewCaseReportChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <span>
+                                    <lightning-input class="slds-p-around_medium" type="checkbox" label="View Cert Report" name="viewcertreport" checked={viewcertreport} onchange={viewCertReportChangedHandler} disabled={isCurrentUser}></lightning-input>
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                                <span>
+                                    <lightning-button class="slds-m-left_x-small" label="Save" variant="brand" onclick={createPTM} disabled={isCurrentUser}></lightning-button>
+                                </span>
+                            </div>
+                        </template>
+                        <template if:true={isInvite}>
+                            <b>No Record Found. Please invite the user to the community by clicking on the button below. Once the user joins community please add to the Project Team.</b>
+                            <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                                <span>
+                                    <lightning-button class="slds-m-left_x-small" name={userEmail} label="Invite User" variant="brand" onclick={inviteUser}></lightning-button>
+                                </span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

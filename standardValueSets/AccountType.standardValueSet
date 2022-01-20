@@ -7,14 +7,9 @@
         <label>Prospect</label>
     </standardValue>
     <standardValue>
-        <fullName>Customer - Direct</fullName>
+        <fullName>Customer</fullName>
         <default>false</default>
-        <label>Customer - Direct</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Customer - Channel</fullName>
-        <default>false</default>
-        <label>Customer - Channel</label>
+        <label>Customer</label>
     </standardValue>
     <standardValue>
         <fullName>Channel Partner / Reseller</fullName>
@@ -22,18 +17,23 @@
         <label>Channel Partner / Reseller</label>
     </standardValue>
     <standardValue>
-        <fullName>Installation Partner</fullName>
+        <fullName>Competitor</fullName>
         <default>false</default>
-        <label>Installation Partner</label>
+        <label>Competitor</label>
     </standardValue>
     <standardValue>
-        <fullName>Technology Partner</fullName>
+        <fullName>Partner</fullName>
         <default>false</default>
-        <label>Technology Partner</label>
+        <label>Partner</label>
     </standardValue>
     <standardValue>
-        <fullName>Other</fullName>
+        <fullName>Supplier</fullName>
         <default>false</default>
-        <label>Other</label>
+        <label>Supplier</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ClickDeploy</fullName>
+        <default>false</default>
+        <label>ClickDeploy</label>
     </standardValue>
 </StandardValueSet>

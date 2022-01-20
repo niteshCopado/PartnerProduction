@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>aliu@ext.copado.com</contactEmail>
+    <label>Seismic OAUTH</label>
+    <oauthConfig>
+        <callbackUrl>https://copado.seismic.com/Integration/SalesforceOauth.aspx</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6fQgxftMTkBAPGuGbWDDmGQBqWM41AzOjSx3QOjVRUKo6ZIrZqOP0oLpG95DLPxa8lDKJDu</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

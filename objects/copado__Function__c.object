@@ -128,16 +128,22 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Function_Record_Page1</content>
         <formFactor>Large</formFactor>
-        <type>Default</type>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Function_Record_Page1</content>
         <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -279,8 +285,9 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Timeout__c</fullName>
         <deprecated>false</deprecated>
+        <description>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Measured in minutes.</inlineHelpText>
+        <inlineHelpText>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</inlineHelpText>
         <label>Timeout</label>
         <precision>18</precision>
         <required>false</required>
@@ -326,6 +333,41 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>copado__Worker_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Worker Size</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>S</fullName>
+                    <default>true</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>XL</fullName>
+                    <default>false</default>
+                    <label>XL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <label>Function</label>
     <listViews>
         <fullName>copado__All</fullName>
@@ -337,7 +379,15 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <type>Text</type>
     </nameField>
     <pluralLabel>Functions</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>copado__Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__API_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Image_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Callback_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>copado__Function_Name_must_Be_Alpha_Numeric</fullName>
@@ -349,7 +399,10 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <validationRules>
         <fullName>copado__Script_must_contain_a_value</fullName>
         <active>true</active>
-        <errorConditionFormula>ISBLANK(TRIM(copado__Script__c))</errorConditionFormula>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISBLANK(TRIM(copado__Script__c))
+)</errorConditionFormula>
         <errorMessage>Script cannot be empty.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>

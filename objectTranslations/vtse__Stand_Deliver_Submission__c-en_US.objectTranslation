@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>vtse__Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Average Feedback Score --></label>
+        <name>vtse__Average_Feedback_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Media --></label>
+        <name>vtse__Media__c</name>
+        <relationshipLabel><!-- Stand and Deliver Submissions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number Of Reviews --></label>
+        <name>vtse__Number_Of_Reviews__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stand and Deliver Task --></label>
+        <name>vtse__Stand_Deliver_Task__c</name>
+        <relationshipLabel><!-- Stand and Deliver Submissions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vtse__Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Replaced</masterLabel>
+            <translation><!-- Replaced --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitted On --></label>
+        <name>vtse__Submitted_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>vtse__User__c</name>
+        <relationshipLabel><!-- Stand and Deliver Submissions --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

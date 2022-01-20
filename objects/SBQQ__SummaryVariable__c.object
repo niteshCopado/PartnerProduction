@@ -158,6 +158,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id for data migration &amp; integration with other solutions</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__AggregateField__c</fullName>
         <deprecated>false</deprecated>
         <description>Quote Line field that&apos;s acted upon by the aggregate function.</description>
@@ -169,11 +181,51 @@
         <type>Picklist</type>
         <valueSet>
             <valueSetDefinition>
-                <sorted>false</sorted>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Default_Net_Total__c</fullName>
+                    <default>false</default>
+                    <label>Default_Net_Total__c</label>
+                </value>
+                <value>
+                    <fullName>Monthly_net_total_for_Renewal__c</fullName>
+                    <default>false</default>
+                    <label>Monthly_net_total_for_Renewal__c</label>
+                </value>
+                <value>
+                    <fullName>Net_Unit_Price__c</fullName>
+                    <default>false</default>
+                    <label>Net_Unit_Price__c</label>
+                </value>
                 <value>
                     <fullName>Quantity</fullName>
                     <default>false</default>
                     <label>Quantity</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__ListPrice__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__ListPrice__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__NetPrice__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__NetPrice__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__NetTotal__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__NetTotal__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__ProrateMultiplier__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__ProrateMultiplier__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SegmentIndex__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SegmentIndex__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -318,6 +370,36 @@
                     <fullName>Product Family</fullName>
                     <default>false</default>
                     <label>Product Family</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SegmentIndex__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SegmentIndex__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__PricingMethod__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__PricingMethod__c</label>
+                </value>
+                <value>
+                    <fullName>ACV_Segment_Index__c</fullName>
+                    <default>false</default>
+                    <label>ACV_Segment_Index__c</label>
+                </value>
+                <value>
+                    <fullName>Non_Segmented_or_Non_Subscription__c</fullName>
+                    <default>false</default>
+                    <label>Non_Segmented_or_Non_Subscription__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__SubscriptionCategory__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__SubscriptionCategory__c</label>
+                </value>
+                <value>
+                    <fullName>Product_Family_Segment__c</fullName>
+                    <default>false</default>
+                    <label>Product_Family_Segment__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -482,8 +564,13 @@
         <columns>SBQQ__Operator__c</columns>
         <columns>SBQQ__FilterField__c</columns>
         <columns>SBQQ__FilterValue__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Variable Name</label>

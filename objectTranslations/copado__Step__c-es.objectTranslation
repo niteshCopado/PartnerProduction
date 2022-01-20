@@ -91,6 +91,10 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
         <name>copado__Org_Count__c</name>
     </fields>
     <fields>
+        <label><!-- Parent Id --></label>
+        <name>copado__ParentId__c</name>
+    </fields>
+    <fields>
         <label><!-- Read Only --></label>
         <name>copado__Read_Only__c</name>
     </fields>
@@ -130,56 +134,32 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
         <label><!-- Type --></label>
         <name>copado__Type__c</name>
         <picklistValues>
-            <masterLabel>Apex</masterLabel>
-            <translation><!-- Apex --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Automation</masterLabel>
-            <translation><!-- Automation --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Bulk Data</masterLabel>
             <translation><!-- Bulk Data --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Custom Settings</masterLabel>
-            <translation><!-- Custom Settings --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Data</masterLabel>
             <translation><!-- Data --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Data Template</masterLabel>
-            <translation><!-- Data Template --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Delete MetaData</masterLabel>
             <translation><!-- Delete MetaData --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Full Permission Sets</masterLabel>
-            <translation><!-- Full Permission Sets --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Full Profiles</masterLabel>
             <translation><!-- Full Profiles --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Git MetaData</masterLabel>
-            <translation><!-- Git MetaData --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>MetaData</masterLabel>
             <translation><!-- MetaData --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Translations</masterLabel>
-            <translation><!-- Translations --></translation>
+            <masterLabel>Salesforce Flow</masterLabel>
+            <translation><!-- Salesforce Flow --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>URL Callout</masterLabel>
-            <translation><!-- URL Callout --></translation>
+            <masterLabel>Translations</masterLabel>
+            <translation><!-- Translations --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Users</masterLabel>

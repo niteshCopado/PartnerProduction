@@ -1,0 +1,43 @@
+<template>
+    <template if:false={errorMsg}>
+        <div class="slds-m-bottom_large">
+            <lightning-button variant="brand" label={filterButtonText} title={filterButtonText} onclick={handleShowHideFilters}></lightning-button>
+            <template if:true={projectDetails.TeamMemberLogCases}>
+                <a href={contactSupportURL} target="_blank" class="slds-button slds-button_brand slds-m-left_small">Log a Case</a>
+            </template>
+        </div>
+        <template if:true={showHideFilters}>
+            <c-project-configuration-cases-filters onfiltered={handleFiltered}></c-project-configuration-cases-filters>
+        </template>
+        <div>
+            <div class="slds-border_top slds-border_left slds-border_right slds-is-relative">
+                <lightning-datatable 
+                    key-field="id" 
+                    data={cases} 
+                    columns={columns} 
+                    sorted-by={sortBy}
+                    sorted-direction={sortDirection}
+                    onsort={doSorting}
+                    resize-column-disabled 
+                    hide-checkbox-column 
+                    show-row-number-column
+                ></lightning-datatable>
+                <div if:true={isBusy} class="slds-align_absolute-center slds-m-top_x-large">
+                    <lightning-spinner variant="brand" 
+                                        alternative-text="Loading...."     
+                                        size="medium">
+                    </lightning-spinner>
+                </div>
+                <template if:false={isBusy}>
+                    <template if:false={hasRecords}>
+                        <span class="slds-align_absolute-center slds-m-top_x-large no-records_text">No Records Found</span>
+                    </template>
+                </template>
+            </div>
+        </div>
+        <c-project-configuration-pagination total-records={totalCases} current-page-records={currentPageRecords} onpage={handlePage}></c-project-configuration-pagination>
+    </template>
+    <template if:true={errorMsg}>
+        <c-support-copado-error error-message={errorMsg}></c-support-copado-error>
+    </template>
+</template>

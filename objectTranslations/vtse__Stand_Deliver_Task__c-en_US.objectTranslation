@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>vtse__Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed By --></label>
+        <name>vtse__Closed_By__c</name>
+        <relationshipLabel><!-- Stand and Deliver Tasks (Closed By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Closes On --></label>
+        <name>vtse__Closes_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Community Id --></label>
+        <name>vtse__Community_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>vtse__Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Submission --></label>
+        <name>vtse__Last_Submission__c</name>
+        <relationshipLabel><!-- Stand and Deliver Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stand and Deliver --></label>
+        <name>vtse__Stand_Deliver__c</name>
+        <relationshipLabel><!-- Stand and Deliver Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>vtse__Status__c</name>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Returned</masterLabel>
+            <translation><!-- Returned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>vtse__User__c</name>
+        <relationshipLabel><!-- Stand and Deliver Tasks --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

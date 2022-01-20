@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Product Team Support</name>
+    <queueMembers>
+        <users>
+            <user>aperales@copa.do</user>
+            <user>aarora@copado.com</user>
+            <user>aridley@copa.do</user>
+            <user>ar@copa.do</user>
+            <user>creed@copa.do</user>
+            <user>dprieto@copa.do</user>
+            <user>fdarici@copado.com</user>
+            <user>jbarrios@copa.do</user>
+            <user>nnatha@copado.com</user>
+            <user>rpai@copado.com</user>
+            <user>sbhattacharjee@copado.com</user>
+            <user>vdewani@copado.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Network.NetworkMembers$Member.Contact</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Network.NetworkMembers$ReputationPoints</field>
+    </columns>
+    <columns>
+        <field>Network.NetworkMembers$Email</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Shows all the users of the Community with their reputation points.</description>
+    <filter>
+        <criteriaItems>
+            <column>Network.NetworkMembers$Email</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>copado,copa.do,carlos@siqueira.org</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Network.NetworkMembers$Member.Contact</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>&quot; &quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Network.NetworkMembers$IsActive</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Members with Reputation points</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Networks_with_network_members__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Network.NetworkMembers$ReputationPoints</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Network$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

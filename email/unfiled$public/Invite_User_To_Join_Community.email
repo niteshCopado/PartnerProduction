@@ -1,0 +1,9 @@
+Hello,<br/><br/>
+
+You have been invited to join the Copado Community by {!User.Name}. <br/>
+Please go to the <a href="https://success.copado.com/s/signup"> link </a> and follow the registration <a href="https://docs.copado.com/article/wyl1twwtt5-creating-a-case-through-the-community"> process </a> to join the community.<br/>
+
+This is how you will manage cases and certifications with Copado. Please be sure to use the same business email address where you received this invite.<br/><br/>
+
+Regards<br/>
+{!User.Name}

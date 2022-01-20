@@ -1,0 +1,12 @@
+Hi
+
+Please Check this details 
+{!Salesforce_Org__c.Parent_Account__c}
+{!Salesforce_Org__c.Salesforce_Org_At_Risk_Status__c}
+{!Salesforce_Org__c.Type__c}
+{!Salesforce_Org__c.Trial_Expiration_Date__c}
+{!Salesforce_Org__c.Account_Status__c}
+{!Salesforce_Org__c.License_User__c}
+{!Salesforce_Org__c.Opportunity__c}
+
+Thanks

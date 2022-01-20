@@ -62,7 +62,7 @@
                                                     value="{!$Label.copado__clone_template}" action="{!saveCloneTemplate}"
                                                     onClick="dts.onClickFunction();"
                                                     onComplete="dts.onCompleteFunctionToreRender();"
-                                                    rendered="{!AND(template.Id != null,enableADD,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}"
+                                                    rendered="{!AND(template.Id != null,enableADD,hasOrgAccess,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}"
                                                     reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel" />
                                 <apex:commandButton styleClass="slds-button slds-button_neutral"
                                                     value="{!$Label.copado__export_template}"
@@ -73,7 +73,7 @@
                                                     value="{!$Label.copado__save_template}" action="{!saveMainTemplate}"
                                                     onClick="dts.onClickFunction();"
                                                     onComplete="dts.onCompleteFunctionToreRender();"
-                                                    rendered="{!AND(enableADD,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}" reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"/>
+                                                    rendered="{!AND(enableADD,hasOrgAccess,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}" reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"/>
                             </div>
                         </div>
                     </div>
@@ -286,7 +286,6 @@
                                               <span class="slds-checkbox slds-checkbox_standalone">
                                                   <apex:inputField value="{!template.copado__Active__c}"
                                                                    id="activeTemplate"
-                                                                   html-disabled="disabled"
                                                                    rendered="{!AND(enableADD,$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Createable,$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Updateable)}" />
                                                   <apex:outputField value="{!template.copado__Active__c}"
                                                                     rendered="{!OR(!enableADD,AND($ObjectType.copado__Data_Template__c.fields.copado__Active__c.Accessible,!$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Createable,!$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Updateable))}" />
@@ -511,7 +510,7 @@
                                                         </div>
                                                     </apex:outputPanel>
 
-                                                    <apex:outputPanel layout="none" rendered="{!AND(!obl.nillable,!selectableFieldsMap[obl.name].isSelected)}">
+                                                    <apex:outputPanel layout="none" rendered="{!AND(obl.type != 'boolean', !obl.nillable,!selectableFieldsMap[obl.name].isSelected)}">
                                                         <apex:image width="20px"
                                                                     value="{!URLFOR($Resource.copado__DTS_images,'warning.png')}"
                                                                     title="{!$Label.copado__warning_dts}" />
@@ -797,7 +796,7 @@
                                                                                          value="{!criteria.fieldName}"
                                                                                          size="1" multiselect="false"
                                                                                          disabled="{!OR(!enableADD,AND($ObjectType.copado__Data_Template__c.Accessible,!$ObjectType.copado__Data_Template__c.Createable,!$ObjectType.copado__Data_Template__c.Updateable))}">
-                                                                            <apex:selectOptions value="{!allFieldsAPIName}" />
+                                                                            <apex:selectOptions value="{!AllFieldsAPIName}" />
                                                                             <apex:actionSupport action="{!getFieldOperators}"
                                                                                     event="onchange"
                                                                                     reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"
@@ -859,13 +858,13 @@
                                                                             <apex:selectOption itemValue="THIS_FISCAL_QUARTER" itemLabel="This Fiscal Quarter"/>
                                                                             <apex:selectOption itemValue="LAST_FISCAL_QUARTER" itemLabel="Last Fiscal Quarter"/>
                                                                             <apex:selectOption itemValue="NEXT_FISCAL_QUARTER" itemLabel="Next Fiscal Quarter"/>
-                                                                            <apex:selectOption itemValue="LAST_N_FISCAL_​QUARTERS:n" itemLabel="Last N Fiscal Quarters"/>
-                                                                            <apex:selectOption itemValue="NEXT_N_FISCAL_​QUARTERS:n" itemLabel="Next N Fiscal Quarters"/>
+                                                                            <apex:selectOption itemValue="LAST_N_FISCAL_QUARTERS:n" itemLabel="Last N Fiscal Quarters"/>
+                                                                            <apex:selectOption itemValue="NEXT_N_FISCAL_QUARTERS:n" itemLabel="Next N Fiscal Quarters"/>
                                                                             <apex:selectOption itemValue="THIS_FISCAL_YEAR" itemLabel="This Fiscal Year"/>
                                                                             <apex:selectOption itemValue="LAST_FISCAL_YEAR" itemLabel="Last Fiscal Year"/>
                                                                             <apex:selectOption itemValue="NEXT_FISCAL_YEAR" itemLabel="Next Fiscal Year"/>
-                                                                            <apex:selectOption itemValue="LAST_N_FISCAL_​YEARS:n" itemLabel="Last N Fiscal Years"/>
-                                                                            <apex:selectOption itemValue="NEXT_N_FISCAL_​YEARS:n" itemLabel="Next N Fiscal Years"/>
+                                                                            <apex:selectOption itemValue="LAST_N_FISCAL_YEARS:n" itemLabel="Last N Fiscal Years"/>
+                                                                            <apex:selectOption itemValue="NEXT_N_FISCAL_YEARS:n" itemLabel="Next N Fiscal Years"/>
                                                                             <apex:selectOption itemValue="customDate" itemLabel="Custom Date (Time)"/>
                                                                             <apex:actionSupport event="onchange"
                                                                                                 onSubmit="dts.onClickFunction();"

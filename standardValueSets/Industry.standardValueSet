@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sorted>false</sorted>
+    <sorted>true</sorted>
     <standardValue>
-        <fullName>Agriculture</fullName>
+        <fullName>Accounting</fullName>
         <default>false</default>
-        <label>Agriculture</label>
+        <label>Accounting</label>
     </standardValue>
     <standardValue>
-        <fullName>Apparel</fullName>
+        <fullName>Aerospace and Defense</fullName>
         <default>false</default>
-        <label>Apparel</label>
+        <label>Aerospace and Defense</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agriculture, Forestry and Fishing</fullName>
+        <default>false</default>
+        <label>Agriculture, Forestry and Fishing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Automotive and Transportation</fullName>
+        <default>false</default>
+        <label>Automotive and Transportation</label>
     </standardValue>
     <standardValue>
         <fullName>Banking</fullName>
@@ -17,9 +27,19 @@
         <label>Banking</label>
     </standardValue>
     <standardValue>
-        <fullName>Biotechnology</fullName>
+        <fullName>Banking and Finance</fullName>
         <default>false</default>
-        <label>Biotechnology</label>
+        <label>Banking and Finance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Biotechnology, Pharmaceuticals and Medicine</fullName>
+        <default>false</default>
+        <label>Biotechnology, Pharmaceuticals and Medicine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business and Management Services</fullName>
+        <default>false</default>
+        <label>Business and Management Services</label>
     </standardValue>
     <standardValue>
         <fullName>Chemicals</fullName>
@@ -27,19 +47,34 @@
         <label>Chemicals</label>
     </standardValue>
     <standardValue>
-        <fullName>Communications</fullName>
+        <fullName>Computer &amp; Network Security</fullName>
         <default>false</default>
-        <label>Communications</label>
+        <label>Computer &amp; Network Security</label>
     </standardValue>
     <standardValue>
-        <fullName>Construction</fullName>
+        <fullName>Computers</fullName>
         <default>false</default>
-        <label>Construction</label>
+        <label>Computers</label>
     </standardValue>
     <standardValue>
-        <fullName>Consulting</fullName>
+        <fullName>Computer Software</fullName>
         <default>false</default>
-        <label>Consulting</label>
+        <label>Computer Software</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Construction and Building Materials</fullName>
+        <default>false</default>
+        <label>Construction and Building Materials</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consumer Goods</fullName>
+        <default>false</default>
+        <label>Consumer Goods</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consumer Services</fullName>
+        <default>false</default>
+        <label>Consumer Services</label>
     </standardValue>
     <standardValue>
         <fullName>Education</fullName>
@@ -52,34 +87,19 @@
         <label>Electronics</label>
     </standardValue>
     <standardValue>
-        <fullName>Energy</fullName>
+        <fullName>Entertainment, Travel and Leisure</fullName>
         <default>false</default>
-        <label>Energy</label>
+        <label>Entertainment, Travel and Leisure</label>
     </standardValue>
     <standardValue>
-        <fullName>Engineering</fullName>
+        <fullName>Financial Services</fullName>
         <default>false</default>
-        <label>Engineering</label>
+        <label>Financial Services</label>
     </standardValue>
     <standardValue>
-        <fullName>Entertainment</fullName>
+        <fullName>Food and Beverage</fullName>
         <default>false</default>
-        <label>Entertainment</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Environmental</fullName>
-        <default>false</default>
-        <label>Environmental</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Finance</fullName>
-        <default>false</default>
-        <label>Finance</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Food &amp; Beverage</fullName>
-        <default>false</default>
-        <label>Food &amp; Beverage</label>
+        <label>Food and Beverage</label>
     </standardValue>
     <standardValue>
         <fullName>Government</fullName>
@@ -92,9 +112,29 @@
         <label>Healthcare</label>
     </standardValue>
     <standardValue>
-        <fullName>Hospitality</fullName>
+        <fullName>Health Care</fullName>
         <default>false</default>
-        <label>Hospitality</label>
+        <label>Health Care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Healthcare &amp; Life Sciences</fullName>
+        <default>false</default>
+        <label>Healthcare &amp; Life Sciences</label>
+    </standardValue>
+    <standardValue>
+        <fullName>High Tech</fullName>
+        <default>false</default>
+        <label>High Tech</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Information Technology</fullName>
+        <default>false</default>
+        <label>Information Technology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Information Technology and Services</fullName>
+        <default>false</default>
+        <label>Information Technology and Services</label>
     </standardValue>
     <standardValue>
         <fullName>Insurance</fullName>
@@ -102,9 +142,9 @@
         <label>Insurance</label>
     </standardValue>
     <standardValue>
-        <fullName>Machinery</fullName>
+        <fullName>Internet</fullName>
         <default>false</default>
-        <label>Machinery</label>
+        <label>Internet</label>
     </standardValue>
     <standardValue>
         <fullName>Manufacturing</fullName>
@@ -112,9 +152,14 @@
         <label>Manufacturing</label>
     </standardValue>
     <standardValue>
-        <fullName>Media</fullName>
+        <fullName>Mining, Quarrying and Drilling</fullName>
         <default>false</default>
-        <label>Media</label>
+        <label>Mining, Quarrying and Drilling</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nonclassifiable Establishments</fullName>
+        <default>false</default>
+        <label>Nonclassifiable Establishments</label>
     </standardValue>
     <standardValue>
         <fullName>Not For Profit</fullName>
@@ -122,9 +167,34 @@
         <label>Not For Profit</label>
     </standardValue>
     <standardValue>
-        <fullName>Recreation</fullName>
+        <fullName>Professional Services</fullName>
         <default>false</default>
-        <label>Recreation</label>
+        <label>Professional Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Sector</fullName>
+        <default>false</default>
+        <label>Public Sector</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Sector and Government</fullName>
+        <default>false</default>
+        <label>Public Sector and Government</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rental and Leasing</fullName>
+        <default>false</default>
+        <label>Rental and Leasing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Repair and Maintenance</fullName>
+        <default>false</default>
+        <label>Repair and Maintenance</label>
     </standardValue>
     <standardValue>
         <fullName>Retail</fullName>
@@ -132,9 +202,9 @@
         <label>Retail</label>
     </standardValue>
     <standardValue>
-        <fullName>Shipping</fullName>
+        <fullName>Software &amp; Programming</fullName>
         <default>false</default>
-        <label>Shipping</label>
+        <label>Software &amp; Programming</label>
     </standardValue>
     <standardValue>
         <fullName>Technology</fullName>
@@ -142,23 +212,23 @@
         <label>Technology</label>
     </standardValue>
     <standardValue>
-        <fullName>Telecommunications</fullName>
+        <fullName>Telecommunications and Publishing</fullName>
         <default>false</default>
-        <label>Telecommunications</label>
+        <label>Telecommunications and Publishing</label>
     </standardValue>
     <standardValue>
-        <fullName>Transportation</fullName>
+        <fullName>Utilities and Energy</fullName>
         <default>false</default>
-        <label>Transportation</label>
+        <label>Utilities and Energy</label>
     </standardValue>
     <standardValue>
-        <fullName>Utilities</fullName>
+        <fullName>Venture Capital &amp; Private Equity</fullName>
         <default>false</default>
-        <label>Utilities</label>
+        <label>Venture Capital &amp; Private Equity</label>
     </standardValue>
     <standardValue>
-        <fullName>Other</fullName>
+        <fullName>Wholesale</fullName>
         <default>false</default>
-        <label>Other</label>
+        <label>Wholesale</label>
     </standardValue>
 </StandardValueSet>

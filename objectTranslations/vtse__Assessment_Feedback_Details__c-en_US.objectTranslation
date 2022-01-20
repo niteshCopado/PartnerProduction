@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Assessment Criteria --></label>
+        <name>vtse__Assessment_Criteria__c</name>
+        <relationshipLabel><!-- Assessment Feedback Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assessment Feedback --></label>
+        <name>vtse__Assessment_Feedback__c</name>
+        <relationshipLabel><!-- Assessment Feedback Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Response --></label>
+        <name>vtse__Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reviewer --></label>
+        <name>vtse__Reviewer__c</name>
+        <relationshipLabel><!-- Assessment Feedback Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>vtse__Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted On --></label>
+        <name>vtse__Submitted_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>vtse__User__c</name>
+        <relationshipLabel><!-- Assessment Feedback Details (User) --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

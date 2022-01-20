@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Allow First Touch Due to change after a Case is opened, if the Business Hours Change. --></help>
+        <label><!-- Allow First Touch to Change --></label>
+        <name>tysosla__Allow_First_Touch_to_Change__c</name>
+    </fields>
+    <fields>
+        <help><!-- Will always force a calculation of First Touch Due when it is blank, even if a user forces it to be blank. --></help>
+        <label><!-- Calc Blank First Touch --></label>
+        <name>tysosla__Calc_Blank_First_Touch__c</name>
+    </fields>
+    <fields>
+        <help><!-- If selected, this will calculate the response time when the first touch is filled in, regardless of status change. --></help>
+        <label><!-- Calc Response --></label>
+        <name>tysosla__Calc_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Automation --></label>
+        <name>tysosla__Enable_Automation__c</name>
+    </fields>
+    <fields>
+        <help><!-- If enabled, will create logs as text files and attach them as files. --></help>
+        <label><!-- Error Logging --></label>
+        <name>tysosla__Error_Logging__c</name>
+    </fields>
+    <fields>
+        <label><!-- Highest Priority --></label>
+        <name>tysosla__Highest_Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the initial Case Status when a case is opened? --></help>
+        <label><!-- Initial Case Status --></label>
+        <name>tysosla__Initial_Case_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lowest Priority --></label>
+        <name>tysosla__Lowest_Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, will show the resolution time in hours in the sla editor. --></help>
+        <label><!-- Resolution in Hours --></label>
+        <name>tysosla__Resolution_in_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- If enabled, will allow you to track time in closed case statuses. --></help>
+        <label><!-- Track Closed Case Statuses --></label>
+        <name>tysosla__Track_Closed_Case_Statuses__c</name>
+    </fields>
+</CustomObjectTranslation>

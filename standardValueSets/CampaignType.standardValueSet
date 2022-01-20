@@ -1,64 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sorted>false</sorted>
+    <sorted>true</sorted>
     <standardValue>
-        <fullName>Conference</fullName>
-        <default>true</default>
-        <label>Conference</label>
+        <fullName>Ads/Social - AD</fullName>
+        <default>false</default>
+        <label>Ads/Social - AD</label>
     </standardValue>
     <standardValue>
-        <fullName>Webinar</fullName>
+        <fullName>Conference - CNF</fullName>
         <default>false</default>
-        <label>Webinar</label>
+        <label>Conference - CNF</label>
     </standardValue>
     <standardValue>
-        <fullName>Trade Show</fullName>
+        <fullName>Email - EML</fullName>
         <default>false</default>
-        <label>Trade Show</label>
+        <label>Email - EML</label>
     </standardValue>
     <standardValue>
-        <fullName>Public Relations</fullName>
+        <fullName>Event - EVT</fullName>
         <default>false</default>
-        <label>Public Relations</label>
+        <label>Event - EVT</label>
     </standardValue>
     <standardValue>
-        <fullName>Partners</fullName>
+        <fullName>Inbound - INB</fullName>
         <default>false</default>
-        <label>Partners</label>
+        <label>Inbound - INB</label>
     </standardValue>
     <standardValue>
-        <fullName>Referral Program</fullName>
+        <fullName>Parent Campaign - PARENT</fullName>
         <default>false</default>
-        <label>Referral Program</label>
+        <label>Parent Campaign - PARENT</label>
     </standardValue>
     <standardValue>
-        <fullName>Advertisement</fullName>
+        <fullName>Sales - SLS</fullName>
         <default>false</default>
-        <label>Advertisement</label>
+        <label>Sales - SLS</label>
     </standardValue>
     <standardValue>
-        <fullName>Banner Ads</fullName>
+        <fullName>Webinar - WBN</fullName>
         <default>false</default>
-        <label>Banner Ads</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Direct Mail</fullName>
-        <default>false</default>
-        <label>Direct Mail</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Email</fullName>
-        <default>false</default>
-        <label>Email</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Telemarketing</fullName>
-        <default>false</default>
-        <label>Telemarketing</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Other</fullName>
-        <default>false</default>
-        <label>Other</label>
+        <label>Webinar - WBN</label>
     </standardValue>
 </StandardValueSet>

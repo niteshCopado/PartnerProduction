@@ -158,6 +158,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id for data migration &amp; integration with other solutions</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__Index__c</fullName>
         <deprecated>false</deprecated>
         <description>Assign an unique number to this Condition to reference it in the Quote Term&apos;s Advanced Condition.</description>

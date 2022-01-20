@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings for Cases and Service Cloud.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>tysosla__Allow_First_Touch_to_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allow First Touch Due to change after a Case is opened, if the Business Hours Change.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allow First Touch Due to change after a Case is opened, if the Business Hours Change.</inlineHelpText>
+        <label>Allow First Touch to Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Calc_Blank_First_Touch__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Will always force a calculation of First Touch Due when it is blank, even if a user forces it to be blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Will always force a calculation of First Touch Due when it is blank, even if a user forces it to be blank.</inlineHelpText>
+        <label>Calc Blank First Touch</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Calc_Response__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If selected, this will calculate the response time when the first touch is filled in, regardless of status change.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If selected, this will calculate the response time when the first touch is filled in, regardless of status change.</inlineHelpText>
+        <label>Calc Response</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Enable_Automation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Automation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Error_Logging__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If enabled, will create logs as text files and attach them as files.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If enabled, will create logs as text files and attach them as files.</inlineHelpText>
+        <label>Error Logging</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Highest_Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Highest Priority</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>tysosla__Initial_Case_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>What is the initial Case Status when a case is opened?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the initial Case Status when a case is opened?</inlineHelpText>
+        <label>Initial Case Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>tysosla__Lowest_Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lowest Priority</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>tysosla__Resolution_in_Hours__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, will show the resolution time in hours in the sla editor.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, will show the resolution time in hours in the sla editor.</inlineHelpText>
+        <label>Resolution in Hours</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>tysosla__Track_Closed_Case_Statuses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If enabled, will allow you to track time in closed case statuses.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If enabled, will allow you to track time in closed case statuses.</inlineHelpText>
+        <label>Track Closed Case Statuses</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Service Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

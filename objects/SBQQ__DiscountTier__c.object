@@ -193,6 +193,19 @@
         <label>Discount Schedule Modal</label>
     </fieldSets>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Holds the external Id</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__DiscountAmount__c</fullName>
         <deprecated>false</deprecated>
         <description>Discount amount applied when quantity falls in this tier.</description>

@@ -177,7 +177,7 @@
         <deprecated>false</deprecated>
         <description>Field on Quote Line or Product Option object that is evaluated by this condition.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Choose a field on the target object.</inlineHelpText>
+        <inlineHelpText>Choose the field that should contain the value you enter in the Value field.</inlineHelpText>
         <label>Field</label>
         <required>false</required>
         <trackTrending>false</trackTrending>

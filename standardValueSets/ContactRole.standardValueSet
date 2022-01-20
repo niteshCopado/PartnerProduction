@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sorted>false</sorted>
+    <sorted>true</sorted>
     <standardValue>
-        <fullName>Business User</fullName>
+        <fullName>Billing</fullName>
         <default>false</default>
-        <label>Business User</label>
+        <label>Billing</label>
     </standardValue>
     <standardValue>
         <fullName>Decision Maker</fullName>
@@ -37,13 +37,73 @@
         <label>Influencer</label>
     </standardValue>
     <standardValue>
-        <fullName>Technical Buyer</fullName>
+        <fullName>Legal</fullName>
         <default>false</default>
-        <label>Technical Buyer</label>
+        <label>Legal</label>
     </standardValue>
     <standardValue>
         <fullName>Other</fullName>
         <default>false</default>
         <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Procurement</fullName>
+        <default>false</default>
+        <label>Procurement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Release Manager</fullName>
+        <default>false</default>
+        <label>Release Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF AE</fullName>
+        <default>false</default>
+        <label>SF AE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF AVP</fullName>
+        <default>false</default>
+        <label>SF AVP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF CSM</fullName>
+        <default>false</default>
+        <label>SF CSM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF ECS</fullName>
+        <default>false</default>
+        <label>SF ECS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF PA</fullName>
+        <default>false</default>
+        <label>SF PA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF PLATFORM AE</fullName>
+        <default>false</default>
+        <label>SF PLATFORM AE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF SE</fullName>
+        <default>false</default>
+        <label>SF SE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SF TA</fullName>
+        <default>false</default>
+        <label>SF TA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Signer</fullName>
+        <default>false</default>
+        <label>Signer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Buyer</fullName>
+        <default>false</default>
+        <label>Technical Buyer</label>
     </standardValue>
 </StandardValueSet>

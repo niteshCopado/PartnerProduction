@@ -9,6 +9,11 @@
         <name>SBQQ__SearchResults</name>
     </fieldSets>
     <fields>
+        <label><!-- Salesforce Org --></label>
+        <name>Custom_Salesforce_Org__c</name>
+        <relationshipLabel><!-- Assets --></relationshipLabel>
+    </fields>
+    <fields>
         <help>Zusätzlicher Rabatt für diesen Vermögenswert, angegeben als Betrag.</help>
         <label><!-- Additional Disc. (Amt) --></label>
         <name>SBQQ__AdditionalDiscountAmount__c</name>
@@ -326,8 +331,46 @@
         <relationshipLabel><!-- Assets (Virtual Asset) --></relationshipLabel>
     </fields>
     <fields>
-        <help>Die Summe aller gebuchten Rechnungspostensalden für diesen Vermögenswert.</help>
-        <label><!-- Invoice Line Balance --></label>
-        <name>blng__InvoiceLineBalance__c</name>
+        <help><!-- Once licenses are assigned to an org, this lookup field should be set. --></help>
+        <label><!-- Salesforce Org --></label>
+        <name>Salesforce_Org__c</name>
+        <relationshipLabel><!-- Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Lookup to the Contract record which contains the related Asset record. --></help>
+        <label><!-- Contract Number --></label>
+        <name>kuga_sub__ContractNumber__c</name>
+        <relationshipLabel><!-- Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- References the Renew field on the associated Order Product Line. --></help>
+        <label><!-- Renew --></label>
+        <name>kuga_sub__Renew__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>kugo2p__OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product Line --></label>
+        <name>kugo2p__OrderProductLine__c</name>
+        <relationshipLabel><!-- Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Purchase Price --></label>
+        <name>kugo2p__PurchasePrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment Date --></label>
+        <name>kugo2p__ShipmentDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment Line --></label>
+        <name>kugo2p__ShipmentLine__c</name>
+        <relationshipLabel><!-- Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipment Status --></label>
+        <name>kugo2p__ShipmentStatus__c</name>
     </fields>
 </CustomObjectTranslation>

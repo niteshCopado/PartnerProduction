@@ -141,13 +141,22 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copadovsm__VSM_Header</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copadovsm__VSM_Header</fullName>
+        <fields>Name</fields>
+        <fields>copadovsm__Object__c</fields>
+        <fields>copadovsm__Primary_Field__c</fields>
+        <fields>copadovsm__Active__c</fields>
+        <fields>copadovsm__Activation_Datetime__c</fields>
+        <label>VSM Header</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Value Stream Map is a highly-regarded way of visualizing the way a team collaborates to deliver valuable work to end users, and to expose waste and bottlenecks in that process.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
@@ -162,6 +171,7 @@
         <externalId>false</externalId>
         <label>Value Stream Start Date</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -173,9 +183,46 @@
         <externalId>false</externalId>
         <inlineHelpText>Activating your Value Stream Map will kick off the Event Collection process. Activate your VSM to begin collecting data.</inlineHelpText>
         <label>Active</label>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Backlog_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Backlog Criteria</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Cancelled_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cancelled Criteria</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Completed_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Completed Criteria</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
     </fields>
     <fields>
         <fullName>copadovsm__Description__c</fullName>
@@ -183,6 +230,7 @@
         <externalId>false</externalId>
         <label>Description</label>
         <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -194,6 +242,7 @@
         <externalId>false</externalId>
         <label>Excluded Criteria</label>
         <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -206,6 +255,7 @@
         <externalId>false</externalId>
         <label>Last Execution Datetime</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -218,6 +268,7 @@
         <label>Object</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -231,6 +282,7 @@
         <label>Operator Field</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -244,6 +296,7 @@
         <label>Primary Field</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -255,6 +308,7 @@
         <externalId>false</externalId>
         <label>Recalculation Status</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -293,10 +347,45 @@
         <label>Record Types</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Snapshot_Mode_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Snapshot Mode</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Start_Date__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Threshold_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Threshold Enabled</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copadovsm__Version__c</fullName>
@@ -305,6 +394,7 @@
         <label>Version</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -318,6 +408,7 @@
     </listViews>
     <nameField>
         <label>Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>

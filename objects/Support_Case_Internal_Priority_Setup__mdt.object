@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Metadata to store the conditions on which the priority is set for Copado Support Cases.</description>
+    <fields>
+        <fullName>Business_Impact_Critical_Functionality__c</fullName>
+        <description>Store Yes/No if deployment affect critical functionality.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Business Impact - Critical Functionality</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Impact_Data_Integrity__c</fullName>
+        <description>Store Yes/No based on affect on data integrity.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Business Impact - Data Integrity</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Impact_Users__c</fullName>
+        <description>Percentage of affected users.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Business Impact - Users</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Impact_Workaround__c</fullName>
+        <description>Store Yes/No based on viable workaround availability.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Business Impact - Workaround</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Internal_Priority_To_Set__c</fullName>
+        <description>Store the internal priority which needs to be set based on other field values.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Internal Priority To Set</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Production_Deployment__c</fullName>
+        <description>Store Yes/No based on production deployment or not.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Production Deployment</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Support Case Internal Priority Setup</label>
+    <listViews>
+        <fullName>All_Priority_Setup_Records</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>NamespacePrefix</columns>
+        <columns>Business_Impact_Users__c</columns>
+        <columns>Business_Impact_Workaround__c</columns>
+        <columns>Production_Deployment__c</columns>
+        <columns>Business_Impact_Data_Integrity__c</columns>
+        <columns>Business_Impact_Critical_Functionality__c</columns>
+        <columns>Internal_Priority_To_Set__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All - Priority Setup Records</label>
+        <language>en_US</language>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <pluralLabel>Support Case Internal Priority Setups</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

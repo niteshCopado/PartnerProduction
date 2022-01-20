@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Account_Health_Red</fullName>
+        <description>Account Health Red</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sgidwani@copa.do</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sgillert@copa.do</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sales@copado.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>System_Emails/Account_Health_Red</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Salesforce_team_of_New_Deals_WON</fullName>
+        <description>Notify Salesforce team of New Deals (WON)</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Salesforce_AE__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesforce_CSM__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Salesforce_RVP__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Partner_Lead__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>vrossi@copado.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_Templates/Notify_Salesforce_team_of_New_Deals</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Account_Type_to_Prospect</fullName>
+        <field>Type</field>
+        <literalValue>Prospect</literalValue>
+        <name>Account Type to Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notify Salesforce team of New Deals %28WON%29</fullName>
+        <actions>
+            <name>Notify_Salesforce_team_of_New_Deals_WON</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Capture_Opp_Closed_Won_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>48</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

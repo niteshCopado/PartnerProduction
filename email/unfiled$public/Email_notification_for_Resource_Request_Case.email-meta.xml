@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sending notifications when case is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email notification for Resource Request Case</name>
+    <style>none</style>
+    <subject>New Resource Request Case is created</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

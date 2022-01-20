@@ -2,28 +2,13 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Shipped</fullName>
+        <fullName>Active</fullName>
         <default>false</default>
-        <label>Shipped</label>
+        <label>Active</label>
     </standardValue>
     <standardValue>
-        <fullName>Installed</fullName>
+        <fullName>Expired</fullName>
         <default>false</default>
-        <label>Installed</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Registered</fullName>
-        <default>false</default>
-        <label>Registered</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Obsolete</fullName>
-        <default>false</default>
-        <label>Obsolete</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Purchased</fullName>
-        <default>false</default>
-        <label>Purchased</label>
+        <label>Expired</label>
     </standardValue>
 </StandardValueSet>

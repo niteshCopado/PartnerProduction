@@ -1,0 +1,62 @@
+<template>
+    <template if:true={hasRecords}>
+        <div class="slds-grid slds-m-top_large">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-6 slds-align_absolute-center">
+                <span class="slds-p-around_xx-small text-no_wrap">{pageRecordsRange}</span>
+                <lightning-combobox
+                    name="status"
+                    variant="label-hidden"
+                    placeholder="Records/Page"
+                    value={selectedRecordsPerPage}
+                    options={recordsPerPageOptions}
+                    onchange={handleChange}
+                ></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_4-of-6 slds-align_absolute-center">
+                <lightning-button 
+                    variant="neutral" 
+                    title="first" 
+                    label="First"
+                    icon-name="utility:chevronleft" 
+                    icon-position="left" 
+                    onclick={handleClick} 
+                ></lightning-button>
+                <lightning-button 
+                    variant="neutral" 
+                    title="previous"
+                    label="Previous"
+                    icon-name="utility:chevronleft" 
+                    icon-position="left" 
+                    onclick={handleClick} 
+                ></lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    title="next"
+                    label="Next"
+                    icon-name="utility:chevronright" 
+                    icon-position="right" 
+                    onclick={handleClick} 
+                    ></lightning-button>
+                <lightning-button 
+                    variant="neutral" 
+                    title="last" 
+                    label="Last"
+                    icon-name="utility:chevronright" 
+                    icon-position="right" 
+                    onclick={handleClick}
+                ></lightning-button>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-6 slds-align_absolute-center">
+                <span class="slds-p-around_xx-small text-no_wrap">Page</span>
+                <lightning-input 
+                    type="text"
+                    value={currentPage}
+                    onblur={handlePage}
+                    name="pageNumber" 
+                    variant='label-hidden'
+                ></lightning-input>
+                <span class="slds-p-around_xx-small text-no_wrap">{numberOfPages}</span>
+            </div>
+        </div>
+    </template>
+</template>

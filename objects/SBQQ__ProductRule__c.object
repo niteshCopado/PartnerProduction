@@ -151,12 +151,24 @@
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
-    <enableLicensing>false</enableLicensing>
+    <enableLicensing>true</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id for migration and integration purposes</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
     <fields>
         <fullName>SBQQ__Active__c</fullName>
         <defaultValue>false</defaultValue>
@@ -443,9 +455,15 @@
         <fullName>SBQQ__All</fullName>
         <columns>NAME</columns>
         <columns>SBQQ__Active__c</columns>
+        <columns>SBQQ__EvaluationOrder__c</columns>
+        <columns>SBQQ__Type__c</columns>
+        <columns>SBQQ__ErrorMessage__c</columns>
+        <columns>External_Id__c</columns>
         <columns>UPDATEDBY_USER</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
     </listViews>
     <nameField>
         <label>Product Rule Name</label>

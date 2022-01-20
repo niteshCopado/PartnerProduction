@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>copado.monitor@copa.do</contactEmail>
+    <description>Access the Copado Monitor Application</description>
+    <label>Copado Monitor (DEPRECATED)</label>
+    <logoUrl>https://c.eu2.content.force.com/servlet/servlet.ImageServer?id=015b0000000Hg8u&amp;oid=00D1l0000000dkE&amp;lastMod=1372245086000</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://copado-monitor.herokuapp.com/oauthCallback</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6ft1Y9n7M2VbW1Pk6WxMJjsuqpt4DCh.7p3TdkyCZpfMS3RinY7Fy.BO5yVv2ADcPOlrT.8</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

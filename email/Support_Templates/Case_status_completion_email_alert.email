@@ -1,0 +1,11 @@
+Hi {!Case.OwnerFullName},
+
+Your case has been marked as completed. Below are the details:
+Case Number: {!Case.CaseNumber}
+Case Record Type: {!Case.RecordType}
+Case Type: {!Case.Type}
+Priority: {!Case.Priority}
+Subject: {!Case.Subject}
+Description: {!Case.Description}
+
+Link: {!Case.Link}

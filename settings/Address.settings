@@ -1056,9 +1056,9 @@
             </states>
             <states>
                 <active>true</active>
-                <integrationValue>Taiwan</integrationValue>
+                <integrationValue>Chinese Taipei</integrationValue>
                 <isoCode>71</isoCode>
-                <label>Taiwan</label>
+                <label>Chinese Taipei</label>
                 <standard>true</standard>
                 <visible>true</visible>
             </states>
@@ -2009,14 +2009,6 @@
                 <integrationValue>Sikkim</integrationValue>
                 <isoCode>SK</isoCode>
                 <label>Sikkim</label>
-                <standard>true</standard>
-                <visible>true</visible>
-            </states>
-            <states>
-                <active>true</active>
-                <integrationValue>Telangana</integrationValue>
-                <isoCode>TG</isoCode>
-                <label>Telangana</label>
                 <standard>true</standard>
                 <visible>true</visible>
             </states>
@@ -3214,9 +3206,9 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Libya</integrationValue>
+            <integrationValue>Libyan Arab Jamahiriya</integrationValue>
             <isoCode>LY</isoCode>
-            <label>Libya</label>
+            <label>Libyan Arab Jamahiriya</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <visible>true</visible>
@@ -3866,9 +3858,9 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Palestine</integrationValue>
+            <integrationValue>Palestinian Territory, Occupied</integrationValue>
             <isoCode>PS</isoCode>
-            <label>Palestine</label>
+            <label>Palestinian Territory, Occupied</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <visible>true</visible>
@@ -4262,9 +4254,9 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Taiwan</integrationValue>
+            <integrationValue>Chinese Taipei</integrationValue>
             <isoCode>TW</isoCode>
-            <label>Taiwan</label>
+            <label>Chinese Taipei</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <visible>true</visible>
@@ -4865,9 +4857,9 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Vietnam</integrationValue>
+            <integrationValue>Viet Nam</integrationValue>
             <isoCode>VN</isoCode>
-            <label>Vietnam</label>
+            <label>Viet Nam</label>
             <orgDefault>false</orgDefault>
             <standard>true</standard>
             <visible>true</visible>

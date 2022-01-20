@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="The Stand Deliver '{!relatedTo.Name}' was shared with you"
+    recipientType="User"
+    relatedToType="vtse__Stand_Deliver__c"
+    language="{!recipient.LanguageLocaleKey}"
+    renderUsingSystemContextWithoutSharing="true"
+>
+    <messaging:htmlEmailBody >
+        <apex:outputPanel layout="block">
+            <apex:outputText rendered="{!relatedTo.Name != null}" value="The Stand Deliver '{!relatedTo.Name}' was shared with you" />
+            <br/><br/>
+
+            <apex:outputText rendered="{!relatedTo.vtse__Description__c != null}" escape="false" value="Description: {! relatedTo.Description__c }"/>
+            <br/><br/>
+
+            <c:EmailNotification recordId="{!relatedTo.Id}" hasDetailPageLink="true"/>
+        </apex:outputPanel>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

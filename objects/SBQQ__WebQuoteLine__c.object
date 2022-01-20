@@ -675,12 +675,7 @@
                 <value>
                     <fullName>Both</fullName>
                     <default>false</default>
-                    <label>Package &amp; Components</label>
-                </value>
-                <value>
-                    <fullName>Entire Hierarchy</fullName>
-                    <default>false</default>
-                    <label>Entire Hierarchy</label>
+                    <label>Both</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1844,14 +1839,9 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Hardware</fullName>
+                    <fullName>Licenses</fullName>
                     <default>false</default>
-                    <label>Hardware</label>
-                </value>
-                <value>
-                    <fullName>Software</fullName>
-                    <default>false</default>
-                    <label>Software</label>
+                    <label>Licenses</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1872,7 +1862,7 @@
     <fields>
         <fullName>SBQQ__SubscriptionPricing__c</fullName>
         <deprecated>false</deprecated>
-        <description>Determines how the subscription on this line item is priced. Blank value means this line contains product that&apos;s not a subscription.</description>
+        <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
         <externalId>false</externalId>
         <inlineHelpText>Determines how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
         <label>Subscription Pricing</label>

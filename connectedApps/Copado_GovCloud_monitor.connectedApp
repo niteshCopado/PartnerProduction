@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>developers@copado.com</contactEmail>
+    <contactPhone>+34 910 56 11 75</contactPhone>
+    <description>Copado</description>
+    <infoUrl>https://www.copado.com</infoUrl>
+    <label>Copado GovCloud (monitor)</label>
+    <oauthConfig>
+        <callbackUrl>https://monitor.govcloud.copado.com/oauthCallback</callbackUrl>
+        <consumerKey>3MVG9llQY5kM9T6ft1Y9n7M2VbbiMN1RBte0gQeVJt9Eeq1yovH9JlJDLyKvK6gS8bcN2FJz7hHygE7zjgulN</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

@@ -774,7 +774,7 @@
         <deprecated>false</deprecated>
         <description>Specifies percent of total calculation scope for percent of total priced products added as product options.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Choose how this percent of total product option is calculated. Package is specific to the parent product. Components is specific to sibling components. Entire Hierarchy covers all lines in the configuration.</inlineHelpText>
+        <inlineHelpText>Choose how this percent of total product option is calculated. Package is specific to the parent product. Components is specific to sibling components. Both is specific to the parent and sibling components.</inlineHelpText>
         <label>Percent of Total Scope</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -795,12 +795,7 @@
                 <value>
                     <fullName>Both</fullName>
                     <default>false</default>
-                    <label>Package &amp; Components</label>
-                </value>
-                <value>
-                    <fullName>Entire Hierarchy</fullName>
-                    <default>false</default>
-                    <label>Entire Hierarchy</label>
+                    <label>Both</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

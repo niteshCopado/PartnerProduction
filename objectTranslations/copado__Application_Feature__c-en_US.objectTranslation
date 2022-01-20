@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Business Owner --></label>
+        <name>Business_Owner__c</name>
+        <relationshipLabel><!-- Features (Business Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Release --></label>
+        <name>Estimated_Release__c</name>
+        <relationshipLabel><!-- Features --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rejected Reason --></label>
+        <name>Rejected_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Spent (hours) --></label>
+        <name>Time_Spent_Hours__c</name>
+    </fields>
+    <fields>
         <label><!-- Application --></label>
         <name>copado__Application__c</name>
         <relationshipLabel><!-- Features --></relationshipLabel>
@@ -111,8 +129,32 @@
             <translation><!-- New Revenue --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Performance</masterLabel>
+            <translation><!-- Performance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stability</masterLabel>
+            <translation><!-- Stability --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Time Savings</masterLabel>
             <translation><!-- Time Savings --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>User Adoption</masterLabel>
+            <translation><!-- User Adoption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Experience</masterLabel>
+            <translation><!-- User Experience --></translation>
+        </picklistValues>
     </fields>
+    <webLinks>
+        <label><!-- Send_to_Slack --></label>
+        <name>Send_to_Slack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Slack_Alerts --></label>
+        <name>Slack_Alerts</name>
+    </webLinks>
 </CustomObjectTranslation>

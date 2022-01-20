@@ -33,10 +33,6 @@
                 <field>SBQQ__MasterContract__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__Evergreen__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>ContractNumber</field>
             </layoutItems>

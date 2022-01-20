@@ -141,14 +141,25 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Promotion_Header</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Promotion_Header</fullName>
+        <fields>Name</fields>
+        <fields>copado__Platform__c</fields>
+        <fields>copado__Project__c</fields>
+        <fields>copado__Source_Environment__c</fields>
+        <fields>copado__Destination_Environment__c</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Release__c</fields>
+        <label>Promotion Header</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>This object tracks the changes that are promoted to the next Salesforce instance.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -616,7 +627,20 @@
         <deprecated>false</deprecated>
         <description>Checked if the promotion is from a higher environment to a lower environment in the deployment flow.</description>
         <externalId>false</externalId>
-        <label>Back Promotion</label>
+        <inlineHelpText>Select this checkbox if you are promoting from a higher to a lower environment in the pipeline.</inlineHelpText>
+        <label>Is Back-Promotion</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is checked by Copado once the promotion is merged and deployed successfully for multi-cloud platform.</inlineHelpText>
+        <label>Completed</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -627,6 +651,7 @@
         <label>Connection Behavior</label>
         <length>18</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -636,8 +661,9 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Select if you wish to move added permission sets to a Full Permission Sets deployment step.  This will remove them from the Metadata deployment step.</inlineHelpText>
+        <inlineHelpText>Select this checkbox if you wish to move added profiles to a Full Permission Sets step. Doing this will remove the profiles from the Metadata step.</inlineHelpText>
         <label>Create Full Permission Sets Step</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -646,8 +672,9 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Select if you wish to move added profiles to a Full Profiles deployment step.  This will remove them from the Metadata deployment step.</inlineHelpText>
+        <inlineHelpText>Select this checkbox if you wish to move added permission sets to a Full Profiles step. Doing this will remove the permission sets from the Metadata step.</inlineHelpText>
         <label>Create Full Profiles Step</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -661,6 +688,7 @@
         <relationshipLabel>Promotions (Destination Environment)</relationshipLabel>
         <relationshipName>Promotions1</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -669,7 +697,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The credential to the Destination Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Destination Environment.</inlineHelpText>
+        <inlineHelpText>The destination credential that will be used when creating the deployment. This credential is auto-populated based on the pipeline linked to the project.</inlineHelpText>
         <label>Destination Credential</label>
         <lookupFilter>
             <active>true</active>
@@ -684,6 +712,7 @@
         <relationshipLabel>Promotions (Destination Credential)</relationshipLabel>
         <relationshipName>Promotions2</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -692,9 +721,10 @@
         <deprecated>false</deprecated>
         <description>Conflicts found in the selected metadata types are not auto-resolved by Copado when merging feature branches into the promotion branch. The conflicts can be manually resolved using Copado.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Conflicts found in the selected metadata types are not auto-resolved by Copado when merging feature branches into the promotion branch. The conflicts can be manually resolved using Copado.</inlineHelpText>
+        <inlineHelpText>Select the metadata types that you want to manually resolve when a conflict occurs while merging the feature branch into the promotion branch.</inlineHelpText>
         <label>Exclude From Auto Resolve</label>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <valueSet>
@@ -704,12 +734,47 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>copado__Is_Rolled_Back__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Rolled Back?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Last_Deployment_Execution_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Deployment Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Last_Promotion_Execution_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Promotion Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Merge_Conflict__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Indicates that this promotion includes a manual conflict resolution.</inlineHelpText>
         <label>Merge Conflict</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -717,10 +782,24 @@
         <fullName>copado__Order_by__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Fill this field only if you want to change the selected user stories order on deployment. (usage exp: name asc, copado__backlog_rank__c desc)</inlineHelpText>
+        <inlineHelpText>Populate this field if you want to set an ascending or descending merge order for the selected user stories in a deployment. For example, status__c asc.</inlineHelpText>
         <label>Order User Stories by</label>
         <length>255</length>
         <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Platform__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ISBLANK( copado__Project__c )) ,  TEXT(copado__Project__r.copado__Deployment_Flow__r.copado__Platform__c) ,  IF( NOT(ISBLANK( copado__Release__c )),  TEXT(copado__Release__r.copado__Project__r.copado__Deployment_Flow__r.copado__Platform__c) , &apos;Salesforce&apos;) )</formula>
+        <inlineHelpText>This field auto-populates and displays the pipeline platform.</inlineHelpText>
+        <label>Platform</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -730,12 +809,13 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The selected Project should be linked to an active Deployment Flow</inlineHelpText>
+        <inlineHelpText>Select a project linked to an active pipeline.</inlineHelpText>
         <label>Project</label>
         <referenceTo>copado__Project__c</referenceTo>
         <relationshipLabel>Promotions</relationshipLabel>
         <relationshipName>Promotions</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -750,6 +830,7 @@
         <relationshipLabel>Promotions</relationshipLabel>
         <relationshipName>Promotions</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -758,7 +839,9 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Send Deployment Complete email</label>
+        <inlineHelpText>Select this checkbox if you want the promotion owner to receive an email notification when the promotion is complete.</inlineHelpText>
+        <label>Notify When Complete</label>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -772,6 +855,7 @@
         <relationshipLabel>Promotions</relationshipLabel>
         <relationshipName>Promotions</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -780,7 +864,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The credential to the Source Environment that should be used when creating a deployment. This may be auto-populated, if left blank, based on the project&apos;s deployment flow if you are the owner of an Org Credential to the Source Environment.</inlineHelpText>
+        <inlineHelpText>The source credential that will be used when creating the deployment. This credential is auto-populated based on the pipeline linked to the project.</inlineHelpText>
         <label>Source Credential</label>
         <lookupFilter>
             <active>true</active>
@@ -795,6 +879,7 @@
         <relationshipLabel>Promotions (Source Credential)</relationshipLabel>
         <relationshipName>Promotions1</relationshipName>
         <required>false</required>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -804,6 +889,7 @@
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
@@ -834,58 +920,107 @@
                     <default>false</default>
                     <label>Cancelled</label>
                 </value>
-                <value>
-                    <fullName>Completed with errors</fullName>
-                    <default>false</default>
-                    <label>Completed with errors</label>
-                </value>
-                <value>
-                    <fullName>Validated</fullName>
-                    <default>false</default>
-                    <label>Validated</label>
-                </value>
-                <value>
-                    <fullName>Validation failed</fullName>
-                    <default>false</default>
-                    <label>Validation failed</label>
-                </value>
-                <value>
-                    <fullName>Merge Conflict</fullName>
-                    <default>false</default>
-                    <label>Merge Conflict</label>
-                </value>
-                <value>
-                    <fullName>Conflicts Resolved</fullName>
-                    <default>false</default>
-                    <label>Conflicts Resolved</label>
-                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <fields>
+        <fullName>copadometrics__Caused_Business_Disruption__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Caused Business Disruption?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadometrics__Destination_is_a_Production_Org__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>copado__Destination_Environment__r.copadometrics__Production_Org__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Destination is a Production Org?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Promotion</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Source_Environment__c</columns>
+        <columns>copado__Destination_Environment__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Pending_Back_From_INT</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Release__c</columns>
+        <columns>copado__Source_Environment__c</columns>
+        <columns>copado__Source_Org_Credential__c</columns>
+        <columns>copado__Destination_Environment__c</columns>
+        <columns>copado__Destination_Org_Credential__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>copado__Source_Environment__c</field>
+            <operation>equals</operation>
+            <value>APO INT</value>
+        </filters>
+        <filters>
+            <field>copado__Back_Promotion__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>copado__Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <label>All Pending Back From INT</label>
+        <language>en_US</language>
+    </listViews>
     <listViews>
         <fullName>copado__All</fullName>
         <columns>NAME</columns>
-        <columns>copado__Destination_Environment__c</columns>
-        <columns>copado__Project__c</columns>
-        <columns>copado__Release__c</columns>
-        <columns>copado__Source_Environment__c</columns>
-        <columns>copado__Back_Promotion__c</columns>
-        <columns>copado__Status__c</columns>
         <columns>CREATED_DATE</columns>
-        <columns>CREATEDBY_USER</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Destination_Environment__c</columns>
+        <columns>copado__Release__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>copado__Destination_Environment__c</field>
+            <operation>contains</operation>
+            <value>BP</value>
+        </filters>
         <label>All</label>
     </listViews>
     <nameField>
         <displayFormat>P{00000}</displayFormat>
         <label>Promotion Name</label>
+        <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Promotions</pluralLabel>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Project__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Status__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>copado__Source_Environment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Destination_Environment__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Project__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Release__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
@@ -895,4 +1030,22 @@
         <errorMessage>Back Promotions to Scratch Orgs are not allowed</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Rollback</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Rollback (beta)</masterLabel>
+        <openType>newWindow</openType>
+        <page>copado__RollbackWizard</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+    </webLinks>
 </CustomObject>

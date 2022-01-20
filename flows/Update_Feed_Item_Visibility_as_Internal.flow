@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <name>update_feed_item</name>
+        <label>update feed item</label>
+        <locationX>804</locationX>
+        <locationY>133</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Visibility</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>InternalUsers</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Updates FeedItem Visibility for Feed Tracking Post on the success community</description>
+    <interviewLabel>Update Feed Item Visibility as Internal {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Feed Item Visibility as Internal with Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>268</locationX>
+        <locationY>55</locationY>
+        <connector>
+            <targetReference>update_feed_item</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>TrackedChange</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>NetworkScope</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>0DB</stringValue>
+            </value>
+        </filters>
+        <object>FeedItem</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Project Team Member Added</name>
+    <style>none</style>
+    <subject>You have been added as a Project Team member !</subject>
+    <textOnly>Hello {!Project_Team_Member__c.Contact_Name__c},
+
+You have been added as a team member with the following permissions by {!Project_Team_Member__c.CreatedBy}.
+
+Active : {!IF(Project_Team_Member__c.IsActive__c, &apos;Yes&apos;, &apos;No&apos;)}
+Super User : {!IF(Project_Team_Member__c.Is_Super_User__c, &apos;Yes&apos;, &apos;No&apos;)}
+Manage Team : {!IF(Project_Team_Member__c.Manage_Team__c, &apos;Yes&apos;, &apos;No&apos;)}
+Log Case : {!IF(Project_Team_Member__c.Log_Case__c, &apos;Yes&apos;, &apos;No&apos;)}
+View Case Report : {!IF(Project_Team_Member__c.View_Case_Report__c, &apos;Yes&apos;, &apos;No&apos;)}
+View Cert Report : {!IF(Project_Team_Member__c.View_Certification_Report__c, &apos;Yes&apos;, &apos;No&apos;)}
+
+Visit to view the Project details.
+
+Regards
+{!Project_Team_Member__c.CreatedBy}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

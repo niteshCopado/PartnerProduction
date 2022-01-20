@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email Alert For Ops, AMs, and CSMs for SFDC Orgs</name>
+    <style>none</style>
+    <subject>New Email Alert For Ops, AMs, and CSMs for SFDC Orgs</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

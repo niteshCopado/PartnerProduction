@@ -10,7 +10,7 @@
         <relationshipLabel><!-- System Properties --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Is Sensitive --></label>
+        <label><!-- Hide Value --></label>
         <name>copado__Is_Sensitive__c</name>
     </fields>
     <fields>
@@ -24,6 +24,7 @@
         <relationshipLabel><!-- System Properties --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Read-only field used internally for system property replacement. --></help>
         <label><!-- UID --></label>
         <name>copado__UID__c</name>
     </fields>

@@ -51,6 +51,10 @@
                 <behavior>Edit</behavior>
                 <field>copado__Org_Credential__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Size__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -73,6 +77,10 @@
                 <behavior>Edit</behavior>
                 <field>RecordTypeId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Documentation_Completed__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -89,6 +97,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Release__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Planned_Release__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -254,6 +266,10 @@
                 <behavior>Edit</behavior>
                 <field>copado__Last_Validation_Deployment__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copadometrics__Business_Disruption_Failure__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -263,6 +279,22 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Promotion_Test_Level__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copadometrics__Elapsed_Time_to_Resolve__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copadometrics__Elapsed_Time_to_Resolve_days__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copadometrics__Elapsed_Time_to_Resolve_hours__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>copadometrics__Elapsed_Time_to_Resolve_minutes__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -347,6 +379,10 @@
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Action_Plan__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -369,64 +405,49 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
+            <actionName>copado__User_Story__c.Send_to_Slack</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__User_Story__c.Slack_Alerts</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Commit_Files</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>1</sortOrder>
+            <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Ready_for_Promotion</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>2</sortOrder>
+            <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Perform_Validation</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>3</sortOrder>
+            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>4</sortOrder>
+            <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Add_Metadata</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Apex_Test</actionName>
-            <actionType>CustomButton</actionType>
             <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Run_Static_Code_Analysis</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Manage_Selenium_Tests</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Run_Compliance_Scan</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Pull_Request</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>10</sortOrder>
+            <sortOrder>18</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Create_Scratch_Org</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>11</sortOrder>
+            <sortOrder>19</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Copado_DX</actionName>
@@ -458,7 +479,35 @@
             <actionType>CustomButton</actionType>
             <sortOrder>17</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Apex_Test</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Run_Static_Code_Analysis</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Manage_Selenium_Tests</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Run_Compliance_Scan</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>11</sortOrder>
+        </platformActionListItems>
     </platformActionList>
+    <relatedLists>
+        <relatedList>RelatedEntityHistoryList</relatedList>
+    </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
         <fields>copado__Subject__c</fields>
@@ -645,21 +694,31 @@
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
         <fields>copado__Provider_User_Story__c</fields>
+        <fields>Parent_User_Story_Title__c</fields>
         <fields>copado__Parent_User_Story_Status__c</fields>
-        <fields>CREATEDBY_USER</fields>
+        <fields>copado__Dependent_Team__c</fields>
         <relatedList>copado__Team_Dependency__c.copado__Dependent_User_Story__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
         <fields>copado__Dependent_User_Story__c</fields>
+        <fields>Child_User_Story_Title__c</fields>
         <fields>copado__Child_User_Story_Status__c</fields>
-        <fields>CREATEDBY_USER</fields>
+        <fields>copado__Dependent_Team__c</fields>
         <relatedList>copado__Team_Dependency__c.copado__Provider_User_Story__c</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CASES.CASE_NUMBER</fields>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>CASES.SUBJECT</fields>
+        <fields>CASES.PRIORITY</fields>
+        <fields>CASES.STATUS</fields>
+        <fields>CASES.CREATED_DATE</fields>
+        <fields>OWNER_NAME</fields>
+        <relatedList>Case.User_Story__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>CreatedDate</fields>
@@ -675,7 +734,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1n0000050AjB</masterLabel>
+        <masterLabel>00h1l000000PDB8</masterLabel>
         <sizeX>3</sizeX>
         <sizeY>1</sizeY>
         <summaryLayoutItems>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ひとつの同等性</value>
+    </caseValues>
+    <fields>
+        <help>チェックした場合、その同等性は双方に働きます（a=bおよびb=a）。</help>
+        <label><!-- Bidirectional --></label>
+        <name>redwing__Bidirectional__c</name>
+    </fields>
+    <nameFieldLabel>同等性名</nameFieldLabel>
+</CustomObjectTranslation>

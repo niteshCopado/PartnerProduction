@@ -157,6 +157,18 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id for data migration &amp; integration with other solutions</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__BorderColor__c</fullName>
         <deprecated>false</deprecated>
         <description>Color of table borders expressed as a hexadecimal value.</description>
@@ -267,6 +279,16 @@
                     <fullName>Optional</fullName>
                     <default>false</default>
                     <label>Optional</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__ProductName__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__ProductName__c</label>
+                </value>
+                <value>
+                    <fullName>SBQQ__ProductFamily__c</fullName>
+                    <default>false</default>
+                    <label>SBQQ__ProductFamily__c</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -570,6 +592,16 @@
         <unique>false</unique>
     </fields>
     <label>Template Section</label>
+    <listViews>
+        <fullName>All_Sections</fullName>
+        <columns>NAME</columns>
+        <columns>SBQQ__Content__c</columns>
+        <columns>SBQQ__Template__c</columns>
+        <columns>External_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Sections</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <label>Section Name</label>
         <type>Text</type>

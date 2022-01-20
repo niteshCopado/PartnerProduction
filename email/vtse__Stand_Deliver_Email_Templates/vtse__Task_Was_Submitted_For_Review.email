@@ -1,0 +1,18 @@
+<messaging:emailTemplate subject="Task where you're reviewer was submitted"
+    recipientType="User"
+    relatedToType="vtse__Stand_Deliver_Task__c"
+    language="{!recipient.LanguageLocaleKey}"
+    renderUsingSystemContextWithoutSharing="true"
+>
+    <messaging:htmlEmailBody >
+        <apex:outputPanel layout="block">
+            <apex:outputText rendered="{!relatedTo.Stand_Deliver__r.Name != null}"
+                value="The user {!relatedTo.User__r.Name} sent you Task '{!relatedTo.Stand_Deliver__r.Name}' to review."
+            />
+            <br/><br/>
+
+            <c:EmailNotification recordId="{!relatedTo.Id}" communityId="{!relatedTo.vtse__Community_Id__c}" hasDetailPageLink="true"/>
+        </apex:outputPanel>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

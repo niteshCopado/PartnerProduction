@@ -14,10 +14,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>copado__Platform__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -35,6 +31,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>copado__Calculate_Based_on__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>copado__Platform__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__CommitJobTemplate__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -56,11 +60,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>copado__Enable_Smart_Conflict_Resolution__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>copado__Hide_Tabs__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>copado__Exclude_From_Auto_Resolve__c</field>
+                <field>copado__Promotion_Job_Template__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__Deployment_Job_Template__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -132,11 +144,13 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <miniLayout>
-        <fields>copado__Platform__c</fields>
-    </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
         <platformActionListItems>
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
@@ -148,49 +162,49 @@
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
+            <actionName>copado__Deployment_Flow__c.copado__Clone_with_Environments</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>3</sortOrder>
+            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeRecordType</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>4</sortOrder>
+            <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Share</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>5</sortOrder>
+            <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Select_Main_Branch</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>6</sortOrder>
+            <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Manage_Branches</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>7</sortOrder>
+            <sortOrder>8</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Manage_Environment_Variables</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>8</sortOrder>
+            <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Manage_Regression_Tests</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>9</sortOrder>
+            <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>copado__Find_Replace_Rule_Editor</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>10</sortOrder>
+            <sortOrder>11</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
@@ -211,6 +225,10 @@
         <relatedList>copado__Project__c.copado__Deployment_Flow__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>copado__System_Property__c.copado__Pipeline__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -219,7 +237,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1n0000050AmA</masterLabel>
+        <masterLabel>00h5p00000Z9JK8</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

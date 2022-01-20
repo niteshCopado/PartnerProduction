@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Delayed_Send_Notification_Interval --></label>
+        <name>Delayed_Send_Notification_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Media Notification Interval --></label>
+        <name>Send_Media_Notification_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Stand Deliver Tasks URL --></label>
+        <name>vtse__All_Stand_Deliver_Tasks_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Stand and Deliver Example Video --></label>
+        <name>vtse__Default_Stand_Deliver_Example_Video__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Stand Deliver Thumbnail URL --></label>
+        <name>vtse__Default_Stand_Deliver_Thumbnail_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable All Stand Deliver triggers --></label>
+        <name>vtse__Disable_All_Stand_Deliver_Triggers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Assessment Criteria trigger --></label>
+        <name>vtse__Disable_Assessment_Criteria_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Assessment Rubric Item trigger --></label>
+        <name>vtse__Disable_Assessment_Rubric_Item_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Feedback Details trigger --></label>
+        <name>vtse__Disable_Feedback_Details_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Feedback trigger --></label>
+        <name>vtse__Disable_Feedback_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Stand Deliver Criteria trigger --></label>
+        <name>vtse__Disable_Stand_Deliver_Criteria_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Stand Deliver Reviewer trigger --></label>
+        <name>vtse__Disable_Stand_Deliver_Reviewer_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Stand Deliver Submission trigger --></label>
+        <name>vtse__Disable_Stand_Deliver_Submission_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Stand Deliver Task trigger --></label>
+        <name>vtse__Disable_Stand_Deliver_Task_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Stand Deliver trigger --></label>
+        <name>vtse__Disable_Stand_Deliver_Trigger__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this setting if you want to receive any Stand Deliver notifications in Chatter --></help>
+        <label><!-- Enable Chatter Notifications --></label>
+        <name>vtse__Enable_Chatter_Notifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Conversion Error Notification --></label>
+        <name>vtse__Enable_Conversion_Error_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this setting if you want to receive any Stand Deliver notifications on email --></help>
+        <label><!-- Enable Email Notifications --></label>
+        <name>vtse__Enable_Email_Notifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Email Sent Notification --></label>
+        <name>vtse__Enable_Email_Sent_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable notification when Stand &amp; Deliver record was assigned to the user --></help>
+        <label><!-- Enable Stand Deliver Assign Notification --></label>
+        <name>vtse__Enable_Stand_Deliver_Assign_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable notification when Stand &amp; Deliver record was shared with user --></help>
+        <label><!-- Enable Stand Deliver Shared Notification --></label>
+        <name>vtse__Enable_Stand_Deliver_Shared_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable notification for assignees when their Task was closed or approved/rejected --></help>
+        <label><!-- Enable Task Was Closed Notification --></label>
+        <name>vtse__Enable_Task_Was_Closed_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable Notification when user&apos;s Task was reviewed by another user --></help>
+        <label><!-- Enable Task Was Reviewed Notification --></label>
+        <name>vtse__Enable_Task_Was_Reviewed_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable notification for reviewers/approvers when Task was submitted --></help>
+        <label><!-- Enable Task Was Submitted Notification --></label>
+        <name>vtse__Enable_Task_Was_Submitted_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Notification Batch interval in minutes --></help>
+        <label><!-- Notifications Batch Interval --></label>
+        <name>vtse__Notifications_Batch_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stand Deliver Assign Columns Field Set --></label>
+        <name>vtse__Stand_Deliver_Assign_Columns_Field_Set__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field Set on User object to add new filters to Assign component --></help>
+        <label><!-- Stand Deliver Assign Filters Field Set --></label>
+        <name>vtse__Stand_Deliver_Assign_Filters_Field_Set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stand Deliver Task URL --></label>
+        <name>vtse__Stand_Deliver_Task_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determine which types of reviewers can be added to a video coaching task. --></help>
+        <label><!-- Video Coaching Reviewer Tabs --></label>
+        <name>vtse__Video_Coaching_Reviewer_Tabs__c</name>
+    </fields>
+</CustomObjectTranslation>

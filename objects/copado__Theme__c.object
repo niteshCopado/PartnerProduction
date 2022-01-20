@@ -220,7 +220,12 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Themes</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>copado__Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Theme_Details__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -1,40 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
-    <container>Community master</container>
+    <container>Success</container>
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Products</label>
-        <position>0</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>Product2</target>
-        <type>SalesforceObject</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Orders</label>
+        <label>Discussions</label>
         <position>1</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>Order</target>
-        <type>SalesforceObject</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Rebates</label>
-        <position>3</position>
-        <publiclyAvailable>false</publiclyAvailable>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Best Practices</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/group/0F90N000000QRwPSAW</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Copado Updates</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/group/0F90N000000MQeaSAG</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Copado Pathfinders</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/group/0F90N000000DqbySAC</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <defaultListViewId>All_ChatterGroups</defaultListViewId>
+                <label>All Groups</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>CollaborationGroup</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+        </subMenu>
         <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Leads</label>
-        <position>4</position>
+        <label>Ideas</label>
+        <position>2</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>Lead</target>
-        <type>SalesforceObject</type>
+        <target>/idea-list</target>
+        <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Opportunities</label>
+        <label>Help &amp; Training</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Academy</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/my-learning</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Certification Guides</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/certification-guides</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Learning Cart</label>
+                <position>2</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/shopping-cart</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Training Calendar</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/learning-calendar</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Documentation</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>http://docs.copado.com</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Knowledge</label>
+                <position>5</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/knowledge</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <defaultListViewId>All</defaultListViewId>
+                <label>My Playgrounds</label>
+                <position>6</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>Playground__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>COPADO LABS</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/exchange-search</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>COPADO TV</label>
         <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/all-media</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>SUPPORT</label>
+        <position>6</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>Opportunity</target>
-        <type>SalesforceObject</type>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Create a Case</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/contactsupport</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <defaultListViewId>All</defaultListViewId>
+                <label>My Cases</label>
+                <position>1</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>Case</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>SYSTEM STATUS</label>
+        <position>7</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <defaultListViewId>All_Known_Issues</defaultListViewId>
+                <label>Known Issues</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>Known_Issue__c</target>
+                <type>SalesforceObject</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>System Status</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://status.copado.com/</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>SUMMER &apos;20</label>
+        <position>8</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Install</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>/install</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>UPGRADE INSTRUCTIONS</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://docs.copado.com/article/33rrk1nccv-summer-20-upgrade-instructions</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>All Releases</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://docs.copado.com/copado-app</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Release Calendar</label>
+                <position>3</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>https://docs.copado.com/article/7ll1ojpjmw-release-calendar</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
     </navigationMenuItem>
 </NavigationMenu>

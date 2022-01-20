@@ -158,6 +158,24 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
+        <fullName>CustomName__c</fullName>
+        <description>Field to hold the default Quote Document name.</description>
+        <externalId>false</externalId>
+        <formula>SBQQ__Opportunity__r.Name &amp; 
+&quot; - &quot; &amp; 
+TEXT(DAY(TODAY())) &amp; &quot;/&quot; &amp;
+TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp;
+TEXT(YEAR(TODAY()))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Field to hold the default Quote Document name.</inlineHelpText>
+        <label>Custom Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>SBQQ__AttachmentId__c</fullName>
         <deprecated>false</deprecated>
         <description>ID of attachment record generated for this document.</description>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The ID of the Business Hours. --></help>
+        <label><!-- BusinessHoursId --></label>
+        <name>tysosla__BusinessHoursId__c</name>
+    </fields>
+    <fields>
+        <help><!-- The api name of the field. --></help>
+        <label><!-- Field --></label>
+        <name>tysosla__Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- The api name of the object. --></help>
+        <label><!-- Object --></label>
+        <name>tysosla__Object__c</name>
+    </fields>
+    <fields>
+        <help><!-- The matched value in the field. --></help>
+        <label><!-- Value --></label>
+        <name>tysosla__Value__c</name>
+    </fields>
+</CustomObjectTranslation>

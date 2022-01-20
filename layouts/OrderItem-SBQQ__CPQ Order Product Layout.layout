@@ -15,7 +15,7 @@
                 <field>OrderId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Product2Id</field>
             </layoutItems>
             <layoutItems>
@@ -55,10 +55,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>SBQQ__SubscriptionPricing__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__SubscriptionType__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -220,8 +216,14 @@
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <multilineLayoutFields>OrderId</multilineLayoutFields>
-    <multilineLayoutFields>Quantity</multilineLayoutFields>
+    <multilineLayoutFields>Product2Id</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
+    <multilineLayoutFields>ServiceDate</multilineLayoutFields>
+    <multilineLayoutFields>Quantity</multilineLayoutFields>
+    <multilineLayoutFields>ProductCode</multilineLayoutFields>
+    <multilineLayoutFields>Description</multilineLayoutFields>
+    <multilineLayoutFields>ListPrice</multilineLayoutFields>
+    <multilineLayoutFields>TotalPrice</multilineLayoutFields>
     <relatedLists>
         <fields>Product2</fields>
         <fields>SBQQ__OrderedQuantity__c</fields>
