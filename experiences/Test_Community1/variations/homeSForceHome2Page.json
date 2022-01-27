@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "009339b4-bac4-43cd-a355-29526ab1f0c1",
+    "propertyOverrides" : {
+      "activeViewId" : "cb7d32d5-3556-44d0-bc9a-6e6dedf270ad"
+    },
+    "targetId" : "834004ef-a32a-4670-992e-8430454d90ae",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Home_sForce_Home2_Page",
+  "id" : "98ad3e73-6c81-4661-a419-f8bd018a145d",
+  "type" : "experienceVariation"
+}
