@@ -4,7 +4,7 @@ public class TemperatureConverter {
         Decimal cels = (fh - 32) * 5/9;
         System.debug('Copado Rocks - updated!!!');
         system.debug('More Conflict');
-        System.debug('Additional Line - updated - v2 version!!');
+        System.debug('Additional Line - updated - v2 version!!');adsfadsfadsfa
         return cels.setScale(2);
         
         //This is US-2 Commit-3
