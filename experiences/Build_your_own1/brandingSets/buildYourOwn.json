@@ -19,7 +19,7 @@
     "TextColor" : "#333",
     "TextTransformStyle" : "uppercase",
     "_ActionColorDarker" : "#135F90",
-    "_ActionColorTrans" : "rgba(25, 124, 190, 0.9)",
+    "_ActionColorTrans" : "rgba(25, 124, 190, 0.8)",
     "_HoverColor" : "rgba(25, 124, 190, 0.05)",
     "_LinkColorDarker" : "#135F90",
     "_OverlayTextColorShadow" : "#000000",
