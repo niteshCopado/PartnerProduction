@@ -5,6 +5,10 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>PersonAccount</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>PersonAccount.PersonAccount</members>
         <name>RecordType</name>
     </types>
