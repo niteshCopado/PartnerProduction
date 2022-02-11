@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <compactLayoutAssignment>SYSTEMPersonAccount</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>TestPersonAbbvie</fullName>
+        <fields>RecordTypeId</fields>
+        <fields>NumberofLocations__c</fields>
+        <fields>Type</fields>
+        <fields>PersonOtherAddress</fields>
+        <fields>OperatingHoursId</fields>
+        <fields>AccountSource</fields>
+        <label>TestPersonAbbvie</label>
+    </compactLayouts>
     <enableHistory>false</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <recordTypes>
@@ -368,6 +378,7 @@
     <recordTypes>
         <fullName>ardev__PA_record_Type</fullName>
         <active>true</active>
+        <compactLayoutAssignment>TestPersonAbbvie</compactLayoutAssignment>
         <label>PA record Type</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
