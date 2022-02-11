@@ -5,7 +5,7 @@
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>PersonAccount.ardev__PersonAccount</members>
+        <members>PersonAccount.PersonAccount</members>
         <name>RecordType</name>
     </types>
     <version>53.0</version>

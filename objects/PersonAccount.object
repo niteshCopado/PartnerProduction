@@ -16,6 +16,7 @@
     <recordTypes>
         <fullName>PersonAccount</fullName>
         <active>true</active>
+        <compactLayoutAssignment>TestPersonAbbvie</compactLayoutAssignment>
         <label>Person Account</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
