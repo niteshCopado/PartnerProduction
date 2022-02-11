@@ -741,6 +741,7 @@
     <recordTypes>
         <fullName>ardev__PersonAccount</fullName>
         <active>true</active>
+        <compactLayoutAssignment>TestPersonAbbvie</compactLayoutAssignment>
         <label>PersonAccount</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
