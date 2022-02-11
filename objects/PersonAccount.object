@@ -11,7 +11,7 @@
         <fields>AccountSource</fields>
         <label>TestPersonAbbvie</label>
     </compactLayouts>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <externalSharingModel>Private</externalSharingModel>
     <recordTypes>
         <fullName>PersonAccount</fullName>
