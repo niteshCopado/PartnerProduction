@@ -379,7 +379,6 @@
     <recordTypes>
         <fullName>ardev__PA_record_Type</fullName>
         <active>true</active>
-        <compactLayoutAssignment>TestPersonAbbvie</compactLayoutAssignment>
         <label>PA record Type</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
@@ -742,7 +741,6 @@
     <recordTypes>
         <fullName>ardev__PersonAccount</fullName>
         <active>true</active>
-        <compactLayoutAssignment>TestPersonAbbvie</compactLayoutAssignment>
         <label>PersonAccount</label>
         <picklistValues>
             <picklist>AccountSource</picklist>

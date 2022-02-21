@@ -50,7 +50,6 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-DataUseLegalBasis</tabs>
     <tabs>standard-DataUsePurpose</tabs>
-    <tabs>standard-Development</tabs>
     <tabs>standard-DigitalWallet</tabs>
     <tabs>standard-DuplicateRecordSet</tabs>
     <tabs>standard-EmailTemplate</tabs>

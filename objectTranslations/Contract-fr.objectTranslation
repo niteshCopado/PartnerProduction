@@ -89,7 +89,7 @@
     </fields>
     <fields>
         <help>ID du catalogue de prix utilisé à partir de l&apos;opportunité d&apos;origine.</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>

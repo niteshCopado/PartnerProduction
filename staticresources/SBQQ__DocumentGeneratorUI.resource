@@ -265,7 +265,13 @@ QuoteDocumentGeneratorCtrl.prototype.onSaveAndSendESignature = function() {
 		function loadForESignature(/*String*/ resp) {
 			if (resp.redirectURL) {
 				if (sforce && sforce.one) {
-					sforce.one.navigateToURL(resp.redirectURL);
+					var redirectUrl = resp.redirectURL;
+					// if the scope is not inside a community page, redirectUrl keeps same
+					if (scope && scope.controller && scope.controller.getCommunityPrefix() &&
+					    redirectUrl.startsWith('/') && !redirectUrl.startsWith('//')) {
+						redirectUrl = scope.controller.getCommunityPrefix() + redirectUrl;
+					}
+					sforce.one.navigateToURL(redirectUrl);
 				} else {
 					document.location.assign(resp.redirectURL);
 				}

@@ -89,7 +89,7 @@
     </fields>
     <fields>
         <help>ID des Preisbuchs aus der ursprünglichen Opportunity.</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>

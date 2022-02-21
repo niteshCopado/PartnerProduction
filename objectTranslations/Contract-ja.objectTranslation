@@ -89,7 +89,7 @@
     </fields>
     <fields>
         <help>元の商談から使用される価格表の ID。</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>

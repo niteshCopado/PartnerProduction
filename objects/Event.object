@@ -326,6 +326,17 @@
         <active>true</active>
         <label>TEst on Event</label>
         <picklistValues>
+            <picklist>New_type_activity__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Subject</picklist>
             <values>
                 <fullName>Call</fullName>

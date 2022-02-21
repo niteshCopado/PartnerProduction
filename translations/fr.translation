@@ -397,6 +397,10 @@
         <name>SBQQ__Quote_Total</name>
     </customLabels>
     <customLabels>
+        <label><!-- Page title --></label>
+        <name>SBQQ__Recommended_Products</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Redo operation, text for Quill Rich Text Editor tooltip --></label>
         <name>SBQQ__Redo</name>
     </customLabels>
@@ -563,6 +567,10 @@
     <customLabels>
         <label><!-- Message explaining to refresh when entity is deleted error occurs --></label>
         <name>SBQQ__entity_is_deleted_refresh</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error message if user tries to renew non-Contract/ServiceContracts via API --></label>
+        <name>SBQQ__err_msg_incorrect_contract_type_when_renew_api</name>
     </customLabels>
     <customLabels>
         <label><!-- Temporarily unable to process this request, please try again later. --></label>
@@ -1481,6 +1489,10 @@
         <name>SBQQ__lbl_products_found</name>
     </customLabels>
     <customLabels>
+        <label><!-- Picklist option for Subscription Prorate Precision on Edit Settings page --></label>
+        <name>SBQQ__lbl_proration_day_of_month</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Permission Set Licenses Error Message Header --></label>
         <name>SBQQ__lbl_psl_error_msg_header</name>
     </customLabels>
@@ -2117,6 +2129,10 @@
         <name>SBQQ__msg_amendrenew_err_loading_source_recs</name>
     </customLabels>
     <customLabels>
+        <label><!-- Message when amending a subscription that does not exist --></label>
+        <name>SBQQ__msg_amendrenew_err_missing_segment</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Prefix for JSARerrors thrown by a LineItemConvertible with no records. --></label>
         <name>SBQQ__msg_amendrenew_err_no_recs_at_all</name>
     </customLabels>
@@ -2127,6 +2143,10 @@
     <customLabels>
         <label><!-- Error message displayed when subscription/asset references missing parent. --></label>
         <name>SBQQ__msg_amendrenew_err_parent_record_not_found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error displayed when sub/asset is part of a bundle but does not have a rootId --></label>
+        <name>SBQQ__msg_amendrenew_err_rootId_null</name>
     </customLabels>
     <customLabels>
         <label><!-- Prefix for errors while saving contracts for amendments or renewals --></label>
@@ -2155,6 +2175,10 @@
     <customLabels>
         <label><!-- Error message when convertible has multiple parents --></label>
         <name>SBQQ__msg_amendrenew_err_two_parent_convs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PoT cannot calculate 500+ assets --></label>
+        <name>SBQQ__msg_amendrenew_pot_total_incorrect</name>
     </customLabels>
     <customLabels>
         <label><!-- Must specify configuration field value in API call --></label>
@@ -2225,6 +2249,10 @@
         <name>SBQQ__msg_available_upgrades</name>
     </customLabels>
     <customLabels>
+        <label><!-- Amending... --></label>
+        <name>SBQQ__msg_background_amendment_in_progress</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Recalculating... --></label>
         <name>SBQQ__msg_background_calculation_in_progress</name>
     </customLabels>
@@ -2239,6 +2267,10 @@
     <customLabels>
         <label><!-- In-progress message for transpilation service --></label>
         <name>SBQQ__msg_background_transpilation_in_progress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- In-progress message for multiple operations on opportunity page --></label>
+        <name>SBQQ__msg_background_updating</name>
     </customLabels>
     <customLabels>
         <label><!-- Below the minimum billing term --></label>
@@ -2295,6 +2327,10 @@
     <customLabels>
         <label><!-- Error message displayed when amending contract without Preserve Bundle Structure --></label>
         <name>SBQQ__msg_cannot_amend_non_preserve_bundle_contract</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error thrown if Sharing Settings=Private and attempting to Amend/Renew Assets --></label>
+        <name>SBQQ__msg_cannot_amend_renew_assets_with_private_product_owd</name>
     </customLabels>
     <customLabels>
         <label><!-- Can&apos;t auto-renew the contract. To continue, create the renewal manually. --></label>
@@ -2399,6 +2435,10 @@
     <customLabels>
         <label><!-- Cannot have Consumption Schedules related to Product with Charge Type of Usage --></label>
         <name>SBQQ__msg_cannot_have_usage_charge_type_related_to_consumption_schedules</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error thrown if Sharing Settings=Private and &quot;Legacy Amend/Renew Service&quot;=true --></label>
+        <name>SBQQ__msg_cannot_legacy_amend_renew_with_private_product_owd</name>
     </customLabels>
     <customLabels>
         <label><!-- Cannot have one-time dimensions with same name --></label>
@@ -2733,6 +2773,10 @@
         <name>SBQQ__msg_empty_standard_table</name>
     </customLabels>
     <customLabels>
+        <label><!-- To use amend in background advanced amend/renew service must be enabled --></label>
+        <name>SBQQ__msg_enable_advanced_contract_async</name>
+    </customLabels>
+    <customLabels>
         <label><!-- To use advanced contracting service you must enable the advanced calculator --></label>
         <name>SBQQ__msg_enable_advanced_contract_services</name>
     </customLabels>
@@ -3057,6 +3101,10 @@
         <name>SBQQ__msg_invalid_quote</name>
     </customLabels>
     <customLabels>
+        <label><!-- Duplicate Quote Line Number__c fields are invalid --></label>
+        <name>SBQQ__msg_invalid_quote_line_number_field</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Error message displayed in doc gen pages when quote invalid --></label>
         <name>SBQQ__msg_invalid_quote_prevents_docgen</name>
     </customLabels>
@@ -3335,6 +3383,10 @@
     <customLabels>
         <label><!-- Missing Message --></label>
         <name>SBQQ__msg_missing_error_message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error shown when amendment/renewal fails from lack of access to required field --></label>
+        <name>SBQQ__msg_missing_fls_on_amend_or_renew</name>
     </customLabels>
     <customLabels>
         <label><!-- Missing Import Format --></label>
@@ -3723,6 +3775,18 @@
     <customLabels>
         <label><!-- The order end date must be greater than all order products&apos; end date. --></label>
         <name>SBQQ__msg_order_end_date_smaller_than_line_end_date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You don&apos;t have permission to create an order. --></label>
+        <name>SBQQ__msg_order_insufficient_access_create</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You don&apos;t permission to delete an order. --></label>
+        <name>SBQQ__msg_order_insufficient_access_delete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You don&apos;t have permission to update an order. --></label>
+        <name>SBQQ__msg_order_insufficient_access_update</name>
     </customLabels>
     <customLabels>
         <label><!-- Can&apos;t update order item&apos;s bookings indicator. --></label>

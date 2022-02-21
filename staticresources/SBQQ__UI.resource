@@ -985,7 +985,6 @@ SearchModel.prototype.getResultTotalCount = function() {
 
 
 function TreeViewModel(/*Object*/ scope, /*Object*/ data, /*String*/ groupByExpression, /*Object*/ otherLabel) {
-	// debugger;
 	this.groups = {};
 	this.groupNames = {};
 	this.groupNamesList = [];
