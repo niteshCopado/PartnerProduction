@@ -540,6 +540,7 @@
     <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>

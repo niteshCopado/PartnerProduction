@@ -235,4 +235,32 @@
             </values>
         </picklistValues>
     </recordTypes>
+    <recordTypes>
+        <fullName>PersonAccount2</fullName>
+        <active>true</active>
+        <label>PersonAccount2</label>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Installation Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PersonAccountest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology Partner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
 </CustomObject>
