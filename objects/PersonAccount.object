@@ -377,6 +377,11 @@
         </picklistValues>
     </recordTypes>
     <recordTypes>
+        <fullName>PersonAccount2</fullName>
+        <active>true</active>
+        <label>PersonAccount2</label>
+    </recordTypes>
+    <recordTypes>
         <fullName>ardev__PA_record_Type</fullName>
         <active>true</active>
         <label>PA record Type</label>
