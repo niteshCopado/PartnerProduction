@@ -1,100 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label><!-- Active --></label>
+        <label></label>
         <name>Active__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation><!-- No --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation><!-- Yes --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Customer Priority --></label>
-        <name>CustomerPriority__c</name>
-        <picklistValues>
-            <masterLabel>High</masterLabel>
-            <translation><!-- High --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Low</masterLabel>
-            <translation><!-- Low --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Medium</masterLabel>
-            <translation><!-- Medium --></translation>
-        </picklistValues>
-    </fields>
-    <fields>
-        <label><!-- Developer 1 --></label>
+        <label></label>
         <name>Developer_1__c</name>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
+        <label></label>
         <name>External_Id__c</name>
     </fields>
     <fields>
-        <label><!-- First Field --></label>
+        <label></label>
         <name>First_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Is true --></label>
+        <label></label>
         <name>Is_true__c</name>
     </fields>
     <fields>
-        <help><!-- This is latitude --></help>
-        <label><!-- Latitude --></label>
+        <help></help>
+        <label></label>
         <name>Latitude__c</name>
     </fields>
     <fields>
-        <help><!-- This is Longitude --></help>
-        <label><!-- Longitude --></label>
+        <help></help>
+        <label></label>
         <name>Longitude__c</name>
     </fields>
     <fields>
-        <label><!-- Manual Task Dep --></label>
+        <label></label>
         <name>Manual_Task_Dep__c</name>
     </fields>
     <fields>
-        <label><!-- Metadata RL --></label>
+        <label></label>
         <name>Metadata_RL__c</name>
     </fields>
     <fields>
-        <label><!-- New Field 2 --></label>
+        <label></label>
         <name>New_Field_2__c</name>
     </fields>
     <fields>
-        <label><!-- New Field --></label>
+        <label></label>
         <name>New_Field__c</name>
     </fields>
     <fields>
-        <label><!-- Number of Locations --></label>
+        <label></label>
         <name>NumberofLocations__c</name>
     </fields>
     <fields>
-        <label><!-- Recommit_1 --></label>
+        <label></label>
         <name>Recommit_1__c</name>
     </fields>
     <fields>
-        <label><!-- Recommit_2 --></label>
+        <label></label>
         <name>Recommit_2__c</name>
     </fields>
     <fields>
         <help>Option, mit der beim Erstellen des Verlängerungsangebots die Mengen für mehrere Vermögenswerte für dasselbe Produkt in einem Belegposten zusammengefasst werden können.</help>
-        <label><!-- Combine Asset Quantities --></label>
+        <label></label>
         <name>SBQQ__AssetQuantitiesCombined__c</name>
     </fields>
     <fields>
         <help>Möglichkeit, Vermögenswerte und Abonnements aus mehreren gleichlautenden Verträgen zusammenzufassen. Standardmäßig wird für jeden gleichlautenden Vertrag eine separate Gruppe im Verlängerungsangebot erstellt.</help>
-        <label><!-- Combine Co-Termed Contracts --></label>
+        <label></label>
         <name>SBQQ__CoTermedContractsCombined__c</name>
     </fields>
     <fields>
         <help>Bestimmt, wann Verträge gemeinsam beendet werden.</help>
-        <label><!-- Co-Termination Event --></label>
+        <label></label>
         <name>SBQQ__CoTerminationEvent__c</name>
         <picklistValues>
             <masterLabel>Add-on</masterLabel>
@@ -107,7 +91,7 @@
     </fields>
     <fields>
         <help>Bestimmt, wie Service- und Abonnementverträge für diesen Kunden gemeinsam beendet werden.</help>
-        <label><!-- Contract Co-Termination --></label>
+        <label></label>
         <name>SBQQ__ContractCoTermination__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -124,28 +108,28 @@
     </fields>
     <fields>
         <help>Standard-Opportunity für diesen Account. Wird von einem e-Commerce-Modul verwendet, um das Preisbuch des Kunden abzurufen und mit Angeboten im &quot;Einkaufswagen&quot; zu verknüpfen.</help>
-        <label><!-- Default Opportunity --></label>
+        <label></label>
         <name>SBQQ__DefaultOpportunity__c</name>
-        <relationshipLabel><!-- Accounts --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
         <help>Wählen Sie diese Option, wenn Vertragspreise nicht vom übergeordneten Account übernommen werden sollen.</help>
-        <label><!-- Ignore Parent Contracted Prices --></label>
+        <label></label>
         <name>SBQQ__IgnoreParentContractedPrices__c</name>
     </fields>
     <fields>
         <help>Aktivieren Sie dieses Kontrollkästchen, um die Pakethierarchie bei Verlängerungsangeboten und Vertragsänderungen beizubehalten.</help>
-        <label><!-- Preserve Bundle Structure --></label>
+        <label></label>
         <name>SBQQ__PreserveBundle__c</name>
     </fields>
     <fields>
         <help>Geben Sie das Datum ein, bis zu dem die Preise gehalten werden müssen.</help>
-        <label><!-- Price Hold End --></label>
+        <label></label>
         <name>SBQQ__PriceHoldEnd__c</name>
     </fields>
     <fields>
         <help>Wählen Sie &quot;Vermögenswertbasiert&quot;, um Verlängerungen auf der Basis der Vermögenswerte eines Accounts vorzunehmen, oder &quot;Abonnementbasiert&quot;, wenn Verlängerungen auf Abonnements basieren sollen, die aus einem Angebot erstellt werden.</help>
-        <label><!-- Renewal Model --></label>
+        <label></label>
         <name>SBQQ__RenewalModel__c</name>
         <picklistValues>
             <masterLabel>Asset Based</masterLabel>
@@ -158,7 +142,7 @@
     </fields>
     <fields>
         <help>Bei Auswahl von &quot;Gleich&quot; behalten Sie den Preis bei, der beim letzten Mal bezahlt wurde. Wählen Sie &quot;Liste&quot;, um den aktuellen Listenpreis zu verwenden. Bei &quot;Aufschlag&quot; gilt der beim letzten Mal bezahlte Preis zuzüglich eines bestimmten Aufschlags.</help>
-        <label><!-- Renewal Pricing Method --></label>
+        <label></label>
         <name>SBQQ__RenewalPricingMethod__c</name>
         <picklistValues>
             <masterLabel>List</masterLabel>
@@ -175,7 +159,7 @@
     </fields>
     <fields>
         <help>Ausgewählt, wenn dieser Account über aktive Zertifikate verfügt</help>
-        <label><!-- Tax-Exempt --></label>
+        <label></label>
         <name>SBQQ__TaxExempt__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -187,116 +171,116 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- SLA Expiration Date --></label>
+        <label></label>
         <name>SLAExpirationDate__c</name>
     </fields>
     <fields>
-        <label><!-- SLA Serial Number --></label>
+        <label></label>
         <name>SLASerialNumber__c</name>
     </fields>
     <fields>
-        <label><!-- SLA --></label>
+        <label></label>
         <name>SLA__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Platinum</masterLabel>
-            <translation><!-- Platinum --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Second field --></label>
+        <label></label>
         <name>Second_field__c</name>
     </fields>
     <fields>
-        <label><!-- Snapshot Diff --></label>
+        <label></label>
         <name>Snapshot_Diff__c</name>
     </fields>
     <fields>
-        <label><!-- Test Fieldnew --></label>
+        <label></label>
         <name>TestFieldnew__c</name>
     </fields>
     <fields>
-        <label><!-- Upsell Opportunity --></label>
+        <label></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
-            <translation><!-- Maybe --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation><!-- No --></translation>
+            <translation></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation><!-- Yes --></translation>
+            <translation></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Validation --></label>
+        <label></label>
         <name>Validation__c</name>
     </fields>
     <fields>
-        <label><!-- XID --></label>
+        <label></label>
         <name>XID__c</name>
     </fields>
     <fields>
-        <label><!-- Bill To Contact --></label>
+        <label></label>
         <name>blng__BillToContact__c</name>
-        <relationshipLabel><!-- Accounts --></relationshipLabel>
+        <relationshipLabel></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Customer Profile Id --></label>
+        <label></label>
         <name>blng__CustomerProfileId__c</name>
     </fields>
     <fields>
-        <label><!-- Default Payment Type --></label>
+        <label></label>
         <name>blng__DefaultPaymentType__c</name>
     </fields>
     <recordTypes>
-        <label><!-- Person Account Test --></label>
+        <label></label>
         <name>Person_Account_Test</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- Business Account --></label>
+        <label></label>
         <name>ardev__Business_Account</name>
     </recordTypes>
     <recordTypes>
-        <label><!-- testRT --></label>
+        <label></label>
         <name>testRT</name>
     </recordTypes>
     <webLinks>
-        <label><!-- BillingNew --></label>
+        <label></label>
         <name>BillingNew</name>
     </webLinks>
     <webLinks>
-        <label><!-- Amend_Assets --></label>
+        <label></label>
         <name>SBQQ__Amend_Assets</name>
     </webLinks>
     <webLinks>
-        <label><!-- Renew_Assets --></label>
+        <label></label>
         <name>SBQQ__Renew_Assets</name>
     </webLinks>
     <webLinks>
-        <label><!-- CreditCenter --></label>
+        <label></label>
         <name>blng__CreditCenter</name>
     </webLinks>
     <webLinks>
-        <label><!-- PaymentVirtualTerminal --></label>
+        <label></label>
         <name>blng__PaymentVirtualTerminal</name>
     </webLinks>
     <webLinks>
-        <label><!-- Refund --></label>
+        <label></label>
         <name>blng__Refund</name>
     </webLinks>
 </CustomObjectTranslation>

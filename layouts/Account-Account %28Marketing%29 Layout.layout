@@ -150,10 +150,6 @@
                 <field>Active__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CustomerPriority__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>SLA__c</field>
             </layoutItems>
@@ -244,8 +240,8 @@
                 <customLink>BillingNew</customLink>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
         <style>CustomLinks</style>
     </layoutSections>
     <platformActionList>

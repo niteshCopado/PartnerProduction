@@ -186,10 +186,6 @@
         <label>Additional Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CustomerPriority__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>SLAExpirationDate__c</field>
             </layoutItems>
