@@ -19,9 +19,10 @@
     </passwordPolicies>
     <sessionSettings>
         <allowUserAuthenticationByCertificate>false</allowUserAuthenticationByCertificate>
-        <canConfirmEmailChangeInLightningCommunities>false</canConfirmEmailChangeInLightningCommunities>
+        <canConfirmEmailChangeInLightningCommunities>true</canConfirmEmailChangeInLightningCommunities>
         <canConfirmIdentityBySmsOnly>true</canConfirmIdentityBySmsOnly>
         <disableTimeoutWarning>false</disableTimeoutWarning>
+        <enableBuiltInAuthenticator>false</enableBuiltInAuthenticator>
         <enableCSPOnEmail>true</enableCSPOnEmail>
         <enableCSRFOnGet>true</enableCSRFOnGet>
         <enableCSRFOnPost>true</enableCSRFOnPost>
@@ -37,7 +38,6 @@
         <enablePostForSessions>false</enablePostForSessions>
         <enableSMSIdentity>true</enableSMSIdentity>
         <enableU2F>false</enableU2F>
-        <enableUpgradeInsecureRequests>true</enableUpgradeInsecureRequests>
         <enableXssProtection>true</enableXssProtection>
         <enforceIpRangesEveryRequest>false</enforceIpRangesEveryRequest>
         <enforceUserDeviceRevoked>false</enforceUserDeviceRevoked>
@@ -45,18 +45,19 @@
         <forceRelogin>true</forceRelogin>
         <hasRetainedLoginHints>false</hasRetainedLoginHints>
         <hasUserSwitching>true</hasUserSwitching>
-        <hstsOnForcecomSites>true</hstsOnForcecomSites>
         <identityConfirmationOnEmailChange>false</identityConfirmationOnEmailChange>
         <identityConfirmationOnTwoFactorRegistrationEnabled>true</identityConfirmationOnTwoFactorRegistrationEnabled>
         <lockSessionsToDomain>true</lockSessionsToDomain>
         <lockSessionsToIp>false</lockSessionsToIp>
         <lockerServiceCSP>true</lockerServiceCSP>
         <lockerServiceNext>false</lockerServiceNext>
+        <lockerServiceNextControl>false</lockerServiceNextControl>
         <redirectionWarning>true</redirectionWarning>
         <referrerPolicy>true</referrerPolicy>
         <requireHttpOnly>false</requireHttpOnly>
-        <requireHttps>true</requireHttps>
         <sessionTimeout>TwoHours</sessionTimeout>
+        <sidToken3rdPartyAuraApp>false</sidToken3rdPartyAuraApp>
+        <useLocalStorageForLogoutUrl>false</useLocalStorageForLogoutUrl>
     </sessionSettings>
     <singleSignOnSettings>
         <enableCaseInsensitiveFederationID>false</enableCaseInsensitiveFederationID>

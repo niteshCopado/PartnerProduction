@@ -45,18 +45,14 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Latitude__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Longitude__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>To_be_back__c</field>
+                <field>PrimaryContactId__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Active__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>UpsellOpportunity__c</field>

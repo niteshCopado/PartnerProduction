@@ -29,15 +29,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Latitude__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Longitude__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>To_be_back__c</field>
+                <field>PrimaryContactId__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -89,6 +81,10 @@
         <editHeading>true</editHeading>
         <label>Additional Information</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Active__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CustomerPriority__c</field>
@@ -276,16 +272,6 @@
             <sortOrder>16</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>XClean</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>21</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>22</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>17</sortOrder>
@@ -304,6 +290,16 @@
             <actionName>ChangeRecordType</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>20</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>XClean</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>21</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>22</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Share</actionName>

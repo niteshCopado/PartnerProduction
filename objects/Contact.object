@@ -325,7 +325,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>Private</externalSharingModel>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
@@ -547,5 +547,5 @@
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

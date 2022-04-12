@@ -2,14 +2,17 @@
 <AnalyticsSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <alwaysGenPreviews>false</alwaysGenPreviews>
     <analyticsAdoptionMetadata>false</analyticsAdoptionMetadata>
+    <autoInstallApps>false</autoInstallApps>
     <canAccessAnalyticsViaAPI>false</canAccessAnalyticsViaAPI>
     <canAnnotateDashboards>false</canAnnotateDashboards>
+    <canEnableBYOMZeroDayScoring>false</canEnableBYOMZeroDayScoring>
     <canEnableSavedView>true</canEnableSavedView>
     <canExploreDataConversationally>false</canExploreDataConversationally>
     <canShareAppsWithCommunities>false</canShareAppsWithCommunities>
     <canViewThumbnailAssets>false</canViewThumbnailAssets>
     <enableAnalyticsSharingEnable>true</enableAnalyticsSharingEnable>
     <enableAutoCompleteCombo>true</enableAutoCompleteCombo>
+    <enableAzureDLGen2OutputConnector>false</enableAzureDLGen2OutputConnector>
     <enableDashboardComponentSnapshot>false</enableDashboardComponentSnapshot>
     <enableDashboardFlexiTable>true</enableDashboardFlexiTable>
     <enableEmailReportsToPortalUsers>false</enableEmailReportsToPortalUsers>
@@ -20,13 +23,13 @@
     <enableLotusNotesImages>false</enableLotusNotesImages>
     <enableMassEnableReportBuilder>true</enableMassEnableReportBuilder>
     <enableNewChartsEngine>true</enableNewChartsEngine>
-    <enableOrgHasMobileOfflineEnabled>false</enableOrgHasMobileOfflineEnabled>
+    <enableOrgHasMobileOfflineEnabled>true</enableOrgHasMobileOfflineEnabled>
     <enableOrgHasWatchlistEnabled>true</enableOrgHasWatchlistEnabled>
-    <enableQueryLiveConnectors>false</enableQueryLiveConnectors>
+    <enableQueryLiveConnectors>true</enableQueryLiveConnectors>
     <enableRemoveFooterForRepDisplay>false</enableRemoveFooterForRepDisplay>
     <enableRemoveFooterFromRepExp>false</enableRemoveFooterFromRepExp>
-    <enableReportCrtAutoAddPref>false</enableReportCrtAutoAddPref>
     <enableReportHideXlsExportPref>false</enableReportHideXlsExportPref>
+    <enableReportInlineEditPref>false</enableReportInlineEditPref>
     <enableReportNotificationsEnable>true</enableReportNotificationsEnable>
     <enableRequestPrioritySchdl>false</enableRequestPrioritySchdl>
     <enableS1AnalyticsEclairEnable>true</enableS1AnalyticsEclairEnable>
@@ -35,17 +38,20 @@
     <enableSalesforceOutputConnector>false</enableSalesforceOutputConnector>
     <enableSecureImageSharing>false</enableSecureImageSharing>
     <enableSnowflakeOutputConnector>false</enableSnowflakeOutputConnector>
-    <enableSqlLiveDataset>false</enableSqlLiveDataset>
     <enableTableauHyperOutputConnector>false</enableTableauHyperOutputConnector>
     <enableUseOldChartsLookAndFeel>false</enableUseOldChartsLookAndFeel>
     <enableWaveAssetsNewDateVersion>false</enableWaveAssetsNewDateVersion>
     <enableWaveIndexMVDim>true</enableWaveIndexMVDim>
+    <enableWaveIndexMVDimV2>false</enableWaveIndexMVDimV2>
     <enableWaveRecordNavigation>false</enableWaveRecordNavigation>
-    <enableWaveReplication>true</enableWaveReplication>
+    <enableWaveReplication>false</enableWaveReplication>
     <enableWaveSharingInheritance>false</enableWaveSharingInheritance>
     <enableWaveTrendedDatasetCleanup>false</enableWaveTrendedDatasetCleanup>
     <maxHoursAppInProgress>48</maxHoursAppInProgress>
+    <recipeDirectDataPref>true</recipeDirectDataPref>
+    <recipeFiscalPref>false</recipeFiscalPref>
+    <recipePreCachingOptOut>false</recipePreCachingOptOut>
+    <recipeStagedDataPref>false</recipeStagedDataPref>
     <replaceBlankMeasuresWithNulls>false</replaceBlankMeasuresWithNulls>
-    <sonicEnabled>false</sonicEnabled>
     <turnOnTimeZones>false</turnOnTimeZones>
 </AnalyticsSettings>
