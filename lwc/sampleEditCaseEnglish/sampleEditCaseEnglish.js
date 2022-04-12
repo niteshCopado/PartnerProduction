@@ -1,7 +1,7 @@
 import { api, track } from 'lwc';
-import OmniscriptHeader from 'vlocity_cmt/omniscriptHeader';
-import { isOffPlatform, setConnection, getConnection } from 'vlocity_cmt/omniscriptRestApi';
-import { RUN_MODES, registerNs } from 'vlocity_cmt/omniscriptInternalUtils';
+import OmniscriptHeader from 'omnistudio/omniscriptHeader';
+import { isOffPlatform, setConnection, getConnection } from 'omnistudio/omniscriptRestApi';
+import { RUN_MODES, registerNs } from 'omnistudio/omniscriptInternalUtils';
 import { OMNIDEF } from './sampleEditCaseEnglish_def.js';
 import tmpl from './sampleEditCaseEnglish.html';
 import tmpl_nds from './sampleEditCaseEnglish_nds.html';
@@ -22,6 +22,7 @@ export default class sampleEditCaseEnglish extends OmniscriptHeader {
     @api inlineLabel;
     @api inlineVariant;
     @api layout;
+    @api flexipageRegionWidth;
     @api recordId;
     /**
      * Exposing dir (direction) property in order to allow users to manually specify the direction
