@@ -18,16 +18,16 @@
     <isDefaultAudience>false</isDefaultAudience>
     <targets>
         <target>
-            <groupName>0edfc2df-1396-4f81-ab17-db7849c6600d$#$e0bb65d4-29cc-4604-8c77-119265d9eddb</groupName>
-            <priority>1</priority>
-            <targetType>ExperienceVariation</targetType>
-            <targetValue>Home_Rich_Content_Editor_Component</targetValue>
-        </target>
-        <target>
             <groupName>834004ef-a32a-4670-992e-8430454d90ae</groupName>
             <priority>1</priority>
             <targetType>ExperienceVariation</targetType>
             <targetValue>Home_sForce_Home2_Page</targetValue>
+        </target>
+        <target>
+            <groupName>0edfc2df-1396-4f81-ab17-db7849c6600d$#$e0bb65d4-29cc-4604-8c77-119265d9eddb</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Rich_Content_Editor_Component</targetValue>
         </target>
     </targets>
 </Audience>
