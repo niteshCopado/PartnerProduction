@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>San Diego</audienceName>
+    <container>Test Community</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <entityField>City</entityField>
+                <entityType>User</entityType>
+                <fieldValue>San Diego</fieldValue>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>FieldBased</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>834004ef-a32a-4670-992e-8430454d90ae</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_sForce_Home2_Page</targetValue>
+        </target>
+        <target>
+            <groupName>0edfc2df-1396-4f81-ab17-db7849c6600d$#$e0bb65d4-29cc-4604-8c77-119265d9eddb</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_Rich_Content_Editor_Component</targetValue>
+        </target>
+    </targets>
+</Audience>
