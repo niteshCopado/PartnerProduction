@@ -2363,7 +2363,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>copado__Compliance_Rule__c.copado__Filter_Criteria__c</field>
         <readable>true</readable>
     </fieldPermissions>
