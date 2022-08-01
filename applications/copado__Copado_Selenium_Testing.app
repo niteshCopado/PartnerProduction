@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Selenium Testing</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__SeleniumGettingStarted</tabs>

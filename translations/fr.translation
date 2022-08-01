@@ -8437,6 +8437,10 @@
         <name>copado__CBM_FLOW_INVALID</name>
     </customLabels>
     <customLabels>
+        <label><!-- Compliance Finding --></label>
+        <name>copado__CCH_COMPLIANCE_FINDINGS</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CCH CRITERIA LOGIC --></label>
         <name>copado__CCH_CRITERIA_LOGIC</name>
     </customLabels>
@@ -8453,6 +8457,14 @@
         <name>copado__CCH_DUPLICATED_CRITERIA</name>
     </customLabels>
     <customLabels>
+        <label><!-- File Name --></label>
+        <name>copado__CCH_FILE_NAME</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File Type --></label>
+        <name>copado__CCH_FILE_TYPE</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CCH LICENSES USED --></label>
         <name>copado__CCH_LICENSES_USED</name>
     </customLabels>
@@ -8467,6 +8479,10 @@
     <customLabels>
         <label><!-- CCH License --></label>
         <name>copado__CCH_License</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Metadata Type --></label>
+        <name>copado__CCH_METADATA_TYPE</name>
     </customLabels>
     <customLabels>
         <label><!-- CCH METADATA TYPE PARAMETER --></label>
@@ -8957,6 +8973,14 @@
         <name>copado__Child_Relationship</name>
     </customLabels>
     <customLabels>
+        <label><!-- ChooseTestTool --></label>
+        <name>copado__ChooseTestTool</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChooseTestType --></label>
+        <name>copado__ChooseTestType</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Clear Filter Logic --></label>
         <name>copado__Clear_Filter_Logic</name>
     </customLabels>
@@ -8991,6 +9015,10 @@
     <customLabels>
         <label><!-- Collection Size Exceeded Kanban --></label>
         <name>copado__Collection_Size_Exceeded_Kanban</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CommitDataInvalidOrgMessage --></label>
+        <name>copado__CommitDataInvalidOrgMessage</name>
     </customLabels>
     <customLabels>
         <label><!-- Commit Data Not Available Body --></label>
@@ -9793,8 +9821,40 @@
         <name>copado__DYNAMIC_URL_PARAMETERS</name>
     </customLabels>
     <customLabels>
+        <label><!-- Data Commit No Changes --></label>
+        <name>copado__DataCommitNoChanges</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Set Source Option --></label>
+        <name>copado__DataSetSourceOption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template Batch Size --></label>
+        <name>copado__DataTemplateBatchSize</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Data Template Invalid Filters --></label>
         <name>copado__DataTemplateInvalidFilters</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template Max Records --></label>
+        <name>copado__DataTemplateMaxRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template No Acess Source Credential --></label>
+        <name>copado__DataTemplateNoAcessSourceCredential</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template Source Option --></label>
+        <name>copado__DataTemplateSourceOption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template Source Org --></label>
+        <name>copado__DataTemplateSourceOrg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data Template Total Related Objects --></label>
+        <name>copado__DataTemplateTotalRelatedObjects</name>
     </customLabels>
     <customLabels>
         <label><!-- DataTemplate_Download_All_Results --></label>
@@ -10317,6 +10377,10 @@
         <name>copado__Enable_Org_Preferences</name>
     </customLabels>
     <customLabels>
+        <label><!-- Endpoint not Found --></label>
+        <name>copado__Endpoint_not_Found</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Enter Filter Logic --></label>
         <name>copado__Enter_Filter_Logic</name>
     </customLabels>
@@ -10431,6 +10495,10 @@
     <customLabels>
         <label><!-- ExecuteFirst --></label>
         <name>copado__ExecuteFirst</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ExecuteTestsAction --></label>
+        <name>copado__ExecuteTestsAction</name>
     </customLabels>
     <customLabels>
         <label><!-- Execution of --></label>
@@ -11109,6 +11177,10 @@
         <name>copado__InvalidDataTemplateFilter</name>
     </customLabels>
     <customLabels>
+        <label><!-- CreateExecution --></label>
+        <name>copado__InvalidExecutionId</name>
+    </customLabels>
+    <customLabels>
         <label><!-- TemplatingEngine --></label>
         <name>copado__InvalidIdformat</name>
     </customLabels>
@@ -11121,12 +11193,24 @@
         <name>copado__InvalidNameformat</name>
     </customLabels>
     <customLabels>
+        <label><!-- CreateExecution --></label>
+        <name>copado__InvalidParentId</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CredentialExpression --></label>
         <name>copado__InvalidRequest</name>
     </customLabels>
     <customLabels>
+        <label><!-- CreateExecution --></label>
+        <name>copado__InvalidTemplateId</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Invalid Relationship Error --></label>
         <name>copado__Invalid_Relationship_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Step Order --></label>
+        <name>copado__Invalid_Step</name>
     </customLabels>
     <customLabels>
         <label><!-- JOB_MANAGER_MESSAGE --></label>
@@ -11877,6 +11961,10 @@
         <name>copado__NeedtoCreatePackageFirst</name>
     </customLabels>
     <customLabels>
+        <label><!-- NewTestRecordModalTitle --></label>
+        <name>copado__NewTestRecordModalTitle</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CopadoExtension --></label>
         <name>copado__NewValue</name>
     </customLabels>
@@ -11931,6 +12019,10 @@
     <customLabels>
         <label><!-- NoMetadataSelected --></label>
         <name>copado__NoMetadataSelected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoTestExtensionConfigured --></label>
+        <name>copado__NoTestExtensionConfigured</name>
     </customLabels>
     <customLabels>
         <label><!-- NoWarningRelated --></label>
@@ -14065,6 +14157,14 @@
         <name>copado__Second_Generation_Packages</name>
     </customLabels>
     <customLabels>
+        <label><!-- Select Data Set --></label>
+        <name>copado__SelectDataSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Data Template --></label>
+        <name>copado__SelectDataTemplate</name>
+    </customLabels>
+    <customLabels>
         <label><!-- SelectEnvironment --></label>
         <name>copado__SelectEnvironment</name>
     </customLabels>
@@ -14601,6 +14701,10 @@
         <name>copado__StackTrace</name>
     </customLabels>
     <customLabels>
+        <label><!-- JobTemplateTrigger --></label>
+        <name>copado__StandardTemplateModificationNotAllowed</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Standard Functions not Creatable --></label>
         <name>copado__Standard_Functions_not_Creatable</name>
     </customLabels>
@@ -14813,6 +14917,10 @@
         <name>copado__Template_Source_Org_Tooltip</name>
     </customLabels>
     <customLabels>
+        <label><!-- TestType --></label>
+        <name>copado__TestType</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Test Run Error --></label>
         <name>copado__Test_Run_Error</name>
     </customLabels>
@@ -14843,6 +14951,10 @@
     <customLabels>
         <label><!-- Toggle Vlocity --></label>
         <name>copado__Toggle_Vlocity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tool --></label>
+        <name>copado__Tool</name>
     </customLabels>
     <customLabels>
         <label><!-- Total File Size --></label>
@@ -14923,6 +15035,14 @@
     <customLabels>
         <label><!-- USB CANNOT BUNDLE MODAL TITLE --></label>
         <name>copado__USB_CANNOT_BUNDLE_MODAL_TITLE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- USB Cannot Lock Bundle --></label>
+        <name>copado__USB_CANNOT_LOCK_BUNDLE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- USB Error Already Locked Story --></label>
+        <name>copado__USB_ERROR_ALREADY_LOCKED_STORY</name>
     </customLabels>
     <customLabels>
         <label><!-- USB Error On Child Cancellation --></label>
@@ -15675,6 +15795,10 @@
     <customLabels>
         <label><!-- CredentialExpression --></label>
         <name>copado__invalidEnvironmentContext</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OnJobStepComplete --></label>
+        <name>copado__invalidStepPayload</name>
     </customLabels>
     <customLabels>
         <label><!-- PipelineConnectionCreateService --></label>

@@ -45,6 +45,11 @@
         <relationshipLabel><!-- Environments (Deployment Automation Override) --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Deployment Job Template Override --></label>
+        <name>copado__Deployment_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments (Deployment Job Template Override) --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- If enabled, when a Back Promotion is completed and contains Metadata found in User Stories in the destination Environment, the status of the User Story Metadata records of these User Stories will be updated to &quot;Back Promoted&quot;. --></help>
         <label><!-- Index Back Promotion Metadata --></label>
         <name>copado__Index_Back_Promotion_metadata__c</name>
@@ -141,6 +146,11 @@
             <masterLabel>Only If User Has No Org Credential</masterLabel>
             <translation><!-- Only If User Has No Org Credential --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promotion Job Template Override --></label>
+        <name>copado__Promotion_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- Select an Automation Template to override the default Promotion Behaviour defined in the Pipeline --></help>

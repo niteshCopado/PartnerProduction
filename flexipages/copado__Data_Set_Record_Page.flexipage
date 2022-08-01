@@ -368,6 +368,12 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentName>copado:dataSetAlerts</componentName>
+                <identifier>dataSetAlerts</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-5dc098f6-251d-4e37-b192-c34d093e16ab</value>

@@ -9,42 +9,48 @@
  *
  * */
 
-public without sharing class VSTSIntegration extends VSTSIntegrationConstants implements IIntegration {
+public with sharing class VSTSIntegration extends VSTSIntegrationConstants implements IIntegration {
     //will be populated with related project/user Story record
     private String projectExtId;
     private String workspaceId;
     private String teamInfo;
     private String namedCredential;
-
+    
+    public VSTSIntegration(){}
+    public VSTSIntegration(Id projectId){
+        pId = projectId;
+    }
+    
     public Map<String, Id> userMap {
         get {
-            if(null == userMap){
+            if (null == userMap) {
                 Boolean unableCommunityUser = [SELECT Id, Enable_Community_User__c FROM copado__Project__c WHERE Id = :pId].Enable_Community_User__c;
                 userMap = CopadoCCMutilities.returnUsers(unableCommunityUser);
             }
             return userMap;
-        } private set;
+        }
+        private set;
     }
 
     public Map<String, String> recordTypeMap {
-        get{
-            if(null == recordTypeMap){
+        get {
+            if (null == recordTypeMap) {
                 Boolean forThirdParty = true;
                 recordTypeMap = CopadoCCMUtilities.returnRecordTypeMap(pId, forThirdParty);
             }
             return recordTypeMap;
-        } 
+        }
         private set;
     }
 
     public Map<String, String> userStoryRecordTypeMap {
-        get{
-            if(null == userStoryRecordTypeMap){
+        get {
+            if (null == userStoryRecordTypeMap) {
                 Boolean forThirdParty = true;
                 userStoryRecordTypeMap = CopadoCCMUtilities.returnUserStoryRecordTypeMap(forThirdParty);
             }
             return userStoryRecordTypeMap;
-        } 
+        }
         private set;
     }
 
@@ -86,7 +92,7 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
     public List<List<String>> wIIds {
         get {
             if (null == wIIds) {
-                wIIds = new List<List<String>>();
+                wIIds = new List<List<String>>{new List<String>()};
             }
             return wIIds;
         }
@@ -143,17 +149,14 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
         String finalJson = '[{';
         for (String fieldName : fieldMap.keyset()) {
             if (null != cUserStory.get(fieldName)) {
-                String fieldKey = fieldMap.get(fieldName),
-                       fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName)));
-                if(fieldName == RECORD_TYPE_ID){
+                String fieldKey = fieldMap.get(fieldName), fieldValue = String.escapeSingleQuotes(String.valueOf(cUserStory.get(fieldName)));
+                if (fieldName == RECORD_TYPE_ID) {
                     String recordTypeId = fieldValue;
                     String recordTypeName = userStoryRecordTypeMap.get(recordTypeId);
                     fieldValue = recordTypeMap.get(recordTypeName);
                 }
-                
-                finalJson +=
-                    String.format(JsonTemplate, new List<String>{ fieldKey, fieldValue }) +
-                    '},{';
+
+                finalJson += String.format(JsonTemplate, new List<String>{ fieldKey, fieldValue }) + '},{';
             }
         }
 
@@ -176,14 +179,21 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
         CopadoCCMutilities.createLogRecords();
     }
 
-    public List<Map<String, String>> fetchRecords(copado__Project__c selectedProject, Boolean isSprint) {
+    /**
+     * Fetches records Per Sprint from Jira in JSON format
+     *
+     * @param selectedProject
+     *
+     * @return List<Map<String,String>>
+     */
+    public Map<String, Map<String, String>> fetchRecordsWithLimitedSprints(copado__Project__c selectedProject, List<copado__Sprint__c> sprints) {
         pid = selectedProject.id;
         projectExtId = selectedProject.Project_External_Id__c;
         workspaceId = selectedProject.Workspace_Id__c;
         namedCredential = selectedProject.Copado_Integration_Setting__r.Named_Credential__c;
         teamInfo = null != selectedProject.Team_Info__c ? selectedProject.Team_Info__c : EMPTY_CHAR;
 
-        getWorkItemIds(selectedProject, isSprint);
+        getWorkItemIds(selectedProject, true, sprints);
         for (Integer idCounter = 0; idCounter < wIIds.size(); idCounter++) {
             //callout to have all fields for desired workItems
             String responseText = CopadoCCMutilities.MakeCallout(
@@ -191,7 +201,7 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
                 projectExtId,
                 String.join(wIIds[idCounter], COMMA),
                 workspacePath,
-                '',//FIELD_QUERY_PATH + fieldsToFetch,
+                '', //FIELD_QUERY_PATH + fieldsToFetch,
                 new List<string>{ CONTENT_TYPE_HEADER, CONNECTION_HEADER },
                 Method.GET,
                 null,
@@ -200,7 +210,7 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
             );
             //Implemented to bypass lack of functionality to place 2 mock response on a flow with one execution point.
             //  --  check testMethodToFetchSprints_VSTS method in TestIntegration.cls
-            if (isSprint && Test.isRunningTest()) {
+            if (Test.isRunningTest()) {
                 responseText = returnMockResponseForSprints();
             }
             Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(responseText);
@@ -209,26 +219,72 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
             try {
                 List<Object> values = (List<Object>) results.get(VALUE_KEYWORD);
                 iterateThroughIssues(values);
-            } catch(Exception ex){
-                System.debug('Conversion Error for ==> '+results.get(VALUE_KEYWORD));
-                System.debug('Error message ==> '+ex.getMessage());
+            } catch (Exception ex) {
+                System.debug('Conversion Error for ==> ' + results.get(VALUE_KEYWORD));
+                System.debug('Error message ==> ' + ex.getMessage());
+            }
+        }
+        CopadoCCMutilities.createLogRecords();
+        //gets all unique values based on external id from keyValuepairsByExternalId
+        return keyValuepairsByExternalId;
+    }
+
+    public List<Map<String, String>> fetchRecords(copado__Project__c selectedProject, Boolean isSprint) {
+        pid = selectedProject.id;
+        projectExtId = selectedProject.Project_External_Id__c;
+        workspaceId = selectedProject.Workspace_Id__c;
+        namedCredential = selectedProject.Copado_Integration_Setting__r.Named_Credential__c;
+        teamInfo = null != selectedProject.Team_Info__c ? selectedProject.Team_Info__c : EMPTY_CHAR;
+
+        getWorkItemIds(selectedProject, isSprint, null);
+
+        for (Integer idCounter = 0; idCounter < wIIds.size(); idCounter++) {
+            if(wIIds[idCounter].size() != 0){
+                //callout to have all fields for desired workItems
+                String responseText = CopadoCCMutilities.MakeCallout(
+                    namedCredential,
+                    projectExtId,
+                    String.join(wIIds[idCounter], COMMA),
+                    workspacePath,
+                    '', //FIELD_QUERY_PATH + fieldsToFetch,
+                    new List<string>{ CONTENT_TYPE_HEADER, CONNECTION_HEADER },
+                    Method.GET,
+                    null,
+                    null,
+                    selectedProject
+                );
+                //Implemented to bypass lack of functionality to place 2 mock response on a flow with one execution point.
+                //  --  check testMethodToFetchSprints_VSTS method in TestIntegration.cls
+                if (isSprint && Test.isRunningTest()) {
+                    responseText = returnMockResponseForSprints();
+                }
+                Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(responseText);
+                //use below line if you experience parsing issues on above
+                //Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(CopadoCCMUtilities.escapeInvalidChars(responseText));
+                try {
+                    List<Object> values = (List<Object>) results.get(VALUE_KEYWORD);
+                    iterateThroughIssues(values);
+                } catch (Exception ex) {
+                    System.debug('Conversion Error for ==> ' + results.get(VALUE_KEYWORD));
+                    System.debug('Error message ==> ' + ex.getMessage());
+                }
             }
         }
         CopadoCCMutilities.createLogRecords();
         //gets all unique values based on external id from keyValuepairsByExternalId
         userStoryList.addAll(keyValuepairsByExternalId.values());
         //returns list to executeUserStoryUpsert batch class
-        return this.userStoryList;
+        return userStoryList;
     }
     //INTEGRATION CORE METHODS - END
 
     //INTEGRATION HELPER METHODS - START
-    private void getWorkItemIds(copado__Project__c selectedProject, Boolean isSprint) {
+    private void getWorkItemIds(copado__Project__c selectedProject, Boolean isSprint, List<copado__Sprint__c> sprints) {
         if (isSprint) {
-            getSprintWorkItemIds(selectedProject);
+            getSprintWorkItemIds(selectedProject, sprints);
             return;
-        } 
-        
+        }
+        Integer currentIndex = 0;
         //callout to find ids of the WorkItems exist on VSTS
         String responseText = CopadoCCMutilities.MakeCallout(
             namedCredential,
@@ -245,28 +301,35 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
         JSONParser parser = JSON.createParser(responseText);
         //wrapper class direct parse
         authWrapper authWrapperItem = (authWrapper) parser.readValueAs(authWrapper.class);
-        Integer counter4Ids = 0, currentIndex = 0;
+        if((currentIndex != 0 || (currentIndex == 0 && wIIds[0].size() != 0)) && authWrapperItem.workItems.size() > 0){
+            currentIndex++;
+            wIIds.add(new List<String>());
+        }
+        Integer counter4Ids = 0;
         for (workItemsWrapper wiw : authWrapperItem.workItems) {
-            if (counter4Ids == 0) {
-                wIIds.add(new List<String>());
-            }
             wIIds[currentIndex].add(String.valueOf(wiw.id));
             counter4Ids++;
             if (counter4Ids == vstsPaginationSize) {
+                wIIds.add(new List<String>());
                 counter4Ids = 0;
                 currentIndex++;
             }
         }
     }
 
-    private void getSprintWorkItemIds(copado__Project__c selectedProject){
+    private void getSprintWorkItemIds(copado__Project__c selectedProject, List<copado__Sprint__c> sprints) {
+        if ((null == sprints) || (sprints.isEmpty())) {
+            sprints = [
+                SELECT Id, Name, External_Id__c
+                FROM copado__Sprint__c
+                WHERE copado__Project__c = :selectedProject.Id AND External_Id__c != NULL
+                ORDER BY copado__Start_Date__c ASC
+            ];
+        }
+        Integer currentIndex = 0;
         for (String team : teamInfo.split(COMMA)) {
             String encodedTeam = team.replaceAll(ONE_CHAR, SPACE_ENCODE);
-            for (copado__Sprint__c sprint : [SELECT Id, Name, External_Id__c
-                                                FROM copado__Sprint__c
-                                                WHERE copado__Project__c = :selectedProject.Id AND External_Id__c != NULL
-                                                ORDER BY copado__Start_Date__c ASC
-            ]) {
+            for (copado__Sprint__c sprint : sprints) {
                 sprintIdByName.put(sprint.name, sprint.Id);
                 String currentSprintEndpoint = WORK_ITEM_PER_ITERATION_ENDPOINT.replace(PROJECT_KEYWORD, projectExtId)
                     .replace(TEAM_KEYWORD, encodedTeam)
@@ -287,14 +350,16 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
                 JSONParser parser = JSON.createParser(responseText);
                 //wrapper class direct parse
                 sprintWorkItemsWrapper sprintWrapperItem = (sprintWorkItemsWrapper) parser.readValueAs(sprintWorkItemsWrapper.class);
-                Integer counter4Ids = 0, currentIndex = 0;
+                if((currentIndex != 0 || (currentIndex == 0 && wIIds[0].size() != 0)) && sprintWrapperItem.workItemRelations.size() > 0){
+                    currentIndex++;
+                    wIIds.add(new List<String>());
+                }
+                Integer counter4Ids = 0;
                 for (targetWrapper targetItem : sprintWrapperItem.workItemRelations) {
-                    if (counter4Ids == 0) {
-                        wIIds.add(new List<String>());
-                    }
                     wIIds[currentIndex].add(String.valueOf(targetItem.target.id));
                     counter4Ids++;
                     if (counter4Ids == vstsPaginationSize) {
+                        wIIds.add(new List<String>());
                         counter4Ids = 0;
                         currentIndex++;
                     }
@@ -303,7 +368,7 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
         }
     }
 
-    private void iterateThroughIssues(List<Object> values) {
+    public Map<String, Map<String, String>> iterateThroughIssues(List<Object> values) {
         Map<String, String> keyValuepairTempMap;
         for (Object value : values) {
             Map<String, Object> currentValue = (Map<String, Object>) value;
@@ -318,25 +383,31 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
                 keyValuepairsByExternalId.put(String.valueOf(currentValue.get(ID_KEYWORD)), iterateThroughFields(fields, keyValuepairTempMap));
             }
         }
+        return keyValuepairsByExternalId;
     }
 
     private Map<String, String> iterateThroughFields(Map<String, Object> fields, Map<String, String> keyValuepairTempMap) {
         for (String sItem : fields.keyset()) {
             if (sItem == ITERATION && !sprintIdByName.isEmpty()) {
-                String sprintName = ((String) fields.get(sItem)).replace('\\', EMPTY_CHAR).replace(projectExtId, EMPTY_CHAR);
+                String sprintName = ((String) fields.get(sItem));
+                Integer lastIndex = sprintName.lastIndexOf('\\') + 1;
+                sprintName = sprintName.substring(lastIndex);
                 if (sprintIdByName.containsKey(sprintName)) {
                     keyValuepairTempMap.put(SPRINT_ID, sprintIdByName.get(sprintName));
                 }
             } else if (sItem == ASSIGNED_TO) {
                 String userEmail;
-                if(String.valueOf(fields.get(sItem)).contains(OPENING_TAG)){
+                if (String.valueOf(fields.get(sItem)).contains(OPENING_TAG)) {
                     //fills up user look up fields, if email address in use on Third Party Platform matches any of the email addresses on current salesforce org.
                     userEmail = String.valueOf(fields.get(sItem)).subStringAfter(OPENING_TAG).subsTringBefore(CLOSING_TAG);
                 } else {
                     Map<String, Object> currentValue = (Map<String, Object>) fields.get(sItem);
-                    if(currentValue.containsKey(UNIQUE_NAME)){
+                    if (currentValue.containsKey(UNIQUE_NAME)) {
                         userEmail = String.valueOf(currentValue.get(UNIQUE_NAME));
                     }
+                }
+                if(String.isNotBlank(userEmail)){
+                    userEmail = userEmail.toLowerCase();
                 }
                 if (userMap.containsKey(userEmail)) {
                     keyValuepairTempMap.put(DEVELOPER_KEYWORD, userMap.get(userEmail));
@@ -433,12 +504,12 @@ public without sharing class VSTSIntegration extends VSTSIntegrationConstants im
         }
         return sprintsUpsert;
     }
-    
+
     private Date convertStringToDate(Object dateValue) {
         return null != dateValue ? Date.valueOf(String.valueOf(dateValue).replace(T_CHAR, ONE_CHAR).replace(Z_CHAR, EMPTY_CHAR)) : null;
     }
 
-    private String returnMockResponseForSprints() {
+    public String returnMockResponseForSprints() {
         return MOCK_WORK_ITEM_RESPONSE_FOR_SPRINT;
     }
     //INTEGRATION HELPER METHODS - START

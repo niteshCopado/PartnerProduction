@@ -58,7 +58,7 @@
         <relationshipLabel><!-- Bundled User Stories --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Is Bundle --></label>
+        <label><!-- Is Bundle Pilot --></label>
         <name>Is_Bundle__c</name>
     </fields>
     <fields>
@@ -818,6 +818,18 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <recordTypes>
         <label><!-- Bug --></label>

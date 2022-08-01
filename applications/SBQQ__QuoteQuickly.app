@@ -5,6 +5,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Salesforce CPQ</label>
     <logo>SBQQ__Salesforce_CPQ_Assets/SBQQ__Salesforce_CPQ_Logo.png</logo>
     <tabs>standard-Account</tabs>

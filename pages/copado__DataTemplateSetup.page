@@ -62,7 +62,7 @@
                                                     value="{!$Label.copado__clone_template}" action="{!saveCloneTemplate}"
                                                     onClick="dts.onClickFunction();"
                                                     onComplete="dts.onCompleteFunctionToreRender();"
-                                                    rendered="{!AND(template.Id != null,enableADD,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}"
+                                                    rendered="{!AND(template.Id != null,enableADD,hasOrgAccess,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}"
                                                     reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel" />
                                 <apex:commandButton styleClass="slds-button slds-button_neutral"
                                                     value="{!$Label.copado__export_template}"
@@ -73,7 +73,7 @@
                                                     value="{!$Label.copado__save_template}" action="{!saveMainTemplate}"
                                                     onClick="dts.onClickFunction();"
                                                     onComplete="dts.onCompleteFunctionToreRender();"
-                                                    rendered="{!AND(enableADD,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}" reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"/>
+                                                    rendered="{!AND(enableADD,hasOrgAccess,$ObjectType.copado__Data_Template__c.Createable,$ObjectType.copado__Data_Template__c.Updateable)}" reRender="objectFieldsTab,parentObjectFieldsTab,childrenObjectFieldsTab,errorPanel,gnrMessages,mainObjectFiltersTab,filterLogicPanel,sampleContainer,generalWarningContainer,newTemplateContainer,activeCheckboxBlock,matchOwnerBlock,attachmentOptionsBlock,matchRecordTypeBlock,mainObjectTooltip,sourceOrgPanel"/>
                             </div>
                         </div>
                     </div>
@@ -286,7 +286,6 @@
                                               <span class="slds-checkbox slds-checkbox_standalone">
                                                   <apex:inputField value="{!template.copado__Active__c}"
                                                                    id="activeTemplate"
-                                                                   html-disabled="disabled"
                                                                    rendered="{!AND(enableADD,$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Createable,$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Updateable)}" />
                                                   <apex:outputField value="{!template.copado__Active__c}"
                                                                     rendered="{!OR(!enableADD,AND($ObjectType.copado__Data_Template__c.fields.copado__Active__c.Accessible,!$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Createable,!$ObjectType.copado__Data_Template__c.fields.copado__Active__c.Updateable))}" />

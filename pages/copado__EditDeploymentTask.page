@@ -278,9 +278,7 @@
 			<apex:actionFunction immediate="true" name="setUserStory" reRender="scripts" action="{!populateUserStoryRelation}" oncomplete="usOp();">
 				<apex:param name="ustryName" value="" />
 			</apex:actionFunction>
-			<apex:outputPanel layout="block" id="pageMessages">
-				<apex:pagemessages id="pmessage" />
-			</apex:outputPanel>
+			
 			<div class="slds-page-header" style="{!IF($User.UIThemeDisplayed == 'Theme4d','background: #fdfdfd;margin-bottom: 12px;border-collapse: collapse;border-radius: 4px;','')}">
 				<div class="slds-grid">
 					<div class="slds-col slds-has-flexi-truncate">
@@ -318,11 +316,16 @@
 					<!-- / ACTION BUTTONS -->
 				</div>
 			</div>
+
+			<apex:outputPanel style="margin-bottom: 12px;" layout="block" id="pageMessages">
+				<apex:pagemessages id="pmessage"/>
+			</apex:outputPanel>
+
 			<div style="padding: 12px;background: #fdfdfd;border-collapse: collapse; background: #fdfdfd;border-radius: 4px;">
 				<div class="slds-section-container">
 					<div class="slds-section slds-is-open">
 						<h3 class="slds-section__title slds-theme_shade">
-							<span class="slds-truncate slds-p-horizontal_small" title="{!$Label.DETAIL}">{!$Label.DETAIL}</span>
+							<span class="slds-truncate slds-p-horizontal_small" title="{!$Label.copado__detail}">{!$Label.copado__detail}</span>
 						</h3>
 						<div aria-hidden="false" class="slds-section__content">
 							<div class="slds-grid">
@@ -531,14 +534,17 @@
 										}
 
 										toggleDataTemplateHtmlElements = function () {
-											let type = $copado('[id$=DataSourceType]').val();
+											let type = $copado('input[name="DataSourceType"]:checked').val();
 											let sourceDataTemplatePanel = document.getElementById('dataTemplateSourcePanel');
 											let sourceDataSetPanel = document.getElementById('dataSetSourcePanel');
-											if (sourceDataTemplatePanel && sourceDataSetPanel) {
-												switch (type) {
+											let dataTemplateRadioOption = document.getElementById('ENVIRONMENT');
+											if (sourceDataTemplatePanel && sourceDataSetPanel && dataTemplateRadioOption) {
+												switch (type) {	
 													case 'ENVIRONMENT':
+													case undefined:
 														sourceDataTemplatePanel.style.display = 'block';
 														sourceDataSetPanel.style.display = 'none';
+														dataTemplateRadioOption.checked = true;
 														break;
 													case 'DATASET':
 														sourceDataTemplatePanel.style.display = 'none';
@@ -550,7 +556,7 @@
 
 										datasetup.save = function () {
 											var obj = {};
-											let type = $copado('[id$=DataSourceType]').val();
+											let type = $copado('input[name="DataSourceType"]:checked').val();
 											switch (type) {
 												case 'ENVIRONMENT':
 												case undefined:
@@ -573,7 +579,7 @@
 											if (data) {
 												data = JSON.parse(data);
 												let type = data.source ? data.source.type : 'ENVIRONMENT';
-												$copado('[id$=DataSourceType]').val(type);
+												$copado('#'+type+'[name="DataSourceType"]').prop('checked', true);
 												toggleDataTemplateHtmlElements();
 												switch (type) {
 													case 'ENVIRONMENT':

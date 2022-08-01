@@ -4,6 +4,7 @@
     <description>Work with User Stories, Sprints, Epics and Projects.</description>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Developer</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Pipeline_Manager</tabs>

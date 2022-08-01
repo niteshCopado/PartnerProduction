@@ -1,84 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <label></label>
+        <label><!-- Active --></label>
         <name>Active__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation></translation>
+            <translation><!-- No --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation></translation>
+            <translation><!-- Yes --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Customer Priority --></label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Developer 1 --></label>
         <name>Developer_1__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- External Id --></label>
         <name>External_Id__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- First Field --></label>
         <name>First_Field__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Is true --></label>
         <name>Is_true__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- This is latitude --></help>
+        <label><!-- Latitude --></label>
         <name>Latitude__c</name>
     </fields>
     <fields>
-        <help></help>
-        <label></label>
+        <help><!-- This is Longitude --></help>
+        <label><!-- Longitude --></label>
         <name>Longitude__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Manual Task Dep --></label>
         <name>Manual_Task_Dep__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Metadata RL --></label>
         <name>Metadata_RL__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Multi Picklist --></label>
+        <name>Multi_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C</masterLabel>
+            <translation><!-- C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Field 2 --></label>
         <name>New_Field_2__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- New Field --></label>
         <name>New_Field__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Number of Locations --></label>
         <name>NumberofLocations__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Recommit_1 --></label>
         <name>Recommit_1__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Recommit_2 --></label>
         <name>Recommit_2__c</name>
     </fields>
     <fields>
         <help>更新見積の生成時、同じ商品の複数の納入商品の数量を 1 つの品目に統合するオプション。</help>
-        <label></label>
+        <label><!-- Combine Asset Quantities --></label>
         <name>SBQQ__AssetQuantitiesCombined__c</name>
     </fields>
     <fields>
         <help>複数の期間調整される契約から納入商品とサブスクリプションを統合できるようにします。デフォルトでは、期間調整される契約ごとに更新見積に別個のグループが生成されます。</help>
-        <label></label>
+        <label><!-- Combine Co-Termed Contracts --></label>
         <name>SBQQ__CoTermedContractsCombined__c</name>
     </fields>
     <fields>
         <help>契約がいつ期間調整されるかを決定します。</help>
-        <label></label>
+        <label><!-- Co-Termination Event --></label>
         <name>SBQQ__CoTerminationEvent__c</name>
         <picklistValues>
             <masterLabel>Add-on</masterLabel>
@@ -91,7 +123,7 @@
     </fields>
     <fields>
         <help>この顧客のサービスおよびサブスクリプション契約の期間調整方法を決定します。</help>
-        <label></label>
+        <label><!-- Contract Co-Termination --></label>
         <name>SBQQ__ContractCoTermination__c</name>
         <picklistValues>
             <masterLabel>Always</masterLabel>
@@ -108,28 +140,28 @@
     </fields>
     <fields>
         <help>顧客の価格表を取得し、「ショッピングカート」見積に関連付けるために E コマースモジュールで使用されるこの取引先のデフォルトの商談。</help>
-        <label></label>
+        <label><!-- Default Opportunity --></label>
         <name>SBQQ__DefaultOpportunity__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
         <help>契約価格を親取引先から継承しない場合に選択します。</help>
-        <label></label>
+        <label><!-- Ignore Parent Contracted Prices --></label>
         <name>SBQQ__IgnoreParentContractedPrices__c</name>
     </fields>
     <fields>
         <help>更新見積と修正のバンドル階層を保持するにはチェックボックスをオンにします。</help>
-        <label></label>
+        <label><!-- Preserve Bundle Structure --></label>
         <name>SBQQ__PreserveBundle__c</name>
     </fields>
     <fields>
         <help>価格を維持する期限の日付を入力します。</help>
-        <label></label>
+        <label><!-- Price Hold End --></label>
         <name>SBQQ__PriceHoldEnd__c</name>
     </fields>
     <fields>
         <help>取引先の納入商品に基づいて更新を行うには [納入商品ベース] を選択し、見積から作成されたサブスクリプションに基づいて更新を行うには [サブスクリプションベース] を選択します。</help>
-        <label></label>
+        <label><!-- Renewal Model --></label>
         <name>SBQQ__RenewalModel__c</name>
         <picklistValues>
             <masterLabel>Asset Based</masterLabel>
@@ -142,7 +174,7 @@
     </fields>
     <fields>
         <help>前回の支払価格と同じ価格を維持するには [同じ] を使用します。現在のリスト価格を使用するには [リスト] を使用します。前回の支払価格より引き上げた価格を使用するには [上昇] を使用します。</help>
-        <label></label>
+        <label><!-- Renewal Pricing Method --></label>
         <name>SBQQ__RenewalPricingMethod__c</name>
         <picklistValues>
             <masterLabel>List</masterLabel>
@@ -159,7 +191,7 @@
     </fields>
     <fields>
         <help>この取引先に有効な証明書がある場合に選択</help>
-        <label></label>
+        <label><!-- Tax-Exempt --></label>
         <name>SBQQ__TaxExempt__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
@@ -171,116 +203,116 @@
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA Expiration Date --></label>
         <name>SLAExpirationDate__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA Serial Number --></label>
         <name>SLASerialNumber__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- SLA --></label>
         <name>SLA__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation></translation>
+            <translation><!-- Bronze --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation></translation>
+            <translation><!-- Gold --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Platinum</masterLabel>
-            <translation></translation>
+            <translation><!-- Platinum --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation></translation>
+            <translation><!-- Silver --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Second field --></label>
         <name>Second_field__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Snapshot Diff --></label>
         <name>Snapshot_Diff__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Test Fieldnew --></label>
         <name>TestFieldnew__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Upsell Opportunity --></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
-            <translation></translation>
+            <translation><!-- Maybe --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation></translation>
+            <translation><!-- No --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation></translation>
+            <translation><!-- Yes --></translation>
         </picklistValues>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Validation --></label>
         <name>Validation__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- XID --></label>
         <name>XID__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Bill To Contact --></label>
         <name>blng__BillToContact__c</name>
-        <relationshipLabel></relationshipLabel>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Customer Profile Id --></label>
         <name>blng__CustomerProfileId__c</name>
     </fields>
     <fields>
-        <label></label>
+        <label><!-- Default Payment Type --></label>
         <name>blng__DefaultPaymentType__c</name>
     </fields>
     <recordTypes>
-        <label></label>
+        <label><!-- Person Account Test --></label>
         <name>Person_Account_Test</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- Business Account --></label>
         <name>ardev__Business_Account</name>
     </recordTypes>
     <recordTypes>
-        <label></label>
+        <label><!-- testRT --></label>
         <name>testRT</name>
     </recordTypes>
     <webLinks>
-        <label></label>
+        <label><!-- BillingNew --></label>
         <name>BillingNew</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Amend_Assets --></label>
         <name>SBQQ__Amend_Assets</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Renew_Assets --></label>
         <name>SBQQ__Renew_Assets</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- CreditCenter --></label>
         <name>blng__CreditCenter</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- PaymentVirtualTerminal --></label>
         <name>blng__PaymentVirtualTerminal</name>
     </webLinks>
     <webLinks>
-        <label></label>
+        <label><!-- Refund --></label>
         <name>blng__Refund</name>
     </webLinks>
 </CustomObjectTranslation>

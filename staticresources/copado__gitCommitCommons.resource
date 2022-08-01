@@ -283,14 +283,13 @@ var operationTypeAttachmentName;
 
                     for (const member of sourceMembers) {
                         const isEqual = (mdt) => mdt.t === member.MemberType && mdt.n === member.MemberName;
-                        const index = allMdt.findIndex(isEqual);
-
+                        const index = allMdt.findIndex(isEqual);                       
                         const mdtWrapper = {
                             t: member.MemberType,
                             n: member.MemberName,
-                            b: member.LastModifiedBy.Name,
+                            b: dw.u.getHtmlDecodedString(member.LastModifiedBy.Name),
                             d: member.LastModifiedDate.substr(0, member.LastModifiedDate.indexOf('T')),
-                            cb: member.CreatedBy.Name,
+                            cb: dw.u.getHtmlDecodedString(member.CreatedBy.Name),
                             cd: member.CreatedDate.substr(0, member.CreatedDate.indexOf('T'))
                         };
 
@@ -300,7 +299,7 @@ var operationTypeAttachmentName;
                             } else {
                                 allMdt.splice(index, 1, mdtWrapper);
                             }
-                        } else {
+                        } else if (!member.IsNameObsolete) {
                             const isSameType = (mdt) => mdt.t === member.MemberType;
                             const i = allMdt.findIndex(isSameType);
                             allMdt.splice(i, 0, mdtWrapper);
@@ -312,7 +311,12 @@ var operationTypeAttachmentName;
             }
             reRenderHeader();
             unlockScreen();
-            const selectedMdt = app.grid.selectedMetadata;
+            const selectedMdt = [];
+            app.grid.allMetaData.forEach((metadataItem) => {
+                if(metadataItem.s === true){
+                    selectedMdt.push(metadataItem);
+                }
+            });
             app.selectDx = false;
             app.grid.resetGrid(app.conf);
             app.grid.selectedMetadata = selectedMdt;

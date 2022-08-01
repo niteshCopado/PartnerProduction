@@ -4,6 +4,7 @@
     <description>Setup &amp; Manage Copado Pipelines and Deployments</description>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Pipeline Manager</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Pipeline_Manager</tabs>

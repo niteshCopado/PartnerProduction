@@ -272,6 +272,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Deployment_Job_Template_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Deployment Job Template Override</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Environments (Deployment Job Template Override)</relationshipLabel>
+        <relationshipName>Environments1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -467,6 +480,19 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Promotion_Job_Template_Override__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Promotion Job Template Override</label>
+        <referenceTo>copado__JobTemplate__c</referenceTo>
+        <relationshipLabel>Environments</relationshipLabel>
+        <relationshipName>Environments</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Promotion_Override__c</fullName>

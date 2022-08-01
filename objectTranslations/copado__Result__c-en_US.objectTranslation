@@ -68,6 +68,11 @@
         <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Job Step --></label>
+        <name>copado__JobStep__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Unique identifier for the jobs. This is as an External Id for mapping this result with an external job. --></help>
         <label><!-- Job Id --></label>
         <name>copado__Job_Id__c</name>
@@ -133,6 +138,11 @@
             <masterLabel>Success</masterLabel>
             <translation><!-- Success --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Timeout --></label>

@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Copado Compliance Hub</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Compliance_Getting_Started</tabs>

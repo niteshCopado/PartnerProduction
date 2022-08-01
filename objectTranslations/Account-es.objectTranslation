@@ -63,6 +63,22 @@
         <name>Metadata_RL__c</name>
     </fields>
     <fields>
+        <label><!-- Multi Picklist --></label>
+        <name>Multi_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C</masterLabel>
+            <translation><!-- C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- New Field 2 --></label>
         <name>New_Field_2__c</name>
     </fields>

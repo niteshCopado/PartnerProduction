@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Salesforce Billing</label>
     <logo>blng__SalesforceBillingAssets/blng__SalesforceBillingLogo.png</logo>
     <tabs>standard-Account</tabs>

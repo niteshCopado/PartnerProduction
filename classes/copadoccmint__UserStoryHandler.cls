@@ -5,7 +5,7 @@
  * @version 1.0
  * @since CCM Integrations 1.0
  */
-global class UserStoryHandler{
+global with sharing class UserStoryHandler{
     
     @InvocableMethod(Label='Call Factory for Third Party Update' Description='Calls Integration Factory to make callout')
     global static void callFactory4ThirdPartyUpdate(List<copado__User_Story__c> usRecords) {
