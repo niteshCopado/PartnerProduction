@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Special SC %3A%3B*</members>
-        <name>Profile</name>
+        <members>Case.Case.Case_feed_Filter</members>
+        <name>CustomFeedFilter</name>
     </types>
     <version>55.0</version>
 </Package>
