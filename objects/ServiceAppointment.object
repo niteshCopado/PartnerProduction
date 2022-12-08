@@ -169,9 +169,18 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>AppointmentInvitationId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>AppointmentType</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ApptBookingInfoUrl</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>ArrivalWindowEndTime</fullName>
@@ -219,7 +228,17 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>EngagementChannelTypeId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>IsAnonymousBooking</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsOffsiteAppointment</fullName>
+        <inlineHelpText>Any type of work that can be done remotely.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

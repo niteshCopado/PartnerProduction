@@ -196,6 +196,27 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
+    <businessProcesses>
+        <fullName>OMS435</fullName>
+        <description>a support process to display all of the picklist values in a Case</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
@@ -219,94 +240,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Child_Fields__c</fullName>
-        <externalId>false</externalId>
-        <label>Child Fields</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <controllingField>Parent_Field__c</controllingField>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>1</fullName>
-                    <default>false</default>
-                    <label>1</label>
-                </value>
-                <value>
-                    <fullName>2</fullName>
-                    <default>false</default>
-                    <label>2</label>
-                </value>
-                <value>
-                    <fullName>3</fullName>
-                    <default>false</default>
-                    <label>3</label>
-                </value>
-                <value>
-                    <fullName>4</fullName>
-                    <default>false</default>
-                    <label>4</label>
-                </value>
-                <value>
-                    <fullName>5</fullName>
-                    <default>false</default>
-                    <label>5</label>
-                </value>
-                <value>
-                    <fullName>6</fullName>
-                    <default>false</default>
-                    <label>6</label>
-                </value>
-                <value>
-                    <fullName>7</fullName>
-                    <default>false</default>
-                    <label>7</label>
-                </value>
-                <value>
-                    <fullName>First &amp; Second</fullName>
-                    <default>false</default>
-                    <label>First &amp; Second</label>
-                </value>
-                <value>
-                    <fullName>First &amp;Third</fullName>
-                    <default>false</default>
-                    <label>First &amp;Third</label>
-                </value>
-                <value>
-                    <fullName>Delivery - inquiry&amp;dispute</fullName>
-                    <default>false</default>
-                    <label>Delivery - inquiry&amp;dispute</label>
-                </value>
-            </valueSetDefinition>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>3</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>4</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>5</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>6</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>7</valueName>
-            </valueSettings>
-        </valueSet>
     </fields>
     <fields>
         <fullName>ClosedDate</fullName>
@@ -358,6 +291,13 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>IsClosedOnCreate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -367,6 +307,20 @@
         <fullName>IsEscalated</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -389,37 +343,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Parent_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Parent Field</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>A</fullName>
-                    <default>false</default>
-                    <label>A</label>
-                </value>
-                <value>
-                    <fullName>B</fullName>
-                    <default>false</default>
-                    <label>B</label>
-                </value>
-                <value>
-                    <fullName>C</fullName>
-                    <default>false</default>
-                    <label>C</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>PotentialLiability__c</fullName>
@@ -452,6 +375,13 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -546,6 +476,23 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>ServiceContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>SourceId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -554,10 +501,15 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <businessStatus>Active</businessStatus>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Subject</fullName>
@@ -582,36 +534,11 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>Test_Field__c</fullName>
-        <description>Conflicted Description</description>
-        <externalId>false</externalId>
-        <label>Test Field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>second_fields__c</fullName>
-        <externalId>false</externalId>
-        <label>second field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllClosedCases</fullName>
@@ -655,6 +582,160 @@
         </filters>
         <label>My Open Cases</label>
     </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>OMS435</fullName>
+        <active>true</active>
+        <businessProcess>OMS435</businessProcess>
+        <description>the record type for Cases in OMS435 training orgs</description>
+        <label>OMS435</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PotentialLiability__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>GC1020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC1040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC1060</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC3020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC3040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC3060</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC5020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC5040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GC5060</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Breakdown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Complexity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SLAViolation__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mechanical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Structural</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
@@ -676,7 +757,7 @@
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWriteTransfer</sharingModel>
     <webLinks>
         <fullName>UpsellCrosssellOpportunity</fullName>
         <availability>online</availability>

@@ -1,8 +1,8 @@
 {
-    "ContactId": "003f400000LVk6gAAD",
-    "StepContact": {
-        "ContactEmail": "ltomlin@acme.com",
-        "ContactName": "Leanne Tomlin",
-        "ContactPhone": "(212) 169-1475"
-    }
+    "ContactEmail": "edward@acme.com",
+    "ContactFirstName": "Edward",
+    "ContactId": "0035f0000086wwNAAQ",
+    "ContactLastName": "Stamos",
+    "ContactPhone": "(212) 169-1476",
+    "ContactTitle": "President and CEO"
 }

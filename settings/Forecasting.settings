@@ -80,19 +80,10 @@
     </forecastingCategoryMappings>
     <forecastingTypeSettings>
         <active>true</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -193,6 +184,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -229,28 +224,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -277,6 +268,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -286,32 +278,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -412,6 +391,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -448,28 +431,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -496,6 +475,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -505,32 +485,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -635,6 +602,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -671,28 +642,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -720,6 +687,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -729,32 +697,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -855,6 +810,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -891,28 +850,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -939,6 +894,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -948,32 +904,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -1078,6 +1021,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1114,28 +1061,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1163,6 +1106,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1172,32 +1116,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -1298,6 +1229,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1334,28 +1269,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1382,6 +1313,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1391,32 +1323,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -1521,6 +1440,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1557,28 +1480,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1606,6 +1525,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1615,32 +1535,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -1741,6 +1648,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -1777,28 +1688,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1825,6 +1732,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -1834,32 +1742,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -1964,6 +1859,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2000,28 +1899,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2049,6 +1944,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2058,32 +1954,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -2184,6 +2067,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2220,28 +2107,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2268,6 +2151,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2277,32 +2161,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -2407,6 +2278,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2443,28 +2318,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2492,6 +2363,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2501,32 +2373,19 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
     <forecastingTypeSettings>
         <active>false</active>
-        <adjustmentsSettings>
-            <enableAdjustments>false</enableAdjustments>
-            <enableOwnerAdjustments>false</enableOwnerAdjustments>
-        </adjustmentsSettings>
         <displayedCategoryApiNames>closedonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>commitonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>bestcaseonly</displayedCategoryApiNames>
         <displayedCategoryApiNames>pipelineonly</displayedCategoryApiNames>
-        <forecastRangeSettings>
-            <beginning>0</beginning>
-            <displaying>6</displaying>
-            <periodType>Month</periodType>
-        </forecastRangeSettings>
         <forecastedCategoryApiNames>commitonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>closedonly</forecastedCategoryApiNames>
         <forecastedCategoryApiNames>pipelineonly</forecastedCategoryApiNames>
@@ -2627,6 +2486,10 @@
             <label>Created By Alias</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>SYNCEDQUOTE.NAME</field>
+            <label>Synced Quote</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>OPPORTUNITY.CLOSED</field>
             <label>Closed</label>
         </opportunityListFieldsLabelMappings>
@@ -2663,28 +2526,24 @@
             <label>Last Modified Date</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH89</field>
+            <field>00N2w00000MtzGK</field>
             <label>Current Generator(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8A</field>
+            <field>00N2w00000MtzGL</field>
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8B</field>
+            <field>00N2w00000MtzGM</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8C</field>
+            <field>00N2w00000MtzGN</field>
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N2w00000ByH8D</field>
+            <field>00N2w00000MtzGO</field>
             <label>Tracking Number</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>PARTNER.NAME</field>
-            <label>Partner Account</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2711,6 +2570,7 @@
             <field>OPPORTUNITY.TYPE</field>
             <field>UPDATEDBY_USER.ALIAS</field>
             <field>CREATEDBY_USER.ALIAS</field>
+            <field>SYNCEDQUOTE.NAME</field>
             <field>OPPORTUNITY.CLOSED</field>
             <field>OPPORTUNITY.WON</field>
             <field>ACCOUNT.SITE</field>
@@ -2720,15 +2580,23 @@
             <field>OPPORTUNITY.LAST_ACTIVITY</field>
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
-            <field>00N2w00000ByH89</field>
-            <field>00N2w00000ByH8A</field>
-            <field>00N2w00000ByH8B</field>
-            <field>00N2w00000ByH8C</field>
-            <field>00N2w00000ByH8D</field>
-            <field>PARTNER.NAME</field>
+            <field>00N2w00000MtzGK</field>
+            <field>00N2w00000MtzGL</field>
+            <field>00N2w00000MtzGM</field>
+            <field>00N2w00000MtzGN</field>
+            <field>00N2w00000MtzGO</field>
         </opportunityListFieldsUnselectedSettings>
-        <quotasSettings>
-            <showQuotas>false</showQuotas>
-        </quotasSettings>
     </forecastingTypeSettings>
+    <globalAdjustmentsSettings>
+        <enableAdjustments>false</enableAdjustments>
+        <enableOwnerAdjustments>false</enableOwnerAdjustments>
+    </globalAdjustmentsSettings>
+    <globalForecastRangeSettings>
+        <beginning>0</beginning>
+        <displaying>6</displaying>
+        <periodType>Month</periodType>
+    </globalForecastRangeSettings>
+    <globalQuotasSettings>
+        <showQuotas>false</showQuotas>
+    </globalQuotasSettings>
 </ForecastingSettings>

@@ -9,20 +9,19 @@
     </caseFeedItemSettings>
     <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
     <caseMergeInLightning>false</caseMergeInLightning>
-    <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
     <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
-    <defaultCaseOwner>nnatha@copado.com.uat</defaultCaseOwner>
+    <defaultCaseOwner>nnatha@copado.com.vlocityorg</defaultCaseOwner>
     <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>nnatha@copado.com.uat</defaultCaseUser>
+    <defaultCaseUser>nnatha@copado.com.vlocityorg</defaultCaseUser>
     <emailToCase>
         <enableEmailToCase>false</enableEmailToCase>
     </emailToCase>
     <enableCaseFeed>true</enableCaseFeed>
+    <enableCaseSwarming>false</enableCaseSwarming>
     <enableCollapseEmailThread>true</enableCollapseEmailThread>
     <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
     <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
-    <enableEscalateQfiToCaseNetworks>false</enableEscalateQfiToCaseNetworks>
-    <enableExtNetworksCaseFeedEnabled>false</enableExtNetworksCaseFeedEnabled>
     <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
     <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
     <enableMultiLangSolution>false</enableMultiLangSolution>
@@ -31,11 +30,14 @@
     <enableSolutionShortSummary>true</enableSolutionShortSummary>
     <enableSuggestedSolutions>true</enableSuggestedSolutions>
     <escalateCaseBefore>false</escalateCaseBefore>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
     <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
     <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
     <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
     <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
     <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>false</showFewerCloseActions>
+    <systemUserEmail>automatedcase@00d2w00000hpk8zeaf</systemUserEmail>
     <useSystemEmailAddress>true</useSystemEmailAddress>
     <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
     <visibleInCssCheckbox>false</visibleInCssCheckbox>

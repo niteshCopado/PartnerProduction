@@ -141,7 +141,13 @@
         <fullName>GatewayTokenDetails</fullName>
     </fields>
     <fields>
+        <fullName>GatewayTokenEncrypted</fullName>
+    </fields>
+    <fields>
         <fullName>IpAddress</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAutoPayEnabled</fullName>
     </fields>
     <fields>
         <fullName>MacAddress</fullName>

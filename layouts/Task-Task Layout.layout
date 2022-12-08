@@ -109,6 +109,18 @@
     </layoutSections>
     <quickActionList>
         <quickActionListItems>
+            <quickActionName>Task.EditDescription_2</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Task.Defer_2</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Task.UpdatePriority_2</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Task.EditDescription_0</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
             <quickActionName>Task.EditDescription_1</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
@@ -119,9 +131,6 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.UpdatePriority_1</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>Task.EditDescription_0</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.Defer_0</quickActionName>
@@ -164,6 +173,9 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>Task.UpdatePriority</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Task.UpdateStatus_2</quickActionName>
         </quickActionListItems>
     </quickActionList>
     <relatedContent>
