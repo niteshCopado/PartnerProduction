@@ -184,6 +184,7 @@
     </fields>
     <fields>
         <fullName>Custom_field2__c</fullName>
+        <description>kjgkgkgkgkgkghkhgk</description>
         <externalId>false</externalId>
         <label>Custom field2</label>
         <length>12</length>
@@ -206,7 +207,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>A New custom objects</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
