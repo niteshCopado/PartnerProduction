@@ -201,6 +201,16 @@
         <trackTrending>false</trackTrending>
         <type>AutoNumber</type>
     </fields>
+    <fields>
+        <fullName>Test_for_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Test for Project</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>A New custom object</label>
     <nameField>
         <label>A New custom object Name</label>
