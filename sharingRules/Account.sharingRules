@@ -15,7 +15,7 @@
         <criteriaItems>
             <field>Name</field>
             <operation>equals</operation>
-            <value>Test Test</value>
+            <value>TestTest</value>
         </criteriaItems>
         <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
     </sharingCriteriaRules>
