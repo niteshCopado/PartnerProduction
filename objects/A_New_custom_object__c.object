@@ -155,6 +155,7 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>ABC__c</fullName>
+        <description>Adding the description</description>
         <externalId>false</externalId>
         <label>ABC</label>
         <required>false</required>
