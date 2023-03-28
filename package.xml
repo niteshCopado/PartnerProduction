@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>A_New_custom_object__c.Test_git_step__c</members>
-        <name>CustomField</name>
+        <members>A_New_custom_object__c-A New custom object Layout</members>
+        <name>Layout</name>
     </types>
     <version>57.0</version>
 </Package>
