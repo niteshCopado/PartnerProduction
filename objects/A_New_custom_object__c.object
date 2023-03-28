@@ -204,6 +204,14 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>Test_git_step__c</fullName>
+        <externalId>false</externalId>
+        <label>Test git step</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
     <label>A New custom object</label>
     <nameField>
         <label>A New custom object Name</label>
