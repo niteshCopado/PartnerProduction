@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Service Console</label>
     <navType>Console</navType>
     <setupExperience>service</setupExperience>
@@ -12,7 +13,10 @@
     <tabs>standard-Account</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>standard-home</tabs>
+    <tabs>standard-WaveHomeLightning</tabs>
+    <tabs>standard-Incident</tabs>
+    <tabs>standard-Problem</tabs>
+    <tabs>standard-ChangeRequest</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
@@ -23,13 +27,22 @@
             <tab>standard-Case</tab>
         </mappings>
         <mappings>
+            <tab>standard-ChangeRequest</tab>
+        </mappings>
+        <mappings>
             <tab>standard-Contact</tab>
         </mappings>
         <mappings>
             <tab>standard-Dashboard</tab>
         </mappings>
         <mappings>
-            <tab>standard-home</tab>
+            <tab>standard-Incident</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Problem</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-WaveHomeLightning</tab>
         </mappings>
         <mappings>
             <tab>standard-report</tab>

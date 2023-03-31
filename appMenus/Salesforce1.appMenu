@@ -53,7 +53,7 @@
         <type>StandardAppMenuItem</type>
     </appMenuItems>
     <appMenuItems>
-        <name>LightningSchedulerSetupAssistant</name>
+        <name>MobileHome</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
 </AppMenu>
