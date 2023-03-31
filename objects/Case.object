@@ -221,92 +221,29 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Child_Fields__c</fullName>
+        <fullName>CSAT__c</fullName>
         <externalId>false</externalId>
-        <label>Child Fields</label>
+        <label>CSAT</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_ExternalId__c</fullName>
+        <externalId>false</externalId>
+        <label>Case_ExternalId</label>
+        <length>10</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <controllingField>Parent_Field__c</controllingField>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>1</fullName>
-                    <default>false</default>
-                    <label>1</label>
-                </value>
-                <value>
-                    <fullName>2</fullName>
-                    <default>false</default>
-                    <label>2</label>
-                </value>
-                <value>
-                    <fullName>3</fullName>
-                    <default>false</default>
-                    <label>3</label>
-                </value>
-                <value>
-                    <fullName>4</fullName>
-                    <default>false</default>
-                    <label>4</label>
-                </value>
-                <value>
-                    <fullName>5</fullName>
-                    <default>false</default>
-                    <label>5</label>
-                </value>
-                <value>
-                    <fullName>6</fullName>
-                    <default>false</default>
-                    <label>6</label>
-                </value>
-                <value>
-                    <fullName>7</fullName>
-                    <default>false</default>
-                    <label>7</label>
-                </value>
-                <value>
-                    <fullName>First &amp; Second</fullName>
-                    <default>false</default>
-                    <label>First &amp; Second</label>
-                </value>
-                <value>
-                    <fullName>First &amp;Third</fullName>
-                    <default>false</default>
-                    <label>First &amp;Third</label>
-                </value>
-                <value>
-                    <fullName>Delivery - inquiry&amp;dispute</fullName>
-                    <default>false</default>
-                    <label>Delivery - inquiry&amp;dispute</label>
-                </value>
-            </valueSetDefinition>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>3</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>4</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>5</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>6</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>7</valueName>
-            </valueSettings>
-        </valueSet>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>ClosedDate</fullName>
@@ -358,6 +295,24 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FCR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to mark cases that are closed on first contact, without requiring additional engagement with the customer. Off by default. Driven by workflow rule</description>
+        <externalId>false</externalId>
+        <label>First Contact Resolution</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsClosedOnCreate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -367,6 +322,20 @@
         <fullName>IsEscalated</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -389,37 +358,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Parent_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Parent Field</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>A</fullName>
-                    <default>false</default>
-                    <label>A</label>
-                </value>
-                <value>
-                    <fullName>B</fullName>
-                    <default>false</default>
-                    <label>B</label>
-                </value>
-                <value>
-                    <fullName>C</fullName>
-                    <default>false</default>
-                    <label>C</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>PotentialLiability__c</fullName>
@@ -452,6 +390,54 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Family_KB__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Digital Media</fullName>
+                    <default>false</default>
+                    <label>Digital Media</label>
+                </value>
+                <value>
+                    <fullName>Accessories</fullName>
+                    <default>false</default>
+                    <label>Accessories</label>
+                </value>
+                <value>
+                    <fullName>Laptops</fullName>
+                    <default>false</default>
+                    <label>Laptops</label>
+                </value>
+                <value>
+                    <fullName>Tablets</fullName>
+                    <default>false</default>
+                    <label>Tablets</label>
+                </value>
+                <value>
+                    <fullName>Phones</fullName>
+                    <default>false</default>
+                    <label>Phones</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -546,11 +532,48 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>SourceId</fullName>
+        <fullName>SLA_Type__c</fullName>
+        <description>Created for use by Service Wave to segment cases by SLA. Entitlements field now accessible to Wave.</description>
+        <externalId>false</externalId>
+        <label>SLA Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Basic</fullName>
+                    <default>false</default>
+                    <label>Basic</label>
+                </value>
+                <value>
+                    <fullName>Premium</fullName>
+                    <default>false</default>
+                    <label>Premium</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ServiceContractId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Status</fullName>
@@ -558,6 +581,10 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Subject</fullName>
@@ -582,36 +609,11 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>Test_Field__c</fullName>
-        <description>Conflicted Description</description>
-        <externalId>false</externalId>
-        <label>Test Field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>second_fields__c</fullName>
-        <externalId>false</externalId>
-        <label>second field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllClosedCases</fullName>
@@ -676,7 +678,7 @@
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWriteTransfer</sharingModel>
     <webLinks>
         <fullName>UpsellCrosssellOpportunity</fullName>
         <availability>online</availability>
