@@ -1838,6 +1838,11 @@
     </customSettingAccesses>
     <description>Provide users access to all Copado objects, fields, tabs, applications and components across all Copado products</description>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.AccountSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>User.copado__API_URL__c</field>
         <readable>true</readable>
@@ -5974,6 +5979,7 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Copado User Test</label>
+    <license>Salesforce</license>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
