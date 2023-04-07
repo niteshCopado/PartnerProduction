@@ -1,0 +1,23 @@
+<apex:page StandardController="Task">
+    <apex:includeLightning />    
+    <div id="content" style="height:180px;">
+        <div id="lightningComponent" />
+    </div>
+    <script>
+        var recordId = '{!Task.Id}';
+        
+        $Lightning.use("zoom_app:ZMLightningOut", function() {
+            $Lightning.createComponent(
+            "zoom_app:phoneVoiceMailRecordingLWC",
+            {
+                "taskId": recordId,
+            },
+            "lightningComponent",
+            function(component) {
+                
+                
+            });
+        })
+        
+    </script>
+</apex:page>

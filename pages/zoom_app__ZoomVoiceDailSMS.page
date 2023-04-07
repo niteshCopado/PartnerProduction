@@ -1,0 +1,162 @@
+<apex:page sidebar="false" showHeader="false" controller="zoom_app.ZoomVoiceDialController" extensions="zoom_app.ZoomVoiceLoginController,zoom_app.ZoomVoiceCallLogController,zoom_app.ZoomVoiceSmsController">
+    <apex:includeScript value="{!URLFOR($Resource.zoom_app__zoomdialresource, 'js/zoomcallsms.min.js')}"/>
+    <html xmlns:v-bind="http://vue.org" xmlns:v-on="http://vue.org" style="height:100%;">
+    <script type="text/template" id="call-sms-page-template">   
+        <div style="height:100%">
+            <div class= "newSmsDiv">
+                <img src="{!URLFOR($Resource.zoomdialresource, 'image/newSms.svg')};" v-on:click="newSMS()"></img>
+            </div>
+            <div id="callsmspanel">
+                <call-sms ref="callsmsLstComp" v-for="sms in callsmsList"  v-bind:call-sms-length="callsmsList.length" v-bind:call-sms ="sms" v-bind:key="sms.sessionId">
+                </call-sms> 
+            </div>
+            <div class="sms-new" v-show="this.showSmsNew">
+                <div class="msg-title">
+                    <span class="zm-icon-left" style="float:left;font-weight:bold;" v-on:click="hideNewSMS()"></span>
+                    <span style="text-align:center;">New SMS</span>
+                </div>
+                <div class="sms-new-select-DIDs">
+                    <span style="float:left;">To: </span>
+                    <sms-select-sendees ref = "smsSelectSendees"></sms-select-sendees>
+                </div>
+                <div></div>
+                <div class="msg-bottom-select" v-if="callSmsPage.optionalSenderDIDs && callSmsPage.optionalSenderDIDs.length>1">
+                    <zm-select id= "select-sms-DID" style = "width:100%; " popper-class="sms-select-number" v-model="selectedSenderDID" placeholder="Loading" >
+                        <zm-option v-for="(item, index) in callSmsPage.optionalSenderDIDs" v-bind:key="item.value" v-bind:label="item.displayLabel" v-bind:value="item.value">
+                            <span style="padding-left: 5px; font-size: 12px;" v-html="item.label"></span>
+                        </zm-option>
+                    </zm-select>
+                </div>
+                <div class="msg-bottom">
+                    <zm-input v-model="newInputMessage" resize="none" placeholder="Text..." type="textarea" :rows="3" style="height: 100%;width: 88%;border: none;outline: none;" maxlength = 500>
+                    </zm-input>
+                    <input type="button" ref="sendSmsButton" class="sms-send-button" text="Send" v-show = "newInputMessage.length > 0" v-on:click = "sendSmsMessageWhenNewSMS"/>
+                    <input type="button" class="sms-send-button-disabled" text="Send" v-show = "newInputMessage.length == 0"/>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="call-sms-template">    
+        <div class="panel panel-default">
+            <div class="panel-heading" v-on:click="toggleCallSmsDetail()">
+                <zm-row>
+                    <zm-col :span="18">
+                        <div class="grid-content bg-purple">
+                            <span :title = "this.receiverPhoneNumber|entityToString" class ="sms-session-list" v-show = "this.receiverPhoneNumber" >{{this.receiverPhoneNumber | entityToString}}</span>
+                            <span :title="callSms.receiverPhoneNumber|entityToString"  class ="sms-session-list" v-show = "!this.receiverPhoneNumber" >{{callSms.receiverPhoneNumber | entityToString}}</span>
+                        </div>
+                    </zm-col>
+                    <zm-col :span="6">
+                        <span class = "sms-session-list-date">{{callSms.lastAccessTime}}</span>
+                    </zm-col>
+                </zm-row>
+                <zm-row>
+                    <div class="sms-last-msg" v-show = "callSms.lastMessageSender">{{callSms.lastMessageSender}}:{{callSms.lastMessage}}</div>
+                </zm-row>
+            </div>
+            <div class="panel-body" v-show="showSmsDetails">
+                <div class="msg-ul">
+                    <div class="msg-title">
+                        <span class="zm-icon-left" style="float:left;font-weight:bold;" v-on:click = "backToSmsList" ></span>
+                        <span :title = "this.receiverPhoneNumber|entityToString" class ="sms-session" v-show = "this.receiverPhoneNumber">{{this.receiverPhoneNumber}}</span>
+                        <span :title="callSms.receiverPhoneNumber|entityToString" class ="sms-session" v-show = "!this.receiverPhoneNumber">{{callSms.receiverPhoneNumber}}</span>
+                        <span title="task record link" v-if="this.taskid" class="zm-icon-info-outline" style="font-weight:bold;float:right;margin-right:5px;" v-on:click = "goTotaskDetail" ></span>
+                    </div>
+                        
+                    <div v-bind:id="callSms.sessionId"  v-bind:class="{'msg-body-1did': zoomSoftphone.callSmsModel.optionalSenderDIDs.length>1 ,'msg-body': zoomSoftphone.callSmsModel.optionalSenderDIDs.length<=1 }" style="margin-top:5px;" v-show="smsHistories.length>0">
+                        <div  v-for = "(item,index) in smsHistories">
+                            <zm-row>
+                                <zm-col :span="14">
+                                    <div class="grid-content bg-purple">
+                                        <span class ="sms-session">{{item.displayNumber}}</span>
+                                    </div>
+                                </zm-col>
+                                <zm-col :span="10">
+                                    <span style="float:right;margin-right:2px;">{{item.displayTime}}</span>
+                                </zm-col>
+                            </zm-row>
+                            <zm-row>
+                                <div class="msg-1">
+                                    <span v-if="item.message" v-bind:class="{'msg-li-1' : item.displayNumber == 'You' ,'msg-li-2': item.displayNumber != 'You' }">{{item.message}}</span>
+                                </div>
+                            </zm-row>
+                            <zm-row>
+                                <div v-if ="item.attachments.length>0" class="msg-1">
+                                    <span>
+                                        <div v-for ="(file, fileIndex) in item.attachments">
+                                            <div class="sms-img-item" v-if="file.type == 'PNG' || file.type== 'GIF' || file.type == 'JPG' || file.type == 'JPG/JPEG'">
+                                                <img class="sms-img" :src="item.attachments[fileIndex].downloadUrl"  />
+                                            </div>
+                                            <div v-else>
+                                                <span>{{file.type}}</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </zm-row>
+                        </div>
+                    </div>
+                    <div class="msg-bottom-select" v-show="zoomSoftphone.callSmsModel.optionalSenderDIDs.length>1">
+                        <zm-input id= "select-sms-DID" style = "width:100%; " popper-class="sms-select-number" v-model="this.callSms.senderDIDValue" disabled >
+                        </zm-input>
+                    </div>
+                    <div class="msg-bottom">
+                        <div v-if="zoomSoftphone.hasSMSfeature==false">
+                            <span style="line-height: 20px;color: #7f7f7f;">You don't have SMS feature </span>
+                        </div>
+                        <div v-else-if="isDIDremoved==true">                           
+                            <span style="line-height: 20px;color: #7f7f7f;">Your Direct Number has been removed by your admin. You cannot send messages. </span>
+                        </div>
+                        <div v-else>
+                        <div>
+                            <zm-input v-model="userInputMessage" resize="none" placeholder="Text..." type="textarea" :rows="3" style="height: 100%;width: 88%;outline: none;" maxlength = 500>
+                            </zm-input>
+                            <input type="button" ref="sendSmsButton" class="sms-send-button" text="Send" v-show = "userInputMessage" v-on:click = "sendSmsMessage"/>
+                            <input type="button" class="sms-send-button-disabled" text="Send" v-show = "userInputMessage.length == 0"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</script>
+
+    <script type="text/template" id="sms-select-sendees-template"> 
+        <zm-select
+        v-model="selectedSendees"
+        filterable
+        remote
+        multiple
+        default-first-option
+        query-when-focus = "false"
+        no-match-text ="No Data"
+        placeholder="Please Enter the keyword"
+        :remote-method="searchByName"
+        :select-options="options"
+        ref="select"
+        :max-line="3"
+        clearable = "true"
+        multiple-limit = "10"
+        id="remote-select">
+        <zm-option
+        v-for="item in options"
+        :key="item.phone"
+        :label="item.label"
+        :value="item.phone"
+        :disabled="item.disabled"
+        style="height: 100%;line-height: 22px;padding:0 5px;" >
+        <div v-if = "item.type =='Lead'">
+            <img  src="{!URLFOR($Resource.leadPic)}" class = "leadPic"/>
+            <span style="padding-left: 5px; font-size: 12px;display:inline-block;" class="name">{{ item.name }}</span>
+        </div>
+        <div v-if = "item.type =='Contact'">
+            <img  src="{!URLFOR($Resource.contactPic)}" class="contactPic"/>
+            <span style="padding-left: 5px; font-size: 12px;display:inline-block;" class="name">{{ item.name }}</span>
+        </div>
+        <span v-if="item.type =='Contact' || item.type =='Lead'" style="font-size:11px;color: #b4b4b4;padding-left:20px;">{{ item.phone | entityToString}}</span>
+        </zm-option>
+        </zm-select>
+    </script>
+    </html>
+</apex:page>

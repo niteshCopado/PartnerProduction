@@ -359,6 +359,135 @@
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
     </fields>
+    <fields>
+        <fullName>zoom_app__Disable_Invitation_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>user level to disable invitation email,this option is subject to org level setting</inlineHelpText>
+        <label>Disable Invitation Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Login_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify Your Zoom Login Type</inlineHelpText>
+        <label>Login Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>API</fullName>
+                    <default>false</default>
+                    <label>API</label>
+                </value>
+                <value>
+                    <fullName>Facebook</fullName>
+                    <default>false</default>
+                    <label>Facebook</label>
+                </value>
+                <value>
+                    <fullName>Google</fullName>
+                    <default>false</default>
+                    <label>Google</label>
+                </value>
+                <value>
+                    <fullName>SSO</fullName>
+                    <default>false</default>
+                    <label>SSO</label>
+                </value>
+                <value>
+                    <fullName>Work Email</fullName>
+                    <default>true</default>
+                    <label>Work Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Meeting_Password_Type__c</fullName>
+        <defaultValue>3</defaultValue>
+        <deprecated>false</deprecated>
+        <description>1: use PMI password for None PMI meeting;2: set a password for None PMI meeting;3: generate a random password for None PMI meeting</description>
+        <externalId>false</externalId>
+        <label>Non-PMI Meeting Passcode</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Secret_Token__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Secret Token</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Send_Email_to_Attendee__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Provides an interface to send email to attendees while Launching Zoom Meeting from Start Zoom Meeting button.</inlineHelpText>
+        <label>Send Email to Attendees at Launch</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Send_ICS_in_Invitation_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Send ICalendar Attachment File in Meeting Invitation Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send ICalendar Attachment File in Meeting Invitation Email</inlineHelpText>
+        <label>Send ICS in Invitation Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Webhook_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Send a notification to Zoom IM Bot if the meeting that you have scheduled did not start within 3 mins of the start time</inlineHelpText>
+        <label>Webhook Notification URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zoom_app__Zoom_Meeting_Password__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Zoom Meeting Password</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zoom_app__isPMI_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable it if you want to use your Zoom PMI for creating instant meetings.</inlineHelpText>
+        <label>PMI Enabled For Scheduled Meeting</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
     <listViews>
         <fullName>ActiveUsers</fullName>
         <filterScope>Everything</filterScope>

@@ -1,0 +1,231 @@
+<!--
+  @Page Name          : ZoomVoiceDial.page
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 2019/6/13 上午8:50:27
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author                 Modification
+  ==============================================================================
+  1.0    2019/6/11 下午3:45:49   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<apex:page sidebar="false" showHeader="false" controller="zoom_app.ZoomVoiceDialController" extensions="zoom_app.ZoomVoiceLoginController,zoom_app.ZoomVoiceCallLogController,zoom_app.ZoomVoiceSmsController">
+    <apex:stylesheet value="{! $Resource.zoomcomponentscss }" />
+    <apex:stylesheet value="{!URLFOR($Resource.zoom_app__zoomcss, 'css/zoom-icon.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.zoom_app__zoomdialresource, 'css/style.css')}" />
+    <apex:includeScript value="{! $Resource.Vuejs }" />
+    <apex:includeScript value="{! $Resource.zoomcomponentsjs }" />
+    <apex:includeScript value="{! $Resource.ZoomDialCommon}" />
+
+    <apex:outputpanel rendered="{!!CONTAINS($CurrentPage.URL, 'lightning.force.com')}">
+        <script src="/support/api/48.0/interaction.js" type="text/javascript" />
+    </apex:outputpanel>
+    <apex:outputpanel rendered="{!CONTAINS($CurrentPage.URL, 'lightning.force.com')}">
+        <script src="/support/api/48.0/lightning/opencti_min.js" type="text/javascript" />
+    </apex:outputpanel>
+    <apex:includeScript value="{! $Resource.libphonenumberJs }" />
+    <script type="text/javascript">
+        window.configSettings = { 
+             user:{
+                 sfdcEmail : '{!$User.Email}',
+                 sfdcUserId: '{!$User.Id}'
+             },
+             serverUrl:{
+                 url: '{!zpnsWebSocketURL}'
+             },
+             loginUrl:{
+                 url: '/apex/{!ns}ZoomVoiceLogin'
+             },
+             remoteActions: {
+                 getContactsAndLeads : '{!$RemoteAction.ZoomVoiceDialController.getContactsAndLeads}',
+                 signOut:'{!$RemoteAction.ZoomVoiceLoginController.signOut}',
+                 getUserCallerIds: '{!$RemoteAction.ZoomVoiceDialController.getUserCallerIds}',
+                 getCallDevices: '{!$RemoteAction.ZoomVoiceDialController.getCallDevices}',
+                 getCallLogExtensionConfigV2: '{!$RemoteAction.ZoomVoiceCallLogController.getCallLogExtensionConfigV2}',
+                 getContactOrLeadByPhone: '{!$RemoteAction.ZoomVoiceCallLogController.getContactOrLeadByPhone}',
+                 getZPNSLoginInformation: '{!$RemoteAction.ZoomVoiceDialController.getZPNSLoginInformation}',
+                 getNameOptionsByPhoneNumber: '{!$RemoteAction.ZoomVoiceDialController.getNameOptionsByPhoneNumber}',
+                 getAllSobjectType4RelatedToV2: '{!$RemoteAction.ZoomVoiceDialController.getAllSobjectType4RelatedToV2}',
+                 saveCallLog: '{!$RemoteAction.ZoomVoiceCallLogController.saveCallLog}',
+                 deleteCallLog: '{!$RemoteAction.ZoomVoiceCallLogController.deleteCallLog}',
+                 getWorkingCallLog: '{!$RemoteAction.ZoomVoiceCallLogController.getWorkingCallLog}',
+                 CallControlCommand: '{!$RemoteAction.ZoomVoiceDialController.CallControlCommand}',
+                 dismissCallLogs: '{!$RemoteAction.ZoomVoiceCallLogController.dismissCallLogs}',
+                 saveAllCallLogs:'{!$RemoteAction.ZoomVoiceCallLogController.saveAllCallLogs}',
+                 searchContactsAndLeads:'{!$RemoteAction.ZoomVoiceDialController.searchContactsAndLeads}', 
+                 searchWithSobjectType: '{!$RemoteAction.ZoomVoiceDialController.searchWithSobjectType}',
+                 getWorkingSmsSessions: '{!$RemoteAction.ZoomVoiceSmsController.getWorkingSmsSessions}',
+                 getSessionDetail: '{!$RemoteAction.ZoomVoiceSmsController.getSessionDetail}',
+                 sendSmsMessage: '{!$RemoteAction.ZoomVoiceSmsController.sendSmsMessage}',
+                 matchNameByPhoneNumberList: '{!$RemoteAction.ZoomVoiceSmsController.matchNameByPhoneNumberList}',
+                 saveSmsLog: '{!$RemoteAction.ZoomVoiceSmsController.saveSmsLog}'
+             }
+         }
+     </script>
+    <apex:includeScript value="{!URLFOR($Resource.zoom_app__zoomdialresource, 'js/zoomdialbusiness.min.js')}"  loadOnReady="true"/>
+    <apex:include pageName="zoom_app__ZoomVoiceDialCallLog" />
+    <apex:include pageName="zoom_app__ZoomVoiceDailSMS" />
+    <html xmlns:v-bind="http://vue.org" xmlns:v-on="http://vue.org" style="height:100%;">
+    <div id="softphone" style="height:100%;overflow:hidden;">
+        <div class="main-panel">
+            <zm-tabs 
+            ref="tab" stretch="true"  v-on:tab-click="handleClick"
+            v-model="activeName" 
+            aria-label="zoom phone" style="height: 99%">
+            <zm-tab-pane label="Keypad" name="dailer">
+                <div id="viewpanel">
+                <div id="dialpanel">
+                    <div class="numberInputPanel">
+                        <zm-autocomplete class="numberInput" v-model="phoneNumber" v-bind:popper-class="hasDropDownList" value-key="phone" v-bind:fetch-suggestions="querySearchAsync"
+                         placeholder="Search By Name" clearable="true" trigger-on-focus="false" v-on:select="handleSelect">
+                            <template slot-scope="{ item }">
+                                <div v-if = "item.type =='Lead'">
+                                    <img v-if="item.name!='No matched result'" src="{!URLFOR($Resource.leadPic)}" class="leadPic"/>
+                                    <span class="name">{{ item.name }}</span>
+                                </div>
+                                <div v-if = "item.type !='Lead'">
+                                    <img v-if="item.name!='No matched result'" src="{!URLFOR($Resource.contactPic)}" class="contactPic"/>
+                                    <span class="name" >{{ item.name }}</span>
+                                </div>
+                                <span v-if="item.name!='No matched result'" style="font-size:11px;color: #b4b4b4;padding-left:20px;">{{ item.phone | entityToString}}</span>                                
+                            </template>
+                        </zm-autocomplete>
+                    </div>
+                    <!-- Number Panel  -->
+                    <div class="numberPanel">
+                        <div class="row">
+                            <div class="number-button" v-on:click="numberClick(1)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialOne.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(2)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialTwo.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(3)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialThree.svg')}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="number-button" v-on:click="numberClick(4)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialFour.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(5)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialFive.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(6)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialSix.svg')}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="number-button" v-on:click="numberClick(7)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialSeven.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(8)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialEight.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick(9)">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialNine.svg')}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="number-button" v-on:click="numberClick('*')">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialStar.svg')}" />
+                            </div>
+                            <div class="number-button" v-on='{ mousedown:onDown,mouseup:onUp}'>
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialZero.svg')}" />
+                            </div>
+                            <div class="number-button" v-on:click="numberClick('#')">
+                                <img src="{!URLFOR($Resource.ZoomDialNumber, 'DialNumbersSVG/DialStar2.svg')}" />
+                            </div>
+                        </div>
+                        <div class="row dial-button-section">
+                            <button v-on:click="makeCall" type="button" v-bind:class="makeCallBindClass" style="background-image: url({!URLFOR($Resource.zoomPhone)});">
+                            </button>
+                            <input type="image" src="{! $Resource.crossTag}" v-on:click="delPhoneNumber" v-show="phoneNumber.length" style="outline:none"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <template>
+                <zm-select id = "select-caller-id" popper-class="calleridDiv" v-model="userSelectedCallerId" placeholder="Loading" v-on:change="callerIdChange" style="width:88%" v-bind:disabled = "callIdSelectDisabled">
+                    <div style="padding:10px;">
+                        <span style="font-size:bold">Caller ID</span>
+                        <span style="float: right;">Your Ext. {{extension_number}} </span>
+                    </div>
+                    <zm-option v-for="(item, index) in callerIds" v-bind:key="item.phonenumber" v-bind:label="item.Label" v-bind:value="item.phonenumber">
+                        <div v-if = "item.is_default == true">
+                            <span v-if="item.name=='Hide Caller ID'">{{ item.name }} (default)</span>
+                            <span v-if="item.name!='Hide Caller ID'">{{ item.name }}</span>
+                        </div>
+                        <div v-if="!item.is_default">
+                            <span v-html="item.name"></span>
+                        </div>
+                        <div v-if = "item.is_default == true">
+                            <span v-if="item.phonenumber!='Hide Caller ID'" style="font-size: 11px;">{{ item.displayNumber }} (default)</span>
+                        </div>
+                        <div v-if="!item.is_default">
+                            <span v-if="item.phonenumber!='Hide Caller ID'" style="font-size: 11px;">{{ item.displayNumber }}</span>
+                        </div>
+                        <span v-if="item.phonenumber=='Hide Caller ID'" title="May not work in certain countries or regions" style="font-size: 11px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">May not work in certain countries or regions</span>
+                    </zm-option>
+                </zm-select>
+            </template>
+            </div>
+            <br></br>
+            <div style="text-align: center;">
+                <template>
+                <zm-select id= "select-call-devices" popper-class="callDevicesDiv" style = "width:88%;"  v-model="userSelectedCallDevice" placeholder="Loading" v-on:change="callDeviceChange"  v-bind:disabled = "callDeviceSelectDisabled">
+                    <div style="padding:10px; font-size: 12px;">
+                        <span>Call Device</span>
+                    </div>
+                    <zm-option v-for="(item, index) in callDevices" v-bind:key="item.device_id" v-bind:label="item.Label" v-bind:value="item.device_id">
+                        <span style="padding-left: 5px; font-size: 12px;" v-html="item.device_name"> </span>
+                    </zm-option>
+                </zm-select>
+                <div id="dialInactiveDevice">
+                    <zm-alert v-show="isInactiveDevice" title="The device is inactive. Please select another device." v-on:close="closeAlert" type="error" center="false" show-icon= "true"></zm-alert>
+                </div>
+            </template>
+            </div> 
+            </zm-tab-pane>
+            <zm-tab-pane label="History" name="calllogs">
+                <template>
+                <div id="callLogButtons" v-show="callLogList.length">
+                    <div>   
+                        <span v-if="!this.autoSaveCallLogConfig">
+                            <a href="javascript:void(0)" v-on:click="saveAllCallLog" class="saveClass">Save And Close All</a>
+                        </span>
+                        <a href="javascript:void(0)" v-on:click="closeAllCallLog" class="closeClass">Close All</a>
+                    </div>
+                </div>
+                <div id="calllogspanel">
+                    <call-log ref="calllogcomp" v-for="log in callLogList" v-bind:call-log-length="callLogList.length" v-bind:call-log="log" v-bind:key="log.call_id">
+                    </call-log>
+                </div>
+                <div v-show="!callLogList.length" style="text-align:center;font-size:12px;font-weight:normal">
+                    No Recents
+                </div>
+            </template>
+            </zm-tab-pane>
+            <template>
+                <zm-tab-pane label="SMS" name="callsms">
+                    <div style="height:100%;">
+                        <call-sms-page v-if="isUserDIDload" ref="callsmspagecomp" v-bind:call-sms-page="callSmsModel"></call-sms-page>
+                    </div>
+                </zm-tab-pane>
+                <zm-tab-pane label="signout" name="signout">
+                    <span slot="label" style="vertical-align: middle;">
+                        <img src="{!URLFOR($Resource.zoomdialresource, 'image/signout.svg')};" title="Sign Out" style="margin-top:5px;width:20px;height:20px;"></img>
+                    </span>
+                </zm-tab-pane>
+            </template>
+            </zm-tabs>
+        </div>
+        <iframe src="" style="display: none" id="callClientFrame">
+        </iframe>
+    </div>
+    </html>
+</apex:page>

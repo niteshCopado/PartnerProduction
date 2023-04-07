@@ -1,0 +1,148 @@
+<apex:page standardController="Task" extensions="zoom_app.ExternalZoomCallLogsCtrl" sidebar="false" lightningStylesheets="true" docType="html-5.0">
+    <apex:includeScript value="{!URLFOR($Resource.zoom_app__zoom, '/js/jquery-3.6.0.min.js')}" />
+        <apex:outputPanel rendered="{!isLightning}">
+            <apex:slds />
+                <style>
+                .bold{font-weight: bold !important;text-align: center !important;border: 1px #E3E6FA solid !important;}
+                .borderColor{border: 1px #E3E6FA solid !important;text-align: center !important;}
+                .lightningbutton{background-color:  #00BFFF !important; color: white !important; border-radius: 8px !important;}
+                body input[type="text"], .slds-scope input[type="text"]{ min-width: 5rem;} <!-- below are for pick list-->
+                body select, body select[size="0"], body select[size="1"], .slds-scope select, .slds-scope select[size="0"], .slds-scope select[size="1"] { min-width: 2rem;}
+                body .pbHeader .pbTitle:last-child, body .pbHeader .pbButton:last-child, .slds-scope .pbHeader .pbTitle:last-child, .slds-scope .pbHeader .pbButton:last-child {  text-align: inherit;}
+                body .pbBody, .slds-scope .pbBody {    overflow: inherit !important;}
+                body .bPageBlock.apexDefaultPageBlock, body .bPageBlock.bDetailBlock, body .bPageBlock.bEditBlock, .slds-scope .bPageBlock.apexDefaultPageBlock, .slds-scope .bPageBlock.bDetailBlock, .slds-scope .bPageBlock.bEditBlock {
+                padding: 0rem !important;}
+                .slds-scope .slds-lookup__menu {width: 220% !important;    display: grid;}
+                .slds-scope .slds-p-top--medium, .slds-scope .slds-p-top_medium { padding-top: 0px !important;}
+                .apexp { padding-top: 13px;}
+                body .bPageBlock.apexDefaultPageBlock, body .bPageBlock.bDetailBlock, body .bPageBlock.bEditBlock, .slds-scope .bPageBlock.apexDefaultPageBlock, .slds-scope .bPageBlock.bDetailBlock, .slds-scope .bPageBlock.bEditBlock{ border: none !important;}
+                .messageText{color: black !important;}
+                .pageClass{margin: 15px;}
+                </style>
+            <script>
+                $(document)
+                    .ready(function (){
+                    });
+                    $('body').click(function() {
+                    closePopup();
+                    });
+                // custom functions here 
+                function closePopup(){ 
+                    $('.slds-lookup__menu').css("display",  'none');
+                };
+            </script>
+        </apex:outputPanel>
+        <apex:form id="fm1" style="border:20px double #fff;" onkeydown="if(event.keyCode==13){return false;}">
+            <apex:outputPanel id="msgPannel" onclick="clearMessage();">
+                <apex:pageMessages ></apex:pageMessages>
+                <apex:pageMessage severity="warning" strength="2" id="msg2" rendered="{!NOT(configCheck)}" summary="{!errorMsg}"></apex:pageMessage>
+            </apex:outputPanel>
+            <apex:pageBlock >
+                <table style="color: rgb(22, 50, 92)">
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:bold;width:10%; ">Search Button:</td>
+                            <td style="padding-left: 20px">Search call logs for calls that were placed when you were not logged into Salesforce.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;width:10%; ">Save to Salesforce Button:</td>
+                            <td style="padding-left: 20px">Save the call logs in salesforce, you can go to the tasks list to check/update it again.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;width:10%; padding-bottom: 20px">Dismiss Link:</td>
+                            <td style="padding-left: 20px;padding-bottom: 20px">If you don't want save the call log in salesforce, you can dismiss it.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </apex:pageBlock>    
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="3">
+                    <apex:inputField value="{!task.ActivityDate}" label="StartDate" showDatePicker="true" />
+                    <apex:inputField value="{!task1.ActivityDate}" label="EndDate" />
+                    <apex:commandButton action="{!getCallLogs}" value="Search" reRender="fm1" status="status2" styleClass="lightningbutton" oncomplete="closePopup();" />
+                </apex:pageBlockSection>
+                <center>
+                    <apex:actionStatus id="status2" startText="processing">
+                        <apex:facet name="start">
+                            <!-- SPINNER -->
+                            <b> Please Wait....... </b>
+                            <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                            <!-- / SPINNER -->
+                        </apex:facet>
+                    </apex:actionStatus>
+                </center>
+            </apex:pageBlock>
+            <apex:actionFunction name="clearMessage" action="{!clearMessage}" reRender="msgPannel"/>
+            <apex:actionFunction name="getCallLogs" action="{!getCallLogs}" status="status1" reRender="block1" />
+            <apex:actionFunction name="getNextPageLogs" action="{!getNextPageLogs}" status="status1" reRender="block1"/>
+            <apex:actionFunction name="getPrePageLogs" action="{!getPrePageLogs}" status="status1" reRender="block1"/>
+            <apex:actionFunction name="getCurPageLogs" action="{!getCurPageLogs}" status="status1" reRender="block1"/>
+            <apex:pageBlock id="block1">
+                <div style="text-align:center;">
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Save to Salesforce" action="{!generateTasks}" oncomplete="getCurPageLogs();" reRender="block1,msgPannel" styleClass="lightningbutton"  style="float:right;margin-right:50px;"/>
+                    </apex:pageBlockButtons>
+                </div>
+                <apex:actionFunction name="checkAll" action="{!checkAll}" reRender="table1" status="status1" />
+                <apex:actionStatus id="status1" startText="Please Wait......."></apex:actionStatus>
+                <apex:outputPanel id="panel1">
+                    <apex:variable var="i" value="{!0}" />
+                    <apex:pageBlockTable value="{!callLogs}" var="call" id="table1" headerClass="bold">
+                        <apex:column styleClass="borderColor">
+                            <apex:facet name="header">
+                                <apex:inputCheckbox value="{!headerCheck}" id="hdcheck" onChange="checkAll();" />
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!call.selected}" />
+                        </apex:column>
+                        <apex:column headerValue="DIRECTION" value="{!call.extcallLogs.direction}" styleClass="borderColor">
+                        </apex:column>
+                        <apex:column headerValue="Contact/Lead" styleClass="borderColor"> 
+                        <apex:outputPanel layout="block"> 
+                            <apex:selectList value="{!call.task.whoid}" size="1" disabled="{!IF(call.whoidValues.size>0,false, true)}" multiselect="false" style="width:80%">
+                                <apex:selectOptions value="{!call.whoidValues}"/>
+                        </apex:selectList>
+                        </apex:outputPanel>
+                        </apex:column>
+                       <apex:column headerValue="Caller Phone Number" styleClass="borderColor"  value="{!call.extcallLogs.caller_number}">
+                       </apex:column>
+                       <apex:column headerValue="Callee Phone Number" styleClass="borderColor" value="{!call.extcallLogs.callee_number}">
+                        </apex:column>
+                        <apex:column value="{!call.localStartTime}" headerValue="TIME" styleClass="borderColor" />
+                        <apex:column headerValue="RELATE TO" styleClass="borderColor" >
+                            <apex:inputField value="{!call.task.whatid}" rendered="{!!isLightning}" />
+                            <apex:outputPanel id="Lookupcomponent" rendered="{!isLightning}">
+                                <div style="display: inline-block;vertical-align: middle;">
+                                    <apex:selectList label="Select Object" value="{!call.selType}"  size="1" id="pickList">
+                                        <apex:selectOptions value="{!call.sobjectTypes}" />
+                                    </apex:selectList>
+                                </div>
+                                <div style="display: inline-block;vertical-align: middle;">
+                                    <apex:outputPanel layout="block" styleclass="slds-form-element slds-p-top--medium " id="cmpnt">
+                                        <apex:outputPanel layout="block" styleclass="slds-form-element slds-p-top--medium ">
+                                            <c:Lookup_Component SelectedID="{!call.task.whatid}" CmpId="ULookupComp{!call.indexVal}" oncompleteaction="console.log();" SelectedValue="{!call.selectedWhatIdValue}"  ObjectApi="{!call.selType}" Fields="{!fields}" useNameOrNot="{!call.useNameOrNot}"></c:Lookup_Component>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+                                </div>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column value="{!call.durationStr}" headerValue="DURATION" styleClass="borderColor" />
+                        <apex:column value="{!call.extcallLogs.result}" headerValue="RESULT" styleClass="borderColor" />
+                        <apex:column headerValue="" styleClass="borderColor" >
+                            <apex:commandlink action="{!Dismiss}" value="Dismiss" oncomplete="getCurPageLogs();" reRender="block1" >
+                                <apex:param name="callUniqueId" value="{!call.extcallLogs.callUniqueId}" assignTo="{!disMissCallUniqueId}"/>
+                            </apex:commandlink>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+                <div style="margin-top:20px;margin-bottom:20px;padding:20px;">
+                    <apex:commandLink reRender="block1"  rendered="{!If(pageParm.currentPageNo ==1, true,false)}" styleClass="pageClass" style="color:black">Previous</apex:commandlink>
+                    <apex:commandLink action="{!getPrePageLogs}" reRender="block1" rendered="{!If(pageParm.currentPageNo>1, true,false)}" styleClass="pageClass">Previous</apex:commandlink>
+                    <apex:commandLink action="{!getNextPageLogs}" reRender="block1" rendered="{!If(pageParm.currentPageNo<pageParm.totalPage, true,false)}" styleClass="pageClass">Next</apex:commandlink>
+                    <apex:commandLink reRender="block1" rendered="{!IF(AND(pageParm.currentPageNo == pageParm.totalPage,pageParm.currentPageNo >=1), TRUE, FALSE)}" styleClass="pageClass" style="color:black">Next</apex:commandlink>
+                    <apex:outputText rendered="{!If(pageParm.currentPageNo>0, true,false)}" styleClass="pageClass">Current Page: {!pageParm.currentPageNo}</apex:outputText>
+                    <apex:outputText rendered="{!If(pageParm.totalPage>0, true,false)}" styleClass="pageClass">Total Page: {!pageParm.totalPage}</apex:outputText>
+                    <apex:outputText rendered="{!If(pageParm.totalCount>0, true,false)}" styleClass="pageClass">Total Count: {!pageParm.totalCount}</apex:outputText>
+                </div>
+            </apex:pageBlock>
+        </apex:form>
+</apex:page>

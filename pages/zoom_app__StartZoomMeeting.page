@@ -1,0 +1,15 @@
+<apex:page controller="zoom_app.StartZoomMeetingCtrl">
+<apex:includeScript value="{!URLFOR($Resource.zoom_app__zoom, '/js/jquery-3.6.0.min.js')}" />
+<script>
+       $(document).ready(function() {
+           var id = '{!URLENCODE(objId)}';
+           window.open('/apex/{!ns}ZoomMeetingStartPage?id=' + id, '_blank');
+       }); 
+</script>
+      
+<apex:form >
+ <apex:outputPanel styleClass="slds-panel__section"> 
+         Meeting will be started in newTab.Click here to <apex:commandLink value="start zoom meeting again." onClick="window.open('/apex/{!ns}ZoomMeetingStartPage?id={!objId}', '_blank');return false;"/>
+      </apex:outputPanel>
+      </apex:form>
+</apex:page>

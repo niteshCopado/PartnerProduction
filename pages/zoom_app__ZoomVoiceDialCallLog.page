@@ -1,0 +1,294 @@
+<apex:page sidebar="false" showHeader="false" controller="zoom_app.ZoomVoiceDialController" extensions="zoom_app.ZoomVoiceLoginController,zoom_app.ZoomVoiceCallLogController">
+    <apex:includeScript value="{!URLFOR($Resource.zoom_app__zoomdialresource, 'js/zoomcalllog.min.js')}"/>
+    <html xmlns:v-bind="http://vue.org" xmlns:v-on="http://vue.org" style="height:100%;">
+    <script type="text/template" id="call-log-template">    
+            <div class="panel panel-default">
+                <div class="panel-heading" v-on:click="toggleCallLogDetail">
+                    <zm-row>
+                        <zm-col :span="2">
+                            <div class="grid-content bg-purple">
+                                <div style="line-height:32px;display:block;">
+                                    <span v-if="callLog.call_type == 1" ><img style="padding-top:5px;"/></span>
+                                    <span v-else>
+                                        <span v-if = "callLog.signal_status_display == 'End'"><img src="{! $Resource.outboundlogo }" /></span>
+                                        <span v-else><img style="padding-top:5px;" src="{! $Resource.outboundlogo }" /></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </zm-col>
+                        <zm-col :span="13">
+                            <div class="grid-content bg-purple">
+                                <div v-if = "callLog.signal_status_display == 'End' || callLog.signal_status_display == 'Missed'">
+                                    <div>
+                                        {{contactName | entityToString}} 
+                                    </div>
+                                    <div class="callEndNumberClass"  v-if = "callLog.call_type == 1">{{callLog.caller_phone_number}}</div>
+                                    <div class="callEndNumberClass"  v-else>{{callLog.callee_phone_number}}</div>
+                                    <div class="calllogEndClass"  v-if = "task.Call_Duration">{{task.Call_Duration}} | {{callLog.ringtime}}</div>
+                                    <div class="calllogEndClass"  v-else>00:00 | {{callLog.ringtime}}</div>
+                                </div>
+                                <div v-else>
+                                    <div class="callLogClass" v-if = "callLog.call_type == 1">{{callLog.caller_phone_number}}</div>
+                                    <div class="callLogClass" v-else>{{callLog.callee_phone_number}}</div>
+                                </div>
+                            </div>
+                        </zm-col>
+                        <zm-col :span="9">
+                            <div class="grid-content bg-purple" style="text-align:right;white-space:nowrap;margin-right:5px;">
+                                <span class="phone-status" v-bind:class="classObject"  >{{callLog.signal_status_display}}</span>
+                                <span v-bind:class="showDetailsClass"></span>
+                                <span class="zm-icon-close" v-if = "callLog.signal_status_display == 'End' || callLog.signal_status_display == 'Missed'"  v-on:click="closeOneCallLog"></span>  
+                            </div>
+                        </zm-col>
+                      </zm-row>
+                </div>
+                <div class="panel-body" v-show="callLog.showDetails">
+                    <div class="softphone-message"> 
+                    </div>
+                    <div class="disabled-div">
+                        <div class="row" style="text-align: center;">
+                            <span style= "font-size: 14px; text-align: center; font-weight: bold;">{{this.contactName|entityToString}}</span>
+                        </div>
+                        <div class="row" style="text-align: center; padding-top: 6px;" v-if = "callLog.call_type == 1"> 
+                            <div>
+                                <span style= "font-size: 12px; color: #232333;">{{callLog.caller_phone_number}}</span>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center; padding-top: 6px;" v-else>
+                            <div>
+                                <span style= "font-size: 12px; color: #232333;">{{callLog.callee_phone_number}}</span>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center; padding-top: 4px;">
+                            <span style= "font-size: 11px; color: #747487;" v-show = "!callLog.hold && (callLog.signal_status_display == 'Answered' || callLog.signal_status_display == 'On Hold')">{{ task.Call_Duration }} {{callLog.call_queue_name}} </span>
+                            <span style= "font-size: 11px; color: #747487;" v-show = "callLog.hold">On Hold{{callLog.call_queue_name}}</span>
+                        </div>
+                        <div id="callControlDiv" ref="callcontrolbutton" v-show = "zoomSoftphone.callDevices.length > 0">
+                            <div id="inboundCallButtonStyleRinging" ref="inboundRingCallBtn"  v-show = "callLog.call_type == 1  && callLog.signal_status_display == 'Ringing'">
+                                <div style = "padding-bottom: 2%;">
+                                    {{callLog.call_queue_info}}
+                                </div>
+                                <div id="inboundCallButtonRinging">
+                                    <button  class ="answer-call-button" v-on:click="answerIncomingCall" type = "button" >
+                                        <font class ="button-text-description">Accept</font>
+                                    </button>
+                                    <button  class = "end-call-button" v-on:click="rejectCall"  type = "button">
+                                        <font class ="button-text-description">Decline</font>
+                                    </button>   
+                                </div>
+                                <div style="padding-top:5px;">  
+                                    <span class = "chose-device-intoduction">Answer this call from:</span>
+                                    <div class="tooltip">
+                                        <img src="{!URLFOR($Resource.zoomdialresource, 'image/help.svg')}"/>
+                                        <span class="tooltiptext">The default device will be the previously selected device.To change the device, please reselect device before answering the call.</span>
+                                      </div>
+                                </div>
+                                <zm-select style = "width:80%; margin-left:10%;" popper-class="ringingDeviceDiv" id ="ringingDeviceDiv"  v-model="zoomSoftphone.userSelectedCallDevice" placeholder="Loading" v-on:change="callDeviceChange"  v-bind:disabled = "zoomSoftphone.callDeviceSelectDisabled">
+                                    <div style="padding:10px; font-size: 12px;">
+                                        <span>Call Device</span>
+                                    </div>
+                                    <zm-option v-for="(item, index) in zoomSoftphone.callDevices" v-bind:key="item.device_id" v-bind:label="item.Label" v-bind:value="item.device_id">
+                                        <span style="padding-left: 5px; font-size: 12px;" v-html ="item.device_name"></span>
+                                    </zm-option>
+                                </zm-select>
+                                <div id="callLogInactiveDevice" >
+                                    <zm-alert v-show = "isInactiveDevice" title="The device is inactive. Please select another device." type="error" @close="closeAlertInfo" center="false"  show-icon></zm-alert>
+                                </div>  
+                            </div>
+                            <div id="outboundCallButtonStyleRinging" ref="outboundRingCallBtn"  v-show = "callLog.call_type == 2 && callLog.signal_status_display == 'Ringing'">
+                                <div style="text-align:center;margin-top: 1%; margin-bottom:1%;" >
+                                    <span class = "device-name-display" v-text ="callLog.device_name"></span>
+                                </div>
+                                <div id="outboundCallButtonRinging">
+                                    <button class = "stop-call-button" v-on:click="endCall"  type = "button">
+                                        <font class ="button-text-description">End</font>
+                                    </button>
+                                </div>  
+                            </div>
+                            <div id="callControlButtonStyleAnswered"  style="margin:0 0;" ref="answeredCallBtn" v-show = "callLog.signal_status_display == 'Answered' || callLog.signal_status_display == 'On Hold'">
+                                <div style="margin-top:1%;" >
+                                    <span class = "device-name-display" v-text ="callLog.device_name"></span>
+                                </div>
+                                <div id="callControlButtonAnswered">
+                                    <button v-bind:class= "muteBindClass"  v-on:click="muteCall"  type = "button" v-show = "!callLog.mute">
+                                        <font class ="button-text-description" >Mute</font>
+                                    </button>
+                                    <button v-bind:class="unmuteBindClass" v-on:click="unmuteCall"  type = "button" v-show = "callLog.mute">
+                                        <font class ="button-text-description" >Unmute</font>
+                                    </button>
+                                    <button class="hold-call-button" v-on:click="holdCall"  type = "button" v-show = "!callLog.hold">
+                                        <font class ="button-text-description" >Hold</font>
+                                    </button>
+                                    <button  class="unhold-call-button" v-on:click = "unholdCall" type = "button" v-show = "callLog.hold">
+                                        <font class ="button-text-description" >Unhold</font>
+                                    </button>
+
+                                    <div v-show= "zoomSoftphone.hasAdHocCallRecordPermission || (zoomSoftphone.hasAutoCallRecordPermission && (zoomSoftphone.autoRecordCallType == callLog.call_type || zoomSoftphone.autoRecordCallType == 'both'))" style="display: inline-block;">
+                                        <button  v-bind:class="{'record-call-button' : !callLog.hold, 'record-disable': callLog.hold}" v-on:click="recordCall"  type = "button" v-show = "!callLog.auto_recording && !callLog.ad_hoc_recording">
+                                            <font class ="button-text-description">Record</font>
+                                        </button>
+                                        <button v-bind:class="{'recording-button' : !callLog.hold, 'record-disable': callLog.hold}"  v-on:click="stopRecordingCall"  type = "button" v-show = "callLog.ad_hoc_recording ||(callLog.auto_recording && zoomSoftphone.allowUserOperateAutoRecord)">
+                                            <font class ="recording-button-text-description" >Stop Recording</font>
+                                        </button>
+                                        <button  class="recording-button" v-on:click = "stopAutoRecord" type = "button" v-show = "callLog.auto_recording && !zoomSoftphone.allowUserOperateAutoRecord">
+                                            <font class ="button-text-description" v-show = "callLog.auto_recording">REC</font>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="EndforAnsweredCall"  style = "margin-top:10%;text-align: center; margin-left: 0;" class = end-call-button v-on:click="endCall" type = "button">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-div">
+                        <div class="row">
+                            <div class="row" v-if="isError">
+                                <!-- <div style="color:red;">{{errorMsg}}</div> -->
+                                <zm-alert :title="errorMsg" type="error" :closable="false" show-icon>
+                            </div>
+                            <div class="call-log-label" id='taskSubject' v-on:click="subjectTaskClickEvent"  v-bind:class="{subjectDivHover: isShowSubjectLink}" >Subject</div>
+                            <div class="call-log-right-col-apex"> 
+                                <zm-input v-model="task.subject" placeholder="Subject" :disabled="isCancelButtonClicked">
+                                </zm-input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="call-log-label">Contact/Lead <span v-show="this.nameOptions.length > 1" style="font-size: 10px; color: rgb(180, 180, 180);">[You can switch options]</span></div>
+                            <div class="call-log-right-col-apex" v-if = "zoomSoftphone.enableEditContactLead == true">
+                                <zm-select clearable = "true" :disabled="isNameSelectDisabled" @clear ="clearContactLeadOptions"
+                                    v-model="task.whoid"
+                                    placeholder="Search By Name" 
+                                      @change = "nameOptionChange" :select-options="nameOptions" id="contact-lead-select" filterable="true" remote= "true" v-bind:remote-method="searchContactLeads" :loading="loading" ref= "contactleadSelect">
+                                      <zm-option
+                                        v-for="(item, index) in nameOptions"
+                                        :option-id="item.id"
+                                        :key="item.Id + index"
+                                        :label="item.Name|entityToString"
+                                        :value="item.Id">
+                                        <div v-if="item.Type =='Lead'">
+                                            <img src="{!URLFOR($Resource.leadPic)}" class="leadPic" />
+                                            <span style="display:inline;" :title="item.Name|entityToString" v-html="item.Name"></span>
+                                        </div>
+                                        <div class="row" style="display:inline;" v-else>
+                                            <img src="{!URLFOR($Resource.contactPic)}" class ="contactPic" />
+                                            <span style="display:inline;":title="item.Name|entityToString" v-html="item.Name"></span>
+                                        </div>
+                                    </zm-option>
+                                </zm-select>    
+                            </div>
+                            <div class="call-log-right-col-apex" v-else>
+                                <zm-select clearable = "true" :disabled="isNameSelectDisabled" @clear ="clearContactLeadOptions"
+                                    v-model="task.whoid"
+                                    placeholder="Name: None" 
+                                      @change = "nameOptionChange">
+                                      <zm-option
+                                        v-for="(item, index) in nameOptions"
+                                        :option-id="item.id"
+                                        :key="item.Id + index"
+                                        :label="item.Name|entityToString"
+                                        :value="item.Id">
+                                        <div v-if="item.Type =='Lead'">
+                                            <img src="{!URLFOR($Resource.leadPic)}" class="leadPic" />
+                                            <span style="display:inline;" :title="item.Name|entityToString" v-html="item.Name"></span>
+                                        </div>
+                                        <div class="row" style="display:inline;" v-else>
+                                            <img src="{!URLFOR($Resource.contactPic)}" class ="contactPic" />
+                                            <span style="display:inline;":title="item.Name|entityToString" v-html="item.Name"></span>
+                                        </div>
+                                    </zm-option>
+                                </zm-select>    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="call-log-label">Relate To</div>
+                            <zm-row class = "call-log-right-col-apex">
+                                <zm-select clearable = "true" v-model="relatedToType" placeholder="Please Select" @change = "relatedToTypeChange" :disabled="isSobjectSelectDisabled">
+                                    <zm-option
+                                        v-for="item in relatedToTypeOptions"
+                                        :option-id="item.value|entityToString"
+                                        :key="item.value|entityToString"
+                                        :label="item.name|entityToString"
+                                        :value="item.value|entityToString">
+                                        <span :title="item.name|entityToString" v-html="item.name"></span>
+                                    </zm-option>
+                                </zm-select>
+                            </zm-row>
+                            <zm-row class = "call-log-right-col-apex">
+                                <zm-select v-model="task.whatid" ref= "relatedToSelect" filterable="true" remote= "true" @clear ="clearRelateToOptions" v-bind:remote-method="searchSobjectWithKey" 
+                                    placeholder="Search" clearable="true" id="related-to-select"   :loading="loading" :disabled="isSobjectSelectDisabled">
+                                    <zm-option
+                                        v-for="item in relatedToOptions"
+                                        :key="item.Id"
+                                        :option-id="item.Id"
+                                        :label="item.Name|entityToString"
+                                        :value="item.Id">
+                                        <span :title="item.Name|entityToString" v-html="item.Name"></span>
+                                        </zm-option>
+                                        <i slot="prefix" class="zm-input__icon zm-icon-search"></i>
+                                </zm-select>
+                            </zm-row>
+                        </div>
+                        <div class="row">
+                            <div class="call-log-label">Comments</div>
+                            <div class="call-log-right-col-apex zm-row" > 
+                                <zm-input type="textarea" :rows="2" placeholder="Add Comment..." v-model="task.description" :disabled="isCancelButtonClicked" style="font-size:12px;">
+                                </zm-input>
+                            </div>
+                        </div>
+                        <!-- add for saving customized call log 01/07/2020-->
+                        <div id="extensionHtml" v-for = "(item,index) in zoomSoftphone.callLogExtensionConfigObject">
+                            <div class="row">
+                                <div class="call-log-label" v-if="item.fieldType =='STRING' || item.fieldType =='PICKLIST' || item.fieldType =='COMBOBOX' || item.fieldType =='TEXTAREA'">
+                                    <span v-html="item.fieldLabel"></span>
+                                </div>
+                                <div class="call-log-right-col-apex zm-row" v-if="item.fieldType =='STRING'"> 
+                                    <zm-input type="input" placeholder="" v-model = "task.callLogExtensions[index]" :disabled ="isCancelButtonClicked">
+                                    </zm-input>
+                                </div>
+                                <div class="call-log-right-col-apex zm-row" v-else-if="item.fieldType =='TEXTAREA'" > 
+                                    <zm-input type="textarea" :rows="2" placeholder="" v-model = "task.callLogExtensions[index]" :disabled="isCancelButtonClicked">
+                                    </zm-input>
+                                </div>
+                                <zm-row v-else-if="item.fieldType =='PICKLIST' || item.fieldType =='COMBOBOX'" class = "call-log-right-col-apex">
+                                    <zm-select clearable = "true" placeholder="Please Select" v-model = "task.callLogExtensions[index]" :disabled="isCancelButtonClicked" width-limit="true">
+                                        <zm-option
+                                            v-for="pickValue in item.pickListValue"
+                                            :option-id="pickValue.value|entityToString"
+                                            :key="pickValue.value|entityToString"
+                                            :label="pickValue.label|entityToString"
+                                            :value="pickValue.value|entityToString">
+                                            <span :title="pickValue.value|entityToString" v-html="pickValue.value"></span>
+                                        </zm-option>
+                                    </zm-select>
+                                </zm-row>
+                            </div>  
+                        </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="call-button-panel"> 
+                                <span v-if="!zoomSoftphone.autoSaveCallLogConfig" >
+                                    <button type="button" v-bind:class="{ 'call-button-cancel-disabled' : isSaveButtonDisabled,'call-button-cancel': !isSaveButtonDisabled }"  v-on:click="closeOneCallLog">
+                                        <span>Close</span>
+                                    </button>
+                                    <button  v-bind:class="{'call-button-disabled' : isSaveButtonDisabled ,'call-button': !isSaveButtonDisabled }" v-on:click="saveOneCallLog" type="button">
+                                        <span>Save</span>
+                                    </button>
+                                </span>
+                                <span v-else>
+                                    <button type="button"  v-bind:class="{ 'call-button-cancel-disabled' : isSaveButtonDisabled || !task.id ,'call-button-cancel': !isSaveButtonDisabled && task.id }"  v-on:click="deleteCallLog">
+                                        <span>Delete</span>
+                                    </button>
+                                    <button  v-bind:class="{'call-button-disabled' : isSaveButtonDisabled ,'call-button': !isSaveButtonDisabled }" v-on:click="saveOneCallLog" type="button">
+                                        <span>Close</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+    </html>
+</apex:page>

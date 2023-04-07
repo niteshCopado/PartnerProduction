@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiscoveryAIModel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <algorithmType>Glm</algorithmType>
+    <classificationThreshold>0.46594365441770424</classificationThreshold>
+    <label>Maximize IsWon</label>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Industry</label>
+        <name>Industry</name>
+        <type>Text</type>
+        <values>Banking</values>
+        <values>Healthcare</values>
+        <values>Technology</values>
+        <values>Energy</values>
+        <values>Other</values>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Opportunity Type</label>
+        <name>Opportunity_Type</name>
+        <type>Text</type>
+        <values>New Business / Add-on</values>
+        <values>Existing Business</values>
+        <values>New Business</values>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Amount</label>
+        <name>Amount</name>
+        <type>Number</type>
+        <values>0.0___21810.0</values>
+        <values>21810.0___36255.0</values>
+        <values>36255.0___71250.0</values>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>Lead Source</label>
+        <name>Lead_Source</name>
+        <type>Text</type>
+        <values>Partner Referral</values>
+        <values>Web</values>
+        <values>Phone Inquiry</values>
+        <values>Other</values>
+    </modelFields>
+    <modelFields>
+        <isDisparateImpact>false</isDisparateImpact>
+        <isSensitive>false</isSensitive>
+        <label>IsWon</label>
+        <name>IsWon</name>
+        <type>Text</type>
+        <values>TRUE</values>
+        <values>FALSE</values>
+    </modelFields>
+    <modelRuntimeType>Discovery</modelRuntimeType>
+    <predictedField>IsWon</predictedField>
+    <predictionType>Classification</predictionType>
+    <sourceType>Discovery</sourceType>
+    <status>Enabled</status>
+    <trainingMetrics>{&quot;r2&quot;:0.24152474495980314,&quot;nobs&quot;:7033,&quot;nullDeviance&quot;:8146.3972279094505,&quot;residualDegreesOfFreedom&quot;:6944,&quot;type&quot;:&quot;BinomialGLM&quot;,&quot;gini&quot;:0.6257813798371157,&quot;meanPerClassError&quot;:0.24684396731042046,&quot;logloss&quot;:0.44483124701095167,&quot;auc&quot;:0.8128906899185578,&quot;residualDeviance&quot;:6256.996320456046,&quot;confusionMatrices&quot;:{&quot;thresholds&quot;:[0.46594365441770424],&quot;tns&quot;:[4514],&quot;tps&quot;:[921],&quot;totalPositives&quot;:1571,&quot;totalNegatives&quot;:5462},&quot;rmse&quot;:0.38470502440368115,&quot;aic&quot;:6434.996320456046,&quot;nullDegreesOfFreedom&quot;:7032,&quot;mse&quot;:0.1479979558014369}</trainingMetrics>
+</DiscoveryAIModel>

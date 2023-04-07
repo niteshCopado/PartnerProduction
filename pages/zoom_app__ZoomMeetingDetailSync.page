@@ -1,0 +1,36 @@
+<apex:page StandardController="Event" extensions="zoom_app.ZoomMeetingDetailSyncCtrl" cache="false" lightningStylesheets="true">
+    <script>
+        // $(document).ready(function() {
+        //     syncZoomMeetingDetailInfomation();
+        // });
+        function syncZoomMeetingDetailInfomation() {
+            showOverlay();
+            syncZoomMeetingDetails();   
+            $('.slds-panel__section').hide();  
+        }
+    </script>
+    <apex:composition template="zoom_app__zoomheader">
+        <apex:define name="body">
+            <div id="overlay" class="overlay"
+                style="text-align: center; padding-top: 190px; font-size: 32px; font-weight: bold;">Sync
+                Zoom Meeting Details.....</div>
+            <apex:form id="mainForm">
+                <apex:outputPanel styleClass="slds-panel__section" style="font-size:16px; "> 
+                    Click <apex:commandLink style="font-weight:bolder" value="Sync Zoom Meeting Details" onClick="syncZoomMeetingDetailInfomation();return false;"/> to confirm.
+                 </apex:outputPanel>
+                <apex:actionFunction action="{!syncZoomMeetingDetails}" name="syncZoomMeetingDetails" reRender="mainForm" />
+                <apex:outputpanel rendered="{!isError}">
+                    <div class="ex" align="center">
+                        <apex:outputpanel styleclass="textMessage">
+                            <apex:outputText value="{!errorMessage}"/>
+                        </apex:outputpanel>
+                        <br />
+                        <apex:commandButton styleClass="myCustomBtn" value="Ok"
+                            action="{!redirectDetailPage}" />
+                    </div>
+                    <apex:detail subject="{!Event.Id}" relatedlist="false" />
+                </apex:outputpanel>
+            </apex:form>
+        </apex:define>
+    </apex:composition>
+</apex:page>

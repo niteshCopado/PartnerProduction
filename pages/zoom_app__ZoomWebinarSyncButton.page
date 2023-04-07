@@ -1,0 +1,35 @@
+<apex:page standardController="zoom_app__Zoom_Webinar__c" extensions="zoom_app.ZoomWebinarSyncButtonCtrl" showHeader="true" sidebar="true" lightningStylesheets="true">
+        <script>
+            // $(document).ready(function() {
+            //  setTimeout(function(){
+            //      $('.btn[type="submit"]').click();
+            //  },8000);
+            // });
+            function syncwebinardetails() {
+                syncWebinarInfoFromZoom();
+            }
+        </script>
+        
+        <apex:composition template="zoom_app__zoomheader">
+            <apex:define name="body">
+                <apex:form >
+                    <apex:actionFunction action="{!syncWebinarInfoFromZoom}" name="syncWebinarInfoFromZoom" />
+                    <apex:outputPanel styleClass="slds-panel__section" style="font-size:16px; " rendered="{!!isSync}"> 
+                        Click  <apex:commandLink style="font-weight:bolder" value=" Sync Webinar From Zoom.us" onClick="syncwebinardetails();return false;"/> to confirm.
+                     </apex:outputPanel>
+                     <apex:pageMessages />
+                    <apex:pageBlock rendered="{!isSync}">
+                        <apex:pageBlockButtons >
+                            <apex:commandButton value="Back" action="{!cancel}"/>
+                        </apex:pageBlockButtons>
+                        <apex:pageBlockSection >
+                            <apex:outputField value="{!webinar.zoom_app__Topic__c}"/>
+                            <apex:outputField value="{!webinar.zoom_app__Webinar_Id__c}"/>
+                            <apex:outputField value="{!webinar.zoom_app__Setting_Approval_Type__c}"/>
+                            <apex:outputField value="{!webinar.zoom_app__Start_Time__c}"/>
+                        </apex:pageBlockSection>
+                    </apex:pageBlock>
+                </apex:form>
+            </apex:define>
+        </apex:composition>
+</apex:page>

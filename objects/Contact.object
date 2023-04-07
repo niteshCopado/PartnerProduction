@@ -549,4 +549,45 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>zoom_app__Add_to_Webinar_Contact</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Add to Webinar</masterLabel>
+        <openType>sidebar</openType>
+        <page>zoom_app__ContactAdd2Webinar</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>zoom_app__Add_to_Webinar_Contacts</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Add to Webinar</masterLabel>
+        <openType>sidebar</openType>
+        <page>zoom_app__ContactsAdd2Webinar</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>zoom_app__Start_Zoom_Meeting</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Start Zoom Meeting</masterLabel>
+        <openType>newWindow</openType>
+        <page>zoom_app__ZoomMeetingStartContact</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
 </CustomObject>

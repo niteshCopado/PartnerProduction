@@ -1,0 +1,87 @@
+<apex:page controller="zoom_app.ZoomAccountOauthCallbackController">
+
+    <html>
+        <head>
+            <style>
+                .content-wrapper {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .main-title {
+                    font-size: 2rem;
+                }
+                .sub-title {
+                    
+                }
+                #result {
+                    color: red;
+                    font-size: 1.5rem;
+                }
+                .hide{
+                    visibility: hidden;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-wrapper" >
+                <h2 class="main-title">Waiting for Authorization...</h2>
+                <h3 class="sub-title"></h3>
+                <div id="error"></div>
+                <div id="success" class="hide" style = "position:absolute; top:20%; margin:auto 0;">
+                    <img src="{!URLFOR($Resource.zoomdialresource, 'image/success.svg')};" ></img>
+                    <div style = "font-size:16px">Authorized Successfully!</div>
+                </div>
+            </div>
+            
+        </body>
+        <script>
+            
+            !(function() {
+                setTimeout(() => {
+                    let code = getCodeFromUrl();
+                    var state = getStateFromUrl();
+                    if (code) {
+                        Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.ZoomAccountOauthCallbackController.getUserInfobyOAuthCode}',
+                                                                    code, 
+                                                                    state,
+                                                                    handleSaveZoomTokenResult);
+                    }
+                }, 500)
+            })();
+
+            function handleSaveZoomTokenResult(result, event) {
+                // var state = JSON.parse(getStateFromUrl());
+                console.log(result);
+                if (result.success) {
+                    var mainTitle = document.getElementsByTagName('h2')[0];
+                    mainTitle.classList.add('hide');
+                    var successResult = document.getElementById('success');
+                    successResult.classList.remove('hide');
+                    window.opener.postMessage('OauthSuccess',window.location.origin);     
+                } else {
+                    document.getElementsByClassName("main-title").innerText = "Oauth Failure!"
+                    document.getElementById("error").innerText = result.errorMessage;
+                    window.opener.postMessage('OauthFail'+result.errorMessage,window.location.origin);
+                }
+            }
+
+            function getCodeFromUrl(){
+                var reg = new RegExp("(^|&)" + 'code' + "=([^&]*)(&|$)"); 
+                var r = window.location.search.substr(1).match(reg);  
+                if (r != null) return unescape(r[2]); return null; 
+            }
+            function getStateFromUrl(){
+                console.log('get state');
+                var reg = new RegExp('(^|&)' + 'state' + '=([^&]*)(&|$)'); 
+                var state = window.location.search.substr(1).match(reg);  
+                console.log('state');
+                console.log(state);
+                if (state != null){ return unescape(state[2]);} return null; 
+            }
+        </script>
+    </html>
+</apex:page>
