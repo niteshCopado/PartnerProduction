@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>API%3A Test user new</members>
-        <name>Profile</name>
+        <members>standard__LightningSales</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Sales_ACcount_page</members>
+        <name>FlexiPage</name>
     </types>
     <version>57.0</version>
 </Package>
