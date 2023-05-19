@@ -16,8 +16,8 @@
         <type>Flexipage</type>
         <profile>Custom: Sales Profile</profile>
     </profileActionOverrides>
-    <tabs>standard-home</tabs>
     <tabs>Sales_Account_page</tabs>
+    <tabs>standard-home</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Task</tabs>
