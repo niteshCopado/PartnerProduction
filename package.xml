@@ -5,12 +5,7 @@
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>Sales_Account_page</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>Account_Home_Page</members>
-        <members>Sales_ACcount_page</members>
+        <members>App_Default_record_page</members>
         <name>FlexiPage</name>
     </types>
     <version>57.0</version>
