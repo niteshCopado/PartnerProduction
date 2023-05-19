@@ -17,7 +17,7 @@
         <profile>Custom: Sales Profile</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
-    <tabs>standard-WaveHome</tabs>
+    <tabs>Sales_Account_page</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Task</tabs>
@@ -35,4 +35,5 @@
     <tabs>standard-Forecasting3</tabs>
     <tabs>BMC__c</tabs>
     <uiType>Lightning</uiType>
+    <utilityBar>LightningSales_UtilityBar</utilityBar>
 </CustomApplication>
