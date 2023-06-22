@@ -134,6 +134,10 @@ WARNING: Credits consumption will apply as a regular deployment since resource-w
             <translation><!-- Apex --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Automation</masterLabel>
+            <translation><!-- Automation --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Bulk Data</masterLabel>
             <translation><!-- Bulk Data --></translation>
         </picklistValues>

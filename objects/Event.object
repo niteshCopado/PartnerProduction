@@ -206,6 +206,10 @@
         <fullName>Phone</fullName>
     </fields>
     <fields>
+        <fullName>ServiceAppointmentId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ShowAs</fullName>
     </fields>
     <fields>
