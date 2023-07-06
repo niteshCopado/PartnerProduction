@@ -56,4 +56,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>Test Type</label>
+    <pluralLabel>Test Types</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -1,5 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AvailableQuantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>OrderId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OriginalOrderItemId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
     <fields>
         <fullName>SBQQ__Activated__c</fullName>
         <defaultValue>false</defaultValue>
@@ -641,4 +774,49 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <validationRules>
+        <fullName>SBQQ__CannotChangeBookingIndicatorOnActivation</fullName>
+        <active>true</active>
+        <description>Can’t edit the bookings status on an activated order product.</description>
+        <errorConditionFormula>AND(SBQQ__Activated__c, ISCHANGED(SBQQ__BookingsIndicator__c))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BookingsIndicator__c</errorDisplayField>
+        <errorMessage>Can’t edit the bookings status on an activated order product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__RecurringChargeTypeMustHaveBillingType</fullName>
+        <active>true</active>
+        <description>When Charge Type is Recurring, a Billing Type must be selected.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Recurring&apos;), ISPICKVAL(SBQQ__BillingType__c, &apos;&apos;))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
+        <errorMessage>When Charge Type is Recurring, a Billing Type must be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Validate_billing_frequency</fullName>
+        <active>true</active>
+        <description>When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected.</description>
+        <errorConditionFormula>AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__BillingFrequency__c, &apos;&apos;)))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingFrequency__c</errorDisplayField>
+        <errorMessage>When Charge Type is &apos;One-Time&apos;, a Billing Frequency value cannot be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Validate_billing_type</fullName>
+        <active>true</active>
+        <description>When Charge Type is One-Time or Usage, a Billing Type cannot be selected.</description>
+        <errorConditionFormula>OR(
+            AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))),
+            AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Usage&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))))</errorConditionFormula>
+        <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
+        <errorMessage>When Charge Type is One-Time or Usage, a Billing Type value cannot be selected.</errorMessage>
+    </validationRules>
 </CustomObject>

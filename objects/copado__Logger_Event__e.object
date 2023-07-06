@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Platform event to publish logs</description>
+    <eventType>HighVolume</eventType>
     <fields>
         <fullName>copado__Exception_Details__c</fullName>
         <deprecated>false</deprecated>
@@ -95,4 +98,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>Logger Event</label>
+    <pluralLabel>Logger Events</pluralLabel>
+    <publishBehavior>PublishImmediately</publishBehavior>
 </CustomObject>

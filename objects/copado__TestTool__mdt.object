@@ -44,4 +44,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>Test Tool</label>
+    <pluralLabel>Test Tools</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>

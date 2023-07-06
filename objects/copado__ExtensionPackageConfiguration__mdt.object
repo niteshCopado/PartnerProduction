@@ -13,4 +13,7 @@
         <type>Text</type>
         <unique>true</unique>
     </fields>
+    <label>Extension Package Configuration</label>
+    <pluralLabel>Extension Package Configurations</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -120,4 +120,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>MultiCloudAutomation</label>
+    <pluralLabel>MultiCloudAutomations</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>

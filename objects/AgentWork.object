@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AcceptDateTime</fullName>
     </fields>
@@ -31,6 +33,9 @@
         <fullName>CapacityWeight</fullName>
     </fields>
     <fields>
+        <fullName>ChannelData</fullName>
+    </fields>
+    <fields>
         <fullName>CloseDateTime</fullName>
     </fields>
     <fields>
@@ -40,7 +45,25 @@
         <fullName>DeclineReason</fullName>
     </fields>
     <fields>
+        <fullName>FlagIcon</fullName>
+    </fields>
+    <fields>
+        <fullName>FlagMessage</fullName>
+    </fields>
+    <fields>
         <fullName>HandleTime</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAutoAcceptEnabled</fullName>
+    </fields>
+    <fields>
+        <fullName>IsConference</fullName>
+    </fields>
+    <fields>
+        <fullName>IsFlagSupervisorOnly</fullName>
+    </fields>
+    <fields>
+        <fullName>IsFlagged</fullName>
     </fields>
     <fields>
         <fullName>IsOwnerChangeInitiated</fullName>
@@ -50,6 +73,12 @@
     </fields>
     <fields>
         <fullName>IsStatusChangeInitiated</fullName>
+    </fields>
+    <fields>
+        <fullName>IsTransfer</fullName>
+    </fields>
+    <fields>
+        <fullName>LASessionId</fullName>
     </fields>
     <fields>
         <fullName>OriginalQueueId</fullName>
@@ -96,10 +125,16 @@
         <fullName>ShouldSkipCapacityCheck</fullName>
     </fields>
     <fields>
+        <fullName>ShouldSkipChannelCheck</fullName>
+    </fields>
+    <fields>
         <fullName>SpeedToAnswer</fullName>
     </fields>
     <fields>
         <fullName>Status</fullName>
+    </fields>
+    <fields>
+        <fullName>StatusSequence</fullName>
     </fields>
     <fields>
         <fullName>UserId</fullName>
@@ -109,4 +144,5 @@
         <fullName>WorkItemId</fullName>
         <type>Lookup</type>
     </fields>
+    <sharingModel>Read</sharingModel>
 </CustomObject>

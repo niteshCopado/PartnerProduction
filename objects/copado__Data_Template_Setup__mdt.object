@@ -10,4 +10,7 @@
         <type>LongTextArea</type>
         <visibleLines>10</visibleLines>
     </fields>
+    <label>Data Template Setup</label>
+    <pluralLabel>Data Template Setups</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>
