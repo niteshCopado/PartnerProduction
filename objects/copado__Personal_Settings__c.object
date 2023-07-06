@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customSettingsType>Hierarchy</customSettingsType>
-    <description>This object stores the personal settings for Copado</description>
-    <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>copado__API_Key__c</fullName>
         <deprecated>false</deprecated>
@@ -77,6 +74,37 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
-    <label>Personal Settings</label>
-    <visibility>Public</visibility>
+    <fields>
+        <fullName>copado__Disable_Re_Create_Feature_Branch_in_US__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable Re-Create Feature Branch in US</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__MaskApiKey__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default is false to maintain compatibility. Only if the user changes it to true the API Key will be masked or replaced by a placeholder.</description>
+        <externalId>false</externalId>
+        <label>Mask API Key</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Minimum_Logging_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Minimum log level for copado processes. 0: TRACE, 1: DEBUG, 2: INFO, 3: WARN, 4: ERROR
+Temporarily lower this value to get better information in the Result Objects when troubleshooting/developing a Multi-Cloud solution</description>
+        <externalId>false</externalId>
+        <label>Minimum Logging Level</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
 </CustomObject>

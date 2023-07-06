@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>copado__ActionsList__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES(copado__Actions__c , &quot;Promotion&quot; ), &quot;Promotion; &quot;,null) &amp;
+IF(INCLUDES(copado__Actions__c , &quot;PromotionDeployment&quot; ), &quot;Promotion Deployment; &quot;,null) &amp;
+IF(INCLUDES(copado__Actions__c , &quot;Commit&quot; ), &quot;Commit; &quot;,null) &amp;
+IF(INCLUDES(copado__Actions__c , &quot;PackageCreation&quot; ), &quot;Package Creation; &quot;,null) &amp;
+IF(INCLUDES(copado__Actions__c , &quot;PackageDistribution&quot; ), &quot;Package Distribution; &quot;,null)</formula>
+        <label>Copado Actions List</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Actions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Copado Action to which this Quality Gate Rule will be applied to.</inlineHelpText>
+        <label>Copado Actions</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>copado__Execution_sequence__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>copado__Copado_Actions</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <controllingFieldValue>When branch is ready</controllingFieldValue>
+                <valueName>Promotion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <valueName>PromotionDeployment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <controllingFieldValue>When branch is ready</controllingFieldValue>
+                <valueName>Commit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <valueName>CreatePackage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <valueName>CreatePackageVersion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Before</controllingFieldValue>
+                <controllingFieldValue>After</controllingFieldValue>
+                <valueName>PublishPackageVersion</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__Execution_sequence__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Define when, during runtime, a quality gate rule should be evaluated for the action selected.</inlineHelpText>
+        <label>Execution Sequence</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Before</fullName>
+                    <default>false</default>
+                    <label>Before</label>
+                </value>
+                <value>
+                    <fullName>After</fullName>
+                    <default>false</default>
+                    <label>After</label>
+                </value>
+                <value>
+                    <fullName>When branch is ready</fullName>
+                    <default>false</default>
+                    <label>When branch is ready</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>true</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Tool__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Tool used to execute Tests if the related conditions are met. This value will be matched against the Tool of the Test record.</inlineHelpText>
+        <label>Tool</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>copado__Test_Tool</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Identifies the type of quality gate related to the selected tool.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies the type of quality gate related to the selected tool.</inlineHelpText>
+        <label>Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__dataJson__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>dataJson</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+</CustomObject>

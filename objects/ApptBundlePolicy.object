@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BundleEndTimeFieldName</fullName>
+        <inlineHelpText>Select the bundle service appointment field used for the bundle’s end time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BundleStartTimeFieldName</fullName>
+        <inlineHelpText>Select the bundle service appointment field used for the bundle’s start time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>CanAllowSchleDepndInBundle</fullName>
+        <inlineHelpText>Allow bundling of service appointments with scheduling dependencies.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>ConstantTimeValue</fullName>
+        <inlineHelpText>Use this option only if Time Calculation by Bundle Duration Field is enabled. Enter the bundle’s total time as a constant value, in minutes.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>FilterCriteriaId</fullName>
+        <inlineHelpText>Select the filter criteria used for the bundle members. Only service appointments that meet the criteria can be bundled.</inlineHelpText>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsAutomaticBundling</fullName>
+        <inlineHelpText>Make this policy available when automatic bundling is triggered by an automated process. You can have manual bundling and automatic bundling enabled at the same time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>IsManualBundling</fullName>
+        <inlineHelpText>Make this policy available when the dispatcher manually bundles service appointments in the dispatch console. You can have manual bundling and automatic bundling enabled at the same time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>IsTimeCalcByBundleDurationFld</fullName>
+        <inlineHelpText>Subtract the bundle’s start time from the bundle’s end time and compare it to the bundle’s Duration.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>LimitAmountOfBundleMembers</fullName>
+        <inlineHelpText>Enter the maximum number of bundle members that can be included in a bundle, up to 200.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>LimitDurationOfBundle</fullName>
+        <inlineHelpText>Enter the maximum duration of a bundle, in minutes.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <inlineHelpText>Enter a unique name.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <inlineHelpText>Enter a policy priority number. Must be unique. When the bundle policies are evaluated with automatic bundling, the priority determines the order that the policies are applied.</inlineHelpText>
+    </fields>
+</CustomObject>

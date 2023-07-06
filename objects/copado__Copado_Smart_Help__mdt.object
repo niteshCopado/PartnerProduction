@@ -101,18 +101,4 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Copado Smart Help</label>
-    <pluralLabel>Copado Smart Helps</pluralLabel>
-    <validationRules>
-        <fullName>copado__Validate_triggering_metadata_type</fullName>
-        <active>true</active>
-        <description>Triggering Metadata Items should not be populated in case Triggering Metadata Type is blank</description>
-        <errorConditionFormula>AND(
-  NOT( ISBLANK( copado__Triggering_Metadata_Items__c ) ),
-  ISBLANK( copado__Triggering_Value__c )  
-)</errorConditionFormula>
-        <errorDisplayField>copado__Triggering_Value__c</errorDisplayField>
-        <errorMessage>Please enter Triggering Metadata Type to populate Triggering Metadata Items</errorMessage>
-    </validationRules>
-    <visibility>Public</visibility>
 </CustomObject>

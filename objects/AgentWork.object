@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableFeeds>false</enableFeeds>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AcceptDateTime</fullName>
     </fields>
     <fields>
         <fullName>ActiveTime</fullName>
+    </fields>
+    <fields>
+        <fullName>AcwExtensionCount</fullName>
+    </fields>
+    <fields>
+        <fullName>AcwExtensionDuration</fullName>
+    </fields>
+    <fields>
+        <fullName>AfterConversationActualTime</fullName>
     </fields>
     <fields>
         <fullName>AgentCapacityWhenDeclined</fullName>
@@ -36,12 +43,6 @@
         <fullName>HandleTime</fullName>
     </fields>
     <fields>
-        <fullName>IsAutoAcceptEnabled</fullName>
-    </fields>
-    <fields>
-        <fullName>IsConference</fullName>
-    </fields>
-    <fields>
         <fullName>IsOwnerChangeInitiated</fullName>
     </fields>
     <fields>
@@ -49,12 +50,6 @@
     </fields>
     <fields>
         <fullName>IsStatusChangeInitiated</fullName>
-    </fields>
-    <fields>
-        <fullName>IsTransfer</fullName>
-    </fields>
-    <fields>
-        <fullName>LASessionId</fullName>
     </fields>
     <fields>
         <fullName>OriginalQueueId</fullName>
@@ -101,16 +96,10 @@
         <fullName>ShouldSkipCapacityCheck</fullName>
     </fields>
     <fields>
-        <fullName>ShouldSkipChannelCheck</fullName>
-    </fields>
-    <fields>
         <fullName>SpeedToAnswer</fullName>
     </fields>
     <fields>
         <fullName>Status</fullName>
-    </fields>
-    <fields>
-        <fullName>StatusSequence</fullName>
     </fields>
     <fields>
         <fullName>UserId</fullName>
@@ -120,5 +109,4 @@
         <fullName>WorkItemId</fullName>
         <type>Lookup</type>
     </fields>
-    <sharingModel>Read</sharingModel>
 </CustomObject>

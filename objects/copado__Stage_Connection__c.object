@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>copado__Next_Stage_Connection__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Leave this field empty if this is the last stage of your pipeline. Otherwise, select the next higher stage. You can only select stage connections that belong to this pipeline.</inlineHelpText>
+        <label>Next Stage Connection</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>You can only select Stage Connections that belong to the same Pipeline.</errorMessage>
+            <filterItems>
+                <field>copado__Stage_Connection__c.copado__Pipeline__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.copado__Pipeline__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__Stage_Connection__c</referenceTo>
+        <relationshipLabel>Previous Stage Connections</relationshipLabel>
+        <relationshipName>Next_Stage_Connections</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Next_Stage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; copado__Next_Stage_Connection__r.copado__Stage__r.Id, copado__Next_Stage_Connection__r.copado__Stage__r.copado__Display_Name__c, &quot;_self&quot;)</formula>
+        <label>Next Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Pipeline__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pipeline</label>
+        <referenceTo>copado__Deployment_Flow__c</referenceTo>
+        <relationshipName>Pipeline_Stages</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>copado__Stage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <referenceTo>copado__Stage__c</referenceTo>
+        <relationshipName>Pipeline_Stages</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+</CustomObject>

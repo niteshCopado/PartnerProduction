@@ -36,7 +36,4 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <label>Streaming Setting</label>
-    <pluralLabel>Streaming Settings</pluralLabel>
-    <visibility>Public</visibility>
 </CustomObject>

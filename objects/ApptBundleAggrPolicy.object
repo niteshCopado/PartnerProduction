@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AggregationAction</fullName>
+        <inlineHelpText>Select an action that can be used with the Bundle Field Name. For help, check the documentation.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>AggregationFieldType</fullName>
+        <inlineHelpText>Select the bundle service appointment’s field type. The value is filled via the aggregation. </inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BundleFieldName</fullName>
+        <inlineHelpText>Select a bundle service appointment field. The value is pulled from the bundle member service appointment.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BundlePolicyId</fullName>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>FilterCriteriaId</fullName>
+        <inlineHelpText>Enter the recordset filter criteria used to aggregate the bundle members. You can aggregate only service appointments that meet this criteria.</inlineHelpText>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <inlineHelpText>Enter a unique name.</inlineHelpText>
+    </fields>
+</CustomObject>

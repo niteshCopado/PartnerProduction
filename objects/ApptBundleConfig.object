@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AddToBundleStatuses</fullName>
+        <inlineHelpText>Select the statuses of service appointments that can be bundled. Use an empty value to bundle service appointments in any status.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BundleStatusesToPropagate</fullName>
+        <inlineHelpText>Select the bundle service appointment statuses that are added to the bundle member service appointments. Use an empty value to propagate all statuses.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CriteriaForAutoUnbundlingId</fullName>
+        <inlineHelpText>Enter the criteria that automatically unbundles a bundle. Use an empty value to prevent automatic unbundling.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DoesAddTravelTime</fullName>
+        <inlineHelpText>If the bundle member service appointments aren&apos;t in the same location, add travel time between them to the bundle&apos;s duration according to their sort order.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>MemberStatusesNotToPropagate</fullName>
+        <inlineHelpText>Select the bundle member service appointment statuses that aren’t overridden when the bundle service appointment&apos;s status is updated. Use an empty value to propagate all statuses.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <inlineHelpText>Enter a unique name.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RemoveFromBundleStatuses</fullName>
+        <inlineHelpText>Select the statuses of service appointments that can be removed from a bundle. Use an empty value to remove service appointments in any status.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StatusOnRemovalFromBundle</fullName>
+        <inlineHelpText>Select the status of a service appointment after it’s removed from a bundle.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StatusesNotToUpdateOnUnbundle</fullName>
+        <inlineHelpText>Select the statuses that aren’t updated when a bundle is unbundled. Use an empty value to update service appointments when unbundling.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+</CustomObject>

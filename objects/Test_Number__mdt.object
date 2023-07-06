@@ -11,7 +11,4 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <label>Test Number</label>
-    <pluralLabel>Test Numbers</pluralLabel>
-    <visibility>Public</visibility>
 </CustomObject>

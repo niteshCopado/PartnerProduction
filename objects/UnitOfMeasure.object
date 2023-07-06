@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <inlineHelpText>Type of measurement. For example, period, weight, or distance.</inlineHelpText>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UnitCode</fullName>
+        <inlineHelpText>Code for the unit of measure</inlineHelpText>
+    </fields>
+</CustomObject>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Content__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicate what information is provided in basic articles. You can create additional fields to further structure article content.</inlineHelpText>
+        <label>Content</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DigitalEngagementResponse__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide a short response for digital engagement channels like Chat, Messaging, Social, and Bots.</inlineHelpText>
+        <label>Digital Engagement Response</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InternalNotes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide any internal notes.  Notes are only visible to specific internal user profiles and aren’t shared with external user profiles when the article is shared externally.</inlineHelpText>
+        <label>Internal Notes</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the question or issue that this article answers.</inlineHelpText>
+        <label>Question</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+</CustomObject>
