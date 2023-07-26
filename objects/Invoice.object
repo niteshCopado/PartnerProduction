@@ -15,6 +15,20 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Edit</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -88,6 +102,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Balance</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>BillToContactId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -112,6 +130,12 @@
     <fields>
         <fullName>InvoiceNumber</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>NetCreditsApplied</fullName>
+    </fields>
+    <fields>
+        <fullName>NetPaymentsApplied</fullName>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
