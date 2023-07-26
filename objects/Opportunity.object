@@ -738,13 +738,13 @@
         <height>600</height>
         <isResizable>true</isResizable>
         <linkType>url</linkType>
-        <masterLabel>Delivery Status New</masterLabel>
+        <masterLabel>Delivery Status</masterLabel>
         <openType>newWindow</openType>
         <position>none</position>
         <protected>false</protected>
         <showsLocation>true</showsLocation>
         <showsStatus>true</showsStatus>
-        <url>http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity.TrackingNumber__c}&amp;action=track&amp;language=english&amp;cntry_code=us</url>
+        <url>http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity_Tracking_Number}&amp;action=track&amp;language=english&amp;cntry_code=us</url>
     </webLinks>
     <webLinks>
         <fullName>SBQQ__Amend_Assets</fullName>
@@ -791,5 +791,29 @@
         <openType>sidebar</openType>
         <page>SBQQ__NewOpportunityRelatedContent</page>
         <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>slackv2__Send_to_Slack</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Slack</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}sendToSlack?recordId={!CASESAFEID (Opportunity.Id)}&amp;objectApiName=Opportunity</url>
+    </webLinks>
+    <webLinks>
+        <fullName>slackv2__Slack_Alerts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Slack Alerts</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}slackAlerts?recordId={!CASESAFEID (Opportunity.Id)}&amp;objectApiName=Opportunity</url>
     </webLinks>
 </CustomObject>

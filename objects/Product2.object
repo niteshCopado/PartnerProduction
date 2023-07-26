@@ -326,6 +326,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsSerialized</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -1556,61 +1560,8 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>blng__BillingRule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Billing Rule</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>blng__BillingRule__c.blng__Active__c</field>
-                <operation>equals</operation>
-                <value>True</value>
-            </filterItems>
-            <isOptional>true</isOptional>
-        </lookupFilter>
-        <referenceTo>blng__BillingRule__c</referenceTo>
-        <relationshipLabel>Products</relationshipLabel>
-        <relationshipName>Products</relationshipName>
-        <required>false</required>
+        <fullName>TransferRecordMode</fullName>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>blng__RevenueRecognitionRule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Revenue Recognition Rule</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>blng__RevenueRecognitionRule__c.blng__Active__c</field>
-                <operation>equals</operation>
-                <value>True</value>
-            </filterItems>
-            <isOptional>true</isOptional>
-        </lookupFilter>
-        <referenceTo>blng__RevenueRecognitionRule__c</referenceTo>
-        <relationshipLabel>Products</relationshipLabel>
-        <relationshipName>RevenueRecognitionRuleProducts</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>blng__TaxRule__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Tax Rule</label>
-        <referenceTo>blng__TaxRule__c</referenceTo>
-        <relationshipLabel>Products</relationshipLabel>
-        <relationshipName>TaxRulesProducts</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <listViews>
         <fullName>AllProducts</fullName>
