@@ -226,99 +226,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>BusinessHoursId</fullName>
+        <fullName>AssetWarrantyId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Child_Fields__c</fullName>
-        <externalId>false</externalId>
-        <label>Child Fields</label>
-        <required>false</required>
+        <fullName>BusinessHoursId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <controllingField>Parent_Field__c</controllingField>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>1</fullName>
-                    <default>false</default>
-                    <label>1</label>
-                </value>
-                <value>
-                    <fullName>2</fullName>
-                    <default>false</default>
-                    <label>2</label>
-                </value>
-                <value>
-                    <fullName>3</fullName>
-                    <default>false</default>
-                    <label>3</label>
-                </value>
-                <value>
-                    <fullName>4</fullName>
-                    <default>false</default>
-                    <label>4</label>
-                </value>
-                <value>
-                    <fullName>5</fullName>
-                    <default>false</default>
-                    <label>5</label>
-                </value>
-                <value>
-                    <fullName>6</fullName>
-                    <default>false</default>
-                    <label>6</label>
-                </value>
-                <value>
-                    <fullName>7</fullName>
-                    <default>false</default>
-                    <label>7</label>
-                </value>
-                <value>
-                    <fullName>First &amp; Second</fullName>
-                    <default>false</default>
-                    <label>First &amp; Second</label>
-                </value>
-                <value>
-                    <fullName>First &amp;Third</fullName>
-                    <default>false</default>
-                    <label>First &amp;Third</label>
-                </value>
-                <value>
-                    <fullName>Delivery - inquiry&amp;dispute</fullName>
-                    <default>false</default>
-                    <label>Delivery - inquiry&amp;dispute</label>
-                </value>
-            </valueSetDefinition>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>3</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <valueName>4</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>B</controllingFieldValue>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>5</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>6</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>C</controllingFieldValue>
-                <valueName>7</valueName>
-            </valueSettings>
-        </valueSet>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ClosedDate</fullName>
@@ -370,6 +289,13 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>IsClosedOnCreate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -379,6 +305,20 @@
         <fullName>IsEscalated</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -401,37 +341,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Parent_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Parent Field</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>A</fullName>
-                    <default>false</default>
-                    <label>A</label>
-                </value>
-                <value>
-                    <fullName>B</fullName>
-                    <default>false</default>
-                    <label>B</label>
-                </value>
-                <value>
-                    <fullName>C</fullName>
-                    <default>false</default>
-                    <label>C</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>PotentialLiability__c</fullName>
@@ -464,6 +373,13 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -558,6 +474,23 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>ServiceContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>SourceId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -566,10 +499,14 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>Subject</fullName>
@@ -594,36 +531,11 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>Test_Field__c</fullName>
-        <description>Conflicted Description</description>
-        <externalId>false</externalId>
-        <label>Test Field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>second_fields__c</fullName>
-        <externalId>false</externalId>
-        <label>second field</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllClosedCases</fullName>
@@ -653,6 +565,24 @@
         <label>All Open Cases</label>
     </listViews>
     <listViews>
+        <fullName>InternationalEscalations</fullName>
+        <filterScope>Queue</filterScope>
+        <label>International - Escalations</label>
+        <queue>InternationalEscalations</queue>
+    </listViews>
+    <listViews>
+        <fullName>InternationalPlatinumGold</fullName>
+        <filterScope>Queue</filterScope>
+        <label>International - Platinum/Gold</label>
+        <queue>InternationalPlatinumGold</queue>
+    </listViews>
+    <listViews>
+        <fullName>InternationalSilverBronze</fullName>
+        <filterScope>Queue</filterScope>
+        <label>International - Silver/Bronze</label>
+        <queue>InternationalSilverBronze</queue>
+    </listViews>
+    <listViews>
         <fullName>MyCases</fullName>
         <filterScope>Mine</filterScope>
         <label>My Cases</label>
@@ -666,6 +596,39 @@
             <value>0</value>
         </filters>
         <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>PartnerRelations</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Partner Relations</label>
+        <queue>PartnerRelations</queue>
+    </listViews>
+    <listViews>
+        <fullName>Service_Case_Case</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Service Case</label>
+        <queue>Service_Case</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>USEscalations</fullName>
+        <filterScope>Queue</filterScope>
+        <label>US - Escalations</label>
+        <queue>USEscalations</queue>
+    </listViews>
+    <listViews>
+        <fullName>USPlatinumGold</fullName>
+        <filterScope>Queue</filterScope>
+        <label>US - Platinum/Gold</label>
+        <queue>USPlatinumGold</queue>
+    </listViews>
+    <listViews>
+        <fullName>USSilverBronze</fullName>
+        <filterScope>Queue</filterScope>
+        <label>US - Silver/Bronze</label>
+        <queue>USSilverBronze</queue>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
@@ -707,5 +670,29 @@
         <showsLocation>true</showsLocation>
         <showsStatus>true</showsStatus>
         <url>https://na1.salesforce.com/opp/oppedit.jsp?accid={!Account_ID}&amp;opp3=Up-sell+/+Cross-sell&amp;opp5=Existing+Customer&amp;opp6=Customer+Support</url>
+    </webLinks>
+    <webLinks>
+        <fullName>slackv2__Send_to_Slack</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send to Slack</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}sendToSlack?recordId={!CASESAFEID (Case.Id)}&amp;objectApiName=Case</url>
+    </webLinks>
+    <webLinks>
+        <fullName>slackv2__Slack_Alerts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Slack Alerts</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}slackAlerts?recordId={!CASESAFEID (Case.Id)}&amp;objectApiName=Case</url>
     </webLinks>
 </CustomObject>

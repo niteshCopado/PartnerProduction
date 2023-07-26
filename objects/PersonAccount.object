@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayoutAssignment>SYSTEMPersonAccount</compactLayoutAssignment>
     <compactLayouts>
         <fullName>TestPersonAbbvie</fullName>
         <fields>RecordTypeId</fields>
@@ -10,6 +11,8 @@
         <fields>AccountSource</fields>
         <label>TestPersonAbbvie</label>
     </compactLayouts>
+    <enableHistory>true</enableHistory>
+    <externalSharingModel>Private</externalSharingModel>
     <recordTypes>
         <fullName>PersonAccount</fullName>
         <active>true</active>
@@ -35,6 +38,21 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CustomerPriority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -170,6 +188,36 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Level__pc</picklist>
+            <values>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Multi_Picklist__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Ownership</picklist>
             <values>
                 <fullName>Other</fullName>
@@ -204,6 +252,88 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>SBQQ__CoTerminationEvent__c</picklist>
+            <values>
+                <fullName>Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__ContractCoTermination__c</picklist>
+            <values>
+                <fullName>Always</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Never</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Prompt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__RenewalModel__c</picklist>
+            <values>
+                <fullName>Asset Based</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__RenewalPricingMethod__c</picklist>
+            <values>
+                <fullName>List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Same</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Uplift</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__TaxExempt__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SLA__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platinum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Channel Partner %2F Reseller</fullName>
@@ -234,5 +364,21 @@
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>UpsellOpportunity__c</picklist>
+            <values>
+                <fullName>Maybe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
+    <sharingModel>Private</sharingModel>
 </CustomObject>

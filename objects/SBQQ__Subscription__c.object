@@ -151,7 +151,7 @@
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
-    <enableLicensing>false</enableLicensing>
+    <enableLicensing>true</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
@@ -1266,6 +1266,32 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionPricing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Method of calculating the subscription price.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Method of calculating the subscription price.</inlineHelpText>
+        <label>Subscription Pricing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed Price</fullName>
+                    <default>false</default>
+                    <label>Fixed Price</label>
+                </value>
+                <value>
+                    <fullName>Percent Of Total</fullName>
+                    <default>false</default>
+                    <label>Percent Of Total</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SBQQ__SubscriptionStartDate__c</fullName>

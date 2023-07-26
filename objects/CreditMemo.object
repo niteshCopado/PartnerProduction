@@ -15,6 +15,20 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Edit</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -88,6 +102,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Balance</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>BillToContactId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -96,6 +114,10 @@
         <fullName>BillingAccountId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CreationMode</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CreditDate</fullName>
@@ -110,7 +132,24 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ExternalReference</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExternalReferenceDataSource</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>NetCreditsApplied</fullName>
+        <inlineHelpText>Net amount applied from the credit memo.</inlineHelpText>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReferenceEntityId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -145,6 +184,16 @@
         <fullName>TotalChargeTaxAmount</fullName>
     </fields>
     <fields>
+        <fullName>TotalCreditAmountApplied</fullName>
+        <inlineHelpText>Amount applied from the credit memo to invoices.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TotalCreditAmountUnapplied</fullName>
+        <inlineHelpText>Amount unapplied from invoices and returned to the credit memo.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>TotalTaxAmount</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -163,7 +212,6 @@
         <label>My Credit Memos</label>
     </listViews>
     <searchLayouts>
-        <customTabListAdditionalFields>CreditMemoNumber</customTabListAdditionalFields>
         <customTabListAdditionalFields>BillingAccount</customTabListAdditionalFields>
         <customTabListAdditionalFields>Status</customTabListAdditionalFields>
         <customTabListAdditionalFields>TotalAmount</customTabListAdditionalFields>
@@ -171,7 +219,6 @@
         <customTabListAdditionalFields>TotalAdjustmentAmount</customTabListAdditionalFields>
         <customTabListAdditionalFields>TotalTaxAmount</customTabListAdditionalFields>
         <customTabListAdditionalFields>CreditDate</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>CreditMemoNumber</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>BillingAccount</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>TotalAmount</lookupDialogsAdditionalFields>
@@ -179,7 +226,6 @@
         <lookupDialogsAdditionalFields>TotalAdjustmentAmount</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>TotalTaxAmount</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CreditDate</lookupDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>CreditMemoNumber</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>BillingAccount</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>TotalAmount</lookupPhoneDialogsAdditionalFields>
@@ -187,7 +233,6 @@
         <lookupPhoneDialogsAdditionalFields>TotalAdjustmentAmount</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>TotalTaxAmount</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CreditDate</lookupPhoneDialogsAdditionalFields>
-        <searchResultsAdditionalFields>CreditMemoNumber</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>BillingAccount</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>TotalAmount</searchResultsAdditionalFields>
