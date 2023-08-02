@@ -157,6 +157,16 @@
         <fullName>SerialNumber</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_ProductItems</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Product Items</label>
+    </listViews>
+    <listViews>
+        <fullName>My_ProductItems</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Product Items</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Product2</customTabListAdditionalFields>
         <customTabListAdditionalFields>Location</customTabListAdditionalFields>

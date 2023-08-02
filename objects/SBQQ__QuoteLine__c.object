@@ -3087,7 +3087,7 @@
     <fields>
         <fullName>SBQQ__SubscriptionPricing__c</fullName>
         <deprecated>false</deprecated>
-        <description>Determines how the subscription on this line item is priced. Blank value means this line contains product that&apos;s not a subscription.</description>
+        <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
         <externalId>false</externalId>
         <inlineHelpText>Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
         <label>Subscription Pricing</label>
@@ -3428,28 +3428,6 @@ IF(SBQQ__Quantity__c == SBQQ__PriorQuantity__c, 0, (SBQQ__ProratedListPrice__c *
         <trackTrending>false</trackTrending>
         <type>Percent</type>
     </fields>
-    <fields>
-        <fullName>blng__BillableUnitPrice__c</fullName>
-        <deprecated>false</deprecated>
-        <description>The unprorated amount that will bill each billing period. Equals ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)).</description>
-        <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(SBQQ__ChargeType__c , &apos;One-Time&apos;),  SBQQ__NetTotal__c,
-        (SBQQ__NetTotal__c * (CASE(SBQQ__BillingFrequency__c,
-        &quot;Monthly&quot;, 1,
-        &quot;Quarterly&quot;, 3,
-        &quot;Semiannual&quot;, 6,
-        &quot;Annual&quot;, 12,
-        0))) / ( SBQQ__ProrateMultiplier__c * SBQQ__DefaultSubscriptionTerm__c )
-        )</formula>
-        <inlineHelpText>The unprorated amount that will bill each billing period. Equals ((TotalPrice * BillingFrequency) / (ProrateMultiplier * DefaultSubscriptionTerm)).</inlineHelpText>
-        <label>Billable Unit Price</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Currency</type>
-    </fields>
     <label>Quote Line</label>
     <nameField>
         <displayFormat>QL-{0000000}</displayFormat>
@@ -3523,15 +3501,6 @@ AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;One-Time&apos;), NOT(ISPICKVAL(SBQQ__Bi
 AND(ISPICKVAL(SBQQ__ChargeType__c, &apos;Usage&apos;), NOT(ISPICKVAL(SBQQ__BillingType__c, &quot;&quot;))))</errorConditionFormula>
         <errorDisplayField>SBQQ__BillingType__c</errorDisplayField>
         <errorMessage>When Charge Type is One-Time or Usage, a Billing Type value cannot be selected.</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>blng__Dynamic_Invoicing_Amendment</fullName>
-        <active>true</active>
-        <description>Dynamic Invoicing only supports amendment cancellation and below error will be shown if a quantity increase or decrease is done instead.</description>
-        <errorConditionFormula>ISPICKVAL(SBQQ__BillingFrequency__c, &apos;Invoice Plan&apos;) &amp;&amp; SBQQ__Quantity__c != SBQQ__PriorQuantity__c &amp;&amp;
-SBQQ__Quantity__c != 0 &amp;&amp;
-ISPICKVAL( SBQQ__Quote__r.SBQQ__Type__c , &apos;Amendment&apos;)</errorConditionFormula>
-        <errorMessage>Can’t update the quantity. Dynamic Invoicing only supports cancellation amendments.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
     <webLinks>
