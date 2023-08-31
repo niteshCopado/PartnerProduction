@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Case-Case Layout</members>
-        <name>Layout</name>
+        <members>1 - ES Sales User %28Sales Manager%29</members>
+        <members>API%3A Test user new</members>
+        <members>Admin</members>
+        <name>Profile</name>
     </types>
     <version>58.0</version>
 </Package>
