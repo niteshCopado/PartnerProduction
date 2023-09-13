@@ -3,6 +3,7 @@ public class AccountUtils {
     public static void updateAccountStatus(List<Account> accounts, String status) {
         for(Account acc : accounts) {
             acc.Status__c = status;
+//Adding a comment
         }
         update accounts;
     }
