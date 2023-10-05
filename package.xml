@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>PXP_IT_DevOps_Support</members>
         <members>PXP_IT_Support</members>
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>PXP_IT_Support_grp</members>
+        <members>AM_Internal_PXP_IT_DevOps_Support_grp</members>
         <name>PermissionSetGroup</name>
     </types>
     <version>58.0</version>
