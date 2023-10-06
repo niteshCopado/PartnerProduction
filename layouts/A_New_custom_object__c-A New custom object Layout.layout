@@ -30,6 +30,10 @@
                 <behavior>Edit</behavior>
                 <field>Test_git_step__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Count__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

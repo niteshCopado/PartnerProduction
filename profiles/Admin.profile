@@ -10256,6 +10256,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>A_New_custom_object__c.Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>A_New_custom_object__c.Custom_field2__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -19383,6 +19388,10 @@
         <layout>A_New_custom_object__c-A New custom object Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>A_New_custom_object__c-A New custom object Layout</layout>
+        <recordType>A_New_custom_object__c.Count_Values</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -22972,6 +22981,11 @@
         <apexPage>copadoccmint__SyncUserStories</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>A_New_custom_object__c.Count_Values</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Account.Person_Account_Test</recordType>
