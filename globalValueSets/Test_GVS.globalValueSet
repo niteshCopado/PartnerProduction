@@ -20,6 +20,16 @@
         <default>false</default>
         <label>4</label>
     </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <label>7</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <label>8</label>
+    </customValue>
     <masterLabel>Test GVS</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
