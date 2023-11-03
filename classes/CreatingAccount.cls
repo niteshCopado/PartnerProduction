@@ -5,5 +5,6 @@ public Class CreatingAccount {
         acc.Name = name;
         return acc;
         //Method 1
+        //Method 2
  }
 }
