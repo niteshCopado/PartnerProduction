@@ -7,7 +7,7 @@ public class AccountUtils {
         }
         update accounts;
     }
-    
+    //Push to trigger Sonarcloud Scan
     public static List<Account> getActiveAccounts() {
         return [SELECT Id, Name, Status__c FROM Account WHERE Status__c = 'Active'];
     }
