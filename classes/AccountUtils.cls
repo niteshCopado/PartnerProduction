@@ -7,7 +7,7 @@ public class AccountUtils {
         }
         update accounts;
     }
-    
+    // Adding one more comment
     public static List<Account> getActiveAccounts() {
         return [SELECT Id, Name, Status__c FROM Account WHERE Status__c = 'Active'];
     }
