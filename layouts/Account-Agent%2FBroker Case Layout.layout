@@ -61,10 +61,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Snapshot_Diff__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>New_Field__c</field>
             </layoutItems>
             <layoutItems>
