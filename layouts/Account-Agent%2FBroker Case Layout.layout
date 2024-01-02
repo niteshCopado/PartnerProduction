@@ -69,10 +69,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Recommit_1__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Recommit_2__c</field>
             </layoutItems>
             <layoutItems>
