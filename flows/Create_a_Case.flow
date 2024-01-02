@@ -21,7 +21,7 @@
         <name>Assign_Stage_2</name>
         <label>Assign Stage 2</label>
         <locationX>314</locationX>
-        <locationY>998</locationY>
+        <locationY>1064</locationY>
         <assignmentItems>
             <assignToReference>$Flow.CurrentStage</assignToReference>
             <operator>Assign</operator>
@@ -99,7 +99,7 @@
         <name>Create_Case_Record</name>
         <label>Create Case Record</label>
         <locationX>314</locationX>
-        <locationY>1214</locationY>
+        <locationY>1280</locationY>
         <connector>
             <targetReference>Case_Lookup</targetReference>
         </connector>
@@ -145,6 +145,9 @@
         <connector>
             <targetReference>Assign_Stage_2</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Contact_Error_Screen</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Email</field>
             <value>
@@ -175,7 +178,7 @@
         <name>Case_Lookup</name>
         <label>Case Lookup</label>
         <locationX>314</locationX>
-        <locationY>1322</locationY>
+        <locationY>1388</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Case_Created_Screen</targetReference>
@@ -265,7 +268,7 @@
         <name>Case_Created_Screen</name>
         <label>Case Created</label>
         <locationX>314</locationX>
-        <locationY>1430</locationY>
+        <locationY>1496</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -301,7 +304,7 @@
         <name>Case_Details_Screen</name>
         <label>Get Case Details</label>
         <locationX>314</locationX>
-        <locationY>1106</locationY>
+        <locationY>1172</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -475,6 +478,31 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Contact_Error_Screen</name>
+        <label>Create a Case</label>
+        <locationX>314</locationX>
+        <locationY>782</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Assign_Stage_2</targetReference>
+        </connector>
+        <fields>
+            <name>Contact_Error_Title</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px; color: rgb(194, 57, 52);&quot;&gt;{!Contact_Error_Title_Template}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Contact_Error_Desc</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Verify the contact information or click Next to continue without associating a contact with your case.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
