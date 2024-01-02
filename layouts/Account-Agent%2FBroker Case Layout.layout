@@ -435,7 +435,6 @@
         <fields>PARTNER.ROLE</fields>
         <fields>ACCOUNT.PC_TITLE</fields>
         <fields>ACCOUNT.PC_EMAIL</fields>
-        <relatedList>RelatedPartnerList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
