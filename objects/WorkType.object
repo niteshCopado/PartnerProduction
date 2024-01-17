@@ -130,27 +130,6 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>BlockTimeAfterAppointment</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeAfterUnit</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeBeforeAppointment</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>BlockTimeBeforeUnit</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>DefaultAppointmentType</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-    </fields>
-    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -163,13 +142,12 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>Name</fullName>
+        <fullName>MinimumCrewSize</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>OperatingHoursId</fullName>
+        <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -177,19 +155,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>TimeFrameEndUnit</fullName>
+        <fullName>RecommendedCrewSize</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>TimeFrameStartUnit</fullName>
+        <fullName>ServiceReportTemplateId</fullName>
         <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>TimeframeEnd</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>TimeframeStart</fullName>
+        <fullName>ShouldAutoCreateSvcAppt</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <listViews>

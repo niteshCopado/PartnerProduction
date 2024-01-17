@@ -104,6 +104,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ReturnOrderLineItemId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ShipmentId</fullName>
         <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
