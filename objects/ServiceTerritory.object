@@ -161,7 +161,17 @@
         <type>Hierarchy</type>
     </fields>
     <fields>
+        <fullName>SchedulingConstraintId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>TopLevelTerritoryId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TravelModeId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>

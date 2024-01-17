@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>It stores list of resources containing  Standard record bundle</description>
+    <description>This is the name of static resource that contains extension records.</description>
     <fields>
         <fullName>copado__Provider__c</fullName>
         <deprecated>false</deprecated>
+        <description>API name of static resource</description>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Provider</label>
@@ -16,6 +17,7 @@
         <fullName>copado__StaticResourceName__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
+        <description>Name of static resource bundle provider</description>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Static Resource Name</label>

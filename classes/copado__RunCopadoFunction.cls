@@ -18,6 +18,10 @@ global class InvocableVariables {
     global String contextId;
     @InvocableVariable(label='Function API Name' required=true)
     global String functionApiName;
+    @InvocableVariable(label='Options' required=false)
+    global List<copado.Parameter> options;
+    @InvocableVariable(label='Options (JSON)' required=false)
+    global String optionsJSON;
     @InvocableVariable(label='Parameters' required=false)
     global List<copado.Parameter> parameters;
     @InvocableVariable(label='Parameters (JSON)' required=false)
