@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account-Agent%2FBroker Case Layout</members>
-        <name>Layout</name>
+        <members>prm_channel_reports_folder</members>
+        <members>prm_channel_reports_folder/prm_channel_sales_reports_folder</members>
+        <name>Report</name>
     </types>
     <version>59.0</version>
 </Package>
