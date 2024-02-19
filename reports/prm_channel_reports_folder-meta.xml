@@ -2,11 +2,6 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>nitssnatha@gmail.com.deploymentuser.deployment</sharedTo>
-        <sharedToType>User</sharedToType>
-    </folderShares>
-    <folderShares>
-        <accessLevel>Manage</accessLevel>
         <sharedTo>{!Environment.VAR_NAME}</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
