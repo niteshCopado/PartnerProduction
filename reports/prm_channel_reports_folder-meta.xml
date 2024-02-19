@@ -2,7 +2,7 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>{!Environment.VAR_NAME}dev</sharedTo>
+        <sharedTo>{!Environment.VAR_NAME}</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <name>PRM Reports</name>
