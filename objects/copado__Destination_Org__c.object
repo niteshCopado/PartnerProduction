@@ -314,7 +314,7 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
         <externalId>false</externalId>
         <label>To Credential</label>
         <lookupFilter>
-            <active>true</active>
+            <active>false</active>
             <filterItems>
                 <field>copado__Org__c.CreatedById</field>
                 <operation>equals</operation>

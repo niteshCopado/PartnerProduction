@@ -215,6 +215,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ShouldSyncWithOci</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>TimeZone</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -223,6 +227,16 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <listViews>
+        <fullName>All_Locations</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Locations</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Locations</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Locations</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>LocationType</customTabListAdditionalFields>
         <customTabListAdditionalFields>VisitorAddress</customTabListAdditionalFields>

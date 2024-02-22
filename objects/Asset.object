@@ -322,6 +322,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Address</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>AssetLevel</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -334,6 +338,18 @@
         <fullName>AssetServicedById</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Availability</fullName>
+    </fields>
+    <fields>
+        <fullName>AverageUptimePerDay</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ConsequenceOfFailure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>ContactId</fullName>
@@ -438,6 +454,9 @@
     <fields>
         <fullName>Quantity</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Reliability</fullName>
     </fields>
     <fields>
         <fullName>RootAssetId</fullName>
@@ -1240,7 +1259,23 @@
         <fullName>StockKeepingUnit</fullName>
     </fields>
     <fields>
+        <fullName>SumDowntime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SumUnplannedDowntime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>TotalLifecycleAmount</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UptimeRecordEnd</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UptimeRecordStart</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -1251,19 +1286,6 @@
         <fullName>Uuid</fullName>
         <inlineHelpText>Unique string identifying the asset.</inlineHelpText>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>blng__InvoiceLineBalance__c</fullName>
-        <deprecated>false</deprecated>
-        <description>The sum of all posted invoice line balances for this asset.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>The sum of all posted invoice line balances for this asset.</inlineHelpText>
-        <label>Invoice Line Balance</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <type>Currency</type>
     </fields>
     <listViews>
         <fullName>AllAssets</fullName>
