@@ -51,7 +51,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Deployment Behaviors</label>
+        <label>Promotion Details</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -78,7 +78,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Back-Promotion Behaviors</label>
+        <label>Back-Promotion Details</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -162,6 +162,8 @@
         <fields>NAME</fields>
         <fields>copado__Type__c</fields>
         <fields>copado__Metadata_Group__c</fields>
+        <fields>copado__Execution_Sequence__c</fields>
+        <fields>copado__Execution_Event__c</fields>
         <relatedList>copado__Quality_Gate__c.copado__Connection_Behavior__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -189,7 +191,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h2o00000l6R7T</masterLabel>
+        <masterLabel>00h1n000005ZilG</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

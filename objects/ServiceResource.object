@@ -129,6 +129,14 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsCapacityBased</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsOptimizationCapable</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>LocationId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -151,6 +159,26 @@
         <fullName>ResourceType</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <fields>
+        <fullName>SchedulingConstraintId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceCrewId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <listViews>
+        <fullName>All_ServiceResources</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Service Resources</label>
+    </listViews>
+    <listViews>
+        <fullName>My_ServiceResources</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Service Resources</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>RelatedRecord</customTabListAdditionalFields>
         <customTabListAdditionalFields>ResourceType</customTabListAdditionalFields>
