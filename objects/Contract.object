@@ -280,7 +280,7 @@
         <deprecated>false</deprecated>
         <description>Determines if this contract is in effect.</description>
         <externalId>false</externalId>
-        <formula>IF(AND(ISPICKVAL(StatusCode,&apos;Activated&apos;), OR(AND(Not(SBQQ__Evergreen__c),EndDate &gt; TODAY()), SBQQ__Evergreen__c)),1,0)</formula>
+        <formula>IF(AND(ISPICKVAL(StatusCode,&apos;Activated&apos;), OR(AND(Not(SBQQ__Evergreen__c), EndDate &gt;= TODAY()), SBQQ__Evergreen__c)),1,0)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>Determines if this contract is in effect.</inlineHelpText>
         <label>Active Contract</label>
@@ -473,12 +473,12 @@
     <fields>
         <fullName>SBQQ__OpportunityPricebookId__c</fullName>
         <deprecated>false</deprecated>
-        <description>ID of the Price Book used from the original Opportunity.</description>
+        <description>Price Book ID of the related opportunity or quote.</description>
         <externalId>false</externalId>
-        <formula>SBQQ__Opportunity__r.Pricebook2Id</formula>
+        <formula>IF(NOT(ISBLANK(SBQQ__Opportunity__c)), SBQQ__Opportunity__r.Pricebook2Id, SBQQ__Quote__r.SBQQ__PricebookId__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <inlineHelpText>ID of the Price Book used from the original Opportunity.</inlineHelpText>
-        <label>Opportunity Pricebook Id</label>
+        <label>Opportunity or Quote Price Book ID</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <type>Text</type>

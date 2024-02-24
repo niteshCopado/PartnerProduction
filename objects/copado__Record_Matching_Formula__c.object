@@ -141,7 +141,15 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Record_Matching_Formula</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Record_Matching_Formula</fullName>
+        <fields>Name</fields>
+        <fields>copado__Configuration_Source_Org__c</fields>
+        <fields>OwnerId</fields>
+        <fields>LastModifiedById</fields>
+        <label>Record Matching Formula</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -156,15 +164,15 @@
     <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>copado__Configuration_Source_Org__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <deleteConstraint>Restrict</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The Org from where Copado retrieves the list of objects and fields available to build the formula.</inlineHelpText>
-        <label>Configuration Source Credential</label>
+        <label>Configuration Schema Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Record Matching Formulas</relationshipLabel>
         <relationshipName>Record_Matching_Formulas</relationshipName>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -203,6 +211,17 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Field_Labels__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field stores labels of fields stored in the Field1, Field2, Field3</description>
+        <externalId>false</externalId>
+        <label>Field Labels</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
     </fields>
     <fields>
         <fullName>copado__Hash_Formula__c</fullName>
@@ -266,5 +285,12 @@
         <searchResultsAdditionalFields>copado__Configuration_Source_Org__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__RestrictSchemaCredentialModification</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISNEW()),ISCHANGED( copado__Configuration_Source_Org__c))</errorConditionFormula>
+        <errorDisplayField>copado__Configuration_Source_Org__c</errorDisplayField>
+        <errorMessage>You can not change the Configuration Schema Credential once the value is selected.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

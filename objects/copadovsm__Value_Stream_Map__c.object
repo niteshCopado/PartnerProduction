@@ -141,7 +141,16 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copadovsm__VSM_Header</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copadovsm__VSM_Header</fullName>
+        <fields>Name</fields>
+        <fields>copadovsm__Object__c</fields>
+        <fields>copadovsm__Primary_Field__c</fields>
+        <fields>copadovsm__Active__c</fields>
+        <fields>copadovsm__Activation_Datetime__c</fields>
+        <label>VSM Header</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Value Stream Map is a highly-regarded way of visualizing the way a team collaborates to deliver valuable work to end users, and to expose waste and bottlenecks in that process.</description>
@@ -176,6 +185,39 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Backlog_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Backlog Criteria</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Cancelled_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cancelled Criteria</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Completed_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Completed Criteria</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
     </fields>
     <fields>
         <fullName>copadovsm__Description__c</fullName>
@@ -297,6 +339,27 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Start_Date__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>copadovsm__Threshold_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Threshold Enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copadovsm__Version__c</fullName>

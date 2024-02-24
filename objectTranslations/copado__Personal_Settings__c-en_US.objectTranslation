@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseValues>
-        <plural>false</plural>
-        <value><!-- Personal Settings --></value>
-    </caseValues>
-    <caseValues>
-        <plural>true</plural>
-        <value><!-- Personal Settings --></value>
-    </caseValues>
     <fields>
         <label><!-- API Key --></label>
         <name>copado__API_Key__c</name>
@@ -35,9 +27,4 @@
         <label><!-- Disable Auto-Resolve --></label>
         <name>copado__Disable_Auto_Resolve__c</name>
     </fields>
-    <fields>
-        <label><!-- Disable Re-Create Feature Branch in US --></label>
-        <name>copado__Disable_Re_Create_Feature_Branch_in_US__c</name>
-    </fields>
-    
 </CustomObjectTranslation>
