@@ -6,7 +6,7 @@
         <name>copado__Active__c</name>
     </fields>
     <fields>
-        <help><!-- If checked, committing changes on user stories linked to this deployment flow will not be allowed. --></help>
+        <help><!-- If checked, committing changes on user stories linked to this Pipeline will not be allowed --></help>
         <label><!-- Block Commits --></label>
         <name>copado__Block_Commits__c</name>
     </fields>

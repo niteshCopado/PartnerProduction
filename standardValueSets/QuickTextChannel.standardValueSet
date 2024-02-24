@@ -11,4 +11,14 @@
         <default>false</default>
         <label>Task</label>
     </standardValue>
+    <standardValue>
+        <fullName>Knowledge</fullName>
+        <default>false</default>
+        <label>Knowledge</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Agent</fullName>
+        <default>false</default>
+        <label>Live Agent</label>
+    </standardValue>
 </StandardValueSet>
