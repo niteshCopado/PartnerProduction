@@ -158,7 +158,7 @@
         <fullName>copadovsm__Elapse_Time__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IF(ISNULL(copadovsm__End_Date__c),NOW()-copadovsm__Start_Date__c,copadovsm__End_Date__c-copadovsm__Start_Date__c)</formula>
+        <formula>IF(ISNULL(copadovsm__End_Date__c),(NOW()-copadovsm__Start_Date__c)*24,(copadovsm__End_Date__c-copadovsm__Start_Date__c)*24)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Elapse Time</label>
         <precision>18</precision>

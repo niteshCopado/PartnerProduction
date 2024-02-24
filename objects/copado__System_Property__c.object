@@ -142,8 +142,20 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Hover_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__API_Name__c</fields>
+        <fields>copado__Is_Sensitive__c</fields>
+        <fields>copado__ParentId__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__User__c</fields>
+        <label>Hover Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>This is the pipeline/environment/user specific system properties.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -157,6 +169,7 @@
     <fields>
         <fullName>copado__API_Name__c</fullName>
         <deprecated>false</deprecated>
+        <description>This is the unique name of the system property which is used as a reference in dynamic expressions.</description>
         <externalId>false</externalId>
         <label>API Name</label>
         <length>255</length>
@@ -169,6 +182,7 @@
         <fullName>copado__Environment__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Lookup field to the environment which is linked to the system property.</description>
         <externalId>false</externalId>
         <label>Environment</label>
         <referenceTo>copado__Environment__c</referenceTo>
@@ -179,11 +193,22 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>copado__Is_Sensitive__c</fullName>
+        <fullName>copado__Is_Global__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Is Sensitive</label>
+        <inlineHelpText>Select this checkbox if you want to share the System Property among multiple pipelines and environments.</inlineHelpText>
+        <label>Is Global?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__Is_Sensitive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Select this checbox to hide the sensitive information.</description>
+        <externalId>false</externalId>
+        <label>Hide Value</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -204,6 +229,7 @@
         <fullName>copado__Pipeline__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Lookup field to the pipeline linked to the system property.</description>
         <externalId>false</externalId>
         <label>Pipeline</label>
         <referenceTo>copado__Deployment_Flow__c</referenceTo>
@@ -216,8 +242,9 @@
     <fields>
         <fullName>copado__UID__c</fullName>
         <deprecated>false</deprecated>
+        <description>Read-only field used internally for system property replacement.</description>
         <externalId>false</externalId>
-        <formula>copado__ParentId__c + &quot;-&quot; + copado__API_Name__c</formula>
+        <formula>IF( copado__Is_Global__c, copado__API_Name__c, copado__ParentId__c + &quot;-&quot; +  copado__API_Name__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>UID</label>
         <required>false</required>
@@ -229,6 +256,7 @@
         <fullName>copado__User__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
+        <description>Lookup field to the user linked to the system property.</description>
         <externalId>false</externalId>
         <label>User</label>
         <referenceTo>User</referenceTo>
@@ -240,6 +268,7 @@
     <fields>
         <fullName>copado__Value__c</fullName>
         <deprecated>false</deprecated>
+        <description>This is the value of the system property.</description>
         <externalId>false</externalId>
         <label>Value</label>
         <length>131072</length>
@@ -268,6 +297,18 @@
         <errorMessage>The API Name cannot contain blank spaces.</errorMessage>
     </validationRules>
     <validationRules>
+        <fullName>copado__Lookups_empty_for_Global_Property</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+copado__Is_Global__c = True,
+OR(
+NOT(ISBLANK(copado__User__c)),
+NOT(ISBLANK(copado__Pipeline__c)),
+NOT(ISBLANK(copado__Environment__c))
+))</errorConditionFormula>
+        <errorMessage>The environment, pipeline, and user lookups must be empty if the &apos;Is Global&apos; checkbox is selected.</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>copado__Only_One_Parent_Is_Allowed</fullName>
         <active>true</active>
         <errorConditionFormula>OR(
@@ -284,7 +325,7 @@ NOT(ISBLANK(copado__User__c)),
 NOT(ISBLANK(copado__Pipeline__c))
 )
 )</errorConditionFormula>
-        <errorMessage>A property can only be related to one parent: Environment, Pipeline, or User.</errorMessage>
+        <errorMessage>A non-global property can only be related to one parent: Environment, Pipeline, or User.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

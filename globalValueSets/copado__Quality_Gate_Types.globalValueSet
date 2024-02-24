@@ -62,6 +62,12 @@
         <isActive>false</isActive>
         <label>Compliance</label>
     </customValue>
+    <customValue>
+        <fullName>Automation Template</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automation Template</label>
+    </customValue>
     <masterLabel>Quality Gate Types</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
