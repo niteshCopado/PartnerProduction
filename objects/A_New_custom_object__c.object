@@ -194,6 +194,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Back_promotion_issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Back promotion issue</label>
+        <length>12</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Custom_field2__c</fullName>
         <description>kjgkgkgkgkgkghkhgk</description>
         <externalId>false</externalId>
