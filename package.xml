@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AccountUtils</members>
-        <members>AccountUtilsTest</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>Account.Status__c</members>
+        <members>A_New_custom_object__c.Back_promotion_issue__c</members>
         <name>CustomField</name>
     </types>
-    <version>57.0</version>
+    <version>58.0</version>
 </Package>
