@@ -11,5 +11,5 @@ public class AccountUtils {
     public static List<Account> getActiveAccounts() {
         return [SELECT Id, Name, Status__c FROM Account WHERE Status__c = 'Active'];
     }
-    
+    //Test CI in Copado
 }
