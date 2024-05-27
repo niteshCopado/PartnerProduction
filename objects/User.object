@@ -302,11 +302,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>LastLoginDate</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>ProfileId</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>

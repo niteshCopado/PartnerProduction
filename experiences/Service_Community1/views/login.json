@@ -1,6 +1,7 @@
 {
   "appPageId" : "69bca73b-372f-461c-ad3f-3b766b682c9f",
   "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
   "id" : "d809c1d0-3a33-45b5-8726-ea3e27c65dbf",
   "label" : "Login",
   "regions" : [ {
@@ -54,8 +55,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Login"
       },
       "componentName" : "forceCommunity:seoAssistant",

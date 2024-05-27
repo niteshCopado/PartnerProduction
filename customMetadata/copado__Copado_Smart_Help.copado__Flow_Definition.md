@@ -11,12 +11,20 @@
         <value xsi:type="xsd:string">GitCommitMain</value>
     </values>
     <values>
+        <field>copado__Help_Text_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>copado__Help_Text__c</field>
         <value xsi:type="xsd:string">Please, do not select the Flow Definition when committing and deploying flows with Copado. When the Flow is selected in the grid, the latest version (active or inactive) will be retrieved, committed and deployed.</value>
     </values>
     <values>
         <field>copado__Triggering_Action__c</field>
         <value xsi:type="xsd:string">Copado Metadata Grid selection</value>
+    </values>
+    <values>
+        <field>copado__Triggering_Metadata_Items__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>copado__Triggering_Value__c</field>

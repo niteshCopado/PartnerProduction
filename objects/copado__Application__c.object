@@ -141,16 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>copado__Application_Highlight_Panel</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>copado__Application_Highlight_Panel</fullName>
-        <fields>Name</fields>
-        <fields>copado__Release_Status__c</fields>
-        <fields>copado__Stability_Icon__c</fields>
-        <fields>copado__Parent_Application__c</fields>
-        <fields>copado__Product_Manager__c</fields>
-        <label>Application Highlight Panel</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -246,15 +237,15 @@
         <fullName>copado__Stability_Icon__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>TEXT(copado__Stability__c) + &quot; &quot; +
-IMAGE( 
+        <formula>IMAGE( 
 CASE( copado__Stability__c, 
 &quot;Stable&quot;, &quot;/img/samples/flag_green.gif&quot;,
 &quot;Uncertain&quot;, &quot;/img/samples/flag_yellow.gif&quot;,
 &quot;Unstable&quot;, &quot;/img/samples/flag_red.gif&quot;, 
 &quot;/s.gif&quot;), 
 &quot;Stability Icon&quot;)</formula>
-        <label>Stability Status</label>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stability Icon</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -293,31 +284,13 @@ CASE( copado__Stability__c,
         </valueSet>
     </fields>
     <label>Application</label>
-    <listViews>
-        <fullName>copado__All</fullName>
-        <columns>NAME</columns>
-        <columns>copado__Release_Status__c</columns>
-        <columns>copado__Stability__c</columns>
-        <columns>copado__Stability_Icon__c</columns>
-        <columns>copado__Parent_Application__c</columns>
-        <columns>copado__Product_Manager__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-        <language>en_US</language>
-    </listViews>
     <nameField>
         <label>Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Applications</pluralLabel>
-    <searchLayouts>
-        <searchResultsAdditionalFields>copado__Release_Status__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Stability__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Stability_Icon__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Parent_Application__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Product_Manager__c</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>

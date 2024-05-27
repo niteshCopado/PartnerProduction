@@ -128,19 +128,16 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>copado__Environment_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
         <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
@@ -157,52 +154,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <fields>
-        <fullName>Data_Backup_Enforcement__c</fullName>
-        <description>Enforce data backups when executing a Data Template deployment to this Environment. The &quot;Before and after deployment&quot; is the recommended option since it registers a precise snapshot of the deployed records for a simple Data Recovery process if needed.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Enforce data backups when executing a Data Template deployment to this Environment. The &quot;Before and after deployment&quot; is the recommended option since it registers a precise snapshot of the deployed records for a simple Data Recovery process if needed.</inlineHelpText>
-        <label>Data Backup Enforcement</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Before and after deployment</fullName>
-                    <default>false</default>
-                    <label>Before and after deployment</label>
-                </value>
-                <value>
-                    <fullName>Before deployment</fullName>
-                    <default>false</default>
-                    <label>Before deployment</label>
-                </value>
-                <value>
-                    <fullName>After deployment</fullName>
-                    <default>false</default>
-                    <label>After deployment</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>copado__CommitJobTemplateOverride__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Select a Job Template to override the default Commit Job Template defined in the Pipeline</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Select a Job Template to override the default Commit Job Template defined in the Pipeline</inlineHelpText>
-        <label>Commit Job Template Override</label>
-        <referenceTo>copado__JobTemplate__c</referenceTo>
-        <relationshipLabel>Environments (Commit Job Template Override)</relationshipLabel>
-        <relationshipName>Environments2</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
     <fields>
         <fullName>copado__Compliance_Rule_Group__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -332,17 +283,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Enable_Rollback__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</inlineHelpText>
-        <label>Enable Rollback</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
@@ -686,31 +626,6 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>copado__Unique_Job_Template</fullName>
-        <active>true</active>
-        <errorConditionFormula>OR(
-AND(
-NOT(ISBLANK(copado__CommitJobTemplateOverride__c)),
-OR(
-copado__CommitJobTemplateOverride__c == copado__Deployment_Job_Template_Override__c,
-copado__CommitJobTemplateOverride__c == copado__Promotion_Job_Template_Override__c
-)),
-AND(
-NOT(ISBLANK(copado__Promotion_Job_Template_Override__c)),
-OR(
-copado__Promotion_Job_Template_Override__c == copado__Deployment_Job_Template_Override__c,
-copado__Promotion_Job_Template_Override__c == copado__CommitJobTemplateOverride__c
-)),
-AND(
-NOT(ISBLANK(copado__Deployment_Job_Template_Override__c)),
-OR(
-copado__Deployment_Job_Template_Override__c == copado__Promotion_Job_Template_Override__c,
-copado__Deployment_Job_Template_Override__c == copado__CommitJobTemplateOverride__c
-))
-)</errorConditionFormula>
-        <errorMessage>An environment cannot have the same job template for Commit, Promote and Deploy.</errorMessage>
-    </validationRules>
     <validationRules>
         <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
         <active>true</active>

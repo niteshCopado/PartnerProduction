@@ -3089,7 +3089,7 @@
         <deprecated>false</deprecated>
         <description>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product.</inlineHelpText>
+        <inlineHelpText>Method of calculating the subscription price. A blank value indicates that the line item isn&apos;t a subscription product.</inlineHelpText>
         <label>Subscription Pricing</label>
         <required>false</required>
         <trackHistory>false</trackHistory>

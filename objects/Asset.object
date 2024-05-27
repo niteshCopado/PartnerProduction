@@ -340,13 +340,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Availability</fullName>
-    </fields>
-    <fields>
-        <fullName>AverageUptimePerDay</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>ConsequenceOfFailure</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
@@ -424,6 +417,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ParentId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -454,9 +452,6 @@
     <fields>
         <fullName>Quantity</fullName>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>Reliability</fullName>
     </fields>
     <fields>
         <fullName>RootAssetId</fullName>
@@ -1259,23 +1254,7 @@
         <fullName>StockKeepingUnit</fullName>
     </fields>
     <fields>
-        <fullName>SumDowntime</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>SumUnplannedDowntime</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>TotalLifecycleAmount</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>UptimeRecordEnd</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>UptimeRecordStart</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

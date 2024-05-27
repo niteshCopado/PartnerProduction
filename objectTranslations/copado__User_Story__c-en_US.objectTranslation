@@ -53,14 +53,6 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
-        <label><!-- Auto Number Field --></label>
-        <name>Auto_Number_Field__c</name>
-    </fields>
-    <fields>
-        <label><!-- New Text field Data --></label>
-        <name>New_Text_field__c</name>
-    </fields>
-    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>
@@ -817,18 +809,6 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
-    <fields>
-        <label><!-- Enable Logs --></label>
-        <name>copadoccmint__Enable_Logs__c</name>
-    </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>copadoccmint__External_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA key --></label>
-        <name>copadoccmint__JIRA_key__c</name>
-    </fields>
     <recordTypes>
         <label><!-- Bug --></label>
         <name>copado__Bug</name>
@@ -840,6 +820,10 @@
     <recordTypes>
         <label><!-- User Story --></label>
         <name>copado__User_Story</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Utility --></label>
+        <name>copado__Utility</name>
     </recordTypes>
     <validationRules>
         <errorMessage><!-- A cancellation reason must be given. --></errorMessage>
@@ -872,6 +856,10 @@
     <webLinks>
         <label><!-- Assign_to_Release --></label>
         <name>copado__Assign_to_Release</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Commit_Data --></label>
+        <name>copado__Commit_Data</name>
     </webLinks>
     <webLinks>
         <label><!-- Commit_Files --></label>

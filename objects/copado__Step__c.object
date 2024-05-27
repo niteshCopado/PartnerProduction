@@ -723,6 +723,11 @@ copado__SUM_Deployed__c / copado__Org_Count__c,
                     <default>false</default>
                     <label>URL Callout</label>
                 </value>
+                <value>
+                    <fullName>Automation</fullName>
+                    <default>false</default>
+                    <label>Automation</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>

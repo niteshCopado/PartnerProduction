@@ -4,6 +4,8 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Copado Selenium Testing</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__SeleniumGettingStarted</tabs>
@@ -16,4 +18,5 @@
     <tabs>copado__Account_Summary</tabs>
     <tabs>copado__Scheduled_Job__c</tabs>
     <tabs>copado__Selenium_Locator__c</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

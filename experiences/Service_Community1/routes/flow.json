@@ -1,6 +1,8 @@
 {
   "activeViewId" : "0e22e6b5-c0bb-4bad-b02f-7044947bc591",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Flow",
   "id" : "e8690965-fecc-4f56-8071-56d9d1adb91c",
   "label" : "Flow",
   "pageAccess" : "UseParent",

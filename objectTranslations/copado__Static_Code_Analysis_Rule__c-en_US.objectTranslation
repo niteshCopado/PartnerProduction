@@ -33,10 +33,6 @@
         <label><!-- Rule Name --></label>
         <name>copado__Rule_Name__c</name>
         <picklistValues>
-            <masterLabel>ApexAssertionsShouldIncludeMessage</masterLabel>
-            <translation><!-- ApexAssertionsShouldIncludeMessage --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>ApexBadCrypto</masterLabel>
             <translation><!-- ApexBadCrypto --></translation>
         </picklistValues>
@@ -79,10 +75,6 @@
         <picklistValues>
             <masterLabel>ApexUnitTestClassShouldHaveAsserts</masterLabel>
             <translation><!-- ApexUnitTestClassShouldHaveAsserts --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>ApexUnitTestMethodShouldHaveIsTestAnnotation</masterLabel>
-            <translation><!-- ApexUnitTestMethodShouldHaveIsTestAnnotation --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ApexUnitTestShouldNotUseSeeAllDataTrue</masterLabel>
@@ -129,24 +121,12 @@
             <translation><!-- AvoidSoqlInLoops --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>AvoidSoslInLoops</masterLabel>
-            <translation><!-- AvoidSoslInLoops --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>ClassNamingConventions</masterLabel>
             <translation><!-- ClassNamingConventions --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>CognitiveComplexity</masterLabel>
-            <translation><!-- CognitiveComplexity --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>CyclomaticComplexity</masterLabel>
             <translation><!-- CyclomaticComplexity --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>DebugsShouldUseLoggingLevel</masterLabel>
-            <translation><!-- DebugsShouldUseLoggingLevel --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>EmptyCatchBlock</masterLabel>
@@ -179,10 +159,6 @@
         <picklistValues>
             <masterLabel>ExcessivePublicCount</masterLabel>
             <translation><!-- ExcessivePublicCount --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>FieldDeclarationsShouldBeAtStart</masterLabel>
-            <translation><!-- FieldDeclarationsShouldBeAtStart --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ForLoopsMustUseBraces</masterLabel>
@@ -221,16 +197,8 @@
             <translation><!-- StdCyclomaticComplexity --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>TestMethodsMustBeInTestClasses</masterLabel>
-            <translation><!-- TestMethodsMustBeInTestClasses --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>TooManyFields</masterLabel>
             <translation><!-- TooManyFields --></translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>UnusedLocalVariable</masterLabel>
-            <translation><!-- UnusedLocalVariable --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>VariableNamingConventions</masterLabel>

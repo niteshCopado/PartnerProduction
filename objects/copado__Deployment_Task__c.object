@@ -155,20 +155,6 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
-        <fullName>CUSB_Source_Deployment_Task__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Source Deployment tasks from current Deployment Task was cloned.</description>
-        <externalId>false</externalId>
-        <label>CUSB Source Deployment Task</label>
-        <referenceTo>copado__Deployment_Task__c</referenceTo>
-        <relationshipLabel>Deployment Tasks</relationshipLabel>
-        <relationshipName>CUSB_Source_Deployment_Tasks</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>copado__Apply_to__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -361,6 +347,11 @@
                     <fullName>URL Callout</fullName>
                     <default>false</default>
                     <label>URL Callout</label>
+                </value>
+                <value>
+                    <fullName>Salesforce Flow</fullName>
+                    <default>false</default>
+                    <label>Salesforce Flow</label>
                 </value>
                 <value>
                     <fullName>Custom Setting</fullName>

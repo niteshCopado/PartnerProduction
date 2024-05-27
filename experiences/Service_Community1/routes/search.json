@@ -1,6 +1,8 @@
 {
   "activeViewId" : "1af1dbe5-be66-4e47-b184-58e7d6caccc4",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Search",
   "id" : "ae2170aa-87df-4585-a03f-ada64b24bc6f",
   "label" : "Search",
   "pageAccess" : "UseParent",

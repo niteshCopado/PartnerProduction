@@ -1,6 +1,7 @@
 {
   "appPageId" : "f677ef63-df6e-4252-966a-aafc87dd3146",
   "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
   "id" : "45bbd425-0ee5-40cf-85b9-e9bcc4925214",
   "label" : "Home",
   "regions" : [ {
@@ -29,6 +30,7 @@
       } ],
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
+      "scopedBrandingSetId" : null,
       "type" : "component"
     } ],
     "id" : "5b88449c-da20-4547-9c8a-ee9b0311d96b",
@@ -37,8 +39,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "pageTitle" : "Home",
         "recordId" : "{!recordId}"
       },
@@ -52,7 +54,7 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   } ],
-  "themeLayoutType" : "Inner",
+  "themeLayoutType" : "VfDnpjqG4GfcNmzlSAGoiEk4WbqPz4",
   "type" : "view",
   "viewType" : "home"
 }

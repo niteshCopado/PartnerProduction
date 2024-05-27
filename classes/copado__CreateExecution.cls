@@ -12,21 +12,11 @@ global class CreateExecution {
     }
 global class Request {
     @InvocableVariable( required=false)
-    global List<copado.AdditionalStep> additionalSteps;
-    @InvocableVariable( required=false)
     global String callback;
-    @InvocableVariable( required=false)
-    global String dataJson;
     @InvocableVariable( required=false)
     global String destinationId;
     @InvocableVariable( required=false)
     global String parentId;
-    @InvocableVariable( required=false)
-    global String pipelineId;
-    @InvocableVariable( required=false)
-    global List<copado__JobStep__c> postSteps;
-    @InvocableVariable( required=false)
-    global List<copado__JobStep__c> preSteps;
     @InvocableVariable( required=false)
     global Boolean runAfterInstantiation;
     @InvocableVariable( required=false)

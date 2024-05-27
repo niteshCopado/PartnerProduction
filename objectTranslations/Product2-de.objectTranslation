@@ -555,21 +555,6 @@
         <name>SBQQ__UpgradeTarget__c</name>
         <relationshipLabel><!-- Source Upgrades --></relationshipLabel>
     </fields>
-    <fields>
-        <label><!-- Billing Rule --></label>
-        <name>blng__BillingRule__c</name>
-        <relationshipLabel><!-- Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Revenue Recognition Rule --></label>
-        <name>blng__RevenueRecognitionRule__c</name>
-        <relationshipLabel><!-- Products --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Tax Rule --></label>
-        <name>blng__TaxRule__c</name>
-        <relationshipLabel><!-- Products --></relationshipLabel>
-    </fields>
     <validationRules>
         <errorMessage><!-- You must check either Include In Maintenance or Exclude From Maintenance checkbox. --></errorMessage>
         <name>SBQQ__Include_or_Exclude_Maintenance</name>

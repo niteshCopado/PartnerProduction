@@ -8,9 +8,8 @@
     <enableCspContactVisibilityPref>false</enableCspContactVisibilityPref>
     <enableCspNotesOnAccConPref>false</enableCspNotesOnAccConPref>
     <enableEnablePRM>false</enableEnablePRM>
-    <enableExternalAccHierPref>false</enableExternalAccHierPref>
     <enableGuestPermDisOptOutCruc>false</enableGuestPermDisOptOutCruc>
-    <enableGuestRecordReassignOrgPref>true</enableGuestRecordReassignOrgPref>
+    <enableGuestRecordReassignOrgPref>false</enableGuestRecordReassignOrgPref>
     <enableGuestSecurityOptOutCruc>false</enableGuestSecurityOptOutCruc>
     <enableGuvSecurityOptOutPref>false</enableGuvSecurityOptOutPref>
     <enableInviteChatterGuestEnabled>true</enableInviteChatterGuestEnabled>

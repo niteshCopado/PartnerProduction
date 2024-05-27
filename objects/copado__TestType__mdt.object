@@ -16,19 +16,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
-        <label>Deprecated - ExecuteVia</label>
-        <length>255</length>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>copado__JobTemplate__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Job Template with the Job Steps to perform the related test type execution logic</description>
-        <externalId>false</externalId>
-        <fieldManageability>DeveloperControlled</fieldManageability>
-        <label>JobTemplate</label>
+        <label>ExecuteVia</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>
@@ -39,7 +27,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
-        <label>Deprecated - Namespace</label>
+        <label>Namespace</label>
         <length>255</length>
         <required>false</required>
         <type>Text</type>

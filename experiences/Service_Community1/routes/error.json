@@ -1,6 +1,8 @@
 {
   "activeViewId" : "1ba38b18-f86e-4d3e-9ad3-b5b076aa4a24",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Error",
   "id" : "c01f50ae-227e-418d-b8a5-ff5b9c477ee3",
   "label" : "Error",
   "pageAccess" : "UseParent",

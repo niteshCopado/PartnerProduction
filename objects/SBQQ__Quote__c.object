@@ -196,6 +196,11 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
+            <field>SBQQ__ProrationDayOfMonth__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>SBQQ__StartDate__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
@@ -209,11 +214,6 @@
             <field>SBQQ__Type__c</field>
             <isFieldManaged>true</isFieldManaged>
             <isRequired>true</isRequired>
-        </displayedFields>
-        <displayedFields>
-            <field>SBQQ__ProrationDayOfMonth__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
         </displayedFields>
         <label>Calculating Fields</label>
     </fieldSets>

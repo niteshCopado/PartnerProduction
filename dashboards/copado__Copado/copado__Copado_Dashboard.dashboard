@@ -59,6 +59,7 @@
             <sortBy>RowLabelAscending</sortBy>
         </components>
     </middleSection>
+    <owner>nnatha@copado.com.uat</owner>
     <rightSection>
         <columnSize>Medium</columnSize>
         <components>

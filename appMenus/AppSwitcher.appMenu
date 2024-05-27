@@ -152,4 +152,28 @@
         <name>Workbench</name>
         <type>ConnectedApp</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>New Community</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>SBQQ__QuoteQuickly</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>DEVHUB_4uv8fzibygnd1tkpxwkv</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>copado__Copado_Branch_Management_Lightning</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>copado__Copado_Change_Management_Lightning</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__DataManager</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

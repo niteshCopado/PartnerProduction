@@ -1,6 +1,7 @@
 {
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
   "componentName" : "siteforce:sldsTwoCol84Layout",
+  "dataProviders" : [ ],
   "id" : "9b0f2454-aa66-465a-b127-2989acf6735d",
   "label" : "Question Detail",
   "regions" : [ {
@@ -105,8 +106,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "{!Record.Title}"
       },
       "componentName" : "forceCommunity:seoAssistant",

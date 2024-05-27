@@ -3,8 +3,11 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Queue Management</label>
     <navType>Standard</navType>
     <tabs>standard-Location</tabs>
+    <tabs>BMC__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

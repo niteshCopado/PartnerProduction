@@ -139,11 +139,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>DeliveryTaskId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -155,6 +150,11 @@
     <fields>
         <fullName>ExpectedDeliveryDate</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>FulfillmentOrderId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -205,36 +205,30 @@
         <fullName>TrackingUrl</fullName>
         <trackHistory>false</trackHistory>
     </fields>
-    <listViews>
-        <fullName>All_Shipments</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All Shipments</label>
-    </listViews>
-    <listViews>
-        <fullName>My_Shipments</fullName>
-        <filterScope>Mine</filterScope>
-        <label>My Shipments</label>
-    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
         <customTabListAdditionalFields>SourceLocation</customTabListAdditionalFields>
         <customTabListAdditionalFields>DestinationLocation</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FulfillmentOrder</customTabListAdditionalFields>
         <customTabListAdditionalFields>ReturnOrder</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedDate</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedBy</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>SourceLocation</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>DestinationLocation</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FulfillmentOrder</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ReturnOrder</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>SourceLocation</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>DestinationLocation</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FulfillmentOrder</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ReturnOrder</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SourceLocation</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DestinationLocation</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FulfillmentOrder</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ReturnOrder</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>

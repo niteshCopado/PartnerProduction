@@ -1,6 +1,7 @@
 {
   "appPageId" : "69bca73b-372f-461c-ad3f-3b766b682c9f",
   "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
   "id" : "9052fc1c-9de9-4dfa-b2e8-58f85c3c4005",
   "label" : "Register",
   "regions" : [ {
@@ -65,8 +66,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Register"
       },
       "componentName" : "forceCommunity:seoAssistant",

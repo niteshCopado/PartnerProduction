@@ -344,6 +344,10 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>CleanStatus</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Department</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -497,6 +501,15 @@
         <label>Birthdays This Month</label>
     </listViews>
     <listViews>
+        <fullName>BulkMessageContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.PHONE3</columns>
+        <columns>CONTACT.LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <label>Bulk_SMS_Contacts</label>
+    </listViews>
+    <listViews>
         <fullName>MyContacts</fullName>
         <filterScope>Mine</filterScope>
         <label>My Contacts</label>
@@ -545,28 +558,4 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
-    <webLinks>
-        <fullName>slackv2__Send_to_Slack</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Send to Slack</masterLabel>
-        <openType>noSidebar</openType>
-        <protected>false</protected>
-        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}sendToSlack?recordId={!CASESAFEID (Contact.Id)}&amp;objectApiName=Contact</url>
-    </webLinks>
-    <webLinks>
-        <fullName>slackv2__Slack_Alerts</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <height>600</height>
-        <linkType>url</linkType>
-        <masterLabel>Slack Alerts</masterLabel>
-        <openType>noSidebar</openType>
-        <protected>false</protected>
-        <url>/apex/{!$Setup.slackv2__Setup_Settings__c.slackv2__Namespace_Api__c}slackAlerts?recordId={!CASESAFEID (Contact.Id)}&amp;objectApiName=Contact</url>
-    </webLinks>
 </CustomObject>

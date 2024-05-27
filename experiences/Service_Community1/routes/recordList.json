@@ -1,6 +1,8 @@
 {
   "activeViewId" : "d641c750-a5e4-48a7-8b59-ef171fce7ce7",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Record_List",
   "id" : "f114f8b7-8524-41fc-9515-508e3f0b88be",
   "label" : "Record List",
   "pageAccess" : "UseParent",

@@ -1,6 +1,8 @@
 {
   "activeViewId" : "62d085ea-9f77-4fdb-9d64-7b875bff4c59",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Contact_Support",
   "id" : "d2126bc6-a587-45fe-ba7f-c6b4991f072d",
   "label" : "Contact Support",
   "pageAccess" : "UseParent",

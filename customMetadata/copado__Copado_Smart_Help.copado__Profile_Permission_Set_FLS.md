@@ -11,12 +11,20 @@
         <value xsi:type="xsd:string">GitCommitMain</value>
     </values>
     <values>
+        <field>copado__Help_Text_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>copado__Help_Text__c</field>
         <value xsi:type="xsd:string">Remember to select any Profiles or Permission Sets to update the field level security.</value>
     </values>
     <values>
         <field>copado__Triggering_Action__c</field>
         <value xsi:type="xsd:string">Copado Metadata Grid selection</value>
+    </values>
+    <values>
+        <field>copado__Triggering_Metadata_Items__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>copado__Triggering_Value__c</field>

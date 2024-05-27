@@ -4,7 +4,6 @@
     <enableDeleteMonitoringData>false</enableDeleteMonitoringData>
     <enableDynamicStreamingChannel>false</enableDynamicStreamingChannel>
     <enableEventLogGeneration>false</enableEventLogGeneration>
-    <enableEventLogWaveIntegration>false</enableEventLogWaveIntegration>
     <enableLoginForensics>false</enableLoginForensics>
     <enableStreamingApi>true</enableStreamingApi>
     <enableTransactionSecurityPolicies>false</enableTransactionSecurityPolicies>

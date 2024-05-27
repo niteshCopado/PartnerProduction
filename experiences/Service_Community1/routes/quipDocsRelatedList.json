@@ -1,6 +1,8 @@
 {
   "activeViewId" : "355b62dc-7ddf-430a-81b6-e506cadc0ebd",
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
+  "configurationTags" : [ ],
+  "devName" : "Quip_Docs_Related_List",
   "id" : "8b51fe46-94d4-4a96-8553-388690d24cdd",
   "label" : "Quip Docs Related List",
   "pageAccess" : "UseParent",

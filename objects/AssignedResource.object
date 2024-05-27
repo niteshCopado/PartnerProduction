@@ -130,18 +130,19 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
-        <fullName>ActualTravelTime</fullName>
+        <fullName>EventId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>EstimatedTravelTime</fullName>
+        <fullName>IsRequiredResource</fullName>
+    </fields>
+    <fields>
+        <fullName>Role</fullName>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>ServiceAppointmentId</fullName>
         <type>MasterDetail</type>
-    </fields>
-    <fields>
-        <fullName>ServiceCrewId</fullName>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ServiceResourceId</fullName>

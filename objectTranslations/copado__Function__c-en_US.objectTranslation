@@ -52,7 +52,7 @@ The class must implement the MCCallBack interface. --></help>
         <name>copado__Script__c</name>
     </fields>
     <fields>
-        <help><!-- Measured in minutes. --></help>
+        <help><!-- The number of minutes after which the function will automatically end if there is no response from the function backend execution. --></help>
         <label><!-- Timeout --></label>
         <name>copado__Timeout__c</name>
     </fields>
@@ -71,6 +71,26 @@ The class must implement the MCCallBack interface. --></help>
     <fields>
         <label><!-- Version --></label>
         <name>copado__Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Worker Size --></label>
+        <name>copado__Worker_Size__c</name>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XL</masterLabel>
+            <translation><!-- XL --></translation>
+        </picklistValues>
     </fields>
     <validationRules>
         <errorMessage><!-- Api name can only contain alphanumeric characters and must begin with a letter --></errorMessage>

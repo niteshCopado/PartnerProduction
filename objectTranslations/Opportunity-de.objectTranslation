@@ -25,6 +25,10 @@
         <name>MainCompetitors__c</name>
     </fields>
     <fields>
+        <label><!-- OptyField --></label>
+        <name>OptyField__c</name>
+    </fields>
+    <fields>
         <label><!-- Order Number --></label>
         <name>OrderNumber__c</name>
     </fields>

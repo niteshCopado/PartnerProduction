@@ -1,6 +1,7 @@
 {
   "appPageId" : "d4d6bb1a-6137-4835-b943-5bf2e86d94e6",
   "componentName" : "siteforce:sldsTwoCol66Layout",
+  "dataProviders" : [ ],
   "id" : "62d085ea-9f77-4fdb-9d64-7b875bff4c59",
   "label" : "Contact Support",
   "regions" : [ {
@@ -73,8 +74,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Contact Support"
       },
       "componentName" : "forceCommunity:seoAssistant",

@@ -144,7 +144,6 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
-    <description>A function is a script that contains a series of commands and can be executed from Copado.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -159,7 +158,7 @@
         <fullName>copado__API_Name__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>
-        <description>Provide a unique API name.</description>
+        <description>Unique name that identifies this function. The function result records will contain this API Name in the job type field for filtering these results in reports and dashboards.</description>
         <externalId>true</externalId>
         <inlineHelpText>Unique name that identifies this function. The function result records will contain this API Name in the job type field for filtering these results in reports and dashboards.</inlineHelpText>
         <label>API Name</label>
@@ -172,7 +171,8 @@
     <fields>
         <fullName>copado__ApexClass__c</fullName>
         <deprecated>false</deprecated>
-        <description>The name of the Apex class which is executed after the function has run.</description>
+        <description>Handler format: ClassName
+The class must implement the MCCallBack interface.</description>
         <externalId>false</externalId>
         <inlineHelpText>Handler format: ClassName
 The class must implement the MCCallBack interface.</inlineHelpText>
@@ -186,7 +186,7 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Callback_Type__c</fullName>
         <deprecated>false</deprecated>
-        <description>Type of Callback selected for the function.</description>
+        <description>Trigger a Flow or Apex class each time a function execution completes. This trigger happens when the function result status changes to Success or Failed.</description>
         <externalId>false</externalId>
         <inlineHelpText>Trigger a Flow or Apex class each time a function execution completes. This trigger happens when the function result status changes to Success or Failed.</inlineHelpText>
         <label>Callback Type</label>
@@ -213,7 +213,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
-        <description>Description of the function.</description>
         <externalId>false</externalId>
         <label>Description</label>
         <required>false</required>
@@ -235,9 +234,8 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     </fields>
     <fields>
         <fullName>copado__Image_Name__c</fullName>
-        <defaultValue>&quot;copado-function-core:v1&quot;</defaultValue>
         <deprecated>false</deprecated>
-        <description>Name of the Image required to run the function.</description>
+        <description>The docker image name provided by Copado. You will find available image paths in the Copado documentation. An image name is made up of slash-separated name components, prefixed by a registry hostname.</description>
         <externalId>false</externalId>
         <inlineHelpText>The docker image name provided by Copado. You will find available image paths in the Copado documentation. An image name is made up of slash-separated name components, prefixed by a registry hostname.</inlineHelpText>
         <label>Image Name</label>
@@ -250,7 +248,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Options__c</fullName>
         <deprecated>false</deprecated>
-        <description>User can define few options like maxVolume and volumeTTL which can be used to run standalone function with these configurations</description>
         <externalId>false</externalId>
         <label>Options</label>
         <length>131072</length>
@@ -261,7 +258,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Parameters__c</fullName>
         <deprecated>false</deprecated>
-        <description>A parameter is a piece of information taken from outside the function that the function needs to be executed.</description>
         <externalId>false</externalId>
         <inlineHelpText>This is used to validate if all required parameters are set before calling the execution.</inlineHelpText>
         <label>Parameters</label>
@@ -273,7 +269,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Script__c</fullName>
         <deprecated>false</deprecated>
-        <description>Provide the script with the commands you would like the function to execute.</description>
         <externalId>false</externalId>
         <label>Script</label>
         <length>131072</length>
@@ -284,9 +279,9 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Timeout__c</fullName>
         <deprecated>false</deprecated>
-        <description>The number of minutes after which the function will automatically finish if it doesn&apos;t finish before.</description>
+        <description>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Measured in minutes.</inlineHelpText>
+        <inlineHelpText>The number of minutes after which the function will automatically end if there is no response from the function backend execution.</inlineHelpText>
         <label>Timeout</label>
         <precision>18</precision>
         <required>false</required>
@@ -299,7 +294,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <fullName>copado__Type__c</fullName>
         <defaultValue>&quot;Custom&quot;</defaultValue>
         <deprecated>false</deprecated>
-        <description>The type of Copado function such as Custom or Standard.</description>
         <externalId>false</externalId>
         <label>Type</label>
         <required>false</required>
@@ -325,7 +319,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Version__c</fullName>
         <deprecated>false</deprecated>
-        <description>The version of the function being executed.</description>
         <externalId>false</externalId>
         <label>Version</label>
         <length>255</length>
@@ -337,7 +330,6 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <fields>
         <fullName>copado__Worker_Size__c</fullName>
         <deprecated>false</deprecated>
-        <description>Picklist field that defines the size of the worker. The available options are S, M, L, and XL.</description>
         <externalId>false</externalId>
         <label>Worker Size</label>
         <required>true</required>
@@ -373,6 +365,14 @@ The class must implement the MCCallBack interface.</inlineHelpText>
     <label>Function</label>
     <listViews>
         <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Type__c</columns>
+        <columns>copado__Description__c</columns>
+        <columns>copado__API_Name__c</columns>
+        <columns>copado__Image_Name__c</columns>
+        <columns>copado__Callback_Type__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -381,7 +381,42 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <type>Text</type>
     </nameField>
     <pluralLabel>Functions</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>copado__Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__API_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Timeout__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Image_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Callback_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>copado__Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__API_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Timeout__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Callback_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>copado__Type__c</searchFilterFields>
+        <searchFilterFields>copado__Description__c</searchFilterFields>
+        <searchFilterFields>copado__API_Name__c</searchFilterFields>
+        <searchFilterFields>copado__Timeout__c</searchFilterFields>
+        <searchFilterFields>copado__Image_Name__c</searchFilterFields>
+        <searchFilterFields>copado__Callback_Type__c</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchResultsAdditionalFields>copado__Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__API_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Timeout__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Image_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Callback_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>copado__Function_Name_must_Be_Alpha_Numeric</fullName>

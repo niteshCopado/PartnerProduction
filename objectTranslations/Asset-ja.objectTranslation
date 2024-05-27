@@ -325,9 +325,4 @@
         <name>SBQQ__VirtualAsset__c</name>
         <relationshipLabel><!-- Assets (Virtual Asset) --></relationshipLabel>
     </fields>
-    <fields>
-        <help>この納入商品について転記された請求書品目の残高すべての合計。</help>
-        <label><!-- Invoice Line Balance --></label>
-        <name>blng__InvoiceLineBalance__c</name>
-    </fields>
 </CustomObjectTranslation>

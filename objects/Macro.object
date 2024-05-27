@@ -148,11 +148,6 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>FolderId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>IsAlohaSupported</fullName>
     </fields>
     <fields>

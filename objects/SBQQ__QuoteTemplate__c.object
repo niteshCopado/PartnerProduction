@@ -379,7 +379,7 @@
         <deprecated>false</deprecated>
         <description>Field on the Quote object that computes the customer discount.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Field on the Quote object that computes the customer discount.</inlineHelpText>
+        <inlineHelpText>Quote Line field used to calculate a discount. The value from this field is subtracted from the total price.</inlineHelpText>
         <label>Customer Discount Field</label>
         <required>false</required>
         <trackHistory>false</trackHistory>

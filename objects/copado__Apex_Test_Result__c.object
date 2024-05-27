@@ -267,11 +267,6 @@
         <type>Lookup</type>
     </fields>
     <label>Apex Test Result</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <displayFormat>Test-{0000}</displayFormat>
         <label>Apex Test Name</label>

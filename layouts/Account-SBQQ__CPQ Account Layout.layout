@@ -28,7 +28,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>External_Id__c</field>
+                <field>XID__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -83,6 +83,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Description</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Multi_Picklist__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>

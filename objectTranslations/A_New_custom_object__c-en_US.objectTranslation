@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>A New custom object</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>A New custom objects</value>
+    </caseValues>
+    <fields>
+        <label><!-- ABC --></label>
+        <name>ABC__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C</masterLabel>
+            <translation><!-- C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Automated --></label>
+        <name>Automated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Back promotion issue --></label>
+        <name>Back_promotion_issue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count --></label>
+        <name>Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom field2 --></label>
+        <name>Custom_field2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test for Project --></label>
+        <name>Test_for_Project__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test git step --></label>
+        <name>Test_git_step__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Count Values --></label>
+        <name>Count_Values</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

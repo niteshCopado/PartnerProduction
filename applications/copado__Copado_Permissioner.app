@@ -4,8 +4,11 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Copado Permissioner</label>
     <logo>copado__Copado/copado__Copado_Logo.png</logo>
     <tabs>copado__Persona__c</tabs>
     <tabs>copado__Permission_Set_Explorer</tabs>
+    <tabs>BMC__c</tabs>
 </CustomApplication>

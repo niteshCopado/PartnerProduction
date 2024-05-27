@@ -191,6 +191,16 @@
                     <label>Renew Subscriptions</label>
                 </value>
                 <value>
+                    <fullName>Amend Subscriptions</fullName>
+                    <default>false</default>
+                    <label>Amend Subscriptions</label>
+                </value>
+                <value>
+                    <fullName>Add Recommendations</fullName>
+                    <default>false</default>
+                    <label>Add Recommendations</label>
+                </value>
+                <value>
                     <fullName>Save</fullName>
                     <default>false</default>
                     <label>Save</label>
@@ -482,6 +492,14 @@
                 <valueName>Renew Subscriptions</valueName>
             </valueSettings>
             <valueSettings>
+                <controllingFieldValue>Quote/Group</controllingFieldValue>
+                <valueName>Amend Subscriptions</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quote/Group</controllingFieldValue>
+                <valueName>Add Recommendations</valueName>
+            </valueSettings>
+            <valueSettings>
                 <controllingFieldValue>Group</controllingFieldValue>
                 <valueName>Clone Group</valueName>
             </valueSettings>
@@ -736,7 +754,7 @@
         <type>Picklist</type>
         <valueSet>
             <valueSetDefinition>
-                <sorted>false</sorted>
+                <sorted>true</sorted>
                 <value>
                     <fullName>3dots</fullName>
                     <default>false</default>
@@ -1498,6 +1516,11 @@
                     <label>table</label>
                 </value>
                 <value>
+                    <fullName>target</fullName>
+                    <default>false</default>
+                    <label>target</label>
+                </value>
+                <value>
                     <fullName>task</fullName>
                     <default>false</default>
                     <label>task</label>
@@ -1744,6 +1767,11 @@
                     <label>Launch External</label>
                 </value>
                 <value>
+                    <fullName>Apply Rules</fullName>
+                    <default>false</default>
+                    <label>Apply Rules</label>
+                </value>
+                <value>
                     <fullName>Edit Lines</fullName>
                     <default>false</default>
                     <label>Edit Lines</label>
@@ -1804,6 +1832,16 @@
                     <label>Amend Assets</label>
                 </value>
                 <value>
+                    <fullName>Amend Subscriptions</fullName>
+                    <default>false</default>
+                    <label>Amend Subscriptions</label>
+                </value>
+                <value>
+                    <fullName>Add Recommendations</fullName>
+                    <default>false</default>
+                    <label>Add Recommendations</label>
+                </value>
+                <value>
                     <fullName>Renew Contracts</fullName>
                     <default>false</default>
                     <label>Renew Contracts</label>
@@ -1832,6 +1870,11 @@
                     <fullName>Pricing Guidance</fullName>
                     <default>false</default>
                     <label>Pricing Guidance</label>
+                </value>
+                <value>
+                    <fullName>View Pricing Guidance</fullName>
+                    <default>false</default>
+                    <label>View Pricing Guidance</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

@@ -325,9 +325,4 @@
         <name>SBQQ__VirtualAsset__c</name>
         <relationshipLabel><!-- Assets (Virtual Asset) --></relationshipLabel>
     </fields>
-    <fields>
-        <help>Die Summe aller gebuchten Rechnungspostensalden für diesen Vermögenswert.</help>
-        <label><!-- Invoice Line Balance --></label>
-        <name>blng__InvoiceLineBalance__c</name>
-    </fields>
 </CustomObjectTranslation>

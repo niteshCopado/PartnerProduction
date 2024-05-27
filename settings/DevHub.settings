@@ -3,5 +3,8 @@
     <devOpsCenterBetaMsa>false</devOpsCenterBetaMsa>
     <enableDevOpsCenter>false</enableDevOpsCenter>
     <enableDevOpsCenterGA>false</enableDevOpsCenterGA>
-    <enableShapeExportPref>true</enableShapeExportPref>
+    <enablePackaging2>false</enablePackaging2>
+    <enableScratchOrgManagementPref>true</enableScratchOrgManagementPref>
+    <enableScratchOrgSnapshotPref>false</enableScratchOrgSnapshotPref>
+    <enableShapeExportPref>false</enableShapeExportPref>
 </DevHubSettings>

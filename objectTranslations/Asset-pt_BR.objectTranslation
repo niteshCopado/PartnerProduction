@@ -325,9 +325,4 @@
         <name>SBQQ__VirtualAsset__c</name>
         <relationshipLabel><!-- Assets (Virtual Asset) --></relationshipLabel>
     </fields>
-    <fields>
-        <help>A soma de todos os saldos de linha de fatura publicados para este ativo.</help>
-        <label><!-- Invoice Line Balance --></label>
-        <name>blng__InvoiceLineBalance__c</name>
-    </fields>
 </CustomObjectTranslation>

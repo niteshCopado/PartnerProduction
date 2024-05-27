@@ -38,8 +38,16 @@
     <fields>
         <help><!-- Select an Automation Template to override the default Deployment Behaviour defined in the Pipeline --></help>
         <label><!-- Deployment Automation Override --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only active automation templates are allowed --></errorMessage>
+        </lookupFilter>
         <name>copado__Deployment_Automation_Override__c</name>
         <relationshipLabel><!-- Environments (Deployment Automation Override) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Deployment Job Template Override --></label>
+        <name>copado__Deployment_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments (Deployment Job Template Override) --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- If enabled, when a Back Promotion is completed and contains Metadata found in User Stories in the destination Environment, the status of the User Story Metadata records of these User Stories will be updated to &quot;Back Promoted&quot;. --></help>
@@ -49,6 +57,10 @@
     <fields>
         <label><!-- Last Compliance Scan Date --></label>
         <name>copado__Last_Compliance_Scan_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Refresh Date --></label>
+        <name>copado__Last_Refresh_Date__c</name>
     </fields>
     <fields>
         <label><!-- Latest Deployment Status --></label>
@@ -107,7 +119,7 @@
         <name>copado__Namespace__c</name>
     </fields>
     <fields>
-        <label><!-- Credential ID --></label>
+        <label><!-- Org ID --></label>
         <name>copado__Org_ID__c</name>
     </fields>
     <fields>
@@ -136,8 +148,16 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Promotion Job Template Override --></label>
+        <name>copado__Promotion_Job_Template_Override__c</name>
+        <relationshipLabel><!-- Environments --></relationshipLabel>
+    </fields>
+    <fields>
         <help><!-- Select an Automation Template to override the default Promotion Behaviour defined in the Pipeline --></help>
         <label><!-- Promotion Automation Override --></label>
+        <lookupFilter>
+            <errorMessage><!-- Only active automation templates are allowed --></errorMessage>
+        </lookupFilter>
         <name>copado__Promotion_Override__c</name>
         <relationshipLabel><!-- Environments (Promotion Automation Override) --></relationshipLabel>
     </fields>
@@ -175,6 +195,10 @@
             <translation><!-- Only If User Has No Org Credential --></translation>
         </picklistValues>
     </fields>
+    <validationRules>
+        <errorMessage><!-- An environment cannot have the same automation template for both Promote and Deploy --></errorMessage>
+        <name>copado__Unique_Template_for_promote_and_deploy</name>
+    </validationRules>
     <webLinks>
         <label><!-- Find_Replace_Rule_Editor --></label>
         <name>copado__Find_Replace_Rule_Editor</name>

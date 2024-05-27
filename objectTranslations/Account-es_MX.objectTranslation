@@ -15,10 +15,56 @@
             <masterLabel>Medium</masterLabel>
             <translation><!-- Medium --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
     </fields>
     <fields>
-        <label><!-- External Id --></label>
-        <name>External_Id__c</name>
+        <label><!-- First Field --></label>
+        <name>First_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is latitude --></help>
+        <label><!-- Latitude --></label>
+        <name>Latitude__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is Longitude --></help>
+        <label><!-- Longitude --></label>
+        <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manual Task Dep --></label>
+        <name>Manual_Task_Dep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata RL --></label>
+        <name>Metadata_RL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multi Picklist --></label>
+        <name>Multi_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C</masterLabel>
+            <translation><!-- C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Field 2 --></label>
+        <name>New_Field_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Field --></label>
+        <name>New_Field__c</name>
     </fields>
     <fields>
         <label><!-- Number of Locations --></label>
@@ -86,7 +132,7 @@
         <name>SBQQ__PriceHoldEnd__c</name>
     </fields>
     <fields>
-        <help>Seleccione Basado en activos para hacer que las renovaciones se basen en los activos de una cuenta o seleccione Basado en suscripciones para hacer que las renovaciones se basen en las suscripciones creadas desde un presupuesto.</help>
+        <help>Seleccione Basado en activos para hacer que las renovaciones se basen en los activos de una cuenta o seleccione Basado en contratos para hacer que las renovaciones se basen en los contratos creados desde un presupuesto.</help>
         <label><!-- Renewal Model --></label>
         <name>SBQQ__RenewalModel__c</name>
         <picklistValues>
@@ -157,6 +203,30 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Second field --></label>
+        <name>Second_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Fieldnew --></label>
+        <name>TestFieldnew__c</name>
+    </fields>
+    <fields>
+        <label><!-- To be back promoted --></label>
+        <name>To_be_back__c</name>
+    </fields>
+    <fields>
         <label><!-- Upsell Opportunity --></label>
         <name>UpsellOpportunity__c</name>
         <picklistValues>
@@ -177,25 +247,12 @@
         <name>Validation__c</name>
     </fields>
     <fields>
-        <label><!-- Bill To Contact --></label>
-        <name>blng__BillToContact__c</name>
-        <relationshipLabel><!-- Accounts --></relationshipLabel>
-    </fields>
-    <fields>
-        <label><!-- Customer Profile Id --></label>
-        <name>blng__CustomerProfileId__c</name>
-    </fields>
-    <fields>
-        <label><!-- Default Payment Type --></label>
-        <name>blng__DefaultPaymentType__c</name>
+        <label><!-- XID --></label>
+        <name>XID__c</name>
     </fields>
     <recordTypes>
-        <label><!-- Person Account --></label>
-        <name>Person_Account</name>
-    </recordTypes>
-    <recordTypes>
-        <label><!-- Person Account 2 --></label>
-        <name>Person_Account_2</name>
+        <label><!-- UATRT --></label>
+        <name>UATRT</name>
     </recordTypes>
     <webLinks>
         <label><!-- Billing --></label>
@@ -208,17 +265,5 @@
     <webLinks>
         <label><!-- Renew_Assets --></label>
         <name>SBQQ__Renew_Assets</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- CreditCenter --></label>
-        <name>blng__CreditCenter</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- PaymentVirtualTerminal --></label>
-        <name>blng__PaymentVirtualTerminal</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Refund --></label>
-        <name>blng__Refund</name>
     </webLinks>
 </CustomObjectTranslation>

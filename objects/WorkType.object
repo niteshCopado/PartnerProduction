@@ -130,6 +130,36 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>AppointmentCategoryId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ApptStartTimeIntvlInMin</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeAfterAppointment</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeAfterUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeBeforeAppointment</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeBeforeUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DefaultAppointmentType</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -142,12 +172,13 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>MinimumCrewSize</fullName>
+        <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>Name</fullName>
+        <fullName>OperatingHoursId</fullName>
         <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -155,16 +186,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>RecommendedCrewSize</fullName>
+        <fullName>TimeFrameEndUnit</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>ServiceReportTemplateId</fullName>
+        <fullName>TimeFrameStartUnit</fullName>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>ShouldAutoCreateSvcAppt</fullName>
+        <fullName>TimeframeEnd</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TimeframeStart</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <listViews>

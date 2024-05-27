@@ -1051,7 +1051,7 @@
                                         <div class="slds-page-header__control buttons">
                                             <div class="slds-button-group" role="group">
                                                 <apex:outputPanel layout="none" rendered="{!pipelineMode == MANAGER}">
-                                                    <apex:commandButton onClick="lockScreen();openRebaseModal(); return false;" value="{!$Label.copado__mass_back_promote}" reRender="pageMsgs,headerPanel,filterWrapper" styleClass="slds-button slds-button_neutral" />
+                                                    <apex:commandButton onClick="lockScreen();openRebaseModal(); return false;" value="{!$Label.copado__mass_back_promote}" reRender="pageMsgs,headerPanel,filterWrapper" styleClass="slds-button slds-button_neutral" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}" />
                                                     <apex:commandButton onClick="togglePipelineMode(); return false;" styleClass="slds-button slds-button_brand" value="{!IF(pipelineMode == DIAGRAM, $Label.copado__view_pipeline, $Label.copado__view_pipeline_setup)}" reRender="pipelineWrapper, filterManagerPanel"></apex:commandButton>
                                                 </apex:outputPanel>
                                                 <apex:outputPanel layout="none" rendered="{!pipelineMode == DIAGRAM}">
@@ -1841,7 +1841,14 @@
                                     <tr>
                                         <apex:repeat value="{!$ObjectType.copado__Promotion__c.FieldSets.copado__ManageBranchesDialog}" var="pf">
                                             <td>
-                                                <c:LightningReadyOutputFields SObject="{!rebasePromotionsMap[promotion]}" Field="{!pf.fieldPath}" showLabel="false" dividerBottom="false" customClass="pfFields" isViewLink="{!if(pf=='Name',true,false)}" htmlTarget="_blank" />
+                                                <apex:outputPanel rendered="{!pf.fieldPath == 'Name'}">
+                                                    <a href="/{!rebasePromotionsMap[promotion].Id}" target="_blank">
+                                                        {!rebasePromotionsMap[promotion].Name}
+                                                    </a>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!pf.fieldPath != 'Name'}">
+                                                    <c:LightningReadyOutputFields SObject="{!rebasePromotionsMap[promotion]}" Field="{!pf.fieldPath}" showLabel="false" dividerBottom="false" customClass="pfFields" htmlTarget="_blank" />
+                                                </apex:outputPanel>
                                             </td>
                                         </apex:repeat>
                                         <apex:outputPanel layout="none" rendered="{!AND(!promotionOnly,OR(enabledRebasePromotionPoller,rebaseDeploymentsCompleted))}">

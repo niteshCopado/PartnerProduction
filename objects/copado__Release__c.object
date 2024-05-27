@@ -343,22 +343,8 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Releases</pluralLabel>
-    <searchLayouts>
-        <searchResultsAdditionalFields>copado__Project__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Version__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Planned_Date__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Base_Branch__c</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>copado__Validate_spaces_in_version</fullName>
-        <active>true</active>
-        <description>Make sure no spaces are there in version field</description>
-        <errorConditionFormula>CONTAINS(copado__Version__c,&quot; &quot;)</errorConditionFormula>
-        <errorDisplayField>copado__Version__c</errorDisplayField>
-        <errorMessage>please dont include spaces in version field</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Mass_add_to_Release</fullName>

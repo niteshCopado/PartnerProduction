@@ -197,6 +197,8 @@
 								<apex:inputField value="{!generalSettings.SBQQ__BillingPlugin__c}"/>
 								<!-- Product Search Plugin -->
 								<apex:inputField value="{!generalSettings.SBQQ__ProductSearchPlugin__c}"/>
+								<!-- Product Recommendation Plugin -->
+								<apex:inputField value="{!generalSettings.SBQQ__ProductRecommendationPlugin__c}"/>
 								<!-- Quote Calculator Plugin -->
 								<apex:inputField value="{!generalSettings.SBQQ__QuoteCalculatorPlugin__c}"/>
 								<!-- Document Store Plugin -->
@@ -271,7 +273,7 @@
 								<apex:pageBlockSectionItem helpText="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__SubscriptionTermUnit__c.inlineHelpText}">
 									<apex:outputLabel value="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__SubscriptionTermUnit__c.label}"/>
 									<apex:selectList value="{!generalSettings.SBQQ__SubscriptionTermUnit__c}" size="1">
-										<apex:actionSupport event="onchange" rerender="subscriptionAndRenewalSettings"/> 
+										<apex:actionSupport event="onchange" rerender="subscriptionAndRenewalSettings"/>
 										<apex:selectOption itemValue="month" itemLabel="{!$Label.sbqq__lbl_month}"/>
 										<apex:selectOption itemValue="day" itemLabel="{!$Label.sbqq__lbl_day}"/>
 									</apex:selectList>
@@ -283,6 +285,7 @@
 										<apex:actionSupport event="onchange" action="{!onChangeSubscriptionProratePrecision}" rerender="subscriptionAndRenewalSettings"/>
 										<apex:selectOption itemValue="day" itemLabel="{!$Label.sbqq__lbl_day}"/>
 										<apex:selectOption rendered="{!generalSettings.SBQQ__SubscriptionTermUnit__c == 'month'}" itemValue="calendar+monthly+daily" itemLabel="{!$Label.sbqq__lbl_calendar_monthly_daily}"/>
+										<apex:selectOption rendered="{!(generalSettings.SBQQ__SubscriptionTermUnit__c == 'month' && usesLegacyCalculator == false && usesBilling == true)}" itemValue="proration+day+of+month" itemLabel="{!$Label.sbqq__lbl_proration_day_of_month}"/>
 										<apex:selectOption rendered="{!generalSettings.SBQQ__SubscriptionTermUnit__c == 'month'}" itemValue="day+calendar+month+weighted" itemLabel="{!$Label.sbqq__lbl_day_with_calendar_month_weighted}"/>
 										<apex:selectOption rendered="{!generalSettings.SBQQ__SubscriptionTermUnit__c != 'day'}" itemValue="month" itemLabel="{!$Label.sbqq__lbl_month}"/>
 										<apex:selectOption rendered="{!generalSettings.SBQQ__SubscriptionTermUnit__c != 'day'}" itemValue="month+day" itemLabel="{!$Label.sbqq__lbl_monthly_daily}"/>
@@ -315,6 +318,11 @@
                                 <apex:inputField value="{!generalSettings.SBQQ__UseLegacyContractService__c}"/>
 								<apex:outputLabel style="font-style:italic" value="{!$Label.sbqq__lbl_pot_renewal_action_text}"/>
 
+								<!-- Async Amend Experience -->
+								<!-- Check box that controls whether or not amending a contract redirects to the quote line editor or returns to the contract detail page
+									while the job finishes in the background. -->
+								<apex:inputField value="{!generalSettings.SBQQ__AmendInBackground__c}"/>
+
 								<!-- Disable product bundle subscription type validation -->
 								<apex:pageBlockSectionItem helpText="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__DisableProductBundleSubTypeChecks__c.inlineHelpText}">
 									<apex:outputLabel value="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__DisableProductBundleSubTypeChecks__c.label}"/>
@@ -324,6 +332,11 @@
 								<apex:pageBlockSectionItem helpText="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__CanBypassPreserveBundleStructureOnAmend__c.inlineHelpText}">
 									<apex:outputLabel value="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__CanBypassPreserveBundleStructureOnAmend__c.label}"/>
 									<apex:inputCheckbox value="{!generalSettings.SBQQ__CanBypassPreserveBundleStructureOnAmend__c}"/>
+								</apex:pageBlockSectionItem>
+
+								<apex:pageBlockSectionItem helpText="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__UseCurrentSubscriptionOnAssets__c.inlineHelpText}">
+									<apex:outputLabel value="{!$ObjectType.SBQQ__GeneralSettings__c.fields.SBQQ__UseCurrentSubscriptionOnAssets__c.label}"/>
+									<apex:inputCheckbox value="{!generalSettings.SBQQ__UseCurrentSubscriptionOnAssets__c}"/>
 								</apex:pageBlockSectionItem>
 							</apex:pageBlockSection>
 						</apex:tab>
@@ -358,7 +371,10 @@
                                     <apex:selectList value="{!generalSettings.SBQQ__DefaultOrderStartDate__c}" size="1">
                                         <apex:selectOptions value="{!orderStartDateFieldNameOptions}"/>
                                     </apex:selectList>
-                                </apex:pageBlockSectionItem>
+								</apex:pageBlockSectionItem>
+								<apex:inputField value="{!generalSettings.SBQQ__CreateOrdersWithoutOpportunities__c}">
+									<apex:actionSupport event="onclick" action="{!onChangeAllowOrdersWithoutOpportunities}" rerender="orderOptions"/>
+								</apex:inputField>
                             </apex:pageBlockSection>
                         </apex:tab>
                         <!-- Additional Settings Tab -->
@@ -429,6 +445,10 @@
                                 <apex:inputField value="{!generalSettings.SBQQ__OpenSearchFilterByDefault__c}"/>
 								<!-- Call configuration services ansychronously for large bundles, off by default-->
 								<apex:inputField value="{!generalSettings.SBQQ__EnableLargeConfigurations__c}"/>
+								<!-- Enable Polymer 3 UI -->
+								<apex:inputField value="{!generalSettings.SBQQ__EnablePolymer3UI__c}"/>
+								<!-- Enable Enhanced Security -->
+								<apex:inputField value="{!generalSettings.SBQQ__EnableEnhancedSecurity__c}"/>
 							</apex:pageBlockSection>
 							<!-- Post Install Steps -->
 							<apex:pageBlockSection columns="1" id="postInstallScripts">

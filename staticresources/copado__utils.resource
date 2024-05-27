@@ -116,8 +116,6 @@ dw.u.getRemote = function(url, cb, postData, avoidRetry, onError, cbOnOk) {
             //check response
             try {
                 !res && console.log('No response');
-
-
                 var obj = $copado.parseJSON(res.replace(/(\r\n|\n|\r)/gm, ' '));
                 console.log('obj utils ===> ',obj);
                 if(obj && typeof obj === 'object' && obj.length>0){
@@ -390,6 +388,13 @@ dw.u.getDecodedFileContent = function(parentId, name) {
         content = content.replace('<','').replace('>','');
     }
     return content;
+};
+
+dw.u.getHtmlDecodedString = function(input) {
+    var e = document.createElement('textarea');
+    e.innerHTML = input;
+    // handle case of empty input
+    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
 };
 
 dw.u.getFileContent = function(parentId, name) {

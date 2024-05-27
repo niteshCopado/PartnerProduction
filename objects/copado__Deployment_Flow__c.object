@@ -167,23 +167,12 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>copado__Apply_Connection_Behaviours_to_existing__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <inlineHelpText>Use this option if you want User Stories which already promoted in your Copado Pipeline to apply to the connection behaviours for back promotions which you create in Copado Continuous Delivery</inlineHelpText>
-        <label>Apply Connection Behaviors to All</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>copado__Block_Commits__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <description>If checked, committing changes on user stories linked to this Pipeline will not be allowed</description>
         <externalId>false</externalId>
-        <inlineHelpText>If checked, committing changes on user stories linked to this deployment flow will not be allowed.</inlineHelpText>
+        <inlineHelpText>If checked, committing changes on user stories linked to this Pipeline will not be allowed</inlineHelpText>
         <label>Block Commits</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -227,43 +216,6 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>copado__CommitJobTemplate__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>Select the Job Template that implements the commit action for this Pipeline</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Select the Job Template that implements the commit action for this Pipeline</inlineHelpText>
-        <label>Commit Job Template</label>
-        <referenceTo>copado__JobTemplate__c</referenceTo>
-        <relationshipLabel>Pipelines (Commit Job Template)</relationshipLabel>
-        <relationshipName>Pipelines2</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>copado__Continuous_Delivery_Configuration_Json__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Continuous Delivery Configuration Json</label>
-        <length>131072</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>10</visibleLines>
-    </fields>
-    <fields>
-        <fullName>copado__Continuous_Delivery_Enabled__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Continuous Delivery Enabled</label>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>copado__Copado_DX_Mode__c</fullName>
@@ -319,6 +271,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>List of steps to be used when deploying promoted user stories to a destination environment.</inlineHelpText>
         <label>Deployment Automation</label>
         <lookupFilter>
             <active>true</active>
@@ -605,6 +558,7 @@ This value will prefill the order by field on related Promotion record creation 
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <inlineHelpText>List of steps to be used when merging user stories before deployment.</inlineHelpText>
         <label>Promotion Automation</label>
         <lookupFilter>
             <active>true</active>
@@ -692,31 +646,6 @@ This value will prefill the order by field on related Promotion record creation 
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>copado__Unique_Job_Template</fullName>
-        <active>true</active>
-        <errorConditionFormula>OR(
-AND(
-NOT(ISBLANK(copado__CommitJobTemplate__c)),
-OR(
-copado__CommitJobTemplate__c == copado__Deployment_Job_Template__c,
-copado__CommitJobTemplate__c == copado__Promotion_Job_Template__c
-)),
-AND(
-NOT(ISBLANK(copado__Promotion_Job_Template__c)),
-OR(
-copado__Promotion_Job_Template__c == copado__Deployment_Job_Template__c,
-copado__Promotion_Job_Template__c == copado__CommitJobTemplate__c
-)),
-AND(
-NOT(ISBLANK(copado__Deployment_Job_Template__c)),
-OR(
-copado__Deployment_Job_Template__c == copado__Promotion_Job_Template__c,
-copado__Deployment_Job_Template__c == copado__CommitJobTemplate__c
-))
-)</errorConditionFormula>
-        <errorMessage>A pipeline cannot have the same job template for Commit, Promote and Deploy.</errorMessage>
-    </validationRules>
     <validationRules>
         <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
         <active>true</active>

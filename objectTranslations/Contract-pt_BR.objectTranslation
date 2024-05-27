@@ -88,8 +88,8 @@
         <name>SBQQ__MasterContract__c</name>
     </fields>
     <fields>
-        <help>ID do catálogo de preços usado da oportunidade original.</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <help>ID do catálogo de preços da cotação ou oportunidade relacionada.</help>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>

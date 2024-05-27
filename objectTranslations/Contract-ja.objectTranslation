@@ -88,8 +88,8 @@
         <name>SBQQ__MasterContract__c</name>
     </fields>
     <fields>
-        <help>元の商談から使用される価格表の ID。</help>
-        <label><!-- Opportunity Pricebook Id --></label>
+        <help>関連する商談または見積の価格表 ID</help>
+        <label><!-- Opportunity or Quote Price Book ID --></label>
         <name>SBQQ__OpportunityPricebookId__c</name>
     </fields>
     <fields>

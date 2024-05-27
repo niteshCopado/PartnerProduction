@@ -2,8 +2,13 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
+        <fullName>Building</fullName>
+        <default>false</default>
+        <label>Building</label>
+    </standardValue>
+    <standardValue>
         <fullName>Warehouse</fullName>
-        <default>true</default>
+        <default>false</default>
         <label>Warehouse</label>
     </standardValue>
     <standardValue>
@@ -12,18 +17,28 @@
         <label>Site</label>
     </standardValue>
     <standardValue>
-        <fullName>Van</fullName>
-        <default>false</default>
-        <label>Van</label>
-    </standardValue>
-    <standardValue>
         <fullName>Plant</fullName>
         <default>false</default>
         <label>Plant</label>
     </standardValue>
     <standardValue>
-        <fullName>Virtual</fullName>
+        <fullName>Store</fullName>
         <default>false</default>
-        <label>Virtual</label>
+        <label>Store</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campus</fullName>
+        <default>false</default>
+        <label>Campus</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Floor</fullName>
+        <default>false</default>
+        <label>Floor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Space</fullName>
+        <default>false</default>
+        <label>Space</label>
     </standardValue>
 </StandardValueSet>

@@ -220,8 +220,8 @@
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <multilineLayoutFields>OrderId</multilineLayoutFields>
-    <multilineLayoutFields>Quantity</multilineLayoutFields>
     <multilineLayoutFields>UnitPrice</multilineLayoutFields>
+    <multilineLayoutFields>Quantity</multilineLayoutFields>
     <relatedLists>
         <fields>Product2</fields>
         <fields>SBQQ__OrderedQuantity__c</fields>

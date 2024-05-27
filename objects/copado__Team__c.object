@@ -141,14 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>copado__Team_Compact_Layout</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>copado__Team_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>copado__Active__c</fields>
-        <fields>copado__Department__c</fields>
-        <label>Team Compact Layout</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -303,29 +296,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>copado__Description__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Description</label>
-        <length>131072</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Html</type>
-        <visibleLines>25</visibleLines>
-    </fields>
-    <fields>
-        <fullName>copado__Sprint_Wall_FieldSet_Name__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Sprint Wall FieldSet Name</label>
-        <length>40</length>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>copado__Vision__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -348,11 +318,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Teams</pluralLabel>
-    <searchLayouts>
-        <searchResultsAdditionalFields>copado__Active__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Department__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

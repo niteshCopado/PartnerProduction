@@ -81,7 +81,7 @@
                             <apex:inputField id="if_provider" value="{!copado__Selenium_Settings__c.copado__Provider__c}" onchange="seleniumSettings.getPlatforms(this)" style="width:50%;" required="true" />
                             <apex:inputField id="if_wd_url" value="{!copado__Selenium_Settings__c.copado__Webdriver_URL__c}" required="true" style="width:50%;" />
                             <apex:inputField id="if_wd_proxy" value="{!copado__Selenium_Settings__c.copado__Webdriver_Proxy__c}" />
-                            <apex:inputField id="if_desiredCaps" value="{!copado__Selenium_Settings__c.copado__Desired_Capabilities__c}" style="width:50%;" rendered="false"/><!-- NOT PART OF BETA FOR NOW -->
+                            <apex:inputField id="if_desiredCaps" value="{!copado__Selenium_Settings__c.copado__Desired_Capabilities__c}" style="width:50%;" rendered="true"/>
                             <apex:inputField id="if_orgCred" value="{!copado__Selenium_Settings__c.copado__Default_Org_Credential__c}" required="{!isDefOrgCredRequired}" style="width:50%;" />
                             <script>
                                 (function(){

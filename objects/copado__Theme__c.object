@@ -141,14 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>copado__Theme_Compact_Layout</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>copado__Theme_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>copado__Status__c</fields>
-        <fields>copado__Active__c</fields>
-        <label>Theme Compact Layout</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>A theme is a group of user stories which contribute to a common goal. It is the highest level of the user story hierarchy. On the other hand, an epic is a big user story that has to be divided into several user stories because it can&apos;t be completed within one sprint.</description>
@@ -227,12 +220,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Themes</pluralLabel>
-    <searchLayouts>
-        <searchResultsAdditionalFields>copado__Active__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>copado__Theme_Details__c</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -129,11 +129,7 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>IsCapacityBased</fullName>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>IsOptimizationCapable</fullName>
+        <fullName>IsPrimary</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -158,16 +154,6 @@
     <fields>
         <fullName>ResourceType</fullName>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>SchedulingConstraintId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>ServiceCrewId</fullName>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <listViews>
         <fullName>All_ServiceResources</fullName>
@@ -201,5 +187,5 @@
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
