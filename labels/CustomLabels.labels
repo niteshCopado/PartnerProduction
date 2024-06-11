@@ -7,4 +7,11 @@
         <shortDescription>Copado_Test_Class_User</shortDescription>
         <value>nnatha@copado.com.support</value>
     </labels>
+    <labels>
+        <fullName>Test</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Test</shortDescription>
+        <value>Value</value>
+    </labels>
 </CustomLabels>
