@@ -7,9 +7,10 @@ public class AccountUtils {
         }
         update accounts;
     }
-    //Push to trigger Sonarcloud Scan
+    // Adding one more comment
     public static List<Account> getActiveAccounts() {
         return [SELECT Id, Name, Status__c FROM Account WHERE Status__c = 'Active'];
     }
-    //Test CI in Copado
+//test parallel Deployment
+    
 }
