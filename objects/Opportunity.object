@@ -173,6 +173,40 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Copado_Stage__c</fullName>
+        <label>Copado Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0-Target</fullName>
+                    <default>false</default>
+                    <label>0-Target</label>
+                </value>
+                <value>
+                    <fullName>1-Prospect</fullName>
+                    <default>false</default>
+                    <label>1-Prospect</label>
+                </value>
+                <value>
+                    <fullName>2-Test</fullName>
+                    <default>false</default>
+                    <label>2-Test</label>
+                </value>
+                <value>
+                    <fullName>4-Stage</fullName>
+                    <default>false</default>
+                    <label>4-Stage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>CurrentGenerators__c</fullName>
         <externalId>false</externalId>
         <label>Current Generator(s)</label>
@@ -556,6 +590,31 @@
         </filters>
         <label>Won</label>
     </listViews>
+    <recordTypes>
+        <fullName>Beta</fullName>
+        <active>true</active>
+        <businessProcess>Sales Process</businessProcess>
+        <label>Beta</label>
+        <picklistValues>
+            <picklist>Copado_Stage__c</picklist>
+            <values>
+                <fullName>0-Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-Stage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
