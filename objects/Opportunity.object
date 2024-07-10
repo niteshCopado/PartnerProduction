@@ -228,23 +228,29 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>0-Target</fullName>
+                    <fullName>0 - Target</fullName>
                     <default>false</default>
-                    <label>0-Target</label>
+                    <label>0 - Target</label>
                 </value>
                 <value>
-                    <fullName>1-Prospect</fullName>
+                    <fullName>1 - Prospect</fullName>
                     <default>false</default>
-                    <label>1-Prospect</label>
+                    <label>1 - Prospect</label>
                 </value>
                 <value>
-                    <fullName>2-Test</fullName>
+                    <fullName>2 - Test</fullName>
                     <default>false</default>
-                    <label>2-Test</label>
+                    <label>2 - Test</label>
+                </value>
+                <value>
+                    <fullName>4 - Stage</fullName>
+                    <default>false</default>
+                    <label>4 - Stage</label>
                 </value>
                 <value>
                     <fullName>4-Stage</fullName>
                     <default>false</default>
+                    <isActive>false</isActive>
                     <label>4-Stage</label>
                 </value>
             </valueSetDefinition>
@@ -642,19 +648,15 @@
         <picklistValues>
             <picklist>Copado_Stage__c</picklist>
             <values>
-                <fullName>0-Target</fullName>
+                <fullName>0 - Target</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>1-Prospect</fullName>
+                <fullName>1 - Prospect</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>2-Test</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>4-Stage</fullName>
+                <fullName>4 - Stage</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
