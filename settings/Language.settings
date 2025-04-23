@@ -4,8 +4,10 @@
     <enableDataTranslation>false</enableDataTranslation>
     <enableEndUserLanguages>false</enableEndUserLanguages>
     <enableICULocaleDateFormat>true</enableICULocaleDateFormat>
+    <enableLanguageExtensionPackage>false</enableLanguageExtensionPackage>
     <enableLocalNamesForStdObjects>false</enableLocalNamesForStdObjects>
+    <enableLocaleInsensitiveFiltering>false</enableLocaleInsensitiveFiltering>
     <enablePlatformLanguages>false</enablePlatformLanguages>
-    <enableTranslationWorkbench>false</enableTranslationWorkbench>
+    <enableTranslationWorkbench>true</enableTranslationWorkbench>
     <useLanguageFallback>false</useLanguageFallback>
 </LanguageSettings>
