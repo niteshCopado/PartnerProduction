@@ -140,6 +140,50 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
+    <businessProcesses>
+        <fullName>Sales Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Id%2E Decision Makers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation%2FReview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perception Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal%2FPrice Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value Proposition</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
@@ -171,6 +215,40 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Copado_Stage__c</fullName>
+        <label>Copado Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0-Target</fullName>
+                    <default>false</default>
+                    <label>0-Target</label>
+                </value>
+                <value>
+                    <fullName>1-Prospect</fullName>
+                    <default>false</default>
+                    <label>1-Prospect</label>
+                </value>
+                <value>
+                    <fullName>2-Test</fullName>
+                    <default>false</default>
+                    <label>2-Test</label>
+                </value>
+                <value>
+                    <fullName>4-Stage</fullName>
+                    <default>false</default>
+                    <label>4-Stage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>CurrentGenerators__c</fullName>
@@ -556,6 +634,31 @@
         </filters>
         <label>Won</label>
     </listViews>
+    <recordTypes>
+        <fullName>Beta</fullName>
+        <active>true</active>
+        <businessProcess>Sales Process</businessProcess>
+        <label>Beta</label>
+        <picklistValues>
+            <picklist>Copado_Stage__c</picklist>
+            <values>
+                <fullName>0-Target</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1-Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2-Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4-Stage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
